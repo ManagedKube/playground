@@ -72,4 +72,4 @@ jobs:
         slack-message: | 
           hello world
       env:
-        SLACK_BOT_TOKEN: ${{ env.SLACK_BOT_TOKEN }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

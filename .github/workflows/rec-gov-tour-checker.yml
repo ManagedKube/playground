@@ -45,7 +45,7 @@ jobs:
       run: |
         AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID }} ${{ env.TOUR_ID }} ${{ env.YEAR }} ${{ env.MONTH }})
 
-        echo "AVAILABLE_DATES=$AVAILABLE_DATES" >> $GITHUB_ENV
+        echo "AVAILABLE_DATES=\"$AVAILABLE_DATES\"" >> $GITHUB_ENV
 
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel

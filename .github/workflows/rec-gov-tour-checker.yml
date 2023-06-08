@@ -41,12 +41,11 @@ jobs:
         FACILITY_INFO=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID }})
 
         echo "FACILITY_NAME=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
-    - run: |
+    - name: Run script
+      run: |
         AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID }} ${{ env.TOUR_ID }} ${{ env.YEAR }} ${{ env.MONTH }})
 
         echo "AVAILABLE_DATES=$AVAILABLE_DATES" >> $GITHUB_ENV
-      # env:
-      #   JSON_OUTPUT_EVENT_PULL_REQUEST: ${{ toJSON(github.event.pull_request) }}
 
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel

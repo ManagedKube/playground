@@ -22,8 +22,12 @@ on:
     # branches:
     #   - main
 
-# env:
-#   SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
+env:
+  # SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
+  FACILITY_ID: 233362
+  TOUR_ID: 502
+  YEAR: 2023
+  MONTH: 06
 
 jobs:
   send_slack:
@@ -32,9 +36,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Get site info
+      run: |
+        FACILITY_INFO=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID }})
+
+        echo "FACILITY_NAME=$(echo $FACILITY_INFO | jq .facility_name )" >> $GITHUB_ENV
     - run: |
-        jq --help
-        AVAILABLE_DATES=$(./recreation.gov/run.sh 233362 502 2023 06)
+        AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID }} ${{ env.TOUR_ID }} ${{ env.YEAR }} ${{ env.MONTH }})
 
         echo "AVAILABLE_DATES=$AVAILABLE_DATES" >> $GITHUB_ENV
       env:
@@ -52,6 +60,8 @@ jobs:
         # For posting a simple plain text message
         # Slack message format: <github repo name> | <github user> | <PR Title> | <PR URL>
         slack-message: | 
-          ${{ env.AVAILABLE_DATES }}
+        FACILITY_NAME=${{ env.FACILITY_NAME }}
+        AVAILABLE_DATES=
+        ${{ env.AVAILABLE_DATES }}
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

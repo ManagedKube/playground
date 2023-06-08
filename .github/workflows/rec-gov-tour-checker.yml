@@ -62,6 +62,6 @@ jobs:
         slack-message: | 
         FACILITY_NAME: ${{ env.FACILITY_NAME }}
         AVAILABLE_DATES:
-        ${{ env.AVAILABLE_DATES }}
+        echo ${{ env.AVAILABLE_DATES }}
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

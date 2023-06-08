@@ -35,7 +35,7 @@ jobs:
     - run: |
         ls -l
         pwd
-        AVAILABLE_DATES=$(./recreation-gov/run.sh 233362 502 2023 06)
+        AVAILABLE_DATES=$(./recreation.gov/run.sh 233362 502 2023 06)
 
         echo "AVAILABLE_DATES=$AVAILABLE_DATES" >> $GITHUB_ENV
       env:

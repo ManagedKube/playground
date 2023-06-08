@@ -16,12 +16,11 @@ on:
   # Push is for testing only to allow you to test this workflow without
   # a merge and just a push.
 #   push:
-  ## Doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request_target-workflow-when-a-pull-request-merges
-  pull_request_target:
-    types:
-      - closed
-    branches:
-      - main
+  pull_request:
+    # types:
+    #   - closed
+    # branches:
+    #   - main
 
 # env:
 #   SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}

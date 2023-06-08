@@ -30,34 +30,15 @@ jobs:
     # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    # - run: |
-    #     echo $JSON_OUTPUT_EVENT
-    #     echo "#####################"
-    #     echo "#####################"
-    #     echo "#####################"
-    #     echo ${{ github.event.ref }}
-    #     echo $JSON_OUTPUT_EVENT_HEAD_COMMIT
-    #     echo ${{ toJSON(github.event.head_commit.author.name) }}
-    #     echo $JSON_OUTPUT_EVENT_PUSHER
-    #     echo $JSON_OUTPUT_EVENT_REPOSITORY
-    #     echo JSON_OUTPUT_EVENT_PULL_REQUEST
-    #     echo "#####################"
-    #     echo "#####################"
-    #     echo "#####################"
-    #     echo $JSON_OUTPUT_EVENT_PULL_REQUEST
-    #     echo ${{ github.event.commits[0].author.name }}
-    #   env:
-    #     JSON_OUTPUT_EVENT: ${{ toJSON(github.event) }}
-    #     JSON_OUTPUT_EVENT_HEAD_COMMIT: ${{ toJSON(github.event.head_commit) }}
-    #     JSON_OUTPUT_EVENT_PUSHER: ${{ toJSON(github.event.pusher) }}
-    #     JSON_OUTPUT_EVENT_REPOSITORY: ${{ toJSON(github.event.repository) }}
-    #     JSON_OUTPUT_EVENT_PULL_REQUEST: ${{ toJSON(github.event.pull_request) }}
-    # - run: |
-    #     echo $JSON_OUTPUT_EVENT_PULL_REQUEST
-    #     echo ${{ github.event.pull_request }}
-    #     echo ${{ github.event.pull_request.html_url }}
-    #   env:
-    #     JSON_OUTPUT_EVENT_PULL_REQUEST: ${{ toJSON(github.event.pull_request) }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - run: |
+        AVAILABLE_DATES=$(./recreation-gov/run.sh 233362 502 2023 06)
+
+        echo "AVAILABLE_DATES=$AVAILABLE_DATES" >> $GITHUB_ENV
+      env:
+        JSON_OUTPUT_EVENT_PULL_REQUEST: ${{ toJSON(github.event.pull_request) }}
+
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
       id: slack1
@@ -70,6 +51,6 @@ jobs:
         # For posting a simple plain text message
         # Slack message format: <github repo name> | <github user> | <PR Title> | <PR URL>
         slack-message: | 
-          hello world
+          ${{ env.AVAILABLE_DATES }}
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

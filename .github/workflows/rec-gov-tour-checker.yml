@@ -45,7 +45,7 @@ jobs:
       run: |
         AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID }} ${{ env.TOUR_ID }} ${{ env.YEAR }} ${{ env.MONTH }})
 
-        echo "AVAILABLE_DATES=\'$AVAILABLE_DATES\'" >> $GITHUB_ENV
+        echo "AVAILABLE_DATES=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
 
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
@@ -56,8 +56,6 @@ jobs:
         # See also: https://api.slack.com/methods/chat.postMessage#channels
         # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
         channel-id: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
-        # For posting a simple plain text message
-        # Slack message format: <github repo name> | <github user> | <PR Title> | <PR URL>
         slack-message: | 
           FACILITY_NAME: ${{ env.FACILITY_NAME }}
           AVAILABLE_DATES:

@@ -60,8 +60,8 @@ jobs:
         # For posting a simple plain text message
         # Slack message format: <github repo name> | <github user> | <PR Title> | <PR URL>
         slack-message: | 
-        FACILITY_NAME=${{ env.FACILITY_NAME }}
-        AVAILABLE_DATES=
+        FACILITY_NAME: ${{ env.FACILITY_NAME }}
+        AVAILABLE_DATES:
         ${{ env.AVAILABLE_DATES }}
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

@@ -22,6 +22,11 @@ on:
     # branches:
     #   - main
 
+  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    - cron: '5 * * * *'
+    # - cron: '30 5 * * 2,4'
+
 env:
   # SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
 

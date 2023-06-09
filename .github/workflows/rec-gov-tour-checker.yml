@@ -79,6 +79,7 @@ jobs:
           FACILITY_NAME: ${{ env.FACILITY_NAME_1 }}
           TOUR_ID: ${{ env.TOUR_ID_1 }}
           SEARCH DATE: ${{ env.YEAR_1 }}-${{ env.MONTH_1 }}
+          TOUR LINK: https://www.recreation.gov/ticket/${{ env.FACILITY_ID_1 }}/ticket/${{ env.TOUR_ID_1 }}
           AVAILABLE_DATES:
           ${{ env.AVAILABLE_DATES_1_DATA }}
       env:

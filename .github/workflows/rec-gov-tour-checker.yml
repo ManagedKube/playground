@@ -52,6 +52,9 @@ jobs:
           echo "Available dates found: ${{ env.FACILITY_NAME_1 }}"
           echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
           echo "AVAILABLE_DATES_1_DATA=$(echo $LOCAL_AVAILABLE_DATES_1)" >> $GITHUB_ENV
+        else
+          echo "No available dates found: ${{ env.FACILITY_NAME_1 }}"
+          echo "AVAILABLE_DATES_1=false" >> $GITHUB_ENV
         fi
         
         echo "finished"

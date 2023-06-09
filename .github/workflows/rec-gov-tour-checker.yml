@@ -63,6 +63,7 @@ jobs:
         fi
         
         echo "finished"
+        echo "FACILITY_INFO_1: ${{ env.FACILITY_INFO_1 }}"
         
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel

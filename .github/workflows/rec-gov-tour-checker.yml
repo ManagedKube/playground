@@ -24,10 +24,12 @@ on:
 
 env:
   # SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
-  FACILITY_ID: 233362
-  TOUR_ID: 500
-  YEAR: 2023
-  MONTH: 06
+
+  # Search 1
+  FACILITY_ID_1: 233362
+  TOUR_ID_1: 500
+  YEAR_1: 2023
+  MONTH_1: 06
 
 jobs:
   send_slack:
@@ -38,17 +40,22 @@ jobs:
       uses: actions/checkout@v2
     - name: Get site info
       run: |
-        FACILITY_INFO=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID }})
+        FACILITY_INFO_1=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID_1 }})
 
-        echo "FACILITY_NAME=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
+        echo "FACILITY_NAME_1=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
     - name: Run script
       run: |
-        AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID }} ${{ env.TOUR_ID }} ${{ env.YEAR }} ${{ env.MONTH }})
+        AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
 
-        echo "AVAILABLE_DATES=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
-
+        if [ ! -z "$AVAILABLE_DATES" ]; then
+          echo "No dates available"
+          echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
+          echo "AVAILABLE_DATES_1=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
+        fi
+        
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
+      if: env.AVAILABLE_DATES_1 == 'true'
       id: slack1
       uses: slackapi/slack-github-action@v1.24.0
       with:
@@ -57,7 +64,7 @@ jobs:
         # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
         channel-id: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
         slack-message: | 
-          FACILITY_NAME: ${{ env.FACILITY_NAME }}
+          FACILITY_NAME: ${{ env.FACILITY_NAME_1 }}
           AVAILABLE_DATES:
           ${{ env.AVAILABLE_DATES }}
       env:

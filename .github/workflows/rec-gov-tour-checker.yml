@@ -47,7 +47,7 @@ jobs:
       run: |
         FACILITY_INFO_1=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID_1 }})
 
-        echo "FACILITY_NAME_1=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
+        echo "FACILITY_NAME_1=$(echo $FACILITY_NAME_1 | jq -r .facility_name )" >> $GITHUB_ENV
     - name: Run script
       run: |
         LOCAL_AVAILABLE_DATES_1=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})

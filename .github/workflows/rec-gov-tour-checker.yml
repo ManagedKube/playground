@@ -77,6 +77,7 @@ jobs:
         channel-id: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
         slack-message: | 
           FACILITY_NAME: ${{ env.FACILITY_NAME_1 }}
+          TOUR_ID: ${{ env.TOUR_ID_1 }}
           AVAILABLE_DATES:
           ${{ env.AVAILABLE_DATES_1_DATA }}
       env:

@@ -48,7 +48,7 @@ jobs:
         AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
 
         if [ -z "$AVAILABLE_DATES" ]; then
-          echo "No dates available"
+          echo "Dates available"
           echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
           echo "AVAILABLE_DATES_1=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
         fi

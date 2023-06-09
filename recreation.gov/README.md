@@ -95,3 +95,9 @@ curl 'https://www.recreation.gov/api/ticket/availability/facility/233362?date=20
 
 
 curl https://www.recreation.gov/api/ticket/availability/facility/233362/monthlyAvailabilitySummaryView?year=2023&month=06&inventoryBucket=FIT&tourId=502 | jq '.facility_availability_summary_view_by_local_date | to_entries[] | .key + " " + (.value | tostring)'
+
+
+
+
+
+

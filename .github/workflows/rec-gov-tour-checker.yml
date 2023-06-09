@@ -47,17 +47,19 @@ jobs:
       run: |
         LOCAL_AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
 
-        if [ -z "$LOCAL_AVAILABLE_DATES" ]; then
-          echo "Dates available"
+        # if the string is not empty
+        if [ -n "$LOCAL_AVAILABLE_DATES" ]; then
+          echo "Available dates found: ${{ env.FACILITY_NAME_1 }}"
           echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
           echo "AVAILABLE_DATES_1_DATA=$(echo $LOCAL_AVAILABLE_DATES)" >> $GITHUB_ENV
         fi
+        
 
         echo "finished"
         
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
-      if: env.AVAILABLE_DATES_1
+      if: env.AVAILABLE_DATES_1 == 'true'
       id: slack1
       uses: slackapi/slack-github-action@v1.24.0
       with:

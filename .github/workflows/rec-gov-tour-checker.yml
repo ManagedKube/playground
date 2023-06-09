@@ -23,8 +23,8 @@ on:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-  # schedule:
-  #   - cron: '*/5 * * * *'
+  schedule:
+    - cron: '*/5 * * * *'
     # - cron: '30 5 * * 2,4'
 
 env:
@@ -32,7 +32,7 @@ env:
 
   # Search 1
   FACILITY_ID_1: 233362
-  TOUR_ID_1: 502
+  TOUR_ID_1: 500
   YEAR_1: 2023
   MONTH_1: 06
 

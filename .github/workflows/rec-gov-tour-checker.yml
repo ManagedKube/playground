@@ -23,8 +23,8 @@ on:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-  # schedule:
-  #   - cron: '*/5 * * * *'
+  schedule:
+    - cron: '*/5 * * * *'
     # - cron: '30 5 * * 2,4'
 
 env:
@@ -32,7 +32,7 @@ env:
 
   # Search 1
   FACILITY_ID_1: 233362
-  TOUR_ID_1: 502
+  TOUR_ID_1: 500
   YEAR_1: 2023
   MONTH_1: 06
 
@@ -45,9 +45,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Get site info
       run: |
-        FACILITY_INFO_1=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID_1 }})
+        LOCAL_FACILITY_INFO_1=$(curl https://www.recreation.gov/api/ticket/facility/${{ env.FACILITY_ID_1 }})
 
-        echo "FACILITY_NAME_1=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
+        echo "FACILITY_NAME_1=$(echo $LOCAL_FACILITY_INFO_1 | jq -r .facility_name )" >> $GITHUB_ENV
     - name: Run script
       run: |
         LOCAL_AVAILABLE_DATES_1=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
@@ -63,6 +63,7 @@ jobs:
         fi
         
         echo "finished"
+        echo "FACILITY_INFO_1: ${{ env.FACILITY_INFO_1 }}"
         
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
@@ -76,6 +77,9 @@ jobs:
         channel-id: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
         slack-message: | 
           FACILITY_NAME: ${{ env.FACILITY_NAME_1 }}
+          TOUR_ID: ${{ env.TOUR_ID_1 }}
+          SEARCH DATE: ${{ env.YEAR_1 }}-${{ env.MONTH_1 }}
+          TOUR LINK: https://www.recreation.gov/ticket/${{ env.FACILITY_ID_1 }}/ticket/${{ env.TOUR_ID_1 }}
           AVAILABLE_DATES:
           ${{ env.AVAILABLE_DATES_1_DATA }}
       env:

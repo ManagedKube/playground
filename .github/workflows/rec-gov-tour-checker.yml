@@ -55,7 +55,7 @@ jobs:
         
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel
-      if: env.AVAILABLE_DATES_1 == 'true'
+      if: env.AVAILABLE_DATES_1
       id: slack1
       uses: slackapi/slack-github-action@v1.24.0
       with:

@@ -45,13 +45,15 @@ jobs:
         echo "FACILITY_NAME_1=$(echo $FACILITY_INFO | jq -r .facility_name )" >> $GITHUB_ENV
     - name: Run script
       run: |
-        AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
+        LOCAL_AVAILABLE_DATES=$(./recreation.gov/run.sh ${{ env.FACILITY_ID_1 }} ${{ env.TOUR_ID_1 }} ${{ env.YEAR_1 }} ${{ env.MONTH_1 }})
 
-        if [ -z "$AVAILABLE_DATES" ]; then
+        if [ -z "$LOCAL_AVAILABLE_DATES" ]; then
           echo "Dates available"
           echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
-          echo "AVAILABLE_DATES_1_DATA=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
+          echo "AVAILABLE_DATES_1_DATA=$(echo $LOCAL_AVAILABLE_DATES)" >> $GITHUB_ENV
         fi
+
+        echo "finished"
         
     ## Doc: https://github.com/marketplace/actions/slack-send
     - name: Post to Slack channel

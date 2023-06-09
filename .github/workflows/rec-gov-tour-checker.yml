@@ -50,7 +50,7 @@ jobs:
         if [ -z "$AVAILABLE_DATES" ]; then
           echo "Dates available"
           echo "AVAILABLE_DATES_1=true" >> $GITHUB_ENV
-          echo "AVAILABLE_DATES_1=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
+          echo "AVAILABLE_DATES_1_DATA=$(echo $AVAILABLE_DATES)" >> $GITHUB_ENV
         fi
         
     ## Doc: https://github.com/marketplace/actions/slack-send
@@ -66,6 +66,6 @@ jobs:
         slack-message: | 
           FACILITY_NAME: ${{ env.FACILITY_NAME_1 }}
           AVAILABLE_DATES:
-          ${{ env.AVAILABLE_DATES }}
+          ${{ env.AVAILABLE_DATES_1_DATA }}
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

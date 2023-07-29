@@ -48,6 +48,7 @@ def is_an_interested_date(current_date_to_check, input_month, input_year, date_l
 
     # Loop through the date_list_array and see if the date is in the date_list_array
     for date in date_list_array:
+        print(f"is_an_interested_date checking: {input_year}-{input_month}-{date} == ${current_date_to_check}")
         if f"{input_year}-{input_month}-{date}" == current_date_to_check:
             return True
         else:

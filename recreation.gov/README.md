@@ -108,6 +108,6 @@ pip install slack-sdk
 ```
 
 
-python run_python.py 251853 194 2023 08 09,10,11
+python run_python.py 251853 194 2023 08 "09,10,11"
 
 

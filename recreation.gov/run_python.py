@@ -126,17 +126,16 @@ for facility_availability_summary_view_by_local_date in data:
                             # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
                             # Send this information to Slack
                             send_to_slack(f"""
-Location: https://www.recreation.gov/ticket/{FACILITY_ID}/ticket/{TOUR_ID}
-tour date: {a_date}
-tour_time: {tour_time}     
-reservation_count: {reservation_count}
-left: {inventory_count - reservation_count}                                                                                                                                                   
+                                Location: https://www.recreation.gov/ticket/{FACILITY_ID}/ticket/{TOUR_ID}
+                                tour date: {a_date}
+                                tour_time: {tour_time}     
+                                reservation_count: {reservation_count}
+                                left: {inventory_count - reservation_count}                                                                                                                                                   
                             """)
 
                             # To not spam our slack channel we can set this to only run once
                             if run_only_once == 'true':
                                 exit(0)
-
 
     except AttributeError:
         print("AttributeError: 'NoneType' object has no attribute 'get'")

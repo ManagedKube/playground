@@ -16,25 +16,28 @@ on:
   # Push is for testing only to allow you to test this workflow without
   # a merge and just a push.
 #   push:
-  pull_request:
+  # pull_request:
     # types:
     #   - closed
     # branches:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-#   schedule:
-#     - cron: '*/5 * * * *'
+  # schedule:
+    # - cron: '*/5 * * * *'
 #     # - cron: '30 5 * * 2,4'
 
 env:
   # SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
 
+  # Enable debug output
+  DEBUG: false
+
   # Search 1
   FACILITY_ID_1: 251853
   TOUR_ID_1: 194
   YEAR_1: 2023
-  MONTH_1: 07
+  MONTH_1: 08
 
 jobs:
   send_slack:

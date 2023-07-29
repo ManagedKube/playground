@@ -14,6 +14,7 @@ MONTH = sys.argv[4]
 
 # How many tickets are you looking for per time slot
 NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
+SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
 
 ## Get envars
 debug_on = os.environ.get('DEBUG_ON')
@@ -24,7 +25,7 @@ def send_to_slack(message):
     client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 
     try:
-        response = client.chat_postMessage(channel='#random', text=message)
+        response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
         assert response["message"]["text"] == message
     except SlackApiError as e:
         # You will get a SlackApiError if "ok" is False

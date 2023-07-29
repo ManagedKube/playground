@@ -29,6 +29,7 @@ on:
 
 env:
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  SLACK_CHANNEL: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
 
 
   # Enable debug output
@@ -47,7 +48,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Run Script
+    - name: Setup
       run: |
         pip install slack-sdk
+    - name: Run Script
+      run: |
         python3 ./recreation.gov/run_python.py ${FACILITY_ID_1} ${TOUR_ID_1} ${YEAR_1} ${MONTH_1}

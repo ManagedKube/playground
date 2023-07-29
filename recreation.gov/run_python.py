@@ -106,7 +106,7 @@ Location: https://www.recreation.gov/ticket/{FACILITY_ID}/ticket/{TOUR_ID}
 tour date: {a_date}
 tour_time: {tour_time}     
 reservation_count: {reservation_count}
-"left: {inventory_count - reservation_count}"                                                                                                                                                   
+left: {inventory_count - reservation_count}                                                                                                                                                   
                         """)
                         exit(0)
 

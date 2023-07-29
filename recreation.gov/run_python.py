@@ -80,6 +80,8 @@ for facility_availability_summary_view_by_local_date in data:
         for a_date in data.get(facility_availability_summary_view_by_local_date):
             print(a_date)
 
+            ## Check if the date is in the interested date list and only do the reservation
+            ## check if this date is in the list of interested dates
             if is_an_interested_date(a_date, MONTH, YEAR, INTERESTED_DATES):
                 print("This is an interested date\n")
 

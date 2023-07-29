@@ -140,5 +140,8 @@ for facility_availability_summary_view_by_local_date in data:
     except AttributeError:
         print("AttributeError: 'NoneType' object has no attribute 'get'")
         break
+    except TypeError:
+        print("TypeError: 'int' object is not iterable")
+        break
 
 

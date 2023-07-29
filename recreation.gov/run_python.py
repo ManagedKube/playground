@@ -18,6 +18,7 @@ SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
 
 ## Get envars
 debug_on = os.environ.get('DEBUG_ON')
+run_only_once = os.environ.get('RUN_ONLY_ONCE') # only do one loop of this and stop after the first free reservaction is found
 
 ## Send message to Slack
 ## doc: https://github.com/slackapi/python-slack-sdk#sending-a-message-to-slack
@@ -108,7 +109,10 @@ tour_time: {tour_time}
 reservation_count: {reservation_count}
 left: {inventory_count - reservation_count}                                                                                                                                                   
                         """)
-                        exit(0)
+
+                        # To not spam our slack channel we can set this to only run once
+                        if run_only_once == 'true':
+                            exit(0)
 
 
     except AttributeError:

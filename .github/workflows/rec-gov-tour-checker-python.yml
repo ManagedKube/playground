@@ -55,5 +55,5 @@ jobs:
         pip install slack-sdk
     - name: Run Script
       run: |
-        python3 ./recreation.gov/run_python.py ${FACILITY_ID_1} ${TOUR_ID_1} ${YEAR_1} ${MONTH_1} "${INTERESTED_DATES}"
-        # python3 ./recreation.gov/run_python.py 251853 194 2023 08 "09,10,11"
+        # python3 ./recreation.gov/run_python.py ${FACILITY_ID_1} ${TOUR_ID_1} ${YEAR_1} ${MONTH_1} "${INTERESTED_DATES}"
+        python3 ./recreation.gov/run_python.py 251853 194 2023 08 "09,10,11"

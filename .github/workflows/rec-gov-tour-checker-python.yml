@@ -41,7 +41,7 @@ env:
   MONTH_1: 08
 
 jobs:
-  send_slack:
+  check_open_reservations:
     # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:

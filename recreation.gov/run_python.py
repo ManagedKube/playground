@@ -26,14 +26,16 @@ run_only_once = os.environ.get('RUN_ONLY_ONCE') # only do one loop of this and s
 def send_to_slack(message):
     client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 
-    try:
-        response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
-        assert response["message"]["text"] == message
-    except SlackApiError as e:
-        # You will get a SlackApiError if "ok" is False
-        assert e.response["ok"] is False
-        assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
-        print(f"Got an error: {e.response['error']}")
+    response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
+
+    # try:
+    #     response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
+    #     assert response["message"]["text"] == message
+    # except SlackApiError as e:
+    #     # You will get a SlackApiError if "ok" is False
+    #     assert e.response["ok"] is False
+    #     assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
+    #     print(f"Got an error: {e.response['error']}")
 
 ## Check if the date is in the interested date list
 ## current_date_to_check = 2023-08-03

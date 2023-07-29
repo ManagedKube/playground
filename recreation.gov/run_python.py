@@ -91,6 +91,7 @@ for facility_availability_summary_view_by_local_date in data:
                     reservation_count = a_daily_timeslot.get('reservation_count').get('ANY')
                     inventory_count = a_daily_timeslot.get('inventory_count').get('ANY')
 
+                    print(f"tour date: {a_date}")
                     print(f"tour_time: {tour_time}")
                     print(f"reservation_count: {reservation_count}")
                     print(f"inventory_count: {inventory_count}")
@@ -100,7 +101,13 @@ for facility_availability_summary_view_by_local_date in data:
 
                         # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
                         # Send this information to Slack
-                        send_to_slack("hello world")
+                        send_to_slack("""
+tour date: {a_date}
+tour_time: {tour_time}     
+reservation_count: {reservation_count}
+"inventory_count - reservation_count: {inventory_count - reservation_count}"                                                                                                                                                   
+                        """)
+                        exit(0)
 
 
     except AttributeError:

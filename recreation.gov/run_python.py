@@ -101,7 +101,7 @@ for facility_availability_summary_view_by_local_date in data:
 
                         # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
                         # Send this information to Slack
-                        send_to_slack("""
+                        send_to_slack(f"""
 tour date: {a_date}
 tour_time: {tour_time}     
 reservation_count: {reservation_count}

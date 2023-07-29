@@ -3,6 +3,8 @@
 import requests
 import sys
 import os
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 ## Get user inputs
 FACILITY_ID = sys.argv[1]
@@ -15,6 +17,20 @@ NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
 
 ## Get envars
 debug_on = os.environ.get('DEBUG_ON')
+
+## Send message to Slack
+## doc: https://github.com/slackapi/python-slack-sdk#sending-a-message-to-slack
+def send_to_slack(message):
+    client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
+
+    try:
+        response = client.chat_postMessage(channel='#random', text=message)
+        assert response["message"]["text"] == message
+    except SlackApiError as e:
+        # You will get a SlackApiError if "ok" is False
+        assert e.response["ok"] is False
+        assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
+        print(f"Got an error: {e.response['error']}")
 
 ## Construct URL with user inputs
 url = f"https://www.recreation.gov/api/ticket/availability/facility/{FACILITY_ID}/monthlyAvailabilitySummaryView" #?year={YEAR}&month={MONTH}&inventoryBucket=FIT&tourId={TOUR_ID}"
@@ -83,8 +99,7 @@ for facility_availability_summary_view_by_local_date in data:
 
                         # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
                         # Send this information to Slack
-
-                        
+                        send_to_slack("hello world")
 
 
     except AttributeError:

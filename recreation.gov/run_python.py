@@ -137,13 +137,16 @@ for facility_availability_summary_view_by_local_date in data:
 
                             # To not spam our slack channel we can set this to only run once
                             if run_only_once == 'true':
+                                print("run_only_once is set to true.  Exiting the program")
                                 exit(0)
 
     except AttributeError:
         print("AttributeError: 'NoneType' object has no attribute 'get'")
+        print("Hit an except, breaking out of the loop")
         break
     except TypeError:
         print("TypeError: 'int' object is not iterable")
+        print("Hit an except, breaking out of the loop")
         break
 
 

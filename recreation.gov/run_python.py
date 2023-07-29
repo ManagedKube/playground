@@ -11,6 +11,7 @@ FACILITY_ID = sys.argv[1]
 TOUR_ID = sys.argv[2]
 YEAR = sys.argv[3]
 MONTH = sys.argv[4]
+INTERESTED_DATES = sys.argv[5]
 
 # How many tickets are you looking for per time slot
 NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
@@ -33,6 +34,23 @@ def send_to_slack(message):
         assert e.response["ok"] is False
         assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
         print(f"Got an error: {e.response['error']}")
+
+## Check if the date is in the interested date list
+## current_date_to_check = 2023-08-03
+## input_month = 08 # two digit month
+## input_year = 2023
+## date_list = 3,4,5,x
+def is_an_interested_date(current_date_to_check, input_month, input_year, date_list):
+    # The date_list is a comma separated list of dates that the user is interested in.  Split this out into an array
+    date_list_array = date_list.split(',')
+
+    # Loop through the date_list_array and see if the date is in the date_list_array
+    for date in date_list_array:
+        if f"{input_year}-{input_month}-{date}" == current_date_to_check:
+            return True
+        else:
+            return False
+
 
 ## Construct URL with user inputs
 url = f"https://www.recreation.gov/api/ticket/availability/facility/{FACILITY_ID}/monthlyAvailabilitySummaryView" #?year={YEAR}&month={MONTH}&inventoryBucket=FIT&tourId={TOUR_ID}"
@@ -62,57 +80,60 @@ for facility_availability_summary_view_by_local_date in data:
         for a_date in data.get(facility_availability_summary_view_by_local_date):
             print(a_date)
 
-            # print(data.get(facility_availability_summary_view_by_local_date).get(a_date).get('tour_availability_summary_view_by_tour_id').get(TOUR_ID).get('reservable'))
+            if is_an_interested_date(a_date, MONTH, YEAR, INTERESTED_DATES):
+                print("This is an interested date\n")
 
-            # THis is the total reservable slots for the day.  It could be 1 slot free for the 9:00am time slot and 1 slot free for the 10:00am time slot.  So it is 2 reservable slots for the day
-            reservable = data.get(facility_availability_summary_view_by_local_date).get(a_date).get('tour_availability_summary_view_by_tour_id').get(TOUR_ID).get('reservable')
+                # print(data.get(facility_availability_summary_view_by_local_date).get(a_date).get('tour_availability_summary_view_by_tour_id').get(TOUR_ID).get('reservable'))
 
-            # We need query each day which will give us the time slots for that day and then we can
-            # calculate how many slots are available for each time slot
-            if reservable > NUMBER_OF_RESERVABLE_PER_TIME_SLOT:
-                print(f"reservable: {reservable}\n")
+                # THis is the total reservable slots for the day.  It could be 1 slot free for the 9:00am time slot and 1 slot free for the 10:00am time slot.  So it is 2 reservable slots for the day
+                reservable = data.get(facility_availability_summary_view_by_local_date).get(a_date).get('tour_availability_summary_view_by_tour_id').get(TOUR_ID).get('reservable')
 
-                #############################################
-                # Lets look at the time slots in each day
-                #############################################
-                daily_timeslot_url = f"https://www.recreation.gov/api/ticket/availability/facility/{FACILITY_ID}"
-                daily_timeslot_response = requests.get(daily_timeslot_url, headers=headers, params={'date': a_date})
-                daily_timeslot_data = daily_timeslot_response.json()
+                # We need query each day which will give us the time slots for that day and then we can
+                # calculate how many slots are available for each time slot
+                if reservable > NUMBER_OF_RESERVABLE_PER_TIME_SLOT:
+                    print(f"reservable: {reservable}\n")
 
-                if debug_on == 'true':
-                    print("XXXXXXXXXXXXXXXXXXXX")
-                    print(daily_timeslot_response.content)
-                    print(f"URL: {daily_timeslot_url}?date={a_date}\n")
-                    print("XXXXXXXXXXXXXXXXXXXX")
+                    #############################################
+                    # Lets look at the time slots in each day
+                    #############################################
+                    daily_timeslot_url = f"https://www.recreation.gov/api/ticket/availability/facility/{FACILITY_ID}"
+                    daily_timeslot_response = requests.get(daily_timeslot_url, headers=headers, params={'date': a_date})
+                    daily_timeslot_data = daily_timeslot_response.json()
 
-                for a_daily_timeslot in daily_timeslot_data:
-                    print("yyyyyyyy")
+                    if debug_on == 'true':
+                        print("XXXXXXXXXXXXXXXXXXXX")
+                        print(daily_timeslot_response.content)
+                        print(f"URL: {daily_timeslot_url}?date={a_date}\n")
+                        print("XXXXXXXXXXXXXXXXXXXX")
 
-                    tour_time = a_daily_timeslot.get('tour_time')
-                    reservation_count = a_daily_timeslot.get('reservation_count').get('ANY')
-                    inventory_count = a_daily_timeslot.get('inventory_count').get('ANY')
+                    for a_daily_timeslot in daily_timeslot_data:
+                        print("yyyyyyyy")
 
-                    print(f"tour date: {a_date}")
-                    print(f"tour_time: {tour_time}")
-                    print(f"reservation_count: {reservation_count}")
-                    print(f"inventory_count: {inventory_count}")
+                        tour_time = a_daily_timeslot.get('tour_time')
+                        reservation_count = a_daily_timeslot.get('reservation_count').get('ANY')
+                        inventory_count = a_daily_timeslot.get('inventory_count').get('ANY')
 
-                    if (inventory_count - reservation_count) > NUMBER_OF_RESERVABLE_PER_TIME_SLOT:
-                        print(f"inventory_count - reservation_count: {inventory_count - reservation_count}\n")
+                        print(f"tour date: {a_date}")
+                        print(f"tour_time: {tour_time}")
+                        print(f"reservation_count: {reservation_count}")
+                        print(f"inventory_count: {inventory_count}")
 
-                        # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
-                        # Send this information to Slack
-                        send_to_slack(f"""
+                        if (inventory_count - reservation_count) > NUMBER_OF_RESERVABLE_PER_TIME_SLOT:
+                            print(f"inventory_count - reservation_count: {inventory_count - reservation_count}\n")
+
+                            # There are free slots available that is over the NUMBER_OF_RESERVABLE_PER_TIME_SLOT
+                            # Send this information to Slack
+                            send_to_slack(f"""
 Location: https://www.recreation.gov/ticket/{FACILITY_ID}/ticket/{TOUR_ID}
 tour date: {a_date}
 tour_time: {tour_time}     
 reservation_count: {reservation_count}
 left: {inventory_count - reservation_count}                                                                                                                                                   
-                        """)
+                            """)
 
-                        # To not spam our slack channel we can set this to only run once
-                        if run_only_once == 'true':
-                            exit(0)
+                            # To not spam our slack channel we can set this to only run once
+                            if run_only_once == 'true':
+                                exit(0)
 
 
     except AttributeError:

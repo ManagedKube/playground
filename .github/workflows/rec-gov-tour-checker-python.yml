@@ -1,0 +1,52 @@
+## Sends a slack message
+## Docs: 
+## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+##
+name: "Slack - rec.gov - tours - python"
+
+# on:
+#   # Push is for testing only to allow you to test this workflow without
+#   # a merge and just a push.
+#   push:
+#   pull_request:
+#     types:
+#       - closed
+
+on:
+  # Push is for testing only to allow you to test this workflow without
+  # a merge and just a push.
+#   push:
+  pull_request:
+    # types:
+    #   - closed
+    # branches:
+    #   - main
+
+  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    # - cron: '*/5 * * * *'
+#     # - cron: '30 5 * * 2,4'
+
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+
+  # Enable debug output
+  DEBUG: false
+
+  # Search 1
+  FACILITY_ID_1: 251853
+  TOUR_ID_1: 194
+  YEAR_1: 2023
+  MONTH_1: 08
+
+jobs:
+  send_slack:
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run Script
+      run: |
+        python3 ./recreation.gov/run_python.py ${FACILITY_ID_1} ${TOUR_ID_1} ${YEAR_1} ${MONTH_1}

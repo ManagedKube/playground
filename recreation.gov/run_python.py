@@ -43,16 +43,18 @@ def send_to_slack(message):
 ## input_year = 2023
 ## date_list = 3,4,5,x
 def is_an_interested_date(current_date_to_check, input_month, input_year, date_list):
+    return_var = False
+
     # The date_list is a comma separated list of dates that the user is interested in.  Split this out into an array
     date_list_array = date_list.split(',')
 
     # Loop through the date_list_array and see if the date is in the date_list_array
     for date in date_list_array:
-        print(f"is_an_interested_date checking: {input_year}-{input_month}-{date} == ${current_date_to_check}")
+        print(f"is_an_interested_date checking: {input_year}-{input_month}-{date} == {current_date_to_check}")
         if f"{input_year}-{input_month}-{date}" == current_date_to_check:
             return True
-        else:
-            return False
+
+    return return_var
 
 
 ## Construct URL with user inputs

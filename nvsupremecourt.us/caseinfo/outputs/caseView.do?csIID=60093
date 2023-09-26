@@ -1,0 +1,783 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81936: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=292ADACF2EC2405AACE3BB354AA2609E">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60093">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81936</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">GALAXY GAMING, INC. VS. TRIANGULUM PARTNERS, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=56501">79555</a>, <a href="/public/caseView.do?csIID=57004">79924</a>, <a href="/public/caseView.do?csIID=59616">81626</a>, <a href="/public/caseView.do?csIID=61437">82828</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A794293</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>10/15/2020 / Gugino, Salvatore</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Bryan W. Waters</td><td valign="top">Emily Allen-Wiles Buchwald
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Galaxy Gaming, Inc.</td><td valign="top">Emily Allen-Wiles Buchwald
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Mark Lipparelli</td><td valign="top">Emily Allen-Wiles Buchwald
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Norman H. Desrosiers</td><td valign="top">Emily Allen-Wiles Buchwald
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">William A. Zender</td><td valign="top">Emily Allen-Wiles Buchwald
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Robert B. Saucier</td><td valign="top">Dylan T. Ciciliano
+							(Garman Turner Gordon LLP)
+						<br>Erika A. Pike Turner
+							(Garman Turner Gordon LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Triangulum Partners, LLC</td><td valign="top">Dylan T. Ciciliano
+							(Garman Turner Gordon LLP)
+						<br>Erika A. Pike Turner
+							(Garman Turner Gordon LLP)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>01/12/2021</td><td>Overdue</td><td>Manual Due Item</td><td>Settlement Judge</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=790820&onBaseDocumentNumber=20-37793">20-37793</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=790823&onBaseDocumentNumber=20-37796">20-37796</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Jordan T. Smith. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/15/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=790867&onBaseDocumentNumber=20-37840">20-37840</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/15/2020</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Salvatore C. Gugino. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=790908&onBaseDocumentNumber=20-37880">20-37880</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2020</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for November 16, 2020, at 10:30 am. Case Nos. 81626/81936. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=791648&onBaseDocumentNumber=20-38607">20-38607</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2020</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=793042&onBaseDocumentNumber=20-39982">20-39982</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from GTG LLP.  Check no. 8020. (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2020</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents' Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=793418&onBaseDocumentNumber=20-40331">20-40331</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellants' Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=794373&onBaseDocumentNumber=20-41148">20-41148</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2020</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: December 16, 2020, at 10:00 AM via Zoom. Case Nos. 81626/81936. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=796889&onBaseDocumentNumber=20-42653">20-42653</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2020</td><td>Settlement Program Report</td><td>Filed Amended ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for December 16, 2020, at 10:00 AM via Zoom. Case Nos. 81626/81936/82081. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=797997&onBaseDocumentNumber=20-43707">20-43707</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2020</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 81626/81936/82081. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=801170&onBaseDocumentNumber=20-46683">20-46683</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2020</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellants/cross-respondents (appellants) and respondents/cross-appellants (respondents) shall each have 14 days from the date of this order to file and serve a transcript request form. Further, appellants shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  Respondents shall have 30 days from service of appellants' opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal.  Appellants shall have 30 days from service of respondents' combined brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal.  Finally, respondents shall have 14 days from service of appellants' combined brief to file and serve a reply brief on cross-appeal, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=801258&onBaseDocumentNumber=20-46765">20-46765</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2021</td><td>Transcript Request</td><td>Filed Appellant/Cross-Respondents' Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=802403&onBaseDocumentNumber=21-00801">21-00801</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2021</td><td>Transcript Request</td><td>Filed Respondent/Cross-Appellants' Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=802738&onBaseDocumentNumber=21-01018">21-01018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Order/Procedural</td><td>Filed Order to Show Cause.  Respondents/cross-appellants shall have 30 days from the date of this order to show cause why the cross-appeal should not be dismissed for lack of jurisdiction.  Appellants/cross-respondents shall have 14 days from the date of service of the response to file and serve any reply.  Briefing of this matter is suspended pending further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=804672&onBaseDocumentNumber=21-02851">21-02851</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=806803&onBaseDocumentNumber=21-04876">21-04876</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2021</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Reply to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=808331&onBaseDocumentNumber=21-06346">21-06346</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/18/2021</td><td>Order/Procedural</td><td>Filed Order Dismissing Cross-Appeal and Reinstating Briefing. The cross-appeal is dismissed.  Each party shall bear its own costs. Briefing of this appeal is reinstated.  Appellants shall have 90 days from the date of this order to file and serve the opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=809856&onBaseDocumentNumber=21-07810">21-07810</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/11/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' opening brief and appendix due: June 30, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=819307&onBaseDocumentNumber=21-16793">21-16793</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Brief</td><td>Filed Appellants' Redacted Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=821545&onBaseDocumentNumber=21-18882">21-18882</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=821546&onBaseDocumentNumber=21-18883">21-18883</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Motion</td><td>Filed Appellants' Motion to Redact the Galaxy Parties' Opening Brief and Seal Appendix Volumes II-VIII in Support of Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=821547&onBaseDocumentNumber=21-18884">21-18884</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants' unopposed motion for leave to redact the opening brief and file portions of the appendix under seal is granted to the following extent.  SRCR 7.   The redacted opening brief was filed on June 30, 2021.  Unredacted opening brief due: 7 days. Upon receipt of the unredacted opening brief, the clerk shall file the brief under seal.  The clerk shall file the volumes of the appendix received on July 6, 2021, under seal.  Respondents' answering brief due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=823379&onBaseDocumentNumber=21-20623">21-20623</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Appendix</td><td>Filed Appellant's (SEALED) Appendix to Opening Brief. Vols. 2-8. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2021</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to Submit Unredacted Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=824398&onBaseDocumentNumber=21-21526">21-21526</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/04/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk shall file the unredacted opening brief received on July 29, 2021, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=825535&onBaseDocumentNumber=21-22647">21-22647</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/04/2021</td><td>Brief</td><td>Filed Appellants' Unredacted Opening Brief under SEAL.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents' Answering Brief due:  August 30, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=826509&onBaseDocumentNumber=21-23547">21-23547</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Brief</td><td>Filed Respondents' Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=828065&onBaseDocumentNumber=21-25040">21-25040</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Motion</td><td>Filed Respondents' Motion to Redact and Seal Portions of the Supplemental Appendix in Support of Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=828066&onBaseDocumentNumber=21-25041">21-25041</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Appendix</td><td>Filed Supplemental Appendix in Support of Respondents' Answering Brief - Volume I of III (Redacted). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=828073&onBaseDocumentNumber=21-25048">21-25048</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents' unopposed motion for leave to file portions of their appendix under seal and in redacted form is granted.  The redacted appendix was filed on August 27, 2021.  The clerk shall file respondents' supplemental appendix received on September 3, 2021, under seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=830396&onBaseDocumentNumber=21-27248">21-27248</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2021</td><td>Appendix</td><td>Filed Supplemental Appendix in Support of Respondents' Answering Brief Volumes I-III (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply brief  due: October 11, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=830909&onBaseDocumentNumber=21-27745">21-27745</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Motion</td><td>Filed Stipulated Request for Stay of Supreme Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=831966&onBaseDocumentNumber=21-28788">21-28788</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The parties have filed a stipulation to "stay" this appeal pending settlement negotiations and implementation of the settlement.  The stipulation is treated as a joint motion for an extension of time to file the reply brief and granted to the following extent.  Appellants shall have until January 14, 2022, to file and serve the reply brief.  If the parties implement a settlement before that date, appellants shall immediately file a motion or stipulation to dismiss this appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=833028&onBaseDocumentNumber=21-29840">21-29840</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2021</td><td>Motion</td><td>Filed Stipulation/Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=836217&onBaseDocumentNumber=21-32789">21-32789</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2021</td><td>Motion</td><td>Filed Stipulation/Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=836219&onBaseDocumentNumber=21-32791">21-32791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Order/Dispositional</td><td>Filed Order/Stipulated Dismissal.  Pursuant to the stipulation of the parties, and cause appearing, and "this appeal is dismissed." The parties shall bear their own costs and attorney fees.  Case Closed/No Remittitur Issued.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60093&csIID=60093&deLinkID=836372&onBaseDocumentNumber=21-32942">21-32942</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60093&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

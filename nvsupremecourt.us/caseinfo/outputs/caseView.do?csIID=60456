@@ -1,0 +1,933 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81157-COA: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1C05DDBD70C6B1E2C1A1037316DF5525">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60456">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81157-COA</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: ESTATE OF MOON</td><td width="15%" class="label">Court:</td><td width="35%">Court of Appeals</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=58950">81157</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - P094474</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Richard A. Steinbronn</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Reference Party</td><td valign="top">Sun Myung Moon</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Daniel M. Davies</td><td valign="top">Jonathan W. Barlow
+							(Clear Counsel Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Richard J. Bach</td><td valign="top">Jonathan W. Barlow
+							(Clear Counsel Law Group)
+						<br>Edgar C. Smith
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Steven Jares</td><td valign="top">Alan J. Lefebvre
+							(Litigator Law LLC)
+						<br>William D. Schuller
+							(Litigator Law LLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2020</td><td>Case Status Update</td><td>Transferred from Supreme Court. (COA).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Second Emergency Motion for Relief Under NRAP 27(e). Relief is requested by December 7, 2020. (TRANSFERRED FROM THE SUPREME COURT PER 12/07/20 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798652&onBaseDocumentNumber=20-44359">20-44359</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2020</td><td>Order/Procedural</td><td>Filed Order Directing Expedited Response. Having reviewed the motion, it appears that an expedited response will assist this court in its resolution. Respondents shall have until 1:30 p.m. tomorrow, December 8, 2020, to file and serve their response to the motion. fn1 [all documents shall be filed personally or by facsimile or electric transmission with the clerk of this court in Carson City.]  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798760&onBaseDocumentNumber=20-44466">20-44466</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2020</td><td>Motion</td><td>Filed Respondents' Expedited Response to Second Emergency Motion for Relief Under NRAP 27(e). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798844&onBaseDocumentNumber=20-44548">20-44548</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2020</td><td>Motion</td><td>Filed Respondents' Expedited Response to Second Emergency Motion for Relief Under NRAP 27(e). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798856&onBaseDocumentNumber=20-44557">20-44557</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2020</td><td>Motion</td><td>Filed Appellant's Expedited Reply to His Second Emergency Motion for Relief Under NRAP 27(e). Faxed Copy (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798896&onBaseDocumentNumber=20-44599">20-44599</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2020</td><td>Order/Procedural</td><td>Filed Order Granting Limited Stay.  Appellant has moved for an emergency stay, pending appeal, of the portion of the district court's order prohibiting him from communicating with the IRS relative to the tax return he filed on the estate's behalf.  Appellant seeks to respond to an IRS notice of levy concerning this return.  Having reviewed the motion in light of the NRAP 8(c) factors, we grant the motion in part and stay the portion of the district court's order prohibiting communications with the IRS as outlined below, pending further proceedings in the district court on the stay motion filed in that court.  Appellant shall be able to contact the IRS in response to the notice of levy he received concerning the estate tax return he filed to inform the IRS of the district court's April 6, 2020, order and this appeal, and to seek appropriate relief, such as placing the IRS matter on hold.  Appellant shall promptly inform respondents of his communications and any response thereto.  This stay will be automatically vacated once the district court resolves the motion for stay currently pending in that court.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=798963&onBaseDocumentNumber=20-44666">20-44666</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/11/2020</td><td>Motion</td><td>Filed Appellant's Expedited Reply to His Second Emergency Motion for Relief Under NRAP 27(e). Original Copy. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=799413&onBaseDocumentNumber=20-45033">20-45033</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/16/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Procedural Motion for Extension of Filing Deadline for Appellant's Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=799924&onBaseDocumentNumber=20-45537">20-45537</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/18/2020</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Alan J. Lefebvre and William D. Schuller of Litigator Law hereby enter their notice of appearance on behalf of interested party Steven Jares, Co-Special Administrator). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=800167&onBaseDocumentNumber=20-45775">20-45775</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2020</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant shall have until March 18, 2021, to file and serve the opening brief.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=800798&onBaseDocumentNumber=20-46316">20-46316</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/24/2020</td><td>Motion</td><td>Filed Interested Party Steven Jares' Motion to Dismiss.  (STRICKEN PER ORDER 01/07/2021).  (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2020</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents shall have until January 14, 2021, to file and serve a joinder to the motion to dismiss filed on December 24, 2020.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=801305&onBaseDocumentNumber=20-46809">20-46809</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Procedural Motion to Have Clerk of Court of Appeals Place in the Public Appeal Record, Two Pages form Two Sealed District Court Documents Filed on March 11, 2020, as Found in the Sealed Record on Appeal Volume 2.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=801316&onBaseDocumentNumber=20-46820">20-46820</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/30/2020</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Opposition to the December 24, 2020 Motion of Interested Party Steven Jares to Dismiss the Appeal. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=801430&onBaseDocumentNumber=20-46933">20-46933</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/04/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. William D. Schuller's reply in support of the motion to dismiss appeal filed on December 24, 2020 due: January 20, 2021. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=801631&onBaseDocumentNumber=21-00038">21-00038</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/07/2021</td><td>Order/Procedural</td><td>Filed Order.  Alan J. Lefebvre and William D. Schuller of Litigator Law have filed a notice of appearance on behalf of "interested party" Steven Jares.  As Mr. Jares is not a party to this appeal, the notice of appearance is disapproved.  The clerk shall strike the motion to dismiss filed by Mr. Jares on December 24, 2020.   Mr. Jares may file a motion to substitute, or a motion to add himself as a respondent, within 14 days of the date of this order, if deemed warranted  fn1[On December 29, 2020, this court granted respondents an extension of time to file a joinder to the motion to dismiss.  Given this order, a joinder may no longer be appropriate.  Further, on January 4, 2021, this court granted Jares an extension of time to file a reply in support of the motion to dismiss.  Given this order, the reply is no longer necessary.]  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=801973&onBaseDocumentNumber=21-00375">21-00375</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Supplement the Record.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=802148&onBaseDocumentNumber=21-00547">21-00547</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2021</td><td>Motion</td><td>Filed Motion to Add Steven Jares as a Respondent, or in the Alternative, Motion to Substitute Steven Jares for Respondent Daniel M. Davies. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=802316&onBaseDocumentNumber=21-00714">21-00714</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/15/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to the motion filed in this court on January 11, 2011 due: February 2, 2021. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=803252&onBaseDocumentNumber=21-01525">21-01525</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Order/Procedural</td><td>Filed Order.  The clerk shall provide appellant with a copy of pages 248 and 265 of the sealed record on appeal filed in the Supreme Court on August 28, 2020.  Appellant has filed an unopposed pro se motion to supplement the record on appeal.  The motion is denied.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=804598&onBaseDocumentNumber=21-02777">21-02777</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/29/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's opposition to the January 11, 2021 motion to add Steven Jares as a respondent or in the alternative, motion to substitute Steven Jares for Respondent Daniel M. Davies. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=804648&onBaseDocumentNumber=21-02827">21-02827</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Motion</td><td>Filed Reply in Support of Motion to Add Steven Jares as a Respondent, or in the Alternative, Motion to Substitute Steven Jares for Respondent Daniel M. Davies. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=804656&onBaseDocumentNumber=21-02835">21-02835</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Quentin Mansfield stating that the requested transcripts were delivered.  Dates of transcripts: 02/26/21. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=809677&onBaseDocumentNumber=21-07635">21-07635</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: March 5, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=810391&onBaseDocumentNumber=21-08314">21-08314</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/24/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Opening Brief. (SC) (STRICKEN PER 04/09/21 ORDER).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/24/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's procedural motion under NRAP 27 to file an Amended Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=810491&onBaseDocumentNumber=21-08413">21-08413</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2021</td><td>Motion</td><td>Filed Respondent Richard Bach's Opposition to Steinbronn's Motion to File an Amended Opening Brief (REJECTED PER NOTICE ISSUED 05/06/21). (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance (Edgar C. Smith). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=811982&onBaseDocumentNumber=21-09830">21-09830</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Respondent Richard Bach's Opposition to Steinbronn's Motion to File an Amended Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=811990&onBaseDocumentNumber=21-09838">21-09838</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Edgar C. Smith of the law firm Clear Counsel Law Group hereby enters his appearance as counsel for Richard J. Bach, Co-Special Administrator of the Estate of Sun Myung Moon, Deceased). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812098&onBaseDocumentNumber=21-09946">21-09946</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2021</td><td>Motion</td><td>Filed Respondent Richard Bach's Opposition to Steinbronn's Motion to File an Amended Opening Brief (REJECTED PER NOTICE ISSUED 04/07/21). (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 10 days. Notice of Appearance (Edgar C. Smith). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812144&onBaseDocumentNumber=21-09990">21-09990</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice/Incoming</td><td>Filed Proof of Service (REJECTED PER NOTICE ISSUED 04/07/21). (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Respondent Richard Bach's Opposition to Steinbronn's Motion to File An Amended Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812186&onBaseDocumentNumber=21-10032">21-10032</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document (Proof of Service). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812195&onBaseDocumentNumber=21-10041">21-10041</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Edgar C. Smith of the law firm Clear Counsel Law Group hereby enters his appearance as counsel for Richard J. Bach, Co-Special Administrator of the Estate of Sun Myung Moon, Deceased). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812338&onBaseDocumentNumber=21-10179">21-10179</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2021</td><td>Motion</td><td>Filed Respondent Richard Bach's Opposition to Steinbronn's Motion to File an Amended Opening Brief (REJECTED PER NOTICE ISSUED 04/08/21).  (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Respondent Richard Bach's Opposition to Steinbronn's Motion to File an Amended Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812358&onBaseDocumentNumber=21-10199">21-10199</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Order/Procedural</td><td>Filed Order. Steven Jares has filed a motion to add himself as a respondent to this appeal or, alternatively, substitute himself in place of respondent Daniel M. Davies. The motion is granted to the following extent.  The clerk shall add Steven Jares, Co-Special Administrator of the Estate, as a respondent to this appeal.  The clerk shall add Alan J. Lefebvre and William D. Schuller of Litigator Law as counsel of record for Jares.  This court declines to remove Davies as a respondent at this time. To the extent appellant seeks to disqualify Jares' counsel, this court declines to do so at this time because appellant fails to demonstrate that he has standing to move to disqualify Jares' counsel. Appellant's unopposed motion for leave to file an amended opening brief is granted.  The clerk shall strike the opening brief filed on March 24, 2021, and file the amended opening brief received on March 24, 2021.  Respondents shall have 30 days from the date of this order to file and serve their answering briefs.  Appellant shall have 30 days from service of the last-filed answering brief to file and serve any reply brief. fn2 [It is not clear if appellant opposes the addition of Jares as a respondent as he states both that he opposes the addition and that Jares can be added as a respondent, if appropriate.] (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812415&onBaseDocumentNumber=21-10255">21-10255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/09/2021</td><td>Brief</td><td>Filed Proper Person Appellant Steinbronn's Amended Opening Brief. (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=812419&onBaseDocumentNumber=21-10259">21-10259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2021</td><td>Motion</td><td>Filed Respondent Steven Jares' Motion to Dismiss. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=813035&onBaseDocumentNumber=21-10833">21-10833</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/14/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 10 days.  Respondent Steven Jares' Motion to Dismiss. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=813041&onBaseDocumentNumber=21-10839">21-10839</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2021</td><td>Motion</td><td>Filed Proof of Service (Respondent Steven Jares' Motion to Dismiss). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=813076&onBaseDocumentNumber=21-10873">21-10873</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/16/2021</td><td>Motion</td><td>Filed Respondent Richard Bach's Joinder to Respondent Steven Jares' Motion to Dismiss the Steinbronn Appeal. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=813338&onBaseDocumentNumber=21-11129">21-11129</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/23/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Opposition to the April 14, 2020, Motion of Respondent Steven Jares to Dismiss this Appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=814038&onBaseDocumentNumber=21-11782">21-11782</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Opposition to the April 16, 2021, Joinder of Respondent Richard J. Back to the April 14, 2021, Motion of Respondent Steven Jares to Dismiss the Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=814195&onBaseDocumentNumber=21-11936">21-11936</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/29/2021</td><td>Motion</td><td>Filed Reply in Support of Respondent Steven Jares' Motion to Dismiss. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=814594&onBaseDocumentNumber=21-12325">21-12325</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/30/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent Richard Bach's Answering Brief due:  May 24, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=814761&onBaseDocumentNumber=21-12492">21-12492</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Steven Jares' answering brief due: May 24, 2021. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=814820&onBaseDocumentNumber=21-12551">21-12551</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Alternate Motions Under NRAP 27. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=815082&onBaseDocumentNumber=21-12808">21-12808</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/07/2021</td><td>Motion</td><td>Filed Respondent Steven Jares' Opposition to Appellant Steinbronn's Alternate Motions Under NRAP 27. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=815392&onBaseDocumentNumber=21-13108">21-13108</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2021</td><td>Motion</td><td>Filed Richard Bach's Joinder to Steven Jares' Opposition to Appellant Steinbronn's Alternate Motions Under NRAP 27. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=815938&onBaseDocumentNumber=21-13567">21-13567</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent Jares' May 7, 2021 Opposition to Appellant Steinbronn's Alternative Motions under NRAP 27. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=816039&onBaseDocumentNumber=21-13667">21-13667</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant's Errata to Steinbronn's Reply dated May 10, 2021.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=816199&onBaseDocumentNumber=21-13826">21-13826</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to Respondent Bach's May 11, 2020 Joinder to Respondent Jares' May 7, 2021 Opposition to Appellant Steinbronn's Alternative Motions Under NRAP 27 dated May 2, 2021, file stamped May 4, 2021.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=816590&onBaseDocumentNumber=21-14215">21-14215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2021</td><td>Order/Procedural</td><td>Filed Order.  Respondent Steven Jares has filed a motion to dismiss this appeal.  Appellant's countermotion to strike the motion to dismiss and joinder as untimely under NRAP 14(f) is denied as that rule does not place a time limitation on filing a motion to dismiss.  Appellant's motion to strike Jares's reply in support of the motion to dismiss, or for alternative relief, is also denied.  Insofar as the motion to dismiss asserts that the challenged order is not substantively appealable, it appears the motion is best considered at the time of disposition of this appeal.  Respondents shall have 21 days from the date of this order to file and serve the answering briefs.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=816986&onBaseDocumentNumber=21-14558">21-14558</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Emergency Motion for Relief Under NRAP 27(e).  Relief requested by June 2, 2021.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=817556&onBaseDocumentNumber=21-15121">21-15121</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/27/2021</td><td>Motion</td><td>Filed Respondent Steven Jares' Opposition to [Third] Emergency Motion for Relief Under NRAP 27(e). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=817732&onBaseDocumentNumber=21-15294">21-15294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to Respondent Jares' May 27, 2021 Opposition to Emergency Motion for Relief Under NRAP 27(e).  (Filed via Fax.)  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=817939&onBaseDocumentNumber=21-15497">21-15497</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2021</td><td>Motion</td><td>Filed Respondent Richard J. Bach's Joinder to Respondent Steven Jares' Opposition to [Third] Emergency Motion for Relief Under 27(e). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818009&onBaseDocumentNumber=21-15566">21-15566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent Richard J. Bach's June 1, 2021 Joinder to Respondent Jares' May 27, 2021 Opposition to Appellant's Emergency Motion for Relief Under NRAP 27(e) that was served May 25 and filed on May 26, 2021. (Via FAX).  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818069&onBaseDocumentNumber=21-15626">21-15626</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent Jares' May 27, 2021 Opposition to Emergency Motion for Relief Under NRAP 27(e). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818158&onBaseDocumentNumber=21-15710">21-15710</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2021</td><td>Order/Procedural</td><td>Filed Order Denying Stay. Steinbronn has filed an emergency motion seeking to stay the portion of the appealed order that prohibits him from communicating with the IRS on an estate tax return he filed on behalf of the subject estate. We deny Steinbronn's emergency motion for a stay. (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818170&onBaseDocumentNumber=21-15722">21-15722</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2021</td><td>Brief</td><td>Filed Respondent Steven Jares' Answering Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818806&onBaseDocumentNumber=21-16299">21-16299</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent Richard J. Bach's June 1, 2021 Joinder to Respondent Jares' May 27, 2021 Opposition to Appellant's Emergency Motion for Relief Under NRAP 27(e) that was served May 25 and Filed on May 26, 2021. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=818852&onBaseDocumentNumber=21-16345">21-16345</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2021</td><td>Brief</td><td>Filed Respondent Richard J. Bach's Answering Brief (REJECTED PER NOTICE ISSUED 06/11/21). (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/11/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=819333&onBaseDocumentNumber=21-16819">21-16819</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/11/2021</td><td>Brief</td><td>Filed Respondent Richard J. Bach's Amended Answering Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=819405&onBaseDocumentNumber=21-16889">21-16889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Reply Brief due:  July 26, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=822307&onBaseDocumentNumber=21-19567">21-19567</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Extend Time for Reply Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=823550&onBaseDocumentNumber=21-20790">21-20790</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant Steinbronn's Request for Judicial Notice. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=823554&onBaseDocumentNumber=21-20794">21-20794</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2021</td><td>Motion</td><td>Filed Respondent Steven Jares' Request for Judicial Notice. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=824315&onBaseDocumentNumber=21-21444">21-21444</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/26/2021</td><td>Motion</td><td>Filed Respondent Steven Jares Opposition to Motion to Extend Time for Appellant's Reply Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=824435&onBaseDocumentNumber=21-21562">21-21562</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent' Jares' Opposition to Motion to Extend Time for Appellant's Reply Brief and Appellant's Motion for Leave to File Supplemental Reply Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=825302&onBaseDocumentNumber=21-22420">21-22420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Response to Respondent Jares' July 26, 2021 Request for Judicial Notice. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=825304&onBaseDocumentNumber=21-22422">21-22422</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/06/2021</td><td>Motion</td><td>Filed Respondent's Response to Motion Opposition to Appellant's Motion for Leave to File Supplemental Reply Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=825713&onBaseDocumentNumber=21-22816">21-22816</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2021</td><td>Motion</td><td>Filed Proper Person Appellant Steinbronn's Reply to Respondent Jares' August 6, 2021 Opposition to Appellant's Motion for Leave to File Supplementary Reply Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=826157&onBaseDocumentNumber=21-23199">21-23199</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Order/Procedural</td><td>Filed Order.  The motions for judicial notice are granted to the following extent.  This court will provisionally take judicial notice of the Petition for First and Final Accounting and Order of Final Discharge filed in the district court on July 8, 2021, and the documents attached to Jares' July 26, 2021, motion for judicial notice.  However, if it is determined at the time of disposition of this appeal that these documents are not appropriate for consideration on appeal, this court will disregard them.  To the extent appellant asks that this court take judicial notice of documents filed in this court, the motion is unnecessary.  Appellant may cite to documents filed in this court without judicial notice.  The clerk shall return the reply brief received on July 29, 2021, unfiled.  Appellant shall have 14 days from the date of this order to file and serve a reply brief that does not exceed 15 pages or 7,000 words.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=827543&onBaseDocumentNumber=21-24527">21-24527</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant Steinbronn's September 2, 2021 Request for Judicial Notice. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=829182&onBaseDocumentNumber=21-26084">21-26084</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Brief</td><td>Filed Proper Person Appellant Steinbronn's Reply Brief to Respondent Bach's Answering Brief and to Respondent Jares' Answering Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=829183&onBaseDocumentNumber=21-26085">21-26085</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/01/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed an unopposed pro se motion for judicial notice.  The motion is granted to the following extent.  This court will provisionally take judicial notice of the document attached to appellant's September 8, 2021, motion.  However, if it is determined at the time of disposition of this appeal that this document is not appropriate for consideration on appeal, this court will disregard it. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=831354&onBaseDocumentNumber=21-28186">21-28186</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part and Dismissing in Part.  "We affirm the district court's order to the extent it denied Steinbronn's request for over $10,000 in expenses related to the 2019 tax return, and we dismiss the appeal insofar as it challenges the remainder of the order."  Court of Appeals-MG/JT/BB  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60456&csIID=60456&deLinkID=840649&onBaseDocumentNumber=21-37026">21-37026</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Case Status Update</td><td>Transferred to Supreme Court.  (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/24/2022</td><td>Case Status Update</td><td>Case Closed.  (COA)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60456&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

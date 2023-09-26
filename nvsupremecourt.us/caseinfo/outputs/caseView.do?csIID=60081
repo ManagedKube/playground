@@ -1,0 +1,921 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81924: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=6E2959363AE3A6DCEF9D66BD7433AECD">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60081">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81924</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LEG. OF THE STATE OF NEV. VS. SETTELMEYER</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=57598">80313</a>, <a href="/public/caseView.do?csIID=62507">83597</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Carson City - First Judicial District - 19OC001271B</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>05/03/2021 at 1:30 PM</td><td class="label">Oral Argument Location:</td><td>Carson City</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>05/03/2021</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Claire J. Clift</td><td valign="top">Kevin C. Powers
+							(Legislative Counsel Bureau Legal Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Joseph Lombardo</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Craig A. Newby
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Kate Marshall</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Craig A. Newby
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Nicole J. Cannizzaro</td><td valign="top">Kevin C. Powers
+							(Legislative Counsel Bureau Legal Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">The Legislature of the State of Nevada</td><td valign="top">Kevin C. Powers
+							(Legislative Counsel Bureau Legal Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">The State of Nevada Department of Motor Vehicles</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Craig A. Newby
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">The State of Nevada Department of Taxation</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Craig A. Newby
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ben Kieckhefer</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Goodfellow Corporation</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Great Basin Engineering Contractors, LLC</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Heidi Seevers Gansert</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ira D. Hansen</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">James A. Settelmeyer</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Joe Hardy</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Keith F. Pickard</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Keystone Corp.</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Kimmie Candy Company</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">National Federation of Independent Business</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Nevada Franchised Auto Dealers Association</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Nevada Trucking Association, Inc.</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Pete Goicoechea</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Retail Association of Nevada</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Scott T. Hammond</td><td valign="top">Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/13/2020</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  State/County/Municipality. (Appellant, The Legislature) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/13/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (Appellant, The Legislature) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=790491&onBaseDocumentNumber=20-37465">20-37465</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/13/2020</td><td>Filing Fee</td><td>Appeal Filing Fee Waived. State/County/Municipality. (Appellants State, Dep't of Taxation and State, Dep't of Motor Vehicles) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/13/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. (Docketing statement mailed to counsel for appellant.) (Appellants, State, Dep't of Taxation and State, Dep't of Motor Vehicles) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=790495&onBaseDocumentNumber=20-37469">20-37469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/13/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=790499&onBaseDocumentNumber=20-37473">20-37473</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2020</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellants: 14 days transcript request form; 120 days opening brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=790706&onBaseDocumentNumber=20-37679">20-37679</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2020</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=791432&onBaseDocumentNumber=20-38397">20-38397</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2020</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=791583&onBaseDocumentNumber=20-38544">20-38544</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2020</td><td>Transcript Request</td><td>Filed Appellants' Joint Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=792561&onBaseDocumentNumber=20-39508">20-39508</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Allison MacKenzie.  Check no. 14786. (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Docketing statement mailed to counsel for cross-appellants.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=792929&onBaseDocumentNumber=20-39870">20-39870</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2020</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents Joint Docketing Statement (The Legislature of the State of Nevada, State of Nevada Department of Taxation and State of Nevada Department of Motor Vehicles).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=793174&onBaseDocumentNumber=20-40113">20-40113</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (Appellants/Cross-Respondents, State, Dep't of Taxation and State, Dep't of Motor Vehicles) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=794179&onBaseDocumentNumber=20-40954">20-40954</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellants' Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=794353&onBaseDocumentNumber=20-41128">20-41128</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/13/2020</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=794770&onBaseDocumentNumber=20-41540">20-41540</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=795374&onBaseDocumentNumber=20-42142">20-42142</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2020</td><td>Docketing Statement</td><td>Filed Respondent-Cross-Appellants' Docketing Statement - Civil. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=796883&onBaseDocumentNumber=20-42647">20-42647</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/25/2020</td><td>Transcript Request</td><td>Filed Respondents'/Cross-Appellants' Certificate That No Transcript Is Being Requested. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=797345&onBaseDocumentNumber=20-43064">20-43064</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2020</td><td>Order/Clerk's</td><td>Filed Certification. The clerk of the Nevada Supreme Court certifies to the Honorable Aaron D. Ford, Attorney General of the State of Nevada, that on November 23, 2020, respondent/cross-appellants' filed with the Supreme Court a notice that this appeal draws into question the constitutionality of SB 542 and 551. See NRAP 44. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=797690&onBaseDocumentNumber=20-43404">20-43404</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Order/Procedural</td><td>Filed Order to Show Cause. Respondents/cross-appellants shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Appellants/cross-respondents may file any reply within 14 days from the date that  respondents/cross-appellants'  response is served. Briefing is suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=798592&onBaseDocumentNumber=20-44299">20-44299</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=801945&onBaseDocumentNumber=21-00347">21-00347</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2021</td><td>Motion</td><td>Filed Respondents'/Cross-Appellants' Motion to Amend Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=801947&onBaseDocumentNumber=21-00349">21-00349</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/14/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant/cross-respondent The Legislature of the State of Nevada shall have until January 27, 2021, to file and serve a response to respondent/cross-appellant's motion to amend caption.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=802912&onBaseDocumentNumber=21-01188">21-01188</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/cross-respondent The Legislature of the State of Nevada's response to respondents/cross-appellants' response to order to show cause due: February 4, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=803591&onBaseDocumentNumber=21-01863">21-01863</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/22/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants/cross-respondents The State of Nevada Department of Motor Vehicles and The State of Nevada Department of Taxation's reply to respondents/cross-appellants' response to order to show cause due: February 4, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=803623&onBaseDocumentNumber=21-01893">21-01893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2021</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Joint Response to Motion to Amend Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=804362&onBaseDocumentNumber=21-02600">21-02600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Reply to Joint Response to Motion to Amend Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=805103&onBaseDocumentNumber=21-03276">21-03276</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2021</td><td>Motion</td><td>Filed Appellants/Cross-Respondents' Joint Reply to Respondents/Cross-Appellants' Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=805340&onBaseDocumentNumber=21-03510">21-03510</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/19/2021</td><td>Order/Procedural</td><td>Filed Order.  Respondents/cross-appellants shall have 30 days from the date of this order to respond to the joint reply filed by appellants/cross-respondents on February 4, 2021.  Appellant/cross-respondents shall have 14 days from service of the response to file a surreply.  At the conclusion of this briefing cycle, this court will consider the briefing in regard to the cross-appeal complete.  This court directs the attorneys for the parties to appear before Chief Justice Hardesty at 1:30 p.m. on Thursday March 4, 2021, for an appeal conference to assist in determining how this court should proceed, including the establishment of a briefing schedule on the merits of the appeal.  To facilitate this conference, the court will use the BlueJeans videoconferencing system, which requires laptop/desktop/videoconferencing computer internet access and audio and video (web camera) capability. In case technical difficulties develop at any time, the court will conduct the hearing by teleconference, which will require counsel to have immediate access to a landline phone connection.  Within 5 days of the date of this order, the parties shall submit to the Clerk of the Court a notice identifying the attorney(s) who will appear at the hearing and the phone number and email address of the attorney(s).  The notice may be emailed to the court at nvscclerk@nvcourts.nv.gov.  The attorneys will be required to schedule a session with the Clerk of the Court to test capabilities of the connection and video equipment within the same time frame.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=807009&onBaseDocumentNumber=21-05078">21-05078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2021</td><td>Order/Procedural</td><td>Filed Order Setting Briefing Schedule and Scheduling Oral Argument. Briefing on the merits of the appeal is reinstated, and the briefing schedules in the appeal and cross-appeal shall proceed as follows. Appellants/cross-respondents shall file and serve an appendix by March 11, 2021.  Appellants/cross-respondents shall have until March 22, 2021, to file and serve the opening brief on appeal. Within the same time period, respondents/cross-appellants shall file the response to the joint reply filed by appellants/cross-respondents on February 4, 2021, in relation to the cross-appeal.  Thereafter,    respondents/cross-appellants shall have until April 5, 2021, to file and serve an answering brief on appeal.  Respondents/cross-appellants may submit an appendix with their answering brief, if deemed necessary.  Within the same time period, appellants/cross-respondents shall file a surreply in the cross-appeal.  Finally, appellants/cross-respondents shall have until April 19, 2021, to file and serve a reply brief on appeal, if deemed necessary.  Within the same time period, respondents/cross-appellants shall file a final reply to the surreply in the cross-appeal.  This court has determined that oral argument may be of assistance in resolving this matter.  Accordingly, this matter is scheduled for oral argument before the en banc court on May 3, 2021, at 1:30 p.m. in Carson City.  The argument shall be limited to 60 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=808392&onBaseDocumentNumber=21-06406">21-06406</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809182&onBaseDocumentNumber=21-07180">21-07180</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809183&onBaseDocumentNumber=21-07181">21-07181</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809185&onBaseDocumentNumber=21-07183">21-07183</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809186&onBaseDocumentNumber=21-07184">21-07184</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809187&onBaseDocumentNumber=21-07185">21-07185</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809188&onBaseDocumentNumber=21-07186">21-07186</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=809189&onBaseDocumentNumber=21-07187">21-07187</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2021</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' Opening Brief. (State of Nevada, Dept of Motor Vehicle's and Dept of Taxation). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=810247&onBaseDocumentNumber=21-08194">21-08194</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2021</td><td>Appendix</td><td>Filed Appellant/Cross-Respondents' Supplemental Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=810287&onBaseDocumentNumber=21-08210">21-08210</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2021</td><td>Brief</td><td>Filed Respondent/Cross-Appellants' Response to Joint Reply to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=810289&onBaseDocumentNumber=21-08212">21-08212</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2021</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' (Nevada Legislature's) Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=810310&onBaseDocumentNumber=21-08233">21-08233</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/26/2021</td><td>Order/Procedural</td><td>Filed Order Regarding Oral Argument. This matter is currently scheduled for oral argument on May 3, 2021, at 1:30 p.m.  The argument will be videoconferenced.  The argument shall be limited to 60 minutes.The court will use the BlueJeans videoconferencing system, which requires laptop/desktop/videoconferencing computer internet access and audio and video (web camera) capability.  In case technical difficulties develop at any time, the court will conduct the oral argument by teleconference, which will require counsel to have immediate access to a landline phone connection. Within 7 days of the date of this order, the parties shall submit to the Clerk of the Court a notice identifying the attorney(s) who will argue the case and the phone number and email address of the attorney(s).  The notice may be emailed to the court at nvscclerk@nvcourts.nv.gov.  The attorneys will be required to schedule a session with the Clerk of the Court to test capabilities of the connection and video equipment approximately one week prior to argument. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=810782&onBaseDocumentNumber=21-08700">21-08700</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2021</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Motion to File Answering Brief in Excess of Type-Volume Limitation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=811961&onBaseDocumentNumber=21-09809">21-09809</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2021</td><td>Brief</td><td>Filed Respondents/Cross-Appellants' Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=811962&onBaseDocumentNumber=21-09810">21-09810</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2021</td><td>Brief</td><td>Filed Appellants/Cross-Respondents' Joint Surreply Brief on Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=811968&onBaseDocumentNumber=21-09816">21-09816</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondents/cross-appellants' motion for leave to file an answering brief in excess of the type-volume limitation is granted.  The answering brief was filed on April 5, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=812476&onBaseDocumentNumber=21-10316">21-10316</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=813375&onBaseDocumentNumber=21-11166">21-11166</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Brief</td><td>Filed Respondent/Cross-Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=813553&onBaseDocumentNumber=21-11305">21-11305</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' (State of Nevada Taxation and State of Nevada of Motor Vehicle)  Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=813558&onBaseDocumentNumber=21-11310">21-11310</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Brief</td><td>Filed Appellant/Cross-Appellant's (Legislature of State of Nevada) Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=813593&onBaseDocumentNumber=21-11345">21-11345</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2021</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc court. 81924. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2021</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Affirmed." Before the Court En Banc. Author: Hardesty, C.J. Majority: Hardesty/Parraguirre/Stiglich/Cadish/Silver/Pickering/Herndon. 137 Nev. Adv. Opn. No. 21. fn7 [We grant the Senators' January 6, 2021, motion to amend the caption of this case to add Senator Nicole Cannizzaro, Senate President Kate Marshall, Senate Secretary Claire J. Clift, and Governor Steve Sisolak in their official capacities as appellants/cross-respondents.  The clerk of the court shall therefore amend the caption on this docket to conform with the caption on this opinion.] En Banc. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=816081&onBaseDocumentNumber=21-13709">21-13709</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2021</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=818663&onBaseDocumentNumber=21-16163">21-16163</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2021</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/18/2021</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on June 8, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60081&csIID=60081&deLinkID=820221&onBaseDocumentNumber=21-16163">21-16163</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60081&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

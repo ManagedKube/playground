@@ -1,0 +1,749 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82131: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=9AF65412D43046EB5433B62831258533">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60398">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82131</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LEWIS VS. SFR INVS. POOL 1, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A808445</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>None for Justice Silver</td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>12/02/2020 / Worrell, Carolyn</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Karen Lewis</td><td valign="top">R. Christopher Reade
+							(Cory Reade Dows &amp; Shafer)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">SFR Investments Pool 1, LLC</td><td valign="top">Diana S. Ebron
+							(Former)
+						
+							(Hanks Law Group)
+						<br>Jacqueline A. Gilbert
+							(Former)
+						<br>Karen L. Hanks
+							(Hanks Law Group)
+						<br>Chantel M. Schimming
+							(Hanks Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Southern Highlands Community Association</td><td valign="top">Kurt R. Bonds
+							(Alverson Taylor &amp; Sanders)
+						<br>Alexander P. Williams
+							(Alverson Taylor &amp; Sanders)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/25/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/25/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=797370&onBaseDocumentNumber=20-43089">20-43089</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/25/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=797373&onBaseDocumentNumber=20-43092">20-43092</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Cory Reade Dows and Shafer.  Check no. 16662. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=797880&onBaseDocumentNumber=20-43591">20-43591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2020</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Carolyn Worrell. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=797963&onBaseDocumentNumber=20-43673">20-43673</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2020</td><td>Notice/Outgoing</td><td>Issued Notice to File Docketing Statement. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=801056&onBaseDocumentNumber=20-46570">20-46570</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=801935&onBaseDocumentNumber=21-00337">21-00337</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Other. The Settlement Judge and counsel are still considering whether this appeal is appropriate to remain in the settlement program. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=804717&onBaseDocumentNumber=21-02895">21-02895</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Angie Calvillo stating that the requested transcripts were delivered.  Dates of transcripts: 06/16/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=805761&onBaseDocumentNumber=21-03879">21-03879</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=806664&onBaseDocumentNumber=21-04740">21-04740</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program and Reinstating Briefing. This appeal is removed from the settlement program. We note that on February 9, 2021, during the pendency of the settlement proceedings, court reporter Angie Calvillo filed a notice indicating that copies of the transcripts for proceedings conducted on June 16, 2020, had been prepared and delivered.  In the event appellant intends to cite to transcripts in addition to these transcripts, appellant shall, within 14 days from the date of this order, file and serve a transcript request form in compliance with NRAP 9(a). 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=807045&onBaseDocumentNumber=21-05114">21-05114</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2021</td><td>Transcript Request</td><td>Filed Certificate That No Further Transcripts Are Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=808795&onBaseDocumentNumber=21-06802">21-06802</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2021</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Law Firms</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opening brief  and appendix due: June 7, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=816522&onBaseDocumentNumber=21-14147">21-14147</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2021</td><td>Brief</td><td>Filed Appellant Karen Lewis's Opening Brief (REJECTED PER NOTICE ISSUED 06/08/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818874&onBaseDocumentNumber=21-16367">21-16367</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818879&onBaseDocumentNumber=21-16372">21-16372</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. II. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818880&onBaseDocumentNumber=21-16373">21-16373</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. III. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818882&onBaseDocumentNumber=21-16375">21-16375</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818884&onBaseDocumentNumber=21-16377">21-16377</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2021</td><td>Brief</td><td>Filed Appellant Karen Lewis's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=818887&onBaseDocumentNumber=21-16380">21-16380</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2021</td><td>Appendix</td><td>Filed Amended Joint Appendix (Vol. III of IV). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=819195&onBaseDocumentNumber=21-16683">21-16683</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent Southern Highlands Community Association's Answering Brief due:  July 22, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=822010&onBaseDocumentNumber=21-19275">21-19275</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent SFR Investments Pool 1, LLC's answering brief due: July 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=822066&onBaseDocumentNumber=21-19331">21-19331</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/22/2021</td><td>Motion</td><td>Filed Unopposed Motion to Extend Time to File Answering Brief (Second Request) (SFR Investments Pool 1, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=823993&onBaseDocumentNumber=21-21226">21-21226</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/22/2021</td><td>Brief</td><td>Filed Respondent Southern Highlands Community Association's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=824002&onBaseDocumentNumber=21-21235">21-21235</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. SFR shall have until August 20, 2021, to file and serve the answering brief. Appellant shall have 30 days from service of SFR's answering brief to file and serve a reply brief addressing both respondents' answering briefs, if deemed necessary. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=826257&onBaseDocumentNumber=21-23299">21-23299</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/20/2021</td><td>Brief</td><td>Filed Respondent SFR Investments Pool 1, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=827406&onBaseDocumentNumber=21-24392">21-24392</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2021</td><td>Brief</td><td>Filed Appellant Karen Lewis's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=830182&onBaseDocumentNumber=21-27037">21-27037</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/17/2021</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." fn10 [The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.] JH/DH/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=839600&onBaseDocumentNumber=21-35988">21-35988</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant Karen Lewis's Petition for Rehearing Pursuant to NRAP 40. (REJECTED PER PHONE CALL) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from R. Christopher Reade. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Motion</td><td>Filed Appellant Karen Lewis's Motion to Enlargement of Time to File Petition for Rehearing Pursuant to NRAP 40. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=841457&onBaseDocumentNumber=22-00479">22-00479</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant Karen Lewis's Petition for Rehearing Pursuant to NRAP 40. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=841459&onBaseDocumentNumber=22-00481">22-00481</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant's motion for an extension of time to file a petition for rehearing is granted.  The petition for rehearing was filed on January 5, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=841514&onBaseDocumentNumber=22-00535">22-00535</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=842331&onBaseDocumentNumber=22-01346">22-01346</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant Karen Lewis's Petition for En Banc Rehearing Pursuant to NRAP 40A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=843717&onBaseDocumentNumber=22-02684">22-02684</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Notice/Incoming</td><td>Filed Notice of Substitution of Attorneys. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=844605&onBaseDocumentNumber=22-03482">22-03482</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/10/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer to Petition for En Banc Reconsideration.  Respondents Answer due:  14 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=845684&onBaseDocumentNumber=22-04536">22-04536</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2022</td><td>Post-Judgment Petition</td><td>Filed Respondent Southern Highlands Community Association's Answer to Appellant's Petition for Rehearing Pursuant to NRAP 40. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=847426&onBaseDocumentNumber=22-06138">22-06138</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/28/2022</td><td>Motion</td><td>Filed Unopposed Motion to Extend Time to File Answer to Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=847714&onBaseDocumentNumber=22-06450">22-06450</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent SFR Investments Pool 1, LLC's motion for an extension of time to file an answer to the petition for en banc reconsideration is granted.  SFR shall have until March 14, 2022, to file and serve an answer.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=847822&onBaseDocumentNumber=22-06554">22-06554</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Post-Judgment Petition</td><td>Filed SFR Investments Pool 1, LLC's Answer to Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=849468&onBaseDocumentNumber=22-08085">22-08085</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying En Banc Reconsideration. Having considered the petition on file herein, we have concluded that en banc reconsideration is not warranted. NRAP 40A.  Accordingly, we "ORDER the petition DENIED." fn1 [The Honorable Abbi Silver, Justice, voluntarily recused herself from participation in the decision of this  matter.]  EN BANC (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=854295&onBaseDocumentNumber=22-12704">22-12704</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=857085&onBaseDocumentNumber=22-15382">22-15382</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on May 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60398&csIID=60398&deLinkID=861300&onBaseDocumentNumber=22-15382">22-15382</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60398&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

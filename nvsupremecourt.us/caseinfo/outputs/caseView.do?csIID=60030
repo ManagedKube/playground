@@ -1,0 +1,1244 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81887: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=E34E9E12F71A07EE8F5CF9880B27EC06">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60030">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81887</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SNYDER VS. SNYDER C/W 82756/83029</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>81887*, <a href="/public/caseView.do?csIID=61341">82756</a>, <a href="/public/caseView.do?csIID=61718">83029</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=62732">81887-COA</a>, <a href="/public/caseView.do?csIID=60548">82243</a>, <a href="/public/caseView.do?csIID=61341">82756</a>, <a href="/public/caseView.do?csIID=62733">82756-COA</a>, <a href="/public/caseView.do?csIID=61718">83029</a>, <a href="/public/caseView.do?csIID=62734">83029-COA</a>, <a href="/public/caseView.do?csIID=62531">83620</a>, <a href="/public/caseView.do?csIID=62575">83651</a>, <a href="/public/caseView.do?csIID=64010">84730</a>, <a href="/public/caseView.do?csIID=64226">84730-COA</a>, <a href="/public/caseView.do?csIID=67464">87292</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Elko Co. - Fourth Judicial District - DR-MD-17-757</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>08/19/2021</td><td class="label">How Submitted:</td><td>On Record And Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Raymond Max Snyder</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lauara Ann Snyder</td><td valign="top">Bronagh M. Kelly
+							(Woodburn &amp; Wedge)
+						<br>Shawn B. Meador
+							(Woodburn &amp; Wedge)
+						<br>Shay L. Wells
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=789649&onBaseDocumentNumber=20-36655">20-36655</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2020</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=789653&onBaseDocumentNumber=20-36659">20-36659</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Raymond Max Snyder.  Money Order no. 26686890663. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/16/2020</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record. Record due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=791125&onBaseDocumentNumber=20-38096">20-38096</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2020</td><td>Motion</td><td>Filed Respondent's Motion for Reconsideration of Order Directing Transmission of Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=791389&onBaseDocumentNumber=20-38354">20-38354</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/23/2020</td><td>Docketing Statement</td><td>Filed Proper Person Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=792043&onBaseDocumentNumber=20-38995">20-38995</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2020</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 08/18/20, 08/19/20, 08/20/20 and 08/21/20. To Court Reporter: Julie Rowan. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=792371&onBaseDocumentNumber=20-39322">20-39322</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2020</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 08/18/20, 08/19/20, 08/20/20 and 08/21/20. To Court Reporter: Julie Rowan. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=792389&onBaseDocumentNumber=20-39339">20-39339</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2020</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=792391&onBaseDocumentNumber=20-39341">20-39341</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2020</td><td>Other Incoming Document</td><td>Filed Proper Person Appellant's Response to Response to Motion for a Criminal Investigation and for Sanctions and Defendants' Misrepresentation of Facts in Her Response and Request for Punative Damages and Affidavit of Raymond Max Snyder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=793117&onBaseDocumentNumber=20-40056">20-40056</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/04/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay Judgment.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=793218&onBaseDocumentNumber=20-40157">20-40157</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Objection to Motion for Reconsideration of Order Directing Transmission of Record.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=793219&onBaseDocumentNumber=20-40158">20-40158</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/04/2020</td><td>Motion</td><td>Filed Respondent's Opposition to Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=793318&onBaseDocumentNumber=20-40257">20-40257</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2020</td><td>Motion</td><td>Filed Respondent's Reply in Support of Motion for Reconsideration of Order Directing Transmission of Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=793319&onBaseDocumentNumber=20-40258">20-40258</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Letter/Incoming</td><td>Filed Proper Person Appellant's Letter Regarding Case. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=794438&onBaseDocumentNumber=20-41213">20-41213</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 10 days.  Letter Regarding Case. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=794440&onBaseDocumentNumber=20-41215">20-41215</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/12/2020</td><td>Notice/Incoming</td><td>Filed Notice of Entry of Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=794537&onBaseDocumentNumber=20-41312">20-41312</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2020</td><td>Motion</td><td>Filed Proper Person Appellant's "4JDCR Rule 13(2)(c) Plaintiff's Attorney's Motion to Withdraw was Prior to Plaintiff's Notice of Appeal; Plaintiff's; Motion for a New Trial and Plaintiff's Motion to Stay." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795232&onBaseDocumentNumber=20-42001">20-42001</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Quash Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795235&onBaseDocumentNumber=20-42004">20-42004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1. part 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795312&onBaseDocumentNumber=20-42080">20-42080</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795321&onBaseDocumentNumber=20-42089">20-42089</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 3. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795324&onBaseDocumentNumber=20-42092">20-42092</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 4. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795326&onBaseDocumentNumber=20-42094">20-42094</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 5. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795327&onBaseDocumentNumber=20-42095">20-42095</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 6. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795329&onBaseDocumentNumber=20-42097">20-42097</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 7. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795334&onBaseDocumentNumber=20-42102">20-42102</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 1 part 8. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795344&onBaseDocumentNumber=20-42112">20-42112</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795347&onBaseDocumentNumber=20-42115">20-42115</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795348&onBaseDocumentNumber=20-42116">20-42116</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 3. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795350&onBaseDocumentNumber=20-42118">20-42118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 4. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795353&onBaseDocumentNumber=20-42121">20-42121</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 5. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795354&onBaseDocumentNumber=20-42122">20-42122</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 2 part 6. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795355&onBaseDocumentNumber=20-42123">20-42123</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 3. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795360&onBaseDocumentNumber=20-42128">20-42128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 3 - Part 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795377&onBaseDocumentNumber=20-42145">20-42145</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 4 - Part 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795404&onBaseDocumentNumber=20-42172">20-42172</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 4 - Part 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795413&onBaseDocumentNumber=20-42181">20-42181</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795437&onBaseDocumentNumber=20-42205">20-42205</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 5E. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795440&onBaseDocumentNumber=20-42208">20-42208</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 5I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795443&onBaseDocumentNumber=20-42211">20-42211</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795449&onBaseDocumentNumber=20-42217">20-42217</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 6C. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795458&onBaseDocumentNumber=20-42226">20-42226</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 6G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795459&onBaseDocumentNumber=20-42227">20-42227</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795460&onBaseDocumentNumber=20-42228">20-42228</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 7D. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795461&onBaseDocumentNumber=20-42229">20-42229</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795462&onBaseDocumentNumber=20-42230">20-42230</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795483&onBaseDocumentNumber=20-42251">20-42251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795487&onBaseDocumentNumber=20-42255">20-42255</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 10E. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795488&onBaseDocumentNumber=20-42256">20-42256</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Volume 11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795491&onBaseDocumentNumber=20-42259">20-42259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Appellant Exhibits. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795493&onBaseDocumentNumber=20-42261">20-42261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Respondent Exhibits. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795519&onBaseDocumentNumber=20-42286">20-42286</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Respondent Exhibit F. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795520&onBaseDocumentNumber=20-42287">20-42287</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Respondent Exhibits K. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795521&onBaseDocumentNumber=20-42288">20-42288</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Respondent Exhibits O. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795523&onBaseDocumentNumber=20-42290">20-42290</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal 11/19/20 Case Summary. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=795527&onBaseDocumentNumber=20-42294">20-42294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2020</td><td>Motion</td><td>Filed Response to Appellant's 4JDCR Rule 13(2)(C) Plaintiff's Attorney's Motion to Withdraw was Prior to Plaintiff's Notice of Appeal, Plaintiff's; Motion for a New Trial and Plaintiff's Motion to Stay.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=797165&onBaseDocumentNumber=20-42884">20-42884</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/25/2020</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant's Certificate of Service (Letter Regarding Case). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=797252&onBaseDocumentNumber=20-42971">20-42971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/25/2020</td><td>Motion</td><td>Filed Proper Person Appellant's 4JDCR Rule 13(2)(C) Plaintiff's Motion to Reinstate All of Plaintiff's Pleadings Disallowed by Judge Robert Estes; and Motion for a New Trial; and Motion to Stay Judgment Entered in this Case by Judge Estes.  Motion to Have Judge Estes Withdraw from this Case; and Motion to Strike All Pleadings and Order's of Judge Estes Resulting from the November 10, 2020 Hearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=797272&onBaseDocumentNumber=20-42991">20-42991</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/25/2020</td><td>Order/Procedural</td><td>Filed Order.  Based on respondent's arguments, it appears respondent actually seeks to dismiss this appeal for lack of jurisdiction.  The motion is thus treated as a motion to dismiss.  The motion to dismiss this appeal is denied.  Appellant moves for a stay pending appeal and respondent opposes the motion.  The motion for a stay is denied without prejudice.  This order has no effect with respect to the notice of appeal filed in this court or this court's jurisdiction over this appeal.  Respondent also argues that the notice of appeal was prematurely filed after the filing of a motion for a new trial.  It appears that the notice of appeal is not premature.  Appellant has filed copies of several documents filed in the district court.  As these documents do not request any specific relief from this court, this court takes no action on these documents.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=797348&onBaseDocumentNumber=20-43067">20-43067</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2020</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal 12/02/20 Case Summary. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=797851&onBaseDocumentNumber=20-43562">20-43562</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay Judgment. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=798701&onBaseDocumentNumber=20-44408">20-44408</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Motion</td><td>Filed Proper Person Plaintiff's Response to Defendant's Opposition to Plaintiff's Second Motion for Sanctions Against Aaron Bushur and Defendant Lauara Snyder and to Deny Mrs. Snyder (SIC) Sanction Request Against Mr. Snyder and to Set Aside Judgment and Affidavit of Raymond Snyder; and Opposition to Motion to Quash and Opposition to Motion to Quash Defendant's Hearing for Order to Show Cause for Collusion etc.; and Motion for Attorney Fees and Sanctions and NRS 115.010 Objection to the Order to Show Cause Hearing Held November 10, 2020 in Fourth District Judicial Court, Elko County, Nevada. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=798716&onBaseDocumentNumber=20-44422">20-44422</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2020</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Court reporter Julie Rowan's court reporter certificate due: December 24, 2020. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=799043&onBaseDocumentNumber=20-44745">20-44745</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2020</td><td>Motion</td><td>Filed Respondent's Opposition to Motion to Stay Judgment. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=799145&onBaseDocumentNumber=20-44847">20-44847</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Rule of Civil Procedure 60(B)(3) Motion to Deny Request to Register a Foreign Judgment and Motion for Sanctions and Attorney Fees and Motion to Dismiss with Prejudice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=799769&onBaseDocumentNumber=20-45382">20-45382</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/15/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. CASE SUMMARY. (REJECTED PER NOTICE ISSUED 12/15/20) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=799858&onBaseDocumentNumber=20-45471">20-45471</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/18/2020</td><td>Motion</td><td>Filed Respondent's Response to Rule of Civil Procedure 60(B)(3) Motion to Deny Request to Register a Foreign Judgment Etc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=800316&onBaseDocumentNumber=20-45843">20-45843</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay the Appellant Requirement to Furnish a Security Bond as Provided by Rules 8(A), 62(D) &amp; (E) and NV Rev State 20.037(4), (2017). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=800569&onBaseDocumentNumber=20-46091">20-46091</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to "Opposition to Max Snyder's 4JDCR 13(2)(C) Plaintiff's Motion to Reinstate All of Plaintiff's Pleadings Disallowed by Judge Robert Estes; and Motion for a New Trial; and Motion to Stay the Judgment Entered in the Case by Judge Estes, Motion to Have Judge Estes Withdraw from this Case; and Motion to Strike All Pleadings and Order's (sic) of Judge Estes Resulting From the November 10, 2020 Hearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=800582&onBaseDocumentNumber=20-46104">20-46104</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Defendant's Opposition to Motion to Stay Judgment. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=800584&onBaseDocumentNumber=20-46106">20-46106</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/24/2020</td><td>Motion</td><td>Filed Proper Person Appellant's Motion for Summary Judgement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=801007&onBaseDocumentNumber=20-46522">20-46522</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2020</td><td>Motion</td><td>Filed Respondent's Opposition to Stay the Appellant [sic] Requirement to Furnish a Security Bon as Provided by Rules 8(A), 62(D), 2017 [sic]. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=801144&onBaseDocumentNumber=20-46657">20-46657</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2020</td><td>Transcript</td><td>Filed Notice from Nevada Dictation / Julie Rowan stating that the requested transcripts were delivered.  Dates of transcripts:  08/18/20, 08/19/20, 08/20/20 and 08/21/20.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=801173&onBaseDocumentNumber=20-46686">20-46686</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Motion to Set Aside Judgements for Fraud on the Court and Purgury and Motion for Attorney Fees and Motion for Sanctions for Sanctions." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=802177&onBaseDocumentNumber=21-00576">21-00576</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person "Plaintiff's Second Motion to Set Aside Judgements for Fraud on the Court and Purgury and Motion for Attorney Fees and Motion for Sanctions for Sanctions." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=802179&onBaseDocumentNumber=21-00578">21-00578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Motion to be Awarded a Community Property Interest in the Wendover Nevada Business for Defendant's Fraud on the Court."</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=802182&onBaseDocumentNumber=21-00581">21-00581</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Response to Response to Stay Judgement Entered November 10. 2020. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=802184&onBaseDocumentNumber=21-00583">21-00583</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Response to Defendant's Response to Civil Procedure 60(B)(3) Motion to Deny Request to Register a Foreign Judgement Etc." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=802187&onBaseDocumentNumber=21-00586">21-00586</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/15/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay the Appellant Requirement to Furnish a Security Bond as Provided by Rules 8(A), 62(D) &amp; (E) and NV Rev Stat 20.037(4), (2017); and Motion to Stay Judgments. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=803218&onBaseDocumentNumber=21-01491">21-01491</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/15/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to Respondent's Opposition to Stay Appellant (sic) Requirement to Furnish a Security as Provided by Rules 8(A), 62(D). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=803227&onBaseDocumentNumber=21-01500">21-01500</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/15/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to Respondents Opposition to Motion for Summary Judgment; and Request to Submit for Judgment if the Court Wishes to Consider it a Motion to this Court; and Motion for the Court to Furnish Appellant Pro Bono Counsel.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=803230&onBaseDocumentNumber=21-01503">21-01503</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/22/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Defendant's Opposition to Motion to Disqualify Judge Estes for Prejudice; and Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=803773&onBaseDocumentNumber=21-02041">21-02041</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/22/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Informal Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=803777&onBaseDocumentNumber=21-02045">21-02045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Respondent's Opposition to Appellant's Motions Filed January 8, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=804191&onBaseDocumentNumber=21-02452">21-02452</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Request for Direction.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=804471&onBaseDocumentNumber=21-02654">21-02654</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/01/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion for Stay and Referring for Pro Bono Counsel.  Appellant has filed a pro se motion for a stay pending appeal and a pro se motion to stay the appellate bond requirement.  The motions are denied without prejudice.  we direct the clerk of this court to transmit a copy of this order and the attached copy of the district court order and case summary to the Legal Aid Center of Southern Nevada for financial eligibility screening.  Appellant's Notice of Appearance or LACSN's Notice due:  60 days.  The briefing schedule in this appeal is suspended pending further order of this court.  fn1[Appellant has filed copies of several district court filings in this court.  This court takes no action on these documents, nor respondent's responses thereto.  Appellant is advised that filing copies of documents he has filed in the district court is not necessary.  Respondent need not file responses to such documents unless otherwise directed by this court.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=804886&onBaseDocumentNumber=21-03063">21-03063</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Reply to Respondents Request for Directions: Emergency Motion for Stay Pending Appeal and Motion to Stay Appellate Bond Requirement; or in the Alternative Motion for a New Trial; or in the Alternative Sanction Respondent and Enter a Default Judgement in Appellant's Favor. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=806577&onBaseDocumentNumber=21-04653">21-04653</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/05/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant's motion for a stay pending appeal is denied without prejudice.  The district court shall have 30 days from the date of this order to enter an order ruling on appellant's pending motions for stay and relating to the supersedeas bond, if it has not done so already, and provide this court with a file-stamped copy of the order.  fn2[Appellant's alternative requests for relief are also denied.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=808438&onBaseDocumentNumber=21-06452">21-06452</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/26/2021</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=810824&onBaseDocumentNumber=21-08709">21-08709</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2021</td><td>Motion</td><td>Filed Notice of Determination of Eligibility for Pro Bono Representation and Request for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=811349&onBaseDocumentNumber=21-09257">21-09257</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2021</td><td>Motion</td><td>Filed Respondent's Opposition to Request for Extension of Time (REJECTED PER NOTICE ISSUED 03/31/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance. (Bronagh M. Kelly). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=811413&onBaseDocumentNumber=21-09318">21-09318</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Bronagh M. Kelly of Woodburn and Wedge as counsel for Respondent). (SC) drichards</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=811429&onBaseDocumentNumber=21-09332">21-09332</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2021</td><td>Motion</td><td>Filed Respondent's Opposition to Request for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=811430&onBaseDocumentNumber=21-09334">21-09334</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Order/Incoming</td><td>Filed District Court Order After Hearing on March 31, 2021.  Filed in district court on April 1, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=812496&onBaseDocumentNumber=21-10336">21-10336</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2021</td><td>Order/Procedural</td><td>Filed Order. This court defers to the Legal Aid Center's determination regarding appellant's financial eligibility.  The request for an extension of time is granted to the following extent. Notice of appearance due: April 30, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=812633&onBaseDocumentNumber=21-10433">21-10433</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2021</td><td>Motion</td><td>Filed Proper Person Motion to Disqualify Judge Robert Estes from District Court Case. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=812679&onBaseDocumentNumber=21-10478">21-10478</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice - Plaintiff's Request to Submit to Judge Kacin Additional Pleadings for Review of Plaintiff's Request to Disqualify Judge Estes.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=812928&onBaseDocumentNumber=21-10726">21-10726</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Pro Bono Counsel.  Attorney Michael Wall, Esq., appearing on behalf of appellant.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=813464&onBaseDocumentNumber=21-11218">21-11218</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Respondent's Opposition to Request for Extension of Time.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=813515&onBaseDocumentNumber=21-11268">21-11268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant's Notice -  Copy of Plaintiff's NRS 1.235(1)(a-b) Amended Third Motion to Disqualify Judge Robert Estes From this Case; and Affidavit.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=813521&onBaseDocumentNumber=21-11274">21-11274</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2021</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing and Regarding Response.  Appellant:  Transcript Request Form due:  14 days;  Opening Brief due:  90 days.  This court takes no action on appellant's pro se April 19, 2021, response to respondent's opposition to motion for an extension of time as the response was filed after this court granted the extension motion.  Appellant's affirmative request for sanctions against respondent is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=813920&onBaseDocumentNumber=21-11666">21-11666</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant's Reply To Defendant's Response to Notice for Decision Plaintiff's Motion for Relief Etc. Dated May 21, 2021 and Notice to Set For Decision (REJECTED PER NOTICE ISSUED 06/07/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=818757&onBaseDocumentNumber=21-16250">21-16250</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/25/2021</td><td>Motion</td><td>Filed Appellant's Motion to Withdraw as Appointed Pro Bono Counsel and Motion to Extend Time to File Opening Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=821016&onBaseDocumentNumber=21-18370">21-18370</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Motion</td><td>Filed Respondent's Response to Motion to Withdraw. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=821214&onBaseDocumentNumber=21-18564">21-18564</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Reply to Respondent's Response to Motion to Withdraw due:  July 20, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=821934&onBaseDocumentNumber=21-19199">21-19199</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/23/2021</td><td>Motion</td><td>Filed Proper Person Motion to the Nevada Supreme Court for Leave to File a NRCP 60(d) Independent Action with the District Court to Hear Fraud on the Court by Both Attorneys. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=824141&onBaseDocumentNumber=21-21299">21-21299</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/23/2021</td><td>Motion</td><td>Filed Proper Person Motion NRCP 60(b) (3) and (6) Under NRCP 54 and NRCP 55, Motion for Default Judgment with Prejudice; and NRS 1.230(1) Motion to Recuse Judge Robert Estes and; Affidavit; and NRS 13.050(2)(B) Motion for change of Venue. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=824168&onBaseDocumentNumber=21-21304">21-21304</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay Under NRS 20.0237 at a Reduced Bond in the Amount of $1.00 Resulting from the Fraud by Respondent and her Attorney. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=824753&onBaseDocumentNumber=21-21876">21-21876</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Notice to Set for Decision, Plaintiff's (Appellant's) Motion to Quash for Non Service and Violation of NRCP 59. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=825018&onBaseDocumentNumber=21-22137">21-22137</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Defendant's (Respondent's) Opposition to Motion to Quash for Non-Service and Violation of NRCP 59. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=825021&onBaseDocumentNumber=21-22140">21-22140</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/13/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Regarding Motions and Briefing. Appellant's pro bono counsel in Docket No. 81887, Michael K. Wall, has filed a motion to withdraw as counsel.   The motion is granted. The clerk shall remove Mr. Wall as counsel of record for appellant in Docket No. 81887.  That appeal shall proceed with appellant acting pro se.  As appellant has already filed an informal brief, counsel's request for an extension of time for appellant to file an opening brief is denied. On July 23, 2021, appellant filed in each of these appeals identical pro se motions for leave to file an independent action in the district court under NRCP 60(b) and for various other relief.  Appellant need not obtain permission from this court before filing motions or other documents in the district court.  Appellant has also filed pro se motions for a stay based upon a reduced bond of $1.00. The motion is denied. Appellant has filed copies of a notice and a response addressed to the district court.  This court takes no action on these documents. The clerk shall return any future motions that exceed the page limitation or the equivalent type-volume limitation, unfiled.  In Docket No. 81887, appellant filed his pro se informal brief on January 22, 2021.  Respondent's answering brief due: 21 days. Briefing is now complete in Docket No. 82756.  Appellant's informal brief or opening brief remains due to be filed in Docket No. 83029 by October 22, 2021. fn2 [Any relief requested within appellant's pro se response and objection to this notice is denied.] Nos 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=826621&onBaseDocumentNumber=21-23659">21-23659</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827107&onBaseDocumentNumber=21-24132">21-24132</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Order/Procedural</td><td>Filed Order.  Respondent has filed a notice that she will not be filing an answering brief unless directed to do so by this court.  Accordingly, briefing of this appeal is now complete.  This appeal shall be decided without an answering brief unless specifically directed by this court.   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827221&onBaseDocumentNumber=21-24245">21-24245</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Case Status Update</td><td>Briefing Completed/Submitted For Decision/To Screening.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/20/2021</td><td>Motion</td><td>Filed Proper Person Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(1) and 12(b)(2); With Resident Witness Affidavit and Appellant Affidavit.  (RETURNED UNFILED PER ORDER 9/3/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Rule 11(C)(4) Motion for Sanctions and NRS 205.09 Order to Pay Restitution. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827932&onBaseDocumentNumber=21-24908">21-24908</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Stay Pending a Ruling on His Amended Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(1) &amp; 12 (b)(2); &amp; Appellant Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827937&onBaseDocumentNumber=21-24913">21-24913</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Amended Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(1) &amp; 12(b)(2); &amp; Appellant Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827940&onBaseDocumentNumber=21-24916">21-24916</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Amended Rule 11(C)(4) Motion for Sanctions and NRS 205.09 Order to Pay Restitution. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=827941&onBaseDocumentNumber=21-24917">21-24917</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=828007&onBaseDocumentNumber=21-24983">21-24983</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/03/2021</td><td>Order/Procedural</td><td>Filed Order.  In Docket Nos. 81887 and 83029 ,the clerk shall return the August 20, 2021, motions to dismiss, unfiled.  In Docket Nos. 81887, 82756, and 83029, appellant has filed pro se motions and amended motions to sanction respondent and her counsel for alleged statutory violations, fraud, and forgery, to dismiss "this case," and to grant various other relief.  Appellant's allegations and arguments relate to the merits of his appeals and are not properly addressed in the context of motions.  The motions are denied.  Appellant's pro se motions for a stay pending a ruling on his motions to dismiss are denied.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=828806&onBaseDocumentNumber=21-25765">21-25765</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals. These appeals are hereby consolidated for purposes of disposition. Nos 81887, 82756, 83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=828939&onBaseDocumentNumber=21-25894">21-25894</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Opposition to Respondent's Notice of Intention.  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=829145&onBaseDocumentNumber=21-26048">21-26048</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Set Aside the Divorce Decree and Orders of in the Alternative to Stay Under NRS 20.0237 at a Reduced Bond for $1.00 Resulting From the Fraud by Respondent and her Attorney.  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=830961&onBaseDocumentNumber=21-27797">21-27797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention not to File and Serve an Opposition unless directed by the Court to do so.  Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=831047&onBaseDocumentNumber=21-27883">21-27883</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Opening Brief (Case No. 83029)  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=831985&onBaseDocumentNumber=21-28807">21-28807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening.(Case No. 83029)  Nos.  81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=832026&onBaseDocumentNumber=21-28848">21-28848</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed a pro se opposition to respondent's notice of intention not to respond to certain of appellant's motions unless ordered to do so by this court. This court takes no action on the opposition. On October 7, 2021, respondent filed a notice stating that she will not be responding to appellant's October 7, 2021, opening brief (filed in Docket No. 83029) unless ordered to do so by this court.  Accordingly, briefing of the appeal in Docket No. 83029 is now complete.  Appellant has also filed a pro se motion to set aside the divorce decree or, alternatively, for a stay upon a reduced bond under NRS 20.037. The motion is denied.  Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=833020&onBaseDocumentNumber=21-29832">21-29832</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Compel Respondent to Serve a Response to Appellant's Opening Brief. Nos. 81887/82756/83029 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=833300&onBaseDocumentNumber=21-30053">21-30053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant's pro se motion to compel respondent to file an answering brief is denied at this time.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=833656&onBaseDocumentNumber=21-30339">21-30339</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Respondent's Notice of Intention.   Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=834135&onBaseDocumentNumber=21-30807">21-30807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a pro se response to respondent's notice of intention not to file an answering brief.  He requests that this court construe the notice as a confession of error.  The request is denied.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=835263&onBaseDocumentNumber=21-31844">21-31844</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/12/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to find Respondent's Attorney, Shawn B. Meador, in Contempt for Fabricating Evidence; for Forging Orders in Violation of NRS 205.090; and a Request that the Court Order a Criminal Investigation into Shawn B. Meador's Actions in this Divorce. Nos. 82756/81887/83029 (SC) (TRANSFERRED TO THE COURT OF APPEALS PER 11/16/21 NOTICE)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=835972&onBaseDocumentNumber=21-32545">21-32545</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. Nos. 81887/82756/83029. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=836334&onBaseDocumentNumber=21-32905">21-32905</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Case Status Update</td><td>Transferred to Court of Appeals. Nos. 81887/82756/83029. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume II. Nos. 81887/82756/83029 (REJECTED PER NOTICE ISSUED 4/25/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=854520&onBaseDocumentNumber=22-12927">22-12927</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of Intention. Nos. 81887/82756/83029 (REJECTED PER NOTICE ISSUED 7/8/2) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=864561&onBaseDocumentNumber=22-21555">22-21555</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding (Docket No. 81887-COA) and Dismissing Appeals (Docket No. 82756-COA and Docket No. 83029-COA). "Docket No. 81887-COA, We conclude that the district court's decision on the improvements issue was not supported by substantial evidence,  see Williams, 120 Nev. at 566, 97 P.3d at 1129, and we therefore reverse and remand for further proceedings on the issue. We reverse the divorce decree insofar as it failed to (1) allocate the outstanding portion of the loans, which the parties made to the businesses from their community funds, between the parties; (2) evaluate whether the community was entitled to reimbursement for any community funds expended on one of the business's legal expenses; and (3) determine whether the transfers of funds from the businesses to the parties' joint accounts were loans, and if so, how those debts should be allocated between the parties.  We also reverse the portions of the divorce decree addressing (1) the purported improvements to Raymond's home, (2) characterizing the funds in Raymond's bank account that he received through workers' compensation as community property, (3) directing the parties' to equally split their 401K and IRA accounts, and (4) awarding attorney fees to Lauara.  On remand, the district court shall address these issues in a manner consistent with this order.  We affirm all other aspects of the divorce decree. Thus, because no statute or court rule authorizes an appeal from any portion of the March 31 order, this court lacks jurisdiction over the appeal in Docket No. 82756-COA, and it is therefore dismissed. Because this court therefore lacks jurisdiction over Raymond's appeal in Docket No. 83029-COA, it is dismissed."  COA-MG/JT/BB Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant's Proper Person Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=878188&onBaseDocumentNumber=22-34612">22-34612</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Post-Judgment Order/Dispositional</td><td>Order Denying Petition for Review. "Review Denied"  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=880214&onBaseDocumentNumber=22-36534">22-36534</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/21/2022</td><td>Remittitur</td><td>Issued Remittitur. NOS. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=880219&onBaseDocumentNumber=22-36539">22-36539</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed NOS. 81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/15/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on November 28, 2022. Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60030&csIID=60030&deLinkID=883133&onBaseDocumentNumber=22-36539">22-36539</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60030&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

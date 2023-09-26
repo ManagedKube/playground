@@ -1,0 +1,1106 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82245: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=F44CAC4A3807911AB35C301CF8363593">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60550">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82245</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SHAHROKHI VS. BURROW C/W 81978</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=60161">81978</a>*, 82245</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55423">78771</a>, <a href="/public/caseView.do?csIID=55502">78771-COA</a>, <a href="/public/caseView.do?csIID=56180">79336</a>, <a href="/public/caseView.do?csIID=56194">79336-COA</a>, <a href="/public/caseView.do?csIID=57116">79992</a>, <a href="/public/caseView.do?csIID=57176">79992-COA</a>, <a href="/public/caseView.do?csIID=57558">80277</a>, <a href="/public/caseView.do?csIID=57570">80277-COA</a>, <a href="/public/caseView.do?csIID=57879">80447</a>, <a href="/public/caseView.do?csIID=57944">80447-COA</a>, <a href="/public/caseView.do?csIID=59032">81218</a>, <a href="/public/caseView.do?csIID=59361">81218-COA</a>, <a href="/public/caseView.do?csIID=59854">81791</a>, <a href="/public/caseView.do?csIID=59884">81791-COA</a>, <a href="/public/caseView.do?csIID=60161">81978</a>, <a href="/public/caseView.do?csIID=60574">81978-COA</a>, <a href="/public/caseView.do?csIID=61403">82803</a>, <a href="/public/caseView.do?csIID=61886">83164</a>, <a href="/public/caseView.do?csIID=62461">83558</a>, <a href="/public/caseView.do?csIID=62594">83662</a>, <a href="/public/caseView.do?csIID=62615">83682</a>, <a href="/public/caseView.do?csIID=62669">83726</a>, <a href="/public/caseView.do?csIID=62724">83772</a>, <a href="/public/caseView.do?csIID=62941">83927</a>, <a href="/public/caseView.do?csIID=63096">84043</a>, <a href="/public/caseView.do?csIID=63217">84131</a>, <a href="/public/caseView.do?csIID=63296">84189</a>, <a href="/public/caseView.do?csIID=63502">84341</a>, <a href="/public/caseView.do?csIID=67523">87335</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D581208</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Hardesty</td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>02/07/2022</td><td class="label">How Submitted:</td><td>On Record And Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Ali Shahrokhi</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kizzy Burrow</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=800628&onBaseDocumentNumber=20-46150">20-46150</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Ali Shahrokhi, check no. 4350.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=802828&onBaseDocumentNumber=21-01104">21-01104</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/22/2021</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record. Record due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=803729&onBaseDocumentNumber=21-01997">21-01997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=804103&onBaseDocumentNumber=21-02366">21-02366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/05/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volumes 1-22 (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion for Order Granting Expansion of Pages for Emergency Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806023&onBaseDocumentNumber=21-04133">21-04133</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 09/21/20, 09/22/20 and 09/23/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806030&onBaseDocumentNumber=21-04140">21-04140</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/12/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance Yvonne Ruiz as counsel for Respondent). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806172&onBaseDocumentNumber=21-04278">21-04278</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/12/2021</td><td>Transcript Request</td><td>Filed Proper Person Certificate of No Transcript Request. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806199&onBaseDocumentNumber=21-04305">21-04305</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/12/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Seal Transcripts for Trial on 09/21/20, 09/22/20, 09/23/20. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806200&onBaseDocumentNumber=21-04306">21-04306</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/12/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered. Dates of transcripts: 9/21/20, 9/22/20, and 9/23/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806213&onBaseDocumentNumber=21-04318">21-04318</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2021</td><td>Order/Procedural</td><td>Filed Order Consolidating Cases, Denying Motion for Leave to File Stay Motion with Excess Pages, and Granting Motions to File Transcripts Under Seal.  Appellant shall have until April 8, 2021, to file and serve a single opening brief or informal brief form addressing the issues in both of these consolidated cases.  In docket no. 82245, the motion for leave to file an overlength stay motion is denied, and the clerk of this court is directed to return, unfiled, the February 11, 2021, proposed motion.  The clerk shall file under seal the transcripts provisionally received in both dockets on February 12, 2021.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=806757&onBaseDocumentNumber=21-04832">21-04832</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2021</td><td>Transcript</td><td>Filed (Docket No. 81978) Proper Person Appellant's SEALED Transcripts, Vols. 1-4 (dates of 9/21/20, 9/22/20, and 9/23/20).  Nos. 81978/82245.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2021</td><td>Transcript</td><td>Filed (Docket No. 82245) Proper Person Appellant's SEALED Transcripts, Vols. 1-4 (dates of 9/21/20, 9/22/20, and 9/23/20).  Nos. 81978/82245.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2021</td><td>Motion</td><td>Filed Respondent's Motion to Withdraw as Counsel of Record. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=808790&onBaseDocumentNumber=21-06797">21-06797</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw.  The motion of attorney Thomas Standish to withdraw as counsel of record for respondent is granted.  The clerk shall remove Mr. Standish as counsel of record for respondent.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=809087&onBaseDocumentNumber=21-07086">21-07086</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opening brief and appendix due: April 22, 2021. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=811399&onBaseDocumentNumber=21-09306">21-09306</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice, Appellant Request for Judicial Notice.  Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=811457&onBaseDocumentNumber=21-09360">21-09360</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice Pursuant to NRS 47.140. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=812188&onBaseDocumentNumber=21-10034">21-10034</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2021</td><td>Motion</td><td>Filed Proper Person Motion for Order Granting Expansion of Pages for Motion for Stay. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=812787&onBaseDocumentNumber=21-10585">21-10585</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2021</td><td>Motion</td><td>Filed Proper Person Motion for Stay for Lack of Subject-Matter Jurisdiction, Violation of Constitution and Equal Protection Rights and Newly Found Evidence Fraud. Nos. 81978/82245.  (STRICKEN PER ORDER 4/22/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice, Appellant Request for Judicial Notice. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=812883&onBaseDocumentNumber=21-10681">21-10681</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed pro se motions requesting (1) that this court recognize "FRAUD BROUGHT UPON THE COURT by officers of the court" and (2) this court issue an order removing Judge Matthew Harter from the bench.  No cause appearing the motions are denied.  Nos. 81798/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=813138&onBaseDocumentNumber=21-10931">21-10931</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/15/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice. Appellant's Request for Judicial Notice. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=813172&onBaseDocumentNumber=21-10965">21-10965</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/22/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a pro se motion for leave to file a motion for stay in excess of the page limitation.  The motion for leave to file an overlong stay motion is denied.  The clerk of this court shall strike the motion for stay filed on April 13, 2021.  Appellant has also filed two motions for judicial notice.  The motion requesting that this court take judicial notice of a "Motion to dismiss for lack of Subject-Matter Jurisdiction on 1099 Independent workers under Title 1V-D" is denied.  The motion for judicial notice of NRS 33.020 and NRS 33.080 is granted to the following extent.  This court shall take judicial notice of the existence and text of NRS 33.080 and NRS 33.080.  All other relief requested in the motion is denied.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=813922&onBaseDocumentNumber=21-11668">21-11668</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2021</td><td>Motion</td><td>Filed Proper Person Motion to Extend Time to File Opening Brief. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=813936&onBaseDocumentNumber=21-11682">21-11682</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2021</td><td>Motion</td><td>Filed Appellant's Motion for Stay for Lack of Subject-Matter Jurisdiction, Violation of Constitution &amp; Equal Protection Rights &amp; Violation of Substantive and Procedural Due Process. Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=814912&onBaseDocumentNumber=21-12640">21-12640</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Request for Judicial Notice.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=815062&onBaseDocumentNumber=21-12788">21-12788</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2021</td><td>Motion</td><td>Filed Proper Person Motion for Order Granting Expansion of Pages for Fast Track Brief. (Opening Brief) Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=815866&onBaseDocumentNumber=21-13495">21-13495</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2021</td><td>Motion</td><td>Filed Proper Person Motion to seal Fast Track Statement. (Opening Brief). Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=815868&onBaseDocumentNumber=21-13497">21-13497</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Motion to Disqualify Yvonne Ruiz, Esq., Thomas Standish, Esq., Phillip Spradling, Esq., and Standish Law Firm for Committing Perjury and Bringing Fraud Upon the Court." (STRICKEN PER 5/24/21 ORDER) Nos. 81978/82245.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2021</td><td>Motion</td><td>Filed Respondent's Response to Motion for Order Granting Expansion of Pages for Fast Track Brief. (Combined Appeals) Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=816758&onBaseDocumentNumber=21-14337">21-14337</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2021</td><td>Motion</td><td>Filed Proper Person Supplement Motion to Disqualify Yvonne Ruiz, Esq., Thomas Standish, Esq., Phillip Spradling, Esq., and Standish Law Firm for Committing Perjury and Bringing Fraud upon the Court. (STRICKEN PER 5/24/21 ORDER) Nos. 81978/82245 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2021</td><td>Motion</td><td>Filed Proper Person Supplement to Motion for Stay for Lack of Subject-Matter Jurisdiction, Violation of Constitution and Equal Protection Rights and Violation of Substantive and Procedural Due Process. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=816978&onBaseDocumentNumber=21-14550">21-14550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2021</td><td>Motion</td><td>Filed Proper Person Reply to Respondent's Response to Motion for Order Granting Expansion of Pages for Fast Track Brief.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=817258&onBaseDocumentNumber=21-14825">21-14825</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed a pro se motion for a second extension of time to file the opening brief,  a motion to seal the opening brief, a motion for leave to file a brief in excess of the page limitation, and a motion for judicial notice.  The proposed brief contains 92 pages.  Respondent opposes the motion for leave to file a brief in excess of the page limitation, and appellant has filed a reply. The motion to file a brief in excess of the page limitation is denied.  The clerk shall return the pro se brief received on May 11, 2021, unfiled. Appellant's motion for leave to file the opening brief under seal is denied.  Appellant shall have 30 days from the date of this order to file and serve an informal brief on the form provided by the clerk of this court or an opening brief that complies with NRAP 28(a) and NRAP 32.  The clerk shall provide appellant with a blank "Informal Brief Form for Pro Se Parties."  Appellant's pro se motion for judicial notice is granted to the following extent.  This court shall take judicial notice of the existence and text of Nev. Const. art 1, &sect;8.  All other relief requested in the motion is denied.  Appellant has also filed a motion to disqualify certain attorneys and a supplement to the motion. , the clerk shall strike the motion filed on May 12, 2021, and the supplement filed on May 19, 2021. Nos 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=817270&onBaseDocumentNumber=21-14837">21-14837</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Emergency Motion to Reconsider Request for Stay Which was Denied Without Specific Reasons on 05/24/2021 Answer is Needed by 6/7/2021."  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=817369&onBaseDocumentNumber=21-14934">21-14934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/27/2021</td><td>Motion</td><td>Filed Proper Person Supplement to Emergency Motion to Reconsider Request for Stay which was Denied Without Specific Reasons on 5/24/21. Answer is Needed by 6/7/21. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=817611&onBaseDocumentNumber=21-15176">21-15176</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/27/2021</td><td>Motion</td><td>Filed Proper Person Motion to Disqualify Yvonne Ruiz, Esq., Thomas Standish, Esq., Phillip Spradling, Esq., &amp; Standish Law Firm for Committing Perjury &amp; Bringing Fraud Upon the Court. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=817615&onBaseDocumentNumber=21-15180">21-15180</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2021</td><td>Motion</td><td>Filed Proper Person Motion To Request for Reconsideration/Review of Denial of Motion for Leave to File a Brief in Excess of the Page Limitation to be Heard by 3 Justice Panel Per NARP 27(C)(2). Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=818098&onBaseDocumentNumber=21-15654">21-15654</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/04/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant has filed a motion for a stay pending appeal.  The motion for a stay is denied.  Appellant's request that the district judge be disqualified or prevented from continuing to preside over the case below is denied at this time.  Appellant's request that this matter be immediately remanded for a new trial is not appropriately made in the context of a motion.  Any other requests for relief are denied.  fn1[Appellant has also filed an "emergency" motion to reconsider the purported denial of his motion for stay on May 24, 2021, and a supplement to that motion.  This court's May 24, 2021, order did not address appellant's motion to stay.  Accordingly, we take no action with respect to the motion for reconsideration or the supplement.]  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=818472&onBaseDocumentNumber=21-16023">21-16023</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has now filed a pro se motion for panel reconsideration of the order.  The motion is denied. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=819185&onBaseDocumentNumber=21-16673">21-16673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/10/2021</td><td>Motion</td><td>Filed Proper Person Motion to Request Reconsideration of Denial of Motion to Stay for Failing to Demonstrate NRAP 8(D) Factors in Favor of Stay. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=819193&onBaseDocumentNumber=21-16681">21-16681</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2021</td><td>Motion</td><td>Filed Proper Person Emergency Motion to Stay Child Support Order Portion of Judgement Entered on 10/12/20. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=819272&onBaseDocumentNumber=21-16758">21-16758</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2021</td><td>Brief</td><td>Filed Proper Person Informal Brief. Nos. 81978/82245 (STRICKEN PER 7/19/21 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/25/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motions to Disqualify, for Reconsideration, and for Stay. Three of appellants' motions are currently before the court.  Having reviewed these three motions, they are denied. Nos. 81978/82245  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=820976&onBaseDocumentNumber=21-18331">21-18331</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2021</td><td>Motion</td><td>Filed Respondent's Motion to Strike Opening Brief and to Dismiss Appeal, or in the Alternative, Motion to Extend Time to File an Answering Brief.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=821369&onBaseDocumentNumber=21-18708">21-18708</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/02/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Motion to Strike Opening Brief and to Dismiss Appeal, or in the Alternative, Motion to Extend Time to File an Answering Brief. Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=821846&onBaseDocumentNumber=21-19112">21-19112</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/09/2021</td><td>Motion</td><td>Filed Respondent's Reply Memorandum in Support of Motion to Strike Opening Brief and to Dismiss Appeal, or in the Alternative, Motion to Extend Time to File an Answering Brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=822505&onBaseDocumentNumber=21-19763">21-19763</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/19/2021</td><td>Order/Procedural</td><td>Filed Order. On June 14, 2021, appellant filed an opening brief.  Respondent now moves to strike the brief based on its noncompliance and to dismiss this appeal. Appellant opposes the motion. Respondent has replied. Having considered the filed brief and documents before this court, this court orders as follows.  The clerk shall strike the opening brief filed on June 14, 2021.  Appellant's opposition is treated as containing a motion for leave to file an overlength opening brief and granted to the following extent. Appellant shall have 30 days from the date of this order to file and serve an opening brief that does not exceed 60 pages or the equivalent type-volume limitation. Appellant's request to sanction respondent and respondent's motion to dismiss this appeal are denied. fn1 [The clerk of this court inadvertently filed the brief despite its procedural deficiencies.] Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=823468&onBaseDocumentNumber=21-20711">21-20711</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/06/2021</td><td>Motion</td><td>Filed Proper Person Motion to Immediately Establish Temporary Visitation De Novo Between Shahrokhi and his Minor Child While this Appeal is resolved. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=825843&onBaseDocumentNumber=21-22891">21-22891</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/06/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice for Request for Judicial Notice. Nos. 81978/82245(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=825844&onBaseDocumentNumber=21-22892">21-22892</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days.  Nos. 81978/72245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=826083&onBaseDocumentNumber=21-23129">21-23129</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Combined Opening Brief (81978/82245). Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=826786&onBaseDocumentNumber=21-23822">21-23822</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2021</td><td>Motion</td><td>Filed Motion to Withdraw as Counsel of Record for Respondent and to Extend Deadline to File Answering Brief (Yvonne Ruiz).  Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=827736&onBaseDocumentNumber=21-24718">21-24718</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant's pro se motion for judicial notice is denied. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=827970&onBaseDocumentNumber=21-24946">21-24946</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Motion</td><td>Filed Proper Person's Opposition to Motion to Respondent's Counsel's Motion to Withdraw. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=828019&onBaseDocumentNumber=21-24995">21-24995</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/02/2021</td><td>Motion</td><td>Filed Respondent's Reply to Appellant's Opposition to Respondonts' [sic] Counsel's Motion to Withdraw. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=828683&onBaseDocumentNumber=21-25644">21-25644</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a pro se motion for immediate temporary visitation and other relief pending resolution of these consolidated appeals.  Having considered the motion, this court concludes that the relief appellant seeks is best sought in the district court in the first instance.  Accordingly, the motion is denied. Nos. 81978/82245.   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=829452&onBaseDocumentNumber=21-26348">21-26348</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw. The motion of attorney Yvonne Ruiz to withdraw as counsel of record for respondent is granted.  The clerk shall remove Ms. Ruiz as counsel of record for respondent. Respondent's notice of appearance due: 30 days. Briefing is suspended. Given this suspension, Ms. Ruiz's request for an extension of time to file the answering brief is denied as moot.  Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=829620&onBaseDocumentNumber=21-26512">21-26512</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/20/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Appellant's Request for Judicial Notice.  Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=830287&onBaseDocumentNumber=21-27141">21-27141</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion for Reconsideration and Motion for Clarification.  Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=830288&onBaseDocumentNumber=21-27142">21-27142</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Immediate Injunction Requiring the Minor Child be put back in Private School while the Consolidated Appeals are Resolved. Nos. 81978/82245. (STRICKEN PER 10/15/21 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Notice/Incoming</td><td>Filed Proper Person's Request for Judicial Notice. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=830932&onBaseDocumentNumber=21-27768">21-27768</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant's pro se motion for judicial notice filed on September 20, 2021, is denied. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831036&onBaseDocumentNumber=21-27872">21-27872</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2021</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Stay , Due to Substantial Changes in Circumstances and Newly Found Information. (STRICKEN PER 10/15/21 ORDER).  Nos. 81978/82245.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Supplemental Authorities. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831104&onBaseDocumentNumber=21-27940">21-27940</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/01/2021</td><td>Motion</td><td>Filed Proper Person Appellant's "Supplement to Emergency Motion for Stay Pursuant to NRAP 8(A)(2)(D), Due to Substantial Changes in Circumstances and Newly Found Information."  Action Necessary by October 8, 2021. (STRICKEN PER 10/15/21 ORDER).   Nos. 81978/82245.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/01/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Third Notice of Supplemental Authorities.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831429&onBaseDocumentNumber=21-28259">21-28259</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/01/2021</td><td>Notice/Incoming</td><td>Filed Proper Person 2nd  Notice of Supplemental Authorities. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831438&onBaseDocumentNumber=21-28268">21-28268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/01/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice to Clerk of the Nevada Supreme Court Pursuant to NRAP 44. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831439&onBaseDocumentNumber=21-28269">21-28269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2021</td><td>Order/Procedural</td><td>Filed Certification. The clerk of the Nevada Supreme Court certifies to the Honorable Aaron D. Ford, Attorney General of the state of Nevada, that on October 1, 2021, appellant filed with the Supreme Court a notice that this appeal draws into question the constitutionality of NRS 125C.003. NRS 125C.0035, NRS 125C.006. NRS 125C.0065, NRS 125C.007. See NRAP 44. Nos. 81978/82245  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=831844&onBaseDocumentNumber=21-28668">21-28668</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Appearance.  Respondent Notifies this court that she will not be retaining new counsel. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=832489&onBaseDocumentNumber=21-29308">21-29308</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/15/2021</td><td>Order/Procedural</td><td>Filed Order Striking Documents and Granting Motion for Judicial Notice. Appellant has filed pro se motions seeking an injunction requiring the minor child to be placed into private school and a stay pending appeal.   Appellant has also filed a supplement to the motion for a stay. The clerk shall strike the motions filed on September 27, 2021, and September 28, 2021, and the supplement filed on October 1, 2021.   Appellant's September 27, 2021, pro se motion for judicial notice is granted to the following extent.  This court shall take judicial notice of this court's opinion in In the Matter of Hughes, 136 Nev. 399, 467 P.3d 627 (2020), and the unpublished disposition in Shahrokhi v. District Ct., Docket No. 79336-COA, (Order Granting Petition for Writ of Mandamus in Part and Denying Petition in Part, 2019). Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=832916&onBaseDocumentNumber=21-29728">21-29728</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing.  Respondent has now filed a notice of appearance indicating that she will be proceeding pro se.  Respondent shall have 21 days from the date of this order to file and serve any answering brief.  If respondent does not intend to file an answering brief, so notifying this court, in writing and immediately, will expedite the submission of this appeal to the court.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=833108&onBaseDocumentNumber=21-29917">21-29917</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2021</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Stay. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=833563&onBaseDocumentNumber=21-30248">21-30248</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2021</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Immediate Injunction Requiring that the minor child be taken out of Public School and Immediately be placed back in Private School. No. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=833565&onBaseDocumentNumber=21-30250">21-30250</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant's pro se motion for reconsideration of this court's September 13, 2021, order is denied.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=834425&onBaseDocumentNumber=21-31091">21-31091</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Supplemental Notice to the Emergency Motion for Stay. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=834820&onBaseDocumentNumber=21-31477">21-31477</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2021</td><td>Brief</td><td>Filed Proper Person Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=835168&onBaseDocumentNumber=21-31749">21-31749</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motions.  Appellant has filed, in pro se, a motion for stay pending appeal due to substantial changes in circumstances and newly found information, as well as a motion for an injunction requiring the minor child to be placed in private school.   Having considered the motions as well as the supplement to the motion for stay, the motions are denied without prejudice.  fn1[Both motions were titled as emergencies and requested relief by October 29, 2021.  However, the motions do not comply with NRAP 27(e) and appellant does not explain why relief was necessary by that date.  Accordingly, the motions were not treated as emergencies.]  Nos. 819678/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=836680&onBaseDocumentNumber=21-33247">21-33247</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/03/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice for Request for Judicial Notice.  (DETACHED ATTACHMENTS AND RETURNED UNFILED PER ORDER 12/13/21).  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=838038&onBaseDocumentNumber=21-34538">21-34538</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/03/2021</td><td>Brief</td><td>Filed Proper Person Reply Brief - Proper Person's Reply to Respondent's Answer to Opening Brief in Combined Appeal. Nos. 81978/82245.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=838039&onBaseDocumentNumber=21-34539">21-34539</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2021</td><td>Notice/Incoming</td><td>Filed Proper Person's Fourth Notice of Supplemental Authorities. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=838359&onBaseDocumentNumber=21-34851">21-34851</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Motion</td><td>Filed Proper Person Motion asking that Chief Justice James Hardesty to Disclose Relationships on the Record. pursuant to NCJC Rule 2.11. nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=838626&onBaseDocumentNumber=21-35113">21-35113</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/13/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a pro se motion asking that this court take judicial notice of several documents.  The request to take judicial notice of an email from appellant's former counsel to appellant is denied as there is no indication the email was considered by the district court in the underlying proceedings.  This court will take judicial notice that a petition for a writ of mandamus was filed in Docket No. 80277 and of the contents of that petition.  To the extent appellant requests judicial notice of a September 10, 2019, district court stipulation and order, the request is denied as moot because the stipulation and order is included in the record on appeal that will be considered by this court when resolving these appeals.  Any other request for relief in the motion is denied.  The clerk shall detach the attachments to the motion filed on December 3, 2021, and return them unfiled.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=838869&onBaseDocumentNumber=21-35355">21-35355</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/17/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2021</td><td>Order/Procedural</td><td>Filed Notice of Disclosure.  Pursuant to appellant's request and pursuant to comment 5 to Nevada Code of Judicial Conduct Rule 2.11, I make the following disclosure.  Although I am generally acquainted with the Honorable Mathew Harter, District Judge and attorney Thomas Standish, I have no personal or business relationship with either.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=840443&onBaseDocumentNumber=21-36822">21-36822</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/07/2022</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Staying all the District Court's Proceedings as the District Court Divested out of Jurisdiction Pending the Decision on the Constitutionality of NRS 125C before this Honorable Court. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=841673&onBaseDocumentNumber=22-00692">22-00692</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Change of Address. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=842743&onBaseDocumentNumber=22-01747">22-01747</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Denying Stay.  Pro se appellant has filed a motion seeking to stay the underlying district court post-child custody determination proceedings pending appeal, as well as to vacate any and all district court orders entered after his notice of appeal was filed, on the basis that the district court is acting in excess of its jurisdiction under NRS Chapter 125C, the constitutionality of which he has challenged on appeal, among other things.  Having reviewed the motion and supporting documentation, the motion is denied.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=842923&onBaseDocumentNumber=22-01924">22-01924</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Transcript</td><td>Filed Notice from Maria Balagtas/Transcription Video Services stating that the requested transcripts were delivered.  Dates of transcripts:  1/10/22.  Nos. 81978/82245/83726.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=843432&onBaseDocumentNumber=22-02425">22-02425</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Supplemental Authorities. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=843827&onBaseDocumentNumber=22-02791">22-02791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Case Status Update</td><td>Submitted for Decision. Nos. 81978/82245. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice, pursuant to NRS 47.140. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=845184&onBaseDocumentNumber=22-04047">22-04047</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2022</td><td>Notice/Incoming</td><td>Filed Proper Person's Request for Judicial Notice. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=846117&onBaseDocumentNumber=22-04962">22-04962</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2022</td><td>Other</td><td>Chief Justice James W. Hardesty disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2022</td><td>Other</td><td>Chief Justice James W. Hardesty disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Address Change. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=847226&onBaseDocumentNumber=22-05972">22-05972</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Order/Procedural</td><td>Filed Order. Appellant's pro se motions to take judicial notice of a federal lawsuit, two Nevada statutes, and two documents filed in the district court are granted to the following extent. This court declines to take judicial notice of the remaining documents.  Any and all other relief requested in the motions is denied.  Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=847487&onBaseDocumentNumber=22-06223">22-06223</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion to Stay District Court Order. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=853537&onBaseDocumentNumber=22-11970">22-11970</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2022</td><td>Order/Procedural</td><td>Filed Order Denying Stay.  Concerning these consolidated pro se appeals from, in relevant part, a district court order determining child custody and child support, appellant's sixth motion for stay of the order pending appeal, which was filed on April 15, 2022, and asserts that the order is void for exceeding the district court's family law jurisdiction, is denied.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=855069&onBaseDocumentNumber=22-13468">22-13468</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance (Docket Nos. 81978, 82245, and 83726) and Dismissing Appeal in Part (Docket No. 83726).  "ORDER the appeal in Docket No. 83726 DISSMISSED IN PART and the judgments of the district court AFFIMRED.  fn15[The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.]  RP/DH/MG  Nos. 81978/82245/83726.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=856791&onBaseDocumentNumber=22-15092">22-15092</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Petition for Rehearing due:  June 14, 2022.  Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=858938&onBaseDocumentNumber=22-17135">22-17135</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2022</td><td>Post-Judgment Petition</td><td>Filed Proper Person Petition for Rehearing. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=862077&onBaseDocumentNumber=22-19171">22-19171</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/17/2022</td><td>Filing Fee</td><td>Rehearing Fee Paid. $150.00 from Ali Shahrokhi. Money Order no. 28111456732. No. 81978/82245 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/17/2022</td><td>Exhibit</td><td>Filed Proper Person Exhibits to Petition for Rehearing. No. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=862222&onBaseDocumentNumber=22-19313">22-19313</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). RP/DH/MG. No. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=863452&onBaseDocumentNumber=22-20469">22-20469</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2022</td><td>Motion</td><td>Filed Proper Person Motion to Stay the Remittitur Pending Application to U.S. Supreme Court. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=863690&onBaseDocumentNumber=22-20706">22-20706</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Related Cases. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=863691&onBaseDocumentNumber=22-20707">22-20707</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Stay Issuance of the Remittitur and Regarding Notice. Issuance of the remittitur is hereby stayed until September 9, 2022. If the clerk of this court receives written notice by September 9, 2022, from the clerk of the United States Supreme Court that appellant has filed a petition for a writ of certiorari, the stay shall continue in effect until final disposition of the certiorari proceedings.  If such notice is not received by September 9, 2022, the remittitur shall issue. Appellant has also filed a notice of related cases. The motion is denied at this time. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=864565&onBaseDocumentNumber=22-21559">22-21559</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2022</td><td>Motion</td><td>Filed Proper Person Motion to Stay Remittitur Pending Application to U.S. Supreme. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=871636&onBaseDocumentNumber=22-28290">22-28290</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Extend the Stay of Issuance of the Remittitur.  Issuance of the remittitur is hereby stayed until November 8, 2022.  If the clerk of this court receives written notice by November 8, 2022, from the clerk of the United States Supreme Court that appellant has filed a petition for a writ of certiorari, the stay shall continue in effect until final disposition of the certiorari proceedings.  If such notice is not received by November 8, 2022, the remittitur shall issue.  Nos 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=872748&onBaseDocumentNumber=22-29339">22-29339</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Notice/Incoming</td><td>Filed Notice from U.S. Supreme Court that an extension of time has been granted for a petition for a writ of certiorari to be filed. Extended time to November 26, 2022. Nos. 81978/82245 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=873038&onBaseDocumentNumber=22-29626">22-29626</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2022</td><td>Order/Procedural</td><td>Filed Order Extending Stay of Issuance of Remittitur. The clerk of the United States Supreme Court has now filed a notice informing this court that the time to file a petition for a writ of certiorari has been extended until November 26, 2022. The stay of issuance of the remittitur is extended until December 12, 2022.  If the clerk of this court receives written&#13;
+notice by December 12, 2022, from the clerk of the United States Supreme Court that appellant has filed a petition for a writ of certiorari, the stay shall continue in effect until final disposition of the certiorari proceedings.  If such notice is not received by December 12, 2022, the remittitur shall issue. Nos. 81978/82245  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=873721&onBaseDocumentNumber=22-30258">22-30258</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/29/2022</td><td>Motion</td><td>Filed Proper Person Motion to Seal Case Nos. 81978 and 82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=880914&onBaseDocumentNumber=22-37222">22-37222</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/01/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Filing in the Supreme Court of the United States. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=881568&onBaseDocumentNumber=22-37836">22-37836</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2022</td><td>Notice/Incoming</td><td>Filed Notice from US Supreme Court/Certiorari Filed. A petition for a writ of certiorari was filed November 26, 2022, and placed on the docket as Case No.22-6224. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=882526&onBaseDocumentNumber=22-38738">22-38738</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/26/2023</td><td>Notice/Incoming</td><td>Filed The Motion of petitioner for lave to proceed in forma pauperis is denied. Petitioner is allow until February 13, 2023, within which to pay the docketing fee required by Rule 38(a) and to submit a petition in compliance with Rule 33.1 of the Rules of this Court. Nos. 81978/82245 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=887633&onBaseDocumentNumber=23-02617">23-02617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a pro se motion to seal these appeals. The motion is denied. Nos. 81978/82245.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=887663&onBaseDocumentNumber=23-02647">23-02647</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Notice/Incoming</td><td>Filed Notice from US Supreme Court/Certiorari Denied. The petition for a writ of certiorari is denied (22-6224). Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=894296&onBaseDocumentNumber=23-09010">23-09010</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. Nos. 81978/82245. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Remittitur</td><td>Issued Remittitur. Nos. 81978/82245. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=894309&onBaseDocumentNumber=23-09023">23-09023</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/03/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on March 24, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60550&csIID=60550&deLinkID=895450&onBaseDocumentNumber=23-09023">23-09023</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60550&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -7,8 +7,8 @@
 ## Then it will increment the ${csIID}} variable by 1 and repeat the process.
 ## It will do this until it reaches the number 1000000.
 
-csIID=1
-maxCSIID=4
+csIID=60000
+maxCSIID=67533
 outputFolder="./outputs"
 
 while [ $csIID -lt $maxCSIID ]

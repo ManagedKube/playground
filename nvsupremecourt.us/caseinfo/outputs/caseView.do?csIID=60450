@@ -1,0 +1,1148 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82174: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=CED8B314EF24B4384BE8756118E7744B">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60450">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82174</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">FED. NAT'L MORTG. ASS'N VS. WESTLAND LIBERTY VILL., LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61190">82666</a>, <a href="/public/caseView.do?csIID=62628">83695</a>, <a href="/public/caseView.do?csIID=63797">84573</a>, <a href="/public/caseView.do?csIID=63799">84575</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A819412</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>12/07/2020 / Lavelle, Eleissa</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Federal Housing Finance Agency</td><td valign="top">Leslie Bryan Hart
+							(Fennemore Craig P.C./Reno)
+						<br>John D. Tennert
+							(Fennemore Craig P.C./Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Federal National Mortgage Association</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>David L. Edelblute
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Nathaniel G. Kanute
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Bob L. Olson
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Grandbridge Real Estate Capital, LLC</td><td valign="top">Lars K. Evensen
+							(Holland &amp; Hart LLP/Las Vegas)
+						<br>Sydney R. Gambee
+							(Holland &amp; Hart LLP/Las Vegas)
+						<br>Joseph G. Went
+							(Holland &amp; Hart LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Westland Liberty Village, LLC</td><td valign="top">John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Westland Village Square, LLC</td><td valign="top">John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=798534&onBaseDocumentNumber=20-44241">20-44241</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/07/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=798536&onBaseDocumentNumber=20-44243">20-44243</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Eleissa C. Lavelle. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=798683&onBaseDocumentNumber=20-44390">20-44390</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/10/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  (Appellant Grandbridge) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/10/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. (Appellant Grandbridge) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=799194&onBaseDocumentNumber=20-44893">20-44893</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/10/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (Appellant Grandbridge) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=799196&onBaseDocumentNumber=20-44895">20-44895</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/11/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Snell &amp; Wilmer.  Check no. 17468. (Appellant Fed. Nat'l) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Holland &amp; Hart.  Check no. 66008947. (Appellant Grandbridge) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2020</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant Federal National Mortgage Association's Docketing Statement due:  January 11, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=801221&onBaseDocumentNumber=20-46731">20-46731</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/04/2021</td><td>Notice/Outgoing</td><td>Issued Notice to File Appellant Grandbridge Real Estate Capital, LLC's Docketing Statement. Due date: 10 days.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=801597&onBaseDocumentNumber=21-00004">21-00004</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Appellant's (Federal National Mortgage Assoc.)  Motion to Enlarge the Page Limit of Stay Pending Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802296&onBaseDocumentNumber=21-00695">21-00695</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Motion</td><td>Filed Appellant's (Federal National Mortgage Assoc.) Expedited Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802302&onBaseDocumentNumber=21-00700">21-00700</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal.  (Volume 1)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802304&onBaseDocumentNumber=21-00702">21-00702</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 2)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802305&onBaseDocumentNumber=21-00703">21-00703</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 3)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802306&onBaseDocumentNumber=21-00704">21-00704</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 4)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802307&onBaseDocumentNumber=21-00705">21-00705</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 5)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802308&onBaseDocumentNumber=21-00706">21-00706</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 6)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802309&onBaseDocumentNumber=21-00707">21-00707</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 7)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802310&onBaseDocumentNumber=21-00708">21-00708</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 8)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802311&onBaseDocumentNumber=21-00709">21-00709</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Expedited Motion to Stay Pending Appeal. (Volume 9)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802312&onBaseDocumentNumber=21-00710">21-00710</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2021</td><td>Docketing Statement</td><td>Filed Appellant's (Federal National Mortgage Assoc.) Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802416&onBaseDocumentNumber=21-00814">21-00814</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion for Leave to File Stay Motion with Excess Pages. Appellant Federal National Mortgage Association's motion for leave to file a motion for stay in excess of the NRAP 27(d)(2) 10-page limit is granted. The 25-page stay motion was filed on January 8, 2021. Respondents' response, if any, likewise may contain up to 25 pages. Any reply should accord with NRAP 27(d)(2)'s page limits. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802681&onBaseDocumentNumber=21-00979">21-00979</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for January 26, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802898&onBaseDocumentNumber=21-01174">21-01174</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/14/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for John W. Hofsaess. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802932&onBaseDocumentNumber=21-01207">21-01207</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/14/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents' response to appellants' expedited motion for stay due: January 29, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=802992&onBaseDocumentNumber=21-01266">21-01266</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/14/2021</td><td>Docketing Statement</td><td>Filed Appellant Grandbridge Real Estate Capital, LLC's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=803035&onBaseDocumentNumber=21-01309">21-01309</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/15/2021</td><td>Order/Procedural</td><td>Filed Order.  On January 14, 2021, John W. Hofsaess filed a notice of appearance on behalf of respondents.  Mr. Hofsaess shall have 5 days from the date of this order to provide this court with a copy of the district court order that grants his SCR 42 application.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=803061&onBaseDocumentNumber=21-01335">21-01335</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/15/2021</td><td>Notice/Incoming</td><td>Filed Respondents' Notice Submission of Order Granting Motion to Associate Counsel John W. Hofsaess, Esq. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=803137&onBaseDocumentNumber=21-01411">21-01411</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/15/2021</td><td>Notice/Incoming</td><td>Filed Respondents' Amended Submission of Order Granting Motion to Associate Counsel John W. Hofsaess, Esq. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=803138&onBaseDocumentNumber=21-01412">21-01412</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/26/2021</td><td>Motion</td><td>Filed Appellants' Joinder to Expedited Motion to Stay Pending Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804206&onBaseDocumentNumber=21-02467">21-02467</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Appearance for J. Colby Williams and Philip R. Erwin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804685&onBaseDocumentNumber=21-02863">21-02863</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/29/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Expedited Motion to Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804687&onBaseDocumentNumber=21-02865">21-02865</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix in Support of Opposition to Expedited Motion to Stay. Vol. 1 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804689&onBaseDocumentNumber=21-02867">21-02867</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/29/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix in Support of Opposition to Expedited Motion to Stay. Vol. 2 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804690&onBaseDocumentNumber=21-02868">21-02868</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix in Support of Opposition to Expedited Motion to Stay. Vol. 3 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804691&onBaseDocumentNumber=21-02869">21-02869</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/29/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix in Support of Opposition to Expedited Motion to Stay. Vol. 4 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804694&onBaseDocumentNumber=21-02872">21-02872</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/29/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix in Support of Opposition to Expedited Motion to Stay. Vol. 5 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804697&onBaseDocumentNumber=21-02875">21-02875</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/29/2021</td><td>Order/Procedural</td><td>Filed Order.  On January 14, 2021, John W. Hofsaess, Esq. filed a notice of appearance on behalf of respondents.  On January 15, 2021, he provided this court with a copy of the district court order granting his SCR 42 application in the matter below.  The clerk of this court shall add Mr. Hofsaess as counsel for respondents.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=804700&onBaseDocumentNumber=21-02878">21-02878</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/05/2021</td><td>Motion</td><td>Filed Appellant's Reply in Support of Expedited Motion to Stay Pending Appeal (Relief Requested by February 11, 2021). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=805536&onBaseDocumentNumber=21-03657">21-03657</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2021</td><td>Order/Procedural</td><td>Filed Order Granting Stay in Part and Denying Stay in Part.  We conclude that only a partial stay of the district court's injunction pending appeal is warranted.  In particular, we stay paragraphs (2) and (3) of the district court's injunction directing that Fannie Mae remove the notices of default and election to sell from the properties' titles, such that the notices remain of record pending resolution of this appeal and further order of this court.  The remainder of the requested relief is denied subject to a decision on the merits of this appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=805987&onBaseDocumentNumber=21-04099">21-04099</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=806029&onBaseDocumentNumber=21-04139">21-04139</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=807352&onBaseDocumentNumber=21-05418">21-05418</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/26/2021</td><td>Motion</td><td>Filed Appellants' Motion to Reconsider. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=807779&onBaseDocumentNumber=21-05841">21-05841</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/05/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Motion to Reconsider. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=808558&onBaseDocumentNumber=21-06569">21-06569</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Federal National Mortgage Association's reply in support of appellant's motion to reconsider due: March 26, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=808722&onBaseDocumentNumber=21-06730">21-06730</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2021</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request for Appellant Federal National Mortgage Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=808725&onBaseDocumentNumber=21-06733">21-06733</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Motion</td><td>Filed Motion Federal Housing Finance Agency's Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=810687&onBaseDocumentNumber=21-08607">21-08607</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Notice/Incoming</td><td>Filed Notice of Change of Address. (Campbell &amp; Williams) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=810723&onBaseDocumentNumber=21-08643">21-08643</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/26/2021</td><td>Motion</td><td>Filed Appellants' (Federal  National Mortgage Assoc.) Motion to Extend Time to File Reply in Support of Motion for Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=810894&onBaseDocumentNumber=21-08808">21-08808</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion for Extension of Time to File Reply. Due: April 2, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=811347&onBaseDocumentNumber=21-09255">21-09255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents Westland Liberty Village, LLC and Westland Village Square, LLC's opposition due: April 15, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=811374&onBaseDocumentNumber=21-09282">21-09282</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Motion</td><td>Filed Appellant Federal National Mortgage Association's Motion to Extend Time to File Reply In Support of Motion for Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=811831&onBaseDocumentNumber=21-09680">21-09680</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion for Extension of Time to File Reply. Appellant's reply due: April 9, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=812019&onBaseDocumentNumber=21-09867">21-09867</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2021</td><td>Motion</td><td>Filed Motion to Associate Counsel (Michael A.F. Johnson). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=812058&onBaseDocumentNumber=21-09906">21-09906</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/09/2021</td><td>Motion</td><td>Filed Appellant's (Federal National Mortgage Association) Reply in Support of Motion to Reconsider. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=817035&onBaseDocumentNumber=21-10297">21-10297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/16/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Federal Housing Finance Agency's Motion to Intervene. (REJECTED PER NOTICE FILED ON 4/19/21)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=813444&onBaseDocumentNumber=21-11198">21-11198</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Motion</td><td>Filed Respondents' Motion to Extend Time to File Opposition to Federal Housing Finance Agency's Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=813477&onBaseDocumentNumber=21-11231">21-11231</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/23/2021</td><td>Motion</td><td>Filed Proposed Intervener FHFA's Response to Motion to Extend Time to File Opposition to FHFA's Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=814095&onBaseDocumentNumber=21-11839">21-11839</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/23/2021</td><td>Motion</td><td>Filed Federal Housing Finance Agency's Reply in Support of Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=814097&onBaseDocumentNumber=21-11841">21-11841</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion for Extension of Time. Respondents' motion for an extension of time to file an opposition to Federal Housing Finance Agency's motion to Intervene is granted. Respondents shall have 3 days from the date of this order to refile and serve their opposition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=814343&onBaseDocumentNumber=21-12084">21-12084</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Federal Housing Finance Agency's Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=814377&onBaseDocumentNumber=21-12110">21-12110</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/30/2021</td><td>Notice/Incoming</td><td>Filed Notice of Ruling Granting Federal Housing Finance Agency's Motion to Intervene in District Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=814672&onBaseDocumentNumber=21-12403">21-12403</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/21/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Grandbridge Real Estate Capital, LLC's opening brief and appendix due: June 8, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=817059&onBaseDocumentNumber=21-14629">21-14629</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/21/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Federal Mortgage Association's opening brief and appendix due: June 8, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=817137&onBaseDocumentNumber=21-14706">21-14706</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motions to Reconsider and Intervene.  In January 2021, Fannie Mae moved for a stay pending appeal.  On February 11, 2021, we granted the stay motion in part.  Fannie Mae moves for reconsideration of our stay order.  We deny the motion for reconsideration.  The Federal Housing Finance Agency has moved to intervene in this appeal.  The motion to intervene is denied.  fn1[In light of this order, the FHFA's motion to associate attorney Michael A.F. Johnson of Arnold &amp; Porter Kaye Scholer LLP, pursuant to SCR 42, is denied as moot.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=817345&onBaseDocumentNumber=21-14910">21-14910</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/04/2021</td><td>Motion</td><td>Filed Joinder to Motion for Extension of Time to File Opening Brief (First Request by Motion).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=834487&onBaseDocumentNumber=21-16139">21-16139</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2021</td><td>Motion</td><td>Filed Appellant Federal National Mortgage Association's Motion for Extension of Time to File Opening Brief (First Request by Motion). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=818607&onBaseDocumentNumber=21-16150">21-16150</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant Federal National Mortgage Association (Fannie Mae) has filed a motion for a second extension of time to file the opening brief. The motion is granted. Appellant Grandbridge Real Estate Capital, LLC, has filed a joinder to Fannie Mae's motion, and likewise moves for a 14-day extension of time to file its opening brief. Grandbridge's motion is granted.  Appellants shall have until June 22, 2021, to file and serve the opening briefs and appendices. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=818860&onBaseDocumentNumber=21-16353">21-16353</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 1 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820625&onBaseDocumentNumber=21-17983">21-17983</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 2 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820628&onBaseDocumentNumber=21-17986">21-17986</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 3 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820631&onBaseDocumentNumber=21-17989">21-17989</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 4 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820633&onBaseDocumentNumber=21-17991">21-17991</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 5 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820634&onBaseDocumentNumber=21-17992">21-17992</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 6 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820635&onBaseDocumentNumber=21-17993">21-17993</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 7 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820636&onBaseDocumentNumber=21-17994">21-17994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 8 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820637&onBaseDocumentNumber=21-17995">21-17995</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 9 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820639&onBaseDocumentNumber=21-17997">21-17997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 11 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820642&onBaseDocumentNumber=21-18000">21-18000</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Appendix</td><td>Filed Appellant's (Federal National Mortgage Association) Appendix Vol. 10 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820643&onBaseDocumentNumber=21-18001">21-18001</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Brief</td><td>Filed Appellant's (Grandbridge Real Estate Capital, LLC) Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820663&onBaseDocumentNumber=21-18021">21-18021</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2021</td><td>Brief</td><td>Filed Appellant's (Federal National Mortgage Association) Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820669&onBaseDocumentNumber=21-18027">21-18027</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2021</td><td>Notice/Outgoing</td><td>Issued Notice to File Appendix to Opening Brief. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=820688&onBaseDocumentNumber=21-18046">21-18046</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2021</td><td>Brief</td><td>Filed Amicus Brief of Amicus Curiae Federal Housing Finance Agency in Support of Appellant and Reversal of District Court's Preliminary Injunction Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=821398&onBaseDocumentNumber=21-18737">21-18737</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Notice/Incoming</td><td>Filed Errata to Appellant's Appendix.  (The appendix filed on 6/22/21 serves as a joint appendix for each appellant.)  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=821476&onBaseDocumentNumber=21-18815">21-18815</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Answering Briefs.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=822154&onBaseDocumentNumber=21-19419">21-19419</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Answering Brief. Due date August 30, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=822185&onBaseDocumentNumber=21-19449">21-19449</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2021</td><td>Notice/Incoming</td><td>Filed Notice of District Court Decision. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=826343&onBaseDocumentNumber=21-23385">21-23385</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Order/Procedural</td><td>Filed Order.  Amicus curiae the Federal Housing Finance Agency has filed a notice that the district court denied its motion to dissolve the preliminary injunction and asks this court to resolves this appeal expeditiously. This court will resolve this appeal as expeditiously as the court's calendar permits.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=826857&onBaseDocumentNumber=21-23892">21-23892</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Brief</td><td>Filed Respondents' Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828273&onBaseDocumentNumber=21-25243">21-25243</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Brief</td><td>Filed Answering Brief to Amicus Brief. (REJECTED PER 8/31/21 NOTICE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 1) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828281&onBaseDocumentNumber=21-25251">21-25251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 2) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828282&onBaseDocumentNumber=21-25252">21-25252</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 3) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828285&onBaseDocumentNumber=21-25255">21-25255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 4) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828289&onBaseDocumentNumber=21-25259">21-25259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 6) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828292&onBaseDocumentNumber=21-25262">21-25262</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 5) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828293&onBaseDocumentNumber=21-25263">21-25263</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix In Support Of Answering Brief (Vol. 7) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828295&onBaseDocumentNumber=21-25265">21-25265</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document (Answering Brief to Amicus Brief). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828334&onBaseDocumentNumber=21-25304">21-25304</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief to Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=828347&onBaseDocumentNumber=21-25317">21-25317</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Federal National Mortgage Association's reply brief due: October 13, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=830955&onBaseDocumentNumber=21-27791">21-27791</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Grandbridge Real Estate Capital, LLC's reply brief due: October 13, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=830988&onBaseDocumentNumber=21-27824">21-27824</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/12/2021</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's Notice of Appearance for John D. Tennert. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=832522&onBaseDocumentNumber=21-29341">21-29341</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/13/2021</td><td>Motion</td><td>Filed Appellant's Unopposed Motion for Extension of Time to File Reply Brief (Federal National Mortgage Assoc.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=832603&onBaseDocumentNumber=21-29421">21-29421</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/13/2021</td><td>Brief</td><td>Filed Appellant's (Grandbridge Real Estate Capital, LLC) Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=832664&onBaseDocumentNumber=21-29481">21-29481</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Federal National Mortgage Association shall have until October 20, 2021, to file and serve the reply brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=833113&onBaseDocumentNumber=21-29922">21-29922</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2021</td><td>Motion</td><td>Filed Appellant's (Federal National Mortgage Association) Motion for Excess Pages, Motion to Enlarge the Length of Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=833590&onBaseDocumentNumber=21-30275">21-30275</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2021</td><td>Brief</td><td>Filed Appellant's (Federal National Mortgage Association) Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=833591&onBaseDocumentNumber=21-30276">21-30276</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant Federal National Mortgage Association's motion for leave to file a reply brief in excess of the type-volume limitation is granted.  The reply brief was filed on October 20, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=834429&onBaseDocumentNumber=21-31095">21-31095</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Brief</td><td>Filed Respondents' Notice of Supplemental Authority Pursuant to NRAP 31(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=859243&onBaseDocumentNumber=22-17435">22-17435</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2022</td><td>Motion</td><td>Filed Amicus FHFA's Response to Westland's Notice of Supplemental Authority. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=862533&onBaseDocumentNumber=22-19617">22-19617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Reversed and remanded." Before the Court En Banc. Author: Stigich, J. Majority: Parraguirre/Hardesty/Stiglich/Cadish/Silver/Pickering/Herndon. 138 Nev. Adv. Opn. No. 57. En Banc. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=868316&onBaseDocumentNumber=22-25128">22-25128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2022</td><td>Post-Judgment Petition</td><td>Filed Respondents' Petition for Rehearing. (REJECTED PER NOTICE FILED ON 8/30/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=870414&onBaseDocumentNumber=22-27147">22-27147</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2022</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=870515&onBaseDocumentNumber=22-27247">22-27247</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2022</td><td>Filing Fee</td><td>Rehearing Filing Fee Paid. $150.00 from Maria Scandalios.  E-Payment Ref. no. 22083033130954. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2022</td><td>Post-Judgment Petition</td><td>Filed Respondent's Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=870542&onBaseDocumentNumber=22-27274">22-27274</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents have filed an untimely motion requesting an extension of time to file a petition for rehearing.  Cause appearing and despite its untimeliness, the motion is granted.  NRAP 26(b)(1(A); NRAP 40(a)(1).  The petition for rehearing was filed on August 30, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=871377&onBaseDocumentNumber=22-28038">22-28038</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). EN BANC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=872457&onBaseDocumentNumber=22-29049">22-29049</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=875475&onBaseDocumentNumber=22-31968">22-31968</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on October 12, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60450&csIID=60450&deLinkID=878284&onBaseDocumentNumber=22-31968">22-31968</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60450&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82255: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=434FD80FCEBC6AE4A325C8AD216F4801">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60561">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82255</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">BELCHER (KEVIN) VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - CR192439</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Life - Direct</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>02/16/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kevin Antwone Belcher</td><td valign="top">Orrin J.H. Johnson
+							(Orrin Johnson Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Marilee Cate
+							(Washoe County District Attorney)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Jennifer P. Noble
+							(Washoe County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2020</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=800779&onBaseDocumentNumber=20-46297">20-46297</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/30/2020</td><td>Notice of Appeal Documents</td><td>Filed SEALED District Court Minutes.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 10/19/20, 10/20/20, 10/21/20, 10/22/20, 10/23/20, 12/10/20.  To Court Reporter: Litigation Services. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=801874&onBaseDocumentNumber=21-00276">21-00276</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Criminal Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=802660&onBaseDocumentNumber=21-00965">21-00965</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Nicole J. Hansen stating that the requested transcripts were delivered.  Dates of transcripts: 10/20/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=805801&onBaseDocumentNumber=21-03918">21-03918</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Nicole J. Hansen stating that the requested transcripts were delivered.  Dates of transcripts: 12/20/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=805804&onBaseDocumentNumber=21-03921">21-03921</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Corrie L. Wolden stating that the requested transcripts were delivered.  Dates of transcripts: 02/15/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=808852&onBaseDocumentNumber=21-06859">21-06859</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 12/03/19, 01/09/20, 10/14/20 and 10/16/20. To Court Reporter: Litigation Services.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=809457&onBaseDocumentNumber=21-07452">21-07452</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2021</td><td>Notice/Incoming</td><td>Filed Filed Notice Regarding Transcripts (Mia Mezzetti-Omler, Litigation Services). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=809732&onBaseDocumentNumber=21-07690">21-07690</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Christina Amundson stating that the requested transcripts were delivered.  Dates of transcripts: 01/09/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=809753&onBaseDocumentNumber=21-07711">21-07711</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Julie Ann Kernan stating that the requested transcripts were delivered.  Dates of transcripts: 10/21/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=811462&onBaseDocumentNumber=21-09365">21-09365</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lori Urmston stating that the requested transcripts were delivered.  Dates of transcripts: 10/14/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=812123&onBaseDocumentNumber=21-09971">21-09971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Julie Ann Kernan stating that the requested transcripts were delivered.  Dates of transcripts: 10/16/20 and 10/22/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=812922&onBaseDocumentNumber=21-10720">21-10720</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Motion</td><td>Filed Stipulation to Enlarge Time to File Opening Brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=813471&onBaseDocumentNumber=21-11225">21-11225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/23/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant shall have until June 30, 2021, to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=813972&onBaseDocumentNumber=21-11718">21-11718</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821450&onBaseDocumentNumber=21-18789">21-18789</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Motion</td><td>Filed Appellant's Motion to Transmit the Trial Exhibits and Presentence Investigation Report to this Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821453&onBaseDocumentNumber=21-18792">21-18792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821454&onBaseDocumentNumber=21-18793">21-18793</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821455&onBaseDocumentNumber=21-18794">21-18794</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821456&onBaseDocumentNumber=21-18795">21-18795</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821457&onBaseDocumentNumber=21-18796">21-18796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821459&onBaseDocumentNumber=21-18798">21-18798</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821461&onBaseDocumentNumber=21-18800">21-18800</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Motion</td><td>Filed Appellant's Motion and Request to File Appendix Volume 7 Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=821509&onBaseDocumentNumber=21-18847">21-18847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a motion to direct transmission of the presentence investigation report and all the trial exhibits to this court, and a motion to file volume 7 of the appendix under seal.  The district court clerk shall have 14 days from the date of this order to transmit to the clerk of this court a copy of the presentence investigation report in a sealed envelope.  The motion to transmit the exhibits is denied without prejudice.  The clerk of this court shall file volume 7 of the appendix, received on June 30, 2021, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=822327&onBaseDocumentNumber=21-19587">21-19587</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2021</td><td>Appendix</td><td>Filed SEALED Appellant's Appendix - Volume 7.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2021</td><td>Notice of Appeal Documents</td><td>Filed Presentence Investigation Report (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/29/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Marilee Cate, Appellate Deputy District Attorney as counsel for Respondent). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=824978&onBaseDocumentNumber=21-22098">21-22098</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/29/2021</td><td>Motion</td><td>Filed Respondent's Motion/Stipulation for Enlargement of Time (Answering Brief). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=824979&onBaseDocumentNumber=21-22099">21-22099</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Appellant's Motion for Leave to File Video Recording (Under Seal). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=825008&onBaseDocumentNumber=21-22127">21-22127</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Appellant's Motion and Request to File Appendix Volume 8 Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=825011&onBaseDocumentNumber=21-22130">21-22130</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/20/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a motion requesting permission to file a video exhibit under seal.  The clerk of the district court shall have 14 days from the date of this order to transmit to this court trial Exhibit 122 described as "Snap Chat video depicting SM and Defendant."  Upon receipt of this exhibit, the clerk of this court shall file it under seal.  The clerk of this court shall return, unfiled the exhibit received on July 30, 2021.  The clerk of this court shall file volume 8 of the appendix, received on July 30, 2021, under seal.  Respondent shall have until August 30, 2021, to file and serve the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=827366&onBaseDocumentNumber=21-24354">21-24354</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/20/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 8.  (FILED UNDER SEAL PER ORDER 8/20/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Motion</td><td>Filed Respondent's Motion for Enlargement of Time (Answering Brief). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=828086&onBaseDocumentNumber=21-25060">21-25060</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have until September 7, 2021, to file and serve the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=828398&onBaseDocumentNumber=21-25368">21-25368</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=829055&onBaseDocumentNumber=21-25958">21-25958</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2021</td><td>Brief</td><td>Filed Appellant's Reply to Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=831683&onBaseDocumentNumber=21-28509">21-28509</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=846365&onBaseDocumentNumber=22-05200">22-05200</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of conviction AFFIRMED." NNP22 - AS/EC/KP. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=854920&onBaseDocumentNumber=22-13321">22-13321</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=857970&onBaseDocumentNumber=22-16187">22-16187</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Remittitur</td><td>Issued Notice of Return of Records. Exhibit 122 "Snap Chat video depicting SM and Defendant." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=861287&onBaseDocumentNumber=22-18468">22-18468</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2022</td><td>Remittitur</td><td>Filed Notice of Return of Records. Received by District Court Clerk on June 1, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=861303&onBaseDocumentNumber=22-18468">22-18468</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/10/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on May 24, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60561&csIID=60561&deLinkID=861304&onBaseDocumentNumber=22-16187">22-16187</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60561&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

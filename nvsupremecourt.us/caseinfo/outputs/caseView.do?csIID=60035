@@ -1,0 +1,1101 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81892: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=6C685B52E0742ACB71C6B7DD21E438F1">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60035">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81892</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">THOMSON, JR. VS. HELIX ELECTRIC OF NEV., LLC C/W 80889/81159/84216</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=58578">80889</a>*, <a href="/public/caseView.do?csIID=58952">81159</a>, 81892, <a href="/public/caseView.do?csIID=63323">84216</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=58578">80889</a>, <a href="/public/caseView.do?csIID=58952">81159</a>, <a href="/public/caseView.do?csIID=63323">84216</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A789664</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>09/12/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">James F. Thomson, Jr.</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Travis F. Chance
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Mitchell J. Langberg
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Helix Electric of Nevada, LLC</td><td valign="top">Jennifer A. DelCarmen
+							(Parker, Nelson &amp; Associates)
+						<br>Theodore Parker
+							(Parker, Nelson &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Victor Fuchs</td><td valign="top">John E. Bragonje
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Cary B. Domina
+							(Peel Brimley LLP/Henderson)
+						<br>Blayne N. Grondel
+							(Peel Brimley LLP/Henderson)
+						<br>Steven D. Meacham
+							(Peel Brimley LLP/Henderson)
+						<br>Richard L. Peel
+							(Peel Brimley LLP/Henderson)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=789766&onBaseDocumentNumber=20-36771">20-36771</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=789769&onBaseDocumentNumber=20-36774">20-36774</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Travis F. Chance. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=789816&onBaseDocumentNumber=20-36821">20-36821</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/08/2020</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellant: 14 days transcript request form; 120 days opening brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=789968&onBaseDocumentNumber=20-36972">20-36972</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2020</td><td>Motion</td><td>Filed Joint Motion to Consolidate Appeal With Docket Numbers 80889.  (Nos. 80889/81892). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=791625&onBaseDocumentNumber=20-38584">20-38584</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/26/2020</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Consolidate. Appellant shall have until December 23, 2020, to file and serve a single opening brief and appendix. Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=792230&onBaseDocumentNumber=20-39181">20-39181</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2020</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (For Case No. 81892)  Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=792399&onBaseDocumentNumber=20-39349">20-39349</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/29/2020</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Victor Fuchs' response to docketing statement due: November 17, 2020.  Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=792745&onBaseDocumentNumber=20-39690">20-39690</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/12/2020</td><td>Motion</td><td>Filed Joint Motion Under NRCP 62.1(a)(3) and NRAP 12.A to Temporarily Remand Case to District Court Based on District Court's Certification of Intent to Strike the Inadvertently filed February 21. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=794549&onBaseDocumentNumber=20-41324">20-41324</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/12/2020</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Intent to Respond to Joint Motion to Remand. Nos. 80889/81159/81892  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=794555&onBaseDocumentNumber=20-41330">20-41330</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2020</td><td>Docketing Statement</td><td>Filed Respondents Helix Electric of Nevada LLC's and Victor Fuchs' Response to Docketing Statement. Nos. 80889/81159/81892. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=795192&onBaseDocumentNumber=20-41961">20-41961</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Motion</td><td>Filed Appellant's Motion to Exceed Page Limitation on Response to Joint Motion Under NRP 62.1(a)(3) an NRAP 12A to Temporarily Remand Case to District Court.  (DETACHED OPPOSITIO AND FILED SEPARATELY PER ORDER 11/24/2020).   (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=795337&onBaseDocumentNumber=20-42105">20-42105</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/24/2020</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant's motion for leave to file an opposition to the joint motion for a temporary remand in excess of the page limitation is granted.  The clerk shall detach the opposition from the motion filed on November 18, 2020, and file it separately.  Respondents shall have 7 days from the date of this order to file and serve any reply.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=797132&onBaseDocumentNumber=20-42851">20-42851</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2020</td><td>Motion</td><td>Filed Response to Joint Motion Under NRCP 62.1(a)(3) and NRAP 12.A to Temporarily Remand Case to District Court Based on District Court's Certification of Intent to Strike the Inadvertently Filed February 21 Notice of Entry of Order.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=797137&onBaseDocumentNumber=20-42856">20-42856</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2020</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Victor Fuchs' reply to appellant's response to Joint Motion Under NRCP 62.1(a)(3) and NRAP 12.A to Temporarily Remand Case to District Court Based on District Court's Certification of Intent to Strike the Inadvertently Filed February 21 Notice of Entry of Order. Due: December 15, 2020. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=797688&onBaseDocumentNumber=20-43402">20-43402</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/10/2020</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Opening Brief and Appendix, Answering Briefs and Appendices, and Reply Brief Pursuant to NRAP 31(b)(2).  Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=799268&onBaseDocumentNumber=20-44967">20-44967</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2020</td><td>Motion</td><td>Filed Stipulation to Extend Appellant Victor Fuchs' Time to File His Reply to the Motion to Remand.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=799725&onBaseDocumentNumber=20-45338">20-45338</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/18/2020</td><td>Order/Procedural</td><td>Filed Order.  Appellant shall have until January 22, 2021, to file and serve the opening brief and appendix.  The parties have also filed a stipulation for a second extension of time for respondents to file a reply in support of their motion to remand.  Respondents shall have until January 12, 2021, to file and serve their reply.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=800248&onBaseDocumentNumber=20-45827">20-45827</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2020</td><td>Motion</td><td>Filed Joint Motion for Extension of Time to File Opening Brief and Appendix, Answering Briefs and Appendices, and Reply Brief Pursuant to NRAP 31(b)(3) (Second Request).  Nos. 80889.81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=800624&onBaseDocumentNumber=20-46146">20-46146</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/31/2020</td><td>Order/Procedural</td><td>Filed Order. The parties have filed a joint motion for a second extension of time to file the opening brief and appendix. The motion is granted to the following extent.  Briefing of this appeal is suspended pending further order of this court.  Nos. 80889.81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=801539&onBaseDocumentNumber=20-47039">20-47039</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Daniel F. Polsenberg, Joel D. Henriod and Abraham G. Smith of Lewis Roca Rothgerger Christie LLP appear as co-counsel for Respondent Victor Fuchs).  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=802748&onBaseDocumentNumber=21-01028">21-01028</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2021</td><td>Motion</td><td>Filed Respondents' Motion to Exceed Page Limit for "Joint Reply in Support of Motion for Remand."  Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=802750&onBaseDocumentNumber=21-01030">21-01030</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2021</td><td>Motion</td><td>Filed Joint Reply in Support of Motion for Remand.  Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=802751&onBaseDocumentNumber=21-01031">21-01031</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2021</td><td>Motion</td><td>Filed Respondents' Motion for Extension of Time to File "Joint Reply in Support of Motion for Remand."  Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=802752&onBaseDocumentNumber=21-01032">21-01032</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/07/2021</td><td>Order/Procedural</td><td>Filed Order Granting in Part Motion for Limited Remand. Having considered the motion, opposition, reply,  and documents before this court, the motion for remand is granted to the following extent.  This matter is remanded to the district court for the limited purpose of striking the February 21, 2020, notice of entry of order. Because the district court's certification order does not appear to certify that it would strike the February 21, 2020, order, we decline to remand this matter to the district court for the purpose of striking the February 21, 2020, order. fn1 [ Respondents' motions for an extension of time to file the reply in support of the motion to remand and for leave to file a reply in excess of the page limitation are granted.  NRAP 26(b)(1)(A); NRAP 27(d)(2).  The reply was filed on January 13, 2021.] Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=815492&onBaseDocumentNumber=21-13127">21-13127</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2021</td><td>Order/Procedural</td><td>Filed Order.  It appears that briefing of these appeals may proceed.  Appellant shall have 30 days from the date of this order to file and serve the opening brief and appendix.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=821307&onBaseDocumentNumber=21-18647">21-18647</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Opening Brief and Appendix due:  August 12, 2021.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=824862&onBaseDocumentNumber=21-21983">21-21983</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Motion</td><td>Filed Appellant's Motion to Exceed Type-Volume Limit on Opening Brief. Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826544&onBaseDocumentNumber=21-23582">21-23582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 1. Nos. 80889/81159/81892  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826546&onBaseDocumentNumber=21-23584">21-23584</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 2. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826547&onBaseDocumentNumber=21-23585">21-23585</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 3. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826548&onBaseDocumentNumber=21-23586">21-23586</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 4. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826549&onBaseDocumentNumber=21-23587">21-23587</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 5. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826550&onBaseDocumentNumber=21-23588">21-23588</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 6. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826551&onBaseDocumentNumber=21-23589">21-23589</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 7. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826552&onBaseDocumentNumber=21-23590">21-23590</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 7. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826553&onBaseDocumentNumber=21-23591">21-23591</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 9. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826554&onBaseDocumentNumber=21-23592">21-23592</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 10. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826555&onBaseDocumentNumber=21-23593">21-23593</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 11. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826556&onBaseDocumentNumber=21-23594">21-23594</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 12. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826557&onBaseDocumentNumber=21-23595">21-23595</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 13. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826558&onBaseDocumentNumber=21-23596">21-23596</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 8.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=826759&onBaseDocumentNumber=21-23796">21-23796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Cause appearing, appellant's unopposed motion for leave to file an opening brief in these consolidated appeals that exceeds the type-volume limitation of NRAP 32(a)(7)(A)(ii) is granted. The clerk shall detach the opening brief from the motion filed on August 12, 2021, and file it separately.  Respondents shall have 30 days from the date of this order to file and serve an answering brief. Nos. 80889/81159/81892  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=827997&onBaseDocumentNumber=21-24973">21-24973</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 80889/81159/81892  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=828011&onBaseDocumentNumber=21-24987">21-24987</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2021</td><td>Motion</td><td>Filed Respondents Helix Electric of Nevada, LLC and Victor Fuchs' Motion for Extension to File an Answering Brief. Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=830626&onBaseDocumentNumber=21-27469">21-27469</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/04/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents' answering brief due: December 1, 2021. Nos. 80889/81159/81892. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=831536&onBaseDocumentNumber=21-28365">21-28365</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2021</td><td>Motion</td><td>Filed Joint Motion for Extension of Time to File Respondents' Answering Brief. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=837804&onBaseDocumentNumber=21-34307">21-34307</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/13/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondents shall have until January 18, 2022, to file and serve their answering brief.  Nos. 80889/81159/81892.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=838862&onBaseDocumentNumber=21-35348">21-35348</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2022</td><td>Motion</td><td>Filed Joint Motion for Extension of Time to File Respondents' Answering Brief. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=842799&onBaseDocumentNumber=22-01803">22-01803</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion in Part. The motion is granted with respect to respondent Victor Fuchs. Fuchs shall have until February 17,2022, to file and serve his answering brief. The motion is denied without prejudice as it relates to respondent Helix Electric of Nevada, LLC because the motion is not signed by counsel of record for Helix Electric. Helix Electric's answering brief due: 7 days.  Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=844064&onBaseDocumentNumber=22-03025">22-03025</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2022</td><td>Motion</td><td>Filed Respondent Helix Electric of Nevada, LLC's Renewed Motion for Extension of Time to File Respondent's Answering Brief. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=844265&onBaseDocumentNumber=22-03224">22-03224</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=844589&onBaseDocumentNumber=22-03466">22-03466</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondent Helix Electric of Nevada, LLC's motion for a third extension of time is granted.  Helix Electric shall have until February 17, 2022, to file and serve its answering brief. Nos. 80889/81159/81892   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=844626&onBaseDocumentNumber=22-03503">22-03503</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2022</td><td>Motion</td><td>Filed Respondent's Joint Motion to Consolidate Appeals and Revise Briefing Schedule, or, Alternatively, For an Extension of Time to File Answering Briefs (consolidate with 84216). Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=846570&onBaseDocumentNumber=22-05399">22-05399</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for John E. Bragonje. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=846818&onBaseDocumentNumber=22-05567">22-05567</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for John E. Bragonje. Nos. 80889/81159/81892 (Duplicate filing) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=846819&onBaseDocumentNumber=22-05568">22-05568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Motion</td><td>Filed Joint Motion by all Parties to Consolidate Appeals (consolidate with docket no. 84216) and Revise Briefing Schedule. Nos. 80889/81159/81892 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=847396&onBaseDocumentNumber=22-06137">22-06137</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Consolidate.  Appellant shall have 30 days from the date of this order to file and serve an opening brief and any appendix in Docket No. 84216. Respondents shall have 30 days from the date the opening brief in Docket No. 84216 is filed to file and serve a single answering brief addressing all issues in both opening briefs.  Thereafter, appellant shall have 30 days from service of the answering brief to file and serve any reply brief.  fn2[ Given this order, no action will be taken on respondents' joint motions to consolidate.]  Nos 80889/81159/81892/84216.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=848646&onBaseDocumentNumber=22-07313">22-07313</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief for Appeal Number 84216. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852255&onBaseDocumentNumber=22-10763">22-10763</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume I.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852256&onBaseDocumentNumber=22-10764">22-10764</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume II.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852257&onBaseDocumentNumber=22-10765">22-10765</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume III.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852259&onBaseDocumentNumber=22-10767">22-10767</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume IV.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852260&onBaseDocumentNumber=22-10768">22-10768</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume V.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852261&onBaseDocumentNumber=22-10769">22-10769</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Appendix</td><td>Filed Supplemental Appendix to Appellant's Opening Brief for Appeal Number 84216 - Volume VI.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=852262&onBaseDocumentNumber=22-10770">22-10770</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Motion</td><td>Filed Respondents' Joint Motion of Extension of Time to File Answering Brief (84216). Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=856299&onBaseDocumentNumber=22-14607">22-14607</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Answering Brief due: June 6, 2022) Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=856322&onBaseDocumentNumber=22-14630">22-14630</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Motion</td><td>Filed Respondent Helix Electric of Nevada, LLC's Motion to Exceed Type-Volume on Answering Brief. (DETACHED AND FILED PER 6/28/22 ORDER). Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859780&onBaseDocumentNumber=22-17962">22-17962</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Motion</td><td>Filed Respondent's (Victor Fuchs) Motion for Excess Pages to Exceed Word Limit for Combined Answering Briefs. Nos 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859801&onBaseDocumentNumber=22-17983">22-17983</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Brief</td><td>Filed Respondent's (Victor Fuchs) Combined Answering Brief Addressing Both Appellant's Opening Brief Filed on August 27, 2021 and April 6, 2022. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859802&onBaseDocumentNumber=22-17984">22-17984</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 1. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859803&onBaseDocumentNumber=22-17985">22-17985</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 2. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859804&onBaseDocumentNumber=22-17986">22-17986</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 3. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859805&onBaseDocumentNumber=22-17987">22-17987</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 4. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859806&onBaseDocumentNumber=22-17988">22-17988</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 5. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859807&onBaseDocumentNumber=22-17989">22-17989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 6. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859808&onBaseDocumentNumber=22-17990">22-17990</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 7. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859809&onBaseDocumentNumber=22-17991">22-17991</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 8. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859810&onBaseDocumentNumber=22-17992">22-17992</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 9. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859811&onBaseDocumentNumber=22-17993">22-17993</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 10. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859812&onBaseDocumentNumber=22-17994">22-17994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 11. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859813&onBaseDocumentNumber=22-17995">22-17995</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 12. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859814&onBaseDocumentNumber=22-17996">22-17996</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 13. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859815&onBaseDocumentNumber=22-17997">22-17997</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 14. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859816&onBaseDocumentNumber=22-17998">22-17998</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 15. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859818&onBaseDocumentNumber=22-18000">22-18000</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 16. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859817&onBaseDocumentNumber=22-17999">22-17999</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 17. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859819&onBaseDocumentNumber=22-18001">22-18001</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 18. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859820&onBaseDocumentNumber=22-18002">22-18002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 19. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859821&onBaseDocumentNumber=22-18003">22-18003</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 20. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859822&onBaseDocumentNumber=22-18004">22-18004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 21. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859823&onBaseDocumentNumber=22-18005">22-18005</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 22. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859824&onBaseDocumentNumber=22-18006">22-18006</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Appendix</td><td>Filed Respondents' Joint Appendix. Vol. 23. Nos. 80889/81159/81892/84216. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=859825&onBaseDocumentNumber=22-18007">22-18007</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The motion of respondent Helix Electric of Nevada, LLC for leave to file an answering brief in excess of the type-volume limitation is granted.  NRAP 32(a)(7)(D).  The clerk shall detach the answering brief from the motion filed on June 6, 2022, and file it separately.  &#13;
+   The motion of respondent Victor Fuchs for leave to file an answering brief in excess of the type-volume limitation is also granted.  NRAP 32(a)(7)(D).  Fuchs' answering brief was filed on June 6, 2022.&#13;
+   Appellant shall have until July 6, 2022, to file and serve any reply brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=863336&onBaseDocumentNumber=22-20355">22-20355</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2022</td><td>Brief</td><td>Filed Respondent Helix Electric of Nevada, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=863331&onBaseDocumentNumber=22-20350">22-20350</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's reply brief due: July 20, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=863498&onBaseDocumentNumber=22-20515">22-20515</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2022</td><td>Motion</td><td>Filed Appellant's Unopposed Motion to Extend Deadline to File Reply Brief. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=864040&onBaseDocumentNumber=22-21046">22-21046</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellant shall have until September 20, 2022, to file and serve the reply brief.  Nos.80889/81159/81892/84216.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=865261&onBaseDocumentNumber=22-22202">22-22202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2022</td><td>Motion</td><td>Filed Unopposed Motion by Appellant to Extend Deadline to File Reply Brief (Third Request). Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=872020&onBaseDocumentNumber=22-28673">22-28673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant shall have until October 7, 2022, to file and serve the reply brief.  Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=872721&onBaseDocumentNumber=22-29312">22-29312</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2022</td><td>Motion</td><td>Filed Appellant's Motion to Exceed Type-Volume Limit on Consolidated Reply Brief. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=874952&onBaseDocumentNumber=22-31455">22-31455</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Brief</td><td>Filed Appellant's Consolidated Reply Brief. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=874953&onBaseDocumentNumber=22-31456">22-31456</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/17/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Directing Filing of Certificate of Compliance. Appellant's motion for leave to file a reply brief in excess of the type-volume limitation is granted.  The reply brief was filed on October 5, 2022.  Appellant shall have 7 days from the date of this order to file and serve a certificate of compliance. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=876180&onBaseDocumentNumber=22-32636">22-32636</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Certificate of Compliance as to its Consolidated Reply Brief. Case Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=876642&onBaseDocumentNumber=22-33088">22-33088</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for April 17, 2023, at 3:00 p.m., in Las Vegas. The argument shall be limited to 30 minutes. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=892447&onBaseDocumentNumber=23-07244">23-07244</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2023</td><td>Motion</td><td>Filed Appellant's Unopposed Motion to Reset Oral Argument Date (First Request). Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=894872&onBaseDocumentNumber=23-09566">23-09566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2023</td><td>Motion</td><td>Filed Respondent's (Helix Electric of Nevada, LLC) Response to Unopposed Motion to Reset Oral Argument Date. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=895005&onBaseDocumentNumber=23-09697">23-09697</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/03/2023</td><td>Motion</td><td>Filed Respondent (Victor Fuchs) Notice of Non-Opposition to Motion to Reset Oral Argument Date. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=895467&onBaseDocumentNumber=23-10137">23-10137</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2023</td><td>Order/Procedural</td><td>Filed Order Rescheduling Oral Argument. Appellant has filed a motion ro reschedule oral argument in the matter currently scheduled for April 17, 2023, at 3:00 p.m. in Las Vegas. Appellant represents that respondents' counsel does not oppose the motion. Cause appearing, the motion is granted. Oral argument shall be rescheduled for June 13, 2023, at 1:30 p.m. in Las Vegas. Oral argument shall be limited to 30 minutes. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=895554&onBaseDocumentNumber=23-10224">23-10224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Motion</td><td>Filed Joint Motion to Reset Oral Argument Date (Second Request). Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=899627&onBaseDocumentNumber=23-14129">23-14129</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The parties have filed a joint motion to reset oral argument in the matter currently scheduled for June 13, 2023, at 1:30 p.m. in Las Vegas. The motion is granted. Oral argument shall be rescheduled for September 12, 2023, at 1:30 p.m. in Las Vegas. Oral argument shall be limited to 30 minutes. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=900609&onBaseDocumentNumber=23-15069">23-15069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. Nos. 80889/81159/81892/84216 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60035&csIID=60035&deLinkID=914233&onBaseDocumentNumber=23-28168">23-28168</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/12/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before SNP panel. DH/PL/RP. Nos. 81159/81892/84216.(SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60035&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

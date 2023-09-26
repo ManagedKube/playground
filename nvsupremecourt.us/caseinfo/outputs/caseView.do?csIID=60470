@@ -1,0 +1,748 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82188: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=D51FE4D220F23CC16DE3B784D1F97F8E">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60470">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82188</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">DMVH, LLC VS. HOANG</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55075">78514</a>, <a href="/public/caseView.do?csIID=56742">79717</a>, <a href="/public/caseView.do?csIID=64718">82188-COA</a>, <a href="/public/caseView.do?csIID=64278">84935</a>, <a href="/public/caseView.do?csIID=65421">85737</a>, <a href="/public/caseView.do?csIID=66753">86730</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A779912</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>01/08/2021 / Kohl, James</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">DMVH, LLC</td><td valign="top">Carrie E Hurtik
+							(Hurtik Law &amp; Associates)
+						<br>Jonathan R. Patterson
+							(Hurtik Law &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Norman Pham</td><td valign="top">Carrie E Hurtik
+							(Hurtik Law &amp; Associates)
+						<br>Jonathan R. Patterson
+							(Hurtik Law &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Pham Family Trust</td><td valign="top">Carrie E Hurtik
+							(Hurtik Law &amp; Associates)
+						<br>Jonathan R. Patterson
+							(Hurtik Law &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Gregg Williams</td><td valign="top">Brandon P. Johansson
+							(Armstrong Teasdale, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Hanh Thi Hoang</td><td valign="top">Erika A. Pike Turner
+							(Garman Turner Gordon LLP)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=798979&onBaseDocumentNumber=20-44682">20-44682</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2020</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=798982&onBaseDocumentNumber=20-44685">20-44685</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=798985&onBaseDocumentNumber=20-44688">20-44688</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/17/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Jonathan R. Patterson. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/18/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due date: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=800263&onBaseDocumentNumber=20-45829">20-45829</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2020</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Counsel and Request for Notice.  Attorney Brandon P. Johansson, Esq. of the law firm Armstrong Teasdale LLP hereby files this Notice of Appearance on behalf of real-party-in-interest, the Court-appointed receiver, Gregg Williams of Trident Pacific Real Estate Group, Inc.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=800528&onBaseDocumentNumber=20-46051">20-46051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2020</td><td>Order/Procedural</td><td>Filed Order Directing Appellant to File Case Appeal Statement.  Due:  7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=800611&onBaseDocumentNumber=20-46133">20-46133</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/07/2021</td><td>Order/Procedural</td><td>Filed Order Imposing Conditional Sanctions and Directing Counsel to File the Case Appeal Statement.  Conditional sanction of $250.00 or Case Appeal Statement due: 14 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802019&onBaseDocumentNumber=21-00421">21-00421</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/07/2021</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802067&onBaseDocumentNumber=21-00469">21-00469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Modification of Caption. Parties are advised to notify this office in writing within 10 days if the caption as modified does not accurately reflect the status of the parties. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802076&onBaseDocumentNumber=21-00478">21-00478</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: James A. Kohl. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802232&onBaseDocumentNumber=21-00631">21-00631</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/08/2021</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802285&onBaseDocumentNumber=21-00684">21-00684</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/08/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 9/29/20, 10/20/20,  To Court Reporter: Unknown. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=802295&onBaseDocumentNumber=21-00694">21-00694</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/01/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for February 16, 2021, at 1:00 PM via Microsoft Teams. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=804867&onBaseDocumentNumber=21-03044">21-03044</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=809755&onBaseDocumentNumber=21-07713">21-07713</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/18/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 90 days opening brief and appendix.  Court Reporter Stacey Ray's Certificate of Delivery of Transcripts due:  30 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=809830&onBaseDocumentNumber=21-07784">21-07784</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/26/2021</td><td>Order/Procedural</td><td>Filed Order to Show Cause. Appellants shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Respondents may file any reply within 14 days from the date that appellants' response is served. Briefing is suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=810843&onBaseDocumentNumber=21-08759">21-08759</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' response to order to show cause due: May 10, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=813845&onBaseDocumentNumber=21-11594">21-11594</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/10/2021</td><td>Motion</td><td>Filed Appellants' Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=815747&onBaseDocumentNumber=21-13376">21-13376</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Motion</td><td>Filed Respondent Receiver, Gregg Williams of Trident Pacific Real Estate Group, Inc.'s, Reply to Response to Order to Show Cause.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=817212&onBaseDocumentNumber=21-14779">21-14779</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellants shall have 14 days from the date of this order to file and serve a sur-reply responding to Williams's assertion that appellants waived the right to appeal from the order challenged on appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=817526&onBaseDocumentNumber=21-15091">21-15091</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2021</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to File Sur-Reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=819125&onBaseDocumentNumber=21-16613">21-16613</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants shall have until June 23, 2021, to file and serve the sur-reply as well as a separate document regarding the bankruptcy filing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=819725&onBaseDocumentNumber=21-17207">21-17207</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2021</td><td>Motion</td><td>Filed Appellants' Sur-Reply to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=820801&onBaseDocumentNumber=21-18159">21-18159</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2021</td><td>Motion</td><td>Filed Appellants' Motion for Stay and Notice of Bankruptcy. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=820804&onBaseDocumentNumber=21-18162">21-18162</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Order/Procedural</td><td>Filed Order Dismissing Appeal in Part. Appellants have filed a notice of bankruptcy and request for stay informing this court that appellant DMVH, LLC filed a voluntary petition for Chapter 11 bankruptcy in the United States Bankruptcy Court, District of Nevada. We dismiss DMVH, LLC's appeal. The appeal of appellant Norman Pham shall proceed.  However, briefing of this appeal remains suspended pending further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=825043&onBaseDocumentNumber=21-22162">21-22162</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/01/2021</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing. This court concludes that this appeal may proceed.  Review of the transcript request form filed in this court on January 8, 2021, reveals that it is deficient.  Amended file-stamped transcript request form due: 7 days. Opening brief and appendix due: 90 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=831366&onBaseDocumentNumber=21-28197">21-28197</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Opening Brief and Appendix due:  January 13, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=840536&onBaseDocumentNumber=21-36913">21-36913</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/11/2022</td><td>Motion</td><td>Filed Appellants' Motion to Reinstate Briefing for Appellant DMVH LLC. and Extend Date for all other Parties. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=842189&onBaseDocumentNumber=22-01205">22-01205</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2022</td><td>Order/Procedural</td><td>Filed Order Reinstating Appeal in Part and Granting Motion.  The clerk shall amend the caption of this appeal consistent with the caption on this order.  Appellants' Opening Brief due:  30 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=844051&onBaseDocumentNumber=22-03013">22-03013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=847746&onBaseDocumentNumber=22-06481">22-06481</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=847747&onBaseDocumentNumber=22-06482">22-06482</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent Gregg Williams' Answering Brief due:  April 13, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=850359&onBaseDocumentNumber=22-08949">22-08949</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Brief</td><td>Filed Respondent's (Gregg Williams) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=853229&onBaseDocumentNumber=22-11669">22-11669</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2022</td><td>Appendix</td><td>Filed Respondent's (Gregg Williams) Appendix to Answering Brief. Vols. 1-7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=853230&onBaseDocumentNumber=22-11670">22-11670</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2022</td><td>Order/Procedural</td><td>Filed Order to File Answering Brief. To date, respondent Hanh Thi Hoang has not filed an answering brief or otherwise communicated with this court. Hoang shall have 7 days from the date of this order to file and serve an answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=855023&onBaseDocumentNumber=22-13424">22-13424</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Respondent's (Hanh Thi Hoang) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=855597&onBaseDocumentNumber=22-13916">22-13916</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=870284&onBaseDocumentNumber=22-27019">22-27019</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (Gregg Williams) Notice of Change of Address. (TRANSFFERED TO COURT OF APPEALS) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." COA-MG/JT/BB. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=879470&onBaseDocumentNumber=22-35806">22-35806</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on November 16, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60470&csIID=60470&deLinkID=881395&onBaseDocumentNumber=22-35806">22-35806</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60470&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,772 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81980: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=DD49EB46926B46081433D135384B1108">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60163">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81980</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">GEICO CASUALTY INS. CO. VS. DIST. CT. (ESTATE OF JERMAIN L. ASHER)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A764364</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>10/15/2021</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Justice Association</td><td valign="top">Matthew L. Sharp
+							(Matthew L. Sharp, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Geico General Insurance Company</td><td valign="top">Wade M Hansard
+							(McCormick, Barstow, Sheppard, Wayte &amp; Carruth, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Estate of Jermaine L. Asher</td><td valign="top">Jerome R. Bowen
+							(Bowen Law Offices)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Estate of Robert S. Roberts, Jr.</td><td valign="top">Jerome R. Bowen
+							(Bowen Law Offices)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Sharithea Everette</td><td valign="top">Jerome R. Bowen
+							(Bowen Law Offices)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Willie F. Worthams, Jr.</td><td valign="top">Darrell D. Dennis
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						<br>Morgan B. Hickel
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						<br>Jeffrey D. Olster
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						<br>Michael L. Shirts
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James Crockett</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/22/2020</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Wade M Hansard.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/22/2020</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus or Prohibition - Emergency Motion to Stay District Court Proceedings.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=791839&onBaseDocumentNumber=20-38793">20-38793</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/22/2020</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume I.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=791840&onBaseDocumentNumber=20-38794">20-38794</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/22/2020</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume II.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=791841&onBaseDocumentNumber=20-38795">20-38795</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2020</td><td>Order/Procedural</td><td>Filed Order Directing Answer. Answer due:  28 days. Petitioner shall have 14 days from the date when the last answer is served to file and serve any reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=792544&onBaseDocumentNumber=20-39491">20-39491</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/25/2020</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Responsive Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=797315&onBaseDocumentNumber=20-43034">20-43034</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2020</td><td>Order/Procedural</td><td>Filed Order.  Real parties in interest Estate of Jermaine L. Asher; Estate of Robert S. Roberts, Jr.; and Sharithea Everette shall have until December 24, 2020, to file and serve their answer.  Willie F. Worthams, Jr. shall have 7 days from the date of this order to file and serve his answer.  Petitioner shall have 14 days from the date when the last answer is served to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=797902&onBaseDocumentNumber=20-43612">20-43612</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2020</td><td>Petition/Writ</td><td>Filed Answer to Petition for Writ Answer to Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus. (REJECTED PER NOTICE FILED ON 12/9/2020) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2020</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=799032&onBaseDocumentNumber=20-44734">20-44734</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2020</td><td>Notice/Incoming</td><td>Filed Real Party in Interest (Willie F. Worthams, Jr)  Notice of Appearance Notice for Attorney's  Darrell D. Dennis and Jeffrey D. Olster. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=799073&onBaseDocumentNumber=20-44775">20-44775</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2020</td><td>Petition/Writ</td><td>Filed Answer to Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus.(Willie F. Worthams, Jr.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=799075&onBaseDocumentNumber=20-44777">20-44777</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2020</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Real Parties in Interests' (Estate of Jermaine L. Asher; Estate of Robert S. Roberts, Jr.; and Sharithea Everette) Response to Petitioners' Writ of Mandamus.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=800663&onBaseDocumentNumber=20-46184">20-46184</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/31/2020</td><td>Order/Procedural</td><td>Filed Order Granting Motion. This court treats the stipulation as a joint motion for an extension of time, and the motion is granted. Ashwer shall have until January 22, 2021, to file and serve their answer.  Petitioner shall have 14 days from service of Asher's answer to file and serve any reply in support of the petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=801520&onBaseDocumentNumber=20-47020">20-47020</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/22/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest ("Everette")  Answer to Petition for Writ of Prohibition, or in The Alternative, Writ of Mandamus. (STRIKEN PER 4/12/21 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/22/2021</td><td>Appendix</td><td>Filed Real Parties in Interest Appendix. Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=803843&onBaseDocumentNumber=21-02111">21-02111</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/22/2021</td><td>Appendix</td><td>Filed Real Parties in Interest Appendix. Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=803844&onBaseDocumentNumber=21-02112">21-02112</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Amicus Counsel, Matthew Sharp (Nevada Justice Assoc.), In Support of Real Parties in Interest. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=804303&onBaseDocumentNumber=21-02562">21-02562</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2021</td><td>Motion</td><td>Filed Motion for Extension of Time to for Leave to File Amicus Brief of The Nevada Justice Assoc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=804305&onBaseDocumentNumber=21-02564">21-02564</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2021</td><td>Motion</td><td>Filed Petitioner's Opposition to Motion for Extension of Time to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=805147&onBaseDocumentNumber=21-03320">21-03320</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Petitioner shall have until February 19, 2021, to file and serve the reply in support of the petition for writ.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=805233&onBaseDocumentNumber=21-03405">21-03405</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/05/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Nevada Justice Association shall have until February 22, 2021, to file and serve a motion for leave to file an amicus brief, accompanied by the proposed brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=805516&onBaseDocumentNumber=21-03637">21-03637</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2021</td><td>Motion</td><td>Filed Stipulation to Extend Time for the Filing of Petitioner's Reply to Writ of Mandamus. (Second Request) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=806702&onBaseDocumentNumber=21-04777">21-04777</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2021</td><td>Order/Procedural</td><td>Filed Order.  Petitioner shall have until March 5, 2021, to file and serve any reply in support of the petition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=807087&onBaseDocumentNumber=21-05155">21-05155</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2021</td><td>Motion</td><td>Filed Motion for Leave to File Amicus Brief of the Nevada Justice Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=807160&onBaseDocumentNumber=21-05227">21-05227</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2021</td><td>Brief</td><td>Filed Brief of Amicus Curiae of the Nevada Justice Association in Support of Real Party in Interest the Estate of Jermaine L. Asher. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=807161&onBaseDocumentNumber=21-05228">21-05228</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Proposed amicus Nevada Justice Association (NJA) has filed an unopposed motion for leave to file an amicus brief in support of real parties in interest.  The motion is granted. The amicus brief was filed on February 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=808362&onBaseDocumentNumber=21-06377">21-06377</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/05/2021</td><td>Petition/Writ</td><td>Filed Petitioner's Reply in Support of Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=808564&onBaseDocumentNumber=21-06575">21-06575</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/24/2021</td><td>Brief</td><td>Filed Petitioner's Response to Brief of Amicus Curiae. (REJECTED PER NOTICE ISSUED ON 3/25/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=810567&onBaseDocumentNumber=21-08488">21-08488</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Brief</td><td>Filed Petitioner's Response to Brief of Amicus Curiae. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=810610&onBaseDocumentNumber=21-08530">21-08530</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/26/2021</td><td>Order/Procedural</td><td>Filed Order. Pursuant to this court's February 5, 2021, order, Petitioner's response to NJA's amicus brief was properly filed on March 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=810842&onBaseDocumentNumber=21-08758">21-08758</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2021</td><td>Order/Procedural</td><td>Filed Order Striking Answer. Everette shall have 14 days from the date of this order to file either a brief that complies with the NRAP 21(d) or a motion to exceed the page/type-volume limit that complies with NRAP 32(a)(7)(D).  If a new answer is filed, petitioner Geico Casualty Insurance Company shall have 7 days from the date that the answer is filed to file either a reply to the answer or a notice that Geico will rely on its March 5, 2021, reply.   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=812657&onBaseDocumentNumber=21-10456">21-10456</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/14/2021</td><td>Motion</td><td>Filed Real Parties in Interests' (Everette) Motion for Leave to Exceed Page/Word Count Limit for Response to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=813052&onBaseDocumentNumber=21-10850">21-10850</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2021</td><td>Motion</td><td>Filed Petitioner's Opposition to Real Parties in Interest Everette's Motion for Leave to Exceed Page/Word Count Limit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=813161&onBaseDocumentNumber=21-10954">21-10954</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/30/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Real party in interest, Sharithea Everette filed a motion to exceed page/word count limit in her response to Geico Casualty Insurance Company's petition for writ of prohibition or, in the alternative, writ of mandamus.  The motion is denied.  Everette shall have 14 days from the date of this order to file and serve a response that complies with either the standard page limitation (not more than 15 pages) or type-volume limitation (not more than 7,000 words), and all formatting requirements of NRAP 32.  Geico shall have 7 days from the date that the answer is filed to file either a reply or a notice that Geico will rely on its March 5, 2021 reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=814671&onBaseDocumentNumber=21-12402">21-12402</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/14/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest's (Everette) Answer to Petition for Writ.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=816442&onBaseDocumentNumber=21-14067">21-14067</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/14/2021</td><td>Appendix</td><td>Filed Real Parties in Interest's (Everette) Appendix to Answer - Vol. I.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=816443&onBaseDocumentNumber=21-14068">21-14068</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/14/2021</td><td>Appendix</td><td>Filed Real Parties in Interest's (Everette) Appendix to Answer - Vol. II.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=816444&onBaseDocumentNumber=21-14069">21-14069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2021</td><td>Notice/Incoming</td><td>Filed Petitioner's Notice that GEICO Casualty Insurance Company Will Rely Upon Its March 5, 2021 Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=816846&onBaseDocumentNumber=21-14419">21-14419</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/15/2021</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=832886&onBaseDocumentNumber=21-29698">21-29698</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Order/Dispositional</td><td>Filed Order Granting Petition. "ORDER the petition GRANTED AND DIRECT THE CLERK OF THIS COURT TO ISSUE A WRIT OF PROHIBITION instructing the district court to vacate its order compelling Geico to appoint independent counsel." NNP21 - EC/KP/DH (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=832975&onBaseDocumentNumber=21-29787">21-29787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Writ</td><td>Issued Writ with letter. Original and three copies of writ and copy of order mailed to  Wade M. Hansard for service upon Chief Judge, Judge James Crockett, and Department 24. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=833025&onBaseDocumentNumber=21-29837">21-29837</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/25/2021</td><td>Writ</td><td>Filed Returned Writ. Original Writ returned. Served on Chief Judge, Hon. Judge Linda Marie Bell, Hon. Judge Jim Crockett, Department 24 and 8 on October 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=834049&onBaseDocumentNumber=21-30723">21-30723</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/01/2021</td><td>Motion</td><td>Filed Petitioner's Motion to Reissue Unpublished Order as an Opinion under NRAP 36(F). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=834654&onBaseDocumentNumber=21-31313">21-31313</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2021</td><td>Order/Procedural</td><td>Filed Order Directing Response to Motion to Publish.  Real Parties in Interest's Response due:  14 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=836198&onBaseDocumentNumber=21-32770">21-32770</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2021</td><td>Motion</td><td>Filed Real Parties in Interests' Response to Motion to Reissue Unpublished Order as a Opinion Under NRAP 36(F). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=837464&onBaseDocumentNumber=21-33974">21-33974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/17/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion for Publication.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=839678&onBaseDocumentNumber=21-36064">21-36064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60163&csIID=60163&deLinkID=839907&onBaseDocumentNumber=21-36292">21-36292</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2021</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60163&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82038: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=2C208B9511D83B4CB149B2986E40C18B">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60257">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82038</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">STATE VS. MANSON (TARIQ)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - C335833</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Other - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>06/07/2022 at 10:30 AM</td><td class="label">Oral Argument Location:</td><td>Las Vegas</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>06/07/2022</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Attorneys for Criminal Justice</td><td valign="top">Stacy M. Newman
+							(Federal Public Defender/Las Vegas)
+						<br>Rene L. Valladares
+							(Federal Public Defender/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada District Attorneys Association</td><td valign="top">Jennifer P. Noble
+							(Washoe County District Attorney)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Washoe County Public Defender's Office</td><td valign="top">John Reese Petty
+							(Washoe County Public Defender)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">The State of Nevada</td><td valign="top">Alexander G. Chen
+							(Clark County District Attorney)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Tariq Manson</td><td valign="top">Daniel R. Page
+							(Special Public Defender)
+						<br>Claudia L. Romney
+							(Clark County Public Defender)
+						<br>Melinda Simpkins
+							(Special Public Defender)
+						<br>JoNell Thomas
+							(Special Public Defender)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2020</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement and Notice of Briefing Schedule mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=793527&onBaseDocumentNumber=20-40399">20-40399</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2020</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for Melinda Simpkins and Jonell Thomas. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=793732&onBaseDocumentNumber=20-40526">20-40526</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2020</td><td>Docketing Statement</td><td>Filed Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=795385&onBaseDocumentNumber=20-42153">20-42153</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/04/2020</td><td>Notice/Outgoing</td><td>Issued Notice to File Transcript Request Form. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=798399&onBaseDocumentNumber=20-44107">20-44107</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2020</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested:  6/5/20, 7/24/20, 8/28/20, 9/11/20, 9/18/20, 9/25/20, 10/9/20, and 10/23/20.  To Court Reporter:  Maria Garibay.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=798709&onBaseDocumentNumber=20-44392">20-44392</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/22/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Garibay stating that the requested transcripts were delivered.  Dates of transcripts: 6/5/20, 7/24/20, 8/28/20, 9/11/20, 9/18/20, 9/25/20, 10/9/20, and 10/23/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=803808&onBaseDocumentNumber=21-02076">21-02076</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2021</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=808299&onBaseDocumentNumber=21-06315">21-06315</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant shall have until May 4, 2021, to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=809085&onBaseDocumentNumber=21-07084">21-07084</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=814971&onBaseDocumentNumber=21-12699">21-12699</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=814973&onBaseDocumentNumber=21-12701">21-12701</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=814974&onBaseDocumentNumber=21-12702">21-12702</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2021</td><td>Motion</td><td>Filed Respondent's  Motion to Extend Time to file answering brief.  (first request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=818031&onBaseDocumentNumber=21-15588">21-15588</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Answering Brief. Due date July 6, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=818094&onBaseDocumentNumber=21-15650">21-15650</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Answering Brief. (Second Request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=821448&onBaseDocumentNumber=21-18787">21-18787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondent's answering brief due: August 5, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=822337&onBaseDocumentNumber=21-19597">21-19597</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=825704&onBaseDocumentNumber=21-22807">21-22807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2021</td><td>Appendix</td><td>Filed Respondent's Appendix Volume 1 of 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=825705&onBaseDocumentNumber=21-22808">21-22808</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/20/2021</td><td>Brief</td><td>Filed Appellant's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=827285&onBaseDocumentNumber=21-24309">21-24309</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/20/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2022</td><td>Order/Procedural</td><td>Filed Order Directing Supplemental Briefing and Inviting Amicus Briefing. The parties shall have 30 days from the date of this order within which to file a supplemental brief. The Nevada Attorneys for Criminal Justice and Nevada District Attorney's Association are invited to submit amicus briefs addressing the issues set forth above. Any amicus brief must be filed within 15 days from the filing of the party's supplemental brief being supported by the amicus curiae. Nos 81782/82038 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=842352&onBaseDocumentNumber=22-01365">22-01365</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2022</td><td>Motion</td><td>Filed Respondent's Joint Motion for Extension to File Supplemental Briefing and Amicus Briefing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=845404&onBaseDocumentNumber=22-04261">22-04261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions.  Appellant and respondents shall have until April 13, 2022, to file their supplemental briefs addressing the issues outlined in this court's January 13 order.  Any amicus brief from the Nevada Attorneys for Criminal Justice and Nevada District Attorney's Association shall be filed within 15 days from the filing of the party's supplemental brief being supported by the amicus curiae.  Other interested amici may proceed by motion in accord with NRAP 29.  The brief shall not exceed 10 pages and shall otherwise comply with the requirements of NRAP 32(a)(4)-(6).  Nos. 81782/82038.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=846933&onBaseDocumentNumber=22-05681">22-05681</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2022</td><td>Brief</td><td>Filed Respondent's Supplemental Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=853217&onBaseDocumentNumber=22-11657">22-11657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Brief</td><td>Filed Appellant's Supplemental Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=853242&onBaseDocumentNumber=22-11682">22-11682</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Motion</td><td>Filed Motion to Participate as Amicus Curiae and Motion to Submit Amicus Brief in Excess of 10 pages. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=853672&onBaseDocumentNumber=22-12105">22-12105</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Brief</td><td>Filed Brief of the Washoe County Public Defender's Office as Amicus Curiae. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=853673&onBaseDocumentNumber=22-12106">22-12106</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/22/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Nevada District Attorney Association's Amicus Brief due:  May 12, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=854375&onBaseDocumentNumber=22-12783">22-12783</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2022</td><td>Notice/Incoming</td><td>Filed Nevada District Attorneys Association's  Notice of Appearance for Jennifer P. Noble. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=854419&onBaseDocumentNumber=22-12827">22-12827</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions.  The motions filed by the Washoe County Public Defender's office for leave to file briefs of amicus curiae in excess of 10 pages are granted.  The amicus briefs were filed on April 18, 2022.  Nos. 81782/82038.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=854528&onBaseDocumentNumber=22-12935">22-12935</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Nevada Attorneys for Criminal Justice shall have until May 12, 2022, to file and serve its amicus curiae brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=854892&onBaseDocumentNumber=22-13293">22-13293</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. This matter is scheduled for oral argument on June 7, 2022, at 10:30 a.m. in Las Vegas.  Argument shall be limited to 30 minutes.    (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=855497&onBaseDocumentNumber=22-13819">22-13819</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for attorney Stacy Newman for Amicus Curiae Nevada Attorneys for Criminal Justice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856826&onBaseDocumentNumber=22-15127">22-15127</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2022</td><td>Motion</td><td>Filed Motion to Allow Amicus Curiae to Submit a Brief Exceeding 10 Pages. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856829&onBaseDocumentNumber=22-15130">22-15130</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2022</td><td>Brief</td><td>Filed Amicus Brief Brief by Nevada Attorneys for Criminal Justice  as Amicus Curiae,  Supporting Affirmance for Manson &amp; Adams. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856830&onBaseDocumentNumber=22-15131">22-15131</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2022</td><td>Brief</td><td>Filed Brief of Amicus Curiae in Support of Affirmance Nevada District Attorney's Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856877&onBaseDocumentNumber=22-15175">22-15175</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2022</td><td>Motion</td><td>Filed Motion to Allow Amicus Curiae to Submit a Brief Exceeding 10 Pages. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856878&onBaseDocumentNumber=22-15176">22-15176</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Request for Permission to File a Reply to the Amicus Brief Filed by the Nevada District Attorney's Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=856959&onBaseDocumentNumber=22-15256">22-15256</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Brief</td><td>Filed Reply Brief of the Washoe County Public Defender's Office as Amicus Curiae. (STRICKEN PER 5/20/22 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Order/Procedural</td><td>Filed Order. Both NACJ and NDAA have filed motions for leave to file an amicus brief in excess of 10 pages. NRAP 29(e). Cause appearing, the motions are granted. Amicus Washoe County Public Defender has filed a motion for leave to file a reply to the amicus brief filed by the Nevada District Attorneys' Association. The motion is denied. The clerk of this court shall strike the reply filed on May 13, 2022. fn1 [Pursuant to the notice of appearance filed May 12, 2022, the clerk of this court shall add attorneys Rene L. Valladares and Stacy Newman and the federal public defender's office to the docket as counsel for amicus NACJ and shall add Jennifer Noble and the Washe County District Attorney as counsel for NDAA.] 81782/82038. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=857828&onBaseDocumentNumber=22-16047">22-16047</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2022</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=858260&onBaseDocumentNumber=22-16470">22-16470</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/12/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." HERNDON, J., with whom PARRAGUIRRE, C.J., and HARDNESTY, J., agree, concurring in part and dissenting in part. EN BANC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=871771&onBaseDocumentNumber=22-28425">22-28425</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=875182&onBaseDocumentNumber=22-31682">22-31682</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/04/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on October 10, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60257&csIID=60257&deLinkID=878282&onBaseDocumentNumber=22-31682">22-31682</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60257&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

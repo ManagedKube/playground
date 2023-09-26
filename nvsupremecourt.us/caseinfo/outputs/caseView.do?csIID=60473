@@ -1,0 +1,1021 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82191: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=023DA138C96432D7ABFDF60747E23153">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60473">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82191</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LOPEZ VS. U.S. BANK NAT'L ASS'N</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=45894">75656</a>, <a href="/public/caseView.do?csIID=65927">82191-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Lyon Co. - Third Judicial District - 15-CV-01314</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Lee</td><td valign="top" class="label">Case Status:</td><td valign="top">Transferred to Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>12/14/2020 / Yott, Laurie</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Cynthia Lopez</td><td valign="top">Bradley Paul Elley<br>Todd W. Prall
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Michael K. Wall
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Robert E. Werbicky
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">LBB Investments, LLC</td><td valign="top">Bradley Paul Elley<br>Todd W. Prall
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Michael K. Wall
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Robert E. Werbicky
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Assurant Field Asset Services, Inc.</td><td valign="top">Nakesha S. Duncan
+							(Springel &amp; Fink, LLP)
+						<br>Leonard T. Fink
+							(Springel &amp; Fink, LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">National Default Servicing Corporation</td><td valign="top">Jason C. Kolbe
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						<br>Krista J. Nielson
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						<br>Kevin S. Soderstrom
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nationstar Mortgage, LLC</td><td valign="top">Scott R. Lachman
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Aaron D. Lancaster
+							(Troutman Pepper Hamilton Sanders LLP/Atlanta)
+						<br>Melanie D. Morgan
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Gary E. Schnitzer
+							(Kravitz Schnitzer Johnson Watson &amp; Zeppenfeld, Chtd.)
+						<br>Ariel E. Stern
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Brody R. Wight
+							(Troutman Pepper Hamilton Sanders LLP/Las Vegas)
+						<br>Donna M. Wittig
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Solutionstar Holdings, LLC</td><td valign="top">Scott R. Lachman
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Aaron D. Lancaster
+							(Troutman Pepper Hamilton Sanders LLP/Atlanta)
+						<br>Melanie D. Morgan
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Gary E. Schnitzer
+							(Kravitz Schnitzer Johnson Watson &amp; Zeppenfeld, Chtd.)
+						<br>Ariel E. Stern
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Brody R. Wight
+							(Troutman Pepper Hamilton Sanders LLP/Las Vegas)
+						<br>Donna M. Wittig
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">U.S. Bank National Association</td><td valign="top">Scott R. Lachman
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Aaron D. Lancaster
+							(Troutman Pepper Hamilton Sanders LLP/Atlanta)
+						<br>Melanie D. Morgan
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Gary E. Schnitzer
+							(Kravitz Schnitzer Johnson Watson &amp; Zeppenfeld, Chtd.)
+						<br>Ariel E. Stern
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						<br>Brody R. Wight
+							(Troutman Pepper Hamilton Sanders LLP/Las Vegas)
+						<br>Donna M. Wittig
+							(Former)
+						
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=799037&onBaseDocumentNumber=20-44739">20-44739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=799039&onBaseDocumentNumber=20-44741">20-44741</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Hutchison &amp; Steffen.  Check no. 1206. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/14/2020</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Laurie A. Yott. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=799625&onBaseDocumentNumber=20-45240">20-45240</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/17/2020</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Ariel E. Stern, Melanie D. Morgan, Donna M. Wittig, and Scott R. Lachman of the law firm of Akerman LLP as counsel for respondents U.S. Bank National Association, Nationstar Mortgage LLC, Solutionstar Holdings, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=800043&onBaseDocumentNumber=20-45656">20-45656</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2020</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Leonard T. Fink and Nakesha S. Duncan of the law office of Springel &amp; Fink, LLP as counsel of record for respondent). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=800879&onBaseDocumentNumber=20-46397">20-46397</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2020</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=801450&onBaseDocumentNumber=20-46953">20-46953</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for March 12, 2021, at 9:00 AM via Zoom. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=802402&onBaseDocumentNumber=21-00800">21-00800</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Krista J. Nielson of the law firm of Tiffany &amp; Bosco, P.A., as counsel for respondent National Default Servicing Corporation). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=805658&onBaseDocumentNumber=21-03776">21-03776</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The Settlement Judge is still actively working with the parties on settlement and is respectfully requesting a 30 day extension to continue settlement discussions. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=820881&onBaseDocumentNumber=21-18239">21-18239</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to July 14, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=821414&onBaseDocumentNumber=21-18753">21-18753</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/09/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The parties were making progress toward settlement.  An attorney for appellant is very ill with COVID so another attorney will be assigned to take over the case.  Settlement judge is respectfully requesting an additional 30 day extension to allow time for settlement discussions to proceed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=822590&onBaseDocumentNumber=21-19846">21-19846</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/13/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to August 13, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=822855&onBaseDocumentNumber=21-20107">21-20107</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/13/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement judge requests additional time as counsel for appellant has passed away from COVID-19 and the new attorneys require another extension to familiarize themselves with the case. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=826577&onBaseDocumentNumber=21-23615">21-23615</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to September 13, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=826746&onBaseDocumentNumber=21-23783">21-23783</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement judge requests an additional 90 days to allow parties to continue settlement discussions. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=829513&onBaseDocumentNumber=21-26407">21-26407</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to December 13, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=830121&onBaseDocumentNumber=21-26976">21-26976</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Motion</td><td>Filed Motion to Withdraw as Counsel for Certain Respondents. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=835256&onBaseDocumentNumber=21-31837">21-31837</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/22/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk shall remove attorneys Scott R. Lachman, Melanie D. Morgan, Donna M. Wittig, and Ariel E. Stern of Akerman LLC as counsel in this appeal. The U.S. Bank respondents' notice of appearance due: 30 days. Settlement proceedings shall be stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=836984&onBaseDocumentNumber=21-33503">21-33503</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=840078&onBaseDocumentNumber=21-36461">21-36461</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Order/Procedural</td><td>Filed Order.  Aaron Lancaster of Troutman Pepper has filed a notice of appearance on behalf of respondents U.S. Bank National Association, as Indenture Trustee for Springleaf Mortgage Loan Trust 2013-1; Nationstar Mortgage, LLC, A Delaware Limited Liability Company; and Solutionstar Holdings, LLC (U.S. Bank respondents). Gary Schnitzer, of Kravitz Schnitzer Johnson Watson &amp; Zeppenfeld, Chtd., has agreed to serve as the designated local attorney for service of papers, process, or pleadings required to be served on Mr. Lancaster.  The clerk of this court shall add Mr. Lancaster and Mr. Schnitzer as counsel for the U.S. Bank respondents.  Settlement proceedings are reinstated. The settlement judge shall have 45 days from the date of this order to file the final settlement status report.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=840158&onBaseDocumentNumber=21-36540">21-36540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=841446&onBaseDocumentNumber=22-00468">22-00468</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement discussions in this case have extended out unusually long for a series of reasons.  The settlement judge is optimistic this will result in at least a partial settlement of the multiple appeals, but needs a short additional period of time to obtain the necessary final confirmations.  SJ requests until March 9, 2022 to submit final report. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=847740&onBaseDocumentNumber=22-06475">22-06475</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=848301&onBaseDocumentNumber=22-06971">22-06971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Approving Extension and Reinstating Briefing.  On February 28, 2022, the settlement judge filed an extension request. The request is approved.  The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=848533&onBaseDocumentNumber=22-07202">22-07202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/18/15, 4/3/17, 8/2/17, 10/5/17, 12/14/17, 12/18/18 and 10/22/19. To Court Reporter: Capitol Reporters. (REJECTED PER NOTICE ISSUED 3/22/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=850301&onBaseDocumentNumber=22-08936">22-08936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/18/15, 4/3/17, 8/2/17, 10/5/17, 12/14/17, 12/18/18 and 10/22/19. To Court Reporter: Capitol Reporters. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=851052&onBaseDocumentNumber=22-09583">22-09583</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2022</td><td>Order/Procedural</td><td>Filed Order to File Amended Docketing Statement.  Appellant's Amended Docketing Statement due:  7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=851678&onBaseDocumentNumber=22-10199">22-10199</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2022</td><td>Docketing Statement</td><td>Filed Appellant's Amended Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=852690&onBaseDocumentNumber=22-11190">22-11190</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2022</td><td>Notice/Incoming</td><td>Filed Respondent U.S. Bank National Association, Nationstar Mortgage, LLC and Solutionstar Holdings. LLC's Notice of Appearance for Brody R. Wight. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=854894&onBaseDocumentNumber=22-13295">22-13295</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Opening Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=856213&onBaseDocumentNumber=22-14521">22-14521</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Opening Brief and Appendix due: July 6, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=856215&onBaseDocumentNumber=22-14523">22-14523</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2022</td><td>Notice/Incoming</td><td>Filed Appellant Cynthia Lopez's Notice of Appearance for Robert E. Werbicky. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=863102&onBaseDocumentNumber=22-20125">22-20125</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/24/2022</td><td>Motion</td><td>Filed Appellant Cynthia Lopez's Unopposed Motion for Extension of Time to File Opening Brief (Second Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=863104&onBaseDocumentNumber=22-20127">22-20127</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant Cynthia Lopez until August 5, 2022, to file and serve the opening brief and appendix.  Appellant LBB Investments, LLC's opening brief remains due to be filed on or before July 6, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=864174&onBaseDocumentNumber=22-21173">22-21173</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Notice/Incoming</td><td>Filed Appellant LBB Investment's Notice of Appearance for Robert E. Werbicky. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=864320&onBaseDocumentNumber=22-21319">22-21319</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Motion</td><td>Filed Appellant LBB Investment's Unopposed Motion for Extension of Time to File Opening Brief (Second Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=864321&onBaseDocumentNumber=22-21320">22-21320</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant LBB Investments, LLC's Opening Brief and Appendix due:  August 5, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=864418&onBaseDocumentNumber=22-21415">22-21415</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867821&onBaseDocumentNumber=22-24642">22-24642</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867823&onBaseDocumentNumber=22-24644">22-24644</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867824&onBaseDocumentNumber=22-24645">22-24645</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867825&onBaseDocumentNumber=22-24646">22-24646</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867826&onBaseDocumentNumber=22-24647">22-24647</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867827&onBaseDocumentNumber=22-24648">22-24648</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867828&onBaseDocumentNumber=22-24649">22-24649</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867829&onBaseDocumentNumber=22-24650">22-24650</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867830&onBaseDocumentNumber=22-24651">22-24651</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vols. 9 and 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867831&onBaseDocumentNumber=22-24652">22-24652</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867832&onBaseDocumentNumber=22-24653">22-24653</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 11 (cont..). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867833&onBaseDocumentNumber=22-24654">22-24654</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 12. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867834&onBaseDocumentNumber=22-24655">22-24655</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 13. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867835&onBaseDocumentNumber=22-24656">22-24656</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867836&onBaseDocumentNumber=22-24657">22-24657</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 15. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=867837&onBaseDocumentNumber=22-24658">22-24658</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Appellants' Motion to Submit Certain Portions of the Court Record Under Seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=868151&onBaseDocumentNumber=22-24967">22-24967</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk of this court shall file the motion received on August 15, 2022, and shall file exhibits 2 and 3 to that motion under seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=869355&onBaseDocumentNumber=22-26103">22-26103</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Motion</td><td>Filed Appellants' Motion to Submit Certain Portions of the Court Record Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=869363&onBaseDocumentNumber=22-26111">22-26111</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Exhibit</td><td>Filed Appellant's Exhibit (original). Exhibit to motion: 2 &amp; 3 (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/02/2022</td><td>Motion</td><td>Filed Respondent National Default Corporation's Stipulation for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=870930&onBaseDocumentNumber=22-27653">22-27653</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/02/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (National Default Corporation's Answering Brief due: October 6, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=870936&onBaseDocumentNumber=22-27659">22-27659</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/06/2022</td><td>Motion</td><td>Filed Respondents' U.S. Bank National Association, Nationstar Mortgage, LLC and Solutionstar Holdings, LLC's Stipulation for Extension of Time to File Answering Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=871136&onBaseDocumentNumber=22-27799">22-27799</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (U.S. Bank National Association, Nationstar Mortgage, LLC and Solutionstar Holdings, LLC's Answering Brief due: October 6, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=871148&onBaseDocumentNumber=22-27811">22-27811</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Answering Brief (Assurant Field Asset Services, Inc.) Due Date: 14 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=873796&onBaseDocumentNumber=22-30333">22-30333</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Answering Brief. (First Request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=874396&onBaseDocumentNumber=22-30908">22-30908</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/03/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation.  Respondent Assurant Field Asset Services, Inc.'s Answering Brief due:  October 6, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=874624&onBaseDocumentNumber=22-31132">22-31132</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Motion</td><td>Filed Unopposed Joint Motion for Extension of Time to File Answering Brief for All Defendants (Second Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=874898&onBaseDocumentNumber=22-31402">22-31402</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/10/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents' answering brief due: November 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=875298&onBaseDocumentNumber=22-31796">22-31796</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2022</td><td>Motion</td><td>Filed Appellants' Response to Unopposed Joint Motion for Extension of Time to File Answering Brief for All Defendants (Second Request) and Non-Opposition to Request for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=875766&onBaseDocumentNumber=22-32252">22-32252</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Brief</td><td>Filed Respondents' U.S. Bank National Association, Nationstar&#13;
+Mortgage, LLC; and Solutionstar Holdings, LLC and joined by Respondent&#13;
+Assurant Field Asset Services, Inc. Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878720&onBaseDocumentNumber=22-35066">22-35066</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Brief</td><td>Filed Corrected Answering Brief for Respondents' U.S. Bank National Association, Nationstar Mortgage, LLC and Solutionstar Holdings, LLC and joined by Respondent&#13;
+Assurant Field Asset Services, Inc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878721&onBaseDocumentNumber=22-35067">22-35067</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Volume I (U.S. Bank National Association, Nationstar Mortgage, LLC; and Solutionstar Holdings, LLC and Assurant Field Asset Services, Inc.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878722&onBaseDocumentNumber=22-35068">22-35068</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Volume II (U.S. Bank National Association, Nationstar Mortgage, LLC; and Solutionstar Holdings, LLC and Assurant Field Asset Services, Inc.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878723&onBaseDocumentNumber=22-35069">22-35069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Volume III (U.S. Bank National Association, Nationstar Mortgage, LLC; and Solutionstar Holdings, LLC and Assurant Field Asset Services, Inc.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878724&onBaseDocumentNumber=22-35070">22-35070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Brief</td><td>Filed National Default Servicing Corporation's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=878728&onBaseDocumentNumber=22-35074">22-35074</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/05/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Reply Brief (First Request). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=881919&onBaseDocumentNumber=22-38141">22-38141</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. Reply Brief due: January 6, 2023. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=882014&onBaseDocumentNumber=22-38236">22-38236</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/27/2022</td><td>Other</td><td>Justice Patricia Lee disqualified from participation in this matter. Disqualification Reason: Law Firms</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief in Response to the Answering Brief for Respondent National Default Servicing Corporation. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=885514&onBaseDocumentNumber=23-00561">23-00561</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief in Response to the Answering Brief for Respondents U.S.Bank National Association, as indenture trustee for Springleaf Mortgage Loan Trust 2013-1; Nationstar Mortgage LLC; and Solutionstar Holdings, LLC and joined by Respondent Assurant Field Asset Services, Inc. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=885515&onBaseDocumentNumber=23-00562">23-00562</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Appendix</td><td>Filed Appendix of Exhibits to Appellants' Reply Briefs Volume 1 of 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=885516&onBaseDocumentNumber=23-00563">23-00563</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60473&csIID=60473&deLinkID=890206&onBaseDocumentNumber=23-05062">23-05062</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60473&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

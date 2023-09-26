@@ -1,0 +1,1287 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82014: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=6A89F6E83294223DA1894BE3EFAC3A5C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60233">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82014</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: D.O.T. LITIGATION</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=56661">79669</a>, <a href="/public/caseView.do?csIID=57482">80230</a>, <a href="/public/caseView.do?csIID=58215">80637</a>, <a href="/public/caseView.do?csIID=64831">85314</a>, <a href="/public/caseView.do?csIID=65859">86070</a>, <a href="/public/caseView.do?csIID=65860">86071</a>, <a href="/public/caseView.do?csIID=65975">86151</a>, <a href="/public/caseView.do?csIID=66124">86275</a>, <a href="/public/caseView.do?csIID=66125">86276</a>, <a href="/public/caseView.do?csIID=66762">86739</a>, <a href="/public/caseView.do?csIID=66764">86741</a>, <a href="/public/caseView.do?csIID=66794">86771</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A787004</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Bell, Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Senior Justice None for Justice Bell</td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/10/2020 / Levitt, Lansford</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>06/05/2023 at 10:00 AM</td><td class="label">Oral Argument Location:</td><td>Las Vegas</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>06/05/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Fidelis Holdings, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">GBS Nevada Partners, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Gravitas Nevada, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Green Leaf Farms Holdings LLC</td><td valign="top">Nicolas R. Donath
+							(N.R. Donath &amp; Associates PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Green Therapeutics LLC</td><td valign="top">Nicolas R. Donath
+							(N.R. Donath &amp; Associates PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Herbal Choice Inc.</td><td valign="top">Sigal Chattah
+							(Chattah Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Medifarm, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Medifarm IV LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Nevada Holistic Medicine, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Nevada Pure, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">NevCann LLC</td><td valign="top">Nicolas R. Donath
+							(N.R. Donath &amp; Associates PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Red Earth LLC</td><td valign="top">Nicolas R. Donath
+							(N.R. Donath &amp; Associates PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">TGIG, LLC</td><td valign="top">Mark S. Dzarnoski
+							(Clark Hill PLLC)
+						<br>Dominic P Gentile
+							(Clark Hill PLLC)
+						<br>John A. Hunt
+							(Clark Hill PLLC)
+						<br>Ross J. Miller
+							(Clark Hill PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">THC Nevada LLC</td><td valign="top">Amy L. Sugden</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Integral Associates LLC</td><td valign="top">Todd L. Bice
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lone Mountain Partners, LLC</td><td valign="top">Eric D. Hone
+							(Hone Law)
+						<br>Joel Z. Schwarz
+							(Hone Law)
+						<br>Jamie L. Zimmerman
+							(Hone Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">The State of Nevada Department of Taxation</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Kiel B. Ireland
+							(Attorney General/Carson City)
+						<br>Akke Levin
+							(Former)
+						
+							(Attorney General/Las Vegas)
+						<br>Craig A. Newby
+							(Former)
+						
+							(Attorney General/Las Vegas)
+						<br>Heidi J. Parry Stern
+							(Attorney General/Las Vegas)
+						<br>Steven G. Shevorski
+							(Former)
+						
+							(Attorney General/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/03/2023</td><td>Open</td><td>Remittitur</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2020</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Clark Hill PLC.  Check no. 17000105. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=792919&onBaseDocumentNumber=20-39860">20-39860</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=792921&onBaseDocumentNumber=20-39862">20-39862</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Lansford W. Levitt. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=794261&onBaseDocumentNumber=20-41036">20-41036</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (Appellants, THC Nevada, Herbal Choice) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Appellants, THC Nev, Herbal Choice) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=794317&onBaseDocumentNumber=20-41092">20-41092</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (Appellants, THC Nevada, Herbal Choice) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=794319&onBaseDocumentNumber=20-41094">20-41094</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (Appellants, Red Earth, NEVCANN LLC, Green Therapeutics, Green Leaf Farms Holdings) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Appellants, Red Earth, NEVCANN LLC, Green Therapeutics, Green Leaf Farms Holdings) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=794332&onBaseDocumentNumber=20-41107">20-41107</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (Appellants, Red Earth, NEVCANN LLC, Green Therapeutics, Green Leaf Farms Holdings) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=794335&onBaseDocumentNumber=20-41110">20-41110</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Nicolas R. Donath. (Appellants, Red Earth, NEVCANN LLC, Green Therapeutics, Green Leaf Farms Holdings) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Amy L. Sugden. (Appellants, THC Nevada, Herbal Choice) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2020</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 3665 returned to Sigal Chattah Associates, LLC. (Appellants, THC Nevada, Herbal Choice) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2020</td><td>Docketing Statement</td><td>Filed TGIG, LLC; Nevada Holistic Medicine, LLC; GBS Nevada Partners, LLC; Fidelis Holdings, LLC; Gravitas Nevada, LLC, Nevada Pure, LLC; Medifarm, LLC; and Medifarm IV, LLC's  Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=796966&onBaseDocumentNumber=20-42729">20-42729</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2020</td><td>Docketing Statement</td><td>Filed Appellants' Civil Joinder Docketing Statement for THC Nevada, LLC and Herbal Choice, Inc.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=797596&onBaseDocumentNumber=20-43311">20-43311</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service on Settlement Judge. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=797604&onBaseDocumentNumber=20-43318">20-43318</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2020</td><td>Docketing Statement</td><td>Filed Green Leaf Farms Holdings LLC, Green Therapeautics LLC, Red Earth LLC, and NevCann LLC's Joinder to Docketing Statement (Civil Appeals).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=797806&onBaseDocumentNumber=20-43519">20-43519</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/05/2020</td><td>Notice/Incoming</td><td>Filed Appellants' Proof of Service on Settlement Judge. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=798437&onBaseDocumentNumber=20-44145">20-44145</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2020</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for January 20, 2021, at 9:00 AM via videoconference. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=800566&onBaseDocumentNumber=20-46088">20-46088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/22/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: April 19, 2021, at 9:00 AM via Zoom. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=803779&onBaseDocumentNumber=21-02047">21-02047</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/21/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: May 10, 2021, at 9:00 AM via Zoom. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=813792&onBaseDocumentNumber=21-11542">21-11542</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/14/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: June 29, 2021, at 9:00 AM via Zoom. Per the agreement of the parties, the Settlement Judge requests this extension of time to conclude the settlement negotiations. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=816403&onBaseDocumentNumber=21-14030">21-14030</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to July 2, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=816553&onBaseDocumentNumber=21-14178">21-14178</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=821497&onBaseDocumentNumber=21-18835">21-18835</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/01/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=821567&onBaseDocumentNumber=21-18904">21-18904</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2021</td><td>Transcript Request</td><td>Filed Appellants' (Green Leaf Farms Holdings, Green Therapeutics, NEVCANN, and Red Earth) Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=823067&onBaseDocumentNumber=21-20316">21-20316</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2021</td><td>Transcript Request</td><td>Filed Appellant's (THC Nevada LLC) Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=823078&onBaseDocumentNumber=21-20327">21-20327</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/15/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/2/20. To Court Reporter: Jill Hawkins. (REJECTED PER NOTICE ISSUED ON 1/15/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/15/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=823168&onBaseDocumentNumber=21-20416">21-20416</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/15/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/2/20. To Court Reporter: Jill Hawkins. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=823230&onBaseDocumentNumber=21-20478">21-20478</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Jill Hawkins stating that the requested transcripts were delivered.  Dates of transcripts: 11/2/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=827595&onBaseDocumentNumber=21-24579">21-24579</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Motion</td><td>Filed Stipulation to Extend Time for Filing the Opening Brief. Pursuant to NRAP 26(b)(2)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=828197&onBaseDocumentNumber=21-25168">21-25168</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Opening Brief and Appendix. Due date November 1, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=828243&onBaseDocumentNumber=21-25214">21-25214</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2021</td><td>Motion</td><td>Filed Appellants' (Green Leaf Farms Holdings LLC, Green Therapeutics LLC, NEVCANN LLC, and Red Earth LLC) Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=833358&onBaseDocumentNumber=21-30111">21-30111</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The motion filed by appellants Green Leaf Farms Holdings LLC; Green Therapeutics LLC, NEVCANN LLC; and Red Earth LLC (collectively, Green Leaf), requesting a second extension of time to file the opening brief is granted.  Green Leaf shall have until December 1, 2021, to file and serve the opening brief and appendix.  Respondent shall have 30 days from the date the last opening brief is filed to file and serve the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=834471&onBaseDocumentNumber=21-31134">21-31134</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/29/2021</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to File Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=834583&onBaseDocumentNumber=21-31243">21-31243</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The motion filed by appellants TGIG, LLC; Nevada Holisitic Medicine, LLC; GBS Nevada Partners, LLC; Fidelis Holdings, LLC; Gravitas Nevada, LLC; Nevada Pure, LLC; Medifarm, LLC; Medifarm IV LLC; THC Nevada, LLC; and Herbal Choice, Inc. (collectively, TGIG appellants), for an extension of time to file the opening brief is granted. The TGIG appellants shall have until December 1, 2021, to file and serve the opening brief(s) and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=835264&onBaseDocumentNumber=21-31845">21-31845</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/22/2021</td><td>Motion</td><td>Filed Appellant's (THC Nevada LLC) Emergency Motion to Extend Time to File Opening Brief and Notice of Respondent's Non-Opposition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=837075&onBaseDocumentNumber=21-33592">21-33592</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/03/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants' Opening Brief and Appendix due: December 22, 2021. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=838068&onBaseDocumentNumber=21-34566">21-34566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840174&onBaseDocumentNumber=21-36556">21-36556</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840176&onBaseDocumentNumber=21-36558">21-36558</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840198&onBaseDocumentNumber=21-36580">21-36580</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 1-20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840228&onBaseDocumentNumber=21-36609">21-36609</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 21-40. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840614&onBaseDocumentNumber=21-36991">21-36991</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 41-60. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840616&onBaseDocumentNumber=21-36993">21-36993</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 61-80. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840619&onBaseDocumentNumber=21-36996">21-36996</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 81-100. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840620&onBaseDocumentNumber=21-36997">21-36997</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 101-120. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840621&onBaseDocumentNumber=21-36998">21-36998</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 121-140. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840623&onBaseDocumentNumber=21-37000">21-37000</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 141-160. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840624&onBaseDocumentNumber=21-37001">21-37001</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 161-180. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840626&onBaseDocumentNumber=21-37003">21-37003</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 181-200. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840627&onBaseDocumentNumber=21-37004">21-37004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 201-220. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840630&onBaseDocumentNumber=21-37007">21-37007</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 221-240. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840631&onBaseDocumentNumber=21-37008">21-37008</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 241-260. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840634&onBaseDocumentNumber=21-37011">21-37011</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 261-280. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840635&onBaseDocumentNumber=21-37012">21-37012</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 281-300. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840636&onBaseDocumentNumber=21-37013">21-37013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 301-320. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840640&onBaseDocumentNumber=21-37017">21-37017</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 321-340. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840642&onBaseDocumentNumber=21-37019">21-37019</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vols. 341-343. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840643&onBaseDocumentNumber=21-37020">21-37020</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Joint Appendix to Opening Brief. Vol 250. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=840726&onBaseDocumentNumber=21-37101">21-37101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/07/2022</td><td>Motion</td><td>Filed Respondents' Unopposed Motion to Extend Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=841735&onBaseDocumentNumber=22-00754">22-00754</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Counsel Eric D. Hone, Joel Z. Schwarz, and Jamie L. Zimmerman of Hone Law will appear as counsel for Respondent Lone Mountain Partners, LLC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=842282&onBaseDocumentNumber=22-01297">22-01297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2022</td><td>Notice/Incoming</td><td>Filed Respondent Lone Mountain Partners, LLC's Joinder in Respondent The State of Nevada Department of Taxation's Unopposed Motion to Extend Time to File Answering Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=842285&onBaseDocumentNumber=22-01300">22-01300</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order.  Respondent shall have until March 22, 2022, to file and serve the answering brief.  The clerk of this court shall add attorneys Eric D. Hone, Joel Z. Schwarz and Jamie L. Zimmerman of Hone Law to the docket for notice purposes only.  This court takes no action in regard to Lone Mountain's joinder in respondent's motion to extend the time to file the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=842873&onBaseDocumentNumber=22-01874">22-01874</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Todd L. Bice and Jordan T. Smith for Parties integral Associates, LLC d/b/a Essence Cannabis Dispensaries, Essence Tropicana, LLC, and Essence Henderson, LLC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=849430&onBaseDocumentNumber=22-08082">22-08082</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Motion</td><td>Filed Motion to Dismiss Appeal or Stay Appeal Pending Cure of Jurisdictional Defect. (The Essence Entities')  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=849431&onBaseDocumentNumber=22-08083">22-08083</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/18/2022</td><td>Motion</td><td>Filed Respondent's Unopposed Second Motion to Extend Time to File Answering Briefs Due to Illness. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=849965&onBaseDocumentNumber=22-08608">22-08608</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2022</td><td>Motion</td><td>Filed Appellants' Response to Essence Entities Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=850126&onBaseDocumentNumber=22-08765">22-08765</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Non-Opposition to Essence Entities' Motion to Dismiss or Stay Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=850261&onBaseDocumentNumber=22-08896">22-08896</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2022</td><td>Motion</td><td>Filed Appellants' (THC Nevada, LLC' and Herbal Choice, Inc.'s) Joinder to Essence Entities' Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=850268&onBaseDocumentNumber=22-08903">22-08903</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Motion</td><td>Filed Appellants' Joinder to Essence Entities' Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=850272&onBaseDocumentNumber=22-08907">22-08907</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Motion</td><td>Filed Essence Entities' Reply in Support of Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=851061&onBaseDocumentNumber=22-09598">22-09598</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2022</td><td>Brief</td><td>Filed Respondent's Answering Brief to the Respective Opening Briefs of Herbal Choice, THC Nevada, Nevcann, et al. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=851255&onBaseDocumentNumber=22-09785">22-09785</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2022</td><td>Brief</td><td>Filed Respondent Attorney Akke Levin's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=851256&onBaseDocumentNumber=22-09786">22-09786</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2022</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vols. 1-3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=851257&onBaseDocumentNumber=22-09787">22-09787</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Order/Procedural</td><td>Filed Order. Attorneys Todd L. Bice and Jordan T. Smith of Pisanelli Bice PLLC have filed a notice of appearance on behalf of defendants in intervention below, Integral Associates, LLC d/b/a Essence Cannabis Dispensaries; Essence Tropicana, LLC; and Essence Henderson, LLC (the Essence Entities), and request that the Essence Entities be added as parties to this appeal.  The request is granted, and the clerk of this court shall add the Essence Entities as respondents to this appeal represented by Mr. Bice and Mr. Smith. The Essence Entities have filed a motion to dismiss the appeal.   This court defers ruling on the Essence Entities' motion to dismiss this appeal pending review of the supplemental briefing.  The Essence Entities' request to stay the proceedings in this appeal is granted to the following extent. The briefing schedule related to the merits briefing of this appeal shall be suspended pending further order of this court. Appellants' supplemental briefs due: 14 days. Respondents, including the Essence Entities, shall have 14 days from service of the supplemental briefs to file and serve supplemental responses, including addressing these issues.  Appellants shall then have 7 days from service of the supplemental responses to file and serve any supplemental replies. fn2 [Respondent's second motion to extend time to file its answering briefs is granted.  The answering briefs were filed on March 29, 2022.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=861053&onBaseDocumentNumber=22-18238">22-18238</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed Appellants' (Clark Hill PLLC Parties) Supplemental Brief in Response to Essence Entities' Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=862710&onBaseDocumentNumber=22-19791">22-19791</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed Appellants' (GLF Parties) Supplemental Response to Essence Entities' Motion to Dismiss or Stay Pending Cure of Jurisdictional Defect; Joinder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=862722&onBaseDocumentNumber=22-19803">22-19803</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed THC Nevada, LLC and Herbal Choice, Inc.'s Joinder to Appellants' Supplemental Responses to Essence Entities' Motion to Dismiss or Stay Appeal Pending Cure of Jurisdictional Defect. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=862769&onBaseDocumentNumber=22-19850">22-19850</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Integral Associates LLC's supplemental response due: July 20, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=863436&onBaseDocumentNumber=22-20453">22-20453</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent The State of Nevada Department of Taxation shall have until July 20, 2022, to file and serve its supplemental response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=864215&onBaseDocumentNumber=22-21214">22-21214</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2022</td><td>Brief</td><td>Filed Respondent (Essence Entities') Supplemental Brief in Response to June 8, 2022 Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=865895&onBaseDocumentNumber=22-22828">22-22828</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2022</td><td>Brief</td><td>Filed Respondent (The State of Nevada Department of Taxation) Joinder to Essence Entities' Supplemental Brief in Response to June 8, 2022 Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=865923&onBaseDocumentNumber=22-22855">22-22855</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Notice/Incoming</td><td>Filed Appellants' Notice of Issuance of Order Certifying Orders on Appeal as Final Pursuant to NRCP 54(b) in Compliance with Supreme Court Order Dated June 8, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=867769&onBaseDocumentNumber=22-24591">22-24591</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (The State of Nevada Department of Taxation) Notice of Appearance Heidi Parry Stern. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=869254&onBaseDocumentNumber=22-26005">22-26005</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (The State of Nevada Department of Taxation) Notice of Appearance for Craig A. Newby. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=869296&onBaseDocumentNumber=22-26046">22-26046</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing.  Having reviewed the supplemental briefing and the district court's order, this appeal may proceed.  The merits briefing is reinstated as follows.  The Essence Entities shall have 21 days from the date of this order to file and serve an answering brief.  Thereafter, briefing shall proceed in accordance with NRAP 31(a)(1).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=869895&onBaseDocumentNumber=22-26634">22-26634</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/02/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents Essence Entities' answering brief due: September 29, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=870881&onBaseDocumentNumber=22-27604">22-27604</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Filing Fee</td><td>Cross-Appeal Filing Fee Waived.  State/County/Municipality. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Docketing statement mailed to counsel for cross-appellant.) (State Bd. of Taxation) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=872103&onBaseDocumentNumber=22-28754">22-28754</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Motion</td><td>Filed Motion Lone Mountain Partners, LLC's Motion to be Added as a Respondent and for Leave to File an Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874243&onBaseDocumentNumber=22-30755">22-30755</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Brief</td><td>Filed Cross-Respondents' (The Essence Entities')  Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874252&onBaseDocumentNumber=22-30764">22-30764</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 1 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874253&onBaseDocumentNumber=22-30765">22-30765</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 2 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874254&onBaseDocumentNumber=22-30766">22-30766</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 3 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874255&onBaseDocumentNumber=22-30767">22-30767</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 4 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874256&onBaseDocumentNumber=22-30768">22-30768</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 5 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874257&onBaseDocumentNumber=22-30769">22-30769</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 6 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874258&onBaseDocumentNumber=22-30770">22-30770</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 7 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874259&onBaseDocumentNumber=22-30771">22-30771</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 8 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874260&onBaseDocumentNumber=22-30772">22-30772</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 9 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874263&onBaseDocumentNumber=22-30775">22-30775</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 10 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874265&onBaseDocumentNumber=22-30777">22-30777</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 11 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874266&onBaseDocumentNumber=22-30778">22-30778</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 12 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874268&onBaseDocumentNumber=22-30780">22-30780</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 13 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874270&onBaseDocumentNumber=22-30782">22-30782</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 14 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874274&onBaseDocumentNumber=22-30786">22-30786</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 15 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874275&onBaseDocumentNumber=22-30787">22-30787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Cross-Repondent's (The Essence Entities') Supplemental Appendix, Volume 16 of 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874276&onBaseDocumentNumber=22-30788">22-30788</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2022</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=874971&onBaseDocumentNumber=22-31474">22-31474</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/17/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk of this court shall add Lone Mountain to the docket as a cross-respondent and shall amend the caption to conform to the caption on this order.  The clerk shall detach Lone Mountain's answering brief from the motion and shall file it separately.  fn1 [The clerk of this court shall add attorneys Eric D. Hone, Joel Z. Schwarz, and Jamie L. Zimmerman, and Hone Law to the docket as counsel for Lone Mountain.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=876156&onBaseDocumentNumber=22-32613">22-32613</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/17/2022</td><td>Brief</td><td>Filed Cross-Respondent Lone Mountain Partners, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=876167&onBaseDocumentNumber=22-32624">22-32624</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Requests. Appellants/Cross-Respondents' due: November 30, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=879475&onBaseDocumentNumber=22-35811">22-35811</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' (TGIG Reply) (Omnibus Reply) (Lone Mountain Partners, LLC, Essence Entities and The State of Nevada Department of Taxation Answering Briefs) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=881429&onBaseDocumentNumber=22-37699">22-37699</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' (Green Leaf Farms Holdings, LLC, Green Therapeutics LLC, Inc., NEVCANN LLC, Red Earth LLC) Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=881436&onBaseDocumentNumber=22-37706">22-37706</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' (Herbal Choice and THC) Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=881508&onBaseDocumentNumber=22-37776">22-37776</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/04/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/13/2023</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Notice of Change of Address for Clark Hill, PLLC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=892830&onBaseDocumentNumber=23-07618">23-07618</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/03/2023</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's (The State of Nevada Department of Taxation) Notice of Substitution of Counsel FROM Craig A. Newby, Steven Shevorski and Akke Levin TO Heidi Parry Stern and Kiel B. Ireland. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=895505&onBaseDocumentNumber=23-10175">23-10175</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/05/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. This matter is scheduled for oral argument on June 5, 2023, at 10:00 a.m. in Las Vegas.  Argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=899818&onBaseDocumentNumber=23-14315">23-14315</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/22/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=901599&onBaseDocumentNumber=23-16026">23-16026</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/30/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Emergency Request to Enlarge and Divide Argument Time Among Respondents. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=902479&onBaseDocumentNumber=23-16865">23-16865</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Other</td><td>Justice Linda Bell disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Motion</td><td>Filed Motion - Media Request to the Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=902763&onBaseDocumentNumber=23-17142">23-17142</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Order/Procedural</td><td>Filed Order Granting Media Request. A request having been made by Mark Bradley with WeedTV seeking access to the Supreme Court oral arguments for the purpose of photographic or electronic coverage of the hearing to be held on June 5, 2023, beginning at 10:00 a.m., in the Las Vegas courtroom, in the above-entitled matter. All equipment necessary to allow for such photographic or electronic coverage of such proceedings shall be in place 10 minutes prior to the start of argument. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=902864&onBaseDocumentNumber=23-17242">23-17242</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. This matter is scheduled for oral argument on June 5, 2023, at 10:00 a.m. in Las Vegas. Respondent/cross-appellant has filed a motion to enlarge the time for its argument to 20 minutes. The motion is granted. Accordingly, each side will be premitted 20 minutes for oral argument. Argument shall be limited to a total of 40 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=902887&onBaseDocumentNumber=23-17265">23-17265</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc Panel . (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2023</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." EN BANC (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60233&csIID=60233&deLinkID=915581&onBaseDocumentNumber=23-29491">23-29491</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60233&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

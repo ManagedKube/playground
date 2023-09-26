@@ -1,0 +1,820 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81971: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1CAED900B9A33FBFD94BD0880FFF1B17">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60154">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81971</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">DAYCO FUNDING CORP. VS. MONA, JR.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=40050">70833</a>, <a href="/public/caseView.do?csIID=55442">78785</a>, <a href="/public/caseView.do?csIID=55481">78811</a>, <a href="/public/caseView.do?csIID=61146">82638</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A702041</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/10/2020 / Haire, Paul</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>03/18/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Dayco Funding Corporation</td><td valign="top">Bart K. Larsen
+							(Shea Larsen)
+						<br>Kyle M. Wyant
+							(Shea Larsen)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Isaac Norman</td><td valign="top">John Messinger Netzorg
+							(Law Offices of John M. Netzorg)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Michael J. Mona, Jr.</td><td valign="top">Chad F. Clement
+							(Marquis Aurbach Chtd.)
+						<br>Terry A. Coffing
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						<br>Kathleen A. Wilde
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Mona Family Trust</td><td valign="top">Chad F. Clement
+							(Marquis Aurbach Chtd.)
+						<br>Terry A. Coffing
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						<br>Kathleen A. Wilde
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Rhonda Helene Mona</td><td valign="top">Chad F. Clement
+							(Marquis Aurbach Chtd.)
+						<br>Terry A. Coffing
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						<br>Kathleen A. Wilde
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2020</td><td>Filing Fee</td><td>Filing Fee Due.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=791578&onBaseDocumentNumber=20-38539">20-38539</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=791580&onBaseDocumentNumber=20-38541">20-38541</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2020</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 10 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=791582&onBaseDocumentNumber=20-38543">20-38543</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Bart K. Larsen.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/22/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=791774&onBaseDocumentNumber=20-38730">20-38730</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/29/2020</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=792727&onBaseDocumentNumber=20-39672">20-39672</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/30/2020</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=792819&onBaseDocumentNumber=20-39763">20-39763</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2020</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal. (Respondents/Cross-Appellants, Mona) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2020</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Respondents/Cross-Appellants, Mona) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=793110&onBaseDocumentNumber=20-40049">20-40049</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2020</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (Cross-Appeal) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=793112&onBaseDocumentNumber=20-40051">20-40051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2020</td><td>Filing Fee</td><td>E-Payment $250.00 from Kathleen A. Wilde. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Modification of Caption. Parties are advised to notify this office in writing within 10 days if the caption as modified does not accurately reflect the status of the parties. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=793474&onBaseDocumentNumber=20-40366">20-40366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2020</td><td>Settlement Notice</td><td>Filed Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Paul M. Haire. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=794270&onBaseDocumentNumber=20-41045">20-41045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2020</td><td>Notice/Incoming</td><td>Filed Notice of Modification of Caption from Appellant/Cross-Respondent, Dayco Funding. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=795064&onBaseDocumentNumber=20-41833">20-41833</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2020</td><td>Notice/Outgoing</td><td>Issued Notice of Modification of Caption. Parties are advised to notify this office in writing within 10 days if the caption as modified does not accurately reflect the status of the parties. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=795066&onBaseDocumentNumber=20-41835">20-41835</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/24/2020</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=797171&onBaseDocumentNumber=20-42890">20-42890</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/03/2020</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for February 23, 2021 at 9:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=798060&onBaseDocumentNumber=20-43769">20-43769</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/19/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date: March 3, 2021, at 9:00 AM via BlueJeans videoconference. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=806991&onBaseDocumentNumber=21-05060">21-05060</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=808967&onBaseDocumentNumber=21-06970">21-06970</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant/cross-respondent (appellant) and respondents/cross-appellants (cross-appellants) shall each have 14 days from the date of this order to file and serve a transcript request form.  Appellant shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  Respondent shall have 30 days from the service of appellant's opening brief on appeal to file and serve an answering brief.  Cross-appellants shall have 30 days from service of the opening brief on appeal to file and serve a combined answering brief on appeal and opening brief on cross-appeal. Appellant shall have 30 days from service of respondent's answering brief to file a reply brief and 30 days from service of the combined answering brief on appeal and opening brief on cross-appeal to file and serve the combined reply brief on appeal and answering brief on cross-appeal.  Finally, cross-appellants shall have 14 days from service of appellant's combined reply brief on appeal and answering brief on cross-appeal to file and serve a reply brief on cross-appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=809614&onBaseDocumentNumber=21-07572">21-07572</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2021</td><td>Transcript Request</td><td>Filed Respondent/Cross-Appellants' Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=811100&onBaseDocumentNumber=21-09009">21-09009</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/07/2021</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals.  Dayco Funding Corporation (Dayco) shall have 7 days from the date of this order to serve and file, in this court, a file-stamped transcript request form in Docket No. 81971.  Dayco shall have until June 14, 2021, to file and serve the opening brief and appendix in Docket No. 81971. Isaac Norman shall have 30 days from service of the opening brief to file and serve his answering brief in Docket No. 81971.  Michael Mona Jr. and Rhonda Mona, as Trustees of the Mona Family Trust and Michael Mona, Jr., an Individual (Mona), shall have 30 days from service of the opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal in Docket No. 81971 and opening brief in Docket No. 82638.  Within the same time period, Mona may file an appendix in Docket No. 82638, if deemed necessary.  Dayco shall have 30 days from the latest served of either Norman's answering brief or Mona's combined brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal in Docket No. 81971 and answering brief in Docket No. 82638.  Mona shall have 30 days from service of Dayco's combined brief to file and serve a combined reply brief in Docket No. 81971 and reply brief in Docket No. 82638.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=815507&onBaseDocumentNumber=21-13142">21-13142</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/10/2021</td><td>Transcript Request</td><td>Filed Notice of No Transcripts to Be Requested.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=815620&onBaseDocumentNumber=21-13251">21-13251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/cross-respondent's opening brief and appendix in Docket No. 81971 due: June 28, 2021.   Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=819721&onBaseDocumentNumber=21-17203">21-17203</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821167&onBaseDocumentNumber=21-18517">21-18517</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. II. Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821241&onBaseDocumentNumber=21-18591">21-18591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. I.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821242&onBaseDocumentNumber=21-18592">21-18592</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. III.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821243&onBaseDocumentNumber=21-18593">21-18593</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. IV. Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821244&onBaseDocumentNumber=21-18594">21-18594</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. V.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821245&onBaseDocumentNumber=21-18595">21-18595</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. VI.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821246&onBaseDocumentNumber=21-18596">21-18596</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. VIII.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821247&onBaseDocumentNumber=21-18597">21-18597</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2021</td><td>Appendix</td><td>Filed Joint Appendix Vol. VII.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=821248&onBaseDocumentNumber=21-18598">21-18598</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Motion</td><td>Filed Respondent Isaac Norman's Motion to Extend Time to File Answering Brief.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=824656&onBaseDocumentNumber=21-21782">21-21782</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved.  Respondent Isaac Norman's Answering Brief due: August 27, 2021.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=824676&onBaseDocumentNumber=21-21801">21-21801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2021</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Motion for Extension of Time to File The Mona Parties' Combined Brief in Case No. 81971 and Opening Brief and Appendix in Case No. 82638 (First Request). Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=824716&onBaseDocumentNumber=21-21839">21-21839</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved.  Respondents/Cross-Appellants' Answering Brief/Opening Brief due: August 27, 2021.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=824724&onBaseDocumentNumber=21-21847">21-21847</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/03/2021</td><td>Brief</td><td>Filed The Mona Parties' Consolidated Answering Brief/Opening Brief on Cross-Appeal for Case No. 81971 and Opening Brief for Case No. 82638 (REJECTED PER NOTICE ISSUED 09/07/21). Nos. 81971/82638. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/04/2021</td><td>Brief</td><td>Filed The Mona Parties' Consolidated Answering Brief/Opening Brief on Cross-Appeal For Case No. 81971 and Opening Brief for Case No. 82638 (REJECTED PER NOTICE ISSUED 09/07/21).  Nos. 81971/82638. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/04/2021</td><td>Brief</td><td>Filed Respondent Isaac Norman's Reply to Appellant's Opening Brief (REJECTED PER NOTICE ISSUED 09/07/21).  Nos. 81971/82638.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  The Mona Parties' Consolidated Answering Brief/Opening Brief on Cross-Appeal for Case No. 81971 and Opening Brief for Case No. 82638.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829036&onBaseDocumentNumber=21-25940">21-25940</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Respondent Isaac Norman's Reply to Appellant's Opening Brief.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829042&onBaseDocumentNumber=21-25946">21-25946</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Motion for Leave to File Late Combined Brief. Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829154&onBaseDocumentNumber=21-26057">21-26057</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Brief</td><td>Filed The Mona Parties' Consolidated Answering Brief/Opening Brief on Cross-Appeal for Case No. 81971 and Opening Brief for Case No. 82638.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829159&onBaseDocumentNumber=21-26061">21-26061</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Motion</td><td>Filed Respondent Isaac Norman's Motion for Leave to File Late Answering Brief.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829157&onBaseDocumentNumber=21-26059">21-26059</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Brief</td><td>Filed Respondent's (Isaac Norman) Answering Brief. Nos. 81971/82638 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829186&onBaseDocumentNumber=21-26088">21-26088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/10/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The motions for extensions of time filed by Michael J. Mona, Jr.; Rhonda H. Mona, and Isaac Norman are granted. The briefs were filed on September 8, 2021.  Dayco Funding Corp. shall have 30 days from the date of this order to file and serve a combined reply brief on appeal and answering brief on cross-appeal in Docket No. 81971 and answering brief in Docket No. 82638.  Thereafter, briefing shall proceed as set forth in this court's May 7, 2021, order. Nos. 81971/82638 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=829397&onBaseDocumentNumber=21-26293">21-26293</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/12/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant/cross-respondent shall have until October 25, 2021, to file and serve the reply brief on appeal and answering brief on cross-appeal in Docket No. 81971 and answering brief in Docket No. 82638.  Nos. 81971/82638.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=832447&onBaseDocumentNumber=21-29266">21-29266</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2021</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Dayco Funding Corporation's Consolidated Reply Brief/Answering Brief on Cross-Appeal. Nos. 81971/82638 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=832458&onBaseDocumentNumber=21-29277">21-29277</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. No Reply Brief on Cross-Appeal filed. Nos. 81971/82638. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/18/2022</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this matter shall stand submitted for decision to the Sothern Nevada Panel as of the date of this order on the briefs filed herein. Nos 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=849962&onBaseDocumentNumber=22-08605">22-08605</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance and Change of Counsel. Nos. 81971/82638 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=852457&onBaseDocumentNumber=22-10959">22-10959</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Motion</td><td>Filed Joint Motion to Dismiss Appeal No. 82638. Nos. 81971/82638 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=852458&onBaseDocumentNumber=22-10960">22-10960</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Order/Procedural</td><td>Filed Order Dismissing Appeal in Docket No. 82638.  The parties' joint motion for a voluntary dismissal of the appeal in Docket No. 82638 is granted.  The appeal in Docket No. 82638 only is dismissed.  Nos. 81971/82638. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=853235&onBaseDocumentNumber=22-11675">22-11675</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding.  "ORDER the judgment of the district court AFFIRMED IN PART AND REVERSED IN PART AND REMAND this matter to the district court for proceedings consistent with this order."  SNP22-JH/LS/DH.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=858416&onBaseDocumentNumber=22-16623">22-16623</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=862275&onBaseDocumentNumber=22-19365">22-19365</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/20/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on June 28, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60154&csIID=60154&deLinkID=865200&onBaseDocumentNumber=22-19365">22-19365</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60154&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

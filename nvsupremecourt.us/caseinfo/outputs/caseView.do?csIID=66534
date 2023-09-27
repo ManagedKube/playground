@@ -1,0 +1,670 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86559: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=2E2157521EC5AC7D0DD6F64AD4E5E263">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66534">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86559</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MCNEELY VS. DIST. CT. (SCHIEVE)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - CV2202015</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">5 Alpha Industries, LLC</td><td valign="top">Ryan T. Gormley
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jonathan J. Winn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">David McNeely</td><td valign="top">Ryan T. Gormley
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jonathan J. Winn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">John Doe</td><td valign="top">Jeffrey F. Barr
+							(Armstrong Teasdale, LLP/Las Vegas)
+						<br>Alina M. Shell
+							(Armstrong Teasdale, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Hillary Schieve</td><td valign="top">Adam D. Hosmer-Henner
+							(McDonald Carano LLP/Reno)
+						<br>Chelsea Latino
+							(McDonald Carano LLP/Reno)
+						<br>Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						<br>Jane E. Susskind
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Vaughn Hartung</td><td valign="top">Adam D. Hosmer-Henner
+							(McDonald Carano LLP/Reno)
+						<br>Chelsea Latino
+							(McDonald Carano LLP/Reno)
+						<br>Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						<br>Jane E. Susskind
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">David A. Hardy</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Second Judicial District Court of the State of Nevada, in and for the County of Washoe</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Ryan T. Gormley. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2023</td><td>Petition/Writ</td><td>Filed Petition for Writ of Prohibition. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=900670&onBaseDocumentNumber=23-15127">23-15127</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=900671&onBaseDocumentNumber=23-15128">23-15128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2023</td><td>Motion</td><td>Filed Real Party in Interest's (John Doe) Motion for Leave to File Amicus Curiae NRAP 26.1 Disclosure Under Seal for Amicus Brief. (DETACHED AMICUS BRIEF PER 6/1/23 ORDER AND FILED AS A SUPPLEMENT TO PETITION)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=901468&onBaseDocumentNumber=23-15916">23-15916</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2023</td><td>Appendix</td><td>Filed Real Party in Interest's (John Doe) Appendix to Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=901469&onBaseDocumentNumber=23-15917">23-15917</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Amicus Brief and Appendix. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=901531&onBaseDocumentNumber=23-15977">23-15977</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/22/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's Certificate of Service for Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=901586&onBaseDocumentNumber=23-16013">23-16013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/22/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's Certificate of Service for Appendix to Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=901588&onBaseDocumentNumber=23-16015">23-16015</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2023</td><td>Motion</td><td>Filed Amicus Curiae's Motion for Protective Order (REJECTED PER PHONE CALL - MISTAKENLY FILED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Order/Procedural</td><td>Filed Order Directing Answer and Granting Motion to File NRAP 26.1 Disclosure Under Seal. Real party in interest John Doe has filed a motion for leave to file amicus curiae NRAP 26.1 disclosure under seal, along with an attached amicus brief. The motion is unopposed. John Doe has additionally filed an appendix to the amicus brief. It appears that John Doe is already a real party in interest to this appeal and does not need to appear in the role of amicus curiae. Accordingly, the clerk of this court shall add John Doe as a petitioner in this matter and file the proposed amicus brief received on May 19, 2023, as a supplement to the petition. The motion to file the NRAP 26.1 disclosure under seal is granted. The clerk of this court shall file the NRAP 26.1 disclosure received on May 24, 2023, under seal. Finally, having reviewed the petition, it appears that an answer may assist this court in resolving this matter.  Therefore, real parties in interest, on behalf of respondents, shall have 21 days from the date of this order to file and serve an answer, including authorities, against issuance of the requested writ.  Petitioners shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=902883&onBaseDocumentNumber=23-17261">23-17261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Brief</td><td>Filed Petitioner's (John Doe) Supplement to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=902884&onBaseDocumentNumber=23-17262">23-17262</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Notice/Incoming</td><td>Filed Petitioner's (Joe Doe) NRAP 26.1 Disclosure under (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2023</td><td>Appendix</td><td>Filed Petitioners' (5 Alpha Industries, LLC and David McNeely) Supplement to Appendix to Petition for Writ. (REJECTED PER NOTICE ISSUED 6/2/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Supplemental Appendix to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=903039&onBaseDocumentNumber=23-17408">23-17408</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2023</td><td>Appendix</td><td>Filed Petitioners' (5 Alpha Industries, LLC and David McNeely) Supplement to Appendix to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=903097&onBaseDocumentNumber=23-17464">23-17464</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest's answer to writ petition due: July 6, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=904777&onBaseDocumentNumber=23-19050">23-19050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2023</td><td>Appendix</td><td>Filed Real Party in Interests' Appendix to Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=907409&onBaseDocumentNumber=23-21599">23-21599</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Petition/Writ</td><td>Filed Real Party in Interests' Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=907414&onBaseDocumentNumber=23-21604">23-21604</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/13/2023</td><td>Motion</td><td>Filed Amicus Curiae's (Rost C. Olsen) Motion for Leave to File Amicus Brief. (DETACHED BRIEF AND RETURNED UNFILED PER 8/4/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=908221&onBaseDocumentNumber=23-22370">23-22370</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/18/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners 5 Alpha Industries, LLC and David McNeely's reply due: August 4, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=908910&onBaseDocumentNumber=23-22997">23-22997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2023</td><td>Petition/Writ</td><td>Filed Petitioner's (John Doe) Reply in Support of Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=909155&onBaseDocumentNumber=23-23240">23-23240</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2023</td><td>Appendix</td><td>Filed Petitioner's (John Doe) Supplement to Appendix to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=909156&onBaseDocumentNumber=23-23241">23-23241</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2023</td><td>Motion</td><td>Filed Petitioner's (John Doe) Opposition to Motion for Leave to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=909158&onBaseDocumentNumber=23-23243">23-23243</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2023</td><td>Motion</td><td>Filed Amicus Curiae (Rost C. Olsen) Reply in Support of Motion for Leave to File Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=910042&onBaseDocumentNumber=23-24100">23-24100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/04/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Attorney Rost C. Olsen has filed a motion for leave to file a brief of amicus curiae in support of real parties in interest. Petitioner John Doe opposes the motion and Olsen has replied. Having considered the parties' filings as well as the proposed amicus brief, this court is not convinced that filing the amicus brief is warranted.  Accordingly, the motion is denied. The clerk shall detach the proposed brief from the motion filed on July 13, 2023, and return it unfiled. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=911075&onBaseDocumentNumber=23-25098">23-25098</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2023</td><td>Petition/Writ</td><td>Filed Petitioners' (5 Alpha Industries, LLC and David McNeely) Reply to Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66534&csIID=66534&deLinkID=911561&onBaseDocumentNumber=23-25579">23-25579</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66534&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

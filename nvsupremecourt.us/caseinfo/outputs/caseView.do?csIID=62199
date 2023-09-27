@@ -1,0 +1,789 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83393: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1D58151647CFAA3A84584E562A0C8190">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62199">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83393</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">HIGHLAND PARTNERS NV LLC VS. DIST. CT. (MELECH)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55059">78499</a>, <a href="/public/caseView.do?csIID=56133">79304</a>, <a href="/public/caseView.do?csIID=56773">79747</a>, <a href="/public/caseView.do?csIID=56906">79847</a>, <a href="/public/caseView.do?csIID=58584">80894</a>, <a href="/public/caseView.do?csIID=60804">82395</a>, <a href="/public/caseView.do?csIID=62713">83761</a>, <a href="/public/caseView.do?csIID=62894">83891</a>, <a href="/public/caseView.do?csIID=64752">85254</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A755479</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>04/05/2022 at 10:30 AM</td><td class="label">Oral Argument Location:</td><td>Las Vegas</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>04/05/2022</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Cannabis Compliance Board</td><td valign="top">Ashley Alexandria Balducci
+							(Attorney General/Las Vegas)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Highland Partners NV LLC</td><td valign="top">David J. Malley
+							(Jolley Urga Woodbury Holthus)
+						<br>William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">MI-CW Holdings LLC</td><td valign="top">David J. Malley
+							(Jolley Urga Woodbury Holthus)
+						<br>William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">MI-CW Holdings NV Fund 2 LLC</td><td valign="top">David J. Malley
+							(Jolley Urga Woodbury Holthus)
+						<br>William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Dotan Y. Melech</td><td valign="top">Brian W. Boschee
+							(Holley Driggs/Las Vegas)
+						<br>Richard F. Holley
+							(Holley Driggs/Las Vegas)
+						<br>Stacy H. Rubin
+							(Holley Driggs/Las Vegas)
+						<br>John J. Savage
+							(Holley Driggs/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elizabeth Goff Gonzalez</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from William R. Urga. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827148&onBaseDocumentNumber=21-24172">21-24172</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Motion</td><td>Filed Petitioners' Motion for Permission to File a Petition for Writ of Mandamus in Excess of 7,000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827150&onBaseDocumentNumber=21-24174">21-24174</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827151&onBaseDocumentNumber=21-24175">21-24175</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827152&onBaseDocumentNumber=21-24176">21-24176</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827153&onBaseDocumentNumber=21-24177">21-24177</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827154&onBaseDocumentNumber=21-24178">21-24178</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827155&onBaseDocumentNumber=21-24179">21-24179</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827156&onBaseDocumentNumber=21-24180">21-24180</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827157&onBaseDocumentNumber=21-24181">21-24181</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827158&onBaseDocumentNumber=21-24182">21-24182</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (John Savage as counsel for Real Party in Interest).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827666&onBaseDocumentNumber=21-24649">21-24649</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Party in Interest's Response to Motion for Permission to File a 7,000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=827791&onBaseDocumentNumber=21-24772">21-24772</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Motion</td><td>Filed Petitioners' Reply to Real Party in Interest's Response to Petitioner's Motion for Permission to File a Petition for Writ of Mandamus in Excess of 7,000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=828054&onBaseDocumentNumber=21-25029">21-25029</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2021</td><td>Motion</td><td>Filed Real Party in Interest's Motion to Dismiss Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=828376&onBaseDocumentNumber=21-25346">21-25346</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2021</td><td>Motion</td><td>Filed Petitioners' Response to Real Party in Interest's Motion to Dismiss Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=828884&onBaseDocumentNumber=21-25841">21-25841</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2021</td><td>Motion</td><td>Filed Reply to Petitioners' Response to Real Party in Interest's Motion to Dismiss Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=829289&onBaseDocumentNumber=21-26186">21-26186</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/15/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Dismiss and Directing Answer. The real party in interest has filed a motion to dismiss the petition, which petitioners oppose. We deny the motion to dismiss. It appears that an answer will assist this court in resolving this matter, Real party in interest's answer due: 28 days. Petitioners shall have 14 days from service of the answer to file and serve any reply. fn1 [The motion for leave to file a petition in excess of the type-volume limit is granted.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=832866&onBaseDocumentNumber=21-29678">21-29678</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Motion</td><td>Filed Motion for Leave to File Amicus Brief. (Amicus Brief attached) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=835391&onBaseDocumentNumber=21-31972">21-31972</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2021</td><td>Motion</td><td>Filed Real Party in Interests Response to New Yorkers Untimely Motion to File Amicus Curiae Brief in Support of Petitioners Petition for Writ of Mandamus. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=835668&onBaseDocumentNumber=21-32246">21-32246</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/12/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real party in interest's answer to writ petition due: November 29, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=835983&onBaseDocumentNumber=21-32556">21-32556</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2021</td><td>Motion</td><td>Filed Real Party In Interest's Motion for Permission to File an Answer to Petition for Writ of Mandamus in Excess of 7,000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837155&onBaseDocumentNumber=21-33671">21-33671</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2021</td><td>Petition/Writ</td><td>Filed Real Party in Interest's Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837187&onBaseDocumentNumber=21-33699">21-33699</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2021</td><td>Appendix</td><td>Filed Real Party In Interest's Appendix, Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837233&onBaseDocumentNumber=21-33747">21-33747</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837234&onBaseDocumentNumber=21-33748">21-33748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837264&onBaseDocumentNumber=21-33777">21-33777</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/24/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837266&onBaseDocumentNumber=21-33779">21-33779</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2021</td><td>Brief</td><td>Filed Brief of Amicus Curiae Cannabis Compliance Board in Support of Respondents and Real Party in Interest. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837724&onBaseDocumentNumber=21-34229">21-34229</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2021</td><td>Notice/Incoming</td><td>Filed Certificate of Service. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837881&onBaseDocumentNumber=21-34384">21-34384</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners' reply to writ petition due: December 21, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=837923&onBaseDocumentNumber=21-34426">21-34426</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Order/Procedural</td><td>Filed Order. Proposed amici Empire State NORML, the New York State affiliate of the National Organization for the Reform of Marijuana Laws (NORML), the New York City Cannabis Industry Association, and the Hudson Valley Cannabis Industry Association have filed an untimely motion for leave to file an amicus brief pursuant to NRAP 29. Real party in interest opposes the motion. The motion is denied. Cause appearing, real party in interest's motion for leave to file an answer to the petition in excess of 7,000 words is granted.  The answer was filed on November 23, 2021. Any reply remains due to be filed on or before December 21, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=838173&onBaseDocumentNumber=21-34670">21-34670</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Motion</td><td>Filed Petitioners' Motion for Permission to File a Reply to Answer to Petition for Writ of Mandamus in Excess of 7,000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840045&onBaseDocumentNumber=21-36428">21-36428</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2021</td><td>Petition/Writ</td><td>Filed Petitioners' Reply to Real Party in Interests' Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840047&onBaseDocumentNumber=21-36430">21-36430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2021</td><td>Motion</td><td>Filed Petitioners' Emergency Motion Under NRAP 27(e) to Extend the District Court's Stay Pending Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840356&onBaseDocumentNumber=21-36736">21-36736</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Real Party in Interest's Response to Petitioner's Emergency Motion under NRAP 27(e) to Extend the District Court's Stay Pending Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840638&onBaseDocumentNumber=21-37015">21-37015</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2021</td><td>Motion</td><td>Filed Petitioner's Reply to Real Party in Interest's Response to Petitioners' Emergency Motion Under NRAP 27(e) to Extend the District Court's Stay Pending Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840899&onBaseDocumentNumber=21-37269">21-37269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Petitioners' motion for leave to file a reply in support of the petition in excess of 7,000 words is granted.  The reply was filed on December 21, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=840935&onBaseDocumentNumber=22-00021">22-00021</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting Stay and Request to Expedite.  We grant the stay motion to the extent it seeks to preclude distribution of the liquidation proceeds, pending further order of this court.  Petitioners shall have 14 days from the date of this order to post a $250,000 bond with the district court.  We further grant real party in interest's unopposed request to expedite and will thus expedite our consideration of this matter to the extent our docket allows.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=841641&onBaseDocumentNumber=22-00660">22-00660</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2022</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument.  This court has determined that oral argument may be of assistance in resolving this matter.  Accordingly, this matter is scheduled for oral argument on April 5, 2022, at 10:30 a.m. in Las Vegas.  Argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=848146&onBaseDocumentNumber=22-06867">22-06867</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2022</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=850295&onBaseDocumentNumber=22-08930">22-08930</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc Court. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2022</td><td>Motion</td><td>Filed Stipulation for an Order to Modify Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=864463&onBaseDocumentNumber=22-21459">22-21459</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of District Court's Entry of Stipulation and Order to Modify Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=864633&onBaseDocumentNumber=22-21627">22-21627</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/19/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Stipulation.  The stay imposed by this court in Docket No. 83393 is modified as requested.  The parties shall have 30 days from the date of this order to file and serve either a stipulation or motion to dismiss these petitions or a report informing this court of the status of the district court proceedings.  The proceedings in these matters shall be suspended pending further order of this court.  Nos. 83393/83761/83891.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=865652&onBaseDocumentNumber=22-22589">22-22589</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2022</td><td>Notice/Incoming</td><td>Filed Notice of Change of Firm's Address. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=869021&onBaseDocumentNumber=22-25775">22-25775</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2022</td><td>Notice/Incoming</td><td>Filed Petitioners' Status Report. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=869064&onBaseDocumentNumber=22-25818">22-25818</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2022</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the status report filed by the parties in response to this court's order entered July 19, 2022, the request for an extension of time is granted. The parties shall have until September 30, 2022, to file and serve either a stipulation or motion to dismiss these petitions or a report informing this court of the status of the district court proceedings. The proceedings in these matters shall remain suspended pending further order of this court. Nos. 83393/83761/83891. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=870157&onBaseDocumentNumber=22-26893">22-26893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest Notice of Appearance for Stacy H. Rubin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=874215&onBaseDocumentNumber=22-30728">22-30728</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Motion</td><td>Filed Stipulation to Voluntarily Dismiss Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=874457&onBaseDocumentNumber=22-30969">22-30969</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Order/Dispositional</td><td>Filed Order Dismissing Petition.  Pursuant to the stipulation of the parties, and cause appearing, this petition is dismissed.  The parties shall bear their own costs and attorney fees.  Case Closed/No Remittitur Issued.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62199&csIID=62199&deLinkID=874888&onBaseDocumentNumber=22-31392">22-31392</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62199&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,718 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84079: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1463917D34092FC3B7B981D6982AE97F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63143">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84079</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ZIMMERMAN VS. CROSSROADS COMMONS LTD. LLC C/W 84080</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>84079*, <a href="/public/caseView.do?csIID=63144">84080</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=44020">73788</a>, <a href="/public/caseView.do?csIID=45507">75269</a>, <a href="/public/caseView.do?csIID=52361">75269-COA</a>, <a href="/public/caseView.do?csIID=54912">78382</a>, <a href="/public/caseView.do?csIID=55999">79187</a>, <a href="/public/caseView.do?csIID=65348">84079-COA</a>, <a href="/public/caseView.do?csIID=63144">84080</a>, <a href="/public/caseView.do?csIID=65349">84080-COA</a>, <a href="/public/caseView.do?csIID=65195">85584</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A724938</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Pro Bono Program</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Bell</td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Isaac Zimmerman</td><td valign="top">Andre Labonte
+							(GGRM Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Crossroads Commons, Ltd., LLC</td><td valign="top">Rebecca L. Mastrangelo
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Crossroads Commons Management, L.L.C.</td><td valign="top">Rebecca L. Mastrangelo
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Peccole Nevada Corporation</td><td valign="top">Rebecca L. Mastrangelo
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Peccole-Nevada Corporation</td><td valign="top">Rebecca L. Mastrangelo
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/14/2022</td><td>Filing Fee</td><td>Filing Fee Waived - In Forma Pauperis.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/14/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=842526&onBaseDocumentNumber=22-01533">22-01533</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/14/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines.  Transcript Request Form due:  14 days;  Docketing Statement due:  21 days;  Opening Brief or Informal Brief due:  120 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=842528&onBaseDocumentNumber=22-01535">22-01535</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/31/2022</td><td>Transcript Request</td><td>Filed Civil Proper Person Transcript Request Form. Transcripts requested: 6/14/17; 1/9/19; 1/23/19 and 5/23/17. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=844193&onBaseDocumentNumber=22-03152">22-03152</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2022</td><td>Order/Procedural</td><td>Filed Order. Appellant, who is proceeding in forma pauperis, has filed a transcript request form pursuant to NRAP 9(b).  At this stage of the proceedings, this court is unable to determine which transcripts, if any, are necessary for review on appeal, see NRAP 9(b)(1)(C), and therefore, declines to order the preparation of the requested transcripts at this time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=844617&onBaseDocumentNumber=22-03494">22-03494</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=845608&onBaseDocumentNumber=22-04462">22-04462</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals, Regarding Pro Bono Counsel and Pro Se Transcript Request Form, and Directing Transmission of the Record.  The clerk of this court shall transmit a copy of this order and the attached case summary to the Legal Aid Center of Southern Nevada for financial eligibility screening.  Appellant's Notice of Appearance or LACSN's notice due:  60 days.  This court is unable to determine which transcripts, if any, are necessary for review on appeal, and therefore, declines to order the preparation of the requested transcripts at this time.  Record on Appeal due:  30 days.  Briefing is suspended.  Nos. 84079/84080.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=845890&onBaseDocumentNumber=22-04739">22-04739</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2022</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal, Vols. 1-5. (FTP)  Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=846891&onBaseDocumentNumber=22-05639">22-05639</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Record on Appeal Documents</td><td>Filed District Court Documents. Added to Record on Appeal as pages: 194-196, 197-198, 602-605, 650-653, 722-724, 755-756, 1120-1122 and 1131-1132. (Sealed) Nos. 84079/84080 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2022</td><td>Notice/Incoming</td><td>Filed Respondents' (WFM Southern Nevada, Inc., WFM-WO, and Whole Foods Market) Notice of Appearance for Hannah E. Winston. Nos 84080/84079 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=848060&onBaseDocumentNumber=22-06781">22-06781</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2022</td><td>Motion</td><td>Filed Respondent's (WFM Southern Nevada, Inc., WFM-WO, and Whole Foods Market) Motion to Dismiss Appeal. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=848123&onBaseDocumentNumber=22-06844">22-06844</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Andre Labonte. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=853081&onBaseDocumentNumber=22-11523">22-11523</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Andre Labonte. Nos. 84079/84080 (SC) - Duplicate</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=853082&onBaseDocumentNumber=22-11524">22-11524</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2022</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing.  Attorney Andre Labonte, Esq., of the Legal Aid Center of Southern Nevada, has now filed a notice of appearance as appellant's pro bono counsel.  Transcript Request Form due:  14 days;  Opening Brief due:  90 days.  Nos. 84079/84080.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=853169&onBaseDocumentNumber=22-11609">22-11609</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Joinder to Respondent Whole Food's Motion to Dismiss and Motion to Amend Caption. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=854402&onBaseDocumentNumber=22-12810">22-12810</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. Nos. 84079/84080. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=854811&onBaseDocumentNumber=22-13213">22-13213</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2022</td><td>Order/Procedural</td><td>Filed Order Partially Dismissing Appeals. Respondents Whole Foods Market, WFM Southern Nevada, Inc., and WFM-WO have filed a motion to dismiss themselves as respondents. Appellant agrees with the motion and asks that these respondents be removed from the appeals.  Accordingly, cause appearing, the motion to dismiss is granted.  These appeals are dismissed as to respondents Whole Foods Market, WFM Southern Nevada, Inc., and WFM-WO.  The clerk shall amend the caption accordingly. Nos. 84079/84080.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=855932&onBaseDocumentNumber=22-14244">22-14244</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opening brief due: July 26, 2022. Nos. 84079/84080. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=864816&onBaseDocumentNumber=22-21810">22-21810</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=866524&onBaseDocumentNumber=22-23444">22-23444</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Motion</td><td>Filed Respondents' Motion for Extension of Time to File Answering Brief. Nos. 84079/84080 (REJECTED PER NOTICE ISSUED 8/25/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=869960&onBaseDocumentNumber=22-26698">22-26698</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/01/2022</td><td>Notice/Incoming</td><td>Filed Respondent Crossroads Commons, Ltd., LLC and Peccole Nevada Corporation's Notice of Appearance for Hannah E. Winston. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=870761&onBaseDocumentNumber=22-27490">22-27490</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2022</td><td>Motion</td><td>Filed Respondents' Motion for Extension of Time to File Answering Brief. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=870762&onBaseDocumentNumber=22-27491">22-27491</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/01/2022</td><td>Notice/Incoming</td><td>Filed Respondent Crossroads Commons, Ltd., LLC and Peccole Nevada Corporation's Corrected Notice of Appearance for Charles A. Michalek. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=870763&onBaseDocumentNumber=22-27492">22-27492</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Counsel and Granting Motion. Attorney Charles A. Michalek has filed a notice of appearance on behalf of respondents Crossroads Commons, Ltd., LLC and Peccole Nevada Corporation.  The clerk shall add Mr. Michalek as counsel of record for these two respondents only.  If Mr. Michalek also represents the remaining respondents, he shall file a notice of appearance in this court within 7 days of the date of this order.  Respondents Crossroads Commons, Ltd., LLC and Peccole Nevada Corporation have filed an untimely motion for an extension of time to file the answering brief.  The motion is granted to the following extent. Answering brief due: September 26, 2022. Nos. 84079/84080  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=871320&onBaseDocumentNumber=22-27981">22-27981</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Respondent Crossroads Commons Management, L.L.C., Crossroads Commons, Ltd., LLC, Peccole Nevada Corporation and Peccole-Nevada Corporation's Response to Order Granting Extension of Time to File Answering Brief (Exhibits not included). Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=872197&onBaseDocumentNumber=22-28823">22-28823</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Respondent Crossroads Commons Management, L.L.C., Crossroads Commons, Ltd., LLC, Peccole Nevada Corporation and Peccole-Nevada Corporation's Response to Order Granting Extension of Time to File Answering Brief (Exhibits included). Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=872198&onBaseDocumentNumber=22-28847">22-28847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Respondents. Appellant shall have 7 days from the date of this order to inform this court, in writing, who the proper respondents to this appeal are.  Failure to timely respond to this order may result in the modification of the caption consistent with the information provided in the September 14, 2022, response.  Nos. 84079/84080  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=873432&onBaseDocumentNumber=22-29980">22-29980</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2022</td><td>Brief</td><td>Filed Respondents' Answering Brief.  Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=873563&onBaseDocumentNumber=22-30102">22-30102</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Motion</td><td>Filed Appellant's Response to Order Regarding Respondents. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=874076&onBaseDocumentNumber=22-30598">22-30598</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Captions. The clerk of this court shall modify the captions of these appeals consistent with the caption on this order.  The clerk shall add attorney Charles A. Michalek as counsel of record for respondent Crossroads Commons Management, L.L.C. If any party wishes to modify the caption further, they shall file an appropriate motion within 7 days of the date of this order Nos. 84079/84080  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=875488&onBaseDocumentNumber=22-31981">22-31981</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/26/2022</td><td>Brief</td><td>Filed Appellant's Reply Brief. Nos. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=877234&onBaseDocumentNumber=22-33671">22-33671</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 84079/84080 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. Nos. 84079/84080. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=880938&onBaseDocumentNumber=22-37246">22-37246</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/29/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals.  Nos. 84079/84080. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Notice/Incoming</td><td>Filed Notice of Change of Address Notice of Change of Address for Counsel (REJECTED PER PHONE CALL). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding. "ORDER the judgment of the district court AFFIRMED IN PART AND REVERSED IN PART AND REMAND this matter to the district court for proceedings consistent with this order." Court of Appeals- MG/BB/DW. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Case Status Update</td><td>Transferred from Court of Appeals</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/15/2023</td><td>Remittitur</td><td>Issued Remittitur. Nos. 84079/84080.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=900785&onBaseDocumentNumber=23-15242">23-15242</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. Nos. 84079/84080. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on May 17, 2023. Case No. 84079/84080 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63143&csIID=63143&deLinkID=901808&onBaseDocumentNumber=23-15242">23-15242</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63143&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

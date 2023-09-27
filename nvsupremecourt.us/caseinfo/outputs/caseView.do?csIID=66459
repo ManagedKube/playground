@@ -1,0 +1,1037 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86501: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=CA9E284C122177BB38AFE40075620C3E">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66459">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86501</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">CAMACHO VS. DIST. CT. (PHILIP MORRIS USA, INC.)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61178">82654</a>, <a href="/public/caseView.do?csIID=62666">83724</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A807650</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Answer to Writ Petition Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Anthony Camacho</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Charles L. Finlayson
+							(Claggett &amp; Sykes Law Firm)
+						<br>Matthew S. Granda
+							(Claggett &amp; Sykes Law Firm)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Laura Purkett</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Charles L. Finlayson
+							(Claggett &amp; Sykes Law Firm)
+						<br>Matthew S. Granda
+							(Claggett &amp; Sykes Law Firm)
+						<br>Fan Li
+							(Kelley Uustal/Fort Lauderdale)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">ASM Nationwide Corporation</td><td valign="top">Daniela LaBounty
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Liggett Group, LLC</td><td valign="top">J. Christopher Jorgensen
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Kelly Anne Elizabeth Luther
+							(Kasowitz Benson Torres LLP/Miami)
+						<br>Giselle Gonzalez Manseur
+							(Kasowitz Benson Torres LLP/Miami)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Maria Helena Ruiz
+							(Kasowitz Benson Torres LLP/Miami)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Philip Morris USA, Inc.</td><td valign="top">Scott A. Chesin
+							(Shook, Hardy &amp; Bacon, LLP / New York)
+						<br>Elliott M. Davis
+							(Shook, Hardy &amp; Bacon, LLP/Kansas City)
+						<br>Joseph M. Fasi
+							(Fasi &amp; DiBello, P.A./Florida)
+						<br>Ryan T. Gormley
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Peter M. Henk
+							(Shook, Hardy &amp; Bacon, LLP/Texas)
+						<br>Brian A. Jackson
+							(Shook, Hardy &amp; Bacon, LLP/Kansas City)
+						<br>Jennifer Kenyon
+							(Shook, Hardy &amp; Bacon, LLP/Kansas City)
+						<br>Daniela LaBounty
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Bruce R. Tepikian
+							(Shook, Hardy &amp; Bacon, LLP/Kansas City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">R.J. Reynolds Tobacco Company</td><td valign="top">Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Joseph A. Liebman
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nadia Krall</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/05/2023</td><td>Open</td><td>Reply</td><td>Petitioner</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from David P. Snyder. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899560&onBaseDocumentNumber=23-14062">23-14062</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Motion</td><td>Filed Motion to Exceed Word Limit for Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899561&onBaseDocumentNumber=23-14063">23-14063</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ Master Index to Petitioners' Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899563&onBaseDocumentNumber=23-14065">23-14065</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899566&onBaseDocumentNumber=23-14068">23-14068</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899567&onBaseDocumentNumber=23-14069">23-14069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899569&onBaseDocumentNumber=23-14071">23-14071</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899570&onBaseDocumentNumber=23-14072">23-14072</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899571&onBaseDocumentNumber=23-14073">23-14073</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899572&onBaseDocumentNumber=23-14074">23-14074</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899573&onBaseDocumentNumber=23-14075">23-14075</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899574&onBaseDocumentNumber=23-14076">23-14076</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899575&onBaseDocumentNumber=23-14077">23-14077</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899576&onBaseDocumentNumber=23-14078">23-14078</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899577&onBaseDocumentNumber=23-14079">23-14079</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 12. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899578&onBaseDocumentNumber=23-14080">23-14080</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 13. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899579&onBaseDocumentNumber=23-14081">23-14081</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899580&onBaseDocumentNumber=23-14082">23-14082</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 15. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899581&onBaseDocumentNumber=23-14083">23-14083</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899582&onBaseDocumentNumber=23-14084">23-14084</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 17. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899583&onBaseDocumentNumber=23-14085">23-14085</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 18. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899584&onBaseDocumentNumber=23-14086">23-14086</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 19. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899585&onBaseDocumentNumber=23-14087">23-14087</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899587&onBaseDocumentNumber=23-14089">23-14089</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899588&onBaseDocumentNumber=23-14090">23-14090</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899589&onBaseDocumentNumber=23-14091">23-14091</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 23. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899590&onBaseDocumentNumber=23-14092">23-14092</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 24. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899591&onBaseDocumentNumber=23-14093">23-14093</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 25. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899593&onBaseDocumentNumber=23-14095">23-14095</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 26. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899594&onBaseDocumentNumber=23-14096">23-14096</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 27. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899595&onBaseDocumentNumber=23-14097">23-14097</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 28. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899596&onBaseDocumentNumber=23-14098">23-14098</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 29. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899597&onBaseDocumentNumber=23-14099">23-14099</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 30. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899599&onBaseDocumentNumber=23-14101">23-14101</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 31. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899600&onBaseDocumentNumber=23-14102">23-14102</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 32. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899601&onBaseDocumentNumber=23-14103">23-14103</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 33. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899602&onBaseDocumentNumber=23-14104">23-14104</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 34. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899603&onBaseDocumentNumber=23-14105">23-14105</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 35. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899604&onBaseDocumentNumber=23-14106">23-14106</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 36. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899605&onBaseDocumentNumber=23-14107">23-14107</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 37. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899606&onBaseDocumentNumber=23-14108">23-14108</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 38. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899608&onBaseDocumentNumber=23-14110">23-14110</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 39. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899609&onBaseDocumentNumber=23-14111">23-14111</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 40. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899610&onBaseDocumentNumber=23-14112">23-14112</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 41. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899614&onBaseDocumentNumber=23-14116">23-14116</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 42. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899615&onBaseDocumentNumber=23-14117">23-14117</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 43. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899617&onBaseDocumentNumber=23-14119">23-14119</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 44. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899618&onBaseDocumentNumber=23-14120">23-14120</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 45. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899620&onBaseDocumentNumber=23-14122">23-14122</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 46. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899622&onBaseDocumentNumber=23-14124">23-14124</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 47. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899623&onBaseDocumentNumber=23-14125">23-14125</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 48. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899624&onBaseDocumentNumber=23-14126">23-14126</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 49. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899626&onBaseDocumentNumber=23-14128">23-14128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 50. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899628&onBaseDocumentNumber=23-14130">23-14130</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 51. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899631&onBaseDocumentNumber=23-14133">23-14133</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 52. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899633&onBaseDocumentNumber=23-14135">23-14135</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 53. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899634&onBaseDocumentNumber=23-14136">23-14136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 54. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899636&onBaseDocumentNumber=23-14138">23-14138</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 55. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899638&onBaseDocumentNumber=23-14140">23-14140</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 56. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899639&onBaseDocumentNumber=23-14141">23-14141</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 57. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899641&onBaseDocumentNumber=23-14143">23-14143</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 58. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899642&onBaseDocumentNumber=23-14144">23-14144</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 59. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899643&onBaseDocumentNumber=23-14145">23-14145</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 60. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899644&onBaseDocumentNumber=23-14146">23-14146</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 61. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899645&onBaseDocumentNumber=23-14147">23-14147</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 62. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=899647&onBaseDocumentNumber=23-14149">23-14149</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2023</td><td>Motion</td><td>Filed Real Party In Interest's (Philip Morris USA Inc.) Response to Petitioners' Motion to Exceed Word Limit. (REJECTED PER NOTICE ISSUED 5/11/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection for Response to Motion - No Notice of Appearance. Due in 5 days (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=900468&onBaseDocumentNumber=23-14932">23-14932</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2023</td><td>Notice/Incoming</td><td>Filed Real Party in Interest's (Phillip Morris USA, INC.) Notice of Appearance for Ryan T. Gormley. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=900480&onBaseDocumentNumber=23-14944">23-14944</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2023</td><td>Motion</td><td>Filed Real Party in Interest's (Philip Morris USA Inc.) Response to Petitioners' Motion to Exceed Word Limit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=900481&onBaseDocumentNumber=23-14945">23-14945</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/15/2023</td><td>Motion</td><td>Filed Petitioners' Reply to Response Reply in Support of Motion to Exceed Word Limit for Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=900808&onBaseDocumentNumber=23-15264">23-15264</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Order/Procedural</td><td>Filed Order/Answer Writ Petition. Answer due: 28 days. Petitioner shall have 14 days from the service of the answer to file and serve any reply. fn1[ Petitioners have filed a motion to exceed word limit for petition for writ of mandamus. The motion is granted. The petition was filed on May 4, 2023.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=902245&onBaseDocumentNumber=23-16632">23-16632</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Motion</td><td>Filed Real Party in Interest's (Phillip Morris USA) Motion to Extend Time to File Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=902893&onBaseDocumentNumber=23-17271">23-17271</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Motion</td><td>Filed Real Party in Interest's (Liggett Group, LLC) Motion to Extend Time to File Answer to Petition for Writ and Joinder to Philip Morris USA Inc.'s Motion for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=903314&onBaseDocumentNumber=23-17680">23-17680</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/16/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The motions of real parties in interest Philip Morris USA, Inc. and Liggett Group, LLC (collectively, Morris) for extensions of time to file their answers to the writ petition are granted.  Morris shall have until August 22, 2023, to file and serve their answers. The answers of real parties in interest R.J. Reynolds Tobacco Company and ASM Nationwide Corporation remain due to be filed on or before June 23, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=904838&onBaseDocumentNumber=23-19110">23-19110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2023</td><td>Petition/Writ</td><td>Filed ASM Nationwide Corporation's Answer to Petition for Writ of Mandamus. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=905755&onBaseDocumentNumber=23-20013">23-20013</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2023</td><td>Order/Procedural</td><td>Filed Order to File Document. To date, R.J. Reynolds has failed to file an answer.  R.J. Reynolds shall have 7 days from the date of this order to file and serve an answer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=909619&onBaseDocumentNumber=23-23689">23-23689</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2023</td><td>Notice/Incoming</td><td>Filed R.J. Reynolds Tobacco Company's Response to July 25, 2023 Order to File Document. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=910680&onBaseDocumentNumber=23-24705">23-24705</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Real Party In Interest's (Philip Morris USA Inc.) Motion to Associate Counsel for Elliott M. Davis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=911925&onBaseDocumentNumber=23-25932">23-25932</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Real Party In Interest's (Philip Morris USA Inc.) Motion to Associate Counsel for Scott A. Chesin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=911927&onBaseDocumentNumber=23-25934">23-25934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Associate Counsel. Mr. Davis and Mr. Chesin shall be permitted to appear on behalf of Philip Morris in this matter.  Nevada attorney D. Lee Roberts, Jr. of Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC, shall be responsible for all matters presented by Mr. Davis and Mr. Chesin in this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=913126&onBaseDocumentNumber=23-27106">23-27106</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2023</td><td>Petition/Writ</td><td>Filed Real Party in Interest's (Philip Morris USA, Inc.) Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=913408&onBaseDocumentNumber=23-27378">23-27378</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2023</td><td>Motion</td><td>Filed Real Party in Interest's (Philip Morris USA, Inc.) Motion to Exceed Word Limit for Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=913409&onBaseDocumentNumber=23-27379">23-27379</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2023</td><td>Petition/Writ</td><td>Filed Real Party in Interest's (Liggett Group, LLC) Joinder and Answer to Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=913451&onBaseDocumentNumber=23-27421">23-27421</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Real party in interest Philip Morris USA, Inc.'s motion to file an answer to writ petition in excess of the type-volume limitation is granted. The answer was filed on August 22, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=913908&onBaseDocumentNumber=23-27871">23-27871</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/05/2023</td><td>Motion</td><td>Filed Petitioners' Stipulation to Extend Filing Deadline for Reply in Support of Petition for Writ of Mandamus (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=914992&onBaseDocumentNumber=23-28911">23-28911</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2023</td><td>Motion</td><td>Filed Petitioners' Motion to Modify Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=915611&onBaseDocumentNumber=23-29521">23-29521</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/12/2023</td><td>Order/Procedural</td><td>Filed Order. Petitioners have filed a motion to modify caption which this court construes as a motion to substitute personal representative. The motion is granted. The clerk shall amend the caption consistent with the caption on this order.  The stipulation extending the time to file a reply in support of this writ petition is approved.  Petitioners shall have until October 5, 2023, to file and serve any reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66459&csIID=66459&deLinkID=915949&onBaseDocumentNumber=23-29851">23-29851</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66459&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

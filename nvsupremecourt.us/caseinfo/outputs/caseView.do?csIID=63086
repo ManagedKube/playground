@@ -1,0 +1,846 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84033: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=E2A58AF5C7245B3DB01E7B7F91C9BFAF">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63086">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84033</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">NOVICK VS. SUMMERLIN N. CMTY. ASS'N</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60855">82434</a>, <a href="/public/caseView.do?csIID=62147">83351</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A788545</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Herndon</td><td valign="top" class="label">Case Status:</td><td valign="top">En Banc Reconsider Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>06/08/2022 / Kuzemka, Kristine</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Emily S. Novick</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Michael J. Novick</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Citibank, N.A.</td><td valign="top">Melanie D. Morgan
+							(Akerman LLP/Las Vegas)
+						<br>Ariel E. Stern
+							(Akerman LLP/Las Vegas)
+						<br>Donna M. Wittig
+							(Akerman LLP/Las Vegas)
+						<br>Lilith V. Xara
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Citimortgage, Inc.</td><td valign="top">Melanie D. Morgan
+							(Akerman LLP/Las Vegas)
+						<br>Ariel E. Stern
+							(Akerman LLP/Las Vegas)
+						<br>Donna M. Wittig
+							(Akerman LLP/Las Vegas)
+						<br>Lilith V. Xara
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Summerlin North Community Association</td><td valign="top">Kaleb D. Anderson
+							(Lipson Neilson P.C.)
+						<br>Joseph Garin
+							(Lipson Neilson P.C.)
+						<br>Amber M. Williams
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  In Forma Pauperis. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=841535&onBaseDocumentNumber=22-00556">22-00556</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=841537&onBaseDocumentNumber=22-00558">22-00558</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/20/2022</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record. Record on Appeal due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=843012&onBaseDocumentNumber=22-02010">22-02010</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2022</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal, Vols. 1-9. (FTP) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=844585&onBaseDocumentNumber=22-03463">22-03463</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Record on Appeal Documents</td><td>Filed District Court Documents. Added to Record on Appeal as pages: 154-156, 164-166, 1330-1332 and 1778 to 1779. (Sealed) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Motion Requesting Leave to File Docketing Statement Late Request Brief Filing Extension Request Additional Transcript &amp; Submit Additions to Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=857184&onBaseDocumentNumber=22-15481">22-15481</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Motion</td><td>Filed Respondent Summerlin North Community Association's: (1) Response to Appellant's Motion Filed on May 16, 2022 and 92) Motion to Dismiss Appellant's Appeal. (REJECTED PER NOTICE ISSUED 5/20/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=857950&onBaseDocumentNumber=22-16167">22-16167</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2022</td><td>Notice/Incoming</td><td>Filed Respondent Summerlin North's Notice of Appearance for Joseph Garin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=858033&onBaseDocumentNumber=22-16249">22-16249</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2022</td><td>Motion</td><td>Filed Respondent Summerlin North Community Association's: (1) Response to Appellant's Motion filed on May 16, 2022 and (2) Motion to Dismiss Appellant's Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=858034&onBaseDocumentNumber=22-16250">22-16250</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2022</td><td>Motion</td><td>Filed Respondent's Citibank and Citimortgage's Opposition to Motion Requesting Leave to File Docketing Statement Late, Request Brief Filing Extension, Request Additional Transcript &amp; Submit Additions to Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=858097&onBaseDocumentNumber=22-16310">22-16310</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motion.  Given that appellants are proceeding pro se, and this court's preference to decide cases on their merits, the motion for an extension is granted, and the motions to dismiss the appeal are denied.  The clerk of this court shall file the docketing statement received on May 16, 2022.  Appellants shall have 7 days from the date of this order to file and serve a transcript request form.  Appellants' Opening Brief or Informal Brief due:  30 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=859002&onBaseDocumentNumber=22-17197">22-17197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2022</td><td>Docketing Statement</td><td>Filed Proper Person Appellant's Docketing Statement Civil Appeals with attachments.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=859003&onBaseDocumentNumber=22-17198">22-17198</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for William Heaton and Jonathan Heaton. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=859046&onBaseDocumentNumber=22-17239">22-17239</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Order/Procedural</td><td>Filed Order. The clerk of this court shall add attorneys William H. Heaton and Jonathan W. Heaton and the law firm Heaton Fontano, Ltd., to the docket as counsel for appellants in this appeal. As all parties are now represented by counsel, the clerk shall issue a notice assigning this appeal to the court's settlement program. NRAP 16. The deadlines for filing documents in this appeal are suspended pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=859353&onBaseDocumentNumber=22-17544">22-17544</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Kristine M. Kuzemka. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=861085&onBaseDocumentNumber=22-18270">22-18270</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for August 3, 2022, at 1:00 PM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=863504&onBaseDocumentNumber=22-20521">22-20521</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2022</td><td>Notice/Incoming</td><td>Filed Respondent CitiMortgage, Inc. and Citibank, N.A.'s Notice of Appearance for Melanie D. Morgan. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=864013&onBaseDocumentNumber=22-21019">22-21019</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2022</td><td>Settlement Program Report</td><td>Filed Final Report/Other. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2022</td><td>Settlement Program Report</td><td>Filed Final Report/Other. Upon further discussions with the Parties it was determined that the matter is not appropriate for the Settlement Program. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=867367&onBaseDocumentNumber=22-24198">22-24198</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=867390&onBaseDocumentNumber=22-24219">22-24219</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2022</td><td>Motion</td><td>Filed Appellants' Motion for (1) Waiver of Transcript Costs and (2) Extension of Time to File and Serve Transcript Request Form. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=868520&onBaseDocumentNumber=22-25326">22-25326</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Counsel for appellant has filed a motion for a waiver of the costs of preparing transcripts for this appeal on the ground that appellant is proceeding in forma pauperis. The motion is granted. Appellant's request for an extension of time to file the transcript request form is granted to the following extent. Appellant's transcript request form due:  14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=869394&onBaseDocumentNumber=22-26142">22-26142</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/06/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/16/20.  To Court Reporter: Jennifer Gerold. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=871076&onBaseDocumentNumber=22-27748">22-27748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/13/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Jennifer Gerold stating that the requested transcripts were delivered.  Dates of transcripts: 11/16/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=875831&onBaseDocumentNumber=22-32316">22-32316</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Motion</td><td>Filed Stipulation to Extend Briefing Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=876341&onBaseDocumentNumber=22-32794">22-32794</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. Appellants opening brief and appendix due: November 30, 2022. Respondents answering briefs due: January 30, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=876496&onBaseDocumentNumber=22-32946">22-32946</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881434&onBaseDocumentNumber=22-37704">22-37704</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part A) Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881437&onBaseDocumentNumber=22-37707">22-37707</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part B) Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881438&onBaseDocumentNumber=22-37708">22-37708</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 2 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881439&onBaseDocumentNumber=22-37709">22-37709</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part A) Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881440&onBaseDocumentNumber=22-37710">22-37710</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part B) Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881441&onBaseDocumentNumber=22-37711">22-37711</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part A) Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881442&onBaseDocumentNumber=22-37712">22-37712</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part B) Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881443&onBaseDocumentNumber=22-37713">22-37713</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. (Part C) Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881444&onBaseDocumentNumber=22-37714">22-37714</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881446&onBaseDocumentNumber=22-37716">22-37716</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=881447&onBaseDocumentNumber=22-37717">22-37717</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/30/2023</td><td>Brief</td><td>Filed Citibank, and Citimortgage's Answering Brief Civil Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=887997&onBaseDocumentNumber=23-02917">23-02917</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/30/2023</td><td>Appendix</td><td>Filed Citimortgage, Inc. and Citibank, N.A.'s Supplemental Appendix, Volume I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=887998&onBaseDocumentNumber=23-02918">23-02918</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/30/2023</td><td>Brief</td><td>Filed Summerlin North Community Association's Answering Brief. (REJECTED PER NOTICE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Answering Brief. Summerlin North Community Association's corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=888062&onBaseDocumentNumber=23-02981">23-02981</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2023</td><td>Brief</td><td>Filed Respondent's (Summerlin North Community Association) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=888323&onBaseDocumentNumber=23-03236">23-03236</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply brief due: March 20, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=890627&onBaseDocumentNumber=23-05473">23-05473</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/20/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=893892&onBaseDocumentNumber=23-08613">23-08613</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2023</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "We therefore affirm the district court's summary judgement in favor of the Citi entities. And because the Novicks' arguments regarding their NRS 16.4117 claim are identical to those addressed above, we necessarily affirm the district court's summary judgment in favor of Summerlin." LS/PL/LB. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=904884&onBaseDocumentNumber=23-19156">23-19156</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' petition for rehearing due: July 19, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=907188&onBaseDocumentNumber=23-21380">23-21380</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/19/2023</td><td>Post-Judgment Petition</td><td>Filed Appellants' Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=909082&onBaseDocumentNumber=23-23169">23-23169</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/19/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from Jonathan W. Heaton. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=910630&onBaseDocumentNumber=23-24677">23-24677</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants petition for en banc reconsideration due: August 29, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=912286&onBaseDocumentNumber=23-26287">23-26287</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Motion</td><td>Filed Appellants' Motion to Withdraw as Counsel for William H. Heaton and Jonathan W. Heaton. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=912344&onBaseDocumentNumber=23-26344">23-26344</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk shall remove attorneys William H. Heaton and Jonathan W. Heaton and the law firm of Heaton Fontano, Ltd., from the docket as counsel of record for appellants, and it appears appellants will proceed pro se. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=913101&onBaseDocumentNumber=23-27081">23-27081</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/05/2023</td><td>Motion</td><td>Filed Proper Persons' Motion for Extension of Time to Submit Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=914937&onBaseDocumentNumber=23-28856">23-28856</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/05/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=914939&onBaseDocumentNumber=23-28858">23-28858</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/05/2023</td><td>Post-Judgment Petition</td><td>Filed Proper Persons' Petition for En Banc Reconsideration. (STRIKEN PER 9/20/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/05/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants' motion for a second extension of time to file a petition for en banc reconsideration is granted. The petition for en banc reconsideration was filed on September 5, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=915042&onBaseDocumentNumber=23-28960">23-28960</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2023</td><td>Other</td><td>Justice Douglas W. Herndon disqualified from participation in this matter. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/15/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document - Motion to Reject Prior Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=916424&onBaseDocumentNumber=23-30320">23-30320</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2023</td><td>Notice/Incoming</td><td>Filed Proper Person's Proof of Service for the Appellants' Motion for Extension for Time to Submit Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=916426&onBaseDocumentNumber=23-30322">23-30322</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/15/2023</td><td>Post-Judgment Petition</td><td>Filed Proper Person's En Banc Reconsideration. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=916429&onBaseDocumentNumber=23-30324">23-30324</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2023</td><td>Motion</td><td>Filed Proper Persons' (Appellants') Motion Requesting Rejection of Appellants' Timely August 29 ("Incomplete") Petition for En Banc Reconsideration Attached to Appellants' Granted, Appreciatively, Timely August 29 Motion for Extension of Time to Submit Petition for En Banc Reconsideration (By September 12) Which Asked to "Timely Submit" "Incomplete" Petition "Only in the Event this Extension Request Fails". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=916716&onBaseDocumentNumber=23-30561">23-30561</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Appellants have filed motions requesting that this court reject their petition for en banc reconsideration filed on September 5, 2023, because it is incomplete. Cause appearing, the motions are granted. The clerk of this court shall strike the petition for en banc reconsideration filed on September 5, 2023. Appellants' completed petition for en banc reconsideration was filed on September 15, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63086&csIID=63086&deLinkID=916908&onBaseDocumentNumber=23-30751">23-30751</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63086&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

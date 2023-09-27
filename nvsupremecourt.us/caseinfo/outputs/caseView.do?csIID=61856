@@ -1,0 +1,693 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83134: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=E2E5E788A8366382EE4B7665683BA4A8">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61856">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83134</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">VECHNAK VS. VENETIAN CASINO RESORT, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A801067</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Settlement Notice Issued/Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>07/12/2021 / Cohen, Larry</td><td class="label">SP Status:</td><td>Final Report/Settlement</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Janette Vechnak</td><td valign="top">Jakub P. Medrala
+							(The Medrala Law Firm, Prof. LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Sands Corp.</td><td valign="top">Michael M. Edwards
+							(Freeman Mathis &amp; Gary LLP)
+						<br>David P. Pritchett
+							(Freeman Mathis &amp; Gary LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Venetian Casino Resort, LLC</td><td valign="top">Michael M. Edwards
+							(Freeman Mathis &amp; Gary LLP)
+						<br>David P. Pritchett
+							(Freeman Mathis &amp; Gary LLP)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/29/2023</td><td>Open</td><td>Motion to Dismiss</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=821524&onBaseDocumentNumber=21-18861">21-18861</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=821526&onBaseDocumentNumber=21-18863">21-18863</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=821528&onBaseDocumentNumber=21-18865">21-18865</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2021</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Minutes Addendum to NOA Packet. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=822037&onBaseDocumentNumber=21-19302">21-19302</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/09/2021</td><td>Filing Fee</td><td>E-Payment $250.00 from Jakub P. Medrala.  E-Payment Ref. no. 21070953117406. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=822563&onBaseDocumentNumber=21-19820">21-19820</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/09/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Case Appeal Statement due:  July 26, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=822578&onBaseDocumentNumber=21-19835">21-19835</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Larry J. Cohen. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=822708&onBaseDocumentNumber=21-19962">21-19962</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2021</td><td>Order/Procedural</td><td>Filed Order. This court issued a notice directing appellant to file a case appeal statement.  To date, appellant has failed to comply with this court's notice. Case appeal statement due: 7 days. Appellant also failed to file the docketing statement when due.  Docketing statement due: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=825404&onBaseDocumentNumber=21-22520">21-22520</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2021</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=826253&onBaseDocumentNumber=21-23295">21-23295</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2021</td><td>Notice of Appeal Documents</td><td>Filed Appellant's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=826254&onBaseDocumentNumber=21-23296">21-23296</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for October 4, 2021, at 8:30 am. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=827140&onBaseDocumentNumber=21-24164">21-24164</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The Settlement Judge continues to work with the parties trying to resolve this matter.  Recently there was an exchange of proposals through the Settlement Judge. The Settlement Judge requests one further extension to explore a resolution of this matter through March 11, 2022.  The Settlement Judge will report on or before that date whether a settlement has been reached or appears a viable option. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=845920&onBaseDocumentNumber=22-04768">22-04768</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to March 11, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=847137&onBaseDocumentNumber=22-05883">22-05883</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The parties are still negotiating.  There is an offer pending awaiting a response; the responding attorney is out of the office and will not be able to respond until his return this coming week or the week after.  As the parties appear to be making progress the Settlement Judge respectfully requests a further extension of the deadline for completing this case while the parties continue to explore settlement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=848792&onBaseDocumentNumber=22-07454">22-07454</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to April 11, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=849307&onBaseDocumentNumber=22-07959">22-07959</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The parties through their respective counsel and with the involvement of the Settlement Judge, have conferred and there is a now a settlement proposal pending. The Settlement judge requests a thirty day extension to file the final report. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=854895&onBaseDocumentNumber=22-13296">22-13296</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The settlement judge shall file the Final Settlement Program Status Report within 30 days of the date of this order.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=857694&onBaseDocumentNumber=22-15982">22-15982</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Settlement Program Report</td><td>Filed Final Report/Settlement. The parties have agreed to a settlement of this matter.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=861238&onBaseDocumentNumber=22-18419">22-18419</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/14/2022</td><td>Settlement Order/Procedural</td><td>Filed Order re: Stipulation/Motion to Dismiss. Stipulation or Motion to Dismiss Due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=861814&onBaseDocumentNumber=22-18913">22-18913</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2022</td><td>Settlement Order/Dispositional</td><td>Filed Order Dismissing Appeal/Abandoned/Settlement.  To date, appellant has not responded to our order or otherwise communicated with this court.  Accordingly, cause appearing, "we dismiss this appeal as abandoned." (VACATED PER 11/4/22 ORDER).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=869674&onBaseDocumentNumber=22-26418">22-26418</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Motion</td><td>Filed Appellant's Motion for Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=871448&onBaseDocumentNumber=22-28107">22-28107</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Respondents' Response to Motion for Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=872215&onBaseDocumentNumber=22-28864">22-28864</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Motion</td><td>Filed Appellant's Reply to Response to Motion for Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=873154&onBaseDocumentNumber=22-29740">22-29740</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/04/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion, Reinstating Appeal, and Reassigning Appeal to Settlement Program. Appellant has filed a motion for reconsideration of the order dismissing the appeal as abandoned. The motion for reconsideration is granted and the August 24, 2022, order dismissing this appeal as abandoned is vacated.  The clerk of this court shall reinstate this appeal and reassign this matter back to the settlement judge for further proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=878300&onBaseDocumentNumber=22-34702">22-34702</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2022</td><td>Settlement Notice</td><td>Issued Notice: Reassignment to NRAP 16 Settlement Program.  Settlement Judge: Larry J. Cohen. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=878436&onBaseDocumentNumber=22-34824">22-34824</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2023</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued. Following agreement on terms of a settlement in this matter issues arose between the parties in connection with implementation of those terms. The Settlement Judge is working with the parties in seeking to reaffirm the previous terms of their agreement and in implementing those terms. The Settlement Judge anticipates completing his efforts within the next thirty days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=891212&onBaseDocumentNumber=23-06054">23-06054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to April 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=892395&onBaseDocumentNumber=23-07192">23-07192</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2023</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2023</td><td>Settlement Program Report</td><td>Filed Final Report/Settlement. The parties have agreed to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=902124&onBaseDocumentNumber=23-16513">23-16513</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Settlement Order/Procedural</td><td>Filed Order re: Stipulation/Motion to Dismiss. Stipulation or Motion to Dismiss Due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=902243&onBaseDocumentNumber=23-16630">23-16630</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Settlement Program Motion/Stipulation</td><td>Filed Appellant's Motion Re: Settlement Program - Extension of Time to File Settlement Motion/Stipulation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=908062&onBaseDocumentNumber=23-22222">23-22222</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Settlement Order/Procedural</td><td>Filed Order. Appellant requests 60 more days to file a stipulation to dismiss the appeal or to file a status report.  The request is granted.  Appellant shall have 60 days from the date of this order to file a stipulation or motion to dismiss. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61856&csIID=61856&deLinkID=910327&onBaseDocumentNumber=23-24377">23-24377</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61856&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

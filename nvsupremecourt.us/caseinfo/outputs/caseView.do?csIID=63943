@@ -1,0 +1,724 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84679: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=9D08523A96C4679A48587CA22241935C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63943">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84679</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">PANIK VS. TMM, INC.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=57556">80275</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A798443</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>05/20/2022 / Mishel, Persi</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Lawrence F. Panik</td><td valign="top">F. Christopher Austin
+							(Weide &amp; Miller, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">TMM, Inc.</td><td valign="top">Adam R. Knecht
+							(Alverson Taylor &amp; Sanders)
+						<br>Dean O'Connell Navalta
+							(Alverson Taylor &amp; Sanders)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=856316&onBaseDocumentNumber=22-14624">22-14624</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Law Firms. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=856318&onBaseDocumentNumber=22-14626">22-14626</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=856320&onBaseDocumentNumber=22-14628">22-14628</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Weide &amp; Miller. Check no. 19249. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=857192&onBaseDocumentNumber=22-15489">22-15489</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellants shall, within 7 days from the date of this order, file the case appeal statement with the Supreme Court Clerk's Office.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=857575&onBaseDocumentNumber=22-15869">22-15869</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=857624&onBaseDocumentNumber=22-15918">22-15918</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Persi J. Mishel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=857781&onBaseDocumentNumber=22-16000">22-16000</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Docketing Statement. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=859879&onBaseDocumentNumber=22-18058">22-18058</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement. (Case Appeal Statement) (REJECTED PER NOTICE ISSUED 6/15/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=861876&onBaseDocumentNumber=22-18973">22-18973</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=861960&onBaseDocumentNumber=22-19054">22-19054</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=862740&onBaseDocumentNumber=22-19821">22-19821</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=863442&onBaseDocumentNumber=22-20459">22-20459</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order to Show Cause.  Appellant's Response due:  30 days.  Respondent may file any reply within 30 days of service of appellants' response.  The deadlines to file documents in this appeal are suspended pending further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=864127&onBaseDocumentNumber=22-21131">22-21131</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2022</td><td>Order/Procedural</td><td>Filed Order to File Response.  Appellants shall have 7 days from the date of this order to show cause why this appeal should not be dismissed as to appellant Dimension, Inc.  Respondent may file any reply within 7 days of service of appellants' response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=869593&onBaseDocumentNumber=22-26339">22-26339</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Order/Procedural</td><td>Filed Order Dismissing Appeal in Part.  This court dismisses this appeal with respect to appellant Dimension, Inc.  This appeal shall proceed with respect to appellant Lawrence F. Panik.  Briefing of this appeal is reinstated.  Panik shall have 7 days from the date of this order to file and serve a transcript request form.  Panik shall have 90 days from the date of this order to file and serve the opening brief and appendix.  Thereafter, briefing shall proceed in accordance with NRAP 31(a)(1).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=872713&onBaseDocumentNumber=22-29304">22-29304</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 3/8/22.  To Court Reporter: Kerry Esparza. (REJECTED PER NOTICE ISSUED 9/27/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=873696&onBaseDocumentNumber=22-30233">22-30233</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Kerry Esparza stating that the requested transcripts were delivered.  Dates of transcripts: 3/24/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=875917&onBaseDocumentNumber=22-32402">22-32402</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2022</td><td>Order/Procedural</td><td>Filed Order. Appellant shall have 7 days from the date of this order to serve (if he has not already done so) and file, in this court, a file-stamped transcript request form. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=878037&onBaseDocumentNumber=22-34464">22-34464</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 3/8/22.  To Court Reporter: Kerry Esparza. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=879036&onBaseDocumentNumber=22-35379">22-35379</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Briefs. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=883451&onBaseDocumentNumber=22-39592">22-39592</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/19/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. Appellants' Opening Brief and Appendix due: January 18, 2023. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=883468&onBaseDocumentNumber=22-39609">22-39609</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/11/2023</td><td>Motion</td><td>Filed Appellants' Consent Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=885890&onBaseDocumentNumber=23-00934">23-00934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant shall have until January 25, 2023, to file and serve the opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=886127&onBaseDocumentNumber=23-01167">23-01167</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/25/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887507&onBaseDocumentNumber=23-02492">23-02492</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vols. 1-6 (REJECTED PER NOTICE ISSUED ON 1/26/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix. Corrected appendix due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887511&onBaseDocumentNumber=23-02496">23-02496</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2023</td><td>Brief</td><td>Filed Appellant's Amended Opening Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887875&onBaseDocumentNumber=23-02797">23-02797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887876&onBaseDocumentNumber=23-02798">23-02798</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887877&onBaseDocumentNumber=23-02799">23-02799</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 3. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887878&onBaseDocumentNumber=23-02800">23-02800</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 4. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887879&onBaseDocumentNumber=23-02801">23-02801</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 5. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887880&onBaseDocumentNumber=23-02802">23-02802</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 6. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887881&onBaseDocumentNumber=23-02803">23-02803</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/30/2023</td><td>Brief</td><td>Filed Second Amended Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=887977&onBaseDocumentNumber=23-02897">23-02897</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: March 13, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=890151&onBaseDocumentNumber=23-05007">23-05007</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/13/2023</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=892961&onBaseDocumentNumber=23-07722">23-07722</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's reply brief due: April 26, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=896471&onBaseDocumentNumber=23-11118">23-11118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/24/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=898175&onBaseDocumentNumber=23-12749">23-12749</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2023</td><td>Brief</td><td>Filed Appellants' Amended Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63943&csIID=63943&deLinkID=898916&onBaseDocumentNumber=23-13481">23-13481</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63943&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

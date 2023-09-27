@@ -1,0 +1,671 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84103-COA: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=42DC66A1D9B7236AAAAF865C6F5DF998">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63294">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84103-COA</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">AFRAND VS. NEV. PROPERTY 1, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Court of Appeals</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=31140">62958</a>, <a href="/public/caseView.do?csIID=63167">84103</a>, <a href="/public/caseView.do?csIID=65200">85589</a>, <a href="/public/caseView.do?csIID=65432">85748</a>, <a href="/public/caseView.do?csIID=66308">86393</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A670755</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Brian Shapiro</td><td valign="top">Robert E. Atkinson
+							(Atkinson Law Associates, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Property 1, LLC</td><td valign="top">Vance R. Bohman
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Alex L. Fugazzi
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Christian Paul Ogata
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Case Status Update</td><td>Transferred from Supreme Court. (COA).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Stay (Via Fax). (TRANSFERRED FROM SUPREME COURT PER 02/07/22 NOTICE). (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=845112&onBaseDocumentNumber=22-03977">22-03977</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Order/Procedural</td><td>Filed Order Denying Stay. We deny the motion for stay without bond. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=845270&onBaseDocumentNumber=22-04132">22-04132</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion for Stay. (via mail-original) (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=845276&onBaseDocumentNumber=22-04135">22-04135</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=845556&onBaseDocumentNumber=22-04411">22-04411</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal, Vols. 1-19. (FTP) (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=845580&onBaseDocumentNumber=22-04434">22-04434</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Brynn White stating that the requested transcripts were delivered.  Dates of transcripts:7/29/21, 8/18/21, 9/8/21, 9/22/21, 9/30/21, 11/10/21, 12/8/21, and 1/20/22. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=846046&onBaseDocumentNumber=22-04891">22-04891</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion for an Order to the Clerk of District Court to Fully Comply with the Previous Order of the Chief Justice of the Supreme Court and Transmit a Complete Record, Prior to the May 15, 2022, Deadline for the Appellant to Submit his Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=855145&onBaseDocumentNumber=22-13540">22-13540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Return of Supreme Court Filing Fees because of Appellant's Recent In Forma Pauperis Status.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=855586&onBaseDocumentNumber=22-13905">22-13905</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension. Appellant's Opening Brief due: June 7, 2022. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=856171&onBaseDocumentNumber=22-14480">22-14480</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Request for an Expedited Order; and for an Order Extending Time to File and Serve Opening Brief. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=857173&onBaseDocumentNumber=22-15470">22-15470</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motions.   Appellant has filed a motion suggesting that the district court transmitted an incomplete record to this court pursuant to the supreme court's order of January 28, 2022.   Those documents were not considered by the district court and the motion is therefore denied.  Appellant also claims that certain documents were omitted from the record transmitted.  The motion is denied.  Appellant shall have until July 7, 2022, to file and serve either an opening brief that complies with NRAP 28 and NRAP 32, or an informal brief for pro se parties.  fn1[Appellant's motion for an expedited order is denied as moot.]  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=858466&onBaseDocumentNumber=22-16672">22-16672</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Refunding Filing Fee.  On May 2, 2022, appellant filed a motion in the court of appeals asking for a refund of the filing fee.  The clerk of this court shall file a copy of this motion in this court.  Because appellant was granted leave to proceed in forma pauperis, he is permitted to proceed on appeal without payment of the filing fee.  The motion is granted.  The clerk of this court shall refund the $250 filing fee.  The clerk shall file this order in both this court and the court of appeals.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=859124&onBaseDocumentNumber=22-17316">22-17316</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Revised Request for Transcript and Audio Visual Record of District Court Hearing. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=864382&onBaseDocumentNumber=22-21380">22-21380</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Proper Person Notice. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=864383&onBaseDocumentNumber=22-21381">22-21381</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Brief</td><td>Filed Proper Person Appellant's Opening Brief.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=864915&onBaseDocumentNumber=22-21906">22-21906</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/22/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellant, who is proceeding in forma pauperis, has filed a "Revised Request for Transcript and Audio Visual Record of District Court Hearing."  At this stage of the proceedings, this court is unable to determine which transcripts, if any, are necessary for this court's review on appeal, see NRAP 9(b)(1)(C), and therefore, this court declines to order the preparation of the requested transcripts at this time.  However, as this appeal proceeds, this court will consider the necessity of transcripts and may order their preparation at a later date.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=866150&onBaseDocumentNumber=22-23077">22-23077</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Leave of Court to Submit Documents that have been before the District Court but were not Included in the Record on Appeal; and Documents that were Omitted from the Record on Appeal. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=867922&onBaseDocumentNumber=22-24741">22-24741</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a motion for "leave to Submit Documents that have been before the District Court but were not Included in the Record on Appeal; and Documents that were Omitted from the Record on Appeal." The documents appellant references are already included in the record.  The motion is denied. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=870057&onBaseDocumentNumber=22-26794">22-26794</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/02/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion for Stay of Execution. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=870938&onBaseDocumentNumber=22-27661">22-27661</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2022</td><td>Order/Procedural</td><td>Filed Order Denying Stay.  Having considered appellant's motion in light of the stay factors, we deny a stay.  This denial is without prejudice to appellant's ability to seek a stay upon bond in the district court in the first instance.  We deny the motion for stay.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=871886&onBaseDocumentNumber=22-28540">22-28540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/29/2022</td><td>Motion</td><td>Filed Proper Person Emergency Motion for Stay of Execution, Pending Appeal. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=880927&onBaseDocumentNumber=22-37235">22-37235</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/11/2023</td><td>Order/Procedural</td><td>Filed Order Denying Stay. We deny appellant's fifth motion for stay. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=885961&onBaseDocumentNumber=23-01004">23-01004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/16/2023</td><td>Order/Procedural</td><td>Filed Order/Full Briefing. This court has concluded that full briefing of this appeal is warranted. Respondent shall have 30 days from the date of this order to file and serve an answering brief. Appellant shall have 15 days from the date of the service of the answering brief to file and serve any reply. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=889894&onBaseDocumentNumber=23-04752">23-04752</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Kelly Dove as counsel for the Respondent). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=890952&onBaseDocumentNumber=23-05795">23-05795</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2023</td><td>Notice/Incoming</td><td>Filed Notice of Bankruptcy of Appellant. (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=890953&onBaseDocumentNumber=23-05796">23-05796</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2023</td><td>Motion</td><td>Filed Appellant's Motion Ex Parte Motion to: (I) Substitute Brian D. Shapiro, Chapter 7 Trustee as Appellant; and (II) Stay Case. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=891195&onBaseDocumentNumber=23-06037">23-06037</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal. "we dismiss this appeal." fn2[Because we dismiss this appeal, we necessarily deny Shapiro's motion to stay the appeal as moot. Further, in light of our dismissal of this appeal, we decline to take any action at this time with respect to Shapiro's request to be substituted into this action as the appellant. Nevertheless, we direct the clerk of court to add Sharpiro's counsel, Atkinson Law Associates LTD, to the mailing list for this appeal for notice purposes.] MG/BB/DW. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=891658&onBaseDocumentNumber=23-06494">23-06494</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2023</td><td>Other Incoming Document</td><td>Filed Appellant's Proper Person Document "Notice of Violation of NRAP and violation of Orders of Hon. Chief Judge by Respondent". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=891758&onBaseDocumentNumber=23-06563">23-06563</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2023</td><td>Order/Procedural</td><td>Filed Order. Appellant filed a document that was essentially a response to a notice of bankruptcy of appellant, which respondent had previously filed.  Given that this appeal has been dismissed, this court takes no action with respect to appellant's March 3 filing. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63294&csIID=63294&deLinkID=894836&onBaseDocumentNumber=23-09530">23-09530</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/11/2023</td><td>Case Status Update</td><td>Transferred to Supreme Court. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2023</td><td>Case Status Update</td><td>Case Closed</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63294&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

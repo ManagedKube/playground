@@ -1,0 +1,821 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84844: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=9F114C0876BB4DE72F0FA58449747475">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64169">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84844</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">KYUNG CHANG IND. USA, INC. VS. DIST. CT. (GREEN)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A838762</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>02/17/2023</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Kyung Chang Industry USA, Inc.</td><td valign="top">Harry L. Arnold
+							(Marquis Aurbach Chtd.)
+						<br>Susan E. Gillespie
+							(Marquis Aurbach Chtd.)
+						<br>Brian R. Hardy
+							(Marquis Aurbach Chtd.)
+						<br>Cody S. Mounteer
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Beatrice Nicole Warren-Curtis</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Danita Turner</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Derrick Fudge</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Dion Green</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Estate of Logan M. Turner</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Hannah Oglesby</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Lasandra James</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Logan Turner</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Lois Oglesby</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Michael Turner</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Nadine Warren</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Reign Lee</td><td valign="top">Sean R. Alto
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>C. Benjamin Cooper
+							(Cooper &amp; Elliott/Columbus OH)
+						<br>Jonathan E. Lowy
+							(Brady/Wash DC)
+						<br>Joseph N. Mott
+							(Claggett &amp; Sykes Law Firm)
+						<br>John Sloan
+							(Sloan, Hatcher, Perry, Runge, Robertson, Smith &amp; Jones/TX)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">David M. Jones</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Cody Mounteer.  E-Payment Ref. no. 2206108111232. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/10/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=861359&onBaseDocumentNumber=22-18509">22-18509</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=861361&onBaseDocumentNumber=22-18511">22-18511</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/10/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=861362&onBaseDocumentNumber=22-18512">22-18512</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=861364&onBaseDocumentNumber=22-18514">22-18514</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real parties in interest, on behalf of respondents, shall have 28 days from the date of this order to file and serve an answer, including authorities, against issuance of the requested writ.  Petitioner shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=868306&onBaseDocumentNumber=22-25118">22-25118</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/24/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest (Dion Green, Lasandra James, Danita Turner, Michael Turner, and Nadine Warren) Notice of Appearance for Micah S. Echols and David P. Snyder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=869763&onBaseDocumentNumber=22-26504">22-26504</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2022</td><td>Motion</td><td>Filed Real Parties in Interest (Dion Green, Lasandra James, Danita Turner, Michael Turner, and Nadine Warren) Motion to Extend Time to File Answer to Petition for Writ of Mandamus. (First Request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=869766&onBaseDocumentNumber=22-26507">22-26507</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/04/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and to File Documents. The moving parties shall have until October 10, 2022, to file and serve their answer. The remaining real parties in interest shall have until October 10, 2022, to file and serve their answers. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=874704&onBaseDocumentNumber=22-31211">22-31211</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Petition/Writ</td><td>Filed Real Parties in Interests Answer to Petition for Writ. (REJECTED PER NOTICE FILED ON 10/10/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/10/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Answer to Petition. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=875339&onBaseDocumentNumber=22-31833">22-31833</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Petition/Writ</td><td>Filed Real Parties in Interests' Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=875385&onBaseDocumentNumber=22-31879">22-31879</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/24/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioner's reply to the answer to the petition for writ due: November 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=876906&onBaseDocumentNumber=22-33347">22-33347</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=878206&onBaseDocumentNumber=22-34630">22-34630</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision to the Southern Nevada Panel as of the date of this order on the briefs filed herein. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=890155&onBaseDocumentNumber=23-05011">23-05011</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2023</td><td>Order/Dispositional</td><td>Filed Order Denying Petition for Writ of Mandamus. "We deny the petition."  SNP23 - DH/PL/RP. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=893121&onBaseDocumentNumber=23-07875">23-07875</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2023</td><td>Motion</td><td>Filed Petitioner's Motion to Stay the Issuance of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=895100&onBaseDocumentNumber=23-09789">23-09789</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Motion</td><td>Filed Real Parties in Interests' (Dion Green, Lasandra James, Danita Turner, Michael Turner, and Nadine Warren) Response to Motion to Stay the Issuance of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=895293&onBaseDocumentNumber=23-09979">23-09979</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2023</td><td>Notice/Incoming</td><td>Filed Petitioner's (Kyung Chang Industry USA, Inc.) Notice of Change of Counsel for Harry L. Arnold. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=895841&onBaseDocumentNumber=23-10496">23-10496</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2023</td><td>Motion</td><td>Filed Petitioner's (Kyung Chang Industry USA, Inc.) Reply to Response to Motion to Stay the Issuance of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=895858&onBaseDocumentNumber=23-10511">23-10511</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Petitioner has moved for a stay of the issuance of the remittitur pending the filing of a petition for a writ of certiorari with the United States Supreme Court regarding whether the Protection of Lawful Commerce in Arms Act (PLCAA) bars the underlying lawsuit. The motion is opposed. Having considered the arguments of the parties, this court grants the motion. Because this is an original writ petition, a notice in lieu of remittitur will issue instead of a remittitur. Issuance of the notice in lieu of remittitur shall be stayed until August 18, 2023. If the clerk of this court receives written notice by August 18, 2023, from the clerk of the United States Supreme Court that petitioner has filed a petition for a writ of certiorari, the stay shall remain in effect until final disposition of the certiorari proceedings. If such notice is not received by August 18, 2023, the clerk of this court shall issue the notice in lieu of remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=898585&onBaseDocumentNumber=23-13153">23-13153</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2023</td><td>Notice/Incoming</td><td>Filed Notice from US Supreme Court/Certiorari Filed. A petition for a writ of certiorari was filed 06/09/23 and placed on the docket as Case No. 22-1206. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64169&csIID=64169&deLinkID=905490&onBaseDocumentNumber=23-19752">23-19752</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64169&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

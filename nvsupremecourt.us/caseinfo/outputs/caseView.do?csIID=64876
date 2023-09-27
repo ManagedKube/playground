@@ -1,0 +1,918 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85358: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=827463352C386B9C01F646E18232E778">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64876">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85358</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: PARAMETRIC SOUND CORP. SHAREHOLDERS' LITIG. C/W 83598, 84971</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=62508">83598</a>*, <a href="/public/caseView.do?csIID=64346">84971</a>, 85358</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=34888">66689</a>, <a href="/public/caseView.do?csIID=45846">75608</a>, <a href="/public/caseView.do?csIID=62508">83598</a>, <a href="/public/caseView.do?csIID=64346">84971</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A686890</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>09/20/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">PAMPT, LLC</td><td valign="top">Scott Manning Danner
+							(Holwell Shuster &amp; Goldberg LLP/New York)
+						<br>Rory Kay
+							(McDonald Carano LLP/Las Vegas)
+						<br>Chelsea Latino
+							(McDonald Carano LLP/Reno)
+						<br>George F. Ogilvie, III
+							(McDonald Carano LLP/Las Vegas)
+						<br>Jeffrey A. Silvestri
+							(McDonald Carano LLP/Las Vegas)
+						<br>Daniel Martin Sullivan
+							(Holwell Shuster &amp; Goldberg LLP/New York)
+						<br>Amanda C. Yen
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Reference Party</td><td valign="top">Parametric Sound Corporation</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Juergen Stark</td><td valign="top">Richard C. Gordon
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Joshua D. N. Hess
+							(Dechert LLP/San Francisco)
+						<br>David A. Kotler
+							(Dechert LLP/New York)
+						<br>Ryan Martin Moore
+							(Dechert LLP/Philadelphia)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kenneth F. Potashner</td><td valign="top">Robert J. Cassity
+							(Holland &amp; Hart LLP/Las Vegas)
+						<br>Alejandro E. Moreno
+							(Sheppard Mullin, Richter &amp; Hampton LLP/San Diego)
+						<br>J. Stephen Peek
+							(Holland &amp; Hart LLP/Las Vegas)
+						<br>John P. Stigi, III
+							(Sheppard, Mullin, Richter, &amp; Hampton LLP/Los Angeles)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kenneth Fox</td><td valign="top">Richard C. Gordon
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Joshua D. N. Hess
+							(Dechert LLP/San Francisco)
+						<br>David A. Kotler
+							(Dechert LLP/New York)
+						<br>Ryan Martin Moore
+							(Dechert LLP/Philadelphia)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">SG VTB Holdings, LLC</td><td valign="top">Richard C. Gordon
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Joshua D. N. Hess
+							(Dechert LLP/San Francisco)
+						<br>David A. Kotler
+							(Dechert LLP/New York)
+						<br>Ryan Martin Moore
+							(Dechert LLP/Philadelphia)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Stripes Group, LLC</td><td valign="top">Richard C. Gordon
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Joshua D. N. Hess
+							(Dechert LLP/San Francisco)
+						<br>David A. Kotler
+							(Dechert LLP/New York)
+						<br>Ryan Martin Moore
+							(Dechert LLP/Philadelphia)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">VTB Holdings, Inc.</td><td valign="top">Richard C. Gordon
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Joshua D. N. Hess
+							(Dechert LLP/San Francisco)
+						<br>David A. Kotler
+							(Dechert LLP/New York)
+						<br>Ryan Martin Moore
+							(Dechert LLP/Philadelphia)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/05/2022</td><td>Overdue</td><td>Settlement Attendance Sheet</td><td>Settlement Judge</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=872560&onBaseDocumentNumber=22-29152">22-29152</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=872562&onBaseDocumentNumber=22-29154">22-29154</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from McDonald Carano. Check No. 29693. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=872857&onBaseDocumentNumber=22-29446">22-29446</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/20/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=872868&onBaseDocumentNumber=22-29457">22-29457</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 85358/83598/84971. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=873024&onBaseDocumentNumber=22-29613">22-29613</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=873047&onBaseDocumentNumber=22-29635">22-29635</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=874960&onBaseDocumentNumber=22-31463">22-31463</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=874961&onBaseDocumentNumber=22-31464">22-31464</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals. This court hereby consolidates these appeals. PAMPT, LLC shall have until December 20, 2022, to file and serve a combined opening brief in Docket No. 83598 and opening brief in Docket No. 85358.  Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox (hereinafter collectively Potashner) shall have 30 days from service of PAMPT's combined brief to file and serve a combined answering brief in Docket No. 85398, answering brief in Docket No. 85358, and opening brief in Docket No. 84971.  PAMPT shall have 30 days from service of Potashner's combined brief to file and serve a combined reply brief in Docket No. 85398, reply brief in Docket No. 85358, and answering brief in Docket No. 84971.  Potashner shall have 30 days from service of PAMPT's second combined brief to file and serve a reply brief in Docket No. 84971. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=878653&onBaseDocumentNumber=22-35001">22-35001</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Motion</td><td>Filed Stipulation to Set Appellate Briefing Schedule. Nos. 83598/84971/85358  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=879943&onBaseDocumentNumber=22-36268">22-36268</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Stipulation. The parties have filed a stipulation to modify the briefing schedule in this matter.  The stipulation is approved to the following extent.  PAMPT, LLC shall have until January 12, 2023, to file and serve a combined opening brief in Docket No. 83598 and opening brief in Docket No. 85358.  The stipulation is disapproved to the extent it purports to extend the due dates for the remaining briefs. The stipulation incorrectly suggests that the applicable type-volume limitations in this matter are those consistent with NRAP 28.1(e).  NRAP 28.1 does not apply in this matter where no cross-appeals have been filed. To the extent the stipulation purports to allow the parties to file briefs in excess of the type-volume limitation, it is disapproved. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=880089&onBaseDocumentNumber=22-36410">22-36410</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Motion</td><td>Filed Appellant PAMTP, LLC's Motion to Exceed Word Limit for Combined Opening Brief (Brief attached). Nos. 83598/84971/85358 (DETACHED BRIEF PER 1/20/23 ORDER AND FILED)(SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886156&onBaseDocumentNumber=23-01193">23-01193</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 1 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886157&onBaseDocumentNumber=23-01194">23-01194</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 2 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886158&onBaseDocumentNumber=23-01195">23-01195</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 3 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886159&onBaseDocumentNumber=23-01196">23-01196</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 4 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886160&onBaseDocumentNumber=23-01197">23-01197</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 5 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886161&onBaseDocumentNumber=23-01198">23-01198</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 6 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886162&onBaseDocumentNumber=23-01199">23-01199</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 7 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886163&onBaseDocumentNumber=23-01200">23-01200</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 8 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886164&onBaseDocumentNumber=23-01201">23-01201</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 9 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886165&onBaseDocumentNumber=23-01202">23-01202</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 10 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886166&onBaseDocumentNumber=23-01203">23-01203</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 11 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886167&onBaseDocumentNumber=23-01204">23-01204</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 12 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886168&onBaseDocumentNumber=23-01205">23-01205</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 13 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886169&onBaseDocumentNumber=23-01206">23-01206</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 14 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886170&onBaseDocumentNumber=23-01207">23-01207</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 15 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886171&onBaseDocumentNumber=23-01208">23-01208</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 16 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886172&onBaseDocumentNumber=23-01209">23-01209</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 17 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886173&onBaseDocumentNumber=23-01210">23-01210</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 18 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886174&onBaseDocumentNumber=23-01211">23-01211</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 19 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886175&onBaseDocumentNumber=23-01212">23-01212</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 20 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886176&onBaseDocumentNumber=23-01213">23-01213</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 21 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886177&onBaseDocumentNumber=23-01214">23-01214</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 22 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886178&onBaseDocumentNumber=23-01215">23-01215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 23 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886179&onBaseDocumentNumber=23-01216">23-01216</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Appendix</td><td>Filed Appellant's Appendix Volume 24 of 24. Nos. 83598/84971/85358 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886180&onBaseDocumentNumber=23-01217">23-01217</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2023</td><td>Motion</td><td>Filed Appellant PAMTP LLC's Motion to Associate Counsel Jordan Pietzsch. Nos 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886329&onBaseDocumentNumber=23-01363">23-01363</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2023</td><td>Notice/Incoming</td><td>Filed Respondents' VTB Holdings, Inc., Stripes Group, LLC, VTB Holdings, LLC, Juergen Stark, and Kennth Fox Notice of Appearance for Kelly Dove. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886822&onBaseDocumentNumber=23-01820">23-01820</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/20/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. PAMTP, LLC has filed a motion to associate New York attorney Jordan L. Pietzsch of the law firm of Holwell Shuster &amp; Goldberg LLP. The motion is granted. PAMTP, LLC has also filed a motion for leave to file a combined opening brief in Docket Nos. 83598 and 85358 that exceeds the permissible type-volume limitation. The motion is granted. The clerk shall detach the combined opening brief from the motion filed on January 12, 2023, and file it separately. Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox shall have 30 days from the date of this order to file and serve a combined answering brief in Docket No. 83598, answering brief in Docket No. 85358, and opening brief in Docket No. 84971.  Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886986&onBaseDocumentNumber=23-01979">23-01979</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/20/2023</td><td>Brief</td><td>Filed Appellant PAMTP, LLC's Combined Opening Brief. Nos. 83598/84971/85358. (FILED PER 1/20/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=886989&onBaseDocumentNumber=23-01982">23-01982</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Motion</td><td>Filed Stipulation to Extend Briefing Deadline. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=889214&onBaseDocumentNumber=23-04101">23-04101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/10/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Combined Answering Brief in Docket 83598/85358 and Opening Brief in Docket 84971. Due: March 23, 2023. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=889269&onBaseDocumentNumber=23-04145">23-04145</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Brief</td><td>Filed Respondents' (Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox) Combined Answering Brief (83598 &amp; 85358) and Opening Brief (84971).  Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=894339&onBaseDocumentNumber=23-09053">23-09053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Appendix</td><td>Filed Respondents' (Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox)  Appendix to Combined Answering Brief and Opening Brief. Vol. 1. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=894346&onBaseDocumentNumber=23-09060">23-09060</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Appendix</td><td>Filed Respondents' (Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox)  Appendix to Combined Answering Brief and Opening Brief. Vol. 2. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=894348&onBaseDocumentNumber=23-09062">23-09062</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Appendix</td><td>Filed Respondents' (Kenneth F. Potashner; VTB Holdings, Inc.; Stripes Group, LLC; SG VTB Holdings, LLC; Juergen Stark; and Kenneth Fox)  Appendix to Combined Answering Brief and Opening Brief. Vol. 3. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=894349&onBaseDocumentNumber=23-09063">23-09063</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/10/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. PAMPT, LLC's combined reply brief in Docketing No. 85398, reply brief in Docket No. 85358, and answering brief in Docket No. 84971 due: May 8, 2023. Nos. 83598/84971/85358  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=896151&onBaseDocumentNumber=23-10802">23-10802</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/08/2023</td><td>Brief</td><td>Filed Appellant PAMTP, LLC's Combined Reply Brief (Nos. 83598 and 85358) and Answering Brief (No. 84971) Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=900079&onBaseDocumentNumber=23-14575">23-14575</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/08/2023</td><td>Appendix</td><td>Filed Appellant PAMTP, LLC's Appendix for Combined Reply Brief (Nos. 83598 and 85358) and Answering Brief (No. 84971) Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=900080&onBaseDocumentNumber=23-14576">23-14576</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents represented by Snell &amp; Wilmer shall have until June 21, 2023, to file and serve the reply brief. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=903269&onBaseDocumentNumber=23-17635">23-17635</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Kenneth F. Potashner's reply brief due: June 21, 2023.  Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=903419&onBaseDocumentNumber=23-17781">23-17781</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2023</td><td>Brief</td><td>Filed Respondents' (VTB Holdings Inc., Stripes Group LLC, SG VTB Holdings LLC, Juergen Stark, and Kenneth Fox) Reply Brief. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=905441&onBaseDocumentNumber=23-19703">23-19703</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Motion</td><td>Filed Respondent's (Kenneth Potashner) Motion for Substitution and Dismissal of PAMTP's Appeal. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=912357&onBaseDocumentNumber=23-26357">23-26357</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/15/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=912535&onBaseDocumentNumber=23-26535">23-26535</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/15/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Kenneth Potashner's) Proof of Service for Motion for Substitution and Dismissal of PAMTP's Appeal in Case No. 83598. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=912662&onBaseDocumentNumber=23-26662">23-26662</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Kenneth Potashner) Errata to Motion for Substitution and Dismissal of Pamtp's Appeal. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=912824&onBaseDocumentNumber=23-26807">23-26807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Respondent's (Kenneth Potashner) Motion for Substitution and Dismissal of PAMTP's Appeal. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=913314&onBaseDocumentNumber=23-27291">23-27291</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=913336&onBaseDocumentNumber=23-27313">23-27313</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Opposition to Respondent's Motion for Substitution and Dismissal of PAMTP's Appeal. Nos. 83598/84971/85358.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=913600&onBaseDocumentNumber=23-27568">23-27568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Kenneth F. Potashner shall have until September 11, 2023, to file and serve the reply to appellant's opposition to respondent's motion for substition and dismissal of PAMTP's appeal. Nos. 83598/84971/85358 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=913973&onBaseDocumentNumber=23-27910">23-27910</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Kenneth Potashner) Notice of Withdrawal of Motion for Substitution and Dismissal of PAMTP's Appeal in Case No. 83598. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=915816&onBaseDocumentNumber=23-29721">23-29721</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2023</td><td>Order/Procedural</td><td>Filed Order. Kenneth Potashner filed a motion for substitution and dismissal of this appeal on August 14, 2023, and errata thereto on August 16, 2023.PAMPT, LLC, filed a response on August 21, 2023.  This court granted an extension to file a reply on August 28, 2023, and on September 11, 2023, Potashner filed a notice of withdrawal of his motion.  Accordingly, this court will take no action in regard to the motion for substitution and dismissal of appeal filed on August 14, 2023. Nos. 83598/84971/85358. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64876&csIID=64876&deLinkID=916001&onBaseDocumentNumber=23-29901">23-29901</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64876&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

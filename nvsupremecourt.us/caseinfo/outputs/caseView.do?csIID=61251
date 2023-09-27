@@ -1,0 +1,988 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82701: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=88D30D7E431297D4CAB6A9DDD1A217D7">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61251">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82701</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">RICHARDSON VS. DIST. CT. (MULLIGAN)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A809963</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Justice Parraguirre for Justice Hardesty&lt;br/&gt;Justice Hardesty for Justice Parraguirre</td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Barbara D. Richardson</td><td valign="top">Tami D. Cowden
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Mark E. Ferrario
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Kara B. Hendricks
+							(Greenberg Traurig, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">10-4 Preferred Risk Managers Inc.</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">195 Gluten Free LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Brenda Guffey</td><td valign="top">Kurt R. Bonds
+							(Alverson Taylor &amp; Sanders)
+						<br>Trevor R. Waite
+							(Alverson Taylor &amp; Sanders)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Carlos Torres</td><td valign="top">Sheri M. Thome
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						<br>Rachel L. Wise
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Chelsea Financial Group, Inc., A California Corporation</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Chelsea Financial Group, Inc., A Missouri Corporation</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Chelsea Financial Group, Inc., A New Jersey Corporation</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Criterion Claims Solutions of Omaha, Inc.</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Rebecca L. Crooker
+							(Bailey Kennedy)
+						<br>Joshua M. Dickey
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">CTC Transportation Insurance Services LLC</td><td valign="top">Matthew T. Dushoff
+							(Saltzman Mugan Dushoff)
+						<br>Jordan D. Wolff
+							(Saltzman Mugan Dushoff)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">CTC Transportation Insurance Services of Hawaii LLC</td><td valign="top">Matthew T. Dushoff
+							(Saltzman Mugan Dushoff)
+						<br>Jordan D. Wolff
+							(Saltzman Mugan Dushoff)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">CTC Transportation Insurance Services of Missouri, LLC</td><td valign="top">Matthew T. Dushoff
+							(Saltzman Mugan Dushoff)
+						<br>Jordan D. Wolff
+							(Saltzman Mugan Dushoff)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Daniel George</td><td valign="top">Robert S. Larsen
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						<br>Wing Yan Wong
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Fourgorean Captial, LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Global Forwarding Enterprises Limited Liability Company</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">ICAP Management Solutions, LLC</td><td valign="top">Robert S. Larsen
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						<br>Wing Yan Wong
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Igor Kapelnikov</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Ironjab LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">James Marx</td><td valign="top">Sheri M. Thome
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						<br>Rachel L. Wise
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">John Maloney</td><td valign="top">Sheri M. Thome
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						<br>Rachel L. Wise
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Kapa Management Consulting, Inc.</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Kapa Ventures, Inc.</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Lexicon Insurance Management LLC</td><td valign="top">Robert S. Larsen
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						<br>Wing Yan Wong
+							(Gordon Rees Scully Mansukhani LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Matthew Simon</td><td valign="top">David E. Astur
+							(Peterson Baker, PLLC)
+						<br>Nikki L. Baker
+							(Peterson Baker, PLLC)
+						<br>Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">New Tech Capital, LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Pavel Kapelnikov</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Quote My Rig LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Scott McCrae</td><td valign="top">David E. Astur
+							(Peterson Baker, PLLC)
+						<br>Nikki L. Baker
+							(Peterson Baker, PLLC)
+						<br>Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Six Eleven LLC</td><td valign="top">Kirill V. Mikhaylov
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Thomas Mulligan</td><td valign="top">Michael R. Ernst
+							(Jolley Urga Woodbury Holthus)
+						<br>David J. Malley
+							(Jolley Urga Woodbury Holthus)
+						<br>William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Virginia Torres</td><td valign="top">Sheri M. Thome
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						<br>Rachel L. Wise
+							(Wilson, Elser, Moskowitz, Edelman &amp; Dicker, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Yanina G. Kapelnikov</td><td valign="top">Russell D. Christian
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						<br>Thomas E. McGrath
+							(Tyson &amp; Mendes LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mark R. Denton</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2021</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Tami D. Cowden. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811562&onBaseDocumentNumber=21-09465">21-09465</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2021</td><td>Motion</td><td>Filed Motion for Permission to File a Petition for Writ of Mandamus in Excess of 7000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811563&onBaseDocumentNumber=21-09466">21-09466</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811564&onBaseDocumentNumber=21-09467">21-09467</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811565&onBaseDocumentNumber=21-09468">21-09468</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811566&onBaseDocumentNumber=21-09469">21-09469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811567&onBaseDocumentNumber=21-09470">21-09470</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811568&onBaseDocumentNumber=21-09471">21-09471</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811569&onBaseDocumentNumber=21-09472">21-09472</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=811571&onBaseDocumentNumber=21-09474">21-09474</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2021</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Law Firms</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real parties in interest, on behalf of respondents, shall have 28 days from the date of this order to file and serve an answer, including authorities, against issuance of the requested writ.  Petitioner shall have 14 days from service of the answer to file and serve any reply.  fn1[Petitioner's motion for permission to file a petition for writ of mandamus in excess of 7000 words is granted. The petition was filed on April 1, 2021.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=823070&onBaseDocumentNumber=21-20319">21-20319</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/19/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. CTC Transportation Insurance Services real parties in interest's answer to writ petition due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=823497&onBaseDocumentNumber=21-20739">21-20739</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/23/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest 10-4 Preferred Risk Managers Inc.; 195 Gluten Free LLC; Chelsea Financial Group, Inc., A Missouri Corporation; Fourgorean Captial, LLC; Ironjab LLC; New Tech Capital, LLC; Quote My Rig LLC; and Six Eleven LLC's answer to the petition for writ due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824069&onBaseDocumentNumber=21-21284">21-21284</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/23/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension. Real parties in interest Scott McCrae and Matthew Simon's answer to the petition for writ due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824198&onBaseDocumentNumber=21-21334">21-21334</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/23/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real party in interest Criterion Claims Solutions of Omaha, Inc's answer to the petition for writ due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824205&onBaseDocumentNumber=21-21340">21-21340</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension. Real Party in Interest Thomas Mulligan's Answer to Petition for Writ due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824327&onBaseDocumentNumber=21-21455">21-21455</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/26/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest John Maloney, James Marx, Carlos Torres, and Virginia Torres shall have until August 25, 2021, to file and serve their answer to petition for writ.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824365&onBaseDocumentNumber=21-21493">21-21493</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest Daniel George, ICAP Mgmt. Solutions, LLC, and Lexicon Ins. Mgmt., LLC shall have until August 25, 2021, to file and serve their answer to petition for writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824404&onBaseDocumentNumber=21-21532">21-21532</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest Chelsea Financial Group, Inc., A California Corporation; Chelsea Financial Group, Inc., A New Jersey Corporation; Global Forwarding Enterprises Limited Liability Company; Kapa Management Consulting, Inc.; Kapa Ventures, Inc.; Pavel Kapelnikov; Yanina G. Kapelnikov; and Igor Kapelnikov's answer to the petition for writ due: August 25, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=824613&onBaseDocumentNumber=21-21739">21-21739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Parties in Interests' Motion to Extend Time to File Answer to Writ Petition. (REJECTED PER NOTICE FILED ON 8/25/21)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827761&onBaseDocumentNumber=21-24743">21-24743</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' (Daniel George, ICAP Management Solutions, LLC, and Lexicon Insurance Management LLC) Notice of Appearance for Robert S. Larsen and Wing Yan Wong. (REJECTED PER PHONE CALL NOTICE FILED ON 8/25/21)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Parties in Interests' Motion to Extend Time to File Answer to Writ Petition. (REJECTED PER PHONE CALL ON 8/25/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Parties in Interests' The Six Eleven Parties' Motion to Extend Time to File Answering to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827790&onBaseDocumentNumber=21-24771">21-24771</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' (Daniel George, ICAP Management Solutions, LLC, and Lexicon Insurance Management LLC) Notice of Appearance for Robert S. Larsen and Wing Yan Wong. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827795&onBaseDocumentNumber=21-24776">21-24776</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Parties in Interests' (Daniel George, ICAP Management Solutions, LLC, and Lexicon Insurance Management LLC) Motion for an Extension to File Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827796&onBaseDocumentNumber=21-24777">21-24777</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Parties in Interests' (CTC Parties) Motion for Permission to File Answer to Petition for Writ of Mandamus in Excess of 7000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827823&onBaseDocumentNumber=21-24804">21-24804</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interests' (CTC Parties) Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827831&onBaseDocumentNumber=21-24807">21-24807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Real Party Interest's (Thomas Mulligan)  Notice of Appearance for William R. Urga and David J. Malley. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827827&onBaseDocumentNumber=21-24808">21-24808</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Petition/Writ</td><td>Filed Real Part in Interest's (Thomas Mulligan) Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827828&onBaseDocumentNumber=21-24809">21-24809</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' (John Maloney, James Marx, Virginia Torres, and Carlos Torres) Notice of Appearance for Sheri M. Thome. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827835&onBaseDocumentNumber=21-24815">21-24815</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Petition/Writ</td><td>Filed Filed Real Parties in Interests' (John Maloney, James Marx, Virginia Torres, and Carlos Torres) Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827838&onBaseDocumentNumber=21-24817">21-24817</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest Igor Kapelnikov's; Yanina Kapelnikov's; Pavel Kapelnikov's; Chelsea Financial Group, Inc's; Global Forwarding Enterprises Limited Liability Company's; Kapa Management Consulting, Inc.'s; and Kapa Ventures, Inc.'s Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827859&onBaseDocumentNumber=21-24818">21-24818</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance on Behalf of Real Parties in Interest Matthew Simon Jr. and Scott McCrae (Tamara Beatty Peterson, Nikki L. Baker and David E. Astur of the law firm of Peterson Baker, PLLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827841&onBaseDocumentNumber=21-24820">21-24820</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest Matthew Simon Jr. and Scott McCrae's Joinder to Six Eleven Parties' Unopposed Motion for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827842&onBaseDocumentNumber=21-24821">21-24821</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Real Party in Interest Criterion Claim Solutions of Omaha, Inc.'s Motion For Permission to File Answer to Petition For Writ of Mandamus in Excess of 7000 Words. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827844&onBaseDocumentNumber=21-24823">21-24823</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Petition/Writ</td><td>Filed Real Party in Interest Criterion Claim Solutions of Omaha, Inc.'s Answer to Petition For Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827845&onBaseDocumentNumber=21-24824">21-24824</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Appendix</td><td>Filed Real Party in Interest Criterion Claim Solutions of Omaha, Inc.'s Appendix to Answer to Petition For Writ of Mandamus (Volume I of II). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827846&onBaseDocumentNumber=21-24825">21-24825</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Appendix</td><td>Filed Real Party in Interest Criterion Claim Solutions of Omaha, Inc.'s Appendix to Answer to Petition For Writ of Mandamus (Volume II of II). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=827847&onBaseDocumentNumber=21-24826">21-24826</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2021</td><td>Order/Procedural</td><td>Filed Order.  Real parties in interest CTC Transportation Insurance Services of Missouri, LLC; CTC Transportation Insurance Services, LLC; CTC Transportation Insurance Services of Hawaii, LLC and Criterion Claims Solutions of Omaha, Inc. have filed motions to file answers against issuance of the requested writ that exceed the type-volume limit.  The motions are granted.  CTC's and Criterion's answers were filed on August 25, 2021.  Real parties in interest Lexicon Insurance Management, LLC; Daniel George; and ICAP Management Solutions, LLC shall have until September 8, 2021, to file and serve an answer.  Real parties in interest Six Eleven, LLC; Quote My Rig, LLC; New Tech Capital, LLC; 195 Gluten Free, LLC; 10-4 Preferred Risk Managers, Inc.; Ironjab, LLC; Fourgorean Capital, LLC; Chelsea Holding Company, LLC; and Chelsea Financial Group, Inc.; Matthew Simon, Jr. and Scott McCrae shall have until September 15, 2021, to file and serve their answers.  Brenda Guffey shall have 7 days from the date of this order to file and serve her answer.  Petitioner shall have 14 days from service of the last-filed answer to file and serve a reply in support of issuance of the writ, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=828411&onBaseDocumentNumber=21-25381">21-25381</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/02/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance on Behalf of Brenda Guffey (Kurt Bonds of Alverson Taylor &amp; Sanders as counsel for Real Party in Interest). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=828670&onBaseDocumentNumber=21-25631">21-25631</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Brief</td><td>Filed Real Party in Interest Brenda Guffey's Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=829045&onBaseDocumentNumber=21-25949">21-25949</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2021</td><td>Appendix</td><td>Filed Appendix Volume I of I.  To: Real Party in Interest Brenda Guffey's Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=829046&onBaseDocumentNumber=21-25950">21-25950</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Petition/Writ</td><td>Filed Response of Real Parties in Interest ICAP Management Solutions, LLC, Daniel George, and Lexicon Insurance Management LLC to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=829162&onBaseDocumentNumber=21-26064">21-26064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest The Six Eleven Defendants' Answer to Petition for Writ of Mandamus. (SC)'</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=829856&onBaseDocumentNumber=21-26746">21-26746</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/15/2021</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest Matthew Simon Jr. and Scott McCrae's Joinder to Real Parties in Interest the Six Eleven Parties' Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=829862&onBaseDocumentNumber=21-26752">21-26752</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioner's reply due: October 13, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=830953&onBaseDocumentNumber=21-27789">21-27789</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/13/2021</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=832700&onBaseDocumentNumber=21-29476">21-29476</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/13/2021</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=832701&onBaseDocumentNumber=21-29480">21-29480</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2022</td><td>Order/Dispositional</td><td>Filed Order Denying Petition.  "ORDER the petition DENIED."  fn2[The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.]  RP/JH/MG  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=846690&onBaseDocumentNumber=22-05442">22-05442</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61251&csIID=61251&deLinkID=849447&onBaseDocumentNumber=22-08099">22-08099</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61251&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1023 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82669: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=81ED3250C5BA43C857658FF0BA541C28">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61194">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82669</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MCDOWELL VS. ZERO-GRAVITY CORP. OF NEV.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A806172</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>03/30/2021 / Haire, Paul</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Alberto Vasquez</td><td valign="top">G. Mark Albright
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Daniel R. Ormsby
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Mark C. Rifkin
+							(Wolf Haldenstein Adler Freeman &amp; Herz)
+						<br>Hayden R. Smith
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Michael McDowell</td><td valign="top">G. Mark Albright
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Daniel R. Ormsby
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Mark C. Rifkin
+							(Wolf Haldenstein Adler Freeman &amp; Herz)
+						<br>Hayden R. Smith
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Toby Jackson</td><td valign="top">G. Mark Albright
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Daniel R. Ormsby
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Mark C. Rifkin
+							(Wolf Haldenstein Adler Freeman &amp; Herz)
+						<br>Hayden R. Smith
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Andrew Lampert</td><td valign="top">Matthew L. Durham
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Eric C. Anderson</td><td valign="top">Edward J. Bennett
+							(Williams &amp; Connolly LLP)
+						<br>Joel D. Henriod
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>R. Kennon Poteat, III
+							(Williams &amp; Connolly LLP)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Karlyn Rader</td><td valign="top">Edward J. Bennett
+							(Williams &amp; Connolly LLP)
+						<br>Joel D. Henriod
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>R. Kennon Poteat, III
+							(Williams &amp; Connolly LLP)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michael Henke</td><td valign="top">Edward J. Bennett
+							(Williams &amp; Connolly LLP)
+						<br>Joel D. Henriod
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>R. Kennon Poteat, III
+							(Williams &amp; Connolly LLP)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Miguel Forbes</td><td valign="top">Matthew L. Durham
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Peter Diamandis</td><td valign="top">Patrick G. Byrne
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Charles E. Gianelloni
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Richard Garriott De Cayeux</td><td valign="top">Patrick G. Byrne
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Charles E. Gianelloni
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Robert Walker</td><td valign="top">Patrick G. Byrne
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Charles E. Gianelloni
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Space Adventures, Inc.</td><td valign="top">Edward J. Bennett
+							(Williams &amp; Connolly LLP)
+						<br>Joel D. Henriod
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>R. Kennon Poteat, III
+							(Williams &amp; Connolly LLP)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Terese Brewster</td><td valign="top">Matthew L. Durham
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Tom Shelley</td><td valign="top">Edward J. Bennett
+							(Williams &amp; Connolly LLP)
+						<br>Joel D. Henriod
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>R. Kennon Poteat, III
+							(Williams &amp; Connolly LLP)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Zero-Gravity Corporation of Nevada</td><td valign="top">Matthew L. Durham
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/26/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Albright, Stoddard, Warnick &amp; Albright.  Check no. 34462. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/26/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=810850&onBaseDocumentNumber=21-08766">21-08766</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/26/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=810853&onBaseDocumentNumber=21-08769">21-08769</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Paul M. Haire. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=811212&onBaseDocumentNumber=21-09121">21-09121</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Kelly H. Dove, Patrick G. Byrne and Charles E. Gianelloni of the law firm Snell &amp; Wilmer LLP as counsel for Respondents Robert Walker, Peter Diamandis, and Richard Garriott de Cayeux). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=811794&onBaseDocumentNumber=21-09643">21-09643</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal. (Respondents/Cross-Appellants, Garriott De Cayeux, Diamandis, Walker) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Conditional Cross-Appeal.  (Respondents/Cross-Appellants, Garriott De Cayeux, Diamandis, Walker) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=812124&onBaseDocumentNumber=21-09972">21-09972</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days.  (Respondents/Cross-Appellants, Garriott De Cayeux, Diamandis, Walker) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=812126&onBaseDocumentNumber=21-09974">21-09974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal.  (Respondents/Cross-Appellants, E. Anderson, M. Henke, K. Rader, T. Shelley, Space Adv.) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Conditional Cross-Appeal. (Respondents/Cross-Appellants, E. Anderson, M. Henke, K. Rader, T. Shelley, Space Adv.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=812128&onBaseDocumentNumber=21-09976">21-09976</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (Respondents/Cross-Appellants, E. Anderson, M. Henke, K. Rader, T. Shelley, Space Adv.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=812130&onBaseDocumentNumber=21-09978">21-09978</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Nationwide Legal Nevada LLC.  Check no. 215893.  (Respondents/Cross-Appellants, Garriott De Cayeux, Diamandis, Walker) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2021</td><td>Filing Fee</td><td>E-Payment $250.00 from Daniel F. Polsenberg. (Respondents/Cross-Appellants, E. Anderson, M. Henke, K. Rader, T. Shelley, Space Adv.) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Matthew L. Durham and Chad D. Olsen with the law firm of King &amp; Durham PLLC, hereby enter their appearance on behalf of Respondents Zero-Gravity Corporation of Nevada, Andrew Lampert, Miguel Forbes, and Terese Brewster). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=812427&onBaseDocumentNumber=21-10267">21-10267</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/16/2021</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents' Civil Docketing Statement.  (STRICKEN PER ORDER 4/22/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2021</td><td>Motion</td><td>Filed Appellants/Cross-Respondents' Joint Emergency Motion to Strike Appellants' Docketing Statement and for Leave to File an Amended Docketing Statement (Action Requested Today).  (DETACHED AMENDED DOCKETING STATEMENT AND FILE PER ORDER 4/22/21).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=813829&onBaseDocumentNumber=21-11578">21-11578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Strike Docketing Statement.  The clerk of this court shall strike the April 16, 2021, docketing statement and detach from the parties' April 21, 2021, motion and file appellants' amended docketing statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=813868&onBaseDocumentNumber=21-11615">21-11615</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/22/2021</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents' Amended Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=813869&onBaseDocumentNumber=21-11616">21-11616</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents/cross-appellants Richard Garriott De Cayeux, Peter Diamandis and Robert Walker's docketing statement due: May 12, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=814463&onBaseDocumentNumber=21-12196">21-12196</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for July 19, 2021, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=814491&onBaseDocumentNumber=21-12224">21-12224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request.  Respondents/cross-appellants Eric C. Anderson, Michael Henke, Karlyn Rader, Tom Shelley, Space Adventures Holdings, LLC, and Space Adventures, Inc.'s docketing statement due: May 12, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=814539&onBaseDocumentNumber=21-12270">21-12270</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/30/2021</td><td>Docketing Statement</td><td>Filed Respondents/Cross-Appellants' Space Adventures, Inc., Eric Anderson, Michael Henke, Karlyn Rader and Tom Shelley's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=814770&onBaseDocumentNumber=21-12501">21-12501</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2021</td><td>Docketing Statement</td><td>Filed Respondents/Cross-Appellants' Docketing Statement Civil Appeals (Richard Garriott De Cayeux, Peter Diamandis and Robert Walker). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=816057&onBaseDocumentNumber=21-13685">21-13685</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/21/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=823897&onBaseDocumentNumber=21-21131">21-21131</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated For Appeal and Cross-Appeal.  Appellants/cross-respondents and respondents/cross-appellants shall each have 14 days from the date of this order to file and serve a transcript request form.  Appellants shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  Respondents shall have 30 days from service of appellants' opening brief on appeal to file and serve an answering brief on appeal.  Appellants shall have 30 days from service of respondents' answering brief to file and serve any reply brief.  Cross-appellants shall have 30 days from service of appellants' opening brief on appeal to file and serve a combined answering brief on appeal and opening brief on cross-appeal.  Appellants shall have 30 days from service of cross-appellants' combined opening brief on appeal and answering brief on cross-appeal to file and serve a combined reply brief on appeal and answering brief on cross-appeal.  Cross-appellants shall have 14 days from service of appellants' combined brief to file and serve a reply brief on cross-appeal, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=824567&onBaseDocumentNumber=21-21693">21-21693</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2021</td><td>Letter/Incoming</td><td>Filed Letter Re: Hayden Smith, Esq., is no longer with Albright, Stoddard, Warnick &amp; Albright.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=825409&onBaseDocumentNumber=21-22525">21-22525</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2021</td><td>Transcript Request</td><td>Filed Respondents/Cross-Appellants' (Eric C. Anderson, Michael Henke, Karlyn Rader, Tom Shelley, Space Adventures Holdings, LLC, and Space Adventures, Inc.) Request for Transcript of Proceedings. Transcripts requested:  1/27/21.  To Court Reporter:  Peggy Isom.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826251&onBaseDocumentNumber=21-23293">21-23293</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2021</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Transcript Request. (REJECTED PER 8/11/21 NOTICE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Transcript Request Form (Appellant/Cross-Respondent). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826352&onBaseDocumentNumber=21-23394">21-23394</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2021</td><td>Motion</td><td>Filed Appellants/Cross-Respondents' Motion for Extension of Time to File Transcript Request Form.  (DETACHED TRANSCRIPT REQUEST FORM AND FILED SEPARATELY PER ORDER FILED 8/16/21).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826429&onBaseDocumentNumber=21-23469">21-23469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Letter/Incoming</td><td>Filed Letter to Supreme Court Regarding Adding Attorneys to Electronic Service List. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826732&onBaseDocumentNumber=21-23769">21-23769</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk shall detach the transcript request form from the motion filed on August 12, 2021, and file it separately.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826764&onBaseDocumentNumber=21-23801">21-23801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Transcript Request</td><td>Filed Appellants/Cross-Respondents' Request for Transcript of Proceedings. Transcripts requested:  1/27/21 To Court Reporter:  Peggy Isom.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826767&onBaseDocumentNumber=21-23804">21-23804</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Peggy Isom stating that the requested transcripts were delivered.  Dates of transcripts: 01/27/21.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=826855&onBaseDocumentNumber=21-23890">21-23890</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Order/Procedural</td><td>Filed Order to Show Cause and Regarding Briefing.  Cross-appellants shall have 30 days from the date of this order to show cause why their appeals should not be dismissed for lack of jurisdiction.  Appellants/cross-respondents and respondents/cross-respondents may file any replies within 14 days of service of cross-appellants' responses.  Briefing of this matter is suspended pending further order of this court.  appellants/cross-respondents shall have 7 days from the date of this order to inform this court, in writing, who the respondents to their appeal are.  Respondents/cross-appellants and respondents/cross-respondents may file any replies within 7 days of service of appellants' response.  The clerk shall remove Space Adventures Holdings, LLC, as a cross-appellant in this matter.  Should any party wish to make any other changes to the caption, they shall so inform this court, in writing, within 7 days of the date of this order.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=827981&onBaseDocumentNumber=21-24957">21-24957</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Motion</td><td>Filed Respondents/Cross-Appellants Motion to Extend Time to File Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=830965&onBaseDocumentNumber=21-27801">21-27801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Notice/Incoming</td><td>Filed Respondents/Cross-Appellants Robert Walker, Peter Diamandis and Richard Garriott de Cayeux's Joinder to Motion to Extend Time to File Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=830974&onBaseDocumentNumber=21-27810">21-27810</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Certain respondents/cross-appellants have filed a motion for an extension of time to file their response.  The remaining respondents/cross-appellants join the motion and also seek an extension of time to file their response.  Respondents/cross-appellants shall have until October 27, 2021, to file and serve their responses.  Appellants/cross-respondents shall have 7 days from the date of this order to inform this court, in writing, who the respondents to their appeal are.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=832410&onBaseDocumentNumber=21-29229">21-29229</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/22/2021</td><td>Motion</td><td>Filed Appellant/Cross-Resopndents' Motion for Extension of Time to File Response to Order to Show Cause and Regarding Caption.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=833909&onBaseDocumentNumber=21-30589">21-30589</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=834365&onBaseDocumentNumber=21-31017">21-31017</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Motion for Permission to File Late Filing of Joinder to Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=834485&onBaseDocumentNumber=21-31146">21-31146</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2021</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellants' Joinder to Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=834486&onBaseDocumentNumber=21-31147">21-31147</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motions. the motion of respondents/cross-appellants Robert Walker, Peter Diamandis, and Richard Garriott de Cayeux for leave to file a joinder to the October 27, 2021, response to this court's order to show cause is granted.  The joinder was filed on October 28, 2021. Appellants/cross-respondents and respondents/cross-respondents shall have until November 12, 2021, to file and serve any replies to the response. Appellants/cross-respondents have filed an untimely motion for an extension of time to file a response to this court's order to show cause and regarding caption.  The motion is granted to the following extent.  Appellants/cross-respondents shall have 7 days from the date of this order to inform this court, in writing, who the respondents to their appeal are. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=834849&onBaseDocumentNumber=21-31506">21-31506</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2021</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=835518&onBaseDocumentNumber=21-32099">21-32099</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Certificate of Service of: Appellant's Amended Docketing Statement Civil Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=835629&onBaseDocumentNumber=21-32208">21-32208</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2021</td><td>Motion</td><td>Filed Appellants'/Cross-Respondents' Reply to Respondents'/Cross-Appellants' Response and Joinder to the Response to The Court's Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=835829&onBaseDocumentNumber=21-32388">21-32388</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Order/Procedural</td><td>Filed Order Dismissing Cross-appeals. The cross-appeals are dismissed.  The clerk shall modify the caption of this appeal consistent with the caption on this order.  Briefing of the appeal is reinstated.   Appellants shall have 60 days from the date of this order to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=838142&onBaseDocumentNumber=21-34640">21-34640</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/13/2021</td><td>Motion</td><td>Filed Motion to File Part of Appellants' Appendix Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=838952&onBaseDocumentNumber=21-35435">21-35435</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/14/2021</td><td>Motion</td><td>Filed Motion to Correct Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=839148&onBaseDocumentNumber=21-35624">21-35624</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2021</td><td>Order/Procedural</td><td>Filed Order. Appellants' motion to modify the caption of this appeal by adding Space Adventures Holdings, LLC as a respondent is granted.  The clerk shall modify the caption of this matter consistent with the caption on this order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=839458&onBaseDocumentNumber=21-35849">21-35849</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellants have filed a motion for leave to file a portion of their appendix under seal.  The motion is denied without prejudice because appellants have not provided this court with copies of the documents it wishes to file under seal.  Appellants may file a renewed motion to seal within 7 days of the date of this order. Any renewed motion must be accompanied by copies of the documents appellant seeks to file under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=840464&onBaseDocumentNumber=21-36841">21-36841</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Appellant's Renewed Motion to File Part of Appellants' Appendix Under Seal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion in Part.  Appellant's renewed motion to file documents under seal is granted to the following extent.  The clerk shall file the unredacted document, received on December 30, 2021, as well as exhibits E-J thereto, under seal.  The clerk shall detach exhibits A-D and K from the document received on December 30, 2021, and return them unfiled.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=842890&onBaseDocumentNumber=22-01891">22-01891</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Appendix</td><td>Filed SEALED Appellant's Appendix  - Unredacted documents with exhibits E - J.</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Opening Brief and Appendix due:  February 18, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=844854&onBaseDocumentNumber=22-03722">22-03722</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2022</td><td>Appendix</td><td>Filed Appellants' Appendix, Vols. I - IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=846817&onBaseDocumentNumber=22-05566">22-05566</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=846820&onBaseDocumentNumber=22-05569">22-05569</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Answering Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=850277&onBaseDocumentNumber=22-08912">22-08912</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Respondent's Answering Briefs due: April 20, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=850364&onBaseDocumentNumber=22-08954">22-08954</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2022</td><td>Motion</td><td>Filed Respondent's Unopposed Joint Motion for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=854159&onBaseDocumentNumber=22-12572">22-12572</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents' answering briefs due: May 20, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=855822&onBaseDocumentNumber=22-14136">22-14136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Motion</td><td>Filed Respondent's Unopposed Joint Motion for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=857955&onBaseDocumentNumber=22-16172">22-16172</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondents shall have until June 20, 2022, to file and serve the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=859013&onBaseDocumentNumber=22-17207">22-17207</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/20/2022</td><td>Brief</td><td>Filed Respondents' Answering Brief (Redacted).  (STRICKEN PER ORDER FILED 7/6/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Motion</td><td>Filed Respondents' Motion to File Under Seal (Answering Brief and Supplemental Appendix). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=862401&onBaseDocumentNumber=22-19489">22-19489</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk shall strike the answering brief filed on June 20, 2022.  The clerk shall file the redacted answering brief, included as Exhibit B to the answering brief received on June 27, 2022, on this court's public docket. The clerk shall file the unredacted answering brief received on June 27, 2022, under seal.  The clerk shall return the second copy of the unredacted answering brief, included as Exhibit A to the brief, unfiled.  The clerk shall file the redacted supplemental appendix, included as Exhibit D to the brief, on this court's public docket.  The clerk shall file the unredacted supplemental appendix, included as Exhibit C, under seal.  Appellants shall have 30 days from the date of this order to file and serve a reply brief, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=864193&onBaseDocumentNumber=22-21192">22-21192</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Brief</td><td>Filed Respondents' Redacted Answering Brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=864200&onBaseDocumentNumber=22-21199">22-21199</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Appendix</td><td>Filed Respondents' Redacted Appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=864210&onBaseDocumentNumber=22-21209">22-21209</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Brief</td><td>Filed Respondents' Unredacted Answering Brief (SEALED).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Appendix</td><td>Filed Respondents' Unredacted Appendix (SEALED)  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=866344&onBaseDocumentNumber=22-23269">22-23269</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Reply Brief due: September 6, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=866348&onBaseDocumentNumber=22-23273">22-23273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2022</td><td>Notice/Incoming</td><td>Filed Notice of Change of Law Firm Name and Address. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=869019&onBaseDocumentNumber=22-25773">22-25773</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Brief</td><td>Filed Appellant's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=871260&onBaseDocumentNumber=22-27921">22-27921</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/06/2022</td><td>Appendix</td><td>Filed Appendix to Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=871261&onBaseDocumentNumber=22-27922">22-27922</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." fn4 [The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.] RP/LS/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=883231&onBaseDocumentNumber=22-39374">22-39374</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/09/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=885581&onBaseDocumentNumber=23-00628">23-00628</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on January 10, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=887789&onBaseDocumentNumber=23-00628">23-00628</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on January 11, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61194&csIID=61194&deLinkID=887790&onBaseDocumentNumber=23-00628">23-00628</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61194&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

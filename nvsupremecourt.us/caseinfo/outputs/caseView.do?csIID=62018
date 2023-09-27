@@ -1,0 +1,949 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83261: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=8D90F0F17B321F22E5D5824A07FA3FF5">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62018">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83261</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LINCICOME, JR. VS. SABLES, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55963">79152</a>, <a href="/public/caseView.do?csIID=56154">79152-COA</a>, <a href="/public/caseView.do?csIID=63356">84238</a>, <a href="/public/caseView.do?csIID=66194">86324</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Lyon Co. - Third Judicial District - 18-CV-01332</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Lee</td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>None for Justice Lee</td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>08/03/2021 / Levitt, Lansford</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>10/14/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Albert Ellis Lincicome, Jr.</td><td valign="top">Justin M. Clouser
+							(Clouser Hempen Wasick Law Group, Ltd.)
+						<br>Michael G. Millward
+							(Millward Law, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Vicenta Lincicome</td><td valign="top">Justin M. Clouser
+							(Clouser Hempen Wasick Law Group, Ltd.)
+						<br>Michael G. Millward
+							(Millward Law, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">1900 Capital Trust II, By U.S. Bank Trust National Association</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bank of America, N.A.</td><td valign="top">Scott R. Lachman
+							(Akerman LLP/Las Vegas)
+						<br>Paige Leslie Anne Magaster
+							(Akerman LLP/Las Vegas)
+						<br>Melanie D. Morgan
+							(Akerman LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Fay Servicing, LLC</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">MCM-2018-NPL2</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Newrez LLC</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Prof-2013-M4 Legal Title Trust</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Sables, LLC</td><td valign="top">Shadd A. Wade
+							(ZBS Law, LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">U.S. Bank, National Association</td><td valign="top">Darren T. Brenner
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						<br>Ramir M. Hernandez
+							(Wright, Finlay &amp; Zak, LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/23/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Millward Law.  Check no. 1654. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/23/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=824236&onBaseDocumentNumber=21-21365">21-21365</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/23/2021</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=824242&onBaseDocumentNumber=21-21371">21-21371</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/23/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=824245&onBaseDocumentNumber=21-21374">21-21374</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Melanie D. Morgan and Scott R. Lachman of Akerman LLP file this notice of appearance for Respondent Bank of America, N.A.). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=824499&onBaseDocumentNumber=21-21626">21-21626</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=825092&onBaseDocumentNumber=21-22211">21-22211</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Modification of Caption. Parties are advised to notify this office in writing within 10 days if the caption as modified does not accurately reflect the status of the parties. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=825377&onBaseDocumentNumber=21-22493">21-22493</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Lansford W. Levitt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=825451&onBaseDocumentNumber=21-22567">21-22567</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals (REJECTED PER NOTICE ISSUED 08/16/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=826705&onBaseDocumentNumber=21-23742">21-23742</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service on Settlement Judge.  Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=826709&onBaseDocumentNumber=21-23746">21-23746</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time (Docketing Statement Civil Appeals).  (DETACHED DOCKETING STATEMENT AND FILED SEPARAETLY PER ORDER 8/18/21).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=826959&onBaseDocumentNumber=21-23994">21-23994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2021</td><td>Notice/Incoming</td><td>Filed Proof of Service (Docketing Statement Civil Appeals). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=826976&onBaseDocumentNumber=21-24011">21-24011</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk of this court shall detach the docketing statement from the motion filed on August 17, 2021, and file it.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=827027&onBaseDocumentNumber=21-24056">21-24056</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=827030&onBaseDocumentNumber=21-24059">21-24059</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Paige Magaster of the law firm of Akerman LLP files this notice of appearance for respondent Bank of America, N.A.). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=828132&onBaseDocumentNumber=21-25106">21-25106</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (John T. Steffen, Esq. and Brenoch R. Wirthlin, Esq., of Hutchison &amp; Steffen, PLLC and Casey J. Nelson, Esq. of Wedgewood, LLC, file this notice of appearance for respondent Breckenridge Property Fund 2016, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=829185&onBaseDocumentNumber=21-26087">21-26087</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=829599&onBaseDocumentNumber=21-26491">21-26491</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=830666&onBaseDocumentNumber=21-27509">21-27509</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/20/18, 04/15/19 and 02/04/20. To Court Reporter: None listed (REJECTED PER NOTICE ISSUED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=831912&onBaseDocumentNumber=21-28734">21-28734</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/20/18, 04/15/19 and 02/04/20. To Court Reporter: Capitol Reporters. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=832048&onBaseDocumentNumber=21-28869">21-28869</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Michel Loomis stating that the requested transcripts were delivered.  Dates of transcripts: 11/20/18, 4/15/19, and 2/4/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=834338&onBaseDocumentNumber=21-31008">21-31008</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840141&onBaseDocumentNumber=21-36523">21-36523</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief. (REJECTED PER NOTIE ISSUED 12/28/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 1-6. (REJECTED PER NOTICE ISSUED 12/28/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/24/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 9-13. (REJECTED PER NOTICE ISSUED 12/28/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/24/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 14-18. (REJECTED PER NOTICE ISSUED 12/28/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/24/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 7-8. (REJECTED PER NOTICE ISSUED 12/28/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840381&onBaseDocumentNumber=21-36761">21-36761</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Bank of America, N.A.'s Limited Opposition to Breckenridge Property Fund 2016, LLC's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840751&onBaseDocumentNumber=21-37126">21-37126</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Motion to Extend Time for Filing Appellants' Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840772&onBaseDocumentNumber=21-37146">21-37146</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief.  (STRICKEN PER ORDER FILED 1/19/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Appellants' Opening Brief, Vols. 1-6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840774&onBaseDocumentNumber=21-37148">21-37148</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Appellants' Opening Brief, Vols. 7-10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840775&onBaseDocumentNumber=21-37149">21-37149</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Appellants' Opening Brief, Vols. 16-18. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840776&onBaseDocumentNumber=21-37150">21-37150</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Appellants' Opposition to Breckenridge's Motion to Dismiss Appeal. (REJECTED PER NOTICE ISSUED 12/30/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840796&onBaseDocumentNumber=21-37170">21-37170</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/30/2021</td><td>Notice/Incoming</td><td>Filed U.S. Bank Trust, Shellpoint, and Fay's Joinder to Bank of America's Limited Opposition to Breckenridge Property Fund 2016, LLC's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840837&onBaseDocumentNumber=21-37210">21-37210</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2021</td><td>Motion</td><td>Filed Appellants' Opposition to Breckenridge's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840842&onBaseDocumentNumber=21-37215">21-37215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/30/2021</td><td>Appendix</td><td>Filed Appellants' Opening Appendix, Vol. 11-15. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840863&onBaseDocumentNumber=21-37236">21-37236</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/31/2021</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Omnibus Reply in Support of Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=840908&onBaseDocumentNumber=21-37278">21-37278</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Partially Dismissing Appeal.  Breckenridge's motion to dismiss is granted, and this appeal is dismissed as it relates to Breckenridge Property Fund 2016, LLC.  This appeal may proceed as to the remaining respondents.  The opening brief and appendix were filed on December 29 and 30, 2021.  The clerk of this court shall strike the opening brief filed on December 29, 2021.  Appellants shall have 14 days from the date of this order to file an opening brief that complies with this court's formatting rules and this order.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=842880&onBaseDocumentNumber=22-01881">22-01881</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=844748&onBaseDocumentNumber=22-03617">22-03617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2022</td><td>Appendix</td><td>Filed Appellants' Opening Brief, Vols. 1-6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=844749&onBaseDocumentNumber=22-03618">22-03618</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Appendix</td><td>Filed Appellants' Opening Brief, Vols. 7-10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=844750&onBaseDocumentNumber=22-03619">22-03619</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2022</td><td>Appendix</td><td>Filed Appendix to Appellants' Opening Brief, Vols. 11-14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=844751&onBaseDocumentNumber=22-03620">22-03620</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Appendix</td><td>Filed Appendix to Appellants' Opening Brief, Vols. 15-18. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=844752&onBaseDocumentNumber=22-03621">22-03621</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents who are represented by Wright Finlay &amp; Zak, LLP and Akerman LLP's answering brief due: March 18, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=847165&onBaseDocumentNumber=22-05911">22-05911</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2022</td><td>Brief</td><td>Filed Respondent Sables, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=847971&onBaseDocumentNumber=22-06696">22-06696</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2022</td><td>Motion</td><td>Filed Respondent Bank of America's Motion to Extend Time to File Answering Brief (First Motion). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=849660&onBaseDocumentNumber=22-08309">22-08309</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2022</td><td>Notice/Incoming</td><td>Filed Joinder to Bank of America, N.A.'s Motion to Extend Time to Filing Answering Brief (First Motion). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=849799&onBaseDocumentNumber=22-08443">22-08443</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Respondent Bank of America has filed a motion for a second extension of time to file the answering brief. The remaining respondents, with the exception of Sables, LLC, have filed a joinder to the motion. The motion is denied. Respondents' answering brief due: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=851196&onBaseDocumentNumber=22-09727">22-09727</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's reply brief to respondent Sables, LLC's answering brief due: April 15, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=851516&onBaseDocumentNumber=22-10040">22-10040</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Brief</td><td>Filed Respondents' Prof-2013 M4-Legal Title Trust, by U.S. Bank, National Association, as Legal Title Trustee, Fay Servicing LLC, and Shellpoint Mortgage Servicing, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=852037&onBaseDocumentNumber=22-10547">22-10547</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2022</td><td>Brief</td><td>Filed Respondent's (Bank of America, N.A.) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=852157&onBaseDocumentNumber=22-10665">22-10665</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/15/2022</td><td>Brief</td><td>Filed Appellants' Reply Brief to Sables, LLC Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=853618&onBaseDocumentNumber=22-12051">22-12051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellants' Reply Briefs due:  May 19, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=854902&onBaseDocumentNumber=22-13303">22-13303</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Brief</td><td>Filed Appellants' Reply Brief to Bank of America; Prof-2013 M4-Legal Title Trust, by U.S. Bank, National Association, as Legal Title Trustee, Fay Servicing LLC, and Shellpoint Mortgage Servicing, LLC's  . (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=857682&onBaseDocumentNumber=22-15976">22-15976</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2022</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision to the Northern Nevada Panel as of the date of this order on the briefs filed herein. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=875912&onBaseDocumentNumber=22-32397">22-32397</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Other</td><td>Justice Patricia Lee disqualified from participation in this matter. Disqualification Reason: Law Firms</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." fn3 [The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.] NNP22 - EC/KP/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=884705&onBaseDocumentNumber=22-40822">22-40822</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Post-Judgment Petition</td><td>Filed Appellants' Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=886608&onBaseDocumentNumber=23-01609">23-01609</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from Michael G. Millward. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/31/2023</td><td>Order/Procedural</td><td>Filed Order/Answer Rehearing. Order/Answer Rehearing. Answer due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=888008&onBaseDocumentNumber=23-02928">23-02928</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/01/2023</td><td>Motion</td><td>Filed Respondents' Joint Motion to Extend Time to File Response to Petition for Rehearing. (First Motion)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=888218&onBaseDocumentNumber=23-03135">23-03135</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Breckenridge Property Fund 2016, LLC) Notice of Appearance for Robert E. Werbicky. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=888305&onBaseDocumentNumber=23-03220">23-03220</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents Prof-2013-M4 Legal Title Trust by U.S. Bank, N.A.; NewRez, LLC d/b/a Shellpoint Mortgage Servicing, LLC; Fay Servicing, LLC; and Bank of America, N.A. have filed a joint motion for an extension of time to file an answer to appellants' petition for rehearing.  Cause appearing, the motion is granted. These respondents shall have until March 14, 2023, to file an serve their answers to the petition for rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=888477&onBaseDocumentNumber=23-03375">23-03375</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Post-Judgment Petition</td><td>Filed Respondents' (Prof-2013 M4-Legal Title Trust, National Association, Fay Servicing and NewRez Shellpoint Mortgage) Answer to Petition for Rehearing. (REJECTED PER NOTICE ISSUED 3/14/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Answer to Petition. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=893107&onBaseDocumentNumber=23-07861">23-07861</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Bank of America, N.A.) Joinder to Answer to Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=893111&onBaseDocumentNumber=23-07865">23-07865</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2023</td><td>Post-Judgment Petition</td><td>Filed Respondents' (Prof-2013 M4-Legal Title Trust, National Association, Fay Servicing and NewRez Shellpoint Mortgage) Answer to Petition for Rehearing. (REJECTED PER NOTICE ISSUED 3/14/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Answer to Petition. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=893348&onBaseDocumentNumber=23-08101">23-08101</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2023</td><td>Post-Judgment Petition</td><td>Filed Respondents' (Prof-2013 M4-Legal Title Trust, National Association, Fay Servicing and NewRez Shellpoint Mortgage) Answer to Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=893352&onBaseDocumentNumber=23-08105">23-08105</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/20/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). EC/KP/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=893714&onBaseDocumentNumber=23-08458">23-08458</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/03/2023</td><td>Post-Judgment Petition</td><td>Filed Appellant's Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=895523&onBaseDocumentNumber=23-10193">23-10193</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying En Banc Reconsideration. Having considered the petition on file herein, we have concluded that en banc reconsideration is not warranted. NRAP 40A.  Accordingly, we "ORDER the petition DENIED."  EN BANC (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=896938&onBaseDocumentNumber=23-11566">23-11566</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=900120&onBaseDocumentNumber=23-14616">23-14616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/12/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on May 19, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=904222&onBaseDocumentNumber=23-14616">23-14616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/09/2023</td><td>Brief</td><td>Filed Appellants' Opening Brief (REJECTED PER NOTICE FILED ON 9/11/2023). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62018&csIID=62018&deLinkID=915648&onBaseDocumentNumber=23-29555">23-29555</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62018&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

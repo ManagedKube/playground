@@ -1,0 +1,739 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86696: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=E65503A25D089FC80F447578A680550C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66706">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86696</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MCCRAKEN VS. DIST. CT. (SCHULTZ)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A811918</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Answer to Writ Petition Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">C. M.</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Chad Jensen</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Dakota Routh</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">E. R.</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Garnette McCracken</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">K. J.</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Kristen Woods</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Kylie Thompson</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">M. C.</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Mackenzie Thompson</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Madison Thompson</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Victoria Cooper</td><td valign="top">Bre'Ahn Brooks
+							(H&amp;P Law, PLLC)
+						<br>Marjorie L. Hauf
+							(H&amp;P Law, PLLC)
+						<br>Matthew G. Pfau
+							(H&amp;P Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Brianna Robinson</td><td valign="top">Craig R. Anderson
+							(Marquis Aurbach Chtd.)
+						<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Clark County School District</td><td valign="top">Craig R. Anderson
+							(Marquis Aurbach Chtd.)
+						<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Jeffrey Schultz</td><td valign="top">Craig R. Anderson
+							(Marquis Aurbach Chtd.)
+						<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Wendy Phelps</td><td valign="top">Craig R. Anderson
+							(Marquis Aurbach Chtd.)
+						<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kathleen E. Delaney</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/21/2023</td><td>Overdue</td><td>Reply</td><td>Petitioner</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Marjorie L. Hauf. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2023</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=903449&onBaseDocumentNumber=23-17811">23-17811</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (PER 8/28/23 ORDER, PAGES 34-145 FILED UNDER SEALED) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=903452&onBaseDocumentNumber=23-17814">23-17814</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (PER 8/28/23 ORDER PAGES 202-283 FILED UNDER SEALED) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=903453&onBaseDocumentNumber=23-17815">23-17815</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2023</td><td>Order/Procedural</td><td>Filed Order/Answer Writ Petition. Answer due: 28 days. Petitioners shall have 14 days from service of the answer to file and serve any reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=905615&onBaseDocumentNumber=23-19875">23-19875</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interests' answer to petition for writ due: August 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=909213&onBaseDocumentNumber=23-23298">23-23298</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2023</td><td>Motion</td><td>Filed Real Party in Interests' (Jeffrey Schultz, Wendy Phelps, Brianna Robinson and Clark County School District) Motion for Extension of Time to File Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=910929&onBaseDocumentNumber=23-24953">23-24953</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2023</td><td>Motion</td><td>Filed Real Parties in Interest Motion to Seal Portions of the Petitioners' Appendix and Appendix of Real Parties in Interest - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=910932&onBaseDocumentNumber=23-24956">23-24956</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2023</td><td>Appendix</td><td>Filed Real Party in Interests' Appendix of Real Parties in Interest  Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=910933&onBaseDocumentNumber=23-24957">23-24957</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Real Parties in Interest Motion to Exceed Word Count Limitation for Their Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=911966&onBaseDocumentNumber=23-25973">23-25973</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Petition/Writ</td><td>Filed Real Parties in Interest Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=911968&onBaseDocumentNumber=23-25975">23-25975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2023</td><td>Motion</td><td>Filed Petitioners' Motion for an Extension of Time to File a Reply to Real Parties in Interest Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=913366&onBaseDocumentNumber=23-27337">23-27337</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The unopposed motion of real parties in interest to seal a portion of petitioner's appendix and to file a portion of real parties in interest's appendix under seal is granted. The clerk shall seal pages 34-79, 81-145, 202-283 of petitioner's appendix filed on June 6, 2023. The clerk shall file volume1 of real parties in interest's appendix, received on August 8, 2023, under seal. Extraordinary and compelling circumstances having been shown, real parties in interest's motion for a second extension of time to file the answer is granted. Real parties in interest's motion for leave to file an answer in excess of the type-volume limitation is also granted. Real parties in interest's answer was filed on August 10, 2023. Petitioners' motion for an extension of time to file a reply in support of the petition is granted. Petitioners shall have until September 7, 2023, to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=913974&onBaseDocumentNumber=23-27911">23-27911</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Filed Real Parties in interest (SEALED) Appendix to Answer to Writ. Vol.1 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Petitioners' (SEALED) pgs 34-145 to Appendix to Petition for Writ. Vol.1 (PER 8/28/23 ORDER FILE UNDER SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Filed Petitioners' (SEALED) pgs 202-283 to Appendix to Petition for Writ. Vol.2 (PER 8/28/23 ORDER FILE UNDER SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/05/2023</td><td>Motion</td><td>Filed Petitioners' Motion to Extend Time to File Reply to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=915072&onBaseDocumentNumber=23-28990">23-28990</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Petitioners' motion for a second extension of time to file a reply to real parties in interest's answer to petition for writ of mandamus is granted.  NRAP 26(b)(1)(A).  Petitioners shall have until September 21, 2023, to file and serve a reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=916097&onBaseDocumentNumber=23-29997">23-29997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2023</td><td>Motion</td><td>Filed Petitioner's Motion For An Extension Of Time To File A Reply To Real Parties In Interest Jeffrey Schultz, Wendy Phelps, Brianna Robinson And Clark County School District's Answer To Petition For Writ Of Mandamus (Third Written Request)(SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66706&csIID=66706&deLinkID=916842&onBaseDocumentNumber=23-30686">23-30686</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66706&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

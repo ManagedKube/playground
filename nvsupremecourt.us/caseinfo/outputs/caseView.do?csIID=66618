@@ -1,0 +1,1743 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86624: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=ACEC2526F46EF9787FDA7FBAB3F4453B">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66618">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86624</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">HOUSTON VS. LOMBARDO</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=66584">86600</a>, <a href="/public/caseView.do?csIID=66585">86601</a>, <a href="/public/caseView.do?csIID=66586">86602</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A865442</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Bell, Bulla, Cadish, Gibbons, Herndon, Parraguirre, Pickering, Silver, Stiglich</td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing in Progress</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Matthew Travis Houston</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">"Will" @ Sedgwick</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">A.L.A.</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">A.S.A.</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Aaron D. Ford</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Abbi Silver</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Abigail Fiala</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Alexander G. Chen</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Alex Bassett</td><td valign="top">Alexander B. Bassett
+							(Clark County Public Defender)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Amanda Ingersoll</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Amanda White</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Amber N. King</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Andrea Epping</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Andrew Flahive</td><td valign="top">Andrew S. Flahive
+							(Flahive &amp; Associates, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Andrew Lococo</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Andrew P. Gordon</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Ann Marie Dunn</td><td valign="top">Ann M. Dunn
+							(Clark County District Attorney)
+						<br>Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Anthony M. Goldstein</td><td valign="top">Anthony M. Goldstein
+							(Law Offices of Anthony M. Goldstein)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Benjamin E. Abbott</td><td valign="top">Benjamin Eugene Abbott
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bernard H. Little</td><td valign="top">Benard H. Little
+							(Clark County Public Defender)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bernstein &amp; Poisson, LLP</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bisgaard</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bonnie A. Bulla</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brenda Weksler</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brian M. Boyer</td><td valign="top">Brian M. Boyer
+							(Bernstein &amp; Poisson, LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brian Moonin</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brian P. Clark</td><td valign="top">Brian P. Clark
+							(Clark McCourt, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brian Williams</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brisbois</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Brittany Amoroso</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">C. Fondi</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">C. McCarroll</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Calvin Johnson</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Capitol Police</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Capitol Police Montero</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Carolyn Goodman</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Cassondra Diez</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Charles Daniels</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Chaunte Pleasant</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Choices Group - Bridge Counseling</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Christina Greene</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Christopher D. Burk</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">City of Maquoketa</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Clark County Dentention Center</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Clark County District Attorney's Office</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Clark McCourt, LLC</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Collette Martin</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Craig Mueller</td><td valign="top">Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Crystal Eller</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Cynthia Moleres</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">D. Resch</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Daniel J. Albregts</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Daniel L. Schwartz</td><td valign="top">Daniel L. Schwartz
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas - Sahara Ave.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Darin F. Imlay</td><td valign="top">Darin F. Imlay
+							(Clark County Public Defender)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">David Barker</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">David M. Jones</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Debra K. Kemp</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Dennis Wayne Houston</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Diane Ferrante</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Douglas W. Herndon</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Dr. Unknown</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Draco Wilcovich</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">E. Del Padre</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elissa Cadish</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elizabeth A. Brown</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elizabeth Gonzalez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Ellie Roohanni</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Encore Event Services</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Erica Tosh, Esq.</td><td valign="top">Erica L. Tosh
+							(Workers Comp Lawyers of Nevada)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Evelyn R. Goddard</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Freeman Companies</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Gene Porter</td><td valign="top">Gene T. Porter
+							(Private Trials, Inc.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">GENEX - Sedgwick CMS</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Gerri Lynn Hardcastle</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Gerri L. Hardcastle
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">GGRM Illyana</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Haley Beza</td><td valign="top">Haley Ann Jaramillo
+							(Clark County District Attorney)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Harmon Letizia</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Health South</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Heather Ungermann</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">High Desert State Prison</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">I.A.T.S.E. Local No 720</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">J. Carroll</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jack Bernstein</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jaimie A. Stilz</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Jaimie Stilz
+							(Attorney General/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James A. Puccinelli</td><td valign="top">James Andrew Puccinelli</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James Crockett</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James Dzurenda</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James H. Cocoran</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James Scally</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James W. Hardesty</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jarred Heath Thompson</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jason Barrus, Esq.</td><td valign="top">Jason W. Barrus
+							(Law Office of Jason W. Barrus, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jason Frierson</td><td valign="top">Jason M. Frierson
+							(United States Attorney, District of Nevada)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jason Lewis</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Javier Garcia</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jeffrey Howell</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jennifer A. Dorsey</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jennifer P. Togliatti</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jeremy Wood</td><td valign="top">Jeremy B. Wood
+							(Clark County Public Defender)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jerome T. Tao</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jeromy Bean</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jessica Flores</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Joe Lombardo</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">John Deere Company</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jonathan Shockley</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Joseph Lombardo</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Julie Williams</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Karen Schwartz</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Karlie Gabour</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kayleigh Lopatic</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kelsey Bernstein</td><td valign="top">Kelsey L. Bernstein</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kristie Cury</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kristina A. Rhoades</td><td valign="top">Kristina A. Rhoades
+							(Clark County District Attorney)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kristina Pickering</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Larry Phillips</td><td valign="top">Lawrence R. Phillips
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Fire and Rescue</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Justice Court</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Recovery Center</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Laura Goodman</td><td valign="top">Laura J. Rose
+							(Clark County District Attorney)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lewis</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lidia Stiglich</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lillian R. McMorris</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lina S. Sakalauskas</td><td valign="top">Lina S. Sakalauskas
+							(Nevada Attorney for Injured Workers/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Linda Hamilton</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Linda Marie Bell</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lisa M. Anderson</td><td valign="top">Lisa M. Anderson
+							(GGRM Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LMPD House Arrest Officer Keyser</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lucinda Rick Turnis</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lucreda Lavonna Schoenherr</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lukas B. McCourt</td><td valign="top">Lukas B. McCourt
+							(Clark McCourt, LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LVMPD David Kelly</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LVMPD F. Edge</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LVMPD House Arrest Unit</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LVMPD Robert Jones</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">M. Kent Kozal, Esq.</td><td valign="top">Marcus K. Kozal
+							(Adras &amp; Altig Attorneys at Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">M. Mercer</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">M. Mulligan</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mandalay Bay Corp</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mary Kay Holthus</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Marylou Donnelly</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Melisa De La Garza</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michael P. Gibbons</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michael Ray Knight</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michael Villani</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michael Villani</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Michelle McCarthy</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Miranda M. Du</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mr. Moskal</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nancy A. Becker</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Naphcare</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Baker</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Childers</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Hernandez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Jefferson</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Padia</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Smith</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Turnis</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Caseworker Warner</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Alverez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Brown</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Olsen</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Penaya</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Sage</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO SGT Sanchez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC CO Vasquez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC LT CO Barth</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC LT Oltevera</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Movement Transport CO Nielson</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Nevada Division of Forestry</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Senior CO Ashcraft</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Senior CO Curry</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Senior CO Livingston</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC Senior CO Martinez</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NDOC TLVCC LT Carlman</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Attorney for Injured Workers</td><td valign="top">Evan B. Beavers
+							(Nevada Attorney for Injured Workers/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Community Enrichment Program</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Department of Administration Hearing and Appeals Division</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Department of Corrections</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nicholas Ventola</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nicole Garcia</td><td valign="top">Tyler N. Ure
+							(Murchison &amp; Cumming, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nima Afshar</td><td valign="top">Nima Afshar</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">NueroRestorative</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Oasis Financial</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Oasis Legal Finance, LLC</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Office of the Attorney General</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Old Republic Insurance Company</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Options Monitoring Program</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Preferred Capital Funding</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Presentation Audio Visual Services</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Redenta Blacic</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Rody H. Scott</td><td valign="top">Lukas B. McCourt
+							(Clark McCourt, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Ronald Oliver</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Rosemarie McMorris-Alexander</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Ryan M. Kerbow</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Sabina Demelas</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Scott Poisson</td><td valign="top">Joseph Garin
+							(Lipson Neilson P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">SCRAM</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Sedgwick CMS</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Seleste A. Wyse</td><td valign="top">Seleste A. Wyse</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Smith</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Stacey Ledesma</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">State Bar of Nevada</td><td valign="top">Daniel Mink Hooge
+							(State Bar of Nevada/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">State of Nevada Office of Consumer Health Assistance</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Steven B. Wolfson</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Steven Paddock</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Steve Sisolak</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Supreme Court of Nevada</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Taleen Pandukht</td><td valign="top">Lisa V. Logsdon
+							(Clark County District Attorney/Civil Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Theresa Dodson</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Tierra Danielle Jones</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Tyler Ure</td><td valign="top">Tyler N. Ure
+							(Murchison &amp; Cumming, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">United States District Court</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">University of Iowa Hospital</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">V. Cam Farenbach</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Velvet Wood</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Vincent S. Angotti</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Virgina F. Eichhacker</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">W. Jake Merback</td><td valign="top">William Jake Merback
+							(Clark County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/22/2023</td><td>Overdue</td><td>Opening Brief/No Appendix</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2023</td><td>Filing Fee</td><td>Appeal Filing Fee Waived. In Forma Pauperis. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=902062&onBaseDocumentNumber=23-16451">23-16451</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2023</td><td>Other</td><td>Senior Justice Mark Gibbons disqualified from participation in this matter. Disqualification Reason: Lawyers and Judges. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2023</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=902064&onBaseDocumentNumber=23-16453">23-16453</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Other</td><td>Justice Linda Bell disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Other</td><td>Justice Elissa Cadish disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Other</td><td>Judge Michael P. Gibbons disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Other</td><td>Justice Douglas W. Herndon disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Other</td><td>Justice Ron Parraguirre disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Other</td><td>Justice Kristina Pickering disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Other</td><td>Senior Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Other</td><td>Chief Justice Lidia Stiglich disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Other</td><td>Judge Bonnie A. Bulla disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2023</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure for Justice Bell. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=903803&onBaseDocumentNumber=23-18161">23-18161</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document - Motion for Accountability of HDSP Mailroom, HDSP Law Library, and HDSP Chapel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=907993&onBaseDocumentNumber=23-22157">23-22157</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2023</td><td>Motion</td><td>Filed Proper Person's Petition for Rehearing En Banc and Emergency Motion for Accountability of HDSP Mailroom, Law Library, and Chapel, and "The Nevada Office of Consumer Assistance et. al." in Ex Parte (REHEARING FOR THE MOTION FILED ON 7/11/2023). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=909698&onBaseDocumentNumber=23-23767">23-23767</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2023</td><td>Motion</td><td>Filed Proper Person's Motion for Clarification in All Cases of the Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=911477&onBaseDocumentNumber=23-25498">23-25498</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document - Motions for Extension of Time to File Rehearing and  to Reinstate All Briefing Schedules in All Cases. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=911773&onBaseDocumentNumber=23-25788">23-25788</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Transcript Request</td><td>Filed Proper Person's Request for Transcript of Proceedings. Transcripts requested:  9/20/2016 and 9/30/2016 and July 10, 2023-present.  To Court Reporter:  Eighth District Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=911882&onBaseDocumentNumber=23-25889">23-25889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Reinstate All Briefings and Motion to Appoint Counsel.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=911906&onBaseDocumentNumber=23-25913">23-25913</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Appoint Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=911918&onBaseDocumentNumber=23-25925">23-25925</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2023</td><td>Order/Procedural</td><td>Filed Order.No cause appearing, appellant's "Emergency Motion for Accountability of HDSP Mailroom, HDSP Law Library and HDSP Chapel as Petition for Rehearing En Banc, Joinder of complaint, Joinder of Appeal and Meritorious Intervention," filed in this matter on July 11, 2023, is denied. The "Petition for Rehearing En Banc and Emergency Motion for Accountability of HDSP Mailroom, Law Library, and Chapel, and 'The Nevada Office of Consumer Assistance et. al.' in Ex Parte," filed on July 25, 2023, is likewise denied. Appellant, who is proceeding in forma pauperis, has filed a transcript request form. At this stage of the proceedings, this court is unable to determine which transcripts, if any, are necessary for this court's review on appeal, and therefore, the court declines to order the preparation of the requested transcripts at this time. Appellant has filed a motion for clarification asking about the deadlines for filing documents. Appellant is advised that the informal opening brief for pro se parties is due by September 22, 2023. The clerk shall provide appellant with a copy of the docket sheet. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=912094&onBaseDocumentNumber=23-26098">23-26098</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motions and to File Document. Appellant has filed a "Motions [sic] for Extension of Time to File Rehearing and to Reinstate All Briefing Schedules," a "Motion to Reinstate All Briefings and Motion to Appoint Counsel," and another motion to appoint counsel. No cause appearing, the motions are denied. On May 25, 2023, the clerk of this court issued a notice regarding deadlines to file documents in this appeal.  Pursuant to that notice, appellant's docketing statement was due to be filed on or before June 15, 2023.  To date, appellant has failed to file the docketing statement.  Appellant shall have 14 days from the date of this order to file and serve the docketing statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=913123&onBaseDocumentNumber=23-27103">23-27103</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2023</td><td>Motion</td><td>Filed Proper Person's Motion for the Appointment of Standby Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=913145&onBaseDocumentNumber=23-27125">23-27125</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2023</td><td>Other</td><td>Filed Returned Mail - Order filed 08/11/23, addressed to Rosemarie McMorris-Alexander. Per USPS, "Return to Sender, Vacant, Unable to Forward." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=913524&onBaseDocumentNumber=23-27493">23-27493</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a motion requesting the appointment of appellate or standby counsel. The motion is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=913899&onBaseDocumentNumber=23-27865">23-27865</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2023</td><td>Other</td><td>Filed Returned Mail - Order Filed 08/11/23, addressed to Diane Ferrante. Per USPS "Return to Sender, Addressee Unknown." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=914400&onBaseDocumentNumber=23-28332">23-28332</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2023</td><td>Other</td><td>Filed Returned Mail - Order Denying Motions and to File Document filed 08/18/23, addressed to Rosemarie McMorris-Alexander. Per USPS "Return to Sender, Undeliverable, Unable to Forward". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=914402&onBaseDocumentNumber=23-28334">23-28334</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2023</td><td>Other</td><td>Filed Returned Mail - Order Denying Motions and to File Document Filed 08/18/23, addressed to Diane Ferrante. Per USPS "Return to Sender, Undeliverable, Unable to Foward." (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=914818&onBaseDocumentNumber=23-28739">23-28739</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2023</td><td>Docketing Statement</td><td>Filed Proper Person's Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=915137&onBaseDocumentNumber=23-29055">23-29055</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2023</td><td>Motion</td><td>Filed Proper Person's Motion for Oral Argument. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=915436&onBaseDocumentNumber=23-29349">23-29349</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Appoint Counsel. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=915438&onBaseDocumentNumber=23-29351">23-29351</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2023</td><td>Other Incoming Document</td><td>Filed Proper Person Document - Objections to Chief Justice and Magistrate Judge's Report and Recommendation and Petition for Rehearing as a Supplemental Brief. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66618&csIID=66618&deLinkID=917625&onBaseDocumentNumber=23-31443">23-31443</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66618&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

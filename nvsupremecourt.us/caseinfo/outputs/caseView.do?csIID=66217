@@ -1,0 +1,604 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86347: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=E55A003F47139EF912D1AD803350EF02">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66217">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86347</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">KEMP VS. TURQUEZA (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D654476</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Fast Track Child Custody</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Herman Christopher Kemp</td><td valign="top">Marshal S. Willick
+							(Willick Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Flordelaine Twinkle Centeno Turqueza</td><td valign="top">Emily M. McFarling
+							(McFarling Law Group)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=895208&onBaseDocumentNumber=23-09895">23-09895</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=895210&onBaseDocumentNumber=23-09897">23-09897</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2023</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Willick Law Group. Check No. 33972. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/04/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Exemption from Settlement Program/FTCC. Transcript request due: 14 days. Docketing Statement due: 21 days. Fast Track Statement &amp; Appendix due: 40 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=895663&onBaseDocumentNumber=23-10331">23-10331</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2023</td><td>Transcript Request</td><td>Filed Appellant's Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=896716&onBaseDocumentNumber=23-11356">23-11356</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/17/2023</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=897191&onBaseDocumentNumber=23-11800">23-11800</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Pro Bono Counsel. This is an appeal from a district court order dismissing a complaint for custody. Having considered the notice of appeal and docketing statement, this court has determined that the appointment of pro bono counsel to represent respondent would assist this court in reviewing this appeal.  By this order, the court expresses no opinion as to the merits of this appeal. Counsel will be appointed for purposes of this appeal only and will participate in oral argument. This case is hereby referred to the program established by the Pro Bono Committee to evaluate whether respondent can benefit from the program. Accordingly, the clerk of this court shall transmit a copy of this order and the attached case summary and district court order to the Legal Aid Center of Southern Nevada for financial eligibility screening. Once an attorney is located, the attorney shall file a notice of appearance in this court within 60 days from the date of this order. The briefing schedule in this appeal is suspended pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=898788&onBaseDocumentNumber=23-13353">23-13353</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance of Pro Bono Counsel for Emily McFarling per Court Order Filed 04/28/23. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=906464&onBaseDocumentNumber=23-20715">23-20715</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/05/2023</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing. Attorney Emily McFarling has now filed a notice of appearance as respondent's pro bono counsel.  Accordingly, the clerk shall add Ms. McFarling as respondent's counsel of record.  This appeal is removed from the provisions of NRAP 3E and shall be fully briefed.  Appellant's opening brief and appendix due: 90 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907200&onBaseDocumentNumber=23-21392">23-21392</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907233&onBaseDocumentNumber=23-21425">23-21425</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/05/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907234&onBaseDocumentNumber=23-21426">23-21426</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement - Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907236&onBaseDocumentNumber=23-21428">23-21428</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907366&onBaseDocumentNumber=23-21557">23-21557</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Appendix to Fast Track Statement Volumes 1 - 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=907383&onBaseDocumentNumber=23-21574">23-21574</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's fast track response due: August 2, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=909630&onBaseDocumentNumber=23-23700">23-23700</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2023</td><td>Fast Track Brief</td><td>Filed Respondent's  Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=910756&onBaseDocumentNumber=23-24780">23-24780</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2023</td><td>Fast Track Brief</td><td>Filed Respondent's Amended Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=910763&onBaseDocumentNumber=23-24787">23-24787</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2023</td><td>Order/Incoming</td><td>Filed District Court's Notice of Case Status Change. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=910898&onBaseDocumentNumber=23-24922">23-24922</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Reply to Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66217&csIID=66217&deLinkID=912190&onBaseDocumentNumber=23-26192">23-26192</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Case Status Update</td><td>Fast Track Briefing Completed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66217&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

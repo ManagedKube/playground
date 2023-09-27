@@ -1,0 +1,950 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82517: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=BB228F382BFF7D72568FDEBAC484F996">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60980">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82517</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MARTIN VS. MARTIN C/W 81810</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=59901">81810</a>*, 82517</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=59901">81810</a>, <a href="/public/caseView.do?csIID=62417">81810-COA</a>, <a href="/public/caseView.do?csIID=62418">82517-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D509045</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>09/08/2022</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Erich M. Martin</td><td valign="top">Chad F. Clement
+							(Marquis Aurbach Chtd.)
+						<br>Kathleen A. Wilde
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Raina L. Martin</td><td valign="top">Richard L. Crane
+							(Willick Law Group)
+						<br>Marshal S. Willick
+							(Willick Law Group)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Marquis Aurbach Coffing.  Check no. 131286. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=807237&onBaseDocumentNumber=21-05304">21-05304</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2021</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellant: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=807335&onBaseDocumentNumber=21-05401">21-05401</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2021</td><td>Motion</td><td>Filed Respondent's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=808393&onBaseDocumentNumber=21-06407">21-06407</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=808719&onBaseDocumentNumber=21-06727">21-06727</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/03/20 and 01/12/21.  To Court Reporter: Transcript Video Services. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=808984&onBaseDocumentNumber=21-06972">21-06972</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant shall have until March 25, 2021, to file and serve an opposition to respondent's motion to dismiss appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=809117&onBaseDocumentNumber=21-07116">21-07116</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Motion</td><td>Filed Appellant's Opposition to Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=810699&onBaseDocumentNumber=21-08619">21-08619</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2021</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Case Nos. 81810 and 82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=810959&onBaseDocumentNumber=21-08869">21-08869</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2021</td><td>Motion</td><td>Filed Respondent's Reply to Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=811497&onBaseDocumentNumber=21-09400">21-09400</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's response to appellant's motion to consolidate case nos. 82517 and 81810 due: April 19, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=811773&onBaseDocumentNumber=21-09622">21-09622</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Motion</td><td>Filed Appellant's Motion to Stay Briefing, or, in the Alternative, Motion for Extension of Time to File Appellant's Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=812413&onBaseDocumentNumber=21-10253">21-10253</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/16/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's response to appellant's motion to stay briefing, or, alternative, motion for extension of time to file appellant's opening brief and appendix due: April 30, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=813196&onBaseDocumentNumber=21-10989">21-10989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Sherry Justice stating that the requested transcripts were delivered.  Dates of transcripts: 11/3/20, 1/12/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=813478&onBaseDocumentNumber=21-11232">21-11232</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Motion</td><td>Filed Respondent's Response to Motion to Consolidate Appeals.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=813551&onBaseDocumentNumber=21-11303">21-11303</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/23/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Dismiss, Granting Motions to Consolidate, and Granting Motions for Extension of Time. Respondent has filed a motion to dismiss the appeal in Docket No. 82517 for lack of jurisdiction. The motion to dismiss is denied. Appellant's motions to consolidate these appeals are granted. These appeals are hereby consolidated.  Appellant's motions to stay briefing, or for an extension of time to file the opening brief and appendix are granted to the following extent. Appellant shall have 30 days from the date of this order to file and serve a single appendix and a single opening brief that raises all issues in these appeals.  Nos 81810/82517(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=814012&onBaseDocumentNumber=21-11756">21-11756</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 1. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=817182&onBaseDocumentNumber=21-14749">21-14749</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2021</td><td>Motion</td><td>Filed Appellant's Motion to File Appellant's Appendix, Volumes 2-5, Under Seal. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=817183&onBaseDocumentNumber=21-14750">21-14750</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief.  Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=817298&onBaseDocumentNumber=21-14865">21-14865</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=817299&onBaseDocumentNumber=21-14866">21-14866</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/04/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk of this court shall file under seal the appendix volumes 2-5 received on May 26, 2021.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=818528&onBaseDocumentNumber=21-16078">21-16078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/04/2021</td><td>Appendix</td><td>Filed Appellant's (SEALED) Appendix Vols. 2-5. Nos. 81810/82517.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/18/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: July 7, 2021.  Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=820101&onBaseDocumentNumber=21-17578">21-17578</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 1. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822235&onBaseDocumentNumber=21-19497">21-19497</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 2. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822236&onBaseDocumentNumber=21-19498">21-19498</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 3. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822237&onBaseDocumentNumber=21-19499">21-19499</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 4. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822238&onBaseDocumentNumber=21-19500">21-19500</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 5. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822239&onBaseDocumentNumber=21-19501">21-19501</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 6. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822240&onBaseDocumentNumber=21-19502">21-19502</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 7. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822241&onBaseDocumentNumber=21-19503">21-19503</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 8. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822242&onBaseDocumentNumber=21-19504">21-19504</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 9. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822243&onBaseDocumentNumber=21-19505">21-19505</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 10. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822245&onBaseDocumentNumber=21-19507">21-19507</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 11. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822246&onBaseDocumentNumber=21-19508">21-19508</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Answering Brief. Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822251&onBaseDocumentNumber=21-19513">21-19513</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent's Answering Brief due:  July 9, 2021.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822393&onBaseDocumentNumber=21-19653">21-19653</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/09/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=822580&onBaseDocumentNumber=21-19837">21-19837</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Reply Brief (First Request).  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=825968&onBaseDocumentNumber=21-23016">21-23016</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved.  Appellant's Reply Brief due: September 8, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=826040&onBaseDocumentNumber=21-23088">21-23088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2021</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Election Not to File a Reply Brief. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=829044&onBaseDocumentNumber=21-25948">21-25948</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 81810/82517. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. Nos. 81810/82517. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=831192&onBaseDocumentNumber=21-28026">21-28026</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2021</td><td>Case Status Update</td><td>Transferred to Court of Appeals. Nos. 81810/82517. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2021</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding.  "ORDER the judgment of the district court AFFIRMED IN PART AND REVERSED IN PART AND REMAND this matter to the district court for proceedings consistent with this order."  Court of Appeals-MG/JT/BB  Nos. 81810/82517.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/03/2021</td><td>Post-Judgment Petition</td><td>Filed Respondent's Petition for Review. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=838050&onBaseDocumentNumber=21-34550">21-34550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/14/2021</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/16/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer to Petition for Review. Appellant's answer due: 14 days. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=839490&onBaseDocumentNumber=21-35880">21-35880</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Notice/Incoming</td><td>Filed Notice regarding notice of intent to file Amicus. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=840061&onBaseDocumentNumber=21-36444">21-36444</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Answer to Petition for Review due:  January 13, 2022.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=840676&onBaseDocumentNumber=21-37051">21-37051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/14/2022</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time File Answer to Petition for Review. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=842471&onBaseDocumentNumber=22-01481">22-01481</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant's Answer to Petition for Review due:  January 27, 2022.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=843403&onBaseDocumentNumber=22-02396">22-02396</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant's Answer to Petition for Review. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=843893&onBaseDocumentNumber=22-02857">22-02857</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2022</td><td>Post-Judgment Order</td><td>Filed Order Granting Petition for Review, Directing Supplemental Briefing and Inviting Amicus Curiae.  Appellant's Supplemental Opening Brief due:  21 days.  Respondent shall file and serve a supplemental answering brief within 21 days after service of appellant's brief.  Appellant shall then have 14 days after service of respondent's supplemental answering brief to file and serve any supplemental reply brief.  Both parties shall serve their briefs on the State Bar's Family Law Section.  Should the Family Law Section or any other amicus consent to participate as amicus curiae, its amicus brief must be filed within 7 days of the date of brief of the party whose position they are supporting is filed and comply with the requirements of NRAP 29.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=846116&onBaseDocumentNumber=22-04961">22-04961</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension. Appellant's Supplemental Opening Brief due: March 21, 2022.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=848353&onBaseDocumentNumber=22-07023">22-07023</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Motion</td><td>Filed Motion for Extension of Time to File Amicus Curiae Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=849316&onBaseDocumentNumber=22-07968">22-07968</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Brief</td><td>Filed Appellant's Supplemental Opening Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=850274&onBaseDocumentNumber=22-08909">22-08909</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Notice/Incoming</td><td>Filed Amended Certificate of Service for Appellant's Supplemental Opening Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=850418&onBaseDocumentNumber=22-09005">22-09005</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Motion</td><td>Filed Motion to Extend Time to File Amicus Curiae Brief. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=851082&onBaseDocumentNumber=22-09619">22-09619</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2022</td><td>Motion</td><td>Filed Respondent's Motion to Adjust Due Date to File Supplemental Answering Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=851226&onBaseDocumentNumber=22-09756">22-09756</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2022</td><td>Order/Procedural</td><td>Filed Order.  On March 21, 2022, appellant filed a brief in which counsel indicated an intent to submit this matter on the opening brief and record previously filed.  The Family Law Section of the State Bar of Nevada and Trinity Advocates have filed motions for an extension of time to file amicus curiae briefs.  Any amicus brief shall be filed within 30 days from the date of this order.  Respondent shall have 44 days from the date of this order to file the supplemental answering brief.  Because appellant did not file a supplemental opening brief, no reply brief is permitted.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=851530&onBaseDocumentNumber=22-10054">22-10054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/14/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Amicus Curiae (The American Academy of Matrimonial Lawyer). Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=853456&onBaseDocumentNumber=22-11892">22-11892</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2022</td><td>Motion</td><td>Filed Motion for Leave to Participate as Amicus Curiae (The American Academy of Matrimonial Lawyer).  Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=853497&onBaseDocumentNumber=22-11932">22-11932</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Motion</td><td>Filed Motion to Extend Time to File Amicus Curiae Brief (Trinity Advocates). Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=855537&onBaseDocumentNumber=22-13859">22-13859</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Amicus Brief American Academy of Matrimonial Lawyers Amicus Curiae in Support of Reversal of the Court of Appeals Decision. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=855614&onBaseDocumentNumber=22-13933">22-13933</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Amicus Brief American Academy of Matrimonial Lawyers Amicus Curiae in Support of Reversal of the Court of Appeals Decision. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=855623&onBaseDocumentNumber=22-13942">22-13942</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Joinder to Brief Family Law Section of the State Bar of Nevada's Joinder in the American Academy of Matrimonial Lawyers' Amicus Curiae Brief in Support of Reversal of the Court of Appeals Decision. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=855626&onBaseDocumentNumber=22-13945">22-13945</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2022</td><td>Brief</td><td>Filed Amicus Brief American Academy of Matrimonial Lawyers Amicus Curiae in Support of Reversal of the Court of Appeals Decision. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=856711&onBaseDocumentNumber=22-15013">22-15013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Brief</td><td>Filed Respondent's Supplemental Answering Brief. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=857220&onBaseDocumentNumber=22-15516">22-15516</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2022</td><td>Order/Procedural</td><td>Filed Order.  American Academy of Matrimonial Lawyer National has filed a motion for leave to file an amicus brief.   The motion for leave to file an amicus brief is granted.  The amicus brief was filed on May 2, 2022.  Proposed amicus curiae the Family Law Section of the State Bar of Nevada has filed a joinder to the AAML's amicus brief.  Cause appearing, the joinder is approved.  Trinity Advocates has filed a second motion for an extension of time, until May 9, 2022, to file its amicus brief.  To date, Trinity Advocates has not submitted a proposed amicus brief for filing.  Accordingly, the motion is denied.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=857916&onBaseDocumentNumber=22-16134">22-16134</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument.  This matter is scheduled for oral argument on September 8, 2022, at 2:00 p.m. in Carson City.  Argument shall be limited to 30 minutes.  Nos. 81810/82517.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=867940&onBaseDocumentNumber=22-24759">22-24759</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Notice/Outgoing</td><td>Oral Argument Reminder Notice</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=869819&onBaseDocumentNumber=22-26559">22-26559</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2022</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Affirmed." Before the Court En Banc. Author: Stiglich, J. Majority: Parraguirre/Hardesty/Stiglich/Herndon. Cadish, J., with whom Pickering, J., agrees, concurring. fn1 [The Honorable Abbi Silver having retired, this matter was decided by a six-justice court.] 138 Nev. Adv. Opn. No. 78. En Banc. Nos. 81810/82517. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=881473&onBaseDocumentNumber=22-37742">22-37742</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's petition for rehearing due: January 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=883444&onBaseDocumentNumber=22-39585">22-39585</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2023</td><td>Motion</td><td>Filed Motion for Extension of Time to File Petition for Rehearing. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=885049&onBaseDocumentNumber=23-00110">23-00110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/04/2023</td><td>Motion</td><td>Filed Response to Motion for Extension of Time to File Petition for Rehearing and Request for Issuance of Remittitur. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=885169&onBaseDocumentNumber=23-00220">23-00220</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2023</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion for Extension of Time to File Petition for Rehearing. Nos. 81810/82517. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=885791&onBaseDocumentNumber=23-00835">23-00835</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant's petition for rehearing due: February 2, 2023. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=887661&onBaseDocumentNumber=23-02645">23-02645</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2023</td><td>Post-Judgment Petition</td><td>Filed Appellant's Petition for Rehearing. Nos. 81810/82517. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=888418&onBaseDocumentNumber=23-03316">23-03316</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from Chad F. Clement. Nos. 81810/82517. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2023</td><td>Order/Procedural</td><td>Filed Order/Answer Rehearing. Answer due: 14 days. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=889573&onBaseDocumentNumber=23-04447">23-04447</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Post-Judgment Petition</td><td>Filed Respondent's Answer to Petition for Rehearing. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=891139&onBaseDocumentNumber=23-05981">23-05981</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Supplemental Authorities. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=895054&onBaseDocumentNumber=23-09746">23-09746</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/17/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). Cadish and Pickering, JJ,. dissenting - EN BANC. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=897013&onBaseDocumentNumber=23-11641">23-11641</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2023</td><td>Motion</td><td>Filed Appellant's Motion for Stay of Remittitur Pending Petition for Writ of Certiorari. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=900547&onBaseDocumentNumber=23-15010">23-15010</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2023</td><td>Motion</td><td>Filed Respondent's Response to Motion for Stay of Remittitur Pending Petition for Writ of Certiorari. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=900642&onBaseDocumentNumber=23-15100">23-15100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2023</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion for Stay of Remittitur Pending Petition for Writ of Certiorari. Nos. 81810/82517. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=901523&onBaseDocumentNumber=23-15969">23-15969</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Order/Procedural</td><td>Filed Order Granting Stay of Remittitur. The motion for a stay is granted to the following extent. Issuance of the remittitur shall be stayed until September 11, 2023.  If the clerk of this court receives written notice by September 11, 2023, from the clerk of the United States Supreme Court that appellant has filed a petition for a writ of certiorari, the stay shall remain in effect until final disposition of the certiorari proceedings.  If such notice is not received by September 11, 2023, the clerk of this court shall issue the remittitur.  Appellant shall continue to comply with the December 31, 2020, order. Nos. 81810/82517 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=902855&onBaseDocumentNumber=23-17233">23-17233</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/18/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60980&csIID=60980&deLinkID=916496&onBaseDocumentNumber=23-30391">23-30391</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/18/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.(SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60980&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

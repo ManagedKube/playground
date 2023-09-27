@@ -1,0 +1,908 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84275: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=048B55A87F5572009B3898912ADC27E0">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63394">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84275</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: THE DETERMINATION RIGHTS TO WATER LOCATED WITHIN DIAMOND VALLEY HYDROGRAPHIC BASIN NO. 10-153</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Eureka Co. - Seventh Judicial District - CV-2002009</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Adam Sullivan</td><td valign="top">James N. Bolotin
+							(Attorney General/Carson City)
+						<br>Ian E. Carr
+							(Attorney General/Carson City)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eureka County</td><td valign="top">Theodore Beutel
+							(Eureka County District Attorney)
+						<br>Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">The State of Nevada Department of Conservation and Natural Resources, Division of Water Resources</td><td valign="top">James N. Bolotin
+							(Attorney General/Carson City)
+						<br>Ian E. Carr
+							(Attorney General/Carson City)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Amanda L. Venturacci</td><td valign="top">Timothy D. O'Connor
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Arc Dome Partners, LLC</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Beck Family Trust Dated April 1, 2005</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Carolyn Bailey</td><td valign="top">Gordon H. DePaoli
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Chad D. Bliss</td><td valign="top">Ross E. de Lipkau
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Daniel S. Venturacci</td><td valign="top">Timothy D. O'Connor
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Ira R. Renner</td><td valign="top">Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Tamara Christine Thiel
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">James E. Baumann</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Karen A. Beck</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kindy L. Fitzwater</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Montira Renner</td><td valign="top">Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Tamara Christine Thiel
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">MW Cattle, LLC</td><td valign="top">David H. Rigdon
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Norman C. Fitzwater</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Robert F. Beck</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Rosie J. Bliss</td><td valign="top">Ross E. de Lipkau
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Sadler Ranch, LLC</td><td valign="top">David H. Rigdon
+							(Taggart &amp; Taggart, Ltd.)
+						<br>Paul G. Taggart
+							(Taggart &amp; Taggart, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Solarljos, LLC</td><td valign="top">Alex J. Flangas
+							(Kaempfer Crowell/Reno)
+						<br>August B. Hotchkin
+							(Kaempfer Crowell/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">United States Department of Interior, Bureau of Land Management</td><td valign="top">David Negri
+							(U.S. Department of Justice/Boise)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Vera L. Baumann</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Wilfred and Carolyn Bailey Family Trust, Dated February 20, 2018</td><td valign="top">Gordon H. DePaoli
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Wilfred Bailey</td><td valign="top">Gordon H. DePaoli
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  State/County/Municipality. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847281&onBaseDocumentNumber=22-06027">22-06027</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Exemption from Settlement Program/File Documents. Transcript request due: 14 days.  Opening brief due: 120 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847294&onBaseDocumentNumber=22-06040">22-06040</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  State/County/Municipality. (Appellant Eureka Cty.) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. (Docketing statement mailed to counsel for appellant.) (Appellant Eureka Cty.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847436&onBaseDocumentNumber=22-06175">22-06175</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Motion</td><td>Filed Appellant's State Engineer's Motion to Exceed Page Limit for Emergency Motion for Stay. (Emergency Motion attached) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847463&onBaseDocumentNumber=22-06201">22-06201</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Motion</td><td>Filed Appellant's Emergency Motion Under NRAP 27(e) for Stay of District Court's Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment and Stay of Adjudication Proceedings Pending Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847467&onBaseDocumentNumber=22-06205">22-06205</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Motion</td><td>Filed Appellant's Motion to Determine Whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847470&onBaseDocumentNumber=22-06207">22-06207</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Motion</td><td>Filed Respondent's Ira R. Renner and Montira Renner's Opposition to State Engineer's Request for Temporary Administrative Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847525&onBaseDocumentNumber=22-06261">22-06261</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Notice/Incoming</td><td>Filed Respondent Ventutacci's Joinder in Opposition to State Engineer's Request for Temporary Administrative Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847526&onBaseDocumentNumber=22-06262">22-06262</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Notice/Incoming</td><td>Filed Appellant Eureka County's Joinder to State Engineer's Emergency Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847528&onBaseDocumentNumber=22-06264">22-06264</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2022</td><td>Notice/Incoming</td><td>Filed Joinder Wilfred and Carolyn Bailey, Trustee of the Wilfred and Carolyn Bailey Family Trust Dated February 20, 2018, Joinder in Opposition to State Engineer's Request for Temporary Adminstrative Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847678&onBaseDocumentNumber=22-06414">22-06414</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2022</td><td>Order/Procedural</td><td>Filed Order Granting Temporary Stay.  We conclude that a temporary stay of the district court's summary judgment is warranted pending our receipt and consideration of any oppositions to both the motion for a stay pending appeal and the jurisdictional motion. We stay the district court's October 27, 2021, corrected order granting summary judgment, certified as final under NRCP 54(b), pending further order of this court.  We do not at this time stay the district court proceedings.  Any responses to the stay and jurisdictional motions are due by 4 p.m. on Friday, March 4, 2022, and any replies to the responses are due by noon on Wednesday, March 9, 2022.  No extensions of time will be granted absent extraordinary and compelling circumstances demonstrated by written motion. fn1 [Appellants' motion for leave to file a stay motion 4 pages in excess of the NRAP 27(d)(2) page limit is granted; the motion was filed on February 25, 2022.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847762&onBaseDocumentNumber=22-06497">22-06497</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2022</td><td>Notice/Incoming</td><td>Filed Notice of Supplement to the State Engineer's Emergency Motion Under NRAP 27(E) for Stay of District Court's Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment and Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=847870&onBaseDocumentNumber=22-06600">22-06600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Eureka County's Joinder to State Engineer's Motion Under NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848333&onBaseDocumentNumber=22-07003">22-07003</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Sadler Ranch LLC Response to State Engineers Emergency Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848383&onBaseDocumentNumber=22-07053">22-07053</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Respondent Solarljos, LLC Notice of Appearance of Counsel for Alex J. Flangas and August B. Hotchkin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848384&onBaseDocumentNumber=22-07054">22-07054</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Respondent Solarljos LLC's Joinder to Renner's Opposition to State Engineer's Request for Temporary Administrative Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848389&onBaseDocumentNumber=22-07059">22-07059</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Ira R. Renner and Montira Renner's Opposition to State Engineer's Motion to Determine Whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848393&onBaseDocumentNumber=22-07063">22-07063</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Ira R. Renner and Montira Renner's Opposition to State Engineers Motion Under NRAP 27(e) for Stay of District Courts Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848395&onBaseDocumentNumber=22-07065">22-07065</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Respondent Venturacci's Joinder to Ira R. Renner and Montira Renner's Opposition to State Engineer's Motion to Determine whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848396&onBaseDocumentNumber=22-07066">22-07066</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Respondent Venturacci's Joinder to Sadler Ranch, LLC's Response to State Engineer's Emergency Motion to Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848398&onBaseDocumentNumber=22-07068">22-07068</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Notice/Incoming</td><td>Filed Respondent Venturacci's Joinder to Ira R. Renner and Montira Renner's Opposition to State Engineer's Motion under NRAP 27(e) for Stay of District Court's Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment and Adjudication Proceedings Pending Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848400&onBaseDocumentNumber=22-07070">22-07070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Solarljos Motion to Exceed Page Limit for Opposition to Appellant State Engineer's Motion to Determine whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848404&onBaseDocumentNumber=22-07074">22-07074</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Solarljos' Opposition to Motion to Determine whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848405&onBaseDocumentNumber=22-07075">22-07075</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Solarljos, LLC's Motion to Exceed Page Limit for Opposition to Appellant State Engineer's Emergency Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848411&onBaseDocumentNumber=22-07081">22-07081</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Respondent Solarljos, LLc's  Opposition to Emergency Motion under NRAP 27(e) for Stay of District Court's Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment and Stay of Adjudication Proceedings Pending Appeal and Request for Temporary Stay Pending Decision of Underlying Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848413&onBaseDocumentNumber=22-07083">22-07083</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2022</td><td>Notice/Incoming</td><td>Filed Respondents Peter and Gladys Goicoechea Notice of Voluntary Dismissal with Prejudice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848600&onBaseDocumentNumber=22-07267">22-07267</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2022</td><td>Notice/Incoming</td><td>Filed Solarljos LLC's Joinder to Renner's Opposition to State Engineer's Motion to Determine Whether District Court Properly Certified Corrected Order Granting Solarljos' Motion for Partial Summary Judgment. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848784&onBaseDocumentNumber=22-07446">22-07446</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Notice/Incoming</td><td>Filed Solarljos LLC's Joinder to Sadler Ranch, LLC's Response to State Engineer's Emergency Motion for Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848785&onBaseDocumentNumber=22-07447">22-07447</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Appellant State Engineer's Motion to Exceed Page Limits for Replies in Support of Emergency Motion for Stay and Jurisdictional Motion. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848854&onBaseDocumentNumber=22-07515">22-07515</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Appellant's Reply in Support of the State Engineer's Emergency Motion under NRAP 27(e) for Stay of District Court's Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment and Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848855&onBaseDocumentNumber=22-07516">22-07516</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Appellant's Reply in Support of State Engineer's Motion to Determine whether District Court Properly Certified Corrected Order Granting Solarljos, LLC's Motion for Partial Summary Judgment as Final Pursuant to NRCP 54(b). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848858&onBaseDocumentNumber=22-07519">22-07519</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Notice/Incoming</td><td>Filed Eureka County's Joinder to State Engineer's Replies. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848860&onBaseDocumentNumber=22-07521">22-07521</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Solarljos Sur-Reply or, In The Alternative, Request for Brief Extension of Time Based on Technical Issue. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=848933&onBaseDocumentNumber=22-07591">22-07591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2022</td><td>Notice/Incoming</td><td>Filed State Engineer's Notice Pursuant to NRAP 9. (REJECTED PER NOTICE ISSUED 3/10/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849031&onBaseDocumentNumber=22-07687">22-07687</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 8/25/20, 11/10/20 and 12/7/21.  To Court Reporter: Shellie Loomis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849074&onBaseDocumentNumber=22-07728">22-07728</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Transcript Request</td><td>Filed Eureka County's Certificate That No Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849276&onBaseDocumentNumber=22-07929">22-07929</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2022</td><td>Motion</td><td>Filed Eureka County's Motion to Exceed Page Limit for Joinder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849282&onBaseDocumentNumber=22-07935">22-07935</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Notice/Incoming</td><td>Filed Affidavit Declaration of Karen A. Peterson, Esq. re Motion to Exceed Page Limit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849283&onBaseDocumentNumber=22-07936">22-07936</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2022</td><td>Docketing Statement</td><td>Filed State Engineer's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=849947&onBaseDocumentNumber=22-08590">22-08590</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/18/2022</td><td>Docketing Statement</td><td>Filed Eureka County's Docketing Statement - Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=850068&onBaseDocumentNumber=22-08709">22-08709</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/24/2022</td><td>Docketing Statement</td><td>Filed Solarljos LLC's Response to Docketing Statement of Appellant Nevada State Engineer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=850753&onBaseDocumentNumber=22-09298">22-09298</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2022</td><td>Docketing Statement</td><td>Filed Solarljos LLC's Response to Docketing Statement of Appellant Eureka County. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=850849&onBaseDocumentNumber=22-09394">22-09394</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2022</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal. "ORDER this appeal DISMISSED." fn1 [The Renner respondents filed an opposition to the jurisdiction motion on March 4, 2022, which the Venturacci respondents and Solarljos joined.  Solarljos filed an opposition as well (Solarljos's motion for leave to exceed the NRAP 27(d)(2) page limit by 7 pages is granted; the opposition was timely filed on March 4, 2022).  The State appellants have filed a reply (the State appellants' March 9, 2022, motion for leave to file replies to the responses to the stay motion and jurisdictional motion that exceed the page limit by 8 and 3 pages, respectively, is granted; both replies were filed on March 9, 2022). Eureka County also filed a reply to the responses for both motions, joining in the State appellants' arguments (Eureka County's motion to exceed the page limit for its reply by 3 pages is granted; the reply was filed on March 9, 2022).  Additionally, Solarljos's March 4 motion to exceed the page limit with respect to its opposition to the stay motion and March 7 motion for brief extension of time are granted.  Finally, in light of the March 7 filing by Peter and Gladys Goicoechea, we direct the clerk of this court to remove those parties as respondents to this appeal.]  fn2 [In light of this order, we deny appellants' stay motion and vacate our March 1 temporary stay.]  SNP22  - JH/LS/DH. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=855953&onBaseDocumentNumber=22-14264">22-14264</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=859146&onBaseDocumentNumber=22-17338">22-17338</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on June 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63394&csIID=63394&deLinkID=861543&onBaseDocumentNumber=22-17338">22-17338</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63394&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

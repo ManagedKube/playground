@@ -1,0 +1,1201 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84031: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=B8647D755B2594C004189AE2D2313A96">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63084">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84031</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LA 1, LLC VS. MITMAN C/W 83350</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=62146">83350</a>*, 84031</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=62146">83350</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A749305</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Set For Submission</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>01/06/2022 / Levitt, Lansford</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">LA 1, LLC</td><td valign="top">G. Mark Albright
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>Ronald S. Kravitz
+							(Miller Shah, LLP/San Francisco)
+						<br>Daniel R. Ormsby
+							(Albright Stoddard Warnick &amp; Albright)
+						<br>John C. Roberts
+							(Miller Shah, LLP/Philadelphia)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Debra Mitman</td><td valign="top">Justin P. Stovall
+							(Law Office of Justin Patrick Stovall)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Flanders MLK Investors, LLC</td><td valign="top">Justin P. Stovall
+							(Law Office of Justin Patrick Stovall)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=841482&onBaseDocumentNumber=22-00504">22-00504</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=841485&onBaseDocumentNumber=22-00507">22-00507</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from G. Mark Albright. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=841543&onBaseDocumentNumber=22-00564">22-00564</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Lansford W. Levitt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=841555&onBaseDocumentNumber=22-00576">22-00576</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 00658 returned to Miller Shah LLP. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation.  (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=843250&onBaseDocumentNumber=22-02245">22-02245</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=843281&onBaseDocumentNumber=22-02275">22-02275</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement - Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=843853&onBaseDocumentNumber=22-02817">22-02817</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 10/5/21 and11/16/21. To Court Reporter: Lara Corcoran. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=845315&onBaseDocumentNumber=22-04165">22-04165</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lara Corcoran stating that the requested transcripts were delivered.  Dates of transcripts: 11/23/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=849394&onBaseDocumentNumber=22-08046">22-08046</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2022</td><td>Transcript</td><td>Filed Amended Notice from Court Reporter. Lara Corcoran stating that the requested transcripts were delivered.  Dates of transcripts: 10/5/21 and 11/16/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=849893&onBaseDocumentNumber=22-08537">22-08537</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2022</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Appeal Cases or in the Alternative Extend the Briefing Schedule. (Consolidate with docket 83350) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=851877&onBaseDocumentNumber=22-10389">22-10389</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Motion</td><td>Filed Respondent's Notice of Non-Opposition to Motion to Consolidate Appeal or in the Alternative Extend Briefing Schedule. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=852274&onBaseDocumentNumber=22-10781">22-10781</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Consolidate Appeals.  Appellants/cross-respondents shall have until July 15, 2022, to file a single opening brief  and an appendix.  Nos. 83350/84031.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=854065&onBaseDocumentNumber=22-12480">22-12480</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Transcript</td><td>Filed Notice from Court Recorder Jill Hawkins stating that the requested transcripts were delivered.  Dates of transcripts:  4/19/21, 4/20/21, 4/21/21, 4/22/21, 4/23/21,  and 4/26/21.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=859745&onBaseDocumentNumber=22-17927">22-17927</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Transcript</td><td>Filed Notice from Court Recorder De'Awna Takas stating that the requested transcripts were delivered.  Dates of transcripts:  1/29/19, and 5/21/19.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=859748&onBaseDocumentNumber=22-17930">22-17930</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Motion to Extend Time to File Opening Brief. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=865357&onBaseDocumentNumber=22-22297">22-22297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/15/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Opening Brief and Appendix due: August 15, 2022) Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=865366&onBaseDocumentNumber=22-22306">22-22306</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/15/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Motion to Extend Time to File Opening Brief. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=868721&onBaseDocumentNumber=22-25523">22-25523</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellants/cross-respondents shall have until September 14, 2022, to file and serve the opening brief and appendix.  Nos. 83350/84031.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=871180&onBaseDocumentNumber=22-27842">22-27842</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Extend Time to File Opening Brief and Appendix. (Third Request) Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872214&onBaseDocumentNumber=22-28863">22-28863</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Extend Time to File Opening Brief and Appendix. (Fourth Request) Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872439&onBaseDocumentNumber=22-29032">22-29032</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Motion to Extend Time to File Opening Brief and Appendix. Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872585&onBaseDocumentNumber=22-29177">22-29177</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' Opening Brief. Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872586&onBaseDocumentNumber=22-29178">22-29178</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 1 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872587&onBaseDocumentNumber=22-29179">22-29179</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 2 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872588&onBaseDocumentNumber=22-29180">22-29180</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 3 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872589&onBaseDocumentNumber=22-29181">22-29181</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 4 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872590&onBaseDocumentNumber=22-29182">22-29182</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 5 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872591&onBaseDocumentNumber=22-29183">22-29183</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 6 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872592&onBaseDocumentNumber=22-29184">22-29184</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 7 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872593&onBaseDocumentNumber=22-29185">22-29185</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 8 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872594&onBaseDocumentNumber=22-29186">22-29186</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 9 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872595&onBaseDocumentNumber=22-29187">22-29187</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 10 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872596&onBaseDocumentNumber=22-29188">22-29188</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 11 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872597&onBaseDocumentNumber=22-29189">22-29189</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 12 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872598&onBaseDocumentNumber=22-29190">22-29190</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 14 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872599&onBaseDocumentNumber=22-29191">22-29191</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 15 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872600&onBaseDocumentNumber=22-29192">22-29192</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 16 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872601&onBaseDocumentNumber=22-29193">22-29193</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 17 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872602&onBaseDocumentNumber=22-29194">22-29194</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 18 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872603&onBaseDocumentNumber=22-29195">22-29195</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 19 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872604&onBaseDocumentNumber=22-29196">22-29196</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 20 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872605&onBaseDocumentNumber=22-29197">22-29197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 21 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872606&onBaseDocumentNumber=22-29198">22-29198</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 22 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872607&onBaseDocumentNumber=22-29199">22-29199</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 23 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872608&onBaseDocumentNumber=22-29200">22-29200</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 24 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872609&onBaseDocumentNumber=22-29201">22-29201</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 25 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872610&onBaseDocumentNumber=22-29202">22-29202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 26 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872611&onBaseDocumentNumber=22-29203">22-29203</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 27 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872612&onBaseDocumentNumber=22-29204">22-29204</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 28 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872613&onBaseDocumentNumber=22-29205">22-29205</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 29 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872614&onBaseDocumentNumber=22-29206">22-29206</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 30 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872615&onBaseDocumentNumber=22-29207">22-29207</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 31 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872616&onBaseDocumentNumber=22-29208">22-29208</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 32 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872617&onBaseDocumentNumber=22-29209">22-29209</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 33 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872618&onBaseDocumentNumber=22-29210">22-29210</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 34 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872619&onBaseDocumentNumber=22-29211">22-29211</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 35 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872620&onBaseDocumentNumber=22-29212">22-29212</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 36 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872621&onBaseDocumentNumber=22-29213">22-29213</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 37 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872622&onBaseDocumentNumber=22-29214">22-29214</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 38 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872623&onBaseDocumentNumber=22-29215">22-29215</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 39 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872624&onBaseDocumentNumber=22-29216">22-29216</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 40 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872625&onBaseDocumentNumber=22-29217">22-29217</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 41 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872626&onBaseDocumentNumber=22-29218">22-29218</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 42 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872627&onBaseDocumentNumber=22-29219">22-29219</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 43 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872628&onBaseDocumentNumber=22-29220">22-29220</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 44 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872629&onBaseDocumentNumber=22-29221">22-29221</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 45 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872630&onBaseDocumentNumber=22-29222">22-29222</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 46 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872631&onBaseDocumentNumber=22-29223">22-29223</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 47 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872632&onBaseDocumentNumber=22-29224">22-29224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 48 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872633&onBaseDocumentNumber=22-29225">22-29225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 49 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872634&onBaseDocumentNumber=22-29226">22-29226</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 50 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872635&onBaseDocumentNumber=22-29227">22-29227</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 51 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872636&onBaseDocumentNumber=22-29228">22-29228</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 52 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872637&onBaseDocumentNumber=22-29229">22-29229</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 53 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872638&onBaseDocumentNumber=22-29230">22-29230</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 54 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872639&onBaseDocumentNumber=22-29231">22-29231</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 55 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872640&onBaseDocumentNumber=22-29232">22-29232</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 56 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872641&onBaseDocumentNumber=22-29233">22-29233</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 57 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872642&onBaseDocumentNumber=22-29234">22-29234</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 58 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872643&onBaseDocumentNumber=22-29235">22-29235</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 59 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872644&onBaseDocumentNumber=22-29236">22-29236</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 60 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872645&onBaseDocumentNumber=22-29237">22-29237</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 61 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872646&onBaseDocumentNumber=22-29238">22-29238</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 62 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872647&onBaseDocumentNumber=22-29239">22-29239</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 63 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872648&onBaseDocumentNumber=22-29240">22-29240</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 64 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872649&onBaseDocumentNumber=22-29241">22-29241</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 65 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872650&onBaseDocumentNumber=22-29242">22-29242</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 66 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872651&onBaseDocumentNumber=22-29243">22-29243</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 67 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872652&onBaseDocumentNumber=22-29244">22-29244</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 68 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872653&onBaseDocumentNumber=22-29245">22-29245</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 69 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872654&onBaseDocumentNumber=22-29246">22-29246</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 70 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872655&onBaseDocumentNumber=22-29247">22-29247</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/17/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 13 Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=872656&onBaseDocumentNumber=22-29248">22-29248</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Appellants/cross-respondents' third, fourth, and fifth motions requesting a second extension of time to file the opening brief are granted.  The opening brief and appendix were filed on September 17, 2022. Respondent/cross-appellant shall have until October 17, 2022, to file and serve the combined answering brief on appeal and opening brief on cross-appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=873589&onBaseDocumentNumber=22-30128">22-30128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent/Cross-Appellant's combined answering brief on appeal and opening brief on cross-appeal due: October 31, 2022. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=875947&onBaseDocumentNumber=22-32409">22-32409</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/25/2022</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Motion to Extend Time to File Combined Answering and Opening Brief. Nos. 83350/84031 (Second Request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=877145&onBaseDocumentNumber=22-33585">22-33585</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Order/Procedural</td><td>Filed Order. LA 1, LLC has filed a motion for a second extension of time to file the combined answering brief on appeal and opening brief on cross-appeal. Having considered the representation of counsel for LA 1 that opposing counsel does not oppose the requested extension request, the motion is granted in this instance only. LA 1 shall have until November 30, 2022, to file and serve the combined brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=878642&onBaseDocumentNumber=22-34990">22-34990</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 71. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881342&onBaseDocumentNumber=22-37644">22-37644</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 72. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881343&onBaseDocumentNumber=22-37645">22-37645</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 73. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881344&onBaseDocumentNumber=22-37646">22-37646</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 74. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881345&onBaseDocumentNumber=22-37647">22-37647</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 75. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881346&onBaseDocumentNumber=22-37648">22-37648</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 76. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881348&onBaseDocumentNumber=22-37650">22-37650</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 77. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881349&onBaseDocumentNumber=22-37651">22-37651</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 78. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881350&onBaseDocumentNumber=22-37652">22-37652</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 79. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881351&onBaseDocumentNumber=22-37653">22-37653</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 80. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881352&onBaseDocumentNumber=22-37654">22-37654</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 81. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881354&onBaseDocumentNumber=22-37656">22-37656</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 82. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881355&onBaseDocumentNumber=22-37657">22-37657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 83. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881356&onBaseDocumentNumber=22-37658">22-37658</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 84. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881357&onBaseDocumentNumber=22-37659">22-37659</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 85. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881358&onBaseDocumentNumber=22-37660">22-37660</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 86. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881359&onBaseDocumentNumber=22-37661">22-37661</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 87. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881361&onBaseDocumentNumber=22-37663">22-37663</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 88. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881362&onBaseDocumentNumber=22-37664">22-37664</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 89. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881363&onBaseDocumentNumber=22-37665">22-37665</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 90. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881364&onBaseDocumentNumber=22-37666">22-37666</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 91. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881365&onBaseDocumentNumber=22-37667">22-37667</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 92. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881366&onBaseDocumentNumber=22-37668">22-37668</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 93. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881367&onBaseDocumentNumber=22-37669">22-37669</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 94. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881368&onBaseDocumentNumber=22-37670">22-37670</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 95. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881369&onBaseDocumentNumber=22-37671">22-37671</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 96. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881371&onBaseDocumentNumber=22-37673">22-37673</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 97. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881372&onBaseDocumentNumber=22-37674">22-37674</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 98. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881375&onBaseDocumentNumber=22-37677">22-37677</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 99. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881376&onBaseDocumentNumber=22-37678">22-37678</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Appendix</td><td>Filed Joint Appendix. Vol. 100. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881377&onBaseDocumentNumber=22-37679">22-37679</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's Combined Answering Brief on Appeal and Opening Brief on Cross-Appeal.  Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=881454&onBaseDocumentNumber=22-37724">22-37724</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2022</td><td>Motion</td><td>Filed Motion to Extend Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=884929&onBaseDocumentNumber=22-41014">22-41014</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. Reply Brief on Appeal and Answering Brief on Cross-Appeal due: January 30, 2023. Nos. 83350/84031. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=884962&onBaseDocumentNumber=23-00025">23-00025</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/30/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Motion to Extend Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 83350/84031. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=887918&onBaseDocumentNumber=23-02839">23-02839</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/13/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants/cross-respondents' combined brief due: March 1, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=889459&onBaseDocumentNumber=23-04333">23-04333</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2023</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' Reply Brief on Appeal, Answering Brief on Cross-Appeal, and Answering Brief on Appeal. Nos. 83350/84031. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=891342&onBaseDocumentNumber=23-06183">23-06183</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2023</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's Combined Reply Brief on Cross-Appeal. Nos. 83350/84031 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63084&csIID=63084&deLinkID=893474&onBaseDocumentNumber=23-08226">23-08226</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 83350/84031 (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63084&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

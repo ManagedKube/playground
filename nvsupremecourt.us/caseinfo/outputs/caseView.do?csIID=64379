@@ -1,0 +1,847 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84991: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=03F0DD0936D09FE382F5A68A4C7999A4">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64379">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84991</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">NEV. HOSPITAL ASS'N VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Carson City - First Judicial District - 21OC001471B</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>08/16/2023 at 10:00 AM</td><td class="label">Oral Argument Location:</td><td>Carson City</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>08/16/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Boulder City Hospital, Inc.</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Dignity Health</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nevada Hospital Association</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">North Vista Hospital, LLC</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Prime Healthcare Services-Reno, LLC</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Renown Regional Medical Center</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Renown South Meadows Medical Center</td><td valign="top">James Mahoney Burnham
+							(Jones Day/Wash DC)
+						<br>Rusty Graf
+							(Black &amp; Wadhams)
+						<br>Harry Steyer Graver
+							(Jones Day/Wash DC)
+						<br>Craig E. Stewart
+							(Jones Day/San Francisco)
+						<br>James L. Wadhams
+							(Black &amp; Wadhams)
+						<br>Jesse A. Wadhams
+							(Black &amp; Wadhams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Saint Mary's Regional Medical Center</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Aaron D. Ford</td><td valign="top">Steven G. Shevorski
+							(Attorney General/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Health Services Coalition</td><td valign="top">Alysa M. Grimes
+							(Kemp Jones, LLP)
+						<br>Nathanael R. Rulis
+							(Kemp Jones, LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Joseph Lombardo</td><td valign="top">Sabrena K. Clinton
+							(Attorney General/Las Vegas)
+						<br>Heidi J. Parry Stern
+							(Attorney General/Las Vegas)
+						<br>Steven G. Shevorski
+							(Former)
+						
+							(Attorney General/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Legislature of the State of Nevada</td><td valign="top">Kevin C. Powers
+							(Legislative Counsel Bureau Legal Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Sabrena K. Clinton
+							(Attorney General/Las Vegas)
+						<br>Heidi J. Parry Stern
+							(Attorney General/Las Vegas)
+						<br>Steven G. Shevorski
+							(Former)
+						
+							(Attorney General/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Joseph Guild &amp; Associates.  Check no. 9185. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=864886&onBaseDocumentNumber=22-21878">22-21878</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=864888&onBaseDocumentNumber=22-21880">22-21880</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Exemption from Settlement Program/File Documents. Transcript request due: 14 days.  Opening brief due: 120 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=864951&onBaseDocumentNumber=22-21942">22-21942</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/13/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=865011&onBaseDocumentNumber=22-22000">22-22000</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/22/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=866177&onBaseDocumentNumber=22-23104">22-23104</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=867360&onBaseDocumentNumber=22-24174">22-24174</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=867386&onBaseDocumentNumber=22-24215">22-24215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement - Exhibits - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=867396&onBaseDocumentNumber=22-24225">22-24225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement - Exhibits (cont...) - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=867412&onBaseDocumentNumber=22-24241">22-24241</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement - Exhibits (cont...) - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=867439&onBaseDocumentNumber=22-24268">22-24268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2022</td><td>Docketing Statement</td><td>Filed Amended Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=868037&onBaseDocumentNumber=22-24855">22-24855</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Counsel for Respondents the Honorable Governor Stephen Sisolak and the Attorney General Aaron Ford. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=868518&onBaseDocumentNumber=22-25324">22-25324</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=878960&onBaseDocumentNumber=22-35303">22-35303</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume I to IV.  (REJECTED PER 11/9/2022 NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix. Corrected appendix due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879017&onBaseDocumentNumber=22-35360">22-35360</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879202&onBaseDocumentNumber=22-35541">22-35541</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Appendix</td><td>Filed Filed Joint Appendix Volumes II - IV (REJECTED PER 11/10/22 NOTICE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix. Corrected appendix due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879247&onBaseDocumentNumber=22-35584">22-35584</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume I of IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879304&onBaseDocumentNumber=22-35640">22-35640</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume II of IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879306&onBaseDocumentNumber=22-35642">22-35642</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume III of IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879307&onBaseDocumentNumber=22-35643">22-35643</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume IV of IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=879308&onBaseDocumentNumber=22-35644">22-35644</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents answering brief due: December 23, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=882410&onBaseDocumentNumber=22-38624">22-38624</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/14/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Pro Hac Harry Steyer Graver. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=883029&onBaseDocumentNumber=22-39197">22-39197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/14/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Pro Hac James Mahoney Burnham. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=883031&onBaseDocumentNumber=22-39199">22-39199</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/20/2022</td><td>Letter/Incoming</td><td>Filed Appellant's Routing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=883792&onBaseDocumentNumber=22-39929">22-39929</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2022</td><td>Brief</td><td>Filed Respondent's (Health Services Coalition) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=884266&onBaseDocumentNumber=22-40396">22-40396</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2022</td><td>Brief</td><td>Filed Respondent's (The Legislature of the State of Nevada and The State of Nevada   ) Joint Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=884270&onBaseDocumentNumber=22-40400">22-40400</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Associate Counsel. Appellants have filed a motion to associate attorneys Harry Steyer Graver and James Mahoney Burnham of Jones Day, pursuant to SCR 42. The motions to associate are granted. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=885452&onBaseDocumentNumber=23-00501">23-00501</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/23/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=887072&onBaseDocumentNumber=23-02064">23-02064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/23/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/28/2023</td><td>Notice/Incoming</td><td>Filed Respondents' (State of Nevada and Steve Sisolak) Substitution of Attorneys from Steve Shevorski to Heidi Parry Stern and Sabrena K. Clinton. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=891211&onBaseDocumentNumber=23-06053">23-06053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2023</td><td>Motion</td><td>Filed Appellants' (Boulder City Hospital, Inc., Dignity Health, Nevada Hospital Association,    North Vista Hospital, LLC, Prime Healthcare Services-Reno, LLC, Renown Regional Medical Center and   Renown South Meadows Medical Center) Motion to Withdraw as Counsel for James M. Burnham. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=906531&onBaseDocumentNumber=23-20779">23-20779</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for August 16, 2023, at 10:00 a.m., in Carson City.  The argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=907065&onBaseDocumentNumber=23-21261">23-21261</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. James M. Burnham, counsel for appellants, has moved to withdraw as counsel of record.  The motion is granted.  NRAP 46.  The clerk of this court shall remove Mr. Burnham and Jones Day as counsel of record for appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=907562&onBaseDocumentNumber=23-21731">23-21731</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/17/2023</td><td>Notice/Incoming</td><td>Filed Appellants' (Nevada Hospital Association, et.al.) Notice of Appearance for James M. Burnham. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=908511&onBaseDocumentNumber=23-22655">23-22655</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=910548&onBaseDocumentNumber=23-24597">23-24597</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Notice/Incoming</td><td>Filed Appellants' Emergency Notice of Appointment of Counsel - Notice of Local Responsible Counsel for Jesse Wadhams. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=912258&onBaseDocumentNumber=23-26259">23-26259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Brief</td><td>Filed Respondents' (State of Nevada, A.G. Ford and Lombardo) Supplemental Authorities NRAP 31(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=912334&onBaseDocumentNumber=23-26334">23-26334</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/15/2023</td><td>Motion</td><td>Filed Appellants' Emergency Motion Pursuant to NRAP 27(e) to Associate Counsel Pursuant to SCR 42. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=912515&onBaseDocumentNumber=23-26515">23-26515</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/15/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Associate Counsel Pursuant to SCR 42. Mr. Stewart shall be permitted to appear on behalf of appellants in this appeal.  Nevada attorney Rusty Graf, of the law firm of Black &amp; Wadhams, shall be responsible for all matters presented by Mr. Stewart in this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64379&csIID=64379&deLinkID=912633&onBaseDocumentNumber=23-26633">23-26633</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the Northern Nevada Panel. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64379&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

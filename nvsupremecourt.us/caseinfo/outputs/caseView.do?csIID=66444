@@ -1,0 +1,687 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86486: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=FD6CBAC25BD90F32A45A2B53D55555F7">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66444">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86486</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SLS PROPERTIES THREE, LLC VS. RENZI TOWERS, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=28425">60261</a>, <a href="/public/caseView.do?csIID=30353">62179</a>, <a href="/public/caseView.do?csIID=48593">62179-COA</a>, <a href="/public/caseView.do?csIID=32463">64278</a>, <a href="/public/caseView.do?csIID=48601">64278-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A557530</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Lee</td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">SLS Properties Three, LLC</td><td valign="top">Joseph P. Reiff
+							(Law Office of Joseph P. Reiff)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Laura K. Renzi</td><td valign="top">Benjamin B. Childs</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Pasquale Renzi</td><td valign="top">Dale K. Kleven
+							(Former)
+						
+							(Relief Lawyers LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Renzi Towers, LLC</td><td valign="top">Dale K. Kleven
+							(Former)
+						
+							(Relief Lawyers LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Renzo Renzi</td><td valign="top">Dale K. Kleven
+							(Former)
+						
+							(Relief Lawyers LLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/21/2023</td><td>Overdue</td><td>Reply</td><td>Respondent</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=899217&onBaseDocumentNumber=23-13750">23-13750</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=899219&onBaseDocumentNumber=23-13752">23-13752</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Joseph P. Reiff. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=899412&onBaseDocumentNumber=23-13942">23-13942</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Pasquale Renzi) Notice of Withdrawal of Counsel for Dale Kleven. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=899444&onBaseDocumentNumber=23-13974">23-13974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2023</td><td>Motion</td><td>Filed Respondent's (Laura Renzi) Motion to Clarify Representation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=899459&onBaseDocumentNumber=23-13988">23-13988</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. On May 3, 2023, attorney Dale K. Kleven, counsel for respondents Renzi Towers LLC, Pasquale Renzi, and Renzo Renzi, filed a notice of withdrawal. On that same day, attorney Benjamin B. Childs, counsel for respondent Laura Renzi, filed a motion to clarify representation informing the court that he only represents respondent Laura Renzi in this appeal. The unopposed motions are granted. Respondents Renzi Towers LLC, Pasquale Renzi, and Renzo Renzi shall have 30 days from the date of this order to retain new counsel and cause new counsel to file a notice of appearance with this court. If respondents will not be retaining new counsel, they shall notify this court in writing of that fact within the same time period. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=901144&onBaseDocumentNumber=23-15597">23-15597</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2023</td><td>Docketing Statement</td><td>Filed Appellant's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=901954&onBaseDocumentNumber=23-16343">23-16343</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2023</td><td>Docketing Statement</td><td>Filed Appellant's Index of Attachments in Support of Docketing Statement- Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=901959&onBaseDocumentNumber=23-16348">23-16348</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2023</td><td>Docketing Statement</td><td>Filed Appellant's Index of Attachments in Support of Docketing Statement- Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=901971&onBaseDocumentNumber=23-16360">23-16360</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2023</td><td>Docketing Statement</td><td>Filed Appellant's Index of Attachments in Support of Docketing Statement- Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=901973&onBaseDocumentNumber=23-16362">23-16362</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2023</td><td>Docketing Statement</td><td>Filed Respondent's (Laura Renzi) Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=902056&onBaseDocumentNumber=23-16445">23-16445</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2023</td><td>Motion</td><td>Filed Respondent's (Laura Renzi) Motion to Dismiss Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=902057&onBaseDocumentNumber=23-16446">23-16446</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Docketing Statement</td><td>Filed Appellant's Amended Docketing Statement. (DETACHED ATTACHMENT 7 PER 6/23/23 ORDER FILED UNDER SEALED) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=902851&onBaseDocumentNumber=23-17229">23-17229</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to respondent's motion to dismiss due: June 15, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=902907&onBaseDocumentNumber=23-17285">23-17285</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service on Settlement Judge. Due date: 7 days.  (ISSUED IN ERROR). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Motion</td><td>Filed Appellant's Motion to Seal Attachment 7 of the Amended Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=903187&onBaseDocumentNumber=23-17553">23-17553</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2023</td><td>Motion</td><td>Filed Respondent's (Laura Renzi) Response to Motion - Non-Opposition to Motion to Seal Attachment 7 of the Amended Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=903592&onBaseDocumentNumber=23-17952">23-17952</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2023</td><td>Motion</td><td>Filed Appellant's Response to Motion - Opposition to Respondent's (Laura Renzi) Motion to Dismiss. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=904671&onBaseDocumentNumber=23-18986">23-18986</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/16/2023</td><td>Motion</td><td>Filed Respondent's (Laura Renzi) Reply to Opposition to Motion to Dismiss. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=904820&onBaseDocumentNumber=23-19093">23-19093</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Exempting from Settlement Program. On June 5, 2023, appellant filed a motion seeking to seal Attachment 7 of the amended docketing statement. Respondent, Laura Renzi, has filed a motion of non-opposition. The motion is granted. The clerk of this court is directed to detach Attachment 7 of the amended docketing statement filed on June 1, 2023, and file it under seal. On May 17, 2023, this court entered an order granting counsel's motion to withdraw as counsel for respondents Renzi Towers, LLC, Pasquale Renzi, and Renzo Renzi.  That order directed these respondents to either retain new counsel and cause counsel to enter a notice of appearance with this court within 30 days or inform this court that they will not be retaining new counsel. To date, these respondents have not caused new counsel to enter an appearance with this court. Accordingly, we conclude Renzi Towers, LLC, Pasquale Renzi, and Renzo Renzi will be proceeding without counsel.  Renzi Towers LLC will not be permitted to file any document in this appeal. Because these respondents are proceeding on appeal in pro se, we exempt this appeal from the settlement program. Briefing remains stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=905651&onBaseDocumentNumber=23-19910">23-19910</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2023</td><td>Docketing Statement</td><td>Filed Appellants' (SEALED) Attachment 7 to Amended Docketing Statement. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2023</td><td>Order/Procedural</td><td>Filed Order to File Amended Docketing Statement. Appellant shall have 7 days from the date of this order to file and serve a second amended docketing statement that has all documents required by item 27 attached. fn2 [This court defers ruling on the motion to dismiss pending receipt and consideration of the second amended docketing statement.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=908181&onBaseDocumentNumber=23-22330">23-22330</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Docketing Statement</td><td>Filed Appellant's Second Amended Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=908451&onBaseDocumentNumber=23-22596">23-22596</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/19/2023</td><td>Other</td><td>Justice Patricia Lee disqualified from participation in this matter. Disqualification Reason: Parties</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2023</td><td>Order/Procedural</td><td>Filed Order to Show Cause. Appellants shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Respondents may file any reply within 14 days from the date that appellants' response is served. Briefing is suspended. fn2 [ Disposition of the motion to dismiss this appeal is deferred pending resolution of this order to show cause.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=909675&onBaseDocumentNumber=23-23744">23-23744</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2023</td><td>Other</td><td>Filed Returned Mail - Order Granting Motion and Exempting From Settlement Program filed 06/23/23, addressed to Renzi Towers. Per USPS "Return to Sender, Undeliverable, Unable to Forward". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=912746&onBaseDocumentNumber=23-26745">23-26745</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2023</td><td>Other</td><td>Filed Returned Mail - Order Granting Motion and Exempting From Settlement Program filed 06/23/23, addressed to Renzio Renzi. Per USPS "Return to Sender, Undeliverable, Unable to Forward". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=912749&onBaseDocumentNumber=23-26748">23-26748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to order to show cause due: September 7, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=913446&onBaseDocumentNumber=23-27416">23-27416</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2023</td><td>Motion</td><td>Filed Appellant's Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66444&csIID=66444&deLinkID=915379&onBaseDocumentNumber=23-29292">23-29292</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66444&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

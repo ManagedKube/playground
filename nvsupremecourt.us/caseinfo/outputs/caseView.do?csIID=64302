@@ -1,0 +1,690 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84947: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=7DF1B7A94CAD4696E3258792C5F67737">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64302">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84947</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">FALCONI VS. CLARK CTY. EIGHTH JUDICIAL DIST. CT.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64708">85228</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Lee</td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>03/02/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">American Academy of Matrimonial Lawyers Nevada Chapter</td><td valign="top">Marshal S. Willick
+							(Willick Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Alexander M. Falconi</td><td valign="top">Christopher M. Peterson
+							(American Civil Liberties Union of Nevada/Las Vegas)
+						<br>Sophia A. Romero
+							(American Civil Liberties Union of Nevada/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top">Jeffrey M. Conner
+							(Attorney General/Carson City)
+						<br>Andres Moses</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Filing Fee</td><td>Petition Filing Fee Paid. $250.00 from Christopher Peterson.  E-Payment Ref. no. 22062420601947. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Petition/Writ</td><td>Filed Petition For Writ Of Mandamus Or In The Alternative Prohibition And Complaint For Declaratory And Injunctive Relief. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=863541&onBaseDocumentNumber=22-20558">22-20558</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=863542&onBaseDocumentNumber=22-20559">22-20559</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2022</td><td>Notice/Incoming</td><td>Filed Proposed Intervenor Las Vegas Review-Journal, Inc.'s Notice of Intent to Seek Intervention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=865344&onBaseDocumentNumber=22-22284">22-22284</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2022</td><td>Other</td><td>Returned Unfiled Document to Ali Shahrokhi and T. Matthew Phillips. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=865506&onBaseDocumentNumber=22-22444">22-22444</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/21/2022</td><td>Notice/Incoming</td><td>Filed Proposed Intervenors' Notice of Intent to Seek Intervention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=866011&onBaseDocumentNumber=22-22941">22-22941</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2022</td><td>Motion</td><td>Filed Las Vegas Review Journal, Inc.'s  Motion to Intervene (Proposed Petition for Writ Attached).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=866467&onBaseDocumentNumber=22-23389">22-23389</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2022</td><td>Notice/Incoming</td><td>Filed Amended Certificate of Service for Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=866770&onBaseDocumentNumber=22-23658">22-23658</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/29/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for Jeffrey M. Conner. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=867053&onBaseDocumentNumber=22-23951">22-23951</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/29/2022</td><td>Motion</td><td>Filed Respondent's Motion for Stay of Briefing on Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=867058&onBaseDocumentNumber=22-23956">22-23956</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Motion</td><td>Filed Las Vegas Review Journal, Inc.'s Response to Motion for Stay of Briefing on Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=867808&onBaseDocumentNumber=22-24629">22-24629</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Motion</td><td>Filed Ali Shahrokhi &amp; T. Matthew Phillips' Opposition to Motion for Stay of Briefing on Motion to Intervene.  (DETACHED MOTION TO INTERVENE AND FILED SEPARATELY PER ORDER FILED 8/22/22.)  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=867917&onBaseDocumentNumber=22-24737">22-24737</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2022</td><td>Motion</td><td>Filed Proposed Intervenor Justin Martin's Notice of Intent to Seek Intervention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=868260&onBaseDocumentNumber=22-25073">22-25073</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Order/Procedural</td><td>Filed Order.  The Las Vegas Review Journal (RJ) has filed a motion to intervene in this original writ petition.  Respondent moves to stay briefing on that motion to intervene, as well as any other such motion that may be filed by other parties, pending this court's determination regarding whether to order an answer to the petition.  The RJ opposes the motion, as do Ali Shahrokhi and T. Matthew Phillips, who have filed a notice of intention to seek intervention.  The motion to stay briefing on the motion to intervene is denied.  Respondent shall have 7 days from the date of this order to file and serve any opposition to the motion to intervene.  Attached to Shahrokhi's and Phillips's opposition is a separate motion for judicial notice.  The clerk shall detach that motion from the opposition and file it separately.  The parties and RJ shall have 7 days from the date of this order to file and serve any opposition to the motion for judicial notice.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=869349&onBaseDocumentNumber=22-26098">22-26098</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Motion</td><td>Filed Proper Person Motion.  Ali Shahrokhi &amp; T. Matthew Phillips' Request for Judicial Notice.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=869356&onBaseDocumentNumber=22-26104">22-26104</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Respondent shall have 28 days from the date of this order within which to file and serve an answer.  Petitioner may file and serve any reply within 14 days from the date when the answer is served.  This matter raises issues similar to those asserted in Falconi v. Eighth Judicial District Court (Minter), Docket No. 85195, and thus, upon completion of briefing, these cases may be clustered to ensure that they are resolved in a consistent and efficient manner.  fn1[The Las Vegas Review Journal has moved to intervene in this matter, proposing to file an original petition supporting its position that strict scrutiny of the rules is required under the First Amendment and that the certain statutes governing related court-access issues are unconstitutional.  Having reviewed the motion, it is denied; however, nothing in this order precludes the Las Vegas Review Journal from filing a separate petition should it deem doing so warranted.  Nonparties Ali Shahrokhi and T. Matthew Phillips' request for judicial notice is denied.  The briefing schedule for these motions set forth in the court's August 22, 2022, order is vacated as moot.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=869484&onBaseDocumentNumber=22-26231">22-26231</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2022</td><td>Filing Fee</td><td>Filing Fee due for Petition. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 5 days.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=869515&onBaseDocumentNumber=22-26262">22-26262</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2022</td><td>Filing Fee</td><td>Petition Filing Fee Paid. $250.00 from Chris Peterson.  E-Payment Ref. no. 22082332031129. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2022</td><td>Other</td><td>Returned Unfiled Document. Document entitled "Request for Judicial Notice of a Letter from Clark County Clerk" returned.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=869618&onBaseDocumentNumber=22-26364">22-26364</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2022</td><td>Order/Procedural</td><td>Filed Order. Nonparty Justin Martin has filed a pro se notice of intent to seek intervention.  Therein, Martin also requests an invitation to file a brief of amicus curiae.  No action will be taken on the notice of intent.  The request for an invitation to file a brief of amicus curiae is denied. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=870093&onBaseDocumentNumber=22-26830">22-26830</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Motion</td><td>Filed Respondent's Unopposed Motion for Extension of Time to File Answer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=872792&onBaseDocumentNumber=22-29383">22-29383</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have until October 20, 2022, to file and serve an answer, including authorities, against issuance of the requested writ.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=873066&onBaseDocumentNumber=22-29654">22-29654</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Petition/Writ</td><td>Filed Respondent's Answer to Petition for Writ of Mandamus or in the Alternative Prohibition and Complaint for Declaratory Judgment and Injunctive Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=876697&onBaseDocumentNumber=22-33098">22-33098</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volumes 1-3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=876659&onBaseDocumentNumber=22-33105">22-33105</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2022</td><td>Motion</td><td>Filed Petitioner's Unopposed Motion for Extension of Time to File Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=877980&onBaseDocumentNumber=22-34407">22-34407</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Reply Brief Due: 11/17/22) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=878031&onBaseDocumentNumber=22-34458">22-34458</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=879961&onBaseDocumentNumber=22-36285">22-36285</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for March 2, 2023, at 10:30 a.m., in Carson City.  The argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=888563&onBaseDocumentNumber=23-03460">23-03460</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for March 2, 2023, at 10:30 a.m.  This argument is scheduled in conjunction with the argument in Falconi v. Clark County Eighth Judicial District, Docket No. 84947, currently scheduled for March 2, 2023, at 10:30 a.m. in Carson City.  The argument in these matters shall be limited to a total of 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=889150&onBaseDocumentNumber=23-04037">23-04037</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/15/2023</td><td>Motion</td><td>Filed American Academy of Matrimonial Lawyers' Motion to Participate in Oral Argument as Amicus Curiae. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=889816&onBaseDocumentNumber=23-04674">23-04674</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Oral Argument. This court has determined that oral argument would be of assistance in resolving the issues presented in Las Vegas Review Journal v. Clark County Eighth Judicial District Court, Docket No. 85228.  Accordingly, oral argument is scheduled in Docket No. 85288 for March 2, 2023, at 10:30 a.m. in Carson City in conjunction with the arguments scheduled in Docket No. 84947 and Docket No. 85195.  The argument in these matters shall be limited to a total of 60 minutes.  The parties for each side shall decide how to divide their allotted 30 minutes. Amicus curiae American Academy of Matrimonial Lawyers has filed a motion to participate in oral argument. The motion is granted. Nos. 84947/85195/85228. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=890048&onBaseDocumentNumber=23-04905">23-04905</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. Nos. 85195/84947/85228 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=890065&onBaseDocumentNumber=23-04922">23-04922</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2023</td><td>Other</td><td>Justice Patricia Lee disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc Court. Nos. 84947/85195/85228. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Notice/Incoming</td><td>Filed Petitioner's Notice of Change of Address for Christopher Peterson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=891804&onBaseDocumentNumber=23-06608">23-06608</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Order/Procedural</td><td>Filed Order of Assignment. The Honorable Patricia Lee, Justice, being disqualified in the above-entitled matters, IT IS HEREBY ORDERED that the Honorable Abbi Silver, Senior Justice, is assigned to participate in the determination of these matters in place of Justice Lee. 84947/85195/85228. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64302&csIID=64302&deLinkID=896013&onBaseDocumentNumber=23-10666">23-10666</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64302&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

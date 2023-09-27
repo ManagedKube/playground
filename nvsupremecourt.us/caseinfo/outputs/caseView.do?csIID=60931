@@ -1,0 +1,1180 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82484: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=A21E0D527B80BCC0018187C421829E4F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60931">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82484</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ELK POINT COUNTRY CLUB HOA, INC. VS. K.J. BROWN, L.L.C.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61433">82824</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Douglas Co. - Ninth Judicial District - 2020-CV-00124</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>02/19/2021 / Wasick, David</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>05/26/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Andrea Pott</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Bill Zeller</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Brooke Hart</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Bruce Munson</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Cathy Oyster</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Cheri Adams</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Eleanor Pott</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Jeanette Schulze</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Jim Gosline</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Jim Greenhalgh</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Katie Rowe</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Kristine Nelson</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Lex Adams</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Linda Hoffman</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Mark Schulze</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Marty Zeller</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Mary Tanner</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nancy Greenhalgh</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Pam Cash</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Papaha Gosline</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Richard Rowe</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Richard Tanner</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Robert Schulze</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Roianne Hart</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Shayne Dante</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Steven C. Gabriel</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Suzanne Dante</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Val Licon</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Zack Dante</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>William E. Peterson
+							(Snell &amp; Wilmer, LLP/Reno)
+						<br>Janine C. Prupas
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Elk Point Country Club Homeowners' Association, Inc.</td><td valign="top">Joshua Y. Ang
+							(Former)
+						
+							(Resnick &amp; Louis, P.C./Las Vegas)
+						<br>Prescott T. Jones
+							(Resnick &amp; Louis, P.C./Las Vegas)
+						<br>Carissa C. Yuhas
+							(Resnick &amp; Louis, P.C./Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">K.J. Brown, L.L.C.</td><td valign="top">Richard H. Bryan
+							(Former)
+						
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Sophie A. Karadanis
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>Gayle A. Kern
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>John E. Leach
+							(Leach Kern Gruchow Anderson Song/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nancy Avanzino Gilbert</td><td valign="top">Richard H. Bryan
+							(Former)
+						
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Sophie A. Karadanis
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>Gayle A. Kern
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>John E. Leach
+							(Leach Kern Gruchow Anderson Song/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Timothy D. Gilbert</td><td valign="top">Richard H. Bryan
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Sophie A. Karadanis
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>Gayle A. Kern
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>John E. Leach
+							(Leach Kern Gruchow Anderson Song/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Timothy D. Gilbert and Nancy Avanzino Gilbert Revocable Family Trust Dated December 27, 2013</td><td valign="top">Richard H. Bryan
+							(Former)
+						
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Sophie A. Karadanis
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>Gayle A. Kern
+							(Leach Kern Gruchow Anderson Song/Reno)
+						<br>John E. Leach
+							(Leach Kern Gruchow Anderson Song/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=806629&onBaseDocumentNumber=21-04705">21-04705</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=806632&onBaseDocumentNumber=21-04708">21-04708</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Nationwide Legal Nevada.  Check no. 213492. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/19/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: David Wasick. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=806969&onBaseDocumentNumber=21-05039">21-05039</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2021</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Appearance for Richard H. Bryan as co-counsel for all Respondents'. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=808044&onBaseDocumentNumber=21-06068">21-06068</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2021</td><td>Order/Procedural</td><td>Filed Order.  The clerk of this court shall add attorney Richard H. Bryan, Esq., as co-counsel for respondents.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=808204&onBaseDocumentNumber=21-06225">21-06225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2021</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=809014&onBaseDocumentNumber=21-07015">21-07015</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service on Settlement Judge for Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=809051&onBaseDocumentNumber=21-07051">21-07051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2021</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service on Settlement Judge for Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=809752&onBaseDocumentNumber=21-07710">21-07710</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for April 27, 2021, at 9:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=810323&onBaseDocumentNumber=21-08246">21-08246</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/23/2021</td><td>Motion</td><td>Filed Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=814048&onBaseDocumentNumber=21-11792">21-11792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: June 7, 2021, at 10:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=814408&onBaseDocumentNumber=21-12141">21-12141</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/30/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=814713&onBaseDocumentNumber=21-12444">21-12444</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion. A number of property owners in the Elk Point subdivision have moved to intervene in this appeal.  Respondents oppose the motion.  The motion is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=815268&onBaseDocumentNumber=21-12990">21-12990</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for June 7, 2021, at 10:00 AM. Case Nos. 82484/82824. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=815923&onBaseDocumentNumber=21-13552">21-13552</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/02/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 82484/82824. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=821756&onBaseDocumentNumber=21-19090">21-19090</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=821932&onBaseDocumentNumber=21-19197">21-19197</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Notice/Incoming</td><td>Filed Appellant's Substitution of Attorneys from Joshua Ang to Carissa Yuhas. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=822188&onBaseDocumentNumber=21-19425">21-19425</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/21/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's transcript request form due: August 3, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=823708&onBaseDocumentNumber=21-20946">21-20946</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 10/23/20. To Court Reporter: Kathy Jackson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=824617&onBaseDocumentNumber=21-21743">21-21743</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Kathy Jackson stating that the requested transcripts were delivered.  Dates of transcripts: 10/23/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=825648&onBaseDocumentNumber=21-22755">21-22755</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opening brief and appendix due: October 18, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=831236&onBaseDocumentNumber=21-28070">21-28070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833159&onBaseDocumentNumber=21-29967">21-29967</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833168&onBaseDocumentNumber=21-29976">21-29976</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833169&onBaseDocumentNumber=21-29977">21-29977</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833170&onBaseDocumentNumber=21-29978">21-29978</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833171&onBaseDocumentNumber=21-29979">21-29979</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833172&onBaseDocumentNumber=21-29980">21-29980</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833173&onBaseDocumentNumber=21-29981">21-29981</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833174&onBaseDocumentNumber=21-29982">21-29982</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833175&onBaseDocumentNumber=21-29983">21-29983</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833176&onBaseDocumentNumber=21-29984">21-29984</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833177&onBaseDocumentNumber=21-29985">21-29985</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 6 - Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833178&onBaseDocumentNumber=21-29986">21-29986</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833180&onBaseDocumentNumber=21-29988">21-29988</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833181&onBaseDocumentNumber=21-29989">21-29989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833182&onBaseDocumentNumber=21-29990">21-29990</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief.  Volume 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=833183&onBaseDocumentNumber=21-29991">21-29991</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2021</td><td>Motion</td><td>Filed Motion for Permission for Leave to File Amici Curiae Brief of Property Owners in Support of Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=834085&onBaseDocumentNumber=21-30758">21-30758</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/25/2021</td><td>Brief</td><td>Filed Amicus Brief. (STICKEN PER 1/24/22 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/26/2021</td><td>Motion</td><td>Filed Respondents' Motion to Lift Stay of Preliminary Injunction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=834230&onBaseDocumentNumber=21-30901">21-30901</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant shall have until November 16, 2021, to file and serve an opposition to respondents' motion to lift stay of preliminary injunction filed on October 26, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=834286&onBaseDocumentNumber=21-30957">21-30957</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents shall have until November 15, 2021, to file and serve an opposition to the motion for leave to file an amicus brief filed on October 25, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=834402&onBaseDocumentNumber=21-31069">21-31069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/01/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents' answering brief due: December 1, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=834699&onBaseDocumentNumber=21-31358">21-31358</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2021</td><td>Motion</td><td>Filed Respondents' Opposition to Motion for Leave to File Amici Curiae Brief of Property Owners in Support of Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=836212&onBaseDocumentNumber=21-32784">21-32784</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Motion</td><td>Filed Appellant's Opposition to Motion to Lift Stay of Preliminary Injunction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=836405&onBaseDocumentNumber=21-32975">21-32975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents shall have until December 7, 2021, to file and serve the reply to appellant's opposition to motion to lift stay of preliminary injunction.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=836507&onBaseDocumentNumber=21-33077">21-33077</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/22/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Amicus curiae's reply to respondents' opposition to motion for leave to file amici curiae brief of property owners in support of appellant due: December 6, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=837078&onBaseDocumentNumber=21-33595">21-33595</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/01/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=837770&onBaseDocumentNumber=21-34273">21-34273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2021</td><td>Appendix</td><td>Filed Appendix to Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=837771&onBaseDocumentNumber=21-34274">21-34274</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2021</td><td>Notice/Incoming</td><td>Filed Respondents' Errata to Opposition to Motion for Leave to File Amici Curiae Brief of Property Owners in Support of Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=837916&onBaseDocumentNumber=21-34419">21-34419</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2021</td><td>Motion</td><td>Filed Respondents' Reply in Support of Motion to Lift Stay of Preliminary Injunction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=837917&onBaseDocumentNumber=21-34420">21-34420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Motion</td><td>Filed Proper Persons' Motion for Leave to File Amici Curiae Brief of Property Owners in Support of Respondents'. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=838191&onBaseDocumentNumber=21-34688">21-34688</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Motion</td><td>Filed Amicus Reply in Support of Motion for Leave to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=838283&onBaseDocumentNumber=21-34777">21-34777</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/13/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to Cathy Oyster's motion for leave to file amici curiae brief or property owners in support of respondents due: December 27, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=838971&onBaseDocumentNumber=21-35454">21-35454</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Motion</td><td>Filed Appellant's Opposition to Motion for Leave to File Amici Curiae Brief of Property Owners in Support of Respondents'. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=840144&onBaseDocumentNumber=21-36526">21-36526</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Reply Brief due:  January 18, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=840534&onBaseDocumentNumber=21-36911">21-36911</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Appellant's Failure to Serve Pro Se/Individual Unit Owners with its Opposition to Motion for Leave to File Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=842244&onBaseDocumentNumber=22-01259">22-01259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/18/2022</td><td>Brief</td><td>Filed Appellant's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=842697&onBaseDocumentNumber=22-01702">22-01702</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/24/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions. The motion for leave to file amicus briefs are denied. The clerk of this court shall strike the amicus brief filed on October 25, 2021, and shall return the amicus brief received from Oyster and Gabriel on December 6, 2021, unfiled.  The motion to lift the stay is denied. fn1 [In light of the instant order, respondents' request for judicial notice is denied as moot.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=843333&onBaseDocumentNumber=22-02327">22-02327</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2022</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Disassociation of Counsel for Law Firm Fennemore Craig, P.C.. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=851679&onBaseDocumentNumber=22-10200">22-10200</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2022</td><td>Order/Procedural</td><td>Filed Order.  The clerk of this court shall remove attorney Richard H. Bryan and the law firm of Fennemore Craig, P.C., as counsel for respondents.  Respondents shall continue to be represented by Leach Kern Gruchow Anderson Song.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=851840&onBaseDocumentNumber=22-10354">22-10354</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2022</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=858609&onBaseDocumentNumber=22-16814">22-16814</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Reversed." Before: Silver/Cadish/Pickering. Author: Cadish, J. Majority: Silver/Cadish/Pickering. 138 Nev. Adv. Opn. No. 60. NNP22-AS/EC/KP. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=869031&onBaseDocumentNumber=22-25785">22-25785</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents Petition for Rehearing due:  September 20, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=870480&onBaseDocumentNumber=22-27212">22-27212</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/20/2022</td><td>Post-Judgment Petition</td><td>Filed Respondents' Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=872981&onBaseDocumentNumber=22-29570">22-29570</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Filing Fee</td><td>Rehearing Filing Fee Paid. $150.00 from Gayle A. Kern. E-Payment Ref. no. 22092037108628. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer to Petition for Rehearing.  Appellant's Answer due:  14 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=875027&onBaseDocumentNumber=22-31529">22-31529</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's answer to petition for rehearing due: November 3, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=876350&onBaseDocumentNumber=22-32803">22-32803</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant's Answer to Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=878154&onBaseDocumentNumber=22-34578">22-34578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). fn1 [ Having retired, the Honorab;e Abbi Silver did not participate in the decision in this matter.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=879302&onBaseDocumentNumber=22-35638">22-35638</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=882443&onBaseDocumentNumber=22-38657">22-38657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/15/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on December 12, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60931&csIID=60931&deLinkID=883140&onBaseDocumentNumber=22-38657">22-38657</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60931&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

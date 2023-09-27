@@ -1,0 +1,1693 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85525: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=0B2E68389A219DBFF6436AB66427841F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65108">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85525</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">UNITED HEALTHCARE INS. CO. VS. FREMONT EMERGENCY SERVS. (MANDAVIA), LTD. C/W 85656</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>85525*, <a href="/public/caseView.do?csIID=65297">85656</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=59706">81680</a>, <a href="/public/caseView.do?csIID=62540">83629</a>, <a href="/public/caseView.do?csIID=63778">84558</a>, <a href="/public/caseView.do?csIID=65297">85656</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A792978</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Reinstated</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Emergency Department Practice Management Association</td><td valign="top">Hector J Carbajal
+							(Carbajal Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Association of Health Plans</td><td valign="top">Constance L. Akridge</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">The Reporters Committee for Freedom of the Press</td><td valign="top">Margaret A. McLetchie
+							(McLetchie Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Health Plan of Nevada, Inc.</td><td valign="top">Colby L. Balkenbush
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>K. Lee Blalack, II
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Hannah Dunham
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Nadia L. Farjood
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Kevin D. Feder
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jeffrey E. Gordon
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jonathan Hacker
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Marjan Hajimirzaee
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Joel D. Henriod
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Philip E. Legendy
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Adam G. Levine
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jason A. Orr
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Dimitri D. Portnoi
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Paul J. Wooten
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Jason Yan
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sierra Health and Life Insurance Company, Inc.</td><td valign="top">Colby L. Balkenbush
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>K. Lee Blalack, II
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Hannah Dunham
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Nadia L. Farjood
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Kevin D. Feder
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jeffrey E. Gordon
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jonathan Hacker
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Marjan Hajimirzaee
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Joel D. Henriod
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Philip E. Legendy
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Adam G. Levine
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jason A. Orr
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Dimitri D. Portnoi
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Paul J. Wooten
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Jason Yan
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">UMR, Inc.</td><td valign="top">Colby L. Balkenbush
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>K. Lee Blalack, II
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Hannah Dunham
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Nadia L. Farjood
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Kevin D. Feder
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jeffrey E. Gordon
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jonathan Hacker
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Marjan Hajimirzaee
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Joel D. Henriod
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Philip E. Legendy
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Adam G. Levine
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jason A. Orr
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Dimitri D. Portnoi
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Paul J. Wooten
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Jason Yan
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">United Healthcare Insurance Company</td><td valign="top">Colby L. Balkenbush
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>K. Lee Blalack, II
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Hannah Dunham
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Nadia L. Farjood
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Kevin D. Feder
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jeffrey E. Gordon
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jonathan Hacker
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Marjan Hajimirzaee
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Joel D. Henriod
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Philip E. Legendy
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Adam G. Levine
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jason A. Orr
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Dimitri D. Portnoi
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Paul J. Wooten
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Jason Yan
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">United Healthcare Services, Inc.</td><td valign="top">Colby L. Balkenbush
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>K. Lee Blalack, II
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Hannah Dunham
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Nadia L. Farjood
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Kevin D. Feder
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jeffrey E. Gordon
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Jonathan Hacker
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						<br>Marjan Hajimirzaee
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Joel D. Henriod
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Philip E. Legendy
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Adam G. Levine
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Brittany M. Llewellyn
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Jason A. Orr
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Dimitri D. Portnoi
+							(O'Melveny &amp; Myers LLP/Los Angeles)
+						<br>D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Phillip N. Smith, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Paul J. Wooten
+							(O'Melveny &amp; Myers LLP/New York)
+						<br>Jason Yan
+							(O'Melveny &amp; Myers LLP/Washington DC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Crum Stefanko and Jones, Ltd.</td><td valign="top">Joseph Y. Ahmad
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Tayler Dane Bingham
+							(Bailey Kennedy)
+						<br>Richard Dreitzer
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Jonathan E. Feuer
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Justin C. Fineberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						<br>Martin B. Goldberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Sarah E. Harmon
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Michael Killingsworth
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Rachel H. LeBlanc
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>P. Kevin Leyendecker
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Louis Liao
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Pat Lundvall
+							(McDonald Carano LLP/Las Vegas)
+						<br>Jason S. McManis
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Amanda M. Perach
+							(McDonald Carano LLP/Las Vegas)
+						<br>Emily L. Pincow
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jane L. Robinson
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>David R. Ruffner
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jonathan S. Siegelaub
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Ashley Singrossi
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>John Zavitsanos
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Fremont Emergency Services (Mandavia), Ltd.</td><td valign="top">Joseph Y. Ahmad
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Tayler Dane Bingham
+							(Bailey Kennedy)
+						<br>Richard Dreitzer
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Jonathan E. Feuer
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Justin C. Fineberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						<br>Martin B. Goldberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Sarah E. Harmon
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Michael Killingsworth
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Rachel H. LeBlanc
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>P. Kevin Leyendecker
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Louis Liao
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Pat Lundvall
+							(McDonald Carano LLP/Las Vegas)
+						<br>Jason S. McManis
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Amanda M. Perach
+							(McDonald Carano LLP/Las Vegas)
+						<br>Emily L. Pincow
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jane L. Robinson
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>David R. Ruffner
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jonathan S. Siegelaub
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Ashley Singrossi
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>John Zavitsanos
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Team Physicians of Nevada-Mandavia, P.C.</td><td valign="top">Joseph Y. Ahmad
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Tayler Dane Bingham
+							(Bailey Kennedy)
+						<br>Richard Dreitzer
+							(Fennemore Craig, P.C./Las Vegas)
+						<br>Jonathan E. Feuer
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Justin C. Fineberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						<br>Martin B. Goldberg
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Sarah E. Harmon
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Michael Killingsworth
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Rachel H. LeBlanc
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>P. Kevin Leyendecker
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Louis Liao
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Pat Lundvall
+							(McDonald Carano LLP/Las Vegas)
+						<br>Jason S. McManis
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>Amanda M. Perach
+							(McDonald Carano LLP/Las Vegas)
+						<br>Emily L. Pincow
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jane L. Robinson
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						<br>David R. Ruffner
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Jonathan S. Siegelaub
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>Ashley Singrossi
+							(Lash &amp; Goldberg LLP/Ft. Lauderdale)
+						<br>John Zavitsanos
+							(Ahmad, Zavitsanos, &amp; Mensing, PLLC/Houston)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/11/2023</td><td>Open</td><td>Reply Brief</td><td>Appellant</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court.</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=876507&onBaseDocumentNumber=22-32957">22-32957</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=876509&onBaseDocumentNumber=22-32959">22-32959</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellants: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=876553&onBaseDocumentNumber=22-33001">22-33001</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Lewis Roca.  Check no. 20044. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2022</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Appearance for Dennis L. Kennedy and Sarah Harmon. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=876776&onBaseDocumentNumber=22-33219">22-33219</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/25/2022</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the notice of appearance filed on October 21, 2022, the clerk of this court shall add attorneys Dennis L. Kennedy and Sarah E. Harmon and the law firm of Bailey Kennedy to the docket as counsel for respondents in this appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877075&onBaseDocumentNumber=22-33516">22-33516</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Minutes 9/22/22, 10/6/22, 10/10/22 and 10/13/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877390&onBaseDocumentNumber=22-33825">22-33825</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2022</td><td>Motion</td><td>Filed Appellant's Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877528&onBaseDocumentNumber=22-33962">22-33962</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2022</td><td>Motion</td><td>Filed Appellant's Motion to File Portions of Appendix Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877529&onBaseDocumentNumber=22-33963">22-33963</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/28/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877530&onBaseDocumentNumber=22-33964">22-33964</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=877531&onBaseDocumentNumber=22-33965">22-33965</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants transcript request form due: November 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=878170&onBaseDocumentNumber=22-34594">22-34594</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents response to motions filed on October 28, 2022 due: November 18, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=878171&onBaseDocumentNumber=22-34595">22-34595</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2022</td><td>Motion</td><td>Filed NRAP 27(e) Emergency Motion for Interim Extension of District Court's Stay of Orders Unsealing Certain Trial Exhibits and Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=878452&onBaseDocumentNumber=22-34840">22-34840</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879111&onBaseDocumentNumber=22-35453">22-35453</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Notice/Incoming</td><td>Filed Notice of Filing Pro Hac Vice Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879211&onBaseDocumentNumber=22-35550">22-35550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Motion</td><td>Filed Respondents' Opposition to United's Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879213&onBaseDocumentNumber=22-35552">22-35552</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Appendix</td><td>Filed Respondents' Appendix in Support of Opposition to United's Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts, Volume 1 of 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879216&onBaseDocumentNumber=22-35555">22-35555</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Appendix</td><td>Filed Respondents' Appendix in Support of Opposition to United's Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts, Volume 2 of 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879219&onBaseDocumentNumber=22-35558">22-35558</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Notice/Incoming</td><td>Filed Notice Respondents' NRAP 26.1 Disclosure Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879242&onBaseDocumentNumber=22-35579">22-35579</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Order/Procedural</td><td>Filed Order Granting Temporary Stay. On October 28, 2022, appellants filed a motion for stay of post-trial orders denying in part motions to seal and redact trial exhibits and transcripts. District court recognized a 30-day stay under NRCP 62(a), until November 14, 2022, so that appellants could seek a stay from this court. On November 3, 2022, respondents sought and were granted a telephonic extension, giving them until November 18 to file a response to the stay motion. Appellants then filed an emergency motion seeking an interim stay pending this court's resolution of the October 28 stay motion. Although respondents today submitted their opposition to the stay motion, a temporary stay of the subject district court orders is hereby granted pending the completion of briefing on the stay motion and further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879245&onBaseDocumentNumber=22-35582">22-35582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply to opposition due: December 1, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879692&onBaseDocumentNumber=22-36021">22-36021</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=879972&onBaseDocumentNumber=22-36296">22-36296</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2022</td><td>Motion</td><td>Filed Respondents' Opposition to United's Motion to File Portions of Appendix Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=880042&onBaseDocumentNumber=22-36364">22-36364</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply to opposition filed on November 18, 2022 due: December 12, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=880563&onBaseDocumentNumber=22-36875">22-36875</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/01/2022</td><td>Motion</td><td>Filed Appellants' Reply In Support of Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=881642&onBaseDocumentNumber=22-37868">22-37868</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/12/2022</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion to File Portions of Appendix Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=882737&onBaseDocumentNumber=22-38942">22-38942</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2023</td><td>Motion</td><td>Filed Stipulated Motion for Extension to File Opening Brief and Appendix. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=886758&onBaseDocumentNumber=23-01756">23-01756</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. Appellants have filed a motion to extend a stay imposed by the district court of the court's order unsealing commercially sensitive documents and transcripts from the trial and a motion to file those documents in the appendix filed with the motion for stay under seal.  Respondents oppose the motion to extend the stay and the motion to file the appendix under seal and ask this court to allow the documents to be released.   Appellants have filed a reply.  This court grants the motion to extend the stay and to seal the appendix to the motion.  The clerk of this court shall file the appendices received on October 31, 2022, and November 1, 2022, under seal.  Appellants' stipulated motion for an extension of time to file the opening brief is granted. Appellants shall have until April 18, 2023, to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=892990&onBaseDocumentNumber=23-07750">23-07750</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2023</td><td>Appendix</td><td>Filed Appellants' (SEALED) Appendix to Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts Volumes 3, 5, 6, 9, 11, 13, 17, 18, 21, 27, and 31.(FILED UNDER SEAL PER 3/14/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Appendix</td><td>Filed Appellants' (SEALED) Appendix to Motion to Extend Stay of District Court's Order Unsealing Certain Trial Exhibits and Transcripts Volumes 4, 7, 8, 10, 12, 14, 15, 16, 19, 20, 22, 23, 24, 25, 26, 28, 29, 30. (FILED UNDER SEAL PER 3/14/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Appeal #85525 with Petition #85656 and to Have the Petition in #85656 Serve as Portion of Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=894381&onBaseDocumentNumber=23-09095">23-09095</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/24/2023</td><td>Notice/Incoming</td><td>Filed Notice Ahmad, Zavitsanos &amp; Mensing, PLLC's Notice of Change of Firm Name. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=894503&onBaseDocumentNumber=23-09214">23-09214</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/27/2023</td><td>Motion</td><td>Filed Respondent's Notice of Non-Opposition to Appellants' Motion to Consolidate Appeal 85525 with Petition 85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=894663&onBaseDocumentNumber=23-09365">23-09365</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Consolidate. These matters shall be consolidated. Appellants/petitioners shall have until April 18, 2023, to file and serve an opening brief and appendix that addresses all issues in these matters.  Respondents/real parties in interest shall file a single combined answering brief on appeal and answer to the petition within 30 days of service of the opening brief, and appellants/petitioners may then file a single combined reply within 30 days of service of the combined answer, if deemed necessary. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=894904&onBaseDocumentNumber=23-09597">23-09597</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 1 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897415&onBaseDocumentNumber=23-12020">23-12020</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 2 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897416&onBaseDocumentNumber=23-12021">23-12021</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 3 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897417&onBaseDocumentNumber=23-12022">23-12022</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 4 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897418&onBaseDocumentNumber=23-12023">23-12023</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 5 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897419&onBaseDocumentNumber=23-12024">23-12024</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 6 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897420&onBaseDocumentNumber=23-12025">23-12025</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 7 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897421&onBaseDocumentNumber=23-12026">23-12026</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 8 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897422&onBaseDocumentNumber=23-12027">23-12027</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 9 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897423&onBaseDocumentNumber=23-12028">23-12028</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 10 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897424&onBaseDocumentNumber=23-12029">23-12029</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 11 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897425&onBaseDocumentNumber=23-12030">23-12030</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 12 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897426&onBaseDocumentNumber=23-12031">23-12031</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 13 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897427&onBaseDocumentNumber=23-12032">23-12032</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 14 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897428&onBaseDocumentNumber=23-12033">23-12033</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 15 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897429&onBaseDocumentNumber=23-12034">23-12034</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 16 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897430&onBaseDocumentNumber=23-12035">23-12035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 17 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897431&onBaseDocumentNumber=23-12036">23-12036</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 18 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897432&onBaseDocumentNumber=23-12037">23-12037</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 19 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897433&onBaseDocumentNumber=23-12038">23-12038</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 20 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897434&onBaseDocumentNumber=23-12039">23-12039</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 21 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897497&onBaseDocumentNumber=23-12101">23-12101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 22 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897436&onBaseDocumentNumber=23-12040">23-12040</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 23 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897437&onBaseDocumentNumber=23-12041">23-12041</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 24 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897438&onBaseDocumentNumber=23-12042">23-12042</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 25 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897439&onBaseDocumentNumber=23-12043">23-12043</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 26 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897440&onBaseDocumentNumber=23-12044">23-12044</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 27 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897498&onBaseDocumentNumber=23-12102">23-12102</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 28 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897441&onBaseDocumentNumber=23-12045">23-12045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 29 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897499&onBaseDocumentNumber=23-12103">23-12103</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 30 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897442&onBaseDocumentNumber=23-12046">23-12046</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 31 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897443&onBaseDocumentNumber=23-12047">23-12047</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 32 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897444&onBaseDocumentNumber=23-12048">23-12048</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 33 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897445&onBaseDocumentNumber=23-12049">23-12049</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 34 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897446&onBaseDocumentNumber=23-12050">23-12050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 35 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897447&onBaseDocumentNumber=23-12051">23-12051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 36 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897448&onBaseDocumentNumber=23-12052">23-12052</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 37 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897449&onBaseDocumentNumber=23-12053">23-12053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 38 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897450&onBaseDocumentNumber=23-12054">23-12054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 39 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897451&onBaseDocumentNumber=23-12055">23-12055</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 40 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897455&onBaseDocumentNumber=23-12059">23-12059</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 41 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897452&onBaseDocumentNumber=23-12056">23-12056</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 42 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897453&onBaseDocumentNumber=23-12057">23-12057</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 43 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897454&onBaseDocumentNumber=23-12058">23-12058</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 44 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897496&onBaseDocumentNumber=23-12100">23-12100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 45 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897456&onBaseDocumentNumber=23-12060">23-12060</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 46 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897457&onBaseDocumentNumber=23-12061">23-12061</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 47 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897458&onBaseDocumentNumber=23-12062">23-12062</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 48 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897459&onBaseDocumentNumber=23-12063">23-12063</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 49 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897460&onBaseDocumentNumber=23-12064">23-12064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 50 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897461&onBaseDocumentNumber=23-12065">23-12065</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 51 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897462&onBaseDocumentNumber=23-12066">23-12066</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 52 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897463&onBaseDocumentNumber=23-12067">23-12067</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 53 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897464&onBaseDocumentNumber=23-12068">23-12068</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 54 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897465&onBaseDocumentNumber=23-12069">23-12069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 55 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897466&onBaseDocumentNumber=23-12070">23-12070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 56 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897467&onBaseDocumentNumber=23-12071">23-12071</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 57 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897468&onBaseDocumentNumber=23-12072">23-12072</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 58 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897469&onBaseDocumentNumber=23-12073">23-12073</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 59 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897470&onBaseDocumentNumber=23-12074">23-12074</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 60 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897471&onBaseDocumentNumber=23-12075">23-12075</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 61 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897472&onBaseDocumentNumber=23-12076">23-12076</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 62 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897473&onBaseDocumentNumber=23-12077">23-12077</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 63 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897474&onBaseDocumentNumber=23-12078">23-12078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 64 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897475&onBaseDocumentNumber=23-12079">23-12079</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 65 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897476&onBaseDocumentNumber=23-12080">23-12080</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 66 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897477&onBaseDocumentNumber=23-12081">23-12081</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 67 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897478&onBaseDocumentNumber=23-12082">23-12082</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 68 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897479&onBaseDocumentNumber=23-12083">23-12083</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 69 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897480&onBaseDocumentNumber=23-12084">23-12084</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 70 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897481&onBaseDocumentNumber=23-12085">23-12085</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 71 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897482&onBaseDocumentNumber=23-12086">23-12086</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 72 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897484&onBaseDocumentNumber=23-12088">23-12088</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 73 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897483&onBaseDocumentNumber=23-12087">23-12087</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 74 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897485&onBaseDocumentNumber=23-12089">23-12089</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 75 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897486&onBaseDocumentNumber=23-12090">23-12090</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 76 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897488&onBaseDocumentNumber=23-12092">23-12092</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 77 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897487&onBaseDocumentNumber=23-12091">23-12091</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 145 of 146. (REJECTED PER NOTICE ISSUED 4/19/23) Nos 85525/85656. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 146 of 146. (REJECTED PER NOTICE ISSED 4/19/23) Nos 85525/85656. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Motion</td><td>Filed Appellant's Motion to File Appendix to Opening Brief Volumes 78 - 144 Under Seal and Motion for Leave to File Redacted Version of Opening Brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897490&onBaseDocumentNumber=23-12094">23-12094</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Motion</td><td>Filed Appellants' Motion to Exceed Word Limit for Opening Brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897492&onBaseDocumentNumber=23-12096">23-12096</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2023</td><td>Brief</td><td>Filed Appellants' REDACTED Opening Brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897493&onBaseDocumentNumber=23-12097">23-12097</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix to Opening Brief Volumes 145 and 146. Corrected appendix due: 5 days. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897522&onBaseDocumentNumber=23-12126">23-12126</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 145 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897594&onBaseDocumentNumber=23-12175">23-12175</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 146 of 146. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=897595&onBaseDocumentNumber=23-12176">23-12176</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Respondents' Notice of Non-Opposition to Appellant's Motion to Exceed Word Limit for Opening Brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898383&onBaseDocumentNumber=23-12953">23-12953</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Amicus Curiae (The Nevada Association of Health Plans) Motion for Leave to File Amicus Brief. Nos 85525/85656 (DETACHED AMICUS BRIEF AND FILED PER 5/15/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898390&onBaseDocumentNumber=23-12960">23-12960</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Motion to File Amicus Brief. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898409&onBaseDocumentNumber=23-12978">23-12978</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2023</td><td>Motion</td><td>Filed Appellants' Motion to Associate Jonathan D. Hacker as Counsel. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898519&onBaseDocumentNumber=23-13088">23-13088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Appellants and petitioners have filed a motion to file volumes 78-144 of the appendix under seal on the grounds that the included documents were sealed in the district court and are subject to this court's order staying the unsealing of such documents, and for leave to file an unredacted opening brief under seal. Appellants/petitioners have also filed a motion for leave to file an opening brief in excess of the word limit imposed in NRAP 32(a)(7)(D). The motions are granted. The redacted opening brief was filed on April 18, 2023.  The clerk of this court shall file the unredacted opening brief and volumes 78-144 of the appendix, received on April 21, 2023, under seal.  Respondents/real parties in interest shall have 30 days from the date of this order to file and serve a combined answering brief on appeal and answer to the writ petition. Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898584&onBaseDocumentNumber=23-13152">23-13152</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2023</td><td>Brief</td><td>Filed Appellants' Opening Brief Under (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2023</td><td>Appendix</td><td>Filed Appellant's (SEALED) Appendix to Opening Brief. Vols. 78-144. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2023</td><td>Notice/Incoming</td><td>Filed Respondents' (Fremont Emergency Services, Team Physicians of Nevada, Crum, Stefanko &amp; Jones, and Ruby Crest Emergency Medicine) Notice of Appearance for Richard I. Dreitzer. Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=898911&onBaseDocumentNumber=23-13476">23-13476</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's (Nevada Association of Health Plans) Proof of Service for Motion for Leave to File Amicus Brief. Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=899299&onBaseDocumentNumber=23-13829">23-13829</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2023</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Answering Brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=900351&onBaseDocumentNumber=23-14818">23-14818</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Nevada Association of Health Plans (NVAHP) has filed a motion for leave to file an amicus brief in support of appellants and petitioners. No opposition has been filed. Cause appearing, the motion is granted. The clerk of this court shall detach the proposed amicus brief from the motion and shall file it separately. Pursuant to the notice of appearance filed on April 28, 2023, the clerk of this court shall add attorney Richard I. Dreitzer and the law firm of Fennemore Craig, PC, to the docket as counsel for respondents and real parties in interest. Appellants and petitioners have also filed a motion to associate attorney Jonathan D. Hacker of O'Melveney &amp; Myers LLP in this matter pursuant to SCR 42.  Attached to the motion to associate Mr. Hacker is a verified application, certificates of good standing from the District of Columbia Court of Appeals, and the Supreme Court of Maryland, and a Supreme Court Rule 42 statement. Cause appearing, the motion is granted. Mr. Hacker shall be permitted to appear on behalf of appellants and petitioners in these matters. The parties' stipulation extending the time for filing the answering brief is treated and granted as a joint motion for an extension of time. Respondents and real parties in interest shall have until August 28, 2023, to file and serve the answering brief. Nos 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=900758&onBaseDocumentNumber=23-15215">23-15215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/15/2023</td><td>Brief</td><td>Filed Nevada Association of Health Plans' Amicus Curiae Brief in Support of Appellants' United Healthcare Insurance Company; United Health Care Services, Inc.; UMR, Inc.; Sierra Health and Life Insurance Company, Inc.; and Health Plan of Nevada, Inc. Appeal. Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=900764&onBaseDocumentNumber=23-15221">23-15221</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/20/2023</td><td>Appendix</td><td>Filed Appellant's Supplemental Appendix to Opening Brief Vols. 147. Nos 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=905276&onBaseDocumentNumber=23-19542">23-19542</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest (Fremont Emergency Services, Team Physicians of Nevada, and Crum, Stefanko, &amp; Jones) Notice of Appearance for Tayler Bingham. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914037&onBaseDocumentNumber=23-27972">23-27972</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Notice/Incoming</td><td>Filed Respondents'  Notice of Filing Pro Hac Vice Orders for Justin Fineberg and Jonathan Siegelaub. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914040&onBaseDocumentNumber=23-27975">23-27975</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Motion</td><td>Filed Respondents' Motion to Redact Answering Brief and File Under Seal Portions of the Appendix to Answering Brief.  Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914042&onBaseDocumentNumber=23-27977">23-27977</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Motion</td><td>Filed Respondents' Motion to Exceed Word Limit For Their Answering Brief. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914045&onBaseDocumentNumber=23-27980">23-27980</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Brief</td><td>Filed Respondents' Redacted Answering Brief. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914049&onBaseDocumentNumber=23-27984">23-27984</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 1. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914059&onBaseDocumentNumber=23-27994">23-27994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 2. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914060&onBaseDocumentNumber=23-27995">23-27995</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 4. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914065&onBaseDocumentNumber=23-28000">23-28000</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 5. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914066&onBaseDocumentNumber=23-28001">23-28001</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 6. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914067&onBaseDocumentNumber=23-28002">23-28002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 7. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914073&onBaseDocumentNumber=23-28008">23-28008</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 8. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914078&onBaseDocumentNumber=23-28013">23-28013</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 9. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914082&onBaseDocumentNumber=23-28017">23-28017</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 10. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914083&onBaseDocumentNumber=23-28018">23-28018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 11. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914084&onBaseDocumentNumber=23-28019">23-28019</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 12. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914085&onBaseDocumentNumber=23-28020">23-28020</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Answering Brief - Vol. 13. Nos. 85525/85656. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914088&onBaseDocumentNumber=23-28023">23-28023</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. The Reporters Committee for Freedom of the Press shall have until September 19, 2023, to file and serve the motion for leave to file an amicus brief. Nos. 85525/85656 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914347&onBaseDocumentNumber=23-28279">23-28279</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Emergency Department Practice Management Association's motion for leave to file an amicus brief due: September 19, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=914733&onBaseDocumentNumber=23-28662">23-28662</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Respondents and real parties in interest have filed a motion to redact portions of the answering brief and to file portions of the appendix to the answering brief under seal. The motion is granted. The motion for leave to file an answering brief in excess of the type-volume limitation is granted.  The redacted answering brief was filed on August 28, 2023.  The clerk of this court shall file the unredacted answering brief received on August 29, 2023, under seal.  The clerk shall also file the portions of the appendix to the answering brief received on August 29, 2023, under seal.  Appellants shall have 30 days from the date of this order to file a reply brief, if deemed necessary. Nos. 85525/85656.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=915653&onBaseDocumentNumber=23-29559">23-29559</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Brief</td><td>Filed (SEALED) Respondent's Answering Brief. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 2. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Vol. 3. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 4. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 5. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 10. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 11. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 12. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Appendix</td><td>Filed (SEALED) Respondents' Appendix to Answering Brief - Portions of Vol. 13. Nos. 85525/85656. (FILED UNDER SEAL PER 9/11/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2023</td><td>Motion</td><td>Filed Amicus Curiae (Emergency Department Practice Management Association) Motion for Extension of Time to File Motion for Leave to File Amicus Curiae Brief.  Nos. 85525/85656. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=916102&onBaseDocumentNumber=23-30002">23-30002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2023</td><td>Motion</td><td>Filed Amicus Curiae (Emergency Department Practice Management Association) Motion for Leave to File Amicus Curiae Brief. Nos. 85525/85656. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=916855&onBaseDocumentNumber=23-30698">23-30698</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2023</td><td>Motion</td><td>Filed Amicus Curiae (Reporters Committee for Freedom of the Press)  Motion for Reporters Committee for Freedom of the Press and 23 Media Organizations Leave to File Amicus Curiae Brief in Support of Respondents'. Nos. 85525/85656. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=916858&onBaseDocumentNumber=23-30701">23-30701</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2023</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Non-Opposition to: (1) Emergency Practice Management Association's Motion for Leave to File Amicus Curiae Brief; and (2) Motion of the Reporters Committee for Freedom of the Press and 23 Media Organizations for Leave to File Amicus Curiae Brief in Support of Respondents. Nos. 85525/85656. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65108&csIID=65108&deLinkID=917083&onBaseDocumentNumber=23-30925">23-30925</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65108&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

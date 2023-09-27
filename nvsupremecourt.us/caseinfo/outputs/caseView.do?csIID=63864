@@ -1,0 +1,859 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84617: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=47279B1E3DD4BDFEDFF9BA3C5B1C41E6">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63864">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84617</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">TERRY VS. LAMONT'S WILD WEST BUFFALO, LLC C/W 85056</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>84617*, <a href="/public/caseView.do?csIID=64462">85056</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64462">85056</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A800834</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>04/29/2022 / Kuzemka, Kristine</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nathanial Terry</td><td valign="top">Jamie S. Hendrickson
+							(Former)
+						
+							(Hutchings Law Group, LLC)
+						<br>Mark H. Hutchings
+							(Hutchings Law Group, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lamont's Wild West Buffalo, LLC</td><td valign="top">Julia Leeann Armendariz
+							(Former)
+						
+							(McDonald Carano LLP/Las Vegas)
+						<br>Karyna MaryLouise Armstrong
+							(McDonald Carano LLP/Las Vegas)
+						<br>John A. Fortin
+							(McDonald Carano LLP/Las Vegas)
+						<br>Ryan J. Works
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=854822&onBaseDocumentNumber=22-13224">22-13224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=854824&onBaseDocumentNumber=22-13226">22-13226</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Mark H. Hutchings. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due:21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=855079&onBaseDocumentNumber=22-13478">22-13478</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/29/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Kristine M. Kuzemka. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=855341&onBaseDocumentNumber=22-13666">22-13666</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=857639&onBaseDocumentNumber=22-15933">22-15933</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=861791&onBaseDocumentNumber=22-18890">22-18890</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=861927&onBaseDocumentNumber=22-19022">22-19022</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/27/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: March 9-11, 2022. To Court Reporter: Melissa Burgener. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=863185&onBaseDocumentNumber=22-20207">22-20207</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Disassociation and Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=863400&onBaseDocumentNumber=22-20418">22-20418</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Melissa Burgener stating that the requested transcripts were delivered.  Dates of transcripts: 3/9/22, 3/10/22, and 3/11/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=863644&onBaseDocumentNumber=22-20660">22-20660</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2022</td><td>Transcript</td><td>Filed Transcript. Proceedings: March 9-11, 2022. Court Reporter: Melissa Burgener. (REJECTED PER NOTICE ISSUED 6/30/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=863752&onBaseDocumentNumber=22-20768">22-20768</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2022</td><td>Order/Procedural</td><td>Filed Order to Show Cause.  Appellants' Response due:  30 days.  Respondent may file a reply within 14 days of service appellants' response.  Briefing of this appeal is suspended pending further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=866832&onBaseDocumentNumber=22-23739">22-23739</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2022</td><td>Motion</td><td>Filed Joint Motion to Consolidate Appeals. (Consolidate 84617 with 85056) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870097&onBaseDocumentNumber=22-26834">22-26834</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2022</td><td>Motion</td><td>Filed Appellants' Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870394&onBaseDocumentNumber=22-27101">22-27101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service (Response to Order to Show Cause). Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870396&onBaseDocumentNumber=22-27130">22-27130</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2022</td><td>Order/Procedural</td><td>Filed Order. Appellants shall have 30 days from the date of this order to show cause why this appeal should not be dismissed for lack of jurisdiction.  Respondent may file a reply within 14 days of service of appellants' response.  Briefing of this appeal remains suspended pending further order of this court.  This court defers ruling on the motion to consolidate this appeal with Docket No. 85056. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870488&onBaseDocumentNumber=22-27220">22-27220</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Association of Counsel for John A. Fortin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870550&onBaseDocumentNumber=22-27282">22-27282</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2022</td><td>Notice/Incoming</td><td>Filed Appellants' Proof of Service (Response to Order to Show Cause). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=870746&onBaseDocumentNumber=22-27475">22-27475</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Motion</td><td>Filed Appellant's Response to Order to Show Cause why this Appeal should not be Dismissed for Lack of Jurisdiction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=874219&onBaseDocumentNumber=22-30732">22-30732</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2022</td><td>Motion</td><td>Filed Respondent's Motion to Shorten the Time for Opening Briefs and Request to Suspend Any Extension of Time Under NRAP 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=879706&onBaseDocumentNumber=22-36035">22-36035</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion to Shorten the Time for Opening Briefs and Request to Suspend Any Extension of Time Under NRAP 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=880558&onBaseDocumentNumber=22-36870">22-36870</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Motion</td><td>Filed Respondents' Reply in Support of Motion to Shorten the Time for Opeining Briefs nd Request to Suspend and Extension of Time Under NRAP 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=881332&onBaseDocumentNumber=22-37634">22-37634</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Order/Procedural</td><td>Filed Order Dismissed Appeal In Part, Regarding Motions, and Reinstating Briefing. The appeal in Docket No. 84617 is dismissed with respect to appellant Mary Terry.  The clerk shall modify the caption of that appeal accordingly. The appeal in Docket No. 85056 may proceed.   The clerk shall remove Mary Terry as a respondent in Docket No. 85056 and modify the caption of that appeal accordingly. The joint motions to consolidate are granted, NRAP 3(b)(2), and LaMont's motion regarding briefing is denied.  Nathaniel Terry shall have 45 days from the date of this order to file and serve the opening brief and appendix in Docket No. 84617.  LaMont's shall have 30 days from service of Terry's opening brief to file and serve a combined answering brief in Docket No. 84617 and opening brief in Docket No. 85056.  Terry shall have 30 days from service of LaMont's combined brief to file and serve a combined reply brief in Docket No. 84617 and answering brief in Docket No. 85056.  Finally, LaMont's shall have 30 days from service of Terry's combined brief to file and serve a reply brief in Docket No. 85056. Nos 84617/85056. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=882083&onBaseDocumentNumber=22-38304">22-38304</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Nathanial Terry's answering brief in docket no. 84617 is due: February 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=886748&onBaseDocumentNumber=23-01747">23-01747</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vols. 1-7. Nos. 84617/85056. (STRICKEN PER 4/6/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=888596&onBaseDocumentNumber=23-03492">23-03492</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Brief</td><td>Filed LaMont's Wild West Buffalo, LLC's Combined Answering Brief and Opening Brief. Nos. 84617/85056. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=891907&onBaseDocumentNumber=23-06709">23-06709</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 1 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 2 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 3 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 4 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 5 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 6 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 7 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 8 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 9 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 10 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Appendix</td><td>Filed LaMont's Wild West Buffalo, LLC's Appendix to Answering Brief/Opening Brief Vol. 11 of 11. (STRICKEN PER 4/6/23 ORDER) Nos. 84617/85056 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Motion</td><td>Filed LaMont's Wild West Buffalo, LLC's Motion to Strike Nathanial Terry's Seven Volume Appendix. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=891919&onBaseDocumentNumber=23-06721">23-06721</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/13/2023</td><td>Motion</td><td>Filed Nathanial Terry's Opposition to LaMont's Motion to Strike Appendix. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=892919&onBaseDocumentNumber=23-07682">23-07682</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2023</td><td>Motion</td><td>Filed LaMont's Wild West Buffalo, LLC's Motion Under NRAP 30(d) for Submission and Acceptance of USB for 9RA001446. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=893407&onBaseDocumentNumber=23-08159">23-08159</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/20/2023</td><td>Motion</td><td>Filed LaMont's Wild West Buffalo, LLC's Reply to Response in Support of Motion to Strike Nathanial Terry's Seven Volume Appendix. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=893878&onBaseDocumentNumber=23-08600">23-08600</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Motion</td><td>Filed Appellants' Response in Opposition to Lamont's Wild West Buffalo, LLC's Motion Under NRAP 30(b) for Submission and Acceptance of USB; and Motion to Strike. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=894341&onBaseDocumentNumber=23-09055">23-09055</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2023</td><td>Motion</td><td>Filed Respondent's (Lamont's Wild West Buffalo, LLC) Reply in Support of Motion Under NRAP30(d) for Submission and Acceptance of USB; and Opposition to Nathaniel Terry's Motion to Strike. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=895126&onBaseDocumentNumber=23-09815">23-09815</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/03/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply brief due: April 19, 2023. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=895499&onBaseDocumentNumber=23-10169">23-10169</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2023</td><td>Order/Procedural</td><td>Filed Order. LaMont's Wild West Buffalo, LLC (LaMont's) has filed a motion to strike the appendix filed by Nathanial Terry. The motion to strike is granted.  The clerk shall strike Terry's appendix filed on February 3, 2023. The clerk shall also strike LaMont's appendix, filed on March 6, 2023.  The motion to sanction Terry and his counsel is denied. Terry shall have 14 days from the date of this order to file and serve an amended appendix.  LaMont's shall also have 14 days from the date of this order to file and serve an amended appendix.  If either party is required to amend their filed brief to correct citations to the amended appendices, the party shall file an appropriate motion in this court within 14 days of the date of this order.  LaMont's has also filed a "motion under NRAP 30(d) for submission and acceptance of USB for 9RA001446."  LaMont's motion is denied and Terry's countermotion is granted to the following extent.  The clerk shall return the USB received on March 16, 2023.  Briefing of this appeal is suspended pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=895820&onBaseDocumentNumber=23-10476">23-10476</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 1 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897724&onBaseDocumentNumber=23-12304">23-12304</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 2 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897725&onBaseDocumentNumber=23-12305">23-12305</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 3 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897726&onBaseDocumentNumber=23-12306">23-12306</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 4 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897727&onBaseDocumentNumber=23-12307">23-12307</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 5 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897728&onBaseDocumentNumber=23-12308">23-12308</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 6 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897732&onBaseDocumentNumber=23-12312">23-12312</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 7 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897734&onBaseDocumentNumber=23-12314">23-12314</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 8 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897736&onBaseDocumentNumber=23-12316">23-12316</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 9 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897737&onBaseDocumentNumber=23-12317">23-12317</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 10 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897738&onBaseDocumentNumber=23-12318">23-12318</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Appendix</td><td>Filed Joint Appendix. Vols. 11 of 11. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897739&onBaseDocumentNumber=23-12319">23-12319</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2023</td><td>Motion</td><td>Filed Respondent's (LaMont's) Motion and Request to File Its Amended Combined Answering and Opening Brief. Nos. 84617/85056 (DETACHED COMBINED BRIEF PER 4/25/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897741&onBaseDocumentNumber=23-12321">23-12321</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2023</td><td>Motion</td><td>Filed Appellant's (Nathaniel Terry) Motion to File an Amended Opening Brief. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=897769&onBaseDocumentNumber=23-12349">23-12349</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motions.The parties have filed motions for leave to file an amended opening brief and an amended combined answering brief and opening brief.  The motions are granted to the following extent. Nathaniel Terry shall have 7 days from the date of this order to file and serve an amended opening brief that is substantively identical to the brief filed on February 3, 2023, but contains updated citations to account for the newly filed joint appendix. The clerk shall detach the amended combined answering brief and opening brief from the motion filed by Lamont's Wild West Buffalo on April 20, 2023, and file it separately. Terry shall have until May 22, 2023, to file and serve his combined reply brief and answering brief.  Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=898375&onBaseDocumentNumber=23-12945">23-12945</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2023</td><td>Brief</td><td>Filed Respondent's (Lamont's) Amended Combined Answering Brief in case 84617 and (Lamont's) Opening Brief in Case 85056. Nos. 84617/85056. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=898380&onBaseDocumentNumber=23-12950">23-12950</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Brief</td><td>Filed Appellants' (Nathaniel Terry) Amended Opening Brief. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=899285&onBaseDocumentNumber=23-13815">23-13815</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Nathaniel Terry's combined reply brief and answering brief due: June 5, 2023. Nos 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=901278&onBaseDocumentNumber=23-15730">23-15730</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Notice/Incoming</td><td>Filed Notice of Disassociation (Jamie Hendrickson is no longer counsel of record). Nos. 84617/85056. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=902251&onBaseDocumentNumber=23-16638">23-16638</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Motion</td><td>Filed Appellants' (Nathanial Terry) Motion to Exceed Page Limit for Combined Reply Brief on Appeal and Answering Brief on Cross Appeal. (BRIEF DETACHED AND RETURNED UNFILED PER 6/7/23 ORDER).  Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=903323&onBaseDocumentNumber=23-17689">23-17689</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/05/2023</td><td>Brief</td><td>Filed Appellants' (Nathanial Terry) Reply Brief on Appeal (Case No. 84617) and Answering Brief on Cross Appeal (Case No. 85056). Nos. 84617/85056.(REJECTED PER 6/7/23 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Rejecting Brief. Nathaniel Terry has filed a motion for leave to file a combined answering brief in Docket No. 85056 and reply brief in Docket No. 84617 that exceeds the type-volume limitation.  Terry indicates the proposed brief contains 21,235 words.  The motion is granted.  However, this court is unable to accept the submitted brief because it does not comply with NRAP 32(a)(4), (5), and (9).  the clerk shall detach the brief from the motion filed on June 5, 2023, and return it unfiled.  The clerk shall also reject the brief filed separately on June 5, 2023.  Terry shall have 7 days from the date of this order to file and serve an amended combined brief that complies with all applicable rules and does not exceed 21,235 words. Nos. 84617/85056.   (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=903616&onBaseDocumentNumber=23-17976">23-17976</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/14/2023</td><td>Brief</td><td>Filed Appellants' Amended Reply Brief on Appeal and Answering Brief on Cross Appeal. Nos. 84617/85056 (REJECTED PER NOTICE ISSUED 6/14/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Reply Brief on Appeal/Answering Brief on Cross Appeal. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=904585&onBaseDocumentNumber=23-18901">23-18901</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/14/2023</td><td>Brief</td><td>Filed Respondent's Amended Combined Reply Brief  in case No. 84617 and Answering Brief in case No. 85056. Nos. 84617/85056 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=904588&onBaseDocumentNumber=23-18904">23-18904</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Brief</td><td>Filed Respondent's (Lamont's) Reply Brief for Case No. 85056. Nos. 84617/85056.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63864&csIID=63864&deLinkID=908411&onBaseDocumentNumber=23-22556">23-22556</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 84617/85056. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63864&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

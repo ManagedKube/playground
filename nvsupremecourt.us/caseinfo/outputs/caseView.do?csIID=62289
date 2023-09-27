@@ -1,0 +1,694 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83463: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=89B694451AE13127EDD0C91E1880D3BF">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62289">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83463</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">COMSTOCK RESIDENTS ASS'N VS. LYON CTY. BD. OF COMM'RS</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=36642">68433</a>, <a href="/public/caseView.do?csIID=56329">79445</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Lyon Co. - Third Judicial District - 14-CV-00128</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>08/11/2022</td><td class="label">How Submitted:</td><td>On Documents</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Comstock Residents Association</td><td valign="top">Debbie A. Leonard
+							(Leonard Law, PC)
+						<br>John L. Marshall</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Joe McCarthy</td><td valign="top">John L. Marshall</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Comstock Mining Incorporated</td><td valign="top">James R. Cavilia
+							(Allison MacKenzie, Ltd.)
+						<br>Justin M. Townsend
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Comstock Residents Association.  Check no. 1154. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=828880&onBaseDocumentNumber=21-25837">21-25837</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=828883&onBaseDocumentNumber=21-25840">21-25840</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellants: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=829075&onBaseDocumentNumber=21-25978">21-25978</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=830922&onBaseDocumentNumber=21-27758">21-27758</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=830995&onBaseDocumentNumber=21-27831">21-27831</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Debbie Leonard of Leonard Law, PC enters her appearance in this matter on behalf of Appellants). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=831056&onBaseDocumentNumber=21-27892">21-27892</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Justin M. Townsend of the law firm Allison MacKenzie, LTD. hereby appears as counsel for Respondent, Comstock Mining Incorporated). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=831133&onBaseDocumentNumber=21-27967">21-27967</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (REJECTED PER PHONE CALL/DUPLICATE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (REJECTED PER PHONE CALL/DUPLICATE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/01/2021</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the notices of appearance filed September 28 and 29, 2021, the clerk of this court shall add Debbie Leonard and Leonard Law, PC, as counsel for appellant Comstock Residents Association, and Justin M. Townsend of the law firm Allison MacKenzie, Ltd. as counsel for respondent Comstock Mining Incorporated. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=831360&onBaseDocumentNumber=21-28192">21-28192</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/04/2022</td><td>Motion</td><td>Filed Stipulation to Extend Time for Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=841208&onBaseDocumentNumber=22-00293">22-00293</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/04/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Opening Brief and Appendix due: February 7, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=841213&onBaseDocumentNumber=22-00298">22-00298</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=845182&onBaseDocumentNumber=22-04045">22-04045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Appendix</td><td>Filed Joint Appendix, Vols. 1-4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=845188&onBaseDocumentNumber=22-04051">22-04051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Appendix</td><td>Filed Joint Appendix, Vols. 5-7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=845191&onBaseDocumentNumber=22-04054">22-04054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2022</td><td>Motion</td><td>Filed Stipulation to Extend Time for Lyon County Board of Commissioners to file Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=848744&onBaseDocumentNumber=22-07408">22-07408</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Brief</td><td>Filed Respondent Comstock Mining Incorporated's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=848842&onBaseDocumentNumber=22-07503">22-07503</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation.  The Lyon County Board shall have until April 8, 2022, to file and serve the answering brief.  Appellants shall have 30 days from service of the Lyon County Board's answering brief to file and serve any reply brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=849158&onBaseDocumentNumber=22-07813">22-07813</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2022</td><td>Motion</td><td>Filed Stipulation/Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=852523&onBaseDocumentNumber=22-11025">22-11025</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2022</td><td>Brief</td><td>Filed Appellant CRA's Reply Brief. (REJECTED PER NOTICE ISSUED 4/8/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=852548&onBaseDocumentNumber=22-11050">22-11050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2022</td><td>Brief</td><td>Filed Appellant CRA's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=852582&onBaseDocumentNumber=22-11083">22-11083</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2022</td><td>Order/Procedural</td><td>Filed Order Partially Dismissing Appeal.  This appeal is dismissed with respect to the Lyon County Board of Commissioners.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=853849&onBaseDocumentNumber=22-12271">22-12271</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2022</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=868409&onBaseDocumentNumber=22-25220">22-25220</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding. "ORDER the judgment of the district court AFFIRMED IN PART AND REVERSED IN PART AND REMAND this matter to the district court for proceedings consistent with this order." SNP22  - JH/LS/DH. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=872486&onBaseDocumentNumber=22-29078">22-29078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Petition for Rehearing due:  October 18, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=873884&onBaseDocumentNumber=22-30409">22-30409</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/10/2022</td><td>Post-Judgment Petition</td><td>Filed Appellants' Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=875280&onBaseDocumentNumber=22-31778">22-31778</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Filing Fee</td><td>Rehearing Filing Fee Paid. $150.00 from John Marshall. E-Payment Ref. no. 22101040582273. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/31/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). SNP-JH/LS/DH. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=877625&onBaseDocumentNumber=22-34058">22-34058</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants petition for en banc reconsideration due: November 28, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=878553&onBaseDocumentNumber=22-34901">22-34901</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Post-Judgment Petition</td><td>Filed Appellants' Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=880213&onBaseDocumentNumber=22-36533">22-36533</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2022</td><td>Order/Procedural</td><td>Filed Order/Answer En Banc Reconsideration. Order/Answer En Banc Reconsideration. Answer due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=882449&onBaseDocumentNumber=22-38663">22-38663</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2022</td><td>Post-Judgment Petition</td><td>Filed Respondent Comstock Mining Incorporated's Answer to Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=884224&onBaseDocumentNumber=22-40356">22-40356</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying En Banc Reconsideration. Having considered the petition on file herein, we have concluded that en banc reconsideration is not warranted. NRAP 40A.  Accordingly, we "ORDER the petition DENIED."  Cadish and Pickering, J.J., dissenting - EN BANC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=886883&onBaseDocumentNumber=23-01880">23-01880</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/13/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/13/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=889438&onBaseDocumentNumber=23-04312">23-04312</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on February 15, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62289&csIID=62289&deLinkID=891727&onBaseDocumentNumber=23-04312">23-04312</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62289&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

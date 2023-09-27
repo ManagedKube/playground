@@ -1,0 +1,2653 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84640: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1D4F3E662B8A0C1A4FADA856AFC43FD9">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63887">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84640</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">180 LAND CO, LLC VS. CITY OF LAS VEGAS C/W 84345</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=63506">84345</a>*, 84640</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=54084">77771</a>, <a href="/public/caseView.do?csIID=55462">78792</a>, <a href="/public/caseView.do?csIID=63328">84221</a>, <a href="/public/caseView.do?csIID=63506">84345</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A758528</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">180 Land Co., LLC</td><td valign="top">Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>James Jack Leavitt
+							(Law Offices of Kermitt L. Waters)
+						<br>Michael A. Schneider
+							(Law Offices of Kermitt L. Waters)
+						<br>Autumn L. Waters
+							(Law Offices of Kermitt L. Waters)
+						<br>Kermitt L. Waters
+							(Law Offices of Kermitt L. Waters)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Fore Stars, Ltd.</td><td valign="top">Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>James Jack Leavitt
+							(Law Offices of Kermitt L. Waters)
+						<br>Michael A. Schneider
+							(Law Offices of Kermitt L. Waters)
+						<br>Autumn L. Waters
+							(Law Offices of Kermitt L. Waters)
+						<br>Kermitt L. Waters
+							(Law Offices of Kermitt L. Waters)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">The City of Las Vegas</td><td valign="top">Philip R. Byrnes, Jr.
+							(Las Vegas City Attorney)
+						<br>Debbie A. Leonard
+							(Leonard Law, PC)
+						<br>John C. Molina
+							(McDonald Carano LLP/Las Vegas)
+						<br>George F. Ogilvie, III
+							(McDonald Carano LLP/Las Vegas)
+						<br>Andrew W. Schwartz
+							(Shute, Mihaly &amp; Weinberger, LLP)
+						<br>Bryan K. Scott
+							(Las Vegas City Attorney)
+						<br>Lauren M. Tarpey
+							(Shute, Mihaly &amp; Weinberger, LLP)
+						<br>Rebecca L. Wolfson
+							(Las Vegas City Attorney)
+						<br>Amanda C. Yen
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/29/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=855405&onBaseDocumentNumber=22-13729">22-13729</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=855408&onBaseDocumentNumber=22-13732">22-13732</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Kermitt L. Waters. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 2896 returned to Kermit L. Waters. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Filing Fee</td><td>Cross-Appeal Filing Fee Waived.  State/County/Municipality. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Docketing statement mailed to counsel for cross-appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=856196&onBaseDocumentNumber=22-14504">22-14504</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Co-Counsel for Appellant City of Las Vegas. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=856444&onBaseDocumentNumber=22-14750">22-14750</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's Notice of Appearance for Debbie Leonard. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=856526&onBaseDocumentNumber=22-14831">22-14831</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2022</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellants: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=857244&onBaseDocumentNumber=22-15540">22-15540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents'  Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=857645&onBaseDocumentNumber=22-15939">22-15939</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Motion to Consolidate Appeals, Case Nos. 84640 and 84345. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=857951&onBaseDocumentNumber=22-16168">22-16168</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2022</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=858009&onBaseDocumentNumber=22-16225">22-16225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=858380&onBaseDocumentNumber=22-16588">22-16588</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=858478&onBaseDocumentNumber=22-16684">22-16684</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Response to Motion to Consolidate and Countermotion to Expedite Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=858628&onBaseDocumentNumber=22-16832">22-16832</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Reply in Support of Motion to Consolidate Appeals and Opposition to Countermotion to Expedite Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=859324&onBaseDocumentNumber=22-17515">22-17515</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Reply in Support of Countermotion to Expedite Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=859882&onBaseDocumentNumber=22-18061">22-18061</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. City of Las Vegas, appellant in Docket No. 84345 and respondent/cross-appellant in Docket No. 84640 has filed a motion to consolidate these appeals and cross-appeal on the ground that they arise from the same district court litigation and involve the same factual and procedural background and the same parties and issues. NRAP 3(b)(2). Cause appearing, the motion is granted, and these appeals and cross-appeal shall be consolidated for all appellate purposes. The motion to expedite is granted to the following extent. City of Las Vegas' opening brief in Docket No. 84345 due: August 16, 2022. landowners' opening brief in docket No. 84640 due: 84640. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=862316&onBaseDocumentNumber=22-19405">22-19405</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Micah S. Echols. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=862849&onBaseDocumentNumber=22-19926">22-19926</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/27/2022</td><td>Order/Procedural</td><td>Filed Order. The clerk of this court shall add attorney Micah S. Echols and the Claggett &amp; Sykes Law Firm to the docket in this appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=863212&onBaseDocumentNumber=22-20234">22-20234</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/29/2022</td><td>Motion</td><td>Filed Respondents' Motion to Dismiss the City's Cross-Appeal in Case No. 84640. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=867013&onBaseDocumentNumber=22-23911">22-23911</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent/Cross-Appellant in Docket No. 84640 shall have until August 19, 2022, to file and serve the opposition to the motion to dismiss cross-appeal.  Nos. 84345/84640.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=867478&onBaseDocumentNumber=22-24307">22-24307</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Motion</td><td>Filed Appellant City of Las Vegas' Motion for Extension of Time to File Opening Brief and Joint Appendix (84345). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=867817&onBaseDocumentNumber=22-24638">22-24638</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Opening Brief and Appendix in Docket No. 84345 due: September 15, 2022) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=867854&onBaseDocumentNumber=22-24675">22-24675</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/12/2022</td><td>Motion</td><td>Filed Stipulation to Modify Briefing Schedule. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=868476&onBaseDocumentNumber=22-25287">22-25287</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Master Index to Joint Appendix. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869309&onBaseDocumentNumber=22-26059">22-26059</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 1. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869310&onBaseDocumentNumber=22-26060">22-26060</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 2. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869311&onBaseDocumentNumber=22-26061">22-26061</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 3. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869312&onBaseDocumentNumber=22-26062">22-26062</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 4. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869313&onBaseDocumentNumber=22-26063">22-26063</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 5. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869314&onBaseDocumentNumber=22-26064">22-26064</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 6. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869315&onBaseDocumentNumber=22-26065">22-26065</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 7. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869316&onBaseDocumentNumber=22-26066">22-26066</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 8. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869317&onBaseDocumentNumber=22-26067">22-26067</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869318&onBaseDocumentNumber=22-26068">22-26068</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 10. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869319&onBaseDocumentNumber=22-26069">22-26069</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 11. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869320&onBaseDocumentNumber=22-26070">22-26070</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 12. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869321&onBaseDocumentNumber=22-26071">22-26071</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 13. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869326&onBaseDocumentNumber=22-26076">22-26076</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 14. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869328&onBaseDocumentNumber=22-26078">22-26078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 15. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869371&onBaseDocumentNumber=22-26119">22-26119</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 16. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869372&onBaseDocumentNumber=22-26120">22-26120</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 17. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869374&onBaseDocumentNumber=22-26122">22-26122</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 18. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869377&onBaseDocumentNumber=22-26125">22-26125</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 19. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869380&onBaseDocumentNumber=22-26128">22-26128</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 20. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869383&onBaseDocumentNumber=22-26131">22-26131</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 21. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869387&onBaseDocumentNumber=22-26135">22-26135</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 22. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869558&onBaseDocumentNumber=22-26304">22-26304</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 23. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869823&onBaseDocumentNumber=22-26563">22-26563</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 24. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869824&onBaseDocumentNumber=22-26564">22-26564</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 25. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869825&onBaseDocumentNumber=22-26565">22-26565</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 26. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869826&onBaseDocumentNumber=22-26566">22-26566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 27. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869829&onBaseDocumentNumber=22-26569">22-26569</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 28. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869830&onBaseDocumentNumber=22-26570">22-26570</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 29. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869831&onBaseDocumentNumber=22-26571">22-26571</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 30. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869832&onBaseDocumentNumber=22-26572">22-26572</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 31. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869834&onBaseDocumentNumber=22-26573">22-26573</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 32. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869837&onBaseDocumentNumber=22-26576">22-26576</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 33. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869838&onBaseDocumentNumber=22-26577">22-26577</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 34. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869839&onBaseDocumentNumber=22-26578">22-26578</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 35. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869840&onBaseDocumentNumber=22-26579">22-26579</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 36. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869841&onBaseDocumentNumber=22-26580">22-26580</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 37. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869842&onBaseDocumentNumber=22-26581">22-26581</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 38. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869843&onBaseDocumentNumber=22-26582">22-26582</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 39. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869844&onBaseDocumentNumber=22-26583">22-26583</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 40. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869845&onBaseDocumentNumber=22-26584">22-26584</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 41. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869846&onBaseDocumentNumber=22-26585">22-26585</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 42. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869847&onBaseDocumentNumber=22-26586">22-26586</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 43. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869849&onBaseDocumentNumber=22-26588">22-26588</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 44. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869850&onBaseDocumentNumber=22-26589">22-26589</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 45. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869851&onBaseDocumentNumber=22-26590">22-26590</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 46. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869852&onBaseDocumentNumber=22-26591">22-26591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 47. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869853&onBaseDocumentNumber=22-26592">22-26592</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 48. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869854&onBaseDocumentNumber=22-26593">22-26593</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 49. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869855&onBaseDocumentNumber=22-26594">22-26594</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 50. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869856&onBaseDocumentNumber=22-26595">22-26595</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 51. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869857&onBaseDocumentNumber=22-26596">22-26596</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 52. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869858&onBaseDocumentNumber=22-26597">22-26597</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 53. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869859&onBaseDocumentNumber=22-26598">22-26598</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 54. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869860&onBaseDocumentNumber=22-26599">22-26599</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 55. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869861&onBaseDocumentNumber=22-26600">22-26600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 56. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869862&onBaseDocumentNumber=22-26601">22-26601</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 57. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869863&onBaseDocumentNumber=22-26602">22-26602</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 58. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869864&onBaseDocumentNumber=22-26603">22-26603</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 59. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869865&onBaseDocumentNumber=22-26604">22-26604</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 60. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869867&onBaseDocumentNumber=22-26606">22-26606</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 61. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869868&onBaseDocumentNumber=22-26607">22-26607</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 62. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869869&onBaseDocumentNumber=22-26608">22-26608</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 63. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869870&onBaseDocumentNumber=22-26609">22-26609</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 64. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869872&onBaseDocumentNumber=22-26611">22-26611</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 65. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869873&onBaseDocumentNumber=22-26612">22-26612</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 66. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869875&onBaseDocumentNumber=22-26614">22-26614</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 67. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869876&onBaseDocumentNumber=22-26615">22-26615</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 68. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869877&onBaseDocumentNumber=22-26616">22-26616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 69. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869878&onBaseDocumentNumber=22-26617">22-26617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 70. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869881&onBaseDocumentNumber=22-26620">22-26620</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 71. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869883&onBaseDocumentNumber=22-26622">22-26622</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 72. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869884&onBaseDocumentNumber=22-26623">22-26623</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 73. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869885&onBaseDocumentNumber=22-26624">22-26624</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 74. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869887&onBaseDocumentNumber=22-26626">22-26626</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 75. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869889&onBaseDocumentNumber=22-26628">22-26628</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 76. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869892&onBaseDocumentNumber=22-26631">22-26631</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 77. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869893&onBaseDocumentNumber=22-26632">22-26632</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 78. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869894&onBaseDocumentNumber=22-26633">22-26633</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 79. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869896&onBaseDocumentNumber=22-26635">22-26635</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 80. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869897&onBaseDocumentNumber=22-26636">22-26636</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 81. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869899&onBaseDocumentNumber=22-26638">22-26638</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 82. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869902&onBaseDocumentNumber=22-26641">22-26641</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 83. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869904&onBaseDocumentNumber=22-26643">22-26643</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 84. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869905&onBaseDocumentNumber=22-26644">22-26644</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 85. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869906&onBaseDocumentNumber=22-26645">22-26645</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 86. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869908&onBaseDocumentNumber=22-26647">22-26647</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 87. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869909&onBaseDocumentNumber=22-26648">22-26648</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 88. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869916&onBaseDocumentNumber=22-26655">22-26655</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 89. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869917&onBaseDocumentNumber=22-26656">22-26656</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 90. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869923&onBaseDocumentNumber=22-26662">22-26662</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 91. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869925&onBaseDocumentNumber=22-26664">22-26664</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 92. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869934&onBaseDocumentNumber=22-26673">22-26673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 93. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869935&onBaseDocumentNumber=22-26674">22-26674</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 94. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869936&onBaseDocumentNumber=22-26675">22-26675</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 95. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869937&onBaseDocumentNumber=22-26676">22-26676</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 96. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869938&onBaseDocumentNumber=22-26677">22-26677</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 97. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869940&onBaseDocumentNumber=22-26679">22-26679</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 98. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869944&onBaseDocumentNumber=22-26683">22-26683</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 99. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869946&onBaseDocumentNumber=22-26685">22-26685</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 100. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869947&onBaseDocumentNumber=22-26686">22-26686</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 101. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869950&onBaseDocumentNumber=22-26689">22-26689</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 102. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869951&onBaseDocumentNumber=22-26690">22-26690</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 103. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869952&onBaseDocumentNumber=22-26691">22-26691</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 104. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869953&onBaseDocumentNumber=22-26692">22-26692</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 105. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869954&onBaseDocumentNumber=22-26693">22-26693</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 106. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869955&onBaseDocumentNumber=22-26694">22-26694</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 107. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869957&onBaseDocumentNumber=22-26695">22-26695</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 108. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869958&onBaseDocumentNumber=22-26696">22-26696</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 109. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869961&onBaseDocumentNumber=22-26699">22-26699</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 110. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869962&onBaseDocumentNumber=22-26700">22-26700</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 111. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869964&onBaseDocumentNumber=22-26702">22-26702</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 112. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869967&onBaseDocumentNumber=22-26705">22-26705</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 113. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869968&onBaseDocumentNumber=22-26706">22-26706</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 114. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869971&onBaseDocumentNumber=22-26709">22-26709</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 115. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869972&onBaseDocumentNumber=22-26710">22-26710</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 116. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869973&onBaseDocumentNumber=22-26711">22-26711</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 117. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869974&onBaseDocumentNumber=22-26712">22-26712</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 118. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869975&onBaseDocumentNumber=22-26713">22-26713</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 119. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869976&onBaseDocumentNumber=22-26714">22-26714</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 120. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869977&onBaseDocumentNumber=22-26715">22-26715</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 121. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869981&onBaseDocumentNumber=22-26719">22-26719</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 122. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869982&onBaseDocumentNumber=22-26720">22-26720</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 123. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869991&onBaseDocumentNumber=22-26729">22-26729</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 124. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869992&onBaseDocumentNumber=22-26730">22-26730</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 125. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869993&onBaseDocumentNumber=22-26731">22-26731</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 126. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869994&onBaseDocumentNumber=22-26732">22-26732</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 127. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869995&onBaseDocumentNumber=22-26733">22-26733</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 1). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869996&onBaseDocumentNumber=22-26734">22-26734</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 2). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869997&onBaseDocumentNumber=22-26735">22-26735</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 3). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869998&onBaseDocumentNumber=22-26736">22-26736</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 4). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=869999&onBaseDocumentNumber=22-26737">22-26737</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 5). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870000&onBaseDocumentNumber=22-26738">22-26738</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 6). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870001&onBaseDocumentNumber=22-26739">22-26739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 7). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870002&onBaseDocumentNumber=22-26740">22-26740</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 8). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870003&onBaseDocumentNumber=22-26741">22-26741</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 9). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870004&onBaseDocumentNumber=22-26742">22-26742</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 10). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870005&onBaseDocumentNumber=22-26743">22-26743</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 11). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870006&onBaseDocumentNumber=22-26744">22-26744</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 12). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870007&onBaseDocumentNumber=22-26745">22-26745</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 13). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870008&onBaseDocumentNumber=22-26746">22-26746</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 14). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870009&onBaseDocumentNumber=22-26747">22-26747</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 15). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870010&onBaseDocumentNumber=22-26748">22-26748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 128 (part 16). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870011&onBaseDocumentNumber=22-26749">22-26749</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Appendix</td><td>Filed Joint Appendix, Volume No. 129. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870012&onBaseDocumentNumber=22-26750">22-26750</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Motion</td><td>Filed Appellant City of Las Vegas' Second Motion for Extension of Time to File Opening Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=870999&onBaseDocumentNumber=22-27721">22-27721</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Order/Procedural</td><td>Filed Order. The stipulation of the parties modifying the briefing schedule and the motion filed by the City of Las Vegas (the City) for a second extension of time to file the opening brief are approved and granted as follows.  The City shall have until October 17, 2022, to file and serve and opening brief addressing the issues raised in its appeal in Docket No. 84345 and its cross-appeal in Docket No. 84640.  180 Land Co., LLC and Fore Stars, Ltd. (the Landowners) shall have 30 days from the date of service of the opening brief to file a combined answering brief in Docket No. 84345 and opening brief in Docket No. 84640. The City shall have 30 days from the date of service of the Landowners' combined brief to file its combined reply brief in Docket No. 84345 and answering brief in Docket No. 84640. The Landowners shall have 30 days from the date of service of the City's combined brief to file their reply brief in Docket No. 84640, which will be limited to the issue of pre-judgment interest. fn1 [Pursuant to the parties' request, the motion to dismiss the cross-appeal in Docket No. 84640 is denied.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=871328&onBaseDocumentNumber=22-27989">22-27989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 1, Part 1 (1-15). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874197&onBaseDocumentNumber=22-30710">22-30710</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 1, Part 2 (16-28). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874198&onBaseDocumentNumber=22-30711">22-30711</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 1, Part 3 (29-33). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874199&onBaseDocumentNumber=22-30712">22-30712</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 1, Part 4 (34-38). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874203&onBaseDocumentNumber=22-30716">22-30716</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 1, Part 5 (39-229). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874204&onBaseDocumentNumber=22-30717">22-30717</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 4 (625-834). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874205&onBaseDocumentNumber=22-30718">22-30718</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 50 (8964-9027). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874206&onBaseDocumentNumber=22-30719">22-30719</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 51, Part 1 (9028-9092). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874220&onBaseDocumentNumber=22-30733">22-30733</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 51, Part 2 (9093-9159). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874222&onBaseDocumentNumber=22-30734">22-30734</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 51, Part 3 (9160-9191). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874223&onBaseDocumentNumber=22-30735">22-30735</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 57, Part 1 (9975-10038). Nos. 84345/84690 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874224&onBaseDocumentNumber=22-30736">22-30736</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 57, Part 2 (10039-10129). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874226&onBaseDocumentNumber=22-30738">22-30738</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 57, Part 3 (10130-10187). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874227&onBaseDocumentNumber=22-30739">22-30739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 1 (10188-10237). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874236&onBaseDocumentNumber=22-30748">22-30748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 2 (10238-10253)Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874237&onBaseDocumentNumber=22-30749">22-30749</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 3 (10254-10286) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874238&onBaseDocumentNumber=22-30750">22-30750</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 4 (10287-10294) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874239&onBaseDocumentNumber=22-30751">22-30751</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 5 (10295-10297) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874241&onBaseDocumentNumber=22-30753">22-30753</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 6 (10298-10304) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874242&onBaseDocumentNumber=22-30754">22-30754</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 7 (10305-10312) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874244&onBaseDocumentNumber=22-30756">22-30756</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 58, Part 8 (10313-10400) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874247&onBaseDocumentNumber=22-30759">22-30759</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 59, Part 1 (10401-10441) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874248&onBaseDocumentNumber=22-30760">22-30760</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 59, Part 2 (10442-10477) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874249&onBaseDocumentNumber=22-30761">22-30761</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 59, Part 3 (10478-10557) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874250&onBaseDocumentNumber=22-30762">22-30762</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 59, Part 4 (10558-10617) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874251&onBaseDocumentNumber=22-30763">22-30763</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 60, Part 1 (10618-10723) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874261&onBaseDocumentNumber=22-30773">22-30773</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 60, Part 2 (10724-10822) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874262&onBaseDocumentNumber=22-30774">22-30774</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 61 (10823-11045) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874264&onBaseDocumentNumber=22-30776">22-30776</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 62 (11046-11239) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874267&onBaseDocumentNumber=22-30779">22-30779</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 63 (11240-11401) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874269&onBaseDocumentNumber=22-30781">22-30781</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 64 (11402-11529) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874271&onBaseDocumentNumber=22-30783">22-30783</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 65 (11530-11657) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874272&onBaseDocumentNumber=22-30784">22-30784</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 66 (11658-11849) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874273&onBaseDocumentNumber=22-30785">22-30785</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 67 (11850-11987) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874277&onBaseDocumentNumber=22-30789">22-30789</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 68 (11988-12125) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874278&onBaseDocumentNumber=22-30790">22-30790</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 69 (12126-12256) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874279&onBaseDocumentNumber=22-30791">22-30791</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 70 (12257-12387) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874280&onBaseDocumentNumber=22-30792">22-30792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 71 (12388-12576) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874281&onBaseDocumentNumber=22-30793">22-30793</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 72, Part 1 (12577-12594) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874282&onBaseDocumentNumber=22-30794">22-30794</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 72, Part 2 (12595-12623) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874283&onBaseDocumentNumber=22-30795">22-30795</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 72, Part 3 (12624-12652) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874284&onBaseDocumentNumber=22-30796">22-30796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 72, Part 4 (12653-12677) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874285&onBaseDocumentNumber=22-30797">22-30797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 72, Part 5 (12678-12774) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874286&onBaseDocumentNumber=22-30798">22-30798</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 73 (12775-12907) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874287&onBaseDocumentNumber=22-30799">22-30799</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 74 (12908-13039) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874288&onBaseDocumentNumber=22-30800">22-30800</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 1 (13040-13054) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874289&onBaseDocumentNumber=22-30801">22-30801</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 2 (13055-13064) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874290&onBaseDocumentNumber=22-30802">22-30802</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 3 (13065-13074) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874291&onBaseDocumentNumber=22-30803">22-30803</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 4 (13075-13089) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874292&onBaseDocumentNumber=22-30804">22-30804</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 5 (13090-13099) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874294&onBaseDocumentNumber=22-30806">22-30806</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 6 (13100-13119) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874295&onBaseDocumentNumber=22-30807">22-30807</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 7 (13120-13139) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874296&onBaseDocumentNumber=22-30808">22-30808</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 75, Part 8 (13140-13170) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874297&onBaseDocumentNumber=22-30809">22-30809</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 1 (13171-13180) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874298&onBaseDocumentNumber=22-30810">22-30810</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 2 (13181-13190) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874299&onBaseDocumentNumber=22-30811">22-30811</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 3 (13191-13200) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874300&onBaseDocumentNumber=22-30812">22-30812</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 4 (13201-13210) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874301&onBaseDocumentNumber=22-30813">22-30813</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 5 (13211-13220) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874302&onBaseDocumentNumber=22-30814">22-30814</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 6 (13221-13230) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874303&onBaseDocumentNumber=22-30815">22-30815</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 7 (13231-13250) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874304&onBaseDocumentNumber=22-30816">22-30816</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 8 (13251-13270) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874305&onBaseDocumentNumber=22-30817">22-30817</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 9 (13271-13280) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874306&onBaseDocumentNumber=22-30818">22-30818</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 76, Part 10 (13281-13300) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874307&onBaseDocumentNumber=22-30819">22-30819</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 77, Part 1 (13301-13428) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874308&onBaseDocumentNumber=22-30820">22-30820</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 77, Part 2 (13429-13457) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874309&onBaseDocumentNumber=22-30821">22-30821</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 77, Part 3 (13458-13512) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874310&onBaseDocumentNumber=22-30822">22-30822</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 1 (13513-13666) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874311&onBaseDocumentNumber=22-30823">22-30823</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 2 (13667-13696) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874312&onBaseDocumentNumber=22-30824">22-30824</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 3 (13697-13711) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874313&onBaseDocumentNumber=22-30825">22-30825</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/29/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 4 (13712-13721) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874315&onBaseDocumentNumber=22-30827">22-30827</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 5 (13722-13726) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874318&onBaseDocumentNumber=22-30830">22-30830</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 6 (13727-13729) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874333&onBaseDocumentNumber=22-30845">22-30845</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 7 (13730-13731) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874334&onBaseDocumentNumber=22-30846">22-30846</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 8 (13732-13745) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874335&onBaseDocumentNumber=22-30847">22-30847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 78, Part 9 (13746-13751) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874336&onBaseDocumentNumber=22-30848">22-30848</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 79, Part 1 (13752-13863) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874337&onBaseDocumentNumber=22-30849">22-30849</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 79, Part 2 (13864-13987) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874341&onBaseDocumentNumber=22-30853">22-30853</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 91 (16115-16321) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874344&onBaseDocumentNumber=22-30856">22-30856</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 93, Part 1 (16548-16631) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874345&onBaseDocumentNumber=22-30857">22-30857</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 93, Part 2 (16632-16697) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874347&onBaseDocumentNumber=22-30859">22-30859</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 93, Part 3 (16698-16767) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874349&onBaseDocumentNumber=22-30861">22-30861</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 93, Part 4 (16768-16775) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874350&onBaseDocumentNumber=22-30862">22-30862</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 104 (18336-18533) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874351&onBaseDocumentNumber=22-30863">22-30863</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 110 (19692-19874) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874354&onBaseDocumentNumber=22-30866">22-30866</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 111, Part 1 (19875-19969) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874355&onBaseDocumentNumber=22-30867">22-30867</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 111, Part 2 (19970-20099) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874356&onBaseDocumentNumber=22-30868">22-30868</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 1 (20100-20144) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874358&onBaseDocumentNumber=22-30870">22-30870</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 2 (20145-20156) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874360&onBaseDocumentNumber=22-30872">22-30872</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 3 (20157-20242) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874361&onBaseDocumentNumber=22-30873">22-30873</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 4 (20243-20255) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874362&onBaseDocumentNumber=22-30874">22-30874</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 5 (20256-20280) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874363&onBaseDocumentNumber=22-30875">22-30875</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 6 (20281-20357) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874366&onBaseDocumentNumber=22-30878">22-30878</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 112, Part 7 (20358-20386) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874367&onBaseDocumentNumber=22-30879">22-30879</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 1 (21742-21762) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874368&onBaseDocumentNumber=22-30880">22-30880</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 2 (21763-21789) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874369&onBaseDocumentNumber=22-30881">22-30881</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 3 (21790-21804) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874370&onBaseDocumentNumber=22-30882">22-30882</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 4 (21805-21842) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874371&onBaseDocumentNumber=22-30883">22-30883</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 5 (21843-21852) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874372&onBaseDocumentNumber=22-30884">22-30884</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 119, Part 6 (21853-21972) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874374&onBaseDocumentNumber=22-30886">22-30886</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 126, Part 1 (22857-22916) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874375&onBaseDocumentNumber=22-30887">22-30887</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 126, Part 2 (22917-22948) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874379&onBaseDocumentNumber=22-30891">22-30891</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 126, Part 3 (22949-22983) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874381&onBaseDocumentNumber=22-30893">22-30893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 126, Part 4 (22984-23025) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874382&onBaseDocumentNumber=22-30894">22-30894</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 126, Part 5 (23026-23074) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874384&onBaseDocumentNumber=22-30896">22-30896</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 1 (23218-23259) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874385&onBaseDocumentNumber=22-30897">22-30897</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 2 (23260-23289) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874387&onBaseDocumentNumber=22-30899">22-30899</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 3 (23290-23339) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874391&onBaseDocumentNumber=22-30903">22-30903</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 4 (23340-23439) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874393&onBaseDocumentNumber=22-30905">22-30905</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 5 (23440-23539) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874397&onBaseDocumentNumber=22-30909">22-30909</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 6 (23540-23609) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874400&onBaseDocumentNumber=22-30912">22-30912</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 7 (23610-23709) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874401&onBaseDocumentNumber=22-30913">22-30913</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 8 (23710-23829) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874402&onBaseDocumentNumber=22-30914">22-30914</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 9 (23830-23979) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874404&onBaseDocumentNumber=22-30916">22-30916</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 10 (23980-24129) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874405&onBaseDocumentNumber=22-30917">22-30917</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 11 (24130-24279) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874406&onBaseDocumentNumber=22-30918">22-30918</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 12 (24280-24479) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874407&onBaseDocumentNumber=22-30919">22-30919</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 13 (24480-24644) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874413&onBaseDocumentNumber=22-30925">22-30925</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 14 (24645-24814) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874414&onBaseDocumentNumber=22-30926">22-30926</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 15 (24815-24986) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874415&onBaseDocumentNumber=22-30927">22-30927</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 16 (24987-25151) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874416&onBaseDocumentNumber=22-30928">22-30928</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 17 (25152-25301) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874417&onBaseDocumentNumber=22-30929">22-30929</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 18 (25302-25351) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874418&onBaseDocumentNumber=22-30930">22-30930</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 19 (25352-25480) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874419&onBaseDocumentNumber=22-30931">22-30931</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 20 (25481-25530) Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874420&onBaseDocumentNumber=22-30932">22-30932</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 21 (25531-25559). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874422&onBaseDocumentNumber=22-30934">22-30934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 22. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874423&onBaseDocumentNumber=22-30935">22-30935</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 23 (25567-25616). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874424&onBaseDocumentNumber=22-30936">22-30936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 24 (25617-25846). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874426&onBaseDocumentNumber=22-30938">22-30938</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 25 (25847-25916). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874427&onBaseDocumentNumber=22-30939">22-30939</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 26 (25917-25926). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874429&onBaseDocumentNumber=22-30941">22-30941</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 27 (25927-25936). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874430&onBaseDocumentNumber=22-30942">22-30942</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 28 (25937-25956). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874431&onBaseDocumentNumber=22-30943">22-30943</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 29 (25957-26036). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874433&onBaseDocumentNumber=22-30945">22-30945</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 30 (26037-26106). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874436&onBaseDocumentNumber=22-30948">22-30948</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 31 (26107-26136). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874437&onBaseDocumentNumber=22-30949">22-30949</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 32 (26137-26166). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874438&onBaseDocumentNumber=22-30950">22-30950</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 33 (26167-26196). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874440&onBaseDocumentNumber=22-30952">22-30952</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 34 (26197-26246). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874441&onBaseDocumentNumber=22-30953">22-30953</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 128, Part 35 (26247-26353). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874442&onBaseDocumentNumber=22-30954">22-30954</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Appendix</td><td>Filed Amended Master Index to Joint Appendix. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874443&onBaseDocumentNumber=22-30955">22-30955</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Motion</td><td>Filed Unopposed Motion for Leave to File Joint Appendix Volume 130 Under Seal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=874930&onBaseDocumentNumber=22-31433">22-31433</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/17/2022</td><td>Appendix</td><td>Filed Index to Supplement to Joint Appendix. Vol. 131 Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=876038&onBaseDocumentNumber=22-32495">22-32495</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/17/2022</td><td>Motion</td><td>Filed Appellant City of Las Vegas' Motion to Exceed Word Limit for Opening Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=876109&onBaseDocumentNumber=22-32566">22-32566</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/17/2022</td><td>Brief</td><td>Filed Appellant City of Las Vegas' Opening Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=876113&onBaseDocumentNumber=22-32570">22-32570</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Order/Procedural</td><td>Filed Order. Respondents' 180 Land Co. LLC and Fore Stars Ltd. have filed a motion to file volume 130 of the joint appendix under seal on the ground that the volume contains confidential documents sealed by the district court. This court defers ruling on this motion. 180 land and Fore Stars shall have 7 days from the date of this order to submit paper copies of the documents they seek to file under sealed. City of Las Vegas has filed a motion for leave to file an opening brief in excess of the type-volume limitation. Motion is granted. The opening brief was filed on October 17, 2022. Combined answering and opening brief due; November 16, 2022. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=876542&onBaseDocumentNumber=22-32990">22-32990</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/24/2022</td><td>Motion</td><td>Filed City of Reno's Motion to Extend Time To File Brief of Amicus Curiae. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=876953&onBaseDocumentNumber=22-33394">22-33394</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2022</td><td>Notice/Incoming</td><td>Filed Respondents' Notice of Submitting Paper Copy of Joint Appendix Volume 130 for Filing Under Seal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877207&onBaseDocumentNumber=22-33644">22-33644</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 6,  (Nos. 962-1087). Nos.84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877445&onBaseDocumentNumber=22-33879">22-33879</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 6,  (Nos. 1088 - 1171). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877446&onBaseDocumentNumber=22-33880">22-33880</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 12,  (Nos. 2169 - 2232). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877448&onBaseDocumentNumber=22-33882">22-33882</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 12,  (Nos. 2233&acirc; - 2253). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877449&onBaseDocumentNumber=22-33883">22-33883</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 12, (Nos. 2254 - 2301). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877452&onBaseDocumentNumber=22-33886">22-33886</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 12,  (Nos. 2302-2325). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877455&onBaseDocumentNumber=22-33889">22-33889</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 12, (Nos. 2326-2384). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877457&onBaseDocumentNumber=22-33891">22-33891</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 13,  (Nos. 2385-2428). Nos. 84345/8464 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877458&onBaseDocumentNumber=22-33892">22-33892</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 13,  (Nos. 2429-2445). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877459&onBaseDocumentNumber=22-33893">22-33893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 13, (Nos. 2446-2460). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877461&onBaseDocumentNumber=22-33895">22-33895</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 13,  (Nos. 2461-2536). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877462&onBaseDocumentNumber=22-33896">22-33896</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 17,  (Nos. 3085-3111). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877463&onBaseDocumentNumber=22-33897">22-33897</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 17,  (Nos. 3112-3195). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877465&onBaseDocumentNumber=22-33899">22-33899</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 17,  (Nos. 3196-3277). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877466&onBaseDocumentNumber=22-33900">22-33900</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 17, (Nos. 3278-3314). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877468&onBaseDocumentNumber=22-33902">22-33902</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 36,  (Nos. 6447-6566). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877469&onBaseDocumentNumber=22-33903">22-33903</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 36,  (Nos. 6567-6681). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877470&onBaseDocumentNumber=22-33904">22-33904</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 43,  (Nos. 7815-7844). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877471&onBaseDocumentNumber=22-33905">22-33905</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 43,  (Nos. 7845-7894). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877474&onBaseDocumentNumber=22-33908">22-33908</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 43,  (Nos. 7895-7939). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877475&onBaseDocumentNumber=22-33909">22-33909</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 43, (Nos. 7940-7987). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877476&onBaseDocumentNumber=22-33910">22-33910</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 44 (Nos. 7988-8160). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877477&onBaseDocumentNumber=22-33911">22-33911</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85, (Nos. 14816-14845). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877478&onBaseDocumentNumber=22-33912">22-33912</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85, (Nos. 14846-14863). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877479&onBaseDocumentNumber=22-33913">22-33913</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85, (Nos. 14864-14945). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877482&onBaseDocumentNumber=22-33916">22-33916</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85,  (Nos. 14946-14985). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877483&onBaseDocumentNumber=22-33917">22-33917</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85,  (Nos. 14986-15013). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877485&onBaseDocumentNumber=22-33919">22-33919</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 85,  (Nos. 15014-15033). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877487&onBaseDocumentNumber=22-33921">22-33921</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 113,  (Nos. 20387-20503). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877488&onBaseDocumentNumber=22-33922">22-33922</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 113, (Nos. 20504-20536). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877490&onBaseDocumentNumber=22-33924">22-33924</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 113,  (Nos. 20537-20566). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877491&onBaseDocumentNumber=22-33925">22-33925</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 113, (Nos. 20567-20595). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877493&onBaseDocumentNumber=22-33927">22-33927</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 113,  (Nos. 20596-20631). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877495&onBaseDocumentNumber=22-33929">22-33929</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 114,  (Nos. 20632-20634). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877496&onBaseDocumentNumber=22-33930">22-33930</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 114, (Nos. 20635-20637). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877501&onBaseDocumentNumber=22-33935">22-33935</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 114, (Nos. 20638-20738). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877503&onBaseDocumentNumber=22-33937">22-33937</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 114,  (Nos. 20739-20795). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877504&onBaseDocumentNumber=22-33938">22-33938</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix, Volume 114, (Nos. 20796-20868). Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877505&onBaseDocumentNumber=22-33939">22-33939</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Appendix</td><td>Filed Amended Joint Appendix Volume 115. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877506&onBaseDocumentNumber=22-33940">22-33940</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Motion</td><td>Filed 180 Land Co., LLC and Fore Stars, Ltd. Opposition to  Motion for Extension of Time to File Brief of Amicus Curiae by City of Reno in Support of Appellant. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=877514&onBaseDocumentNumber=22-33948">22-33948</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2022</td><td>Motion</td><td>Filed (the Landowners) Motion for Extension of Time to File Combined Answering Brief (84345) and Opening Brief (84640) (First Request).  Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=879610&onBaseDocumentNumber=22-35944">22-35944</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved.  Answering and Opening Brief Due: 12/16/22. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=879661&onBaseDocumentNumber=22-35994">22-35994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2022</td><td>Motion</td><td>Filed International Municipal Lawyers Association's Motion for Leave to File Amicus Brief in Support of Appellant. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=880162&onBaseDocumentNumber=22-36482">22-36482</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/05/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The clerk of this court shall file under seal the paper copy of Volume 130 of the joint appendix received on October 27, 2022. Proposed amicus City of Reno has filed a motion for an extension of time to file an amicus brief in support of appellant and respondent/cross-appellant City of Las Vegas. The motion is opposed.    Proposed amicus International Municipal Lawyers Association has filed a motion for leave to file an amicus brief in conjunction with City of Reno and City of North Las Vegas.  Proposed amici have submitted an amicus brief for filing.  NRAP 29 permits a political subdivision of the state to file an amicus brief without leave of the court.  NRAP  29(a).  Having considered the motions and opposition, both motions are granted.  NRAP 29(f); NRAP 26(b)(1)(A).  The clerk of this court shall detach the amicus brief from the motion filed by International Municipal Lawyers Association and shall file it seperately. fn1 [The clerk of this court shall add attorney Steven M. Silva and Nossaman, LLP; Reno City Attorney Karl Hall; and North Las Vegas City Attorney Micaela Moore to the docket as counsel for amici.] Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=881945&onBaseDocumentNumber=22-38167">22-38167</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/05/2022</td><td>Appendix</td><td>Filed (SEALED) Joint Appendix. Vol. 130. Nos. 84345/84640 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/05/2022</td><td>Brief</td><td>Filed Amicus Brief (City of Reno, City of North Las Vegas, and IMLA) in Support of Appellant. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=881965&onBaseDocumentNumber=22-38187">22-38187</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2022</td><td>Motion</td><td>Filed City of Henderson's Motion for Leave to File Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=883285&onBaseDocumentNumber=22-39428">22-39428</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Motion</td><td>Filed Landowners' Motion for Extension of Time to File Combined Answering Brief [84345] and Opening Brief [84640] (Second Request). Nos. 84345/84640. Nos. 84345/84640 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=883352&onBaseDocumentNumber=22-39494">22-39494</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions. The motion filed by the City of Henderson to join the amicus brief filed by the City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in support of appellant is granted.  The amicus brief was filed on December 5, 2022.  The clerk shall add Nicholas G. Vaskov, Amanda Kern, Brandon P. Kemble and the Henderson City Attorney's Office as counsel for the amicus City of Henderson. Cause appearing, the motion filed by respondents and appellants/cross-respondents 180 Land Co., LLC, and Fore Stars, Ltd., (Landowners) requesting a second extension of time to file the combined answering brief in Docket No. 84345 and opening brief in Docket No. 84640 is granted.  Landowners shall have until January 17, 2023, to file and serve the brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=884121&onBaseDocumentNumber=22-40253">22-40253</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2022</td><td>Motion</td><td>Filed Nevada League of Cities' Motion for Leave to File Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=884886&onBaseDocumentNumber=22-40974">22-40974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2023</td><td>Appendix</td><td>Filed Landowners' Appendix Volume 1 (Nos. 1-134) Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=885885&onBaseDocumentNumber=23-00929">23-00929</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Proposed amicus Nevada League of Cities has filed a "Motion for Leave to File Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant." The motion is granted. The clerk of this court shall detach the joinder from the motion and shall file it separately. The clerk of this court shall add attorney Robert D. Sweetin and the law firm of Davison Van Cleve, P.C., to the docket as counsel for Nevada League of Cities. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886058&onBaseDocumentNumber=23-01100">23-01100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Brief</td><td>Filed Nevada League of Cities' Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886059&onBaseDocumentNumber=23-01101">23-01101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Motion</td><td>Filed Respondents'  Landowners' Motion to Exceed Word Limit for Combined Answering Brief on Appeal and Opening Brief on Cross-Appeal. nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886602&onBaseDocumentNumber=23-01603">23-01603</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Brief</td><td>Filed Respondents' Landowners' Combined Answering Brief on Appeal and Opening Brief on Cross-Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886607&onBaseDocumentNumber=23-01608">23-01608</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/18/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Jeffrey L. Galliher as counsel for Appellant to replace Philip Byrnes). Nos. 84345/84640. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886747&onBaseDocumentNumber=23-01746">23-01746</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Jeffrey L. Galliher as counsel for Appellant to replace Philip Byrnes). Nos. 84345/84640. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=886749&onBaseDocumentNumber=23-01748">23-01748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents and appellants/cross-respondents 180 Land Co., LLC, and Fore Stars, Ltd., (Landowners) have filed a motion for leave to file a combined answering brief on appeal and opening brief on cross-appeal in excess of the type-volume limitation.  The motion is granted. The brief was filed on January 17, 2023. City of Las Vegas shall have until February 16, 2023, to file and serve their combined reply brief on appeal and answering brief on cross-appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=887679&onBaseDocumentNumber=23-02663">23-02663</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2023</td><td>Motion</td><td>Filed City of West Wendover's Motion for Leave to File Joiner to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640. (BRIEF DETACHED AND FILED PER 3/31/23 ORDER). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=888050&onBaseDocumentNumber=23-02969">23-02969</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2023</td><td>Motion</td><td>Filed Appellant's Motion to Strike "Landowners' Appendix" and Answering Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=888230&onBaseDocumentNumber=23-03146">23-03146</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2023</td><td>Brief</td><td>Filed Nevada League of Cities and Municipalities Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=888406&onBaseDocumentNumber=23-03304">23-03304</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents 180 land Co., LLC and Fore Stars, Ltd. response to appellant's motion to strike due: February 22, 2023. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=888989&onBaseDocumentNumber=23-03879">23-03879</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2023</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=889057&onBaseDocumentNumber=23-03944">23-03944</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/14/2023</td><td>Motion</td><td>Filed Respondents' Motion for Excess Pages for Opposition to City of Las Vegas' Motion to Strike Landowners' Appendix and Answering Brief and Landowners' Request for Judicial Notice. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=889723&onBaseDocumentNumber=23-04582">23-04582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2023</td><td>Motion</td><td>Filed Respondents' Opposition to City Las Vegas' Motion to Strike Landowners' Appendix and Answering Brief and Landowners' Request for Judicial Notice. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=889724&onBaseDocumentNumber=23-04583">23-04583</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/15/2023</td><td>Notice/Incoming</td><td>Filed Respondents' Errata to Opposition to City Las Vegas' Motion to Strike Landowners' Appendix and Answering Brief and Landowners' Request for Judicial Notice. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=889794&onBaseDocumentNumber=23-04652">23-04652</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion for Extension of Time to File Opposition to City's Motion for Extension of Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=890230&onBaseDocumentNumber=23-05086">23-05086</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Landowners' Opposition to City's Motion for Extension of Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=890231&onBaseDocumentNumber=23-05087">23-05087</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/21/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. City of Las Vegas shall have until March 10, 2023, to file and serve the opposition to respondents' motion for extension of time filed on February 17, 2023. Nos. 84345/84640.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=890334&onBaseDocumentNumber=23-05189">23-05189</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/21/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant City of Las Vegas shall have until March 7, 2023, to file and serve the reply to respondents' opposition filed on February 14, 2023. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=890335&onBaseDocumentNumber=23-05190">23-05190</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant shall have until March 10, 2023, to file and serve reply to Landowners' opposition filed on February 17, 2023. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=890738&onBaseDocumentNumber=23-05582">23-05582</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2023</td><td>Motion</td><td>Filed Appellant City of Las Vegas Reply in Support of Motion to Strike "Landowners" Appendix and Answering Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=891166&onBaseDocumentNumber=23-06008">23-06008</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/28/2023</td><td>Motion</td><td>Filed Appellant City of Las Vegas Motion to Exceed Page Limit for Reply in Support of Motion to Strike "Landowners" Appendix and Answering Brief. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=891167&onBaseDocumentNumber=23-06009">23-06009</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/28/2023</td><td>Motion</td><td>Filed Appellant City of Las Vegas Reply in Support of Motion for Extension of Time to File Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=891168&onBaseDocumentNumber=23-06010">23-06010</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. Proposed amicus City of West Wendover has filed a 'Motion for Leave to File Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant."  The motion is granted.  The clerk of this court shall detach the joinder from the motion and shall file it separately. This court takes no action regarding the "Joinder to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant" filed on February 2, 2023, by City of Ely attorney Matthew Leo Cahoon on behalf of the Nevada League of Cities and Municipalities.  Appellant and respondent/cross-appellant City of Las Vegas (City) has filed a motion to strike the appendix and answering brief filed by 180 Land Co., LLC, and Fore Stars, Ltd. (Landowners).   The Landowners have filed an opposition, and the City has filed a reply. This court denies the motion to strike at this time. The City's motion for an extension of time to file the reply brief on appeal and answering brief on cross-appeal is granted as follows.    The City's combined reply brief and answering brief due: 30 days. fn1 [The clerk of this court shall add attorneys Nancy Porter and Lauren A. Landa and the law firm of Goicoechea, DiGrazia, Coyle &amp; Stanton, Ltd., to the docket as counsel for the City of West Wendover.] fn2 [Landowners' motion for leave to file an opposition to the motion to strike in excess of the page limitations of NRAP 27 is granted.  The opposition and request for judicial notice was filed on February 14, 2023.] fn4 [Landowners' motion for an extension of time to file an opposition to the motion for an extension is granted.  The opposition was filed on February 15, 2023. ] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=895244&onBaseDocumentNumber=23-09930">23-09930</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2023</td><td>Brief</td><td>Filed City of West Wendover's Joiner to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=895252&onBaseDocumentNumber=23-09938">23-09938</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2023</td><td>Notice/Incoming</td><td>Filed City of West Wendover's Certificate of Service for; Order Regarding Motions; and Motion for Leave to File Joiner to Brief of Amici Curiae City of Reno, City of North Las Vegas, and International Municipal Lawyer's Association in Support of Appellant. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=896458&onBaseDocumentNumber=23-11105">23-11105</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Motion</td><td>Filed Appellant's (City of Las Vegas) Motion to Exceed Word Limit for Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899053&onBaseDocumentNumber=23-13615">23-13615</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/01/2023</td><td>Brief</td><td>Filed Appellant's (City of Las Vegas) Reply Brief on Appeal and Answering Brief on Cross-Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899055&onBaseDocumentNumber=23-13617">23-13617</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 1 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899061&onBaseDocumentNumber=23-13623">23-13623</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/01/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 2-9.  (REJECTED PER NOTICE ISSUED 5/2/23) Nos. 84345/84640 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix to Reply Brief/Answering Brief on Cross Appeal Volumes 2 - 9. Corrected appendix due: 5 days. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899135&onBaseDocumentNumber=23-13690">23-13690</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. City of Las Vegas has filed a motion for leave to file a combined reply brief on appeal and answering brief on cross-appeal in excess of the type-volume limitation. Cause appearing, the motion is granted. The brief was filed on May 1, 2023.  Respondents and appellants/cross-respondents shall have 30 days from the date of this order to file and serve their reply brief on cross-appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899248&onBaseDocumentNumber=23-13780">23-13780</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 2 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899268&onBaseDocumentNumber=23-13799">23-13799</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 3 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899273&onBaseDocumentNumber=23-13804">23-13804</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 4 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899281&onBaseDocumentNumber=23-13812">23-13812</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 5 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899284&onBaseDocumentNumber=23-13814">23-13814</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 6 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899288&onBaseDocumentNumber=23-13818">23-13818</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 7 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899293&onBaseDocumentNumber=23-13823">23-13823</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 8 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899294&onBaseDocumentNumber=23-13824">23-13824</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Appellant's (City of Las Vegas) Appendix to Reply Brief/Answering Brief on Cross Appeal. Vols. 9 of 9. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=899296&onBaseDocumentNumber=23-13826">23-13826</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Notice of Relevant Relationships. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=900806&onBaseDocumentNumber=23-15262">23-15262</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2023</td><td>Brief</td><td>Filed Respondents' (Landowners') Reply Brief on Cross-Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=900963&onBaseDocumentNumber=23-15417">23-15417</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2023</td><td>Motion</td><td>Filed Respondents' (Landowners) Motion for Leave to File Sur-Reply Brief to City of Las Vegas' Reply Brief on Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=901199&onBaseDocumentNumber=23-15652">23-15652</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2023</td><td>Brief</td><td>Filed Respondents' (Landowners) Sur-Reply Brief to City of Las Vegas' Reply Brief on Appeal. Nos. 84345/84640 (STRIKEN PER 6/23/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2023</td><td>Appendix</td><td>Filed Respondents' (Landowners) Appendix to Sur-Reply Brief. Vol. 1. Nos. 84345/84640 (STRIKEN PER 6/23/23 ORDER)  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2023</td><td>Motion</td><td>Filed Appellant's (City of Las Vegas) Opposition to Motion for Leave to File Landowners' Sur-Reply Brief to City's Reply Brief on Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=901949&onBaseDocumentNumber=23-16339">23-16339</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2023</td><td>Motion</td><td>Filed Appellant's (City of Las Vegas) Motion to Strike Improper Portions of Reply Brief on Cross Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=901952&onBaseDocumentNumber=23-16341">23-16341</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Brief</td><td>Filed Appellant/Cross-Respondents' Supplemental Authorities NRAP 31(e) Notice of Supplemental Authorities. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=902675&onBaseDocumentNumber=23-17058">23-17058</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Reply to Response Landowners' Opposition to City of Las Vegas' - Motion to Strike Portions of Reply Brief on Cross-Appeal. Nos. 84345/84640. &#13;
+ (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=902693&onBaseDocumentNumber=23-17076">23-17076</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Reply to Response Landowners' Reply to City's Opposition to Motion for Leave to File Landowners' Sur-Reply Brief on Appeal. Nos. 84345/84640. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=902734&onBaseDocumentNumber=23-17115">23-17115</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Motion</td><td>Filed Appellant's (City of Las Vegas) Reply in Support of Motion to Strike Improper Portions of Reply Brief on Cross Appeal. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=903340&onBaseDocumentNumber=23-17705">23-17705</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2023</td><td>Brief</td><td>Filed Appellant's (City of Las Vegas) Notice of Supplemental Authorities. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=903656&onBaseDocumentNumber=23-18016">23-18016</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motions. 180 Land Co., LLC, and Fore Stars, Ltd. (180 Land) have filed a motion for leave to file a surreply to the reply brief on appeal, filed with the answering brief on cross-appeal. The motion is opposed, and 180 Land has filed a reply. Having considered the arguments of the parties, the motion is denied. The clerk of this court shall strike the surreply and appendix filed on May 17, 2023. The City has filed a motion to strike portions of the reply brief on cross-appeal, filed on May 16, 2023.  180 Land opposes the motion, and the City has filed a reply. Having considered the arguments of the parties, this court denies the motion to strike at this time, but cautions that this court will not consider claims for relief that were not raised in or considered by the district court. Nos. 84345/84640 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63887&csIID=63887&deLinkID=905707&onBaseDocumentNumber=23-19965">23-19965</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63887&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

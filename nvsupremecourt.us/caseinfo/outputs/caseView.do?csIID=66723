@@ -1,0 +1,738 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86713: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=0A6373714EE552C22D1520BAEACE0389">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66723">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86713</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SROUJI VS. A &amp; H INVS, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64413">85024</a>, <a href="/public/caseView.do?csIID=66852">86815</a>, <a href="/public/caseView.do?csIID=66970">86916</a>, <a href="/public/caseView.do?csIID=67216">87106</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A806846</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing in Progress</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Angelika Srouji</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Moist Towel Services LTD</td><td valign="top">Brandon L. Phillips
+							(Brandon L. Phillips, Attorney At Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">A &amp; H Investments LLC</td><td valign="top">Nikki L. Baker
+							(Peterson Baker, PLLC)
+						<br>Genevieve E. Geiger
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>John F. Hagan, Jr.
+							(Arnold &amp; Porter Kaye Scholer LLP\Chicago)
+						<br>David S. Jelsma
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Hab Siam</td><td valign="top">Nikki L. Baker
+							(Peterson Baker, PLLC)
+						<br>Genevieve E. Geiger
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>John F. Hagan, Jr.
+							(Arnold &amp; Porter Kaye Scholer LLP\Chicago)
+						<br>David S. Jelsma
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Moist Towel Products and Services LLC</td><td valign="top">Nikki L. Baker
+							(Peterson Baker, PLLC)
+						<br>Genevieve E. Geiger
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>John F. Hagan, Jr.
+							(Arnold &amp; Porter Kaye Scholer LLP\Chicago)
+						<br>David S. Jelsma
+							(Arnold &amp; Porter Kaye Scholer LLP\Denver)
+						<br>Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/12/2023</td><td>Open</td><td>Court Reporter Certificate/Not Fast Track</td><td>Court Reporter</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>10/16/2023</td><td>Open</td><td>Opening Brief/No Appendix</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=903681&onBaseDocumentNumber=23-18041">23-18041</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2023</td><td>Other</td><td>Senior Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Law Firms and Lawyers and Judges. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee/Proper Person. No action will be taken on this matter until filing fee is paid. Due Date: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=903686&onBaseDocumentNumber=23-18046">23-18046</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal, Moist Towel Services LTD. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal Moist Towel Services LTD. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=904280&onBaseDocumentNumber=23-18600">23-18600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee, Moist Towel Services LTD. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=904283&onBaseDocumentNumber=23-18603">23-18603</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Brandon L. Phillips. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Brandon L. Phillips (For Angelika Srouji). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2023</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=904879&onBaseDocumentNumber=23-19151">23-19151</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Notice/Incoming</td><td>Filed Appellant's (Moist Towel Services LTD) Joinder to Appellant Angelika Srouji's Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=906062&onBaseDocumentNumber=23-20317">23-20317</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/27/2023</td><td>Motion</td><td>Filed Appellant's (Moist Towel Services LLC) Emergency Motion to Consolidate Nos. 86713/86815. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=906079&onBaseDocumentNumber=23-20334">23-20334</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2023</td><td>Motion</td><td>Filed Appellant's (Angelika Srouji) Joinder to Emergency Motion to Consolidate Appeals. Case Nos. 86815/86713. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=906599&onBaseDocumentNumber=23-20804">23-20804</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. (REJECTED PER NOTICE ISSUED 6/29/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Transcript Request. Due in 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=906605&onBaseDocumentNumber=23-20810">23-20810</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2023</td><td>Order/Procedural</td><td>Filed Order Denying Emergency Petition for Extraordinary Relief in Docket No. 86815. We order the petition denied in docket No. 86815. fn3 [Given our disposition of this matter, the motions to consolidate filed in Docket No. 86713 and Docket No. 86815 are denied. To the extent the petitioner requests a stay of the district court proceedings, that request is deficient because it must be made in a separate motion that complies with NRAP 27 and NRAP 8. We make no determination as to the merits of such a motion. We further note that appellant Angelika Srouji joined in both the motion to consolidate and the instant petition for writ relief.] LS/EC/DH. Nos. 86713/86815. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=906611&onBaseDocumentNumber=23-20815">23-20815</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/03/2023</td><td>Motion</td><td>Filed Appellant's (Moist Towel Services LTD) Emergency Motion to Stay Trial Pending Appeal Pursuant to NRAP 27(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907045&onBaseDocumentNumber=23-21241">23-21241</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/03/2023</td><td>Appendix</td><td>Filed Appellant's (Moist Towel Services LTD) Appendix to Emergency Motion to Stay Trial Pending Appeal Pursuant to NRAP 27(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907046&onBaseDocumentNumber=23-21242">23-21242</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Order/Procedural</td><td>Filed Order/Transmit Record. Record due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907228&onBaseDocumentNumber=23-21420">23-21420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/05/2023</td><td>Docketing Statement</td><td>Filed Appellant's (Moist Towel Services) Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907252&onBaseDocumentNumber=23-21444">23-21444</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/05/2023</td><td>Docketing Statement</td><td>Filed Appellant's (Moist Towel Services) Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907253&onBaseDocumentNumber=23-21445">23-21445</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/05/2023</td><td>Docketing Statement</td><td>Filed Appellant's (Moist Towel Services) Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907254&onBaseDocumentNumber=23-21446">23-21446</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2023</td><td>Notice of Appeal Documents</td><td>Filed Letter from the District Court in Regards to the Record. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907289&onBaseDocumentNumber=23-21481">23-21481</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Appellant's (Angelika Srouji) Emergency Motion to Stay Trial Pending Appeal Pursuant to NRAP 27(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907427&onBaseDocumentNumber=23-21614">23-21614</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Appellant's (Angelika Srouji) Joinder to MTS's Appendix to Emergency Motion to Stay Trial Pending Appeal Pursuant to NRAP 27(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907430&onBaseDocumentNumber=23-21617">23-21617</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 01/14/21, 03/22/21, 04/29/21, 07/15/21, 11/18/21, 12/02/21, 04/14/22, 09/01/22, 09/08/22, 09/26/22, 10/06/22, 10/13/22, 11/07/22, 11/10/22, 11/21/22, 12/08/22, 01/05/23, 01/12/23, 01/13/23, 01/23/23, 04/03/23, 04/24/23, 05/04/23, 06/12/23, 01/05/22, 01/06/22, 01/12/22, 01/19/22, 01/25/23, 01/26/22, and 02/02/22. To Court Reporter: Jennifer Gerold. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907431&onBaseDocumentNumber=23-21618">23-21618</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2023</td><td>Order/Procedural</td><td>Filed Order to File Document. Appellants have filed emergency motions for stay of the trial in district court case no. A-19-806846-B pending resolution of this appeal. Appellants' motions do not comply with this court's rules regarding emergency motions as they fail to articulate why relief by July 9 is necessary to avoid irreparable harm.  See NRAP 27(e).  Respondents shall have until July 11, 2023, to file and serve a response to the emergency motions for stay.  No reply shall be filed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=907589&onBaseDocumentNumber=23-21758">23-21758</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2023</td><td>Motion</td><td>Filed Respondents' Opposition to Emergency Motion to Stay in Response to Court Order Filed 7/723. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=908040&onBaseDocumentNumber=23-22204">23-22204</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/13/2023</td><td>Order/Procedural</td><td>Filed Order Denying Emergency Motions for Stay. Appellants have filed motions for stay of the trial in district court case no. A-19-806846-B pending resolution of this appeal.  Having considered the motions and the relevant factors, see NRAP 8(c); NRAP 27(e), the motions for stay are denied. This court issued an order directing transmission of the record on July 5, 2023. The clerk of the district court has filed a request to provide the pages filed under seal, approximately 25,180 pages, on a CD or flash drive in order to save on court resources. The request is granted. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=908228&onBaseDocumentNumber=23-22377">23-22377</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/18/2023</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Case No. A-19-807331. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=908908&onBaseDocumentNumber=23-22995">23-22995</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2023</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal. District Court #A-19-806846. Volumes 1-369 (Via FTP). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=908912&onBaseDocumentNumber=23-22999">23-22999</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Jennifer Gerold stating that the requested transcripts were delivered.  Dates of transcripts: 01/14/21, 03/22/21, 04/29/21, 07/15/21, 11/18/21, 12/02/21, 04/14/22, 09/01/22, 09/08/22, 09/26/22, 10/06/22, 10/13/22, 11/07/22, 11/10/22, 11/21/22, 12/08/22, 01/05/23, 01/12/23, 01/13/23, 01/23/23, 04/03/23, 04/24/23, 05/04/23, 06/12/23, 01/05/22, 01/06/22, 01/12/22, 01/19/22, 01/25/23, 01/26/22, and 02/02/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=911558&onBaseDocumentNumber=23-25576">23-25576</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Notice of Appeal Documents</td><td>Filed Appellant's (Moist Towel Services) Joinder to Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=914278&onBaseDocumentNumber=23-28211">23-28211</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2023</td><td>Notice of Appeal Documents</td><td>Filed Appellant's (Moist Towel Services) Joinder to Errata Amended Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=914283&onBaseDocumentNumber=23-28216">23-28216</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2023</td><td>Transcript Request</td><td>Filed Civil Proper Person's Amended Transcript Request - Added dates of transcripts: 5/23/2022, 9/12/2022, 10/17/2022, 6/12/2023, 7/20/2023, 9/7/2023, 9/21/2023, 9/28/2023. Court reporter: Jennifer Gerold. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=914710&onBaseDocumentNumber=23-28639">23-28639</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2023</td><td>Transcript Request</td><td>Filed Civil Proper Person's Errata Amended Transcript Request - Added dates of transcripts: 5/23/2022, 9/12/2022, 10/17/2022, 6/12/2023, 7/20/2023, 9/7/2023, 9/21/2023, 9/28/2023 plus 4/6/2020 and 7/17/2023. Court reporter: Jennifer Gerold. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=914712&onBaseDocumentNumber=23-28641">23-28641</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2023</td><td>Notice of Appeal Documents</td><td>Filed Proper Person's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66723&csIID=66723&deLinkID=914715&onBaseDocumentNumber=23-28644">23-28644</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66723&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>81887-COA: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=4D237B7D399BC24BB03D5E00DD44A24B">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62732">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 81887-COA</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SNYDER VS. SNYDER C/W 82756/83029</td><td width="15%" class="label">Court:</td><td width="35%">Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>81887-COA*, <a href="/public/caseView.do?csIID=62733">82756-COA</a>, <a href="/public/caseView.do?csIID=62734">83029-COA</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60030">81887</a>, <a href="/public/caseView.do?csIID=60548">82243</a>, <a href="/public/caseView.do?csIID=61341">82756</a>, <a href="/public/caseView.do?csIID=62733">82756-COA</a>, <a href="/public/caseView.do?csIID=61718">83029</a>, <a href="/public/caseView.do?csIID=62734">83029-COA</a>, <a href="/public/caseView.do?csIID=62531">83620</a>, <a href="/public/caseView.do?csIID=62575">83651</a>, <a href="/public/caseView.do?csIID=64010">84730</a>, <a href="/public/caseView.do?csIID=64226">84730-COA</a>, <a href="/public/caseView.do?csIID=67464">87292</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Elko Co. - Fourth Judicial District - DR-MD-17-757</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Raymond Max Snyder</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lauara Ann Snyder</td><td valign="top">Bronagh M. Kelly
+							(Woodburn &amp; Wedge)
+						<br>Shawn B. Meador
+							(Woodburn &amp; Wedge)
+						<br>Shay L. Wells
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Case Status Update</td><td>Transferred from Supreme Court. Nos. 81887/82756/83029. (COA).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to find Respondent's Attorney, Shawn B. Meador, in Contempt for Fabricating Evidence; for Forging Orders in Violation of NRS 205.090; and a Request that the Court Order a Criminal Investigation into Shawn B. Meador's Actions in this Divorce. Nos. 82756/81887/83029 (TRANSFERRED FROM THE SUPREME COURT PER 11/16/21 NOTICE) (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=836335&onBaseDocumentNumber=21-32906">21-32906</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention to Not File an Opposition. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=836361&onBaseDocumentNumber=21-32931">21-32931</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2021</td><td>Motion</td><td>Filed Appellant's Expanded Motion to Find Respondent's Attorneys, including Shawn B. Meador, in Contempt for Fabricating Evidence; for Forging Orders in Violation of NRS 205.090; and a Request that the Court Find that Shawn B. Meador committed Class D Felonies under NRS 193.130, as provided by NRS 205.090, for each Falsification, and Class B Felonies under NRS 205.300; and Order a Criminal Investigation into the Attorneys' Actions in this Divorce. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=837453&onBaseDocumentNumber=21-33963">21-33963</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention to Not File an Opposition. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=837642&onBaseDocumentNumber=21-34148">21-34148</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Motion</td><td>Filed Proper Person Motion for a Stay and Motion to Stay Appellant Requirement to Furnish a Security Bond as Provided by 9(A), 61(D) &amp; Nevada Rev Stat 20.037(4). Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=838254&onBaseDocumentNumber=21-34749">21-34749</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice. Request for Status and to Submit for Decision on Emergency Petition for Writ of Mandamus. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=838255&onBaseDocumentNumber=21-34750">21-34750</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motions. Appellant has filed a pro se motion and an expanded motion asking this court to (1) find respondent's attorneys in contempt for fabricating evidence and forging orders, (2) find that respondent and her attorneys have committed crimes, and (3) order a criminal investigation into the actions of respondent and her counsel.  The motions are denied. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=838282&onBaseDocumentNumber=21-34776">21-34776</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2021</td><td>Motion</td><td>Filed Respondent's Opposition to Motion for a Stay. Nos. 81887/82756/83029 (COA</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=838477&onBaseDocumentNumber=21-34967">21-34967</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/17/2021</td><td>Motion</td><td>Filed Proper Person Motion to Reconsider Order Denying Motions Filed by the December 6, 2021, and Order Respondent to Respond to Appellant's Expanded Motion to Find Respondent's Attorneys, Including Shawn B. Meador, in Contempt. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=839675&onBaseDocumentNumber=21-36061">21-36061</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=839960&onBaseDocumentNumber=21-36344">21-36344</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/03/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Response to Respondent's Notice of Intention. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=841067&onBaseDocumentNumber=22-00152">22-00152</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions. Appellant has now filed a pro se motion asking that this court direct respondent and her counsel to respond to the expanded motion and reconsider the original motion after the response is filed.  No cause appearing, the motion is denied. Appellant has also filed a pro se motion to "set the bond at zero or in the alternative at a reduced amount as provided by NRS 20.037(4), preferably $1.00."  Respondent opposes the motion and asks that this court require appellant to pay the attorney fees she incurred in this matter.  The motion is denied.  Respondent's request for attorney fees is also denied at this time. Finally, appellant has filed a pro se request for status and to submit for decision an emergency petition for a writ of mandamus filed in October 2021. This court takes no action on the pro se request filed on December 6, 2021. Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=841548&onBaseDocumentNumber=22-00569">22-00569</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Order/Procedural</td><td>Filed Order Directing Full Briefing.  Respondent's Answering Brief due:  30 days.  Appellant shall have 15 days from the date of service of the answering brief to file and serve any reply brief.  Nos. 81887/82756/83029.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=848808&onBaseDocumentNumber=22-07470">22-07470</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Request for Expedited Relief; Request to Supplement the Record. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=851420&onBaseDocumentNumber=22-09947">22-09947</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: April 22, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=851808&onBaseDocumentNumber=22-10324">22-10324</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/04/2022</td><td>Motion</td><td>Filed Proper Person Motion for Sanctions for Respondent's Request for Expedited Relief; Request to Supplement Record. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=851868&onBaseDocumentNumber=22-10380">22-10380</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=852492&onBaseDocumentNumber=22-10994">22-10994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Motion</td><td>Filed Proper Person Motion for Expedited Relief; Motion to Reconsider and Rule on All Previous Pleadings as a Result of am Incomplete Record. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=853282&onBaseDocumentNumber=22-11721">22-11721</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=853358&onBaseDocumentNumber=22-11796">22-11796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2022</td><td>Order/Procedural</td><td>Filed Order.  Respondent has filed a motion to supplement the record.  Appellant does not oppose the motion but asks that respondent be sanctioned for the delay in filing the motion.  Counsel for respondent is admonished for delaying in filing the motion until just before her brief was due.  This court declines to impose any additional sanctions related to the motion.  The clerk of the district court shall have 7 days from the date of this order to transmit to this court the transcripts of proceedings held on August 18, 19, and 20, 2021, and March 31, 2021, as an additional volume of the record on appeal.  Appellant has also filed a pro se motion asking that this court reconsider several motions and writ petitions in conjunction with the transcripts to be transmitted.  The motion is denied.  Nos. 81887/82756/73029.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854147&onBaseDocumentNumber=22-12561">22-12561</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Brief</td><td>Filed Respondent's Answering Brief. Nos. 81887/82756/83029 (REJECTED PER NOTICE ISSUED 4/22/22) (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854366&onBaseDocumentNumber=22-12774">22-12774</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Brief</td><td>Filed Respondent's Answering Brief. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854493&onBaseDocumentNumber=22-12900">22-12900</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume II. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854496&onBaseDocumentNumber=22-12903">22-12903</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume III. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854501&onBaseDocumentNumber=22-12908">22-12908</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume IV. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854502&onBaseDocumentNumber=22-12909">22-12909</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume V. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854505&onBaseDocumentNumber=22-12912">22-12912</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume VI. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854506&onBaseDocumentNumber=22-12913">22-12913</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume I. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854521&onBaseDocumentNumber=22-12928">22-12928</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Reply Brief due:  May 24, 2022.  Nos. 81887/82756/83029.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=854772&onBaseDocumentNumber=22-13175">22-13175</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion. Objection to Notice of Rejection of Deficient Brief. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=855142&onBaseDocumentNumber=22-13537">22-13537</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/28/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 235 in the amount of $150.00 returned to Raymond Max Snyder. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Reconsideration of Court of Appeals Orders. (Appellant's Petition for Review) Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=855168&onBaseDocumentNumber=22-13563">22-13563</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention Re: Petition for Review. Nos 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=855306&onBaseDocumentNumber=22-13640">22-13640</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/29/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention Re: Objection to Notice of Rejection of Deficient Brief. Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=855314&onBaseDocumentNumber=22-13642">22-13642</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2022</td><td>Motion</td><td>Filed Proper Person Motion to Disallow Answering Brief Filed on April 25th, 2022. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=855430&onBaseDocumentNumber=22-13753">22-13753</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2022</td><td>Motion</td><td>Filed Respondent's Objection to Appellant's Motion to Disallow Respondent Lauara Snyder's Answering Brief. Nos. 81887/82756/83029  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=856084&onBaseDocumentNumber=22-14393">22-14393</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a pro se objection to the clerk's notice, requesting that the answering brief be rejected.  This court declines to reject the answering brief, or award any other relief, based on the clerk's notice.  Appellant has also filed a pro se motion to disallow respondent's answering brief.  The motion to disallow the answering brief is denied.  Appellant has filed a pro se petition for review of this court's April 20, 2022, order.  The petition, which was filed in this court, is treated as a motion for reconsideration and denied.  The district court clerk is no longer required to transmit the transcripts as directed in this court's April 20, 2022, order.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=856263&onBaseDocumentNumber=22-14571">22-14571</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/10/2022</td><td>Brief</td><td>Filed Appellant's Proper Person Reply Brief. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=856541&onBaseDocumentNumber=22-14845">22-14845</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion to Have His Answering Brief's Appendix Allowed. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=856999&onBaseDocumentNumber=22-15296">22-15296</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 281 in the amount of $150.00, returned to Raymond Max Snyder. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Reconsideration. (Appellant's Second Petition for Review) Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=857009&onBaseDocumentNumber=22-15306">22-15306</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Notice/Incoming</td><td>Filed Notice of Intention Re Petition. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=857380&onBaseDocumentNumber=22-15676">22-15676</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2022</td><td>Notice/Incoming</td><td>Filed Notice of Intention Re Motion. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=857385&onBaseDocumentNumber=22-15681">22-15681</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Other</td><td>Returned Unfiled Document to Appellant. Nos. 81887/82756/83029 (Inadvertently issued letter returning documents unfiled - see motion filed on 5/13/22) (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Request to Use the Appendix from Appellant's Emergency Petition for Writ of Mandamus and/or in the Alternative Prohibition Pursuant to NRAP 21 and 27(e), in Appellant's Response to Respondent's Answering Brief. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=858328&onBaseDocumentNumber=22-16537">22-16537</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention, re: request to use appendix. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=858342&onBaseDocumentNumber=22-16550">22-16550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. Appellant has filed a pro se motion that appears to seek leave to file an appendix to his reply brief, as well as a motion seeking leave to use an appendix filed in a separate matter.  The clerk shall file the transcripts included in volumes I-IV of appellant's appendix, received on May 19, 2022.   The clerk shall return the remainder of the proposed appendix unfiled.  Appellant's motion to use an appendix filed in another matter is denied. Appellant has filed a document titled "Petition for Review," in which he seeks review of this court's May 6, 2022, order.  No cause appearing, the motion is denied.  Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=858528&onBaseDocumentNumber=22-16734">22-16734</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2022</td><td>Transcript</td><td>Filed Transcript. Proceedings:  Vol I-IV. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/27/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion Requesting for this Court to Initiate a Criminal Investigation with Federal Law Enforcement. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=858747&onBaseDocumentNumber=22-16946">22-16946</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention to not file an opposition to Appellant's Motion Request for Court to Initiate Criminal Investigation. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=858921&onBaseDocumentNumber=22-17119">22-17119</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion to Have Respondent's Attorneys Representation Terminated Pursuant to Nev. R. Prof. Cond. 1.16(a), 1.16(a)(1), 1.16(a)(2) and 1.16(a)(3). Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=861105&onBaseDocumentNumber=22-18290">22-18290</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=861192&onBaseDocumentNumber=22-18375">22-18375</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant's pro se motion asking that this court order an investigation by federal law enforcement is denied.  Appellant's request that this court grant the relief requested in the original petition for a writ of mandamus in Docket No. 84730-COA is improperly made in the context of the motion and is also denied.  Nos. 81887/82756/83029.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=861219&onBaseDocumentNumber=22-18400">22-18400</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Amended Motion to Have Respondent's Attorneys Representation Terminated Pursuant to Nev. R. Prof. Cond. 1.16(a), 1.16(a)(1), 1.16(b)(2), 1.16(b)(3) and 1.16(b)(7). Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=861233&onBaseDocumentNumber=22-18414">22-18414</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/10/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=861331&onBaseDocumentNumber=22-18481">22-18481</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions.  Appellant, who is proceeding pro se, has filed a motion and an amended motion "to have respondent's attorneys representation terminated" based on alleged violations of rules of professional conduct.  No cause appearing, the motions are denied.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=863748&onBaseDocumentNumber=22-20764">22-20764</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 237 in the amount of $150.00, returned to Raymond Max Snyder. Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Reconsideration. (Appellant's Petition for Review) Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=864454&onBaseDocumentNumber=22-21451">22-21451</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of Intention. 81887/82756/83029  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=864572&onBaseDocumentNumber=22-21566">22-21566</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a pro se motion for reconsideration in which he appears to challenge this court's June 30, 2022, and May 26, 2022, orders.   The motion is denied. fn1 [The document is titled as a petition for review and captioned as if filed in the Supreme Court.  However, a petition for review is not available with respect to non-dispositional orders issued by this court.  Accordingly, the document was filed in this court and is treated as a motion for reconsideration.] Nos. 81887/82756/83029. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=870052&onBaseDocumentNumber=22-26789">22-26789</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding (Docket No. 81887-COA) and Dismissing Appeals (Docket No. 82756-COA and Docket No. 83029-COA). "Docket No. 81887-COA, We conclude that the district court's decision on the improvements issue was not supported by substantial evidence,  see Williams, 120 Nev. at 566, 97 P.3d at 1129, and we therefore reverse and remand for further proceedings on the issue. We reverse the divorce decree insofar as it failed to (1) allocate the outstanding portion of the loans, which the parties made to the businesses from their community funds, between the parties; (2) evaluate whether the community was entitled to reimbursement for any community funds expended on one of the business's legal expenses; and (3) determine whether the transfers of funds from the businesses to the parties' joint accounts were loans, and if so, how those debts should be allocated between the parties.  We also reverse the portions of the divorce decree addressing (1) the purported improvements to Raymond's home, (2) characterizing the funds in Raymond's bank account that he received through workers' compensation as community property, (3) directing the parties' to equally split their 401K and IRA accounts, and (4) awarding attorney fees to Lauara.  On remand, the district court shall address these issues in a manner consistent with this order.  We affirm all other aspects of the divorce decree. Thus, because no statute or court rule authorizes an appeal from any portion of the March 31 order, this court lacks jurisdiction over the appeal in Docket No. 82756-COA, and it is therefore dismissed. Because this court therefore lacks jurisdiction over Raymond's appeal in Docket No. 83029-COA, it is dismissed."  COA-MG/JT/BB Nos. 81887/82756/83029 (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62732&csIID=62732&deLinkID=876548&onBaseDocumentNumber=22-32996">22-32996</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Case Status Update</td><td>Transferred to Supreme Court. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2022</td><td>Case Status Update</td><td>Case Closed. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Filing Fee</td><td>Returned Filing Fee. Check amount: $250, returned to Appellant Raymond Max Snyder.</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62732&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

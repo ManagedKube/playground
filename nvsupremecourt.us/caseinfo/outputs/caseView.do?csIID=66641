@@ -1,0 +1,643 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86642: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=5D699E7F43A8332821AA6D4DF258182C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66641">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86642</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MSG LAS VEGAS, LLC VS. DIST. CT. (RIDER LEVETT BUCKNALL LTD)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A840748</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">To Screening</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">MSG Las Vegas, LLC</td><td valign="top">James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Rider Levett Bucknall LTD</td><td valign="top">G. Lance Coburn
+							(Coburn &amp; Martin, LLP)
+						<br>Christine E. Drage
+							(W&amp;D Law, LLP)
+						<br>Jeremy R. Kilber
+							(W&amp;D Law, LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nancy L. Allf</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Jordan T. Smith. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus or Prohibition. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=902287&onBaseDocumentNumber=23-16674">23-16674</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=902288&onBaseDocumentNumber=23-16675">23-16675</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Motion to Redact MSG Las Vegas, LLC's Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus and Seal Volumes II and III of the Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=902289&onBaseDocumentNumber=23-16676">23-16676</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Petitioner has filed a redacted petition for a writ of mandamus or prohibition and a motion for leave to file the unredacted petition and volumes 2 and 3 of the appendix supporting the petition under seal. The motion is granted. The clerk of this court shall file the unredacted petition and volumes 2 and 3 of the appendix, received on May 31, 2023, under seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=903939&onBaseDocumentNumber=23-18294">23-18294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2023</td><td>Petition/Writ</td><td>Filed (SEALED) Petition for Writ of Mandamus or Prohibition. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Appendix</td><td>Filed (SEALED) Appendix to Petition for Writ. Vol. 2 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2023</td><td>Appendix</td><td>Filed (SESLED) Appendix to Petition for Writ. Vol. 3. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Order/Procedural</td><td>Filed Order/Answer Writ Petition. Answer due: 28 days. Petitioner shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=903942&onBaseDocumentNumber=23-18297">23-18297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/26/2023</td><td>Motion</td><td>Filed Appellant's Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=905824&onBaseDocumentNumber=23-20081">23-20081</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Real Party in Interest's Motion for Extension of Time to File Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of This Writ Proceeding. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=907609&onBaseDocumentNumber=23-21778">23-21778</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Real Party in Interest's Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding (REJECTED PER NOTICE FILED ON 7/10/2023). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/10/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real party in interest's answer to writ petition due: July 21, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=907654&onBaseDocumentNumber=23-21823">23-21823</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/10/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=907716&onBaseDocumentNumber=23-21884">23-21884</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Motion for Extension of Time to File Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding and Countermotion to Strike. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=907932&onBaseDocumentNumber=23-22098">23-22098</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Motion</td><td>Filed Real Party in Interest's Response to Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=908481&onBaseDocumentNumber=23-22625">23-22625</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2023</td><td>Appendix</td><td>Filed Real Party in Interest's Supplemental Appendix to Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of Writ Proceeding and, to Answer to Petition for Writ of Prohibition or, in Alternative, Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=908882&onBaseDocumentNumber=23-22969">23-22969</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/18/2023</td><td>Motion</td><td>Filed Real Party in Interest's Reply in Support of Motion for Extension of Time to File Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding and Opposition to Countermotion to Strike. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=908934&onBaseDocumentNumber=23-23021">23-23021</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/21/2023</td><td>Brief</td><td>Filed Real Party in Interest's Answeri to Petition for Writ of Mandamus or Prohibition (REJECTED PER NOTICE FILED ON 7/24/2023).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/24/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Answer to Petition. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=909420&onBaseDocumentNumber=23-23494">23-23494</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/24/2023</td><td>Petition/Writ</td><td>Filed Real Party in Interest's Answer to Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=909475&onBaseDocumentNumber=23-23545">23-23545</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/24/2023</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix to Opposition to Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Proceeding and, to Answer to Petition for Writ of Prohibition or, In the Alternative, Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=909477&onBaseDocumentNumber=23-23547">23-23547</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Petitioner has filed a motion to stay the deposition that is the subject of the protective order at issue in this petition pending this court's resolution of the petition.  Real party in interest has filed an untimely motion for an extension of time to file an opposition to the motion for stay.  Having considered the arguments of the parties, the court grants the motion for an extension of time and denies the countermotion to strike.  The opposition was filed on July 14, 2023.&#13;
+   Petitioner shall have 7 days from the date of this order to file and serve a reply in support of the motion for stay.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=910279&onBaseDocumentNumber=23-24329">23-24329</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioner's reply in support of motion to stay due: August 18, 2023. Petitioner's reply to the writ petition due: August 21, 2023.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=910912&onBaseDocumentNumber=23-24936">23-24936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2023</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion to Stay the Deposition of James Dolan Pending Resolution of this Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=913114&onBaseDocumentNumber=23-27094">23-27094</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2023</td><td>Petition/Writ</td><td>Filed Appellant's Reply to Petition for Writ of Prohibition or, in the Alternative, Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=913296&onBaseDocumentNumber=23-27273">23-27273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2023</td><td>Order/Procedural</td><td>Filed Order Granting Stay. Petitioner has filed a motion to stay the deposition that is the subject of the protective order at issue in this petition pending this court's resolution of the petition.  Real party in interest filed an opposition, and petitioner filed a reply. This court concludes that a stay is warranted.  The motion is granted. The deposition of James Dolan shall be stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66641&csIID=66641&deLinkID=913804&onBaseDocumentNumber=23-27770">23-27770</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66641&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

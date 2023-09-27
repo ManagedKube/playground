@@ -1,0 +1,1596 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84809: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=587D155232E04CC1762C9B2A55EB7319">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64127">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84809</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MUDDY VALLEY IRRIGATION CO. VS.  LINCOLN CTY. WATER. DIST.  C/W 84739/84741/84742/85137</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=64022">84739</a>*, <a href="/public/caseView.do?csIID=64040">84741</a>, <a href="/public/caseView.do?csIID=64041">84742</a>, 84809, <a href="/public/caseView.do?csIID=64571">85137</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64022">84739</a>, <a href="/public/caseView.do?csIID=64040">84741</a>, <a href="/public/caseView.do?csIID=64041">84742</a>, <a href="/public/caseView.do?csIID=64571">85137</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A816761</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Administrative Agency - General</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>08/10/2023</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Muddy Valley Irrigation Company</td><td valign="top">Robert A. Dotson
+							(Dotson Law)
+						<br>Steven D. King<br>Justin C. Vance
+							(Dotson Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Apex Holding Company, LLC</td><td valign="top">Christian T. Balducci
+							(Marquis Aurbach Chtd.)
+						<br>Jordan W. Montet
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bedroc Limited, LLC</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">City of North Las Vegas</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Coyote Springs Investment, LLC</td><td valign="top">Emilia Cargill
+							(Wingfield Nevada Group)
+						<br>William L Coulthard
+							(Coulthard Law PLLC)
+						<br>Bradley J. Herrema
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Brett William Pilling
+							(Robison, Sharp, Sullivan &amp; Brust)
+						<br>Kent R. Robison
+							(Robison, Sharp, Sullivan &amp; Brust)
+						<br>Hannah E. Winston
+							(Robison, Sharp, Sullivan &amp; Brust)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Dry Lake Water, LLC</td><td valign="top">Christian T. Balducci
+							(Marquis Aurbach Chtd.)
+						<br>Jordan W. Montet
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Georgia-Pacific Gypsum, LLC</td><td valign="top">Sarah Ferguson
+							(Former)
+						
+							(Parsons Behle &amp; Latimer/Reno)
+						<br>Lucas M. Foletta
+							(McDonald Carano LLP/Reno)
+						<br>Sylvia L. Harrison
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lincoln County Water District</td><td valign="top">Dylan V. Frehner
+							(Lincoln County District Attorney)
+						<br>Wayne O. Klomp
+							(Great Basin Law)
+						<br>Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Moapa Valley Water District</td><td valign="top">Gregory H. Morrison
+							(Parsons Behle &amp; Latimer/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Cogeneration Associates Nos. 1 and 2</td><td valign="top">Francis C. Flaherty
+							(Dyer Lawrence, LLP)
+						<br>Sue S. Matuska
+							(Dyer Lawrence, LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Republic Environmental Technologies, Inc.</td><td valign="top">Sarah Ferguson
+							(Parsons Behle &amp; Latimer/Reno)
+						<br>Lucas M. Foletta
+							(McDonald Carano LLP/Reno)
+						<br>Sylvia L. Harrison
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Sierra Pacific Power Company</td><td valign="top">Justina Alyce Caviglia<br>Michael D. Knox</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Church of Jesus Christ of Latter-Day Saints</td><td valign="top">Severin A. Carlson
+							(Kaempfer Crowell/Reno)
+						<br>Sihomara L. Graves
+							(Kaempfer Crowell/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Vidler Water Company, Inc.</td><td valign="top">Dylan V. Frehner
+							(Lincoln County District Attorney)
+						<br>Wayne O. Klomp
+							(Great Basin Law)
+						<br>Karen A. Peterson
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Western Elite Environmental, Inc.</td><td valign="top">Laura A. Schroeder
+							(Schroeder Law Offices, P.C.)
+						<br>Caitlin R. Skulan
+							(Schroeder Law Offices, P.C.)
+						<br>Therese A. Ure Stix
+							(Schroeder Law Offices, P.C.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859391&onBaseDocumentNumber=22-17578">22-17578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Other</td><td>Justice James W. Hardesty disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859393&onBaseDocumentNumber=22-17580">22-17580</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Motion</td><td>Filed Respondent's (Center for Biological Diversity) Emergency Motion for Stay Under NRAP 27(E) and Joinder Immediate Action Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859434&onBaseDocumentNumber=22-17621">22-17621</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Appendix</td><td>Filed Respondent's (Center for Biological Diversity) Appendix in Support of the Emergency Motion for Stay and Joinder. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859436&onBaseDocumentNumber=22-17623">22-17623</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Appendix</td><td>Filed Respondent's (Center for Biological Diversity) Appendix in Support of the Emergency Motion for Stay and Joinder. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859437&onBaseDocumentNumber=22-17624">22-17624</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Appendix</td><td>Filed Respondent's (Center for Biological Diversity) Appendix in Support of the Emergency Motion for Stay and Joinder. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859438&onBaseDocumentNumber=22-17625">22-17625</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Appendix</td><td>Filed Respondent's (Center for Biological Diversity) Appendix in Support of the Emergency Motion for Stay and Joinder. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859439&onBaseDocumentNumber=22-17626">22-17626</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Motion</td><td>Filed The State Engineer's and The Center For Biological Diversity's Joint Motion to Consolidate Appeals and Modify Caption, Case nos. 84809, 84739, 84741, and 84742. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859501&onBaseDocumentNumber=22-17688">22-17688</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/03/2022</td><td>Motion</td><td>Filed Motion to Consolidate Exhibits 6-19. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859502&onBaseDocumentNumber=22-17689">22-17689</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Respondents' (SNWA and LVVWD) Notice of Appearance for Paul G. Taggart, Thomas P. Duensing, and Steven C. Anderson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859511&onBaseDocumentNumber=22-17697">22-17697</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Respondent The Church of Jesus Chirst of Latter-day Saints' Notice of Appearance for Severin A. Carlson and Sihomara L. Graves. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859522&onBaseDocumentNumber=22-17708">22-17708</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance on behalf of Lincoln County Water District and Vidler Water Company, Inc. for Dylan V. Frehner, Wayne Klomp, and Karen A. Petersen. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859550&onBaseDocumentNumber=22-17734">22-17734</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/03/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Dotson Law.  Check no. 1270. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859581&onBaseDocumentNumber=22-17765">22-17765</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Michaela G. Davies. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859599&onBaseDocumentNumber=22-17783">22-17783</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (Moapa Valley Water District) Notice of Appearance for Gregory H. Morrison. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859608&onBaseDocumentNumber=22-17792">22-17792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Notice/Incoming</td><td>Filed Respondents' (Georgia-Pacific Gypsum, LLC and Republic Technologies, Inc.) Notice of Appearance for Jane Susskind. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859663&onBaseDocumentNumber=22-17847">22-17847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellant: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859665&onBaseDocumentNumber=22-17849">22-17849</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Notice/Incoming</td><td>Filed Respondents' (Nevada Power Company and Sierra Pacific Power Company) Notice of Appearance for Justina A. Caviglia and Michael Knox. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859673&onBaseDocumentNumber=22-17857">22-17857</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Consolidate.  The appellants in these consolidated cases are Adam Sullivan, P.E., Nevada State Engineer, Division of Water Resources, Department of Conservation and Natural Resources (Docket No. 84739); Southern Nevada Water Authority (Docket No. 84741); Center for Biological Diversity (Docket No. 84742); and Muddy Valley Irrigation Co. (Docket No. 84809).  The respondents for all appeals are Lincoln County Water District; Vidler Water Company, Inc.; Coyote Springs Investment, LLC; Nevada Cogeneration Associates Nos. 1 and 2; Apex Holding Company, LLC; Dry Lake Water, LLC; Georgia-Pacific Gypsum, LLC; Republic Environmental Technologies, Inc.; Sierra Pacific Power Company, d/b/a NV Energy; Nevada Power Company, d/b/a NV Energy; The Church of Jesus Christ of Latter-Day Saints; Moapa Valley Water District; Western Elite Environmental, Inc.; Bedroc Limited, LLC; City of North Las Vegas; and Las Vegas Valley Water District.  Appellants shall have until June 17, 2022, to file and serve their transcript request forms or certificates that no transcripts will be requested, as well as their docketing statements.  Appellants shall have until September 30, 2022, to file and serve their opening briefs and appendices.  briefing shall proceed in accordance with NRAP 31(a)(1), except that any appellant who disagrees with another appellant's opening brief may, to the extent the disagreeing appellant's interests are impacted thereby, file an answering brief addressing the issues related to those interests by the answering brief deadline.  No extensions of time will be granted absent extreme and unforeseeable circumstances demonstrated by written motion.  fn1[The court defers ruling on the pending motions to exceed the page limit and for stay.]  Nos. 84739/84741/84742/84809.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859923&onBaseDocumentNumber=22-18101">22-18101</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Nevada Cogeneration Associates' Notice of Appearance for Francis C. Flaherty and Sue S. Matuska. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859942&onBaseDocumentNumber=22-18119">22-18119</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Nevada Cogeneration Associates' Notice of Appearance for Francis C. Flaherty and Sue S. Matuska. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859943&onBaseDocumentNumber=22-18120">22-18120</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Nevada Cogeneration Associates' Notice of Appearance for Francis C. Flaherty and Sue S. Matuska. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859945&onBaseDocumentNumber=22-18122">22-18122</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Nevada Cogeneration Associates' Notice of Appearance for Francis C. Flaherty and Sue S. Matuska. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=859947&onBaseDocumentNumber=22-18124">22-18124</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Motion</td><td>Filed SNWA's Joinder to Center for Biological Diversity's Emergency Motion for Stay (84741). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=860963&onBaseDocumentNumber=22-18151">22-18151</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Motion</td><td>Filed SNWA's Joinder to Center for Biological Diversity's Emergency Motion for Stay (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=860985&onBaseDocumentNumber=22-18172">22-18172</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Notice/Incoming</td><td>Filed State Engineer's Partial Joinder To SNWA's Emergency Motion For Stay Under NRAP 27(E) Of District Court's Order Granting Petitions For Judicial Review Pending Appeal And Partial Joinder To The Center. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861054&onBaseDocumentNumber=22-18239">22-18239</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Attachments 7-13 (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861055&onBaseDocumentNumber=22-18240">22-18240</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Docketing Statement</td><td>Filed State Engineer's Docketing Statement Civil Appeals (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861093&onBaseDocumentNumber=22-18278">22-18278</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Motion</td><td>Filed Lincoln Vidler Opposition to SNWA's Emergency Motion for Stay Pending Appeal (84741). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861112&onBaseDocumentNumber=22-18297">22-18297</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Motion</td><td>Filed Lincoln County Water District and Vidler's Motion to Dismiss the Appeals of SNWA, CBD and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861124&onBaseDocumentNumber=22-18309">22-18309</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Church's Opposition to SNWA Emergency Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861135&onBaseDocumentNumber=22-18320">22-18320</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Nevada Cogeneration Associates Nos. 1 and 2 Response (Opposition) to Southern Nevada Water Authority's Emergency Motion for Stay Under NRAP 27(E) of District Court's Order Granting Petitions. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861179&onBaseDocumentNumber=22-18363">22-18363</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Georgia-Pacific Gypsum and Republic Environmental Tech's Opposition to Southern Nevada Water Authority's Emergency Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861151&onBaseDocumentNumber=22-18336">22-18336</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Apex Holdings and Dry Lake Water's Opposition to Emergency Motion to Stay Under NRAP 27(e) of District Court's Order Granting Petition for Judicial Review Pending Appeal. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861155&onBaseDocumentNumber=22-18340">22-18340</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Georgia-Pacific Gypsum and Republic Environmental Tech's Opposition to Center for Biological Diversity's Emergency Motion For Stay Under 27(E) and Joinder. Nos. 84739/84141/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861235&onBaseDocumentNumber=22-18416">22-18416</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Lincoln County Water District and Vidler's Opposition to CBD's Motion for Emergency Stay and Joinder. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861256&onBaseDocumentNumber=22-18437">22-18437</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Church's Opposition to CBD's Emergency Motion for Stay and Joinder. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861262&onBaseDocumentNumber=22-18443">22-18443</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Hannah E. Winston. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861621&onBaseDocumentNumber=22-18724">22-18724</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Hannah E. Winston. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861622&onBaseDocumentNumber=22-18725">22-18725</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Hannah E. Winston. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861623&onBaseDocumentNumber=22-18726">22-18726</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Hannah E. Winston. Nos. 84739/84741/84742/84809 - Duplicate - (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861624&onBaseDocumentNumber=22-18727">22-18727</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant Southern Nevada Water Authority in Docket No. 84741 shall have until June 29, 2022, to file and serve the response to Lincoln County Water District and Vidler's Motion to Dismiss the Appeals of SNWA, CBD and MVIC filed On June 8, 2022.  Nos. 84739/84741/84742/84809.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861672&onBaseDocumentNumber=22-18774">22-18774</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed The Center for Biological Diversity's Reply in Support of Emergency Motion to Stay and Joinder. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861700&onBaseDocumentNumber=22-18801">22-18801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed The Center for Biological Diversity's Response/Opposition to Lincoln/Vidler's Motion to Dismiss. Nos. 84739/84141/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861702&onBaseDocumentNumber=22-18803">22-18803</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed SNWA's Reply to CSI's Response to its Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861705&onBaseDocumentNumber=22-18806">22-18806</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed SNWA's Reply to Georgia-Pacific's Response to Motion to Exceed Page Limit (84741). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861706&onBaseDocumentNumber=22-18807">22-18807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Appendix</td><td>Filed SNWA"s Appendix to Motion for Stay, Vol. 4 (84741). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861708&onBaseDocumentNumber=22-18809">22-18809</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed The Center for Biological Diversity's Reply to the Church in Support of Emergency Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861710&onBaseDocumentNumber=22-18811">22-18811</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment, LLC's Notice of Appearance for Bradley J. Herrema. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861871&onBaseDocumentNumber=22-18968">22-18968</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant Muddy Valley Irrigation Co. in Docket No. 84809 shall have until June 29, 2022, to file and serve its response to Lincoln County Water District and Vidler's motion to dismiss the appeals of SNWA, CBD and MVIC, filed on June 8, 2022.  Nos. 84739/84741/84742/84809.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861903&onBaseDocumentNumber=22-18999">22-18999</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Notice/Incoming</td><td>Filed Respondent Coyote Springs Investment , LLC's Notice of Appearance for Brett W. Pilling. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861925&onBaseDocumentNumber=22-19020">22-19020</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed Respondent Coyote Springs Investments, LLC's Motion to Dismiss the Appeals of SNWA, CBD, and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861950&onBaseDocumentNumber=22-19044">22-19044</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Docketing Statement</td><td>Filed Lincoln-Vidler's Response to State Engineer's Docketing Statement (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861973&onBaseDocumentNumber=22-19067">22-19067</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed SNWA's Reply to Apex's Response to Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861990&onBaseDocumentNumber=22-19084">22-19084</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed SNWA's Reply to the Church's Response to Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861991&onBaseDocumentNumber=22-19085">22-19085</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed SNWA's Reply to Georgia-Pacific's Response to Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861992&onBaseDocumentNumber=22-19086">22-19086</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed SNWA's Reply to Lincoln Vidler's Response to Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861993&onBaseDocumentNumber=22-19087">22-19087</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2022</td><td>Motion</td><td>Filed SNWA's Reply to Nevada Cogen's Response to Motion for Stay. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=861994&onBaseDocumentNumber=22-19088">22-19088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2022</td><td>Docketing Statement</td><td>Filed Appellant's (Center for Biological Diversity) Civil Docketing Statement. (84742). Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862093&onBaseDocumentNumber=22-19187">22-19187</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/16/2022</td><td>Docketing Statement</td><td>Filed Appellant's (Center for Biological Diversity) Attachments to Docketing Statement. (84742) Nos. 84739/84741/84742/84809.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862094&onBaseDocumentNumber=22-19188">22-19188</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2022</td><td>Docketing Statement</td><td>Filed Appellant's (Center for Biological Diversity) Attachments to Docketing Statement. (84742) Nos. 84739/84741/84742/84809.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862095&onBaseDocumentNumber=22-19189">22-19189</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/17/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Center for Biological Diversity's response to motion to dismiss in docket No. 84742 due: July 6, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862147&onBaseDocumentNumber=22-19238">22-19238</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/17/2022</td><td>Transcript Request</td><td>Filed  SNWA, CBD, MVIC, and the State Engineer's Joint Request for Transcript of Proceedings. Transcripts requested: 10/6/20, 11/17/20, 4/29/21, 5/27/21, 7/1/21, 9/9/21, 12/6/21, 1/20/22, 2/14/22, 2/15/22, 2/16/22, 2/17/22, and 5/16/22. To Court Reporter: Christine Erickson and Lisa Lizotte. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862198&onBaseDocumentNumber=22-19289">22-19289</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/17/2022</td><td>Notice/Incoming</td><td>Filed Georgia Pacific's and Republic's Joinder to Lincoln County Water District's and Vidler Water Company Inc.'s Motion to Dismiss. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862227&onBaseDocumentNumber=22-19318">22-19318</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/17/2022</td><td>Notice/Incoming</td><td>Filed Georgia-Pacific's and Republic's Joinder to Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant State Engineer's Docketing Statement (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862231&onBaseDocumentNumber=22-19322">22-19322</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/17/2022</td><td>Docketing Statement</td><td>Filed Muddy Valley Irrigation Company's Docketing Statement Civil Appeals (84809). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862233&onBaseDocumentNumber=22-19324">22-19324</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/17/2022</td><td>Docketing Statement</td><td>Filed SNWA Docketing Statement Civil Appeals (84741). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862253&onBaseDocumentNumber=22-19344">22-19344</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Southern Nevada Water Authority's response to the respondent Coyote Springs Investment LLC's motion to dismiss  due: July 6. 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862301&onBaseDocumentNumber=22-19390">22-19390</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/20/2022</td><td>Motion</td><td>Filed Respondent Lincoln County Water District and Vidler Water Company, Inc.'s Reply in Support of Motion to Dismiss the Appeal of CBD. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862363&onBaseDocumentNumber=22-19451">22-19451</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Docketing Statement</td><td>Filed Respondents Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant Center for Biological Diversity's Docketing Statement (84742). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862365&onBaseDocumentNumber=22-19453">22-19453</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2022</td><td>Docketing Statement</td><td>Filed Respondent Nevada Cogeneration Associates Nos. 1 and 2 Response to Appellant Center for Biological Diversity's Docketing Statement (84742). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862464&onBaseDocumentNumber=22-19551">22-19551</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/21/2022</td><td>Notice/Incoming</td><td>Filed Nevada Cogeneration Associates Nos. 1 and 2 Joinder to Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant State Engineer's Docketing Statement (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862475&onBaseDocumentNumber=22-19562">22-19562</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2022</td><td>Notice/Incoming</td><td>Filed Coyote Springs Investment, LLC's Joinder to Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant State Engineer's Docketing Statement (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862506&onBaseDocumentNumber=22-19590">22-19590</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/21/2022</td><td>Notice/Incoming</td><td>Filed Coyote Springs Investment, LLC's Joinder to Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant Center for Biological Diversity's Docketing Statement (84742). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862507&onBaseDocumentNumber=22-19591">22-19591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant Muddy Valley Irrigation Company's response to the respondent Coyote Springs Investment LLC's motion to dismiss  due: July 6, 2022. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862635&onBaseDocumentNumber=22-19718">22-19718</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2022</td><td>Notice/Incoming</td><td>Filed Georgia Pacific's and Republic's Joinder to Lincoln County Water District's and Vidler Water Company, Inc.'s Response to Appellant Center for Biological Diversity's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=862881&onBaseDocumentNumber=22-19958">22-19958</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Motion</td><td>Filed Muddy Valley Irrigation Company's Response in Opposition to Motion to Dismiss the Appeals of SNWA, CBD and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=863558&onBaseDocumentNumber=22-20575">22-20575</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Motion</td><td>Filed SNWA's Response to Lincoln Vidler's Motion to Dismiss. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=863586&onBaseDocumentNumber=22-20603">22-20603</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2022</td><td>Appendix</td><td>Filed Appendix for SNWA's Response to Lincoln Vidler's Motion to Dismiss. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=863587&onBaseDocumentNumber=22-20604">22-20604</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/01/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondents Lincoln County Water District and Vidler Water Company shall have until July 20, 2022, to file their reply to Muddy Valley Irrigation Company and SNWA's responses filed on June 29, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=863789&onBaseDocumentNumber=22-20805">22-20805</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Motion</td><td>Filed Muddy Valley Irrigation Company's Response in Opposition to Motion to Dismiss the Appeals of SNWA, CBD and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=864240&onBaseDocumentNumber=22-21239">22-21239</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Motion</td><td>Filed The Center for Biological Diversity's Response to CSI's Motion to Dismiss. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=864253&onBaseDocumentNumber=22-21252">22-21252</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Motion</td><td>Filed Muddy Valley Response in Opposition to Coyote Springs Investments LLC's Motion to Dismiss the Appeals of SNWA, CBD and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=864330&onBaseDocumentNumber=22-21329">22-21329</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Motion</td><td>Filed SNWA's Response to CSI's Motion to Dismiss. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=864336&onBaseDocumentNumber=22-21335">22-21335</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Coyote Springs Investment, LLC's  reply in support of its motion to dismiss due: July 27, 2022. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=864962&onBaseDocumentNumber=22-21953">22-21953</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2022</td><td>Motion</td><td>Filed Reply of Lincoln County Water District and Vidler Water Company, Inc. in Support of Motion to Dismiss the Appeal of MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=865916&onBaseDocumentNumber=22-22848">22-22848</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2022</td><td>Motion</td><td>Filed Reply of Lincoln County Water District and Vidler Water Company, Inc. in Support of Motion to Dismiss the Appeal of SNWA. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=865918&onBaseDocumentNumber=22-22850">22-22850</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/22/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Brittany Amoroso stating that the requested transcripts were delivered.  Dates of transcripts: 10/6/20 and 11/17/20. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=866232&onBaseDocumentNumber=22-23158">22-23158</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2022</td><td>Motion</td><td>Filed Coyote Springs Investments, LL's Reply in Support of Motion to Dismiss the Appeals of SNWA, CBD, and MVIC. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=866729&onBaseDocumentNumber=22-23640">22-23640</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lisa Lizotte stating that the requested transcripts were delivered.  Dates of transcripts: 7/1/21, 5/16/22, 4/29/21, 5/27/21, 9/9/21, 12/6/21, 1/20/22, 2/14/22, 2/15/22, 2/16/22, 2/17/22 and 7/5/22. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=867756&onBaseDocumentNumber=22-24578">22-24578</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance of Heidi Parry Stern (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=868930&onBaseDocumentNumber=22-25687">22-25687</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance of Jeffrey M. Conner (84739). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=868932&onBaseDocumentNumber=22-25689">22-25689</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Order/Procedural</td><td>Filed Notice.  I (J. Hardesty) voluntarily recused myself from participation upon the docketing of these appeals.  Because the basis for the recusal no longer exists, I withdraw my recusal and notify the parties that I may participate in these appeals.  Nos. 84739/84741/84742/84809.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=869453&onBaseDocumentNumber=22-26200">22-26200</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions to Dismiss, Granting Temporary Stay and Directing Supplement, and Scheduling Appeal Conference. Respondents Lincoln County Water District and Vidler Water Company, Inc. (collectively, Lincoln) have filed a motion to dismiss the appeals filed by appellants Southern Nevada Water Authority (SNWA) (Docket No. 84741), the Center for Biological Diversity (CBD) (Docket No. 84742), and Muddy Valley Irrigation Company (MVIC) (Docket No. 84809).   Respondent Coyote Springs Investments, LLC (CSI) also has filed a motion to dismiss those appeals, for substantially the same reasons.  We conclude that these appellants are aggrieved by the district court's order and having standing to challenge it, and we deny the motions to dismiss their appeals. We conclude that a temporary stay is warranted pending a response by the State Engineer further explaining his joinder.  Therefore, within 10 days from the date of this order, we direct the State Engineer to file and serve a supplement to his joinder. Respondents shall have 10 days from the date when the State Engineer's supplement is served to file and serve a single, combined response to the supplement. We direct the attorneys for the parties to appear before the Southern Panel at 2:30 p.m. on Wednesday, September 14, 2022, at the Supreme Court building in Las Vegas for an appeal conference. Nos. 84739/84741/84742/84809  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=870243&onBaseDocumentNumber=22-26979">22-26979</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/01/2022</td><td>Notice/Outgoing</td><td>Issued Appeal Conference Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=870845&onBaseDocumentNumber=22-27569">22-27569</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2022</td><td>Notice/Incoming</td><td>Filed Notice Identifying Attorney for Appeal Conference. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=871490&onBaseDocumentNumber=22-28148">22-28148</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2022</td><td>Notice/Incoming</td><td>Filed State Engineer's Supplement to Partial Joinder of Emergency Motions for Stay Under NRAP 27(E). Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=871498&onBaseDocumentNumber=22-28156">22-28156</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2022</td><td>Notice/Incoming</td><td>Filed Notice Identifying Attorney for Appeal Conference. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=871501&onBaseDocumentNumber=22-28159">22-28159</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance regarding Appeal Conference. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=871510&onBaseDocumentNumber=22-28168">22-28168</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2022</td><td>Notice/Incoming</td><td>Filed Notice Identifying Attorney for State Engineer to Appear at Appeal Conference. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=871526&onBaseDocumentNumber=22-28182">22-28182</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Motion</td><td>Filed Respondents' Joint Response in Opposition to State Engineer's Supplement. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=872825&onBaseDocumentNumber=22-29414">22-29414</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2022</td><td>Motion</td><td>Filed SNWA's Motion for Leave to File Surreply. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=873874&onBaseDocumentNumber=22-30399">22-30399</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2022</td><td>Motion</td><td>Filed Exhibit 1 to SNWA's Motion for Leave to File Surreply. (STRICKEN PER 10/3/22 ORDER).  Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=873875&onBaseDocumentNumber=22-30400">22-30400</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Joint Notice of Intent to File Opposition to Appellant Southern Nevada Water Authority's Motion for Leave to File Surreply. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=874019&onBaseDocumentNumber=22-30542">22-30542</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/03/2022</td><td>Order/Procedural</td><td>Filed Order Granting Stay. Appellants Southern Nevada Water Authority (SNWA) and the Center for Biological Diversity (CBD) filed motions for stay.  We grant the motions for stay pending appeal and uphold the stay imposed by our August 29 order pending further order of this court. fn1 [SNWA's motion for leave to file a surreply to respondents' response is denied.  The clerk of this court shall strike Exhibit 1 to SNWA's motion for leave to file a surreply, which Exhibit was separately filed in this court on September 27, 2022.] Nos. 84739/84741/84742/84809  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=874678&onBaseDocumentNumber=22-31185">22-31185</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Notice/Incoming</td><td>Filed Western Elite Environmental Inc., Bedroc Limited, LLC and City of North Las Vegas' Notice of Nonparticipation. Nos. 84739/94741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=875558&onBaseDocumentNumber=22-32050">22-32050</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2022</td><td>Order/Procedural</td><td>Filed Order Modifying Caption and Setting Briefing Schedule. We direct the clerk of this court to remove Las Vegas Valley Water District as a respondent  from each  appeal. Appellants shall have 50 days from the date of this order to file and serve a single joint opening brief that does not exceed 45 pages or 21,000 words and addresses the basin issues and the due process issues. Respondents shall have 30 days from the date the opening brief is served to file and serve a single joint answering brief that addresses the arguments in the opening brief regarding the basin issues and parts A and C of the due process issues.   The joint answering brief may not exceed 30 pages or 14,000 words. Further, each respondent may, within the same time period, file and serve a separate answering brief addressing part B of the due process issues that does not exceed 15 pages or 7,000 words. Appellants shall have 30 days from service of the last answering brief to file a single joint reply brief that does not exceed 45 pages or 21,000 words and that responds to the arguments in all answering briefs.  Joint appendix due: 20 days. If any party objects to any portion of this scheduling order, they may file an objection within 5 days of the date of this order. Nos. 84739/94741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=875902&onBaseDocumentNumber=22-32387">22-32387</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2022</td><td>Order/Procedural</td><td>Filed Order. On October 14, 2022, this court issued an order modifying the caption and setting a briefing schedule in these consolidate appeals.  It appears that counsel for some of the appellants was inadvertently omitted from the order's cc list.  Accordingly, the clerk of this court is directed to provide copies of the October 14 order to counsel for appellants Center for Biological Diversity and Muddy Valley Irrigation Company. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=876522&onBaseDocumentNumber=22-32970">22-32970</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/24/2022</td><td>Motion</td><td>Filed SNWA's Objection to the 10/14/22 Order Setting Briefing Schedule. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=876826&onBaseDocumentNumber=22-33269">22-33269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/24/2022</td><td>Notice/Incoming</td><td>Filed The Center for Biological Diversity's Partial Joinder to SNWA's Limited Objections. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=876905&onBaseDocumentNumber=22-33346">22-33346</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2022</td><td>Notice/Incoming</td><td>Filed Appellant (Muddy Valley Irrigation Company's) Partial Joinder in Southern Nevada Water Authority's Limited Objection to the Court's October 14, 2022 Order Setting Briefing Schedule. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=877127&onBaseDocumentNumber=22-33568">22-33568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2022</td><td>Order/Procedural</td><td>Filed Order Clarifying Briefing Schedule. On October 14, 2022, this court entered an order that modified the caption and set the briefing schedule. Appellant Southern Nevada Water Authority (SNWA) filed a partial objection, and appellants Center for Biological Diversity (Center) and Muddy Valley Irrigation Company (MVIC) filed partial joinders to the objection.  Having reviewed the objection and joinders, we clarify the briefing as to SNWA, Center, and MVIC.  SNWA, Center, and MVIC may each, within 30 days from service of the opening brief, file and serve separate answering briefs. Appellants shall still be required to file a single joint reply brief that does not exceed 45 pages or 21,000 words and responds to the arguments in all answering briefs.  We clarify that the parties shall have until November 8, 2022, to file the joint appendix and appellants shall have until December 8, 2022, to file and serve the joint opening brief. All other briefing deadlines shall remain as set forth in the October 14, 2022, briefing order, as clarified by this order.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=877424&onBaseDocumentNumber=22-33859">22-33859</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume Index. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878877&onBaseDocumentNumber=22-35220">22-35220</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 1. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878885&onBaseDocumentNumber=22-35228">22-35228</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 2. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878886&onBaseDocumentNumber=22-35229">22-35229</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 3. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878887&onBaseDocumentNumber=22-35230">22-35230</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 4. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878888&onBaseDocumentNumber=22-35231">22-35231</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 5. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878889&onBaseDocumentNumber=22-35232">22-35232</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 6. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878890&onBaseDocumentNumber=22-35233">22-35233</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 7. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878891&onBaseDocumentNumber=22-35234">22-35234</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 8. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878892&onBaseDocumentNumber=22-35235">22-35235</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 9. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878893&onBaseDocumentNumber=22-35236">22-35236</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 10. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878894&onBaseDocumentNumber=22-35237">22-35237</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 11. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878895&onBaseDocumentNumber=22-35238">22-35238</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 12. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878897&onBaseDocumentNumber=22-35240">22-35240</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 13. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878898&onBaseDocumentNumber=22-35241">22-35241</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 14. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878899&onBaseDocumentNumber=22-35242">22-35242</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 15. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878900&onBaseDocumentNumber=22-35243">22-35243</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 16. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878901&onBaseDocumentNumber=22-35244">22-35244</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 17. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878902&onBaseDocumentNumber=22-35245">22-35245</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 18. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878903&onBaseDocumentNumber=22-35246">22-35246</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 19. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878904&onBaseDocumentNumber=22-35247">22-35247</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 20. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878905&onBaseDocumentNumber=22-35248">22-35248</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 21. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878906&onBaseDocumentNumber=22-35249">22-35249</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 22. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878907&onBaseDocumentNumber=22-35250">22-35250</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 23. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878908&onBaseDocumentNumber=22-35251">22-35251</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 24. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878910&onBaseDocumentNumber=22-35253">22-35253</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 25. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878912&onBaseDocumentNumber=22-35255">22-35255</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 26. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878916&onBaseDocumentNumber=22-35259">22-35259</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 27. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878917&onBaseDocumentNumber=22-35260">22-35260</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 28. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878918&onBaseDocumentNumber=22-35261">22-35261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 29. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878920&onBaseDocumentNumber=22-35263">22-35263</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 30. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878922&onBaseDocumentNumber=22-35265">22-35265</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 31. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878923&onBaseDocumentNumber=22-35266">22-35266</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 32. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878924&onBaseDocumentNumber=22-35267">22-35267</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 33. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878925&onBaseDocumentNumber=22-35268">22-35268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 34. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878926&onBaseDocumentNumber=22-35269">22-35269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 35. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878927&onBaseDocumentNumber=22-35270">22-35270</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 36. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878928&onBaseDocumentNumber=22-35271">22-35271</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 37. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878929&onBaseDocumentNumber=22-35272">22-35272</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 38. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878930&onBaseDocumentNumber=22-35273">22-35273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 39. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878932&onBaseDocumentNumber=22-35275">22-35275</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 40. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878934&onBaseDocumentNumber=22-35277">22-35277</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 41. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878935&onBaseDocumentNumber=22-35278">22-35278</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 42. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878936&onBaseDocumentNumber=22-35279">22-35279</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 43. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878937&onBaseDocumentNumber=22-35280">22-35280</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 44. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878940&onBaseDocumentNumber=22-35283">22-35283</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 45. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878941&onBaseDocumentNumber=22-35284">22-35284</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 46. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878942&onBaseDocumentNumber=22-35285">22-35285</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 47. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878943&onBaseDocumentNumber=22-35286">22-35286</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 48. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878944&onBaseDocumentNumber=22-35287">22-35287</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/08/2022</td><td>Appendix</td><td>Filed Joint Appendix Volume 49. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=878945&onBaseDocumentNumber=22-35288">22-35288</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/15/2022</td><td>Notice/Incoming</td><td>Filed Respondents Georgia-Pacific Gypsum LLC and Republic Environmental Technologies, Inc. Notice of Disassociation of Counsel for Sarah Ferguson. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=879643&onBaseDocumentNumber=22-35977">22-35977</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/08/2022</td><td>Brief</td><td>Filed Appellants' Joint Opening Brief. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=882438&onBaseDocumentNumber=22-38652">22-38652</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/09/2023</td><td>Brief</td><td>Filed Respondent Nevada Cogeneration Associates Nos. 1 and 2 Separate Answering Brief Regarding Due Process. nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=885641&onBaseDocumentNumber=23-00686">23-00686</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Brief</td><td>Filed Respondents' Joint Answering Brief. Nos.84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=885657&onBaseDocumentNumber=23-00702">23-00702</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/09/2023</td><td>Motion</td><td>Filed Respondents' Joint Request for Judicial Notice. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=885658&onBaseDocumentNumber=23-00703">23-00703</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Brief</td><td>Filed Respondents' (Lincoln County Water District and Vidler Water Company, Inc.'s)  Answering Brief.  Re Due Process Issue B. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=885659&onBaseDocumentNumber=23-00704">23-00704</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/09/2023</td><td>Brief</td><td>Filed Respondent's (Coyote Springs Investment, LLC) Answering Brief on Part B Due Process. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=885661&onBaseDocumentNumber=23-00706">23-00706</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to respondents' Joint Request for Judicial Notice due: January 31, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=886559&onBaseDocumentNumber=23-01560">23-01560</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/31/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Joint Request for Judicial Notice. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=888146&onBaseDocumentNumber=23-03065">23-03065</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2023</td><td>Motion</td><td>Filed Respondents' Reply in Support of Joint Request for Judicial Notice. Nos.84739/84741/84742/84809. (REJECTED PER NOTICE FILED ON 2/7/23.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=888867&onBaseDocumentNumber=23-03758">23-03758</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos.84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=888878&onBaseDocumentNumber=23-03769">23-03769</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2023</td><td>Motion</td><td>Filed Respondent's Reply in Support of Respondents' Joint Request for Judicial Notice. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=889048&onBaseDocumentNumber=23-03937">23-03937</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2023</td><td>Brief</td><td>Filed Appellants' Joint Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=889106&onBaseDocumentNumber=23-03993">23-03993</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2023</td><td>Motion</td><td>Filed Respondents' Joint Motion to Strike Appellants' Rule 28(f) Pamphlet and reply Brief. Nos. 84739/84741/84742/84809(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=890724&onBaseDocumentNumber=23-05568">23-05568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' opposition to motion filed on February 23, 2023 due: March 16, 2023. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=891381&onBaseDocumentNumber=23-06221">23-06221</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Notice/Incoming</td><td>Filed Respondent Sierra Pacific Power Company and Nevada Power Company's Notice of Disassociation for Justina Caviglia. Nos.84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=891798&onBaseDocumentNumber=23-06603">23-06603</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2023</td><td>Motion</td><td>Filed Appellant's Joint Opposition to Motion to Strike OR Motion for Leave to file Sur-Reply.  Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=893445&onBaseDocumentNumber=23-08197">23-08197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Motion</td><td>Filed Respondents' Joint Reply to Response in Support of Motion to Strike. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=894359&onBaseDocumentNumber=23-09073">23-09073</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motions for Judicial Notice and to Strike and Granting Motion to File Sur-Reply. Respondents' first motion asks this court to take judicial notice of five documents. Judicial notice is available only for "facts in issue or facts from which they may be inferred," NRS 47.130(1), and we generally "will not take judicial notice of records in another and different case, even though the cases are connected."  Id.  Applying these standards, respondents' request for judicial notice of the five documents, some of which are dated after the district court's decision in this matter, is denied. Further, to the extent respondents' reply seeks judicial notice of a bill draft request, that invitation is denied. Respondents' second motion seeks an order striking the NRAP 28(f) pamphlet attached to appellants' reply brief, which contains copies of 24 State Engineer orders and rulings, and the parts of appellants' reply brief referring to it (pages 13-16), as improperly raising new arguments and documents not part of the record; they alternatively seek leave to file a sur-reply. Respondents additionally seek attorney fees for having to file the motion to strike. Although the pamphlet does not appear to comply with NRAP 28(f) (reproduction of statutes, rules, regulations, etc.), the historical accounts contained therein might assist this court's review of this matter, and therefore, the motion to strike is denied, as is respondents' request for attorney fees as sanctions. Respondents' alternative request to file a sur-reply is granted; respondents shall have 14 days from the date of this order to file and serve a joint sur-reply consisting of no more than 5 pages.Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=899233&onBaseDocumentNumber=23-13766">23-13766</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2023</td><td>Brief</td><td>Filed Respondents' Joint Sur-Reply in Response to Court Order Filed 05/02/23. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=901036&onBaseDocumentNumber=23-15489">23-15489</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for August 8, 2023, at 2:00 p.m., in Carson City.  The argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=907344&onBaseDocumentNumber=23-21535">23-21535</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2023</td><td>Notice/Incoming</td><td>Filed Respondents' (Sierra Pacific Power Company and Nevada Power Company) Notice of Appearance for Timothy Clausen and Michael Knox. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=909165&onBaseDocumentNumber=23-23250">23-23250</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. Nos. 84739/84741/84742/84809 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=909803&onBaseDocumentNumber=23-23863">23-23863</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Christian Balducci and Jordan Montet as counsel for Apex Holdings). Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=910453&onBaseDocumentNumber=23-24502">23-24502</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/31/2023</td><td>Motion</td><td>Filed Apex Holdings Motion for Leave to Appear Remotely at Oral Argument. Nos. 84739/84741/84742/84809. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=910454&onBaseDocumentNumber=23-24503">23-24503</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Christian T. Balducci, counsel for respondents Apex Holding Company, LLC and Dry Lake Water, LLC, has filed a motion for leave to appear remotely at the oral argument of this matter scheduled on August 8, 2023, at 2:00 p.m. The motion is granted. No later than Friday, August 4, 2023, counsel shall submit to the clerk of this court notice of counsel's email address where login information for the oral argument may be sent. The notice may be emailed to the court at nvscclerk@nvcourts.nv.gov. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=910860&onBaseDocumentNumber=23-24884">23-24884</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2023</td><td>Motion</td><td>Filed Respondent's (Coyote Springs Investment, LLC) Motion for Leave to Appear Remotely at Oral Argument.  Nos. 84739/84741/84742/84809.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=910902&onBaseDocumentNumber=23-24926">23-24926</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/07/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. William L. Coulthart, counsel for respondent Coyote Springs Investment, LLC, has filed a motion for leave to appear remotely at the oral argument of this matter scheduled on August 8, 2023, at 2:00 at 2:00 p.m. The motion is granted. No later than Monday, August 7, 2023, at 5:00 p.m., counsel shall submit to the clerk of this court notice of counsel's email address where login informaiton for the oral argument may be sent. The notice may be emailed to the court at nvscclerk@nvcourts.nv.gov. Nos. 84739/84741/84742/84809. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=911222&onBaseDocumentNumber=23-25244">23-25244</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the En Banc Court. NO.84739/84741/84742/84809(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals. The appeal in Docket No. 85137 is consolidated with the appeals in Docket Nos. 84739,84741, 84742, and 84809 for all appellate purposes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=911929&onBaseDocumentNumber=23-25936">23-25936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision to the En Banc Court as of the date of this order on the briefs filed herein. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64127&csIID=64127&deLinkID=911992&onBaseDocumentNumber=23-25998">23-25998</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64127&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

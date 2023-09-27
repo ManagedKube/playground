@@ -1,0 +1,694 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83227: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=0D08D7BD475B0ABDFD312CF691BF6D41">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61974">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83227</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LAS VEGAS PAVING CORP. VS. DIST. CT. (ALL NET DEV., INC.)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=57565">80284</a>, <a href="/public/caseView.do?csIID=65206">85595</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A771361</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Las Vegas Paving Corporation</td><td valign="top">Lance C. Earl
+							(Marquis Aurbach Chtd.)
+						<br>Jack C. Juan
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">All Net, LLC</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Frank M. Flansburg, III
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">All Net Development, Inc.</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Frank M. Flansburg, III
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">All Net Land Development, LLC</td><td valign="top">Kevin M. Hanratty
+							(Hanratty Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Dribble Dunk LLC</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Frank M. Flansburg, III
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Joseph R. Berlin</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">P. Moore</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Sahara Las Vegas Corp.</td><td valign="top">Kevin M. Hanratty
+							(Hanratty Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elizabeth Goff Gonzalez</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Jack C. Juan. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus or, Alternatively, Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=823371&onBaseDocumentNumber=21-20616">21-20616</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=823372&onBaseDocumentNumber=21-20617">21-20617</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=823373&onBaseDocumentNumber=21-20618">21-20618</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=823375&onBaseDocumentNumber=21-20620">21-20620</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=823376&onBaseDocumentNumber=21-20621">21-20621</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2021</td><td>Order/Procedural</td><td>Filed Order/Answer Writ Petition. Real parties in interest's answer due:  28 days. Petitioner shall have 14 days from the date when the last answer is served to file and serve any reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=826031&onBaseDocumentNumber=21-23079">21-23079</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest All Net Land Development, LLC and Sahara Las Vegas shall have until September 21, 2021, to file and serve the answer.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=826967&onBaseDocumentNumber=21-24002">21-24002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest All Net Development, Inc.; All Net, LLC; and Dribble Dunk LLC shall have until September 21, 2021, to file and serve the answer.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=827028&onBaseDocumentNumber=21-24057">21-24057</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2021</td><td>Motion</td><td>Filed Real Parties in Interest Sahara Las Vegas Corp., and All Net Land Development, LLC Motion to Extend Time to File Answer to Petitioner Las Vegas Paving Corporation's Petition for Writ of Mandamus or, Alternatively, Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=829915&onBaseDocumentNumber=21-26805">21-26805</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/17/2021</td><td>Motion</td><td>Filed Stipulation to Extend the Time for Real Parties in Interest to File Answering Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=830169&onBaseDocumentNumber=21-27024">21-27024</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/22/2021</td><td>Motion</td><td>Filed Petitioner's Response to Real Parties in Interest Sahara Las Vegas Corp. and All Net Land Development, LLC's Motion to Extend Time to File Answer to Petition for Writ of Mandamus or, Alternatively, Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=830584&onBaseDocumentNumber=21-27431">21-27431</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2021</td><td>Order/Procedural</td><td>Filed Order. Real parties in interest All Net Land Development, LLC (ANLD) and Sahara Las Vegas Corp. (SLV) have filed a motion for a second extension of time to file their answer.  The motion is denied.  Certain parties have filed a stipulation extending the time for real parties in interest All Net Development, Inc., All Net, LLC, and Dribble Dunk to file their answer. The stipulation is disapproved. To date, real parties in interest P. Moore and Joseph R. Berlin have not filed their answers or otherwise communicated with this court.    All real parties in interest shall have 7 days from the date of this order to file and serve their answers. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831008&onBaseDocumentNumber=21-27844">21-27844</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/04/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest Sahara Las Vegas Corp., an All Net Land Development, LLC Answer to Petitioner Las Vegas Paving Corporation's Petition for Writ of Mandamus or, Alternatively, Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831599&onBaseDocumentNumber=21-28427">21-28427</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/04/2021</td><td>Appendix</td><td>Filed Real Parties in Interest Sahara Las Vegas Corp and All Net Land Development LLC - Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831601&onBaseDocumentNumber=21-28429">21-28429</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest All Net Development, Inc.; All Net, LLC and Dribble Dunk, LLC's Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831691&onBaseDocumentNumber=21-28510">21-28510</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2021</td><td>Appendix</td><td>Filed Real Parties in Interest's (Robinson Parties) - Appendix Volume I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831687&onBaseDocumentNumber=21-28513">21-28513</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2021</td><td>Appendix</td><td>Filed Real Parties in Interest's (Robison Parties) - Appendix Volume II. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=831688&onBaseDocumentNumber=21-28514">21-28514</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2021</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=832763&onBaseDocumentNumber=21-29523">21-29523</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2021</td><td>Motion</td><td>Filed Petitioner's Motion to Expedite Any Oral Argument Hearing and Decision. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=832764&onBaseDocumentNumber=21-29578">21-29578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Motion</td><td>Filed Real Parties in Interest (Sahara Las Vegas Corp., and All Net Land Development, LLC) Motion for Oral Argument of Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=833048&onBaseDocumentNumber=21-29860">21-29860</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2021</td><td>Motion</td><td>Filed Real Parties in Interest (Sahara Las Vegas Corp., and All Net Land Development, LLC) Emergency Motion For Stay Under NRAP 27 (e) Of All Pending State Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=833761&onBaseDocumentNumber=21-30444">21-30444</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/22/2021</td><td>Motion</td><td>Filed Real Parties in Interests' (All Net Development, Inc., All Net, LLC, and Dribble Dunk LLC) Joinder to Emergency Motion for Stay Under NRAP 27(E).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=833916&onBaseDocumentNumber=21-30596">21-30596</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2021</td><td>Motion</td><td>Filed Petitioner's Response to Real Parties in Interests' Emergency Motion for Stay Under NRAP 8 and 27(e).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=834026&onBaseDocumentNumber=21-30700">21-30700</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/27/2021</td><td>Brief</td><td>Filed Real Parties in Interests' Joinder to Brief Supplement to Joinder to Emergency Motion for Stay Under NRAP 27(E). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=834295&onBaseDocumentNumber=21-30965">21-30965</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Order/Dispositional</td><td>Filed Order Denying Petition for Writ of Mandamus or Prohibition. "ORDER the petition DENIED." fn1 [In light of this order, petitioner's motion to expedite, and real parties in interest's motions for oral argument and to stay the district court proceedings, are denied as moot.] SNP21 - RP/LS/AS  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=834776&onBaseDocumentNumber=21-31434">21-31434</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2021</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61974&csIID=61974&deLinkID=837515&onBaseDocumentNumber=21-34024">21-34024</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2021</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC).</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61974&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

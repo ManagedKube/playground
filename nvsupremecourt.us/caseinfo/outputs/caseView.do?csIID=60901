@@ -1,0 +1,688 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82465: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=811A02EC5C271A5466A2FF4233A861E1">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60901">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82465</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">BERNAL (THOMAS) VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=63176">82465-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Lyon Co. - Third Judicial District - 20-CR-00099</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Life - Direct</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Thomas Jason Bernal</td><td valign="top">Karla K. Butko<br>LeAnn E. Schumann
+							(Former)
+						
+							(Jesse Kalter Law, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Matthew K. Merrill
+							(Lyon County District Attorney)
+						<br>Stephen B. Rye
+							(Lyon County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2021</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=805984&onBaseDocumentNumber=21-04096">21-04096</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Criminal Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=806591&onBaseDocumentNumber=21-04667">21-04667</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2021</td><td>Motion</td><td>Filed Appellant's Motion to Withdraw. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=806643&onBaseDocumentNumber=21-04719">21-04719</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/26/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Remanding for Consideration of Appointment of Counsel.  The clerk of this court shall remove attorney LeAnn E. Schumann and Jesse Kalter Law, P.C., as counsel of record for appellant.  This court remands this appeal to the district court for the limited purpose of securing counsel for appellant.  District Court Order due:  37 days.  The deadlines for filing documents in this appeal are suspended until further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=807756&onBaseDocumentNumber=21-05820">21-05820</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2021</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed certified copy of order filed in district court on March 9, 2021, appointing Thomas L. Qualls as counsel for appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=809474&onBaseDocumentNumber=21-07469">21-07469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2021</td><td>Motion</td><td>Filed Appellant's Motion to Withdraw as Counsel Due to Employment with State of Nevada. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=811484&onBaseDocumentNumber=21-09387">21-09387</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Remanding to Secure Appellate Counsel.  The clerk of this court shall remove Thomas Qualls as counsel of record for appellant.  District Court Order Appointing Counsel due:  35 days.  The deadlines for filing documents in this appeal are suspended until further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=812115&onBaseDocumentNumber=21-09963">21-09963</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2021</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed certified copy of order filed in district court on 412/21 appointing Karla Butko as counsel for appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=812748&onBaseDocumentNumber=21-10546">21-10546</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. Matthew K. Merrill for Respondent. (REJECTED PER NOTICE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document (Notice of appearance). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=812790&onBaseDocumentNumber=21-10588">21-10588</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Matthew K. Merrill, Senior Deputy District Attorney as counsel for Respondent). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=813002&onBaseDocumentNumber=21-10800">21-10800</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/15/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Karla K. Butko as counsel for Appellant). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=813097&onBaseDocumentNumber=21-10891">21-10891</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed certified copy of order filed in district court on 4/12/21 appointing Karla Butko, Esq. as counsel for appellant.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=813454&onBaseDocumentNumber=21-11208">21-11208</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2021</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing.  The clerk of this court shall add attorney Karla Butko to the docket in this appeal.  Appellant:  Transcript Request Form due:  14 days;  Opening Brief and Appendix due:  120 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=813659&onBaseDocumentNumber=21-11411">21-11411</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2021</td><td>Motion</td><td>Filed Appellant's Motion for Transcripts at Taxpayers' Expense. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=814855&onBaseDocumentNumber=21-12578">21-12578</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/05/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Criminal Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=815149&onBaseDocumentNumber=21-12873">21-12873</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Motion</td><td>Filed Appellant's Motion for Continuance/Extension of Time in Which to File Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=826079&onBaseDocumentNumber=21-23125">21-23125</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant shall have until October 1, 2021, to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=826856&onBaseDocumentNumber=21-23891">21-23891</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2021</td><td>Notice of Appeal Documents</td><td>Filed Case Appel Statement (Criminal). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830646&onBaseDocumentNumber=21-27489">21-27489</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830716&onBaseDocumentNumber=21-27558">21-27558</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830717&onBaseDocumentNumber=21-27559">21-27559</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830718&onBaseDocumentNumber=21-27560">21-27560</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830720&onBaseDocumentNumber=21-27562">21-27562</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830721&onBaseDocumentNumber=21-27563">21-27563</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2021</td><td>Appendix</td><td>Filed Appellant's Appendix - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=830723&onBaseDocumentNumber=21-27565">21-27565</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: November 8, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=832985&onBaseDocumentNumber=21-29797">21-29797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (REJECTED PER NOTICE ISSUED 11/9/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=835598&onBaseDocumentNumber=21-32177">21-32177</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=835642&onBaseDocumentNumber=21-32221">21-32221</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening.  No reply brief filed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=843097&onBaseDocumentNumber=22-02094">22-02094</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/20/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance.  "ORDER the judgment of conviction AFFIRMED."  Court of Appeals-MG/JT/BB  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=857126&onBaseDocumentNumber=22-15423">22-15423</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/20/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on May 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60901&csIID=60901&deLinkID=857703&onBaseDocumentNumber=22-15423">22-15423</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60901&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

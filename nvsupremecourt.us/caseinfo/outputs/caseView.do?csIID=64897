@@ -1,0 +1,908 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85370: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=8FD0D52DEA1A0EFDFA733725CB1F4440">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64897">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85370</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">GENNARDO VS. GENNARDO (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=62270">83445</a>, <a href="/public/caseView.do?csIID=62274">83445-COA</a>, <a href="/public/caseView.do?csIID=64502">85089</a>, <a href="/public/caseView.do?csIID=67335">85370-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D590297</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Fast Track Child Custody</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Transferred to Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>09/26/2022 / Kunin, Israel</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Natalie Susan Gennardo</td><td valign="top">Michael P. Carman
+							(Carman &amp; Price)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Douglas Alan Gennardo</td><td valign="top">Thomas J. Standish
+							(Standish Law Group)
+						<br>Shann D. Winesett
+							(Pecos Law Group)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2022</td><td>Filing Fee</td><td>Filing Fee Due.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Notice of Appeal Documents</td><td>Filed (SEALED) Notice of Appeal. Appeal docketed in the Supreme Court this day.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=872796&onBaseDocumentNumber=22-29387">22-29387</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/23/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Price Carman, PC. Check no. 1718. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=873424&onBaseDocumentNumber=22-29972">22-29972</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Israel Kunin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=873531&onBaseDocumentNumber=22-30070">22-30070</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for October 24, 2022, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=873877&onBaseDocumentNumber=22-30402">22-30402</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/17/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Docketing Statement. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=876040&onBaseDocumentNumber=22-32497">22-32497</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Docketing Statement</td><td>Filed Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=876720&onBaseDocumentNumber=22-33163">22-33163</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/24/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Counsel worked together to try to resolve some of the outstanding issues. Case Nos. 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=876968&onBaseDocumentNumber=22-33409">22-33409</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Reinstating Briefing Pursuant to NRAP 3E. Appellant(s): 14 days transcript request; 40 days fast track statement and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=877346&onBaseDocumentNumber=22-33543">22-33543</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Notice/Incoming</td><td>Filed Notice of Change of Firm Name and Email Address. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=879364&onBaseDocumentNumber=22-35700">22-35700</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Transcript Request</td><td>Filed Certificate That No Transcript is Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=879365&onBaseDocumentNumber=22-35701">22-35701</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals. This court hereby consolidates these appeals.  Douglas Gennardo (Douglas) shall have 14 days from the date of this order to file and serve the fast track statement in Docket No. 85089.  The fast track statement shall not exceed 16 pages or the equivalent type-volume limitation.  See NRAP 3E(e)(2).  Natalie Gennardo (Natalie) shall have 21 days from service of Douglas's fast track statement to file and serve a combined fast track response in Docket No. 85089 and fast track statement in Docket No. 85370.  Natalie's combined filing shall not exceed 15 pages or the equivalent type-volume limitation.  Douglas shall have 21 days from service of Natalie's combined filing to file and serve a combined fast track reply in Docket No. 85089 and fast track response in Docket No. 85370.  Douglas's combined filing shall not exceed 15 pages or the equivalent type-volume limitation.  Natalie shall have 14 days from service of Douglas's combined filing to file and serve a fast track reply in Docket No. 85370.  The fast track reply shall not exceed 5 pages or the equivalent type-volume limitation. Nos 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=880883&onBaseDocumentNumber=22-37191">22-37191</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2022</td><td>Motion</td><td>Filed Court Reporter's Motion to Extend Time to File Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=881704&onBaseDocumentNumber=22-37928">22-37928</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Regarding Briefing. Karla M. Soto of Verbatim Reporting &amp; Transcription (VRT) has filed a motion for an extension of time to prepare the transcripts requested in these appeals. VRT shall have until January 3, 2023, to file the requested transcripts in the district court, deliver copies to the requesting party, and file a notice with this court that the completed transcripts have been filed and delivered. Given this extension, fast track statement is due February 2, 2023. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=882093&onBaseDocumentNumber=22-38314">22-38314</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2022</td><td>Motion</td><td>Filed Natalie Gennardo's Motion to Expand Fast Track Page Length. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=882100&onBaseDocumentNumber=22-38321">22-38321</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/07/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion to Expand Fast Track Page Length and Countermotion for Removal from Fast Track Program and to Direct Full Briefing. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=882310&onBaseDocumentNumber=22-38528">22-38528</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2022</td><td>Motion</td><td>Filed Respondent's Reply Re: Motion to Expand Fast track Page Length. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=882485&onBaseDocumentNumber=22-38698">22-38698</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 9/22/21, 10/6/21, 11/29/21, 12/7/21, 1/5/22, 2/3/22, 3/14/22, 3/23/22, 5/5/22, 5/26/22, 6/1/22, and 9/7/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=884489&onBaseDocumentNumber=22-40616">22-40616</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. Natalie Gennardo has filed a motion for leave to file a combined fast track response in Docket No. 85089 and fast track statement in Docket No. 85370 consisting of 21 pages.  Douglas Gennardo has filed a countermotion to remove these appeals from the fast track program and direct full briefing. Natalie's motion is granted and Douglas's motion is denied.  Douglas's fast track statement and appendix remain due to be filed by February 2, 2023.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=885464&onBaseDocumentNumber=23-00513">23-00513</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/20/2023</td><td>Motion</td><td>Filed Appellant's Motion for Excess Pages to Expand Length of Fast Track Statement. Nos. 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=886967&onBaseDocumentNumber=23-01962">23-01962</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/20/2023</td><td>Motion</td><td>Filed Appellant's Motion for Excess Pages to Expand Length of Fast Track Statement. Nos. 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=886968&onBaseDocumentNumber=23-01963">23-01963</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/24/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Douglas Gennardo's untimely motion for leave to file a fast track statement in excess of 16 pages is granted.  Douglas shall have until February 2, 2023, to file and serve a fast track statement in Docket No. 85089 that does not exceed 21 pages or the equivalent type-volume limitation. Nos. 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=887352&onBaseDocumentNumber=23-02340">23-02340</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/02/2023</td><td>Motion</td><td>Filed Joint Motion to Extend Deadline for Fast Track Statement and Joint Appendix and Expansion of Respondents Type-Volume Limitation. Nos.85089/85370 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=888396&onBaseDocumentNumber=23-03294">23-03294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/13/2023</td><td>Order/Procedural</td><td>Filed Order. The parties have filed a joint motion for an extension of time to file the fast track statement and for leave to file a fast track response in excess of the page limitation. This matter is removed from the fast track program.  Douglas Gennardo shall have until March 20, 2023, to file and serve an appendix and an opening brief in Docket No. 85089. Natalie Gennardo shall have 21 days from service of the opening brief in Docket No. 85089 to file and serve a combined answering brief in Docket No. 85089 and opening brief in Docket No. 85370.  Natalie's combined brief shall not exceed 40 pages or 18,500 words.  Douglas shall have 21 days from service of Natalie's combined brief to file and serve a combined reply brief in Docket No. 85089 and answering brief in Docket No. 85370 that does not exceed 30 pages or 14,000 words.  Natalie shall have 14 days from service of Douglas' combined brief to file and serve a reply brief in Docket No. 85370 that does not exceed 15 pages or 7,000 words.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=889490&onBaseDocumentNumber=23-04364">23-04364</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2023</td><td>Motion</td><td>Filed Karla M. Soto's (Verbatim Reporting &amp; Transcription) Motion for an Extension of time to file transcripts. Nos. 85089/85370. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=892327&onBaseDocumentNumber=23-07125">23-07125</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2023</td><td>Motion</td><td>Filed Respondent's Motion for Instructions or for Limited Remand. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=893193&onBaseDocumentNumber=23-07947">23-07947</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Certificate of Service For Motion for Instructions or for Limited Remand. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=893201&onBaseDocumentNumber=23-07951">23-07951</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Motion</td><td>Filed Appellant's Joint Motion to Extend Time to file Fast Track Statement and Joint Appendix. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=893564&onBaseDocumentNumber=23-08316">23-08316</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to respondent's motion filed on March 15, 2023, due: April 5, 2023. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=894008&onBaseDocumentNumber=23-08729">23-08729</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Motion for Instructions or for Limited Remand. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=895782&onBaseDocumentNumber=23-10438">23-10438</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2023</td><td>Motion</td><td>Filed Respondent's Reply to Response to Motion for Instructions or for Limited Remand. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=895910&onBaseDocumentNumber=23-10563">23-10563</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/17/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 02/08/22 &amp; 01/06/22. Nos. 85089/85370  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=897169&onBaseDocumentNumber=23-11778">23-11778</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2023</td><td>Motion</td><td>Filed Joint Motion to Extend Deadline for Opening Brief and Joint Appendix. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=898031&onBaseDocumentNumber=23-12605">23-12605</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Motion</td><td>Filed Joint Motion to Dismiss Appeal No. 85089 and Joint Motion to Return Appeal No. 85370 to Fast Track Rules and For Limited Remand to Approve Settlement of Financial Issues. Nos. 85089/85370 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=899664&onBaseDocumentNumber=23-14166">23-14166</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/05/2023</td><td>Order/Procedural</td><td>Filed Order Dismissing Appeal and Regarding Motions. The parties move to dismiss the appeal in Docket No. 85089, return the appeal in Docket No. 85370 to the fast track program, and remand this matter to allow the district court to adopt the parties' settlement agreement and allow the parties to implement that agreement. The joint motion to dismiss the appeal in Docket No. 85089 is granted. "The appeal in Docket No. 85089 dismissed." The parties shall bear their own costs. Natalie's motion to instruct the district court or remand this matter, and the parties' joint motion for a limited remand, are denied. The parties' joint motion to return the appeal in Docket No. 85370 to the fast track program is granted. Natalie shall have 21 days from the date of this order to file and serve her fast track statement and appendix. Karla M. Soto's motion for an extension of time to file transcripts in this matter is granted. NRAP 9(c)(4). Ms. Soto's certificate of delivery was filed on April 17, 2023. fn1 [The parties' motions for extensions of time to file the fast track statement and opening brief are denied as moot.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=899800&onBaseDocumentNumber=23-14297">23-14297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902305&onBaseDocumentNumber=23-16692">23-16692</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appendix to Fast Track Statement Volume 1 of 22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902314&onBaseDocumentNumber=23-16701">23-16701</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902347&onBaseDocumentNumber=23-16734">23-16734</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902348&onBaseDocumentNumber=23-16735">23-16735</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902349&onBaseDocumentNumber=23-16736">23-16736</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902350&onBaseDocumentNumber=23-16737">23-16737</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902352&onBaseDocumentNumber=23-16739">23-16739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902334&onBaseDocumentNumber=23-16721">23-16721</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902353&onBaseDocumentNumber=23-16740">23-16740</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902346&onBaseDocumentNumber=23-16733">23-16733</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902355&onBaseDocumentNumber=23-16742">23-16742</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902354&onBaseDocumentNumber=23-16741">23-16741</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 12. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902356&onBaseDocumentNumber=23-16743">23-16743</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 13. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902335&onBaseDocumentNumber=23-16722">23-16722</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902336&onBaseDocumentNumber=23-16723">23-16723</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 15. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902337&onBaseDocumentNumber=23-16724">23-16724</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 16. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902338&onBaseDocumentNumber=23-16725">23-16725</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 17. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902339&onBaseDocumentNumber=23-16726">23-16726</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 18. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902340&onBaseDocumentNumber=23-16727">23-16727</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 19. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902341&onBaseDocumentNumber=23-16728">23-16728</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 19. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902342&onBaseDocumentNumber=23-16729">23-16729</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902343&onBaseDocumentNumber=23-16730">23-16730</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902344&onBaseDocumentNumber=23-16731">23-16731</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement-  Vol. 22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902345&onBaseDocumentNumber=23-16732">23-16732</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/30/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902391&onBaseDocumentNumber=23-16778">23-16778</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Notice/Incoming</td><td>Filed Proof of Service for Appellant's Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=902953&onBaseDocumentNumber=23-17280">23-17280</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/20/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for Shann D. Winesett. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=905180&onBaseDocumentNumber=23-19446">23-19446</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2023</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=905189&onBaseDocumentNumber=23-19455">23-19455</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2023</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the notice of appearance filed on June 20, 2023, the clerk of this court shall add Shann D. Winesett, of the Pecos Law Group to the docket as counsel of record for respondent. The motion for an extension of time to file the fast track response is granted. Respondent shall have until June 30, 2023, to file and serve the fast track response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=906685&onBaseDocumentNumber=23-20887">23-20887</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2023</td><td>Motion</td><td>Filed Respondent's Motion for Permission to File Expanded Fast Track Response. (DETACHED FAST TRACK RESPONSE AND FILED PER 7/28/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=906856&onBaseDocumentNumber=23-21057">23-21057</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/10/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Motion for Permission to File Expanded Fast Track Response (REJECTED PER NOTICE FILED ON 7/11/2023).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/10/2023</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Fast Track Reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=907858&onBaseDocumentNumber=23-22024">23-22024</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=907892&onBaseDocumentNumber=23-22058">23-22058</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=907901&onBaseDocumentNumber=23-22067">23-22067</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2023</td><td>Motion</td><td>Filed Appellant's Certificate of Service for Motion for Extension of Time to File Fast Track Reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=907957&onBaseDocumentNumber=23-22123">23-22123</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2023</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Opposition to Douglas Gennardo's Motion for Permission to File Expanded Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=907958&onBaseDocumentNumber=23-22124">23-22124</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2023</td><td>Motion</td><td>Filed Appellant's Opposition to Motion for Permission to File Expanded Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=908159&onBaseDocumentNumber=23-22308">23-22308</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/13/2023</td><td>Motion</td><td>Filed Respondent's Reply to Opposition to Motion for Permission to File Expanded Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=908313&onBaseDocumentNumber=23-22460">23-22460</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/13/2023</td><td>Motion</td><td>Filed Respondent's Response to Non-Opposition to Appellant's Motion for Extension of Time to File Fast Track Reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=908314&onBaseDocumentNumber=23-22461">23-22461</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion to File Expanded Fast Track Response and Granting Motion for Extension of Time to File Reply. Respondent has filed an untimely motion for permission to file a fast track response in excess of the type-volume limitations of NRAP 3E(e)(2).  Respondent attached the proposed fast track response as an exhibit to the motion, and the proposed fast track response is 632 words over the type-volume limitation. The motion is granted. The clerk of this court shall detach the fast track response from the motion filed on June 30, 2023, and shall file it separately. Appellant has also filed a motion for an extension of time to file the fast track reply. Appellant asserts that due to a calendaring error by counsel, that an extension to August 10, 2023, is necessary. The motion is granted. Appellant shall have until August 10, 2023, to file and serve a fast track reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=910239&onBaseDocumentNumber=23-24289">23-24289</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2023</td><td>Fast Track Brief</td><td>Filed Respondent's Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=910243&onBaseDocumentNumber=23-24293">23-24293</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Reply to Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=911963&onBaseDocumentNumber=23-25970">23-25970</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2023</td><td>Case Status Update</td><td>Fast Track Briefing Completed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64897&csIID=64897&deLinkID=914182&onBaseDocumentNumber=23-28117">23-28117</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64897&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

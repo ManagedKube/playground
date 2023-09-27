@@ -1,0 +1,1039 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86632: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1C756E2C1FD9D8441C349D044760CDCA">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="66626">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86632</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ROSIAK VS. ROSIAK C/W 85464</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=65025">85464</a>*, 86632</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61836">83116</a>, <a href="/public/caseView.do?csIID=65025">85464</a>, <a href="/public/caseView.do?csIID=67069">86994</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D578580</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Reinstated</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Richard J. Rosiak</td><td valign="top">Kimber L. Laux
+							(McFarling Law Group)
+						<br>Emily M. McFarling
+							(McFarling Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Margarita E. Rosiak</td><td valign="top">Julie Raye
+							(The Grace Law Firm)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/29/2023</td><td>Open</td><td>Opening Brief &amp; Appendix</td><td>Appellant</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from McFarling Law Group. Check No. 1201. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902197&onBaseDocumentNumber=23-16584">23-16584</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902199&onBaseDocumentNumber=23-16586">23-16586</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Appellant's Motion for Exemption from Settlement Program and to Reinstate Timelines for Requesting Transcripts and for Briefing. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902270&onBaseDocumentNumber=23-16657">23-16657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/30/2023</td><td>Motion</td><td>Filed Respondent's Notice of Non-Opposition to Appellant's Motion for Exemption from Settlement Program and To Reinstate Timelines for Requesting Transcripts and for Briefing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902420&onBaseDocumentNumber=23-16806">23-16806</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant has filed a motion to exempt this appeal from the settlement program. Respondent has filed a non-opposition to the motion.  The motion is granted. The clerk of this court shall issue the notice exempting this appeal from the settlement program and setting the briefing schedule. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902871&onBaseDocumentNumber=23-17249">23-17249</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellant: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=902897&onBaseDocumentNumber=23-17275">23-17275</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2023</td><td>Notice of Appeal Documents</td><td>Filed Filed (SEALED) Confidential Cover Sheet from District Court Clerk. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2023</td><td>Order/Procedural</td><td>Filed Order. Appellant has moved to consolidate these appeals because they involve the same parties, the same issues, and the same litigation.  Cause appearing, the appeals are consolidated for all appellate purposes.  Appellant moved for a stay below.  Appellant has filed a motion in this court to stay enforcement of the arrears judgment.  Respondent opposes the motion, and appellant has filed a reply. Having considered the motion, the opposition, and the reply in light of the applicable factors, this court concludes that a stay pending appeal is warranted.  The motion is granted, and the child support arrears judgment in the amount of $63,955 for the period of April 30, 2020, through October 30, 2022, is stayed pending further order of this court.   Appellant shall have 60 days from the date of this order to file and serve a combined opening brief and appendix in these consolidated appeals.   Appellant's motion requesting a second extension of time to file the opening brief is denied as moot.  fn1 [Despite its untimeliness, appellant's motion for an extension of time to file a reply in support of the motion for stay is granted.  The reply was filed on May 26, 2023.]. Nos 85464/86632 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=904385&onBaseDocumentNumber=23-18705">23-18705</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2023</td><td>Transcript</td><td>Filed Appellant's Transcript. Proceedings:  11/28/2022, 11/30/2022, 1/17/2022, 4/18/2023, and 4/25/2023.  Court Reporter:  Transcript Video Services. Request for Transcripts of Proceedings. Nos. 85464/86632.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=904555&onBaseDocumentNumber=23-18872">23-18872</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2023</td><td>Docketing Statement</td><td>Filed Appellant's Docketing Statement. Nos. 85464/86632. (FOR CASE NO. 86632). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=904644&onBaseDocumentNumber=23-18960">23-18960</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/26/2023</td><td>Transcript Request</td><td>Filed Appellant's Amended Request for Transcript of Proceedings. Transcripts requested: 11/28/2022, 11/30/2022, 1/17/2023, 4/18/2023, and 4/25/2023.  Nos. 85464/86632. To Court Reporter: Transcript Video Services.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=906025&onBaseDocumentNumber=23-20280">23-20280</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts:  4/25/2023, 4/18/2023, 1/17/2023, 11/30/2022, and 11/28/2022. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=911625&onBaseDocumentNumber=23-25642">23-25642</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912324&onBaseDocumentNumber=23-26324">23-26324</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 1. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912332&onBaseDocumentNumber=23-26332">23-26332</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 2. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912336&onBaseDocumentNumber=23-26336">23-26336</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 3. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912339&onBaseDocumentNumber=23-26339">23-26339</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 4. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912340&onBaseDocumentNumber=23-26340">23-26340</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 5. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912341&onBaseDocumentNumber=23-26341">23-26341</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 6. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912342&onBaseDocumentNumber=23-26342">23-26342</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 7. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912354&onBaseDocumentNumber=23-26354">23-26354</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 8. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912356&onBaseDocumentNumber=23-26356">23-26356</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 9. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912361&onBaseDocumentNumber=23-26361">23-26361</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 10. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912362&onBaseDocumentNumber=23-26362">23-26362</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 11. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912364&onBaseDocumentNumber=23-26364">23-26364</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 12. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912365&onBaseDocumentNumber=23-26365">23-26365</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 13. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912366&onBaseDocumentNumber=23-26366">23-26366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 14. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912369&onBaseDocumentNumber=23-26369">23-26369</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 15. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912370&onBaseDocumentNumber=23-26370">23-26370</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 16. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912371&onBaseDocumentNumber=23-26371">23-26371</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 17. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912372&onBaseDocumentNumber=23-26372">23-26372</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 18. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912373&onBaseDocumentNumber=23-26373">23-26373</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 19. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912374&onBaseDocumentNumber=23-26374">23-26374</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 20. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912375&onBaseDocumentNumber=23-26375">23-26375</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 21. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912376&onBaseDocumentNumber=23-26376">23-26376</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 21. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912377&onBaseDocumentNumber=23-26377">23-26377</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 22. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912378&onBaseDocumentNumber=23-26378">23-26378</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 23. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912379&onBaseDocumentNumber=23-26379">23-26379</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 24. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912380&onBaseDocumentNumber=23-26380">23-26380</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 25. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912381&onBaseDocumentNumber=23-26381">23-26381</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 26. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912382&onBaseDocumentNumber=23-26382">23-26382</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 27. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912383&onBaseDocumentNumber=23-26383">23-26383</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 28. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912384&onBaseDocumentNumber=23-26384">23-26384</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 29. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912385&onBaseDocumentNumber=23-26385">23-26385</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 30. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912386&onBaseDocumentNumber=23-26386">23-26386</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 31. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912387&onBaseDocumentNumber=23-26387">23-26387</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 32. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912388&onBaseDocumentNumber=23-26388">23-26388</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 33. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912389&onBaseDocumentNumber=23-26389">23-26389</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 34. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912390&onBaseDocumentNumber=23-26390">23-26390</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 35. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912392&onBaseDocumentNumber=23-26392">23-26392</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 36. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912393&onBaseDocumentNumber=23-26393">23-26393</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 37. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912394&onBaseDocumentNumber=23-26394">23-26394</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 38. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912395&onBaseDocumentNumber=23-26395">23-26395</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 39. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912396&onBaseDocumentNumber=23-26396">23-26396</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 40. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912397&onBaseDocumentNumber=23-26397">23-26397</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 41. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912398&onBaseDocumentNumber=23-26398">23-26398</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 42. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912399&onBaseDocumentNumber=23-26399">23-26399</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 43. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912400&onBaseDocumentNumber=23-26400">23-26400</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 44. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912401&onBaseDocumentNumber=23-26401">23-26401</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 45. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912402&onBaseDocumentNumber=23-26402">23-26402</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 46. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912403&onBaseDocumentNumber=23-26403">23-26403</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 47. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912404&onBaseDocumentNumber=23-26404">23-26404</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 48. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912405&onBaseDocumentNumber=23-26405">23-26405</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 49. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912406&onBaseDocumentNumber=23-26406">23-26406</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 50. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912407&onBaseDocumentNumber=23-26407">23-26407</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 51. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912408&onBaseDocumentNumber=23-26408">23-26408</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 52. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912409&onBaseDocumentNumber=23-26409">23-26409</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 53. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912410&onBaseDocumentNumber=23-26410">23-26410</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 54. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912411&onBaseDocumentNumber=23-26411">23-26411</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 55. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912412&onBaseDocumentNumber=23-26412">23-26412</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 56. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912413&onBaseDocumentNumber=23-26413">23-26413</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 57. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912414&onBaseDocumentNumber=23-26414">23-26414</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 58. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912415&onBaseDocumentNumber=23-26415">23-26415</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 59. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912416&onBaseDocumentNumber=23-26416">23-26416</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 60. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912417&onBaseDocumentNumber=23-26417">23-26417</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 61. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912418&onBaseDocumentNumber=23-26418">23-26418</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 62. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912420&onBaseDocumentNumber=23-26420">23-26420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 63. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912421&onBaseDocumentNumber=23-26421">23-26421</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 64. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912422&onBaseDocumentNumber=23-26422">23-26422</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 65. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912423&onBaseDocumentNumber=23-26423">23-26423</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 66. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912424&onBaseDocumentNumber=23-26424">23-26424</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 67. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912425&onBaseDocumentNumber=23-26425">23-26425</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 68. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912426&onBaseDocumentNumber=23-26426">23-26426</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 69. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912427&onBaseDocumentNumber=23-26427">23-26427</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 70. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912428&onBaseDocumentNumber=23-26428">23-26428</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 71. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912429&onBaseDocumentNumber=23-26429">23-26429</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 72. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912430&onBaseDocumentNumber=23-26430">23-26430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 73. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912431&onBaseDocumentNumber=23-26431">23-26431</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 74. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912432&onBaseDocumentNumber=23-26432">23-26432</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 75. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912433&onBaseDocumentNumber=23-26433">23-26433</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 76. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912434&onBaseDocumentNumber=23-26434">23-26434</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 77. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912435&onBaseDocumentNumber=23-26435">23-26435</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 78. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912436&onBaseDocumentNumber=23-26436">23-26436</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 79. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912437&onBaseDocumentNumber=23-26437">23-26437</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 80. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912438&onBaseDocumentNumber=23-26438">23-26438</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 81 (REJECTED PER NOTICE FILED ON 8/15/2023) Nos. 85464/86632. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 82. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912440&onBaseDocumentNumber=23-26440">23-26440</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 83. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912441&onBaseDocumentNumber=23-26441">23-26441</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 84. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912442&onBaseDocumentNumber=23-26442">23-26442</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 85. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912443&onBaseDocumentNumber=23-26443">23-26443</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/14/2023</td><td>Appendix</td><td>Filed Appellant's Joint Appendix to the Opening Brief - Vol. 86. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912444&onBaseDocumentNumber=23-26444">23-26444</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/15/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix. Corrected appendix due: 5 days. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=912525&onBaseDocumentNumber=23-26525">23-26525</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2023</td><td>Appendix</td><td>Filed Appellants' Joint Appendix to the Opening Brief- Vol. 81. Nos. 85464/86632. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=913265&onBaseDocumentNumber=23-27242">23-27242</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: September 27, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=66626&csIID=66626&deLinkID=915437&onBaseDocumentNumber=23-29350">23-29350</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=66626&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

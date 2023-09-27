@@ -1,0 +1,822 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85254: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=ED896FAF40DA10887D6306D5E09464ED">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64752">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85254</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">NUVEDA, LLC VS. DIST. CT. (MELECH)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55059">78499</a>, <a href="/public/caseView.do?csIID=56133">79304</a>, <a href="/public/caseView.do?csIID=56773">79747</a>, <a href="/public/caseView.do?csIID=56906">79847</a>, <a href="/public/caseView.do?csIID=58584">80894</a>, <a href="/public/caseView.do?csIID=60804">82395</a>, <a href="/public/caseView.do?csIID=62199">83393</a>, <a href="/public/caseView.do?csIID=62713">83761</a>, <a href="/public/caseView.do?csIID=62894">83891</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A755479</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Ace Legal  Corp.</td><td valign="top">Amy L. Sugden</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Amy Sugden</td><td valign="top">Amy L. Sugden</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">NuVeda, LLC</td><td valign="top">Mitchell D. Stipp
+							(Law Office of Mitchell Stipp)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Raymond Braudis</td><td valign="top">Amy L. Sugden</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">THC Nevada LLC</td><td valign="top">Amy L. Sugden</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Timothy Smits Van Oyen</td><td valign="top">David S. Lee
+							(Lee Landrum &amp; Ingle)
+						<br>Charlene N. Renwick
+							(Lee Landrum &amp; Ingle)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">CWNevada, LLC</td><td valign="top">Brian W. Boschee
+							(Holley Driggs/Las Vegas)
+						<br>Kirk B. Lenhard
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Stacy H. Rubin
+							(Holley Driggs/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Desert Evolution, LLC</td><td valign="top">Brian R. Irvine
+							(Dickinson Wright PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Dotan Y. Melech</td><td valign="top">Brian W. Boschee
+							(Holley Driggs/Las Vegas)
+						<br>Kirk B. Lenhard
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Stacy H. Rubin
+							(Holley Driggs/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Highland Partners NV LLC</td><td valign="top">William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">MI-CW Holdings LLC</td><td valign="top">William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">MI-CW Holdings NV Fund 2 LLC</td><td valign="top">William R. Urga
+							(Jolley Urga Woodbury Holthus)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">TRC-Evolution NV, LLC</td><td valign="top">Brian R. Irvine
+							(Dickinson Wright PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mark R. Denton</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Filing Fee</td><td>Petition Filing Fee Paid. $250.00 from Mitchell Stipp. E-Payment Ref. no. 22083133240569. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus or Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870672&onBaseDocumentNumber=22-27402">22-27402</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870674&onBaseDocumentNumber=22-27404">22-27404</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870675&onBaseDocumentNumber=22-27405">22-27405</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870676&onBaseDocumentNumber=22-27406">22-27406</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870677&onBaseDocumentNumber=22-27407">22-27407</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870678&onBaseDocumentNumber=22-27408">22-27408</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870679&onBaseDocumentNumber=22-27409">22-27409</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870680&onBaseDocumentNumber=22-27410">22-27410</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870681&onBaseDocumentNumber=22-27411">22-27411</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870682&onBaseDocumentNumber=22-27412">22-27412</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870685&onBaseDocumentNumber=22-27415">22-27415</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2022</td><td>Notice/Incoming</td><td>Filed Joinder Timothy Smits Van Oyen's Joinder To Nuveda, LLC's Petition For Writ Of Prohibition Or, In The Alternative, Petition For Writ Of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=870851&onBaseDocumentNumber=22-27575">22-27575</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Brief</td><td>Filed Joinder to Brief Creditors' Joinder to NuVeda, LLC's Petition for Writ of Prohibition, or in the Alternative, Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=871159&onBaseDocumentNumber=22-27822">22-27822</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2022</td><td>Motion</td><td>Filed Petitioner's Motion to Stay District Court Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=871606&onBaseDocumentNumber=22-28261">22-28261</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/09/2022</td><td>Appendix</td><td>Filed Petitioner's Appendix in Support of Motion to Stay District Court Orders. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=871607&onBaseDocumentNumber=22-28262">22-28262</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2022</td><td>Appendix</td><td>Filed Petitioner's Appendix in Support of Motion to Stay District Court Orders. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=871608&onBaseDocumentNumber=22-28263">22-28263</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Order/Procedural</td><td>Filed Order.  Timothy Smits Van Oyen; Ace Legal Corp.; THC Nevada, LLC; Raymond Braudis; and Amy L. Sugden have filed joinders in the petition for a writ of mandamus or prohibition filed by petitioner NuVeda, LLC.  The unopposed joinders are approved.  The clerk of this court shall add Timothy Smits Van Oyen; THC Nevada, LLC; Raymond Braudis; Amy L. Sugden; and Ace Legal Corp. to the docket as petitioners and shall amend the caption accordingly.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872090&onBaseDocumentNumber=22-28741">22-28741</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Petitioners' (THC Nevada, LLC, Raymond Braudis, Amy L. Sugden and ACE Legal Corp's) Joinder to NuVeda, LLC's Motion to Stay District Court Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872116&onBaseDocumentNumber=22-28767">22-28767</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Notice/Incoming</td><td>Filed Petitioner's (NuVeda, LLC) Notice of Transcript from the Hearing on August 25, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872171&onBaseDocumentNumber=22-28821">22-28821</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/15/2022</td><td>Notice/Incoming</td><td>Filed Petitioner's (NuVeda, LLC) Notice of Transcript from the Hearing on August 11, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872343&onBaseDocumentNumber=22-28938">22-28938</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2022</td><td>Motion</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Opposition to Motion to Stay District Court Orders. (REJECTED PER NOTICE FILED ON 9/19/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Appendix</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Appendix of Exhibits  to Opposition to Motion to Stay District Court Orders. Vols. 1-8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872580&onBaseDocumentNumber=22-29172">22-29172</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2022</td><td>Appendix</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Appendix of Exhibits  to Opposition to Motion to Stay District Court Orders. Vols. 9-17. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872582&onBaseDocumentNumber=22-29174">22-29174</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Appendix</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Appendix of Exhibits  to Opposition to Motion to Stay District Court Orders. Vols. 18-24. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872583&onBaseDocumentNumber=22-29175">22-29175</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872679&onBaseDocumentNumber=22-29271">22-29271</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2022</td><td>Motion</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Opposition to Motion to Stay District Court Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=872821&onBaseDocumentNumber=22-29411">22-29411</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Motion</td><td>Filed Real Parties in Interest (Dotan Y. Melech and CW Nevada LLC) Opposition to Joinders to Motion to Stay District Court Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=873151&onBaseDocumentNumber=22-29737">22-29737</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/23/2022</td><td>Motion</td><td>Filed Petitioner's (NuVeda, LLC) Reply to Opposition to Motion to Stay District Court Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=873441&onBaseDocumentNumber=22-29989">22-29989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer and Granting Stay.  Real parties in interest, on behalf of respondents, shall have 28 days from the date of this order within which to file an answer, including authorities, against issuance of the requested writ.  Petitioners shall have 14 days from service of the answer to file and serve any reply.  Petitioner NuVeda, LLC, has filed a motion for stay.  Petitioners THC Nevada, LLC, Raymond Braudis, Amy L. Sugden, and ACE Legal Corp have filed a joinder to the motion to stay.  Real party in interest Dotan Y. Melech has filed an opposition to the motion to stay and an opposition to the joinder.  NuVeda has filed a reply.  we grant the motion and stay any further distributions under the August 30 district court orders pending further order of this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=875052&onBaseDocumentNumber=22-31554">22-31554</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest CWNevada. LLC and Dotan Y.  Melech's answer to writ petition due: November 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=876760&onBaseDocumentNumber=22-33203">22-33203</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/24/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest Highland Partners NV LLC, MI-CW Holdings LLC, and MI-CW Holdings NV Fund 2 LLC's answer to writ petition due: November 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=876936&onBaseDocumentNumber=22-33377">22-33377</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest Desert Evolution, LLC, and TRC-Evolution NV, LLC answer to writ petition due: November 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=877297&onBaseDocumentNumber=22-33734">22-33734</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus or Prohibition TRC - Evolution NV, LLC's and Desert Evolution, LLC's Answer to Petition for Writ of Prohibition or, in the Alternative, Petition for Writ of Mandamus (REJECTED PER NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Brian R. Irvine. (Refunded) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Appendix of Exhibits to TRC - Evolution NV, LLC's and Desert Evolution, LLC's Answer to Petition for Writ of Prohibition or, in the Alternative, Petition for Writ of Mandamus. (REJECTED PER NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2022</td><td>Brief</td><td>Filed Real Parties in Interest Highland Partners NV LLC's, MI-CW Holdings NV Fund 2 LLC's, and MI-CW Holdings LLC's Answer to Petition for Writ of Prohibition or, in the Alternative, Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=879813&onBaseDocumentNumber=22-36139">22-36139</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  (TRC - Evolution NV, LLC's and Desert Evolution, LLC's Answer to Petition for Writ of Prohibition or, in the Alternative, Petition for Writ of Mandamus, Petition for Writ and Appendix) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=879817&onBaseDocumentNumber=22-36143">22-36143</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2022</td><td>Brief</td><td>Filed Real Parties in Interest TRC - Evolution NV, LLC's and Desert Evolution, LLC's Answer to Petition for Writ of Prohibition or, in the Alternative, Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=879822&onBaseDocumentNumber=22-36148">22-36148</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Petition/Writ</td><td>Filed Real Party In Interest Dotan Y. Melech and CWNevada, LLC's Answering Brief to Petition for Writ of Prohibition or, in the Alternative. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=879927&onBaseDocumentNumber=22-36252">22-36252</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2022</td><td>Appendix</td><td>Filed Real Party In Interest Dotan Y. Melech and CWNevada, LLC's Appendix to Answering Brief Volume I. (REJECTED PER NOTICE ISSUED 11/18/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Appendix. Corrected appendix due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=880087&onBaseDocumentNumber=22-36408">22-36408</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Appendix</td><td>Filed Real Party In Interest Dotan Y. Melech and CWNevada, LLC's Appendix to Answering Brief Volume I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=880197&onBaseDocumentNumber=22-36517">22-36517</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/21/2022</td><td>Appendix</td><td>Filed Real Party In Interest Dotan Y. Melech and CWNevada, LLC's Appendix to Answering Brief Volume II. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=880200&onBaseDocumentNumber=22-36520">22-36520</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioner NuVeda, LLC's reply to answer to petition for writ due: January 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=883361&onBaseDocumentNumber=22-39503">22-39503</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners' Amy L. Sugden, THC Nevada LLC, Ace Legal Corp., and Raymond Braudis' reply to answer to writ petition due: January 3, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=883431&onBaseDocumentNumber=22-39572">22-39572</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2023</td><td>Petition/Writ</td><td>Filed UVEDA'S Reply to Highland Partners NV LLC's, MI-CW Holdings NV Fund 2 LLC's and MI-CW Holdings LLC's Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=885053&onBaseDocumentNumber=23-00114">23-00114</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/03/2023</td><td>Petition/Writ</td><td>Filed NUVEDA'S Reply to TRC-Evolution NV, LLC's and Desert Evolution, LLC's Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=885055&onBaseDocumentNumber=23-00116">23-00116</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2023</td><td>Petition/Writ</td><td>Filed NUVEDA'S Reply to Receiver's Answer to Petition. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=885056&onBaseDocumentNumber=23-00117">23-00117</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/03/2023</td><td>Petition/Writ</td><td>Filed Creditors' Reply in Support of Joinder to NuVeda, LLC's Petition for Writ of Prohibition Or, In the Alternative Writ of Mandamus. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=885066&onBaseDocumentNumber=23-00127">23-00127</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2023</td><td>Order/Dispositional</td><td>Filed Order Denying Petition. "ORDER the petition DENIED."  NNP23-EC/KP/LB (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=892189&onBaseDocumentNumber=23-06988">23-06988</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/03/2023</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/03/2023</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64752&csIID=64752&deLinkID=895363&onBaseDocumentNumber=23-10045">23-10045</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64752&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,940 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83354: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=C5137BDD2C919509F715A3899A1E714A">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62150">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83354</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">REED VS. REED (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=55853">79095</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D568055</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Fast Track Child Custody</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>08/18/2021 / Kunin, Israel</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Amanda Reed</td><td valign="top">Racheal H. Mastel
+							(Kainen Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Devin Reed</td><td valign="top">Michancy M. Cramer
+							(Alex B. Ghibaudo, PC.)
+						<br>Alex B. Ghibaudo
+							(Alex B. Ghibaudo, PC.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=826324&onBaseDocumentNumber=21-23366">21-23366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Kainen Law Group.  Check no. 7097. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=826862&onBaseDocumentNumber=21-23897">21-23897</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Israel Kunin. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=827081&onBaseDocumentNumber=21-24110">21-24110</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for October 25, 2021, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=828551&onBaseDocumentNumber=21-25516">21-25516</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/03/2021</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=828834&onBaseDocumentNumber=21-25792">21-25792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/25/2021</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=834082&onBaseDocumentNumber=21-30755">21-30755</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/26/2021</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated Pursuant to NRAP3E. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 40 days fast track statement and appendix. Respondent(s): 21 days from fast track statement to file fast track response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=834147&onBaseDocumentNumber=21-30819">21-30819</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Transcript Request</td><td>Filed Request for Rough Draft Transcript(s). Transcripts requested: 10/16/18, 8/27/19, 5/13/20, 2/25/21, 4/30/21, and 6/14/21. Court Reporter: Verbatim Reporting and Transcription. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=835708&onBaseDocumentNumber=21-32266">21-32266</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/01/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's fast track statement and appendix due: December 13, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=837755&onBaseDocumentNumber=21-34260">21-34260</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Fast Track Statement and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=838281&onBaseDocumentNumber=21-34775">21-34775</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant's fast track statement and appendix due: January 10, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=838546&onBaseDocumentNumber=21-35035">21-35035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 10/16/18, 8/27/19, 5/13/20, 2/25/21, 4/30/21, and 6/14/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=840598&onBaseDocumentNumber=21-36975">21-36975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Fast Track Brief</td><td>Filed Appellant's Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841981&onBaseDocumentNumber=22-01000">22-01000</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841982&onBaseDocumentNumber=22-01001">22-01001</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841983&onBaseDocumentNumber=22-01002">22-01002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841984&onBaseDocumentNumber=22-01003">22-01003</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841985&onBaseDocumentNumber=22-01004">22-01004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841986&onBaseDocumentNumber=22-01005">22-01005</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841987&onBaseDocumentNumber=22-01006">22-01006</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 1 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841988&onBaseDocumentNumber=22-01007">22-01007</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841989&onBaseDocumentNumber=22-01008">22-01008</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841990&onBaseDocumentNumber=22-01009">22-01009</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841991&onBaseDocumentNumber=22-01010">22-01010</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841992&onBaseDocumentNumber=22-01011">22-01011</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841993&onBaseDocumentNumber=22-01012">22-01012</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841994&onBaseDocumentNumber=22-01013">22-01013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841995&onBaseDocumentNumber=22-01014">22-01014</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841996&onBaseDocumentNumber=22-01015">22-01015</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 2 Part 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841997&onBaseDocumentNumber=22-01016">22-01016</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841998&onBaseDocumentNumber=22-01017">22-01017</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=841999&onBaseDocumentNumber=22-01018">22-01018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842000&onBaseDocumentNumber=22-01019">22-01019</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842001&onBaseDocumentNumber=22-01020">22-01020</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842002&onBaseDocumentNumber=22-01021">22-01021</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842003&onBaseDocumentNumber=22-01022">22-01022</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842004&onBaseDocumentNumber=22-01023">22-01023</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842005&onBaseDocumentNumber=22-01024">22-01024</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842006&onBaseDocumentNumber=22-01025">22-01025</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842007&onBaseDocumentNumber=22-01026">22-01026</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842009&onBaseDocumentNumber=22-01028">22-01028</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 12. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842010&onBaseDocumentNumber=22-01029">22-01029</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 3 Part 13. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842011&onBaseDocumentNumber=22-01030">22-01030</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842012&onBaseDocumentNumber=22-01031">22-01031</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842013&onBaseDocumentNumber=22-01032">22-01032</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842014&onBaseDocumentNumber=22-01033">22-01033</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842015&onBaseDocumentNumber=22-01034">22-01034</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842016&onBaseDocumentNumber=22-01035">22-01035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842017&onBaseDocumentNumber=22-01036">22-01036</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842018&onBaseDocumentNumber=22-01037">22-01037</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842019&onBaseDocumentNumber=22-01038">22-01038</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842020&onBaseDocumentNumber=22-01039">22-01039</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 4 Part 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842021&onBaseDocumentNumber=22-01040">22-01040</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842022&onBaseDocumentNumber=22-01041">22-01041</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842023&onBaseDocumentNumber=22-01042">22-01042</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842024&onBaseDocumentNumber=22-01043">22-01043</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842025&onBaseDocumentNumber=22-01044">22-01044</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842026&onBaseDocumentNumber=22-01045">22-01045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842027&onBaseDocumentNumber=22-01046">22-01046</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842029&onBaseDocumentNumber=22-01048">22-01048</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842030&onBaseDocumentNumber=22-01049">22-01049</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 5 Part 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842031&onBaseDocumentNumber=22-01050">22-01050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842032&onBaseDocumentNumber=22-01051">22-01051</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842033&onBaseDocumentNumber=22-01052">22-01052</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842034&onBaseDocumentNumber=22-01053">22-01053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842035&onBaseDocumentNumber=22-01054">22-01054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842036&onBaseDocumentNumber=22-01055">22-01055</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842037&onBaseDocumentNumber=22-01056">22-01056</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842038&onBaseDocumentNumber=22-01057">22-01057</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 6 Part 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842039&onBaseDocumentNumber=22-01058">22-01058</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 7 Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842041&onBaseDocumentNumber=22-01060">22-01060</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 7 Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842042&onBaseDocumentNumber=22-01061">22-01061</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 7 Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842043&onBaseDocumentNumber=22-01062">22-01062</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 7 Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842044&onBaseDocumentNumber=22-01063">22-01063</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. Vol. 7 Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842045&onBaseDocumentNumber=22-01064">22-01064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Brief</td><td>Filed Appellant's Errata to Child Custody Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=842942&onBaseDocumentNumber=22-01943">22-01943</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's fast track response due: February 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=843783&onBaseDocumentNumber=22-02748">22-02748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=845340&onBaseDocumentNumber=22-04197">22-04197</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have until February 11, 2022, to file and serve the fast track response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=845511&onBaseDocumentNumber=22-04366">22-04366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2022</td><td>Fast Track Brief</td><td>Filed Respondent's Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=845945&onBaseDocumentNumber=22-04792">22-04792</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Fast Track Brief</td><td>Filed Respondent's Amended Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=845946&onBaseDocumentNumber=22-04793">22-04793</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2022</td><td>Case Status Update</td><td>Fast Track Briefing Completed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2022</td><td>Order/Dispositional</td><td>Filed Order of Reversal and Remand. "ORDER the judgment of the district court REVERSED AND REMAND this matter to the district court for proceedings consistent with this order." fn3 [The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.] RP/DH/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=856799&onBaseDocumentNumber=22-15100">22-15100</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=859655&onBaseDocumentNumber=22-17839">22-17839</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/24/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on June 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62150&csIID=62150&deLinkID=863009&onBaseDocumentNumber=22-17839">22-17839</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62150&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

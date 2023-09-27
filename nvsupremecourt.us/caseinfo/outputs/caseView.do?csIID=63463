@@ -1,0 +1,808 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84330: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=30891EA8950F3385823E980BD8C7CD7F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63463">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84330</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">VALLEY HEALTH SYS., L.L.C. VS. DIST. CT. (BELLAVANCE)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A813078</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Justice Hardesty for Justice Silver</td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Greenberg Traurig, LLP</td><td valign="top">Tamara Beatty Peterson
+							(Peterson Baker, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Tak-Ying Sheffield</td><td valign="top">Tami D. Cowden
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Michael R. Hogue
+							(Greenberg Traurig, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">UHS of Delaware, Inc.</td><td valign="top">D. Lee Roberts, Jr.
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Howard J. Russell
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Valley Health System, LLC</td><td valign="top">John H. Cotton
+							(John H. Cotton &amp; Associates, Ltd.)
+						<br>Tami D. Cowden
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Joseph Garin
+							(Lipson Neilson P.C.)
+						<br>Michael R. Hogue
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Adam A. Schneider
+							(John H. Cotton &amp; Associates, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Joseph Bellavance</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>David O. Creasy
+							(The Gage Law Firm, PLLC)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Ivy R. Gage
+							(The Gage Law Firm, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Raymond Bellavance</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>David O. Creasy
+							(The Gage Law Firm, PLLC)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Ivy R. Gage
+							(The Gage Law Firm, PLLC)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Robin Bellavance</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>David O. Creasy
+							(The Gage Law Firm, PLLC)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Ivy R. Gage
+							(The Gage Law Firm, PLLC)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nadia Krall</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Tami D. Cowden. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Petition/Writ</td><td>Filed Joint Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848225&onBaseDocumentNumber=22-06944">22-06944</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Lawyers and Judges. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Emergency Motion filed Under NRAP 27(e) for Temporary Stay of Sanctions Hearing Pending Petition for Extraordinary Writ Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848226&onBaseDocumentNumber=22-06945">22-06945</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848227&onBaseDocumentNumber=22-06946">22-06946</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848228&onBaseDocumentNumber=22-06947">22-06947</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848229&onBaseDocumentNumber=22-06948">22-06948</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848230&onBaseDocumentNumber=22-06949">22-06949</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848233&onBaseDocumentNumber=22-06952">22-06952</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848234&onBaseDocumentNumber=22-06953">22-06953</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848235&onBaseDocumentNumber=22-06954">22-06954</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848236&onBaseDocumentNumber=22-06955">22-06955</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848237&onBaseDocumentNumber=22-06956">22-06956</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/04/2022</td><td>Motion</td><td>Filed Petitioner's (Valley Health System, LLC) Exhibits to Emergency Motion in Support of Temporary Stay of Sanctions Hearing Pending Petition for Extraordinary Writ Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848334&onBaseDocumentNumber=22-07004">22-07004</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting Petition in Part; Directing Written Order, Supplement, and Answer; and Granting Temporary Stay.  We grant the petition in part and direct the clerk of this court to issue a writ of mandamus instructing the district court to vacate its order denying Farchione pro hac vice admission and to grant the motion instead.  We ask respondent Judge Nadia Krall to enter a written order reflecting her ruling, findings, and reasoning forthwith, and petitioners shall have until 4 p.m. on Wednesday, March 9, 2022, to file and serve a supplemental appendix including a file-stamped copy of the district court's written order.  Petitioners shall have 5 days from the date when the district court's written order is entered to file and serve a supplement to the petition addressing that order.  Real parties in interest, on behalf of respondents, shall have 14 days from the date when petitioners' supplement to the petition is served within which to file and serve an answer, including authorities, against issuance of the requested writ.  Petitioners shall have 10 days from service of the answer to file and serve any reply.  we temporarily stay the underlying district court sanctions proceedings, only, including hearings, discovery, and any orders related to the attorney-client/work-product privileges ruling, pending our receipt and consideration of any opposition to the stay motion and further order of this court.  Any opposition to the stay motion is due by March 11, 2022.  No extensions of time will be granted in this matter absent extraordinary and compelling circumstances demonstrated by written motion.  Upon completion of briefing, this court will expedite its consideration of this matter to the extent its docket allows.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848448&onBaseDocumentNumber=22-07118">22-07118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2022</td><td>Writ</td><td>Issued Writ with letter. Original and one copy of writ and copy of order mailed to Attorney Tami D. Cowden for service upon Judge Nadia Krall. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848452&onBaseDocumentNumber=22-07122">22-07122</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Appendix</td><td>Filed Petitioner's Supplemental Appendix to Petition for Writ of Mandamus and Writ of Prohibition. Vol. 1 ( PETITIONER CALLED RE-FILING PAGES WERE INCORRECT) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Appendix</td><td>Filed Petitioner's Supplemental Appendix to Petition for Writ of Mandamus and Writ of Prohibition. Vol. 2 ( PETITIONER CALLED RE-FILING PAGES WERE INCORRECT) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Appendix</td><td>Filed Petitioner's Supplemental Appendix to Petition for Writ of Mandamus and Writ of Prohibition. Vol. 1 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848929&onBaseDocumentNumber=22-07587">22-07587</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Appendix</td><td>Filed Petitioner's Supplemental Appendix to Petition for Writ of Mandamus and Writ of Prohibition. Vol. 2 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=848930&onBaseDocumentNumber=22-07588">22-07588</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Motion</td><td>Filed Motion UHS of Delaware, Inc.'s Motion to Join in Joint Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849172&onBaseDocumentNumber=22-07827">22-07827</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2022</td><td>Notice/Incoming</td><td>Filed Notice NRAP 26.1 Disclosure. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849174&onBaseDocumentNumber=22-07829">22-07829</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Motion</td><td>Filed Real Parties in Interest Opposition to Emergency Motion Filed Under NRAP 27(e) for Temporary Stay of Sanctions Hearing Pending Petition for Extraordinary Writ Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849288&onBaseDocumentNumber=22-07941">22-07941</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2022</td><td>Notice/Incoming</td><td>Filed Petitioners' Proof of Service Acceptance of Service. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849383&onBaseDocumentNumber=22-08035">22-08035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Brief</td><td>Filed Petitioners' Joint Supplemental Brief in Support of Joint Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849437&onBaseDocumentNumber=22-08089">22-08089</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2022</td><td>Motion</td><td>Filed Petitioners' Reply to Response Reply in Support of Emergency Motion filed Under NRAP 27(e) for Temporary Stay of Sanctions Hearing Pending Petition for Extraordinary Writ Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849604&onBaseDocumentNumber=22-08254">22-08254</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2022</td><td>Writ</td><td>Filed Returned Writ. Original Writ returned. Served on Judge Nadia Krall on March 11, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849905&onBaseDocumentNumber=22-08549">22-08549</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/18/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Join Petition. UHS of Delaware, Inc., has moved for leave to join in this matter as petitioner. Having considered the UHS of Delaware's motion, we grant it.  The clerk of this court shall add UHS of Delaware and Sheffield as petitioners in this writ proceeding. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=849998&onBaseDocumentNumber=22-08641">22-08641</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/18/2022</td><td>Motion</td><td>Filed Real Parties in Interest Opposition to UHS of Delaware, Inc's Motion to Join in Joint Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=850015&onBaseDocumentNumber=22-08657">22-08657</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851029&onBaseDocumentNumber=22-09568">22-09568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851031&onBaseDocumentNumber=22-09570">22-09570</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851033&onBaseDocumentNumber=22-09572">22-09572</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851035&onBaseDocumentNumber=22-09574">22-09574</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851037&onBaseDocumentNumber=22-09576">22-09576</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' Proof of Service for Appendix Volumes 1 through 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851038&onBaseDocumentNumber=22-09577">22-09577</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Motion</td><td>Filed Real Parties in Interests' Motion for Leave to File Under Seal Appendix Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851042&onBaseDocumentNumber=22-09581">22-09581</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2022</td><td>Motion</td><td>Filed Real Parties in Interests' Motion to Exceed Word Limit for Answer to Joint Petition for Writ of Mandamus and Writ of Prohibition and Extension of Time to File Answer. (First Request)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851046&onBaseDocumentNumber=22-09585">22-09585</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' Proof of Service for Sealed Appendix. Volume 6 (Nos. 791-815)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851136&onBaseDocumentNumber=22-09671">22-09671</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2022</td><td>Petition/Writ</td><td>Filed Answer to Joint Petition for Writ of Mandamus and/or Prohibition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851449&onBaseDocumentNumber=22-09968">22-09968</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions.  The answer thus was timely filed and served on March 30, 2022, and any reply from petitioners is due by April 11, 2022.  We grant the motion to file part of the appendix under seal.  Once received, the clerk of this court shall file under seal real parties in interest's appendix volume 6 of 6.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851464&onBaseDocumentNumber=22-09989">22-09989</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2022</td><td>Appendix</td><td>Filed Filed (SEALED) Real Parties in Interests' Appendix. Vol. 6. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interests' Notice of Appearance for David P. Snyder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=851843&onBaseDocumentNumber=22-10357">22-10357</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2022</td><td>Brief</td><td>Filed Petitioners' Joint Reply in Support of Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=853010&onBaseDocumentNumber=22-11453">22-11453</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/11/2022</td><td>Appendix</td><td>Filed Petitioners' Second Supplemental Appendix to Joint Petition for Writ of Mandamus and Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=853011&onBaseDocumentNumber=22-11454">22-11454</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Order/Dispositional</td><td>Filed Order Granting Petition. "We grant the petition". The Clerk of this court shall issue a writ of mandamus instructing the district court to vacate its "Order Granting in Part and Denying in Part Defendant[s'] Motion for Clarification and Reconsideration of the Scope of the February 8th Evidentiary Hearing" and its "Order Denying Non-Party Greenberg Traurig, LLP's Motion to Quash Subpoenas." We further direct the district court to request that the chief judge reassign this matter to a different department. Finally, consistent with this decision, we lift the temporary stay entered by this court on March 7, 2022. JH/EC/KP. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=859162&onBaseDocumentNumber=22-17354">22-17354</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2022</td><td>Writ</td><td>Issued Writ with letter. Original and one copy of writ and copy of order mailed to Tami D. Cowden for service upon Judge Nadia Krall. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=859178&onBaseDocumentNumber=22-17370">22-17370</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Notice/Incoming</td><td>Filed Petitioners' Proof of Service. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=861195&onBaseDocumentNumber=22-18378">22-18378</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Writ</td><td>Filed Returned Writ. Original Writ returned. Served on Judge Nadia Krall on June 8, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=861559&onBaseDocumentNumber=22-18662">22-18662</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/27/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63463&csIID=63463&deLinkID=863159&onBaseDocumentNumber=22-20181">22-20181</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/27/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63463&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

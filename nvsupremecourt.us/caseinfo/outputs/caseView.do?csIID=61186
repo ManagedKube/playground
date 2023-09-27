@@ -1,0 +1,716 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82662: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=301035EF816F42A5AE43DE767D3237CE">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61186">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82662</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">COLT VS. PLUMMER (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=62359">82662-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D560076</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Child Custody/Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Mary-Anne Colt</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Stacey Kanter</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Alyssa Marie Plummer</td><td valign="top">Carrie E Hurtik
+							(Hurtik Law &amp; Associates)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=810657&onBaseDocumentNumber=21-08577">21-08577</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. (Amended) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=810661&onBaseDocumentNumber=21-08581">21-08581</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=810664&onBaseDocumentNumber=21-08584">21-08584</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. (SEALED) Confidential Civil Cover Sheet. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/26/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. (SEALED) Confidential Civil Cover Sheet. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Motion</td><td>Filed Proper Person Motion. Application to Proceed in Forma Pauperis filed in District Court on 3/18/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=811781&onBaseDocumentNumber=21-09630">21-09630</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. Affidavit in Support of Motion to Proceed on Appeal in Forma Pauperis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=812849&onBaseDocumentNumber=21-10647">21-10647</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2021</td><td>Order/Incoming</td><td>Filed District Court Order. Certified copy of order filed in district court on March 26, 2021. Order. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=812866&onBaseDocumentNumber=21-10664">21-10664</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. Affidavit in Support of Motion to Proceed on Appeal in Forma Pauperis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=812877&onBaseDocumentNumber=21-10675">21-10675</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/15/2021</td><td>Order/Procedural</td><td>Filed Order Waiving Filing Fee. In light of the district court's March 29, 2021, order granting appellant's motion to proceed in forma pauperis, no filing fee is due for this appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=813085&onBaseDocumentNumber=21-10881">21-10881</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=813090&onBaseDocumentNumber=21-10886">21-10886</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Docketing Statement</td><td>Filed Proper Person Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=813503&onBaseDocumentNumber=21-11256">21-11256</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Motion</td><td>Filed Proper Person Motion for Extension of Time to File Transcript Request Due to Waiver of Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=813506&onBaseDocumentNumber=21-11259">21-11259</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2021</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record, Redesignating Appeal, and Regarding Motion.  Record on Appeal due:  21 days.  The clerk of this court shall redesignate this appeal as a fast track appeal, subject to the child custody fast track rules of NRAP 3E.  Appellants shall have 40 days from the date of this order to file and serve the fast track statement(s).  Appellant Mary-Anne Colt's motion for an extension of time to file the rough draft transcript request form is granted to the following extent.  Ms. Colt shall have 21 days from the date of this order to file and serve the rough draft transcript request form, or a certificate that no transcripts will be requested.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=814355&onBaseDocumentNumber=21-12093">21-12093</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal. Via FTP. Vols. 1-14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=815147&onBaseDocumentNumber=21-12871">21-12871</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/14/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal pages 29-33, 43-49, 194-201, 218-220, 221-225, 228-232, 694-701, 729-730, 2907-2913, 2916-2918, 2920-2922, 2930-2934, 2946-2949, 2956-2965 &amp; 2970 (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Ex Parte Motion for an Order Shortening Time.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=816576&onBaseDocumentNumber=21-14201">21-14201</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant Mary-Anne Colt has filed a motion that appears to request that the district court judge expedite a hearing date and/or a decision on an issue below. This court takes no action in regard to the motion.  The district court record was filed in this appeal on May 5 and 14, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=816789&onBaseDocumentNumber=21-14367">21-14367</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/21/2021</td><td>Transcript Request</td><td>Filed Request for Rough Draft Transcript(s). Transcripts requested: 12/13/17, 3/21/18, 6/11/18, 7/25/18, 8/23/18, 10/8/18, 12/13/18, 1/11/19, 7/10/19, 3/21/18, 2/19/19, 7/10/19, 7/11/19, 1/28/20, 2/14/20, 2/27/20, 6/5/20, 8/5/20, 9/8/20, 9/17/20, 11/23/20, 11/30/20, 1/20/21, 1/28/21, 1/29/21, and 3/25/21.  Court Reporter: Unknown. Filed in district court on: 5/17/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=817112&onBaseDocumentNumber=21-14681">21-14681</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant Mary-Anne Colt, who is proceeding in forma pauperis, has filed a transcript request form pursuant to NRAP 9(b).  This court declines to order the preparation of the requested transcripts at this time.  However, as this appeal proceeds, the court will consider the necessity of transcripts and may order their preparation at a later date.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=817317&onBaseDocumentNumber=21-14884">21-14884</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2021</td><td>Motion</td><td>Filed Proper Person Motion to Extend Time; and Allow Additional Pages Due to Issues Presented.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=819610&onBaseDocumentNumber=21-17092">21-17092</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant Mary-Anne Colt's motion for an extension of time to file the fast track statement and for leave to file a fast track statement in excess of 10 pages is granted.  The clerk of this court shall detach the documents attached to the fast track statement received on June 14, 2021, and return them unfiled, and shall file the fast track statement.  Appellant Stacey Kanter shall file and serve the fast track statement within 7 days from the date of this order.  Respondent shall have 21 days from the date of this order to file and serve the fast track response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=819768&onBaseDocumentNumber=21-17250">21-17250</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2021</td><td>Fast Track Brief</td><td>Filed Appellant Mary-Anne Colt's Proper Person Fast Track Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=819769&onBaseDocumentNumber=21-17251">21-17251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Proper Person Motion to Enter Video Transcript Evidence in Lieu of Paper Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=825090&onBaseDocumentNumber=21-22209">21-22209</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion, Partially Dismissing Appeal, and to File Documents. Appellant Mary-Anne Colt, who is proceeding in forma pauperis, has filed a motion for leave to file video transcripts in lieu of paper transcripts. The motion is denied. At this stage of the proceedings, this court is unable to determine which transcripts, if any, are necessary for this court's review on appeal, see NRAP 9(b)(1)(C); however, as this appeal proceeds, the court may consider the necessity of transcripts and may order their preparation at a later date. To date, Kanter has failed to file a fast track statement or to otherwise communicate with this court. This appeal is therefore dismissed as to appellant Stacy Kanter. The clerk of this court shall amend the caption in this appeal to conform to the caption on this order. To date, respondent has failed to file the fast track response or to otherwise communicate with this court. Fast track response due: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=826101&onBaseDocumentNumber=21-23147">21-23147</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Motion</td><td>Filed Proper Person Motion to Set Aside or To Correct/Clarify Stacey Kanter has Jointly Filed a Fast Track Statement on June 15, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=827177&onBaseDocumentNumber=21-24201">21-24201</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Order/Procedural</td><td>Filed Order.  Stacey Kanter's appeal is hereby reinstated.  The clerk of this court shall amend the caption to conform to the caption on this order.  The fast track response was due August 16, 2021. To date respondent has not filed the fast track response or otherwise communicated with this court. Accordingly, this appeal will be decided without a response from respondent.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=827965&onBaseDocumentNumber=21-24941">21-24941</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Case Status Update</td><td>Fast Track Briefing Completed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/09/2021</td><td>Notice of Appeal Documents</td><td>Filed (SEALED) District Court Exhibit List. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=829946&onBaseDocumentNumber=21-26836">21-26836</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2021</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." Court of Appeals- MG/JT/BB. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=846731&onBaseDocumentNumber=22-05483">22-05483</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on February 22, 2022. (REMITTITUR RECALLED PER ORDER FILED 4/8/22).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=848253&onBaseDocumentNumber=22-05483">22-05483</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2022</td><td>Other</td><td>Returned Unfiled Documents. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=849673&onBaseDocumentNumber=22-08322">22-08322</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2022</td><td>Motion</td><td>Filed Proper Person Motion to Recall Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=851554&onBaseDocumentNumber=22-10078">22-10078</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Recalling Remittitur.  On March 31, 2022, Colt filed a "Motion for Recall of Denying Motion for Review" and submitted a petition for review and exhibits to the petition, including original photographs. The motion is construed as a motion to recall the remittitur.  We conclude the petition for review was timely dispatched, and we grant the motion.  The clerk of this court shall recall the remittitur and file the petition for review.  The clerk of this court shall return, unfiled, the exhibits to the petition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=852486&onBaseDocumentNumber=22-10988">22-10988</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2022</td><td>Post-Judgment Petition</td><td>Filed Proper Person Petition for Review.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=852488&onBaseDocumentNumber=22-10990">22-10990</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Post-Judgment Order/Dispositional</td><td>Filed Order Denying Petition for Review.  "Review denied."  EN BANC  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=854714&onBaseDocumentNumber=22-13117">22-13117</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=854715&onBaseDocumentNumber=22-13118">22-13118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on April 27, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61186&csIID=61186&deLinkID=857706&onBaseDocumentNumber=22-13118">22-13118</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61186&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

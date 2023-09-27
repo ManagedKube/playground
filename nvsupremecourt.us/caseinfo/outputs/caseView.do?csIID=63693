@@ -1,0 +1,907 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84495: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=9C9D38AB4EAFC9D6C74DAEAB2B53ACEE">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63693">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84495</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LITT VS. KAMMERLING C/W 84244/84494</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=63362">84244</a>*, <a href="/public/caseView.do?csIID=63692">84494</a>, 84495</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=63362">84244</a>, <a href="/public/caseView.do?csIID=63692">84494</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A776160</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>04/12/2022 / Shirinian, Ara</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Laura Litt</td><td valign="top">Michael J. Gayan
+							(Kemp Jones, LLP)
+						<br>J. Randall Jones
+							(Kemp Jones, LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Richard L. Litt</td><td valign="top">Michael J. Gayan
+							(Kemp Jones, LLP)
+						<br>J. Randall Jones
+							(Kemp Jones, LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Michael Kammerling</td><td valign="top">Jeremy R. Alberts
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						<br>Ryan T. Gormley
+							(Weinberg, Wheeler, Hudgins, Gunn &amp; Dial, LLC/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=852055&onBaseDocumentNumber=22-10564">22-10564</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=852057&onBaseDocumentNumber=22-10566">22-10566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=852059&onBaseDocumentNumber=22-10568">22-10568</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Kemp Jones.  Check no. 78512. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/11/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=852993&onBaseDocumentNumber=22-11436">22-11436</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Ara H. Shirinian. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853048&onBaseDocumentNumber=22-11490">22-11490</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853679&onBaseDocumentNumber=22-12112">22-12112</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (Cross-Appeal) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853682&onBaseDocumentNumber=22-12115">22-12115</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (Cross-Appeal) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853684&onBaseDocumentNumber=22-12117">22-12117</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Jeremy R. Alberts. (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference was scheduled for April 7, 2022. Case Nos. 84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853825&onBaseDocumentNumber=22-12247">22-12247</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853829&onBaseDocumentNumber=22-12251">22-12251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion for Extension to File Case Appeal Statement.  (DETACHED CASE APPEAL STATEMENT AND FILED SEPERATELY PER ORDER FILED 4/22/22).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=853897&onBaseDocumentNumber=22-12317">22-12317</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/22/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Reinstating Briefing and Granting Motion. The parties were unable to agree to a settlement.  Appellants/cross-respondents (appellants) and respondent/cross-appellant (respondent) shall each have 14 days from the date of this order to file and serve a transcript request form.  Appellants shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  Respondent shall have 30 days from service of appellants' opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal.  Appellants shall have 30 days from service of respondent's combined brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal.  Respondent shall have 14 days from service of appellants' combined brief to file and serve a reply brief on cross-appeal, if deemed necessary.  The clerk of this court shall detach the case appeal statement from the motion filed on April 19, 2022, and file it.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=854360&onBaseDocumentNumber=22-12768">22-12768</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/22/2022</td><td>Notice of Appeal Documents</td><td>Filed Appellant/Cross-Respondent's Case Appeal Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=854361&onBaseDocumentNumber=22-12769">22-12769</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Notice of Appeal Documents</td><td>Filed Respondent/Cross-Appellant's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=854660&onBaseDocumentNumber=22-13063">22-13063</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2022</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondent's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=854809&onBaseDocumentNumber=22-13211">22-13211</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Transcript Request</td><td>Filed Appellant/Cross-Respondent's Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=856204&onBaseDocumentNumber=22-14512">22-14512</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2022</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=856291&onBaseDocumentNumber=22-14599">22-14599</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Transcript Request</td><td>Filed Respondent/Cross-Appellant's Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=856292&onBaseDocumentNumber=22-14600">22-14600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2022</td><td>Motion</td><td>Filed Joint Motion to Consolidate Appeals. (Consolidate with 84244 and 84494) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=857880&onBaseDocumentNumber=22-16098">22-16098</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Consolidate.  Michael Kammerling shall have until May 31, 2022, to file and serve a transcript request form.  Kammerling shall have until August 15, 2022, to file and serve a single combined opening brief.  Richard and Laura Litt (the Litts) shall each have 30 days from the date of service of Kammerling's brief to file and serve a combined answering and opening brief.  Kammerling shall then have 30 days from the date of service of the Litts' brief to file an answering brief in response to the issues they raise in their brief and a reply in support of the arguments he raised in his initial brief. The Litts shall then have 30 days from the date of service of Kammerling's brief to file and serve a reply.  Nos. 84244/84494/84495.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=858387&onBaseDocumentNumber=22-16595">22-16595</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/27/2022</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Motion to Expedite Appeals. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=858830&onBaseDocumentNumber=22-17029">22-17029</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2022</td><td>Transcript Request</td><td>Filed Appellant's Certificate of No Transcript Request. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=858968&onBaseDocumentNumber=22-17165">22-17165</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/03/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion to Expedited Appeals. Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=859576&onBaseDocumentNumber=22-17760">22-17760</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/03/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of NRAP 26.1 Disclosure. Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=859582&onBaseDocumentNumber=22-17766">22-17766</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Reply in Support of Their Motion to Expedite Appeals. Nos. 84244/84494/84495 (REJECTED PER NOTICE ISSUED 6/13/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=861561&onBaseDocumentNumber=22-18664">22-18664</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed Motion for Extension to File Reply in Support of Respondents/Cross-Appellants' Motion to Expedite Appeals. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=861630&onBaseDocumentNumber=22-18733">22-18733</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed Respondents/Cross-Appellants' Reply in Support of Their Motion to Expedite Appeals. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=861637&onBaseDocumentNumber=22-18740">22-18740</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/20/2022</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent Michael Kammerling's Notice of Non-Opposition to Motion for Extension to File Reply in Support of Respondent/Cross-Appellants' Motion to Expedite Appeals. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=862391&onBaseDocumentNumber=22-19479">22-19479</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motion. Richard and Laura Litt (the Litts) filed a motion to expedite the briefing schedule in these appeals and cross-appeals. Michael Kammerling filed a response and the Litts filed a reply. The motion is granted as proposed in the Litts' reply. Kammerling shall have until August 1, 2022, to file and serve a single combined opening brief addressing all issues. The Litts shall have until August 31, 2022, to file and serve their combined answering brief and opening brief on cross-appeal. Kammerling shall have until September 21, 2022, to file and serve the combined reply brief on appeal and answering brief on cross-appeal. Finally, the Litts shall have until October 12, 2022, to file and serve their reply brief on cross-appeal. No extensions will be granted absent a demonstration of extraordinary circumstances and extreme need.  fn1 [Despite its untimeliness, the Litts' motion for an extension of time to file the reply is granted. The reply was filed on June 13, 2022.]  Nos. 84244/84494/84495  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=863295&onBaseDocumentNumber=22-20314">22-20314</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2022</td><td>Motion</td><td>Filed Stipulation to Modify Briefing Schedule. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=866886&onBaseDocumentNumber=22-23790">22-23790</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation.  Appellant and respondent/cross-appellant Michael Kammerling shall have until August 8, 2022, to file and serve the combined opening brief.  Respondents and appellants/cross-respondents Richard and Laura Litt shall have until September 14, 2022, to file and serve the combined answering brief on appeal and opening brief on cross-appeal. Kammerling shall have until October 5, 2022, to file and serve the combined reply brief on appeal and answering brief on cross-appeal. The Litts shall have until October 26, 2022, to file and serve the reply brief on cross-appeal if deemed warranted.  Nos. 84244/84494/84495.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867175&onBaseDocumentNumber=22-24048">22-24048</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 1 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867931&onBaseDocumentNumber=22-24750">22-24750</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 2 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867945&onBaseDocumentNumber=22-24764">22-24764</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 3 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867947&onBaseDocumentNumber=22-24766">22-24766</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 4 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867948&onBaseDocumentNumber=22-24767">22-24767</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 5 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867949&onBaseDocumentNumber=22-24768">22-24768</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 6 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867950&onBaseDocumentNumber=22-24769">22-24769</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 7 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867951&onBaseDocumentNumber=22-24770">22-24770</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 8 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867952&onBaseDocumentNumber=22-24771">22-24771</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 9 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867953&onBaseDocumentNumber=22-24772">22-24772</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 10 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867954&onBaseDocumentNumber=22-24773">22-24773</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 11 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867957&onBaseDocumentNumber=22-24776">22-24776</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 12 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867958&onBaseDocumentNumber=22-24777">22-24777</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 13 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867959&onBaseDocumentNumber=22-24778">22-24778</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 14 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867963&onBaseDocumentNumber=22-24782">22-24782</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 15 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867966&onBaseDocumentNumber=22-24785">22-24785</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 16 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867967&onBaseDocumentNumber=22-24786">22-24786</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 17 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867968&onBaseDocumentNumber=22-24787">22-24787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 18 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867969&onBaseDocumentNumber=22-24788">22-24788</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 19 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867971&onBaseDocumentNumber=22-24790">22-24790</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 20 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867972&onBaseDocumentNumber=22-24791">22-24791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2022</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 21 Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867973&onBaseDocumentNumber=22-24792">22-24792</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=867992&onBaseDocumentNumber=22-24811">22-24811</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2022</td><td>Motion</td><td>Filed Stipulation to Modify Briefing Schedule. Nos. 84244/84494/94495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=871873&onBaseDocumentNumber=22-28527">22-28527</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation.  Respondents and appellants/cross-respondents Richard and Laura Litt shall have until September 21, 2022, to file and serve the combined answering brief and opening brief on cross-appeal.  Appellant and respondent/cross-appellant Michael Kammerling shall have until October 12, 2022, to file and serve the combined reply brief on appeal and answering brief on cross-appeal.  The Litts shall have until November 2, 2022, to file and serve the reply brief on cross-appeal.  Nos. 84244/84494/84495.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=872075&onBaseDocumentNumber=22-28726">22-28726</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 1. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873083&onBaseDocumentNumber=22-29671">22-29671</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 2. (Part 1)  Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873085&onBaseDocumentNumber=22-29673">22-29673</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 2. (Part 2) Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873087&onBaseDocumentNumber=22-29675">22-29675</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 2. (Part 3) Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873088&onBaseDocumentNumber=22-29676">22-29676</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 2. (Part 4) Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873089&onBaseDocumentNumber=22-29677">22-29677</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 3. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873092&onBaseDocumentNumber=22-29680">22-29680</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 4. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873093&onBaseDocumentNumber=22-29681">22-29681</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 5. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873096&onBaseDocumentNumber=22-29684">22-29684</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Appendix</td><td>Filed Respondents' (Laura and Richard Lift) Appendix to Answering Brief on case no. 84244 and Opening Brief on Cross-Appeal 84494 and 84495. Vol. 6. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873097&onBaseDocumentNumber=22-29685">22-29685</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2022</td><td>Brief</td><td>Filed Respondent/Cross-Appellants' (Laura and Richard Lift) Answering Brief on Appeal (No. 84244) and Opening Brief on Cross-Appeal (Nos. 84494 &amp; 84495) Nos. 84244/84494/94495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=873149&onBaseDocumentNumber=22-29735">22-29735</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Motion</td><td>Filed Stipulation to Modify Briefing Schedule. Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=875502&onBaseDocumentNumber=22-31995">22-31995</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. Appellant and respondent/cross-appellant Michael Kammerling shall have until October 19, 2022, to file and serve the combined reply brief on appeal and answering brief on cross-appeal. Respondents and appellants/cross-respondents Richard and Laura Litt shall have until November 16, 2022, to file and serve the reply brief on cross-appeal. Nos. 84244/84494/84495.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=875668&onBaseDocumentNumber=22-32156">22-32156</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Reply Brief and Answering Brief on Cross-Appeal. Nos. 84244/84494/84495. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=876527&onBaseDocumentNumber=22-32975">22-32975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2022</td><td>Brief</td><td>Filed Respondents/Cross-Appellants' Reply Brief. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=879780&onBaseDocumentNumber=22-36109">22-36109</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2022</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Reply Brief Vol. 1. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=879781&onBaseDocumentNumber=22-36110">22-36110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2023</td><td>Brief</td><td>Filed Respondent/Cross-Appellants' Notice of Supplemental Authorities. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=885839&onBaseDocumentNumber=23-00883">23-00883</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/25/2023</td><td>Brief</td><td>Filed Appellant / Cross-Respondent's Response to Respondent/Cross-Appellants' Notice of Supplemental Authorities. Nos. 84244/84494/84495 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=887434&onBaseDocumentNumber=23-02420">23-02420</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2023</td><td>Motion</td><td>Filed Stipulation to Dismiss Consolidated Appeals. Nos. 84244/84494/84495. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=905754&onBaseDocumentNumber=23-20012">23-20012</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2023</td><td>Order/Dispositional</td><td>Filed Order/Stipulated Dismissal. Order Dismissing Appeal. Pursuant to the stipulation of the parties, and cause appearing, these appeals are dismissed.  The parties shall bear their own costs and attorney fees.   Case Closed/No Remittitur Issued. Nos. 84244/84494/84485. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63693&csIID=63693&deLinkID=906434&onBaseDocumentNumber=23-20685">23-20685</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63693&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

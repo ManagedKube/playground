@@ -1,0 +1,751 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82949: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=6B49FDD8DBD79EF6ADEADCF6B12F7667">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61606">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82949</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ANDERSON BUS. ADVISORS, LLC VS. WHITTEMORE C/W 82633/83326/84499</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=61141">82633</a>*, 82949, <a href="/public/caseView.do?csIID=62107">83326</a>, <a href="/public/caseView.do?csIID=63697">84499</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61141">82633</a>, <a href="/public/caseView.do?csIID=61428">82819</a>, <a href="/public/caseView.do?csIID=62107">83326</a>, <a href="/public/caseView.do?csIID=62144">83348</a>, <a href="/public/caseView.do?csIID=63697">84499</a>, <a href="/public/caseView.do?csIID=64351">84975</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A809621</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>05/26/2021 / Tanksley, Thomas</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>05/10/2023</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Anderson Business Advisors, LLC</td><td valign="top">Renee M. Finch
+							(Messner Reeves LLP)
+						<br>Christina Mundy-Mamer
+							(Messner Reeves LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Elizabeth Cannon</td><td valign="top">Jennifer L. Foley, Ph.D.
+							(HKM Employment Attorneys LLP)
+						<br>Victoria C. Mullins
+							(Mullins &amp; Trenchak, Attorneys at Law)
+						<br>Philip J. Trenchak
+							(Mullins &amp; Trenchak, Attorneys at Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Katelyn Whittemore</td><td valign="top">Jennifer L. Foley, Ph.D.
+							(HKM Employment Attorneys LLP)
+						<br>Victoria C. Mullins
+							(Mullins &amp; Trenchak, Attorneys at Law)
+						<br>Philip J. Trenchak
+							(Mullins &amp; Trenchak, Attorneys at Law)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>04/07/2022</td><td>Overdue</td><td>Court Reporter Certificate/Not Fast Track</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Filing Fee</td><td>Filing Fee Due.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=817172&onBaseDocumentNumber=21-14740">21-14740</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=817175&onBaseDocumentNumber=21-14742">21-14742</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Messner Reeves LLP. Check No. 61041. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=817424&onBaseDocumentNumber=21-14989">21-14989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Thomas J. Tanksley. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=817475&onBaseDocumentNumber=21-15040">21-15040</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Other. The premediation conference is continued because more time is needed due to complexities and other challenges.  Request until July 15 to submit ECAR.  Case Nos. 82633/82819/82949. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=818017&onBaseDocumentNumber=21-15574">21-15574</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2021</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=819815&onBaseDocumentNumber=21-17297">21-17297</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Other. Case No. 82819 is appropriate for mediation and a settlement conference is scheduled for August 25, 2021, at 10:30 AM. Case Nos. 82633 and 82949 are continued with conferences to be determined after settlement judge has benefit of first conference. Case Nos. 82633/82819/82949. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=822131&onBaseDocumentNumber=21-19396">21-19396</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Other. The premediation conference is continued. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=830410&onBaseDocumentNumber=21-27259">21-27259</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/24/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued. Due to delays up to now in settling another case with same appellant, and with SJ to undergo 2 knee surgeries by end of 2021, request a 90 day extension for final report. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=833953&onBaseDocumentNumber=21-30632">21-30632</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to February 22, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=834367&onBaseDocumentNumber=21-31035">21-31035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=845106&onBaseDocumentNumber=22-03971">22-03971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=845384&onBaseDocumentNumber=22-04241">22-04241</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 9/21/20 and 8/4/21. To Court Reporter: Brynn White. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=847043&onBaseDocumentNumber=22-05791">22-05791</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals.  Appellant shall have until May 9, 2022, to file and serve a single opening brief addressing all issues in these appeals.  Nos. 82633/83326/82949.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=847375&onBaseDocumentNumber=22-06118">22-06118</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals and Regarding Briefing. This court concludes that consolidation with Docket Nos. 82633, 82949, and 83326 is warranted.  See NRAP 3(b)(2). These appeals are hereby consolidated. Appellant's appendix and single opening brief due: May 16, 2022. Nos. 82633/83326/82949/84499.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=855468&onBaseDocumentNumber=22-13790">22-13790</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Opening Brief and Appendix due:  May 31, 2022.  Nos. 82633/82949/83326/84499.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=855800&onBaseDocumentNumber=22-14115">22-14115</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2022</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Opening Brief and Appendix. Nos. 82633/83326/82949/84499. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=858457&onBaseDocumentNumber=22-16663">22-16663</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellant shall have until June 30, 2022, to file and serve the opening brief and appendix.  Nos. 82633/83326/82949/84499.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=858959&onBaseDocumentNumber=22-17156">22-17156</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Brynn White stating that the requested transcripts were delivered.  Dates of transcripts: 5/12/21, 8/4/21 and 9/21/20. Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=863115&onBaseDocumentNumber=22-20138">22-20138</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2022</td><td>Motion</td><td>Filed Appellant's Motion to File Opening Brief in Excess of NRAP 32 Limitation (First Request) and for Extension of Time to File Opening Brief or Appendix (Second request). Nos. 82633/83326/82949/84499 (REJECTED PER NOTICE ISSUED 6/30/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=863657&onBaseDocumentNumber=22-20673">22-20673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2022</td><td>Motion</td><td>Filed Appellant's Motion to File Opening Brief in Excess of NRAP 32 Limitation (First Request) and for Extension of Time to File Opening Brief or Appendix (Second request). Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=863704&onBaseDocumentNumber=22-20720">22-20720</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions. Appellant has filed a motion for leave to file an opening brief in excess of the page limitation set forth in NRAP 32. The motion is denied without prejudice because it is not accompanied by a coy of the proposed brief as required by NRAP 32(a)(7)(D). Appellant has filed a motion for a third extension of time to file the opening brief. The motion is denied. Appellant's opening brief and joint appendix due: July 11, 2022. Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=864308&onBaseDocumentNumber=22-21307">22-21307</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2022</td><td>Motion</td><td>Filed Appellant's Motion for Excess Pages. (NO MOTION ATTACHED, SPOKE TO NICK NO MOTION NEEDED) Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/11/2022</td><td>Brief</td><td>Filed Apellants' Opening Brief. Nos. 82633/83326/82949/84499. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=864783&onBaseDocumentNumber=22-21777">22-21777</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2022</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vols. 1-9. Nos. 82633/83326/82949/84499  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=864786&onBaseDocumentNumber=22-21780">22-21780</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Respondents' Joint Motion for Extension of Time to File Answering Brief (First Request). Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=868118&onBaseDocumentNumber=22-24934">22-24934</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Answering Brief due: September 9, 2022) Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=868128&onBaseDocumentNumber=22-24944">22-24944</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Motion</td><td>Filed Respondent Elizabeth Cannon and Katelyn Whittemore's Motion for Extension of Time to File Answering Brief (Second Request). Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=871433&onBaseDocumentNumber=22-28092">22-28092</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/09/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Whittemore and Cannon's answering brief due: September 16, 2022. Appellant shall have 30 days from service of the last-filed answering brief to file and serve a reply brief. Nos 82633/82949/83326/84499. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=871602&onBaseDocumentNumber=22-28257">22-28257</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2022</td><td>Brief</td><td>Filed Respondent Jennifer L. Foley and HKM Employment Attorney, LLP''s Answering Brief. Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=871693&onBaseDocumentNumber=22-28347">22-28347</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2022</td><td>Brief</td><td>Filed Respondent Katelyn Whittmore and Elizabeth Cannon's Answering Brief on Appeal. (REJECTED PER NOTICE ISSUED 9/26/22). Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=873667&onBaseDocumentNumber=22-30205">22-30205</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/04/2022</td><td>Order/Procedural</td><td>Filed To date, Whittemore and Cannon have failed to file the motion and answering brief.  Accordingly, the appeal in Docket No. 82949 will be resolved without an answering brief from Whittemore and Cannon.  Appellant shall have 30 days from the date of this order to file and serve a reply brief to the answering brief filed by Jennifer L. Foley and HKM Employment Attorneys LLP, if deemed necessary. (VACATED PER 11/23/22 ORDER) Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=878358&onBaseDocumentNumber=22-34746">22-34746</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Motion</td><td>Filed Motion to Vacate the Order Issued on November 4, 2022. Nos. 82633/82949/83326/84499. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=878595&onBaseDocumentNumber=22-34943">22-34943</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Motion</td><td>Filed Appellant's Opposition to Respondents Elizabeth Cannon and Katelyn Whittemore's Motion to Vacate the Order Issued on November 4, 2022. Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=879455&onBaseDocumentNumber=22-35791">22-35791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Motion</td><td>Filed Respondent's Reply to Appellant's Opposition to Respondents' Motion to Vacate the November 4, 2022 Order.  Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=880239&onBaseDocumentNumber=22-36559">22-36559</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2022</td><td>Order/Procedural</td><td>Filed Order. Respondents in Docket No. 82949, Katelyn Whittemore and Elizabeth Cannon, have filed a motion to vacate this court's order entered November 4, 2022, directing that the appeal would be resolved without an answering brief from Whittemore and Cannon.  Appellant opposes the motion, and respondents have filed a reply.  Having considered the arguments of the parties, this court grants the motion.  The order entered November 4, 2022, is vacated.  Whittemore and Cannon shall have 7 days from the date of this order to file the answering brief.  No extensions will be granted. Appellant shall have 37 days from the date of this order to file and serve a reply brief to the answering briefs filed by all respondents.  Nos. 82633/82949/83326/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=880504&onBaseDocumentNumber=22-36818">22-36818</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2022</td><td>Brief</td><td>Filed Respondents' (Elizabeth Cannon and Katelyn Whittemore) Answering Brief . (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=880554&onBaseDocumentNumber=22-36866">22-36866</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's reply brief due: January 13, 2023. Nos 82633/82949/83326/84499. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=884663&onBaseDocumentNumber=22-40786">22-40786</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2023</td><td>Brief</td><td>Filed Appellant's Reply Brief. Nos. 82633/83326/82949/84499. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=886367&onBaseDocumentNumber=23-01398">23-01398</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. Nos. 82633/83326/82949/84499. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2023</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision to the North Nevada Panelas of the date of this order on the briefs filed herein. Nos. 82633/83326/82949/84499 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61606&csIID=61606&deLinkID=900339&onBaseDocumentNumber=23-14806">23-14806</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61606&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

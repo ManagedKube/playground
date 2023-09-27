@@ -1,0 +1,779 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84192: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=1C48406626364D1234B3104DC5BD9439">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63299">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84192</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">STATEBRIDGE CO., LLC VS. REDWOOD RECOVERY SERVS., LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=29816">61646</a>, <a href="/public/caseView.do?csIID=34928">66728</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A652803</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>11/10/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Statebridge Company, LLC</td><td valign="top">Michael E. Stoberski
+							(Olson, Cannon, Gormley, &amp; Stoberski)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Elevenhome Limited</td><td valign="top">Lawrence Allen Kellogg
+							(Levine, Kellogg, Lehman, Schneider &amp; Grossman)
+						<br>Kaila Patrick
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Redwood Recovery Services, LLC</td><td valign="top">Lawrence Allen Kellogg
+							(Levine, Kellogg, Lehman, Schneider &amp; Grossman)
+						<br>Kaila Patrick
+							(Howard &amp; Howard Attorneys PLLC)
+						<br>L. Christopher Rose
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Erika D. Ballou</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Michael E. Stoberski. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=845255&onBaseDocumentNumber=22-04117">22-04117</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=845256&onBaseDocumentNumber=22-04118">22-04118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=845257&onBaseDocumentNumber=22-04119">22-04119</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real Parties in Interest's Answer due:  28 days.  Petitioner shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=847290&onBaseDocumentNumber=22-06036">22-06036</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2022</td><td>Motion</td><td>Filed Stipulation Extend Time to File Answer to Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=850526&onBaseDocumentNumber=22-09076">22-09076</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. Real parties in interest's answer to the petition due: April 25, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=850825&onBaseDocumentNumber=22-09370">22-09370</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/08/2022</td><td>Motion</td><td>Filed Stipulation to File Errata to Petition for Writ of Mandamus. (ERRATA DETACHED AND FILED PER 4/12/22). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=852590&onBaseDocumentNumber=22-11091">22-11091</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. The stipulation of the parties to file an errata to the petition is granted. The clerk of this court shall detach the errata from the motion and shall file it separately.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=853089&onBaseDocumentNumber=22-11531">22-11531</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2022</td><td>Notice/Incoming</td><td>Filed Errata to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=853090&onBaseDocumentNumber=22-11532">22-11532</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Motion</td><td>Filed Real Parties in Interests' Motion to Extend Time To File Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=854641&onBaseDocumentNumber=22-13044">22-13044</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Petition/Writ</td><td>Filed Real Parties in Interests' Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855659&onBaseDocumentNumber=22-13915">22-13915</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 1.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855599&onBaseDocumentNumber=22-13918">22-13918</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855600&onBaseDocumentNumber=22-13919">22-13919</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 3. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855607&onBaseDocumentNumber=22-13926">22-13926</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 3. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855610&onBaseDocumentNumber=22-13929">22-13929</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 3. Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855612&onBaseDocumentNumber=22-13931">22-13931</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 4. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855625&onBaseDocumentNumber=22-13944">22-13944</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 4. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855619&onBaseDocumentNumber=22-13938">22-13938</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 4. Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855618&onBaseDocumentNumber=22-13937">22-13937</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 5. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855624&onBaseDocumentNumber=22-13943">22-13943</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 5. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855621&onBaseDocumentNumber=22-13940">22-13940</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 6. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855628&onBaseDocumentNumber=22-13947">22-13947</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 6. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855630&onBaseDocumentNumber=22-13949">22-13949</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855629&onBaseDocumentNumber=22-13948">22-13948</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 8. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855631&onBaseDocumentNumber=22-13950">22-13950</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 8. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855632&onBaseDocumentNumber=22-13951">22-13951</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855633&onBaseDocumentNumber=22-13952">22-13952</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855634&onBaseDocumentNumber=22-13953">22-13953</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 11. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855635&onBaseDocumentNumber=22-13954">22-13954</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 11. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855636&onBaseDocumentNumber=22-13955">22-13955</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 11. Part 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855637&onBaseDocumentNumber=22-13956">22-13956</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 11. Part 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855639&onBaseDocumentNumber=22-13958">22-13958</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 11. Part 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855640&onBaseDocumentNumber=22-13959">22-13959</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 12. Part 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855643&onBaseDocumentNumber=22-13962">22-13962</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Appendix</td><td>Filed Real Parties in Interests' Appendix to Answer to Writ Petition. Vol. 12. Part 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855642&onBaseDocumentNumber=22-13961">22-13961</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Real parties in interest's unopposed motion for a second extension of time to file the answer to the petition is granted.  The answer and appendix were filed on May 2, 2022. Petitioner shall have until May 16, 2022, to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=855916&onBaseDocumentNumber=22-14228">22-14228</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Petitioner's Reply in Support of Petition for Writ of Mandamus due:  May 31, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=857157&onBaseDocumentNumber=22-15454">22-15454</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition for Writ of Mandamus. (REJECTED PER NOTICE FILED ON 5/27/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/27/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Reply to Answer to Petition. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=858696&onBaseDocumentNumber=22-16897">22-16897</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/27/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply in Support of Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=858804&onBaseDocumentNumber=22-17003">22-17003</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision to the Southern Nevada Panel as of the date of this order on the briefs filed herein. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=879142&onBaseDocumentNumber=22-35483">22-35483</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/05/2022</td><td>Motion</td><td>Filed Emergency Motion Under NRAP 27 (e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=881922&onBaseDocumentNumber=22-38144">22-38144</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Stay. Statebridge has filed an emergency motion in this court. We deny the emergency motion. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=882056&onBaseDocumentNumber=22-38277">22-38277</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/19/2022</td><td>Order/Dispositional</td><td>Filed Order Granting in Part and Denying in Part Petition for a Writ of Mandamus. "We grant Statebridge's petition for a writ of mandamus in part and deny it in part.  The clerk of this court shall issue a writ of mandamus directing the district court to vacate its order as to compensatory damages and attorney fees and remand to recalculate its awards in accordance with this order, conducting further proceedings as necessary." SNP22 - JH/LS/DH. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=883475&onBaseDocumentNumber=22-39616">22-39616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/19/2022</td><td>Writ</td><td>Filed Writ with Letter. Original and one copy of writ and copy of order mailed to attorney Michael E. Stoberski mailed to for service upon Judge Erika D. Ballou. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=883507&onBaseDocumentNumber=22-39648">22-39648</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/04/2023</td><td>Writ</td><td>Filed Returned Writ. Original Writ returned. Served on Judge Erika Ballou on December 22, 2022. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=885074&onBaseDocumentNumber=23-00135">23-00135</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Post-Judgment Petition</td><td>Filed Real Parties in Interest's Petition for Rehearing or, Alternatively, For Correction And Clarification of Findings. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=885462&onBaseDocumentNumber=23-00511">23-00511</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from L. Christopher Rose. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c). fn1 [The Honorable Justice Hardesty having retired did not participate in the decision on rehearing.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=891116&onBaseDocumentNumber=23-05958">23-05958</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/24/2023</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/24/2023</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63299&csIID=63299&deLinkID=894406&onBaseDocumentNumber=23-09120">23-09120</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63299&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

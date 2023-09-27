@@ -1,0 +1,718 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84210: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=2D5C850F3DB0501DD61292A0CA43C5BE">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63317">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84210</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LATTANZIO VS. HOWARD &amp; HOWARD ATTORNEYS, PLLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A840671</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Settlement Notice Issued/Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>02/15/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Stayed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Blue Diamond OP, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Coffee, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Ft. Apache OP, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Rainbow North OP, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Rainbow OP, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">BR Silverado Ranch OP, LLC</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Christopher R. Lattanzio</td><td valign="top">George F. Hand
+							(Hand Page Sullivan Martin, LLC)
+						<br>Joel G. Selik
+							(Selik Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Howard &amp; Howard Attorneys PLLC</td><td valign="top">James A. Kohl
+							(Howard &amp; Howard Attorneys PLLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>02/21/2023</td><td>Overdue</td><td>Certificate of Service</td><td></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>12/06/2023</td><td>Open</td><td>Status Report</td><td>Appellant</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=845569&onBaseDocumentNumber=22-04424">22-04424</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=845571&onBaseDocumentNumber=22-04426">22-04426</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=845574&onBaseDocumentNumber=22-04429">22-04429</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/10/2022</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=845723&onBaseDocumentNumber=22-04574">22-04574</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/14/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Joel G. Selik. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=846111&onBaseDocumentNumber=22-04956">22-04956</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/15/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=846172&onBaseDocumentNumber=22-05016">22-05016</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/15/2022</td><td>Notice of Appeal Documents</td><td>Filed Appellant's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=846233&onBaseDocumentNumber=22-05074">22-05074</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Notice/Incoming</td><td>Filed Appellants' Notice of Appearance for George F. Hand. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=846356&onBaseDocumentNumber=22-05191">22-05191</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/18/2022</td><td>Order/Procedural</td><td>Filed Order Adding Counsel.  The clerk of this court shall add attorney George F. Hand of the law firm Hand &amp; Sullivan, LLC as co-counsel for appellants.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=846689&onBaseDocumentNumber=22-05441">22-05441</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=847537&onBaseDocumentNumber=22-06273">22-06273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for May 18, 2022, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=847990&onBaseDocumentNumber=22-06714">22-06714</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. A Pre-Mediation Conference is scheduled for June 21, 2022, at 10:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=857483&onBaseDocumentNumber=22-15777">22-15777</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/17/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Other. The Settlement Judge is still determining if case is appropriate. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=862207&onBaseDocumentNumber=22-19298">22-19298</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The parties have reached an agreement in principle, but have not as yet reached a written settlement of their dispute, which has been estimated to take approximately two to three more weeks. The Settlement Judge requests an extension to file the final report. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=871133&onBaseDocumentNumber=22-27796">22-27796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to October 6, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=871373&onBaseDocumentNumber=22-28034">22-28034</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/27/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. It is the Settlement Judge's understanding that the parties have reached an agreement in principle, but still have not as yet reached a written settlement of their dispute, notwithstanding an earlier estimate. The Settlement Judge requests to be granted an additional extension, to an including November 14, 2022, by which to file a final report in this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=877423&onBaseDocumentNumber=22-33858">22-33858</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to November 14, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=877979&onBaseDocumentNumber=22-34406">22-34406</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued. The Settlement Judge requests an additional extension of approximately two months, to and including January 16, 2023, by which to file a final report in this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=881134&onBaseDocumentNumber=22-37439">22-37439</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/10/2022</td><td>Motion</td><td>Filed Stipulation and Order Staying Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=882562&onBaseDocumentNumber=22-38768">22-38768</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. The parties' stipulation to stay this appeal is approved.  All proceedings in this appeal shall be stayed until March 14, 2023.   The parties shall file a joint status report informing the court of the status of the pending arbitration of the separate legal malpractice action on or before March 14, 2023.  Failure to provide such notification will result in the reinstatement of the proceedings in this appeal.  fn1[  In light of this order, no action will be taken on the Settlement Judge's request to have this appeal remain in the settlement program for an additional period of time.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=884141&onBaseDocumentNumber=22-40273">22-40273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2022</td><td>Settlement Program Report</td><td>Filed Final Report/Settlement. The parties have agreed to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=884245&onBaseDocumentNumber=22-40377">22-40377</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2022</td><td>Settlement Order/Procedural</td><td>Filed Order re: Stipulation/Motion to Dismiss. Stipulation or Motion to Dismiss Due: 30 days. (VACATED PER 1/12/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=884666&onBaseDocumentNumber=22-40789">22-40789</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2022</td><td>Motion</td><td>Filed Stipulation and Order Staying Appeal (following Court's Order re Dismissal). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=884745&onBaseDocumentNumber=22-40842">22-40842</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Order/Procedural</td><td>Filed Order. On December 29, 2022, the parties filed a stipulation that clarified that the settlement the parties had reached was not to dismiss the appeal.  Rather, the agreement the parties reached was to stipulate to the stay of this appeal pending the completion of the underlying arbitration case and other agreements.  The parties request this court to reinstate the December 22, 2022, order.  The request is granted.  The clerk of this court shall vacate this court's December 28, 2022, order.  The December 22, 2022, order approving the stipulation remains in effect, all proceedings in this appeal, including settlement proceedings, shall remain stayed until March 14, 2023.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=886014&onBaseDocumentNumber=23-01056">23-01056</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/13/2023</td><td>Motion</td><td>Filed Stipulation Status Report per Court's Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=889534&onBaseDocumentNumber=23-04408">23-04408</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/14/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Stipulation Status Report. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=889575&onBaseDocumentNumber=23-04449">23-04449</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Settlement Order/Procedural</td><td>Filed Order Approving Stipilation. The parties shall file a status report within 120 days from the date of this order. Settlement proceedings shall remain stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=890104&onBaseDocumentNumber=23-04960">23-04960</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Settlement Program Motion/Stipulation</td><td>Filed Appellants' Stipulation Joint Report on Status and Request to Continue Stay of Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=902909&onBaseDocumentNumber=23-17227">23-17227</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation. The parties shall file a status report within 180 days from the date of this order. Settlement proceedings shall remain stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63317&csIID=63317&deLinkID=903920&onBaseDocumentNumber=23-18276">23-18276</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63317&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

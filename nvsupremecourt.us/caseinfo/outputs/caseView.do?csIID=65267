@@ -1,0 +1,926 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85634: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=251F4A60C9FC5F6A894781C85C2DE168">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65267">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85634</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LAS VEGAS REVIEW-JOURNAL, INC. VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=65136">85553</a>, <a href="/public/caseView.do?csIID=66148">86295</a>, <a href="/public/caseView.do?csIID=66894">86857</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A859361</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Senior Justice Gibbons for Justice Bell</td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/10/2022 / Levitt, Lansford</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Anastasia Hendrix</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Arthur Kane</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Briana Erickson</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Glenn Cook</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Keith Moyer</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Las Vegas Review-Journal, Inc.</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Rhonda Prast</td><td valign="top">David E. Chavez
+							(Ballard Spahr LLP/Las Vegas)
+						<br>David Z. Chesnoff
+							(Chesnoff &amp; Schonfeld)
+						<br>Joseph E. Dagher
+							(Ballard Spahr LLP/Las Vegas)
+						<br>Ashley I. Kissinger
+							(Ballard Spahr LLP/Denver)
+						<br>Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						<br>Joel E. Tasca
+							(Ballard Spahr LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Metropolitan Police Department</td><td valign="top">Craig R. Anderson
+							(Marquis Aurbach Chtd.)
+						<br>Matthew J. Christian<br>Liesl K. Freedman<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Robert Telles</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Alexander G. Chen
+							(Clark County District Attorney)
+						<br>Pamela C. Weckerly
+							(Clark County District Attorney)
+						<br>Steven B. Wolfson
+							(Clark County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879094&onBaseDocumentNumber=22-35436">22-35436</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879096&onBaseDocumentNumber=22-35438">22-35438</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Joel E. Tasca. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement Due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879099&onBaseDocumentNumber=22-35441">22-35441</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Motion</td><td>Filed Motion Emergency Motion Under NRAP 27e and NRAP 8 for Injunction Pending Appeal of District Court's Denial of Preliminary Injunction (REJECTED PER PHONE CALL). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Motion</td><td>Filed Appellants' Emergency Motion Under NRAP 27e and NRAP 8 for Injunction Pending Appeal of District Court's Denial of Preliminary Injunction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879190&onBaseDocumentNumber=22-35529">22-35529</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Lansford W. Levitt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879214&onBaseDocumentNumber=22-35553">22-35553</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Motion</td><td>Filed Respondent LVMPD's Motion to Exceed Pages to its Response to Las Vegas Review-Journal's Emergency Motion for Injunctive Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879285&onBaseDocumentNumber=22-35622">22-35622</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Motion</td><td>Filed Respondent LVMPD's Response to Appellants' Emergency Motion Under NRAP 27(e) and NRAP 8 for Injunction Pending Appeal of District Court's Denial of Preliminary Injunction Covering Additional Newsgathering Materials. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879286&onBaseDocumentNumber=22-35623">22-35623</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Order/Procedural</td><td>Filed Order to Show Cause Why Appeal Should not be Summarily Reversed and Remanded and Order Imposing Temporary Injunction. Appellants have filed an emergency motion for an injunction pending appeal, and respondent Las Vegas Metropolitan Police Department has filed an opposition. Respondents shall have 7 days from the date of this order to show cause why the district court's order should not be summarily reversed and the case remanded for further proceedings. Appellant shall have 3 days from when respondents' response is served to file and serve any reply. We temporarily grant appellant's motion for an injunction, pending our receipt and consideration of the response to this show cause order and any reply. fn1 [Respondent's motion for leave to file a response that exceeds the page limit is granted, NRAP 27(d)(2).  The response was filed on November 14, 2022. fn2 [The Honorable Mark Gibbons, Senior Justice, participated in this matter under a general order of assignment.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=879446&onBaseDocumentNumber=22-35782">22-35782</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/21/2022</td><td>Motion</td><td>Filed Respondent Las Vegas Metropolitan Police Department's Response to Order to Show Cause Why Appeal Should Not Be Summarily Reversed and Remanded and Order Imposing Temporary Injunction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=880276&onBaseDocumentNumber=22-36594">22-36594</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/28/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (State of Nevada) Notice of Appearance for Alexander Chen. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=880708&onBaseDocumentNumber=22-37017">22-37017</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/28/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (State of Nevada) Joinder to LVMPD's Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=880709&onBaseDocumentNumber=22-37018">22-37018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/28/2022</td><td>Motion</td><td>Filed Appellants' Reply to Respondent Las Vegas Metropolitan Police Department's Response to Order to Show Cause Why Appeal Should Not Be Summarily Reversed and Remanded. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=880853&onBaseDocumentNumber=22-37162">22-37162</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/29/2022</td><td>Notice/Incoming</td><td>Filed Joinder to Las Vegas Metropolitan Police Department's Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=880961&onBaseDocumentNumber=22-37269">22-37269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/29/2022</td><td>Motion</td><td>Filed Errata to Appellants' Reply to Respondent Las Vegas Metropolitan Police Department's Response to Order to Show Cause Why Appeal Should Not Be Summarily Reversed and Remanded. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=881471&onBaseDocumentNumber=22-37366">22-37366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Notice/Incoming</td><td>Filed Notice NRAP 26.1 Disclosure. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=881449&onBaseDocumentNumber=22-37719">22-37719</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=881450&onBaseDocumentNumber=22-37720">22-37720</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/01/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Deficient Proof of Service. Due date: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=881487&onBaseDocumentNumber=22-37756">22-37756</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/05/2022</td><td>Notice/Incoming</td><td>Filed Amended Certificate of Service. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=881870&onBaseDocumentNumber=22-38092">22-38092</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2023</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. Case Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=885222&onBaseDocumentNumber=23-00273">23-00273</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Settlement Order/Procedural</td><td>Filed Order Removing Appeals from Settlement Program, Consolidating Appeals and Reinstating briefing, and Granting Limited Remand.  Pursuant to the settlement judge, these appeals and cross-appeal are removed from the settlement program. Briefing reinstated. We hereby consolidate them for all appellate purposes.  All parties: 14 days transcript request; appellants: 90 days opening brief and appendix. Cross-appellants shall have 30 days from service of the opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal, which should include any issues arising with respect to the appeal in Docket No. 85634.  Appellants shall have 30 days from service of cross-appellants' combined brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal addressing the issues raised in cross-appellants' combined brief.  Finally, cross-appellants shall have 14 days from service of appellants' combined brief to file and serve a reply brief on cross-appeal and with respect to Docket No. 85634, if deemed necessary.  we conclude that these consolidated matters should be immediately remanded for the limited purpose of allowing the district court to rule on the merits of cross-appellants' second motion.  District court's order due: 30 days. Nos 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=885412&onBaseDocumentNumber=23-00461">23-00461</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2023</td><td>Transcript Request</td><td>Filed Appellant/Cross-Respondent's Request for Transcript of Proceedings. Transcripts requested: 10/11/22, 10/19/22, 01/25/23.  To Court Reporter: Sara Richardson and Norma Ramirez. Nos. 85553/85634 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=886868&onBaseDocumentNumber=23-01866">23-01866</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/20/2023</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=887019&onBaseDocumentNumber=23-02011">23-02011</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2023</td><td>Order/Incoming</td><td>Filed District court order. Certified copy of order filed in district court on 02/02/23. Order Denying Plaintiff's Second Ex Parte Application for an Emergency Temporary Restraining Order and Request for Preliminary Injunction Hearing on Order Shortening Time. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=888399&onBaseDocumentNumber=23-03297">23-03297</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/10/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (Robert Telles) Motion to Withdraw K. Ryan Helmick as Counsel. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=889270&onBaseDocumentNumber=23-04146">23-04146</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/10/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (Robert Telles) Motion to Withdraw K. Ryan Helmick as Counsel. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=889271&onBaseDocumentNumber=23-04147">23-04147</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Attorney K. Ryan Helmick, counsel for appellant/cross-respondent and respondent Robert Telles, has filed a motion to withdraw as counsel on the ground that Telles has informed him he wishes to represent himself. Cause appearing, the motion is granted. The clerk of this court shall remove Mr. Helmick and the Law Office of Ryan Helmick &amp; Associates, P.C., from the docket. Telles shall proceed pro se. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=889577&onBaseDocumentNumber=23-04451">23-04451</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (Las Vegas Metropolitan Police Department) Motion to Remand Pursuant to NRAP 12A. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=890162&onBaseDocumentNumber=23-05018">23-05018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Opposition to Motion for Remand. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=890633&onBaseDocumentNumber=23-05479">23-05479</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (Las Vegas Metropolitan Police Department) Reply in Support of Motion for Remand Pursuant to NRAP 12A. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=891299&onBaseDocumentNumber=23-06140">23-06140</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2023</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's (Las Vegas Metropolitan Police Department) Errata to Reply in Support of Motion for Remand Pursuant to NRAP 12A. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=891328&onBaseDocumentNumber=23-06169">23-06169</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/20/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental (Amended NOA). Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=893772&onBaseDocumentNumber=23-08509">23-08509</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/28/2023</td><td>Order/Procedural</td><td>Filed Order of Limited Remand and Order Lifting Temporary Injunction. Having considered the parties' arguments and the district court's indicative ruling, we grant Metro's motion.  NRAP 12A(b). The preliminary injunction was entered temporarily so that the parties' interests would remain protected while terms of a protocol were considered; the district court has now indicated that it is ready to proceed in determining that protocol.  Remanding for the district court to do so will not unnecessarily delay appellate resolution but will allow the court to substantively decide the issues and detail how the searches will proceed.  Therefore, this matter is remanded for the limited purposes of resolving the countermotion. The district court shall enter its order within 60 days of the date of this order, and the district court clerk shall immediately transmit a certified copy of the written order to the clerk of this court. The briefing schedule in these consolidated appeals and cross-appeal is suspended pending further order of this court, and if deemed appropriate, any aggrieved party may file an amended notice of appeal from the district court's written order. Additionally, on November 14, 2022, in Docket No. 85634, this court entered a temporary injunction regarding additional materials the LVRJ sought to include within the district court's preliminary injunction, pending our receipt and consideration of further briefing.  We extended that temporary injunction during a previous limited remand in that docket, pursuant to which the district court denied the LVRJ's second motion for a preliminary injunction, largely because the one identified item had been returned to its owner and was not in Metro's possession.  Having considered our temporary injunction in light of these developments and the district court's indication that it will, upon remand, enter a protocol governing the search of materials that the LVRJ claims contain protected information, we conclude that the temporary injunction's continued extension is not warranted. Accordingly, our November 14 injunction shall expire 60 days from the date of this order. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=894729&onBaseDocumentNumber=23-09430">23-09430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Order/Incoming</td><td>Filed District court order. Certified copy of order filed in district court on 05/26/23. Interim Order Dissolving the Preliminary Injunction and Setting Forth the Protocol in the Search of the Seized Devices. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=902304&onBaseDocumentNumber=23-16691">23-16691</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Motion - Emergency Motion Under NRAP 27(e) and NRAP 8 to Extend Existing Temporary Injunction Pending Adjudication of Consolidated Appeals Seeking Protection for Privileged Newsgathering Materials. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=902367&onBaseDocumentNumber=23-16754">23-16754</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/30/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent (LVMPD) Motion to Exceed the Type-Volume Limit of Response to Emergency Motion Under NRAP 27(e) and NRAP 8. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=902508&onBaseDocumentNumber=23-16894">23-16894</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Response to Emergency Motion Under NRAP 27(e) and NRAP 8 to Extend Existing Temporary Injunction Pending Adjudication of Consolidated Appeals. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=902703&onBaseDocumentNumber=23-17086">23-17086</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Response to LVMPD's Motion to Exceed Type Volume Limit. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=903010&onBaseDocumentNumber=23-17380">23-17380</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Motion to Strike LVMPD's Overlength Brief. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=903014&onBaseDocumentNumber=23-17384">23-17384</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants'  Motion for Stay Pending Appeal from District Court's Search Protocol Order. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=903033&onBaseDocumentNumber=23-17402">23-17402</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2023</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellants' Notice of Intent to File Reply in Support of Emergency Motion Under NRAP 27(e) to Extend Temporary Injunction. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=903701&onBaseDocumentNumber=23-18061">23-18061</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Amended Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=904009&onBaseDocumentNumber=23-18364">23-18364</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Notice of Appeal Documents</td><td>Filed District Court Minutes. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=904029&onBaseDocumentNumber=23-18384">23-18384</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/cross-respondent Las Vegas Metropolitan Police Department's responses to motions due: June 23, 2023. Nos. 85553/85634  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=904045&onBaseDocumentNumber=23-18400">23-18400</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Reply to Response to Motion to Exceed Type-Volume Limit. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=905705&onBaseDocumentNumber=23-19963">23-19963</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Response to Motion to Strike LVMPD's Overlength Brief. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=905763&onBaseDocumentNumber=23-20021">23-20021</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/23/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Motion to Extend Time to File Response to LVRJ's Motion for a Stay. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=905765&onBaseDocumentNumber=23-20023">23-20023</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/30/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Reply in Support of Motion to Strike LVMPD's Overlength Brief. Nos. 85553/85634 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=906905&onBaseDocumentNumber=23-21060">23-21060</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Response to Motion for Stay Pending Appeal. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=907442&onBaseDocumentNumber=23-21629">23-21629</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Reply in Support of Motion for a Stay Pending Appeal. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908550&onBaseDocumentNumber=23-22637">23-22637</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 1 of 6. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908495&onBaseDocumentNumber=23-22639">23-22639</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 2 of 6. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908496&onBaseDocumentNumber=23-22640">23-22640</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 3 of 6. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908497&onBaseDocumentNumber=23-22641">23-22641</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 4 of 6. Nos. 85553/85634.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908498&onBaseDocumentNumber=23-22642">23-22642</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 5 of 6. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908499&onBaseDocumentNumber=23-22643">23-22643</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix of Exhibits to Reply in Support of Motion for a Stay Pending Appeal - Vol 6 of 6. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=908500&onBaseDocumentNumber=23-22644">23-22644</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/21/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeals and Cross-appeal in Part, Reinstating Expedited Briefing, and Granting Stay. We resolve the pending procedural issues and motions in these appeals and reinstate the briefing schedule as follows. "We dismiss the appeal by the State, Robert Telles, and LVMPD and the cross-appeal by the Review-Journal parties challenging the preliminary injunction in Docket No. 85553, as well as the Review-Journal parties' appeal from the order denying a second preliminary injunction in Docket No. 85634."  With respect to the remaining matter, the Review-Journal parties' appeal from the May 26 protocol order, we direct the clerk of this court to realign the docket so that the Review-Journal parties are designated as the appellants and the State, Telles, and LVMPD are designated as the respondents. Appellants shall have 7 days from the date of this order to file and serve any transcript request form requesting additional transcripts. Appellants' opening brief and appendix due: 14 days. Respondents shall have 14 days from the date that the opening brief is served to file and serve answering briefs. Appellants shall have 7 days from when the last answer is served to file and serve any reply brief. We grant appellants' June 2 motion for stay and hereby stay implementation of the search protocol portion of the district court's May 26 order, insofar as it pertains to the six seized devices identified in the district court's order, pending further order of this court. We deny appellants' May 26 emergency motion to extend the preliminary injunction we imposed in Docket No. 85634. fn1 [LVMPD's opposed May 30 motion to exceed the page limit in responding to the Review-Journal parties' emergency motion to extend injunction is granted, NRAP 27(d)(2); the 30-page response filed on May 31 is thus deemed properly filed, and the Review-Journal parties' June 2 opposed motion to strike the response is denied.  LVMPD's June 23 motion to extend the time to file a response to the stay motion is granted, NRAP 27(a)(3)(A); we thus deem the response timely filed on July 7.] fn2 [We note that one of the initial Review-Journal parties, Rhonda Prast, did not join in the amended notice of appeal, and the parties explain that she is no longer with the Review-Journal.  Since the proceedings to which she was a party have been dismissed, the clerk shall remove Prast as an appellant in this matter.] Nos. 85553/85634. EC/KP/MG. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=909354&onBaseDocumentNumber=23-23428">23-23428</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/15/2023</td><td>Remittitur</td><td>Issued Remittitur. Nos. 85553/85634. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=912471&onBaseDocumentNumber=23-26471">23-26471</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/15/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. Nos. 85553/85634. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on 8/17/23. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65267&csIID=65267&deLinkID=913911&onBaseDocumentNumber=23-26471">23-26471</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65267&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

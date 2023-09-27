@@ -1,0 +1,822 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85025: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=AA324E99105114DC00634B58BED459AB">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64414">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85025</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">WANG VS. CIM GRP. L.P.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A844649</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>07/19/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Xiaochu Liu</td><td valign="top">Zheng Gao
+							(Reid &amp; Wise LLC/NY)
+						<br>Tye S. Hanseen
+							(Marquis Aurbach Chtd.)
+						<br>Matthew Sava
+							(Reid &amp; Wise LLC/NY)
+						<br>Edward Wu
+							(Reid &amp; Wise LLC/NY)
+						<br>Shiyong Ye
+							(Reid &amp; Wise LLC/NY)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Xin Rong</td><td valign="top">Zheng Gao
+							(Reid &amp; Wise LLC/NY)
+						<br>Tye S. Hanseen
+							(Marquis Aurbach Chtd.)
+						<br>Matthew Sava
+							(Reid &amp; Wise LLC/NY)
+						<br>Edward Wu
+							(Reid &amp; Wise LLC/NY)
+						<br>Shiyong Ye
+							(Reid &amp; Wise LLC/NY)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Xinxing Wang</td><td valign="top">Zheng Gao
+							(Reid &amp; Wise LLC/NY)
+						<br>Tye S. Hanseen
+							(Marquis Aurbach Chtd.)
+						<br>Matthew Sava
+							(Reid &amp; Wise LLC/NY)
+						<br>Edward Wu
+							(Reid &amp; Wise LLC/NY)
+						<br>Shiyong Ye
+							(Reid &amp; Wise LLC/NY)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Xuan Xu</td><td valign="top">Zheng Gao
+							(Reid &amp; Wise LLC/NY)
+						<br>Tye S. Hanseen
+							(Marquis Aurbach Chtd.)
+						<br>Matthew Sava
+							(Reid &amp; Wise LLC/NY)
+						<br>Edward Wu
+							(Reid &amp; Wise LLC/NY)
+						<br>Shiyong Ye
+							(Reid &amp; Wise LLC/NY)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Yan Zhang</td><td valign="top">Zheng Gao
+							(Reid &amp; Wise LLC/NY)
+						<br>Tye S. Hanseen
+							(Marquis Aurbach Chtd.)
+						<br>Matthew Sava
+							(Reid &amp; Wise LLC/NY)
+						<br>Edward Wu
+							(Reid &amp; Wise LLC/NY)
+						<br>Shiyong Ye
+							(Reid &amp; Wise LLC/NY)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">CIM Group, L.P.</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Travis F. Chance
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Emily Dyer
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Maximilien D. Fetaz
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">DT3 Manager, LLC</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Travis F. Chance
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Emily Dyer
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Maximilien D. Fetaz
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Economic Impact Regional Center, LLC</td><td valign="top">Ryan A. Andersen
+							(Andersen &amp; Beede)
+						<br>Michael N. Beede
+							(Andersen &amp; Beede)
+						<br>Valerie Y. Zaidenberg
+							(Andersen &amp; Beede)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">LVLA Loan Manager, LLC</td><td valign="top">Adam K. Bult
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Travis F. Chance
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Emily Dyer
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Maximilien D. Fetaz
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						<br>Eric D. Walther
+							(Brownstein Hyatt Farber Schreck, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Pacific Western Bank</td><td valign="top">Bradley T. Austin
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Patrick G. Byrne
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Erin M. Gettel
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Malani D. Kotchka-Alanes
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Daniel F. Polsenberg
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/18/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=865594&onBaseDocumentNumber=22-22532">22-22532</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=865600&onBaseDocumentNumber=22-22538">22-22538</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/19/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=865720&onBaseDocumentNumber=22-22657">22-22657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/22/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Marquis Aurbach Coffing.  Check no. 135734. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for August 17, 2022, at 8:30 am. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=866782&onBaseDocumentNumber=22-23690">22-23690</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=867719&onBaseDocumentNumber=22-24543">22-24543</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/17/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=876025&onBaseDocumentNumber=22-32482">22-32482</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=876365&onBaseDocumentNumber=22-32817">22-32817</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/28/2022</td><td>Transcript Request</td><td>Filed Notice of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=877524&onBaseDocumentNumber=22-33958">22-33958</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/19/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (Pacific Western Bank) Notice of Appearance for Kelly Dove. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=883939&onBaseDocumentNumber=22-40074">22-40074</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Deficient Proof of Service. Due date: 5 days. (Notice of Appearance) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=883719&onBaseDocumentNumber=22-39858">22-39858</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Proof of Service for Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=883934&onBaseDocumentNumber=22-40069">22-40069</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=886468&onBaseDocumentNumber=23-01469">23-01469</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Appendix</td><td>Filed Appellants' Appendix, Volume 1. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=886469&onBaseDocumentNumber=23-01470">23-01470</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Appendix</td><td>Filed Appellants' Appendix, Volume 2. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=886470&onBaseDocumentNumber=23-01471">23-01471</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Appendix</td><td>Filed Appellants' Appendix, Volume 3. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=886471&onBaseDocumentNumber=23-01472">23-01472</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/17/2023</td><td>Motion</td><td>Filed Appellants' Motion to File Appendix Volume 4 Under Seal. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=886481&onBaseDocumentNumber=23-01482">23-01482</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant has moved for leave to file volume 4 of the appendix under seal. The motion is granted.  The clerk of this court shall file volume 4 of the appendix, received on January 19, 2023, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=887704&onBaseDocumentNumber=23-02687">23-02687</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vol 4. (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Las Vegas Econmic Impact Regional Center, LLC's answering brief due: March 2, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=888856&onBaseDocumentNumber=23-03747">23-03747</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance as Counsel for Eric D. Walther. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=888904&onBaseDocumentNumber=23-03795">23-03795</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/16/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Pacific Western Bank) Notice of Appearance for Daniel F. Polsenberg, Abraham G. Smith and Dale Kotchka-Alanes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=890042&onBaseDocumentNumber=23-04899">23-04899</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2023</td><td>Motion</td><td>Filed Stipulation for an Extension of Time to File Answer Brief and Reply Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=890043&onBaseDocumentNumber=23-04900">23-04900</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2023</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the notice of appearance filed February 16, 2023, the clerk of this court shall add attorneys Daniel F. Polsenberg, Abraham G. Smith, and Dale Kotchka-Alanes and the law firm of Lewis Roca Rothgerber Christie LLP to the docket as counsel for respondent Pacific Western Bank in this matter. The parties have filed a stipulation to extend the time for filing briefs. The stipulation is approved. Respondents shall have until March 30, 2023, to file and serve their answering briefs.  Appellants shall have until May 19, 2023, to file and serve a reply brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=890735&onBaseDocumentNumber=23-05579">23-05579</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/13/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Las Vegas Economic Impact Regional Center) Notice of Firm Name Change. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=892923&onBaseDocumentNumber=23-07686">23-07686</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/13/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Las Vegas Economic Impact Regional Center) Notice of Appearance for Michael N. Beede. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=892936&onBaseDocumentNumber=23-07697">23-07697</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2023</td><td>Motion</td><td>Filed Respondents' Unopposed Joint Motion for Second Extension of Time to File Respondents' Answering Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=895125&onBaseDocumentNumber=23-09814">23-09814</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondents' answering briefs due: May 1, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=895803&onBaseDocumentNumber=23-10459">23-10459</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Brief</td><td>Filed Respondents' (CIM Group, LVLA Loan Manager, &amp; DT3 Manager) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=899056&onBaseDocumentNumber=23-13618">23-13618</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/01/2023</td><td>Brief</td><td>Filed Respondent's (Las Vegas Economic Impact Regional Center, LLC) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=899099&onBaseDocumentNumber=23-13661">23-13661</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Brief</td><td>Filed Respondent's (Pacific Western Bank) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=899106&onBaseDocumentNumber=23-13668">23-13668</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Motion for Extension of Time to File Appellants' Reply Briefs. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=902292&onBaseDocumentNumber=23-16679">23-16679</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. Appellants' Reply Brief due: June 30, 2023. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=902308&onBaseDocumentNumber=23-16695">23-16695</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2023</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure for Justice Bell. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=903751&onBaseDocumentNumber=23-18110">23-18110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/27/2023</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to File Appellants' Reply Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=906157&onBaseDocumentNumber=23-20412">23-20412</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants shall have until July 31, 2023, to file and serve the reply briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=906750&onBaseDocumentNumber=23-20951">23-20951</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Motion</td><td>Filed Motion to Exceed Word Count Limitation for Appellants' Reply Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=910391&onBaseDocumentNumber=23-24440">23-24440</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/31/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=910393&onBaseDocumentNumber=23-24442">23-24442</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Cause appearing, appellants' motion for leave to file a reply brief in excess of the type-volume limitation is granted.  NRAP 32(a)(7)(A)(ii), (D).  The reply brief was filed on July 31, 2023.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64414&csIID=64414&deLinkID=912046&onBaseDocumentNumber=23-26050">23-26050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64414&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

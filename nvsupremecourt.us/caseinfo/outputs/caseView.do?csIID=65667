@@ -1,0 +1,668 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85923: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=87DF64E432A40ED36EB141EA89C14F4C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65667">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85923</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">OLSEN VS. OLSEN (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D552653<br/>Clark Co. - Eighth Judicial District - D552653</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Pro Bono Program/Child Custody</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">John Olsen</td><td valign="top">F. Peter James
+							(Law Offices of F. Peter James, Esq.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Juniper Olsen</td><td valign="top">Julie A. Cavanaugh-Bill<br>Julie Raye
+							(Former)
+						
+							(The Grace Law Firm)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>08/28/2023</td><td>Overdue</td><td>Opening Brief &amp; Appendix</td><td>Appellant</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>10/11/2023</td><td>Open</td><td>District Court Judgment</td><td>Lower Court Clerk</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from F. Peter James. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=886265&onBaseDocumentNumber=23-01299">23-01299</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2023</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. Minutes. (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2023</td><td>Notice/Incoming</td><td>Filed Notice of Cost Bond Payment. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=886707&onBaseDocumentNumber=23-01707">23-01707</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/20/2023</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Transcript Request From due: 14 days. Fast Track Statement and Appendix due: 40 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=886955&onBaseDocumentNumber=23-01951">23-01951</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/23/2023</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=887198&onBaseDocumentNumber=23-02189">23-02189</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/26/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Withdrawal of Attorney. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=887642&onBaseDocumentNumber=23-02626">23-02626</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Attorney Julie Raye of the Grace Law Firm has filed a motion to withdraw as counsel for respondent on the ground that she was not retained to pursue this appeal.  The motion is granted.  The clerk of this court shall remove Ms. Raye and the Grace Law Firm as counsel of record for respondent. Respondent's notice of appearance due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=888430&onBaseDocumentNumber=23-03328">23-03328</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2023</td><td>Motion</td><td>Filed Appellant's Motion for Leave to Extend Time to File Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=888543&onBaseDocumentNumber=23-03440">23-03440</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant's transcript request form due: February 10, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=888672&onBaseDocumentNumber=23-03566">23-03566</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Pro Bono Counsel. This case is hereby referred to the program established by the Pro Bono Committee to evaluate whether respondent can benefit from the program.  The clerk of this court shall transmit a copy of this order and the attached case summary to the Legal Aid Center of Southern Nevada for financial eligibility screening. Respondent's notice of appeal due: 60 days. Briefing suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=890706&onBaseDocumentNumber=23-05550">23-05550</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Payment of Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=891324&onBaseDocumentNumber=23-06165">23-06165</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance of Pro Bono Counsel for Julie A. Cavanaugh-Bill in Response to Court order filed 2/23/23. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=895064&onBaseDocumentNumber=23-09756">23-09756</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/03/2023</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing. This court referred this matter to the Pro Bono Committee of the State Bar of Nevada's Appellate Litigation Section for the selection of pro bono counsel to represent respondent in this appeal. Attorney Julie Cavanaugh-Bill of Cavanaugh-Bill Law Office, LLC, has now filed a notice of appearance as respondent's pro bono counsel.  Accordingly, the clerk of this court shall add Ms. Cavanaugh-Bill to the docket as counsel of record for respondent. Appellant shall have 7 days from the date of this order to file and serve the rough draft transcript request form pursuant to NRAP 3E(c).  Appellant shall have 40 days from the date of this order to file and serve the fast track statement and appendix. See NRAP 3E(d)(1). Thereafter, briefing shall proceed in accordance with NRAP 3E. fn1[  Appellant filed a notice that transcripts have been paid for, but to date the actual transcript request form has not been filed.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=895469&onBaseDocumentNumber=23-10139">23-10139</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/04/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 05/05/18, 09/04/18, 10/16/18, 12/11/18, 03/14/19, 05/30/19, 01/27/20, 05/18/20, 07/21/20, 08/24/20, 10/08/20, 03/03/21, 03/10/21, 03/18/21, 05/05/21, 05/07/21, 06/11/21, 09/10/21, 09/17/21, 09/20/21, 10/14/21, 11/10/21, 01/19/22, 01/21/22, and 11/29/22. To Court Reporter: Verbatim Reporting and Transcription, LLC. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/15/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts:5/7/18, 9/4/18, 10/16/18, 12/11/18, 3/14/19, 5/30/19, 1/27/20, 5/18/20, 7/21/20, 8/24/20, 10/8/20, 3/3/21, 3/10/21, 3/18/21, 5/5/21, 5/7/21, 6/11/21, 9/10/21, 9/17/21, 9/20/21, 10/14/21, 11/10/21, 1/19/22, 1/21/22, and 11/29/22. No hearing, off calendar 3/14/19. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=900828&onBaseDocumentNumber=23-15284">23-15284</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=900905&onBaseDocumentNumber=23-15361">23-15361</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant shall have until July 14, 2023, to file and serve the fast track statement and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=901433&onBaseDocumentNumber=23-15881">23-15881</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Motion</td><td>Filed Appellant's Motion to Allow Left-Side Filed Report in the Appendix (or Motion to File Sealed Exhibit). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=907627&onBaseDocumentNumber=23-21796">23-21796</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Opening Brief (Fast Track Statement) and Appendix. [Second Request] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=908472&onBaseDocumentNumber=23-22616">23-22616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. This appeal has been placed in the court's pro bono appellate program and pro bono counsel has appeared on behalf of respondent. Accordingly, this appeal shall be removed from the court's child custody fast track and shall proceed pursuant to NRAP 28, NRAP 31, and NRAP 32. Appellant has filed a motion for permission to include the "Dr. Mullins report" in the appendix. The motion is granted to the following extent. Appellant may include documents in the appendix as permitted by NRAP 30(b). If appellant wishes to file a portion of the appendix under seal, he shall file a motion accompanied by the documents he wishes to file under seal. Appellant's motion requesting a second extension of time to file the opening brief is granted as follows. Appellant shall have until 30 days from the date of this order to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=910253&onBaseDocumentNumber=23-24303">23-24303</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2023</td><td>Motion</td><td>Filed Appellant's Motion to Stay Appeal / Extend Time to File the Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=913968&onBaseDocumentNumber=23-27905">23-27905</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Association of Counsel - Association of Law Firm and Address Information. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=914409&onBaseDocumentNumber=23-28339">23-28339</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2023</td><td>Motion</td><td>Filed Respondent's Motion for Remand Pursuant to Huneycutt v. Huneycutt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=914441&onBaseDocumentNumber=23-28371">23-28371</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to the Motion for Remand. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=914442&onBaseDocumentNumber=23-28372">23-28372</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/06/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Non-Opposition. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=915273&onBaseDocumentNumber=23-29189">23-29189</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2023</td><td>Notice/Incoming</td><td>Filed Amended Certificate of Service (Appellant's Notice of Non-Opposition.). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=915292&onBaseDocumentNumber=23-29208">23-29208</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/11/2023</td><td>Order/Procedural</td><td>Filed Order of Limited Remand. Appellant's counsel has filed a motion to remand this matter to the district court. The unopposed motion is granted. This matter is remanded to the district court pursuant to its certification for the limited purpose of allowing the district court to conduct the evidentiary hearing and to enter its order.  District court's written order due: 30 days. Briefing in this appeal is suspended pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65667&csIID=65667&deLinkID=915663&onBaseDocumentNumber=23-29569">23-29569</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65667&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

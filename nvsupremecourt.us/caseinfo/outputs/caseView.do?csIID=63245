@@ -1,0 +1,711 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84150: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=AE52A1AB3D35E4EEB06B1A63AE77F07C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63245">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84150</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">VRES, LLC VS. CLASSIC LANDSCAPES, LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=61497">82871</a>, <a href="/public/caseView.do?csIID=63713">84514</a>, <a href="/public/caseView.do?csIID=64861">85343</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A785831</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>02/07/2022 / Nitz, Dana</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eric Christensen</td><td valign="top">Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Thomas  Christensen</td><td valign="top">Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">VRES, LLC</td><td valign="top">Thomas Christensen
+							(Christensen Law Offices, LLC)
+						<br>Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Classic Landscapes, LLC</td><td valign="top">Lance C. Earl
+							(Marquis Aurbach Chtd.)
+						<br>Jack C. Juan
+							(Former)
+						
+							(Marquis Aurbach Chtd.)
+						<br>Cody S. Mounteer
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/31/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=844166&onBaseDocumentNumber=22-03125">22-03125</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=844168&onBaseDocumentNumber=22-03127">22-03127</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/02/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Erven T. Nelson. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=844794&onBaseDocumentNumber=22-03663">22-03663</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Dana Jonathon Nitz. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=845221&onBaseDocumentNumber=22-04083">22-04083</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=847408&onBaseDocumentNumber=22-06149">22-06149</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2022</td><td>Motion</td><td>Filed Respondent's Reply to Response to Order to Show Cause. (REJECTED PER NOTICE FILED ON 3/22/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=850426&onBaseDocumentNumber=22-09013">22-09013</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for May 26, 2022, at 1:00 pm. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=851600&onBaseDocumentNumber=22-10124">22-10124</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2022</td><td>Motion</td><td>Filed Respondent's Motion to Dismiss Appeal for Lack of Jurisdiction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=855804&onBaseDocumentNumber=22-14118">22-14118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2022</td><td>Motion</td><td>Filed Appellant's Motion For Extension of Time to Respond to Respondent's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=856679&onBaseDocumentNumber=22-14981">22-14981</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance of Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=856685&onBaseDocumentNumber=22-14987">22-14987</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2022</td><td>Notice/Incoming</td><td>Filed Notice of Change of Address for attorney E. Nelson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=856818&onBaseDocumentNumber=22-15119">22-15119</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation.</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement status check is scheduled for July 13, 2022, at 11:00 AM. Case Nos. 84514/84150. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=857132&onBaseDocumentNumber=22-15429">22-15429</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Notice/Incoming</td><td>Filed Appellant's (VRES, LLC) Notice of Appearance for Thomas F. Christensen.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=857394&onBaseDocumentNumber=22-15690">22-15690</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2022</td><td>Order/Procedural</td><td>Filed Order.  Respondent has filed a motion requesting this court to dismiss this appeal for lack of jurisdiction.  The motion is denied.  The clerk of this court shall add attorney Thomas Christensen as co-counsel for appellant VRES, LLC.  fn1[In light of this order, no action will be taken on appellants' motion for an extension of time to file an opposition to the motion to dismiss.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=857468&onBaseDocumentNumber=22-15762">22-15762</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. Recommend jurisdiction check before settlement proceedings may proceed. Upon defect, recommend limited remand to allow the district court to decide all remaining motions and enter final judgement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=869979&onBaseDocumentNumber=22-26717">22-26717</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2022</td><td>Notice/Incoming</td><td>Filed Appellant's (VRES, LLC) Notice of Pending Final Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=870663&onBaseDocumentNumber=22-27394">22-27394</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=870668&onBaseDocumentNumber=22-27398">22-27398</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Certificate of Service for Notice of Pending Final Orders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=871438&onBaseDocumentNumber=22-28097">22-28097</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/09/2022</td><td>Notice/Incoming</td><td>Filed Appellant's (VRES, LLC) Notice of Final Orders Entered and Notice of Appeal Filed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=871640&onBaseDocumentNumber=22-28294">22-28294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/26/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date: December 1, 2022, at 1:00 PM. Case Nos. 84150/84514/85343. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=877318&onBaseDocumentNumber=22-33755">22-33755</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to April 3, 2023. Case Nos. 84150 and 84514 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=878004&onBaseDocumentNumber=22-34431">22-34431</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2023</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 84150/84514/85343. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=885444&onBaseDocumentNumber=23-00493">23-00493</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/11/2023</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=885938&onBaseDocumentNumber=23-00981">23-00981</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/24/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 5/19/21 and 6/10/21. To Court Reporter: Lisa Lizotte. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=887322&onBaseDocumentNumber=23-02311">23-02311</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2023</td><td>Order/Procedural</td><td>Filed Order to Show Cause. Appellants shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Respondents may file any reply within 14 days from the date that appellants' response is served. Briefing is suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=888895&onBaseDocumentNumber=23-03786">23-03786</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance for Cody S. Mounteer. Jack C. Juan is no longer associated with Marquis Aurbach. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=889087&onBaseDocumentNumber=23-03974">23-03974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Motion</td><td>Filed Appellant's Response to Order to Show Cause and Motion to Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=892556&onBaseDocumentNumber=23-07352">23-07352</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Resondent's response to motion for stay due: March 30, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=892972&onBaseDocumentNumber=23-07732">23-07732</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/20/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lisa A. Lizotte stating that the requested transcripts were delivered. Dates of transcripts: 05/13/21, 06/10/21, 07/08/21, 12/20/21, 01/24/22, 03/03/22, 06/02/22,and 06/14/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=893812&onBaseDocumentNumber=23-08549">23-08549</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2023</td><td>Motion</td><td>Filed Respondent's (Classic Landscapes, LLC) Reply to Response to Order to Show Cause in Case No. 84150 and Motion in Case Nos. 84150/84514/85343. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=894125&onBaseDocumentNumber=23-08846">23-08846</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2023</td><td>Motion</td><td>Filed Appellant's Reply to Response In support of Motion for Stay Pending Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=895940&onBaseDocumentNumber=23-10593">23-10593</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal. Accordingly, "the appeals in Docket Nos. 84150 and 84514 are dismissed" and briefing in Docket No. 85343 is reinstated as follows: appellants shall have 90 days from the date of this order to file and serve the opening brief and appendix. Appellants have moved for a stay of execution of the judgment below.  Respondents opposed the motion to stay, and appellants filed a reply. We deny the request for a stay. fn1 [Given our disposition, we do not need to address the parties' arguments regarding a supersedeas bond pursuant to NRAP 8(a)(2)(E) and NRCP 62(d).]. Nos. 84150/84514/85343. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=900135&onBaseDocumentNumber=23-14631">23-14631</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/05/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=903133&onBaseDocumentNumber=23-17499">23-17499</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/15/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on June 7, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63245&csIID=63245&deLinkID=904710&onBaseDocumentNumber=23-17499">23-17499</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63245&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

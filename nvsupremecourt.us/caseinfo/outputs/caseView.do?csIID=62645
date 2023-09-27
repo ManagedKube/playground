@@ -1,0 +1,866 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83704: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=BFC92C0BD14FF71FF394DFE1EEBCC209">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62645">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83704</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">EL CORTEZ RENO HOLDINGS, LLC VS. PFPCO.'S NOBLE PIE PARLOR C/W 84173</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>83704*, <a href="/public/caseView.do?csIID=63269">84173</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=63269">84173</a>, <a href="/public/caseView.do?csIID=67392">87236</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - CV1900104</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/03/2021 / Mangiaracina, Melissa</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">El Cortez Reno Holdings, LLC</td><td valign="top">Michael D. Maupin
+							(The Siegel Group)
+						<br>Amanda Patanaphan
+							(The Siegel Group)
+						<br>Sean D. Thueson
+							(The Siegel Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">PFPCo.'s Noble Pie Parlor</td><td valign="top">Michael L. Matuska
+							(Matuska Law Offices, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/01/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Nationwide Legal Nevada.  Check no. 215544. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/01/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=834702&onBaseDocumentNumber=21-31361">21-31361</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/01/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=834704&onBaseDocumentNumber=21-31363">21-31363</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Melissa Mangiaracina. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=834978&onBaseDocumentNumber=21-31634">21-31634</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2021</td><td>Notice/Outgoing</td><td>Issued Notice to File Docketing Statement. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=837129&onBaseDocumentNumber=21-33646">21-33646</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for January 28, 2022, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=837225&onBaseDocumentNumber=21-33739">21-33739</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/24/2021</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=837274&onBaseDocumentNumber=21-33787">21-33787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2021</td><td>Docketing Statement</td><td>Filed Respondent's Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=837316&onBaseDocumentNumber=21-33828">21-33828</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/25/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date: February 7, 2022, at 9:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=843597&onBaseDocumentNumber=22-02565">22-02565</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2022</td><td>Docketing Statement</td><td>Filed Amended Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=844540&onBaseDocumentNumber=22-03419">22-03419</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Docketing Statement</td><td>Filed Respondent's Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=844828&onBaseDocumentNumber=22-03696">22-03696</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/14/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date: March 10, 2022, at 9:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=845953&onBaseDocumentNumber=22-04800">22-04800</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Case Nos. 83704/84173. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=849077&onBaseDocumentNumber=22-07732">22-07732</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/11/2022</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Case Nos. 83704 and 84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=849285&onBaseDocumentNumber=22-07938">22-07938</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=849400&onBaseDocumentNumber=22-08052">22-08052</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Order/Procedural</td><td>Filed Order.  These appeals shall be consolidated for all appellate purposes.  The briefing schedule is reinstated in Docket No. 84173.  Appellant shall have 14 days from the date of this order to file and serve a transcript request form for transcripts relevant to both appeals.  Appellant shall have until June 13, 2022, to file and serve a single opening brief and appendix that addresses all issues in both appeals. Thereafter, briefing shall proceed in accordance with NRAP 31(a)(1).  Nos. 83704/84173.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=850176&onBaseDocumentNumber=22-08814">22-08814</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/04/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/19/21. To Court Reporter: Sunshine Litigation Services. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=851923&onBaseDocumentNumber=22-10435">22-10435</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Christina Dalpino stating that the requested transcripts were delivered.  Dates of transcripts: 2/13/19, 4/14/21 and 4/15/21. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=854309&onBaseDocumentNumber=22-12717">22-12717</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/21/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lesley Clarkson stating that the requested transcripts were delivered.  Dates of transcripts: 12/10/20. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=854310&onBaseDocumentNumber=22-12718">22-12718</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Judith Schonlau stating that the requested transcripts were delivered.  Dates of transcripts: 1/24/19, 3/4/19, 3/24/19, 4/12/21, 4/13/21, 11/19/21 and 12/17/21. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=854313&onBaseDocumentNumber=22-12721">22-12721</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/21/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Kate Murray stating that the requested transcripts were delivered.  Dates of transcripts: 4/16/21. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=854314&onBaseDocumentNumber=22-12722">22-12722</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate 84754 and 84173. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=858633&onBaseDocumentNumber=22-16837">22-16837</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Consolidate, Directing Answer &amp; Granting Stay. We decline to consolidate the writ proceeding with El Cortez Reno's appeals in Docket Nos. 83704 &amp; 84173. El Cortez Reno shall have until June 15, 2022, to file and serve its opening brief and appendix in the appeals.  Noble Pie, on behalf of respondents, shall also have until June 15, 2022, to file and serve an answer, including authorities, against issuance of the requested writ; the answer may contain up to 11,398 words. Noble Pie's answering brief in the appeals, and El Cortez Reno's reply in in the writ proceeding, the latter of which should comply with the NRAP 21(d) type-volume limitation, are each due by June 30, 2022.  El Cortez Reno's stay motion is granted and enforcement of the justice court judgment is hereby stayed, pending further order of this court, subject to El Cortez Reno maintaining the supersedeas bond in an increased amount that accounts for statutory interest on the judgment from the judgment's date through November 2022.  El Cortez Reno shall have 5 days from the date of this order within which to post the increased bond amount with the justice court clerk. fn1 [Petitioner El Cortez Reno's motion for leave to file a writ petition with 4,398 words in excess of the NRAP 21(d) limit is granted; the petition was filed on May 25, 2022.]. Nos. 83704/84173  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=859684&onBaseDocumentNumber=22-17868">22-17868</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Notice/Incoming</td><td>Filed Notice of Entry of Order of the Supreme Court's Order filed on June 6, 2022. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=859779&onBaseDocumentNumber=22-17961">22-17961</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Opening Brief and Appendix. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=860975&onBaseDocumentNumber=22-18162">22-18162</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Motion</td><td>Filed Respondent's Opposition to Motion for an Extension of Time to File Opening Brief and Appendix. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=861092&onBaseDocumentNumber=22-18277">22-18277</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion for Extension of Time to File Opening Brief and Appendix. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=861156&onBaseDocumentNumber=22-18341">22-18341</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant shall have until June 22, 2022, to file and serve the opening brief and appendix.  Respondent shall have until July 7, 2022, to file and serve the answering brief.  No reply will be permitted.  Nos. 83704/84173.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=861901&onBaseDocumentNumber=22-18997">22-18997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Supplemental Appendix, Vol. 1. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862716&onBaseDocumentNumber=22-19797">22-19797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Supplemental Appendix, Vol. 2. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862717&onBaseDocumentNumber=22-19798">22-19798</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Supplemental Appendix, Vol. 3. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862718&onBaseDocumentNumber=22-19799">22-19799</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Supplemental Appendix, Vol. 4. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862720&onBaseDocumentNumber=22-19801">22-19801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Second Supplemental Appendix, Vol. 1. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862721&onBaseDocumentNumber=22-19802">22-19802</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief. Supplemental Appendix, Vol. 5. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862726&onBaseDocumentNumber=22-19807">22-19807</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 2. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862742&onBaseDocumentNumber=22-19823">22-19823</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 1. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862743&onBaseDocumentNumber=22-19824">22-19824</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 3. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862744&onBaseDocumentNumber=22-19825">22-19825</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 3. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862745&onBaseDocumentNumber=22-19826">22-19826</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 4. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862746&onBaseDocumentNumber=22-19827">22-19827</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 5. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862748&onBaseDocumentNumber=22-19829">22-19829</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 7. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862749&onBaseDocumentNumber=22-19830">22-19830</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 6. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862750&onBaseDocumentNumber=22-19831">22-19831</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 8. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862751&onBaseDocumentNumber=22-19832">22-19832</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 9. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862752&onBaseDocumentNumber=22-19833">22-19833</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 10. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862753&onBaseDocumentNumber=22-19834">22-19834</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 12. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862755&onBaseDocumentNumber=22-19836">22-19836</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 14. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862756&onBaseDocumentNumber=22-19837">22-19837</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 13. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862763&onBaseDocumentNumber=22-19844">22-19844</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 11. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862757&onBaseDocumentNumber=22-19838">22-19838</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 17. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862758&onBaseDocumentNumber=22-19839">22-19839</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 15. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862759&onBaseDocumentNumber=22-19840">22-19840</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vol. 16. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862760&onBaseDocumentNumber=22-19841">22-19841</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862766&onBaseDocumentNumber=22-19847">22-19847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Motion</td><td>Filed Appellant's  Motion to Exceed Word Limit (Opening Brief). Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862767&onBaseDocumentNumber=22-19848">22-19848</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Motion</td><td>Filed Appellant's Motion to Transmit Disk. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862768&onBaseDocumentNumber=22-19849">22-19849</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2022</td><td>Motion</td><td>Filed Respondent's Opposition to Motion to Exceed Word Limit for Opening Brief. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=862842&onBaseDocumentNumber=22-19920">22-19920</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2022</td><td>Motion</td><td>Filed Appellant's Reply in Support of Motion to Exceed Word Limit for Opening Brief. Nos 83704/84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=863338&onBaseDocumentNumber=22-20357">22-20357</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/05/2022</td><td>Motion</td><td>Filed Respondent's Motion to Increase Supersedeas Bond. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864094&onBaseDocumentNumber=22-21098">22-21098</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Withdrawal of Opposition to Motion to Exceed Word Limit for Opening Brief. Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864488&onBaseDocumentNumber=22-21484">22-21484</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Motion</td><td>Filed Respondent's Motion to Extend Time to File Answering Brief. Nos. 83704/84173  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864490&onBaseDocumentNumber=22-21486">22-21486</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Brief</td><td>Filed Respondent's Answering Brief. Nos. 83704/84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864491&onBaseDocumentNumber=22-21487">22-21487</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 2. Nos. 83704/84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864496&onBaseDocumentNumber=22-21491">22-21491</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 1. Nos. 83704/84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864497&onBaseDocumentNumber=22-21492">22-21492</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motions and Directing Transmission of Exhibit. Appellant has filed a motion for leave to file an opening brief that exceeds the type-volume limit set by NRAP 32. This court grants the motion. The opening brief and appendix were filed on June 22, 2022. Respondent's motion for an extension of time to file the answering brief is granted. The answering brief and an appendix were filed on July 8, 2022. Briefing of these appeals is complete. Appellant's motion to transmit security camera video admitted at trial is granted. District court's exhibit due: 14 days. Nos. 83704/84173. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864602&onBaseDocumentNumber=22-21596">22-21596</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2022</td><td>Motion</td><td>Filed Appellant's Opposition to Motion to Increase Supersedeas Bond.  Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864751&onBaseDocumentNumber=22-21745">22-21745</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2022</td><td>Motion</td><td>Filed Respondent's Reply to Opposition to Motion to Increase Supersedeas Bond.  Nos. 83704/84173 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=864876&onBaseDocumentNumber=22-21869">22-21869</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/04/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Respondent has now filed a motion asking this court to increase the supersedeas bond to "include additional contractual attorney's fees, costs and interest pending appeal." This court concludes that the district court did not abuse its discretion by granting respondent's motion in part and denying the motion in part. The motion is denied. Nos. 83704/84173  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=867616&onBaseDocumentNumber=22-24444">22-24444</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." Nos. 83704/84173. SNP-JH/LS/DH. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=884207&onBaseDocumentNumber=22-40339">22-40339</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/18/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC) Exhibits returned with remittitur.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=886642&onBaseDocumentNumber=23-01643">23-01643</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC) Exhibit Returned.</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on January 20, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62645&csIID=62645&deLinkID=887807&onBaseDocumentNumber=23-01643">23-01643</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62645&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

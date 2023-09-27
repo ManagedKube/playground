@@ -1,0 +1,697 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84609: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=F1C8B6AF9FBDC78AA2A941298DEEFEE1">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63855">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84609</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: MOMOT, JR. REVOCABLE FAMILY TR.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=65710">84609-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - P100604</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Parraguirre, Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Transferred to Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Roxanne Marie Momot</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Dolly Kelepecz-Momot</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Joseph Frank Momot</td><td valign="top">James J. Jimmerson
+							(The Jimmerson Law Firm, P.C)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lucille Momot-Tagie</td><td valign="top">James J. Jimmerson
+							(The Jimmerson Law Firm, P.C)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=854593&onBaseDocumentNumber=22-12997">22-12997</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Other</td><td>Chief Justice Ron Parraguirre disqualified from participation in this matter. Disqualification Reason: Lawyers and Judges. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee/Proper Person. No action will be taken on this matter until filing fee is paid. Due Date: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=854595&onBaseDocumentNumber=22-12999">22-12999</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Roxanne Marie Momot.  Money Order no. 19-390084766. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=856082&onBaseDocumentNumber=22-14391">22-14391</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Order/Procedural</td><td>Filed Order/Transmit Record. Record due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=856537&onBaseDocumentNumber=22-14842">22-14842</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal, Vols. 1 through 15 (FTP). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=856901&onBaseDocumentNumber=22-15198">22-15198</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Record on Appeal Documents</td><td>Filed District Court Documents. Added to Record on Appeal as pages:  pages 109-160, 188-233, 234-305, 533-573 &amp; 730-736. (Sealed) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2022</td><td>Transcript Request</td><td>Filed Civil Proper Person Transcript Request Form. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=859031&onBaseDocumentNumber=22-17224">22-17224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=859032&onBaseDocumentNumber=22-17225">22-17225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Order/Procedural</td><td>Filed Order. The court shall add Dolly Kelepecz-Momot as a respondent in this matter. If any party objects to this modification, they shall so notify this court, in writing, within 7 days of the date of this order.  Attorney Liane K. Wakayama of Hayes Wakayama shall be listed as Ms. Kelepecz-Momot's counsel of record.  If Ms. Wakayama does not represent Ms. Kelepecz-Momot, she shall notify this court, in writing, within 7 days of the date of this order.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=859335&onBaseDocumentNumber=22-17526">22-17526</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/02/2022</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Docketing Statement</td><td>Filed Respondent Joseph Momot and Lucille Momot-Tagie's Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=861006&onBaseDocumentNumber=22-18192">22-18192</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/01/2022</td><td>Letter/Incoming</td><td>Filed Letter from Court reporter Kerry Esparza in regards to Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=863894&onBaseDocumentNumber=22-20905">22-20905</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Transcripts. Review of the record on appeal filed in this court on May 13, 2022, reveals that both requested transcripts are included therein and were transmitted to this court.  Under these circumstances, no further documents are due from Ms. Esparza in this matter and appellant need not file copies of the requested transcripts in this court as ordinarily required.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=864236&onBaseDocumentNumber=22-21235">22-21235</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2022</td><td>Brief</td><td>Filed Proper Person Brief. Appellant's Informal Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=869266&onBaseDocumentNumber=22-26016">22-26016</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2022</td><td>Brief</td><td>Filed Proper Person Brief. Appellant's Informal Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=869711&onBaseDocumentNumber=22-26454">22-26454</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion under NRAP 27(e) for Leave to Amend Informal Appellate Brief and Motion for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=870433&onBaseDocumentNumber=22-27166">22-27166</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion for Stay under NRAP Rule 27(e). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=870435&onBaseDocumentNumber=22-27168">22-27168</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2022</td><td>Motion</td><td>Filed Respondent Joseph Momot and Lucille Momot-Tagie's Response to "Appellant's Emergency Motion under NRAP 27(e) for Leave to Amend Informal Appellate Brief and Motion for an Extension of Time" (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=870865&onBaseDocumentNumber=22-27588">22-27588</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Motion</td><td>Filed Respondent Joseph Momot and Lucille Momot-Tagie's Response to "Appellant's Emergency Motion for Stay Under NRAP 27(e)". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=871045&onBaseDocumentNumber=22-27746">22-27746</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/22/2022</td><td>Notice/Incoming</td><td>Filed Notice of Withdrawal of Counsel of Record for Respondent Dolly Kelepecz-Momot. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=873233&onBaseDocumentNumber=22-29787">22-29787</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents' Joseph Momot and Lucille Momot-Tagie's answering brief  due: October 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=873530&onBaseDocumentNumber=22-30069">22-30069</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2022</td><td>Brief</td><td>Filed Respondents Joseph Frank Momot and Lucille Momot Tagie's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=875266&onBaseDocumentNumber=22-31764">22-31764</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2022</td><td>Motion</td><td>Filed Respondents' Ex Parte Motion to Request That The Supreme Court Request Trial Exhibits From The District Court For The Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=875506&onBaseDocumentNumber=22-31999">22-31999</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/14/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Procedural Motions and Denying Stay. Appellant has timely moved for leave to file an amended informal brief and for a 30-day extension of time in which to do so. We grant the motion for leave, and direct the clerk of this court to file the informal opening brief provisionally received in this court on September 20, 2022, as appellant's amended informal opening brief. Appellant has filed an emergency motion for stay of the district court's order. We deny the stay motion. The September 22nd motion to withdraw as counsel is denied. Kelepecz-Momot's answering brief due: 14 days. The motion requesting original exhibits is granted. District court's exhibits due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=875963&onBaseDocumentNumber=22-32420">22-32420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2022</td><td>Brief</td><td>Filed Appellant's amended Informal Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=875967&onBaseDocumentNumber=22-32424">22-32424</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Motion</td><td>Filed Respondent Dolly Kelepeca-Momot's Motion to Withdraw as Counsel of Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=876687&onBaseDocumentNumber=22-33133">22-33133</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Regarding Briefing. Attorney Liane K. Wakayama has filed a motion to withdraw as counsel for respondent Dolly Kelepecz-Momot.  The motion to withdraw is granted. The clerk shall remove Ms. Wakayama as counsel of record for Kelepecz-Momot.  This appeal shall proceed with Kelepecz-Momot in pro se and without an answering brief from Kelepecz-Momot. Appellant's reply brief due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=878124&onBaseDocumentNumber=22-34550">22-34550</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Brief</td><td>Filed Respondents' Supplemental Answering Brief In Response To Roxanne Momot's Second Amended Opening Brief Filed October 14, 2022. (STRICKEN PER 11/16/22 ORDER). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2022</td><td>Order/Procedural</td><td>Filed Order Striking Supplemental Answering Brief. Respondents Joseph Momot and Lucille Momot-Tagie (respondents) have filed a supplemental answering brief.  Respondents did not seek or receive leave to file a supplemental answering brief.  Accordingly, the clerk shall strike the supplemental answering brief filed on November 14, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=879699&onBaseDocumentNumber=22-36028">22-36028</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/12/2022</td><td>Brief</td><td>Filed Proper Person Reply Brief (Appellant's Reply to Respondents Opposition to Appellant's Informal Appellate Brief). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=882660&onBaseDocumentNumber=22-38865">22-38865</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/12/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2022</td><td>Motion</td><td>Filed Respondents' Motion to Strike Appellant's Untimely Reply Brief, or In The Alternative to Accept and File Respondents' Supplemental Answering Brief. (PER 1/12/23 ORDER DETACHED BRIEF) (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=883287&onBaseDocumentNumber=22-39430">22-39430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motion and Transmission of Original Exhibits. Appellant timely deposited the reply brief in the clerk's drop box on December 5, 2022. Accordingly, the filing was timely and the motion to strike is denied. Respondents do not explain why they waited 29 days after their previously submitted supplemental answering brief was stricken to file the instant motion.  Nevertheless, under the circumstances of this case, the request is granted.  The clerk shall detach the  supplemental  answering brief from the motion filed on December 15, 2022, and file it separately.  On October 14, 2022, this court entered an order that directed the clerk of the district court to transmit by October 31, 2022, the original exhibits that were admitted at the February 7 and 8, 2022, evidentiary hearing. To date, this court has not received the exhibits, and the district court clerk has not otherwise communicated with this court.   The district court clerk shall have 7 days from the date of this order to transmit to this court the original exhibits. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=886040&onBaseDocumentNumber=23-01082">23-01082</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/12/2023</td><td>Brief</td><td>Filed Respondent's Supplemental Answering Brief in Response to Roxanne Momot's Second Amended Opening Brief Filed on October 14, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=886043&onBaseDocumentNumber=23-01085">23-01085</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/13/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63855&csIID=63855&deLinkID=886314&onBaseDocumentNumber=23-01348">23-01348</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63855&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,711 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86067: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=EE2BD94AA1C149AFB2D5E7C7B05482F0">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65856">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86067</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">GRYBOWSKI VS. GRYBOWSKI</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=42333">72110</a>, <a href="/public/caseView.do?csIID=64796">85285</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D491515</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Reinstated</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">James A. Grybowski</td><td valign="top">Thomas Michaelides
+							(TCM Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Debra Grybowski</td><td valign="top">Patricia L. Vaccarino
+							(Vaccarino Law Office)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>05/30/2023</td><td>Overdue</td><td>Certificate of Service</td><td>Appellant</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>09/13/2023</td><td>Overdue</td><td>Court Reporter Certificate/Not Fast Track</td><td>Court Reporter</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/06/2023</td><td>Open</td><td>Answering Brief</td><td></td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Filing Fee</td><td>Filing Fee due for appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SEALED (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888607&onBaseDocumentNumber=23-03503">23-03503</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888609&onBaseDocumentNumber=23-03505">23-03505</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Thomas Michaelides. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Notice of Appeal Documents</td><td>Filed Appellant's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888650&onBaseDocumentNumber=23-03545">23-03545</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Case Appeal Statement. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888661&onBaseDocumentNumber=23-03556">23-03556</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Certificate of Service for Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888691&onBaseDocumentNumber=23-03585">23-03585</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888695&onBaseDocumentNumber=23-03589">23-03589</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2023</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellant: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888785&onBaseDocumentNumber=23-03677">23-03677</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Withdrawal of Counsel for Patricia Vaccarino and Respondent Appearing in Proper Person. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=888850&onBaseDocumentNumber=23-03741">23-03741</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2023</td><td>Order/Procedural</td><td>Filed Order. Attorney Patricia Vaccarino has filed a notice informing this court that she does not represent respondent in this appeal. The clerk shall remove Ms. Vaccarino as counsel of record for respondent.  This appeal will proceed with respondent pro se. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=889004&onBaseDocumentNumber=23-03894">23-03894</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/27/2023</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=891142&onBaseDocumentNumber=23-05984">23-05984</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Order/Procedural</td><td>Filed Order to File Transcript Request Form. Appellant's transcript request form due: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=893077&onBaseDocumentNumber=23-07834">23-07834</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/16/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. (REJECTED PER NOTICE ISSUED 04/17/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/17/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=896987&onBaseDocumentNumber=23-11615">23-11615</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2023</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 4/10/14, 11/13/14, 9/10/15, 5/5/16, 9/15/16, 2/16/17, 3/24/17, 4/17/17, 6/2/17, 1/23/18, 3/27/18, 5/9/18, 11/16/18, 2/22/19, 4/15/20, 6/7/21, 7/9/21, 1/10/22 and 12/19/22. To Court Reporter: Sherry Justice. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=898495&onBaseDocumentNumber=23-13064">23-13064</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2023</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Transcript Request. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=898499&onBaseDocumentNumber=23-13068">23-13068</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Motion to Extend Time and Transcript Request. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=898541&onBaseDocumentNumber=23-13110">23-13110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Transcript Request (REJECTED PER NOTICE ISSUED 5/3/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Motion to Extend Time. (REJECTED PER NOTICE ISSUED 5/3/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Certificates of Service for Transcript Request and Motion for Extension of Time. Due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=899448&onBaseDocumentNumber=23-13978">23-13978</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Motion to Extend Time to File Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=900151&onBaseDocumentNumber=23-14647">23-14647</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=900154&onBaseDocumentNumber=23-14650">23-14650</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2023</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed proof of service for his motion for an extension of time to file the transcript request form and the transcript request form. The proof of service indicates that service was electronically made on respondent via this court's electronic filing system.  However, respondent, who is proceeding pro se, is not a registered user of this court's electronic filing system and is not electronically served with copies of appellant's filings. Appellant shall have 7 days from the date of this order to file in this court proof of service of the extension motion and transcript request from that fully complies with NRAP  25(c)(1). No action will be taken on appellant's extension motion until proper proof of service of the motion is filed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=901845&onBaseDocumentNumber=23-16238">23-16238</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opening brief and appendix due: June 21, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=902717&onBaseDocumentNumber=23-17100">23-17100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2023</td><td>Motion</td><td>Filed Verbatim Reporting &amp; Transcription's Request for Extension of Time to File Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=903980&onBaseDocumentNumber=23-18335">23-18335</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. (REJECTED PER NOTICE ISSUED 6/22/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/21/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief (REJECTED PER NOTICE ISSUED 6/22/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Opening Brief and Appendix. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=905471&onBaseDocumentNumber=23-19733">23-19733</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/25/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=905779&onBaseDocumentNumber=23-20037">23-20037</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/26/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=905780&onBaseDocumentNumber=23-20038">23-20038</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service for Appendix to Opening Brief. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=905809&onBaseDocumentNumber=23-20067">23-20067</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/26/2023</td><td>Notice/Incoming</td><td>Filed Proof of Service (REJECTED - FILED IN THE WRONG CASE). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service for Appendix to Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=905853&onBaseDocumentNumber=23-20110">23-20110</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Directing Respondent to File Answering Brief. VRT's court reporter certificate due: 7 days. To date, respondent has failed to file the answering brief or otherwise communicate with this court. Respondent shall have 14 days from the date of this order to file and serve the answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=912810&onBaseDocumentNumber=23-26793">23-26793</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance of Counsel for Patricia Vaccarino and Notice of Intent of Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=914463&onBaseDocumentNumber=23-28393">23-28393</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Counsel, Transcripts, and Answering Brief. Attorney Patricia L. Vaccarino has filed a notice of appearance as counsel for respondent. The clerk shall add Ms. Vaccarino as counsel of record for respondent.  Respondent's answering brief was due to be filed in this court on August 30, 2023, the date Ms. Vaccarino filed her notice of appearance.  Ms. Vaccarino is reminded that motions for extensions of time to file a brief must "be made no later than the due date for the brief . . .".  Ms. Vaccarino is also reminded that transcripts are not filed in this court by court reporters and recorders.  Instead, it is the parties' responsibility to include necessary transcripts in the appendices. If respondent believes that appellant has not included necessary transcripts in the appendix, respondent may file an appendix containing those transcripts. On August 16, 2023, this court entered an order directing Verbatim Reporting and Transcription (VRT), by August 23, 2023, to file the requested transcripts in the district court, deliver copies to the requesting party, and file a notice with this court that the completed transcripts have been filed and delivered. To date, VRT has not filed the required notice in this court or otherwise communicated with this court. VRT shall have 7 days from the date of this order to file the requested transcripts in the district court and deliver copies to the requesting party (if it has not done so already), and file a notice with this court that the completed transcripts have been filed and delivered. Respondent shall have 30 days from the date of this order to file and serve the answering brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=915135&onBaseDocumentNumber=23-29053">23-29053</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2023</td><td>Motion</td><td>Filed Appellant's Motion for Reconsideration of Order Regarding Counsel, Transcripts, and Answering Brief. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=915419&onBaseDocumentNumber=23-29332">23-29332</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 4/10/2014, 1/8/2015, 7/16/2015, 9/10/2015, 5/5/2016, 5/17/2016, 9/15/2016, 2/16/2017, 5/9/2018, 11/6/2018, 11/16/2018, 2/22/2019, 6/7/2021, 6/25/2021, 7/9/2021, 1/10/2022, 10/5/2022, and 12/9/2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65856&csIID=65856&deLinkID=916757&onBaseDocumentNumber=23-30601">23-30601</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65856&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

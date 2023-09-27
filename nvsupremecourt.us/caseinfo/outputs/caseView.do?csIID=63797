@@ -1,0 +1,757 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84573: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=718B89472F948CACE39D46D61B7F0EB6">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63797">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84573</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">FED. HOUSING FIN. AGENCY VS. DIST. CT. (WESTLAND LIBERTY VILL., LLC)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60450">82174</a>, <a href="/public/caseView.do?csIID=61190">82666</a>, <a href="/public/caseView.do?csIID=62628">83695</a>, <a href="/public/caseView.do?csIID=63799">84575</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A819412</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>11/10/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Federal Housing Finance Agency</td><td valign="top">Leslie Bryan Hart
+							(Fennemore Craig P.C./Reno)
+						<br>Michael A.F. Johnson
+							(Arnold &amp; Porter Kaye Scholer LLP/Washington DC)
+						<br>John D. Tennert
+							(Fennemore Craig P.C./Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Federal National Mortgage Association</td><td valign="top">Kelly H. Dove
+							(Snell &amp; Wilmer, LLP/Las Vegas)
+						<br>Nathaniel G. Kanute
+							(Snell &amp; Wilmer, LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">1097 North State, LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">A&amp;D Dynasty Trust</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">AFT Industry NV, LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Amusement Industry, Inc.</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">The Alevy Family Protection Trust</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Vellagio Apts of Westland LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Amber Ridge LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland AMT, LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Corona LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Hacienda Hills LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Liberty Village, LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Tropicana Royale LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Westland Village Square, LLC</td><td valign="top">Brian W. Barnes
+							(Cooper &amp; Kirk PLLC/Wash DC)
+						<br>John G. Benedict
+							(Law Offices of John Benedict)
+						<br>Philip R. Erwin
+							(Campbell &amp; Williams)
+						<br>John W. Hofsaess<br>J. Colby Williams
+							(Campbell &amp; Williams)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Mark R. Denton</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Leslie Bryan Hart. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853645&onBaseDocumentNumber=22-12078">22-12078</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853646&onBaseDocumentNumber=22-12079">22-12079</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853647&onBaseDocumentNumber=22-12080">22-12080</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853648&onBaseDocumentNumber=22-12081">22-12081</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (District Court Judge Denton)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853650&onBaseDocumentNumber=22-12083">22-12083</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2022</td><td>Notice/Incoming</td><td>Filed Certificate of Service of Petition for a Write of Mandamus (District Court Judge Denton). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=853777&onBaseDocumentNumber=22-12205">22-12205</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real parties in interest, on behalf of respondents, shall have 28 days from the date of this order within which to file and serve an answer, including authorities, against issuance of the requested writ.  Petitioners shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=859097&onBaseDocumentNumber=22-17290">22-17290</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest's answer to writ petition due: July 13, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=863440&onBaseDocumentNumber=22-20457">22-20457</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/13/2022</td><td>Petition/Writ</td><td>Filed Answer to Petition for Writ of Mandamus. (REJECTED PER NOTICE ISSUED 7/14/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=865223&onBaseDocumentNumber=22-22182">22-22182</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/15/2022</td><td>Notice/Incoming</td><td>Filed Real Parties in Interest Notice of Appearance for Brian W. Barnes, J. Colby Williams and Philip R. Erwin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=865475&onBaseDocumentNumber=22-22413">22-22413</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/15/2022</td><td>Petition/Writ</td><td>Filed Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=865476&onBaseDocumentNumber=22-22414">22-22414</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2022</td><td>Order/Procedural</td><td>Filed Order.  The clerk of this court shall add Brian W. Barnes and the law firm Cooper Kirk, PLLC, and J. Colby Williams and Philip R. Erwin and the law firm Campbell &amp; Williams to the docket as counsel of record for real parties in interest.  Real parties in interest's answer against issuance of the writ was filed on July 15, 2022.  Petitioners shall have 14 days from the date of this order to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=865919&onBaseDocumentNumber=22-22851">22-22851</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/01/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Petitioner Federal Housing Finance Agency shall have until August 17, 2022, to file and serve its reply in support of petition for writ of mandamus.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=867119&onBaseDocumentNumber=22-23993">22-23993</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2022</td><td>Petition/Writ</td><td>Filed (Joint) Reply in Support of Petition for A Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=868937&onBaseDocumentNumber=22-25680">22-25680</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Order/Procedural</td><td>Filed Order/Submit on Briefs. Cause appearing, oral argument will not be scheduled and this appeal shall stand submitted for decision  to the En Banc Court as of the date of this order on the briefs filed herein. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=879184&onBaseDocumentNumber=22-35523">22-35523</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Order/Dispositional</td><td>Filed Order Denying Petition. "ORDER the petition DENIED".  EN BANC fn1 [The Honorable Abbi Silver having retired, this matter was decided by a six-justice court.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=879305&onBaseDocumentNumber=22-35641">22-35641</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63797&csIID=63797&deLinkID=882458&onBaseDocumentNumber=22-38672">22-38672</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63797&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

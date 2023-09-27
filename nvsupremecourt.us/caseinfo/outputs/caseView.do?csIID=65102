@@ -1,0 +1,735 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85519: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=A0A5AA8996A1062E72EF08B92B91D380">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65102">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85519</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">COCA (PETER) VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Elko Co. - Fourth Judicial District - DC-CV-22-82</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Other - Post-Conviction</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National Association of Criminal Defense Lawyers</td><td valign="top">Lauren D. Wigginton
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Attorneys for Criminal Justice</td><td valign="top">Lauren D. Wigginton
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada District Attorneys Association</td><td valign="top">Marilee Cate
+							(Washoe County District Attorney)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Office of the Attorney General</td><td valign="top">Jeffrey M. Conner
+							(Attorney General/Carson City)
+						<br>Gerri L. Hardcastle
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Peter Mark Coca</td><td valign="top">Jonathan M. Kirshbaum
+							(Former)
+						
+							(Federal Public Defender/Las Vegas)
+						<br>Kimberly Anne Sandberg
+							(Federal Public Defender/Las Vegas)
+						<br>Rene L. Valladares
+							(Federal Public Defender/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Jeffrey M. Conner
+							(Attorney General/Carson City)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Gerri L. Hardcastle
+							(Attorney General/Carson City)
+						<br>Tyler J. Ingram
+							(Elko County District Attorney)
+						<br>Chad B. Thompson
+							(Elko County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement and Notice of Briefing Schedule mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=876392&onBaseDocumentNumber=22-32844">22-32844</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Appearance Tyler J. Ingram and Chad B. Thompson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=876398&onBaseDocumentNumber=22-32850">22-32850</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Substitution of Attorney to remove Jonathan M. Kirshbaum and add Attorney Kimberly Sandberg. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=876420&onBaseDocumentNumber=22-32872">22-32872</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/01/2022</td><td>Transcript Request</td><td>Filed Certificate that No Transcript is Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=877821&onBaseDocumentNumber=22-34251">22-34251</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/01/2022</td><td>Docketing Statement</td><td>Filed Appellant's Criminal Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=877831&onBaseDocumentNumber=22-34261">22-34261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/06/2023</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to file Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=888688&onBaseDocumentNumber=23-03582">23-03582</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Opening Brief and Appendix. Due date: March 17, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=888690&onBaseDocumentNumber=23-03584">23-03584</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2023</td><td>Brief</td><td>Filed Appellants Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893522&onBaseDocumentNumber=23-08274">23-08274</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 1 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893523&onBaseDocumentNumber=23-08275">23-08275</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 2 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893524&onBaseDocumentNumber=23-08276">23-08276</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 3 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893527&onBaseDocumentNumber=23-08279">23-08279</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 4 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893528&onBaseDocumentNumber=23-08280">23-08280</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 5 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893529&onBaseDocumentNumber=23-08281">23-08281</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief Vols. 6 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893530&onBaseDocumentNumber=23-08282">23-08282</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Motion</td><td>Filed Appellant's Motion to File Appendix to Opening Brief Vol. 7 Under Seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=893531&onBaseDocumentNumber=23-08283">23-08283</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Motion</td><td>Filed Amicus Curiae's (National Association of Criminal Defense Lawyers and Nevada Attorneys for Criminal Justice) Motion for Permission to File Amicus Brief in Support of Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=894362&onBaseDocumentNumber=23-09076">23-09076</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Brief</td><td>Filed Amicus Curiae's ( National Association for Criminal Defense Lawyers, and Nevada Attorneys for Criminal Justice) Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=894363&onBaseDocumentNumber=23-09077">23-09077</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant's unopposed motion to file a portion of the appendix under seal is granted.  SRCR 7.  The clerk shall file volume 7, received on March 20, 2023, under seal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=895278&onBaseDocumentNumber=23-09964">23-09964</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2023</td><td>Appendix</td><td>Filed Appellant's (SEALED) Appendix to Opening Brief. Vol. 7 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure. The parties shall have seven days from the date of this order to file a motion for disqualification pursuant to NRAP 35 based on my disclosures. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=895954&onBaseDocumentNumber=23-10607">23-10607</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The unopposed motion of the National Association for Criminal Defense Lawyers and Nevada Attorneys for Criminal Justice for leave to file a brief of amicus curiae in support of appellant is granted. The amicus brief was filed on March 23, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=896682&onBaseDocumentNumber=23-11326">23-11326</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's answering brief due: May 1, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=896726&onBaseDocumentNumber=23-11365">23-11365</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2023</td><td>Motion</td><td>Filed Respondent's Motion to Disqualify Justice Linda Bell. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=896732&onBaseDocumentNumber=23-11371">23-11371</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2023</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Appeal with Case Nos. 86366/86406/85881. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=898476&onBaseDocumentNumber=23-13045">23-13045</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/27/2023</td><td>Motion</td><td>Filed Response to State's Motion to Disqualify Pursuant to NRAP 35(b)(2). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=898604&onBaseDocumentNumber=23-13171">23-13171</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/01/2023</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=898996&onBaseDocumentNumber=23-13560">23-13560</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=898997&onBaseDocumentNumber=23-13561">23-13561</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2023</td><td>Motion</td><td>Filed Motion for an Extension of Time to File Amicus Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=899457&onBaseDocumentNumber=23-13986">23-13986</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2023</td><td>Motion</td><td>Filed Respondent's Opposition to Motion to Consolidate Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=899755&onBaseDocumentNumber=23-14253">23-14253</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/08/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motions. Appellants in these appeals have filed motions to consolidate the appeals in Docket Nos. 85881, 86366, and 86406 with the appeal in Docket No. 85519.  The motions in Docket Nos. 85881, 86366, and 86406 are opposed. Having considered the arguments of the parties and the procedural postures of these matters, this court declines to consolidate these appeals.  However, these appeals shall be clustered to ensure that they are resolved in a consistent and efficient manner. Nos 85519/85881/86366/86406. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=899884&onBaseDocumentNumber=23-14381">23-14381</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/08/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The motion of the Office of the Nevada Attorney General (OAG) for an extension of time to file a brief of amicus curiae, presumably in support of respondent, is granted. The OAG shall have until May 23, 2023, to file and serve a brief of amicus curiae in support of respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=900011&onBaseDocumentNumber=23-14507">23-14507</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/08/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's (Nevada District Attorney's Association) Notice of Appearance for Marilee Cate. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=900030&onBaseDocumentNumber=23-14526">23-14526</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/08/2023</td><td>Motion</td><td>Filed Amicus Curiae's (Nevada District Attorney's Association) Motion For Leave to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=900032&onBaseDocumentNumber=23-14528">23-14528</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/08/2023</td><td>Brief</td><td>Filed Amicus Curiae's (Nevada District Attorney's Association) Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=900033&onBaseDocumentNumber=23-14529">23-14529</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2023</td><td>Notice/Incoming</td><td>Filed Respondent AND Amicus Curiae (Office of Attorney General) Notice of Association of Counsel for Jeffrey M. Connor. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=901823&onBaseDocumentNumber=23-16221">23-16221</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2023</td><td>Brief</td><td>Filed Amicus Curiae (Office of Attorney General) Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=901898&onBaseDocumentNumber=23-16289">23-16289</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Brief</td><td>Filed Appellant's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=902575&onBaseDocumentNumber=23-16959">23-16959</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/28/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Disqualify and Granting Motion for Leave to File Brief of Amicus Curiae. Respondent has filed a motion to disqualify Justice Bell.  Respondent contends that disqualification is warranted under NCJC 2.11(A) because Justice Bell's impartiality might reasonably be questioned.  Justice Bell has filed a response. The motion is denied. The motion of the Nevada District Attorney's Association for leave to file a brief of amicus curiae in support of respondent is granted.  NRAP 29.   The amicus brief was filed on May 8, 2023. Lee, J., concurring in part and dissenting in part. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65102&csIID=65102&deLinkID=906421&onBaseDocumentNumber=23-20673">23-20673</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65102&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

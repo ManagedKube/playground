@@ -1,0 +1,910 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82379: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=4AC264FA755546D4CB543705D370AA55">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="60788">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82379</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">KRAMER VS. NAT'L DEFAULT SERV. CORP.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60072">81915</a>, <a href="/public/caseView.do?csIID=63331">82379-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Lyon Co. - Third Judicial District - 18-CV-00663</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Audrey Kramer</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Leo Kramer</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Alyssa McDermott</td><td valign="top">Matthew K. Schriever
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>John T. Steffen
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Breckenridge Property Fund 2016, LLC</td><td valign="top">Matthew K. Schriever
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>John T. Steffen
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Daniel Henry Stewart
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Alexander R. Velto
+							(Hutchison &amp; Steffen, LLC/Reno)
+						<br>Michael K. Wall
+							(Former)
+						
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Robert E. Werbicky
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">National Default Servicing Corporation</td><td valign="top">Krista J. Nielson
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						<br>Kevin S. Soderstrom
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						<br>Ace C. Van Patten
+							(Tiffany &amp; Bosco, P.A./Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/26/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=804106&onBaseDocumentNumber=21-02369">21-02369</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=804108&onBaseDocumentNumber=21-02371">21-02371</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Audrey Kramer.  Check no. 637. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=805803&onBaseDocumentNumber=21-03920">21-03920</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Michael K. Wall of the law firm of Hutchison &amp; Steffen, PLLC as counsel for respondent Breckenridge Property Funds 2016, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=806070&onBaseDocumentNumber=21-04180">21-04180</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2021</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record. Record on Appeal due: 30 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=806610&onBaseDocumentNumber=21-04686">21-04686</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2021</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 05/01/19 and 09/08/20. To Court Reporter:  Michelle Loomis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=807277&onBaseDocumentNumber=21-05344">21-05344</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2021</td><td>Docketing Statement</td><td>Filed Proper Person Appellants' Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=808131&onBaseDocumentNumber=21-06152">21-06152</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. The district court clerk's record on appeal due: April 2, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=808772&onBaseDocumentNumber=21-06779">21-06779</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume I. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811750&onBaseDocumentNumber=21-09599">21-09599</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume II. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811751&onBaseDocumentNumber=21-09600">21-09600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume III. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811753&onBaseDocumentNumber=21-09602">21-09602</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume IV. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811756&onBaseDocumentNumber=21-09605">21-09605</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume V. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811759&onBaseDocumentNumber=21-09608">21-09608</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume VI. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811763&onBaseDocumentNumber=21-09612">21-09612</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume VII. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811764&onBaseDocumentNumber=21-09613">21-09613</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume VIII. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811765&onBaseDocumentNumber=21-09614">21-09614</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume IX. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811766&onBaseDocumentNumber=21-09615">21-09615</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume X. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811767&onBaseDocumentNumber=21-09616">21-09616</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume XI. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=811770&onBaseDocumentNumber=21-09619">21-09619</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter.  Michel Loomis stating that the requested transcripts were delivered.  Dates of transcripts: 05/01/19 and 09/08/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=812400&onBaseDocumentNumber=21-10241">21-10241</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/24/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' opening brief due: June 23, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=817268&onBaseDocumentNumber=21-14835">21-14835</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/24/2021</td><td>Motion</td><td>Filed Proper Person Appellants' Motion for Extension of Time to File Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=820851&onBaseDocumentNumber=21-18209">21-18209</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellants shall have until July 14, 2021, to file and serve the opening brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=821211&onBaseDocumentNumber=21-18561">21-18561</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/15/2021</td><td>Brief</td><td>Filed Proper Person Opening Brief of Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=823178&onBaseDocumentNumber=21-20426">21-20426</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/15/2021</td><td>Notice/Outgoing</td><td>Issued Letter Returning Appendices. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=823184&onBaseDocumentNumber=21-20432">21-20432</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Daniel H. Stewart of the law firm of Hutchison &amp; Steffen, PLLC hereby appears on behalf of Breckenridge Property Funds 2016, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=826013&onBaseDocumentNumber=21-23061">21-23061</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2021</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Motion for an Extension of Time to File Answering Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=826014&onBaseDocumentNumber=21-23062">21-23062</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Breckenridge Property Fund 2016 LLC's answering brief due: September 15, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=826303&onBaseDocumentNumber=21-23345">21-23345</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent National Default Servicing Corporation shall have until August 30, 2021, to file and serve their answering brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=826842&onBaseDocumentNumber=21-23877">21-23877</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Brief</td><td>Filed Respondent National Default Servicing Corporation's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=828211&onBaseDocumentNumber=21-25182">21-25182</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/15/2021</td><td>Brief</td><td>Filed Breckenridge Property Fund 2016, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=829784&onBaseDocumentNumber=21-26674">21-26674</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellants' Reply Brief due:  November 1, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=831806&onBaseDocumentNumber=21-28631">21-28631</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2021</td><td>Brief</td><td>Filed Proper Person Appellants' Reply Brief to Appellee, National Default Servicing Corporation's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834832&onBaseDocumentNumber=21-31489">21-31489</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Motion</td><td>Filed Proper Person Motion for Permission to File over-sized Reply Brief in Excess of Words/Pages in Support of Appellants' Reply Brief to Appellee, Breckenridge's Answering Brief; Memorandum of Points and Authorities; Declaration of Appellant, Audrey Kramer Filed Concurrent Herewith; in Support Thereof. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834837&onBaseDocumentNumber=21-31494">21-31494</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening &amp; Reply Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834841&onBaseDocumentNumber=21-31498">21-31498</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening &amp; Reply Briefs. "Appellant-Leo Kramer's Bankruptcy Case # 10-43951" Summary of Schedules. RJN-1 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834845&onBaseDocumentNumber=21-31502">21-31502</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening Brief &amp; Reply Briefs. Licensed Private Investigator, William J. Paatalo's Updated Declaration, Cirriculum Vitae. Exhibit - "Final Report of the Examiner" RJN-2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834852&onBaseDocumentNumber=21-31509">21-31509</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening &amp; Reply Briefs " Final report of the Examiner" RJN-3 "Vol-1, Pages 1-123". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834854&onBaseDocumentNumber=21-31511">21-31511</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening &amp; Reply Briefs " Final report of the Examiner" RJN-3 "Vol-2, Pages 124-239". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834856&onBaseDocumentNumber=21-31513">21-31513</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Request for Judicial Notice in Support of Appellants' Opening &amp; Reply Briefs " Final report of the Examiner" RJN-3 "Vol-3, Pages 240-369". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=834858&onBaseDocumentNumber=21-31515">21-31515</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Motion</td><td>Filed Motion to Strike Requests to Take Judicial Notice. (REJECTED PER NOTICE ISSUED 11/9/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=835677&onBaseDocumentNumber=21-32255">21-32255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=835691&onBaseDocumentNumber=21-32268">21-32268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/12/2021</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Motion to Strike Requests to Take Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=835863&onBaseDocumentNumber=21-32437">21-32437</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2021</td><td>Motion</td><td>Filed Appellant's Opposition to Respondent Breckenridge Property Fund 2016, LLC's Motion to Strike Requests to Take Judicial Notice in Support of Appellants' Opening Brief &amp; Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=836691&onBaseDocumentNumber=21-33258">21-33258</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=837353&onBaseDocumentNumber=21-33864">21-33864</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Order/Procedural</td><td>Filed Order. Appellants, who are proceeding pro se, have filed a motion asking that this court take judicial notice of three documents. They have also filed a motion for leave to file a reply brief in excess of the page and type-volume limitation. Respondent Breckenridge Property Fund 2016, LLC has filed a motion to strike the motion for judicial notice and portions of the reply brief.  Appellants oppose the motion. Breckenridge's request to strike the motion for judicial notice is denied.  Nevertheless, this court construes the motion to strike as an opposition to the motion for judicial notice and construes appellants' opposition to Breckenridge's motion as a reply in support of the motion for judicial notice.  Having considered the parties' filings, the motion for judicial notice is denied. To date, respondent Alyssa McDermott has not filed an answering brief in this matter.  However, in their docketing statement, appellants state that McDermott is not a respondent to this matter. Accordingly,  unless any party objects, in writing, within 7 days of the date of this order, the clerk shall modify the caption in this matter to remove respondent Alyssa McDermott. Appellants' motion to file a reply brief in excess of the page and type-limitations of NRAP 32(a)(7)(A) is denied.  The clerk shall reject the reply brief received on November 2, 2021.  Appellants shall have 14 days from the date of this order to file and serve a reply brief that complies with the page or type-volume limitations of NRAP 32(a)(7)(A).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=838193&onBaseDocumentNumber=21-34690">21-34690</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Brief</td><td>Filed Appellant's Reply Brief to Breckenridge Property Fund 2016, LLC's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=840124&onBaseDocumentNumber=21-36506">21-36506</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=845872&onBaseDocumentNumber=22-04721">22-04721</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/06/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." Court of Appeals- MG/JT/BB.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/27/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/27/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Extension of Time to File Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=858752&onBaseDocumentNumber=22-16951">22-16951</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Appellants shall have until June 24, 2022, to file and serve a petition for review.  If no petition for review is timely filed, the clerk shall issue the remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=859079&onBaseDocumentNumber=22-17272">22-17272</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Second Motion for Extension of Time to File Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=861062&onBaseDocumentNumber=22-18247">22-18247</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants' petition for review due: July 8, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=863030&onBaseDocumentNumber=22-20053">22-20053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Post-Judgment Petition</td><td>Filed Proper Person Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=864895&onBaseDocumentNumber=22-21887">22-21887</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2022</td><td>Motion</td><td>Filed Proper Person Motion. Petitioners' Motion requesting Admittance and Review of Transcripts from May 1, 2019 &amp; September 8, 2020 Motion Hearings in the Third Judicial District Court of Lyon County. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=864897&onBaseDocumentNumber=22-21889">22-21889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Motion</td><td>Filed Proper Person Motion. Appellants/Petitioners' Motion for Request for Judicial Notice in Support of Appellants/Petitioners' Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=864898&onBaseDocumentNumber=22-21890">22-21890</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/19/2022</td><td>Notice/Incoming</td><td>Filed Respondent Breckenridge Property Funds 2016, LLC's Notice of Appearance for Robert E. Werbicky. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=865781&onBaseDocumentNumber=22-22716">22-22716</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/19/2022</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Opposition to Petitioners' Motion requesting Admittance and Review of Transcripts from May 1, 2019 &amp; September 8, 2020 Motion Hearings in the Third Judicial District Court of Lyon. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=865783&onBaseDocumentNumber=22-22718">22-22718</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/19/2022</td><td>Motion</td><td>Filed Respondent Breckenridge Property Fund 2016, LLC's Opposition to Appellants/Petitioners' Motion for Request for Judicial Notice in Support of Appellants/Petitioners' Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=865784&onBaseDocumentNumber=22-22719">22-22719</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellants shall have until August 9, 2022, to file and serve a reply to the opposition to motion requesting admittance and review of transcripts filed on July 19, 2022; and a reply to the opposition to motion for request for judicial notice in support of appellants/petitioners' petition for review filed on July 19, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=866409&onBaseDocumentNumber=22-23334">22-23334</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2022</td><td>Notice/Incoming</td><td>Filed Respondent National Default Servicing Corporation's Joinder to Breckenridge Properties Fund 2016, LLC's Opposition to Motion for Request for Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=866603&onBaseDocumentNumber=22-23521">22-23521</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/26/2022</td><td>Notice/Incoming</td><td>Filed Respondent National Default Servicing Corporation's Joinder to Breckenridge Properties Fund 2016, LLC's Opposition to Motion for Admittance and Review of Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=866604&onBaseDocumentNumber=22-23522">22-23522</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Motion. Petitioners' Reply to Respondent, Breckenridge Property Fund 2016, LLC's Opposition to Appellants/Petitioners' Request for Judicial Notice in Support of Appellants/Petitioners' Petition for Bill of Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=868040&onBaseDocumentNumber=22-24858">22-24858</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Motion. Petitioners' Reply to Breckenridge Property Fund 2016, LLC's Opposition to Appellants/Petitioners' Motion Requesting Admittance and Review of Transcripts from May 1, 2019 &amp; September 8, 2020, Motion Hearings in the Third Judicial District Court of Lyon County. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=868041&onBaseDocumentNumber=22-24859">22-24859</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Motion. Petitioners' Motion to Strike National Default Servicing Corporation's Joinder Motion to Breckenridge Properties Fund 2016, LLC's Opposition to Appellant/Petitioners' Motion for Request for Judicial Notice in Support of Appellants/Petitioners' Petition for Bill of Review. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=868044&onBaseDocumentNumber=22-24862">22-24862</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2022</td><td>Motion</td><td>Filed Appellants' Proper Person Motion. Petitioners' Motion to Strike National Default Servicing Corporation's Joinder Motion to Breckenridge Properties Fund 2016, LLC's Opposition to Appellant/Petitioners' Motion Requesting Admittance and Review of Transcripts from May 1,  2019 &amp; September 8, 2020, Motion Hearings in the Third Judicial District Court of Lyon County, in Support of Appellants/Petitioners' Petition for Bill of Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=868045&onBaseDocumentNumber=22-24863">22-24863</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions. Appellants have filed pro se motions to admit and review transcripts of the district court proceedings and to take judicial notice of certain documents.  The motion to provide this court with additional transcripts is denied at this time.  The motion for judicial notice is also denied.  fn1 [Appellants' have filed an unopposed motion to strike the joinders as untimely.  Although the joinders were filed beyond the time allowed to oppose appellants' motions, this court denies the motions to strike.  This court has also considered appellants' replies in support of their motions although they exceed the page limitations.  See NRAP 27(d)(2).] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=871881&onBaseDocumentNumber=22-28535">22-28535</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2022</td><td>Post-Judgment Order/Dispositional</td><td>Order Denying Petition for Review.  "Review denied."  EN Banc  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=871964&onBaseDocumentNumber=22-28618">22-28618</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=871965&onBaseDocumentNumber=22-28619">22-28619</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/22/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on September 15, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=60788&csIID=60788&deLinkID=873196&onBaseDocumentNumber=22-28619">22-28619</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=60788&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

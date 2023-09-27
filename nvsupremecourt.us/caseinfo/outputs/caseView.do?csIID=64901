@@ -1,0 +1,735 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85374: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=7DEC5C86D7C234620A69E4A2CDE5CB86">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64901">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85374</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">WILSON VS. SPREWELL</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=63452">84319</a>, <a href="/public/caseView.do?csIID=63528">84319-COA</a>, <a href="/public/caseView.do?csIID=65013">85374-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A789252</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>09/29/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jimmy L. Wilson</td><td valign="top">Trevor J. Hatfield
+							(Hatfield &amp; Associates, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Twana Hatcher</td><td valign="top">Trevor J. Hatfield
+							(Hatfield &amp; Associates, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">REEC Enterprises, LLC</td><td valign="top">Andrew A. Bao
+							(Andrew Bao &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Tyrone Sprewell</td><td valign="top">Joseph Y. Hong
+							(Former)
+						
+							(Hong &amp; Hong)
+						<br>Theresa L. Mains</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2022</td><td>Filing Fee</td><td>Filing Fee Due. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/20/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=872862&onBaseDocumentNumber=22-29451">22-29451</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=872864&onBaseDocumentNumber=22-29453">22-29453</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=872866&onBaseDocumentNumber=22-29455">22-29455</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2022</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=872993&onBaseDocumentNumber=22-29582">22-29582</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/22/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=873295&onBaseDocumentNumber=22-29847">22-29847</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Hatfield &amp; Associates, LTD. Check no. 2297. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=873726&onBaseDocumentNumber=22-30263">22-30263</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Modification of Caption. Parties are advised to notify this office in writing within 7 days if the caption as modified does not accurately reflect the status of the parties.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=873901&onBaseDocumentNumber=22-30425">22-30425</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/29/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=874130&onBaseDocumentNumber=22-30649">22-30649</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/04/2022</td><td>Motion</td><td>Filed Appellant's Emergency Motion for Stay of Execution of Judgment Pending Appeal.  (TRANSFERRED TO COA FOR RESOLUTION PER ORDER FILED 10/6/22).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=874738&onBaseDocumentNumber=22-31245">22-31245</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/05/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Real Party in Interest REEC Enterprises LLC. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=874985&onBaseDocumentNumber=22-31488">22-31488</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/05/2022</td><td>Motion</td><td>Filed Real Party in Interest REEC Enterprises, LLC's Motion to Modify Caption. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=874986&onBaseDocumentNumber=22-31489">22-31489</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer of Document to Court of Appeals.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875003&onBaseDocumentNumber=22-31506">22-31506</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/06/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellants have filed in this court an emergency motion for stay pending appeal.  That motion shall be transferred to the court of appeals for resolution.  This case will otherwise proceed in the supreme court until further order of this court, and all future documents not related to the stay motion shall be filed in this court.   If the parties wish to file any additional documents related to the emergency stay motion, such documents shall be captioned "In the Court of Appeals of the State of Nevada."  The clerk shall transfer the October 4 motion to the court of appeals; all other documents shall remain filed in this court.  The clerk shall file this order in both this court and the court of appeals.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875006&onBaseDocumentNumber=22-31509">22-31509</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for October 24, 2022, at 10:30 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875113&onBaseDocumentNumber=22-31614">22-31614</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice Of Withdrawal Of Attorney Joseph Hong. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875267&onBaseDocumentNumber=22-31765">22-31765</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/10/2022</td><td>Motion</td><td>Filed Real Party in Interest's Objection to Stipulation to Stay. (TRANSFERRED TO COA, MISTAKELY FILED ON THE SUPREME COURT SIDE)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions. On October 5, 2022, REEC Enterprises, LLC filed a motion to modify the caption to include it as a respondent in this appeal. The motion is denied.   On October 7, 2022, attorney Joseph Y. Hong filed a notice indicating that he wished to withdraw as counsel for respondent.  The notice is construed as a motion to withdraw. The motion is denied without prejudice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875340&onBaseDocumentNumber=22-31834">22-31834</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/10/2022</td><td>Motion</td><td>Filed Motion to Substitute Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875395&onBaseDocumentNumber=22-31889">22-31889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Motion</td><td>Filed Respondent's Motion To Withdraw As Counsel Of Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875401&onBaseDocumentNumber=22-31895">22-31895</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk shall remove attorney Hong as counsel for respondent. Respondent's notice of appearance due: 30 days. The timelines for further settlement proceedings are stayed pending further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875573&onBaseDocumentNumber=22-32065">22-32065</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice That He Is Not Retaining New Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875752&onBaseDocumentNumber=22-32239">22-32239</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/12/2022</td><td>Motion</td><td>Filed Emergency Motion to Intervene Under NRAP 27(e) Emergency basis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=875768&onBaseDocumentNumber=22-32254">22-32254</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/17/2022</td><td>Motion</td><td>Filed Appellants' Response to REEC Enterprises, LLC Motion to Substitute Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=876219&onBaseDocumentNumber=22-32674">22-32674</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=876394&onBaseDocumentNumber=22-32846">22-32846</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Motion</td><td>Filed Appellants' Response to REC Enterprises, LLC's Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=876528&onBaseDocumentNumber=22-32976">22-32976</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Motion</td><td>Filed Real Party in Interest (REEC Enterprises, LLC) Reply to Response to Motion to Substitute Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=876794&onBaseDocumentNumber=22-33237">22-33237</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2022</td><td>Motion</td><td>Filed Real Party in Interest (REEC Enterprises, LLC) Reply to Response to Emergency Motion to Intervene. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=876795&onBaseDocumentNumber=22-33238">22-33238</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Order/Procedural</td><td>Filed Order Granting in Part Motion to Substitute and Denying as Moot Motion to Intervene. REEC has now filed a motion to substitute in as respondent. Additionally, REEC has filed an emergency motion for leave to intervene. Appellants have opposed both motions, but respondent has not filed any response to either motion. Therefore, we grant the motion in part and direct that REEC be joined as a respondent to this appeal. The clerk of this court shall amend the caption accordingly. We deny the motion to wholly substitute in respondent's place. REEC's motion to intervene is denied as moot. fn1 [The Honorable Mark Gibbons, Senior Justice, participated in this matter under a general order of assignment.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=878564&onBaseDocumentNumber=22-34912">22-34912</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. Because Mr. Sprewell is proceeding on appeal pro se this appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=879239&onBaseDocumentNumber=22-35576">22-35576</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/23/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 08/22/22.  To Court Reporter: Kaihla Berndt. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=880582&onBaseDocumentNumber=22-36894">22-36894</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/09/2023</td><td>Motion</td><td>Filed Appellants' and Respondent Sprewell's Joint Emergency Motion for Continued Stay of Execution of Judgment Pending Appeal. (SC). (TRANSFERRED TO THE COURT OF APPEALS PER 01/10/23 NOTICE)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=885609&onBaseDocumentNumber=23-00656">23-00656</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=885716&onBaseDocumentNumber=23-00761">23-00761</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2023</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Counsel for Respondent Sprewell (REJECTED PER 03/02/23 NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2023</td><td>Notice/Incoming</td><td>Filed Notice of NRAP RULE 26.1 Disclosure for Respondent Sprewell (REJECTED PER 03/02/23 NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=891420&onBaseDocumentNumber=23-06260">23-06260</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/04/2023</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding. "ORDER the judgment of the district court AFFIRMED IN PART AND REVERSED IN PART AND REMAND this matter to the district court for proceedings consistent with this order." COA-MG/BB/DW.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=914332&onBaseDocumentNumber=23-28265">23-28265</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2023</td><td>Motion</td><td>Filed Appellants' Motion for Extension of Time for Filing for Fling Petition for Rehearing and Vacate Remittitur. (TRANSFERRED FROM THE COURT OF APPEALS)(SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=915361&onBaseDocumentNumber=23-29274">23-29274</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2023</td><td>Motion</td><td>Filed  Respondent Reec Enterprises, LLC's Response to Appellant's Motion for Extension of Time to file a Petition for Rehearing  and to Vacate Remittitur. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=916144&onBaseDocumentNumber=23-30044">23-30044</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/18/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on 08/31/23. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=916559&onBaseDocumentNumber=23-28265">23-28265</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/22/2023</td><td>Motion</td><td>Filed Appellant's  Motion to Extend Time for Filing Petition for Rehearing and Vacate Remittitur. (Duplicate filing) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2023</td><td>Motion</td><td>Filed Motion to Extend Time Motion for Extention of Time for Filing Petition for Rehearing and Vacate Remittitur</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64901&csIID=64901&deLinkID=917767&onBaseDocumentNumber=23-31583">23-31583</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64901&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

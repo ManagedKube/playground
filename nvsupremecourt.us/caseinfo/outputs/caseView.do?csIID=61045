@@ -1,0 +1,716 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82572: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=784B41FC598EADF8A13571A06D845742">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61045">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82572</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">LEIGH-PINK VS RIO PROPERTIES, LLC (NRAP 5)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">NONE</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - NRAP 5 - U.S. Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>02/25/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Legal Aid Center of Southern Nevada, Inc.</td><td valign="top">Stephen A. Davis
+							(Jones Lovelock)
+						<br>Marta D. Kurshumova
+							(Jones Lovelock)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National Association of Consumer Advocates</td><td valign="top">Keren E. Gesund
+							(Gesund &amp; Pailet, LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National Consumer Law Center</td><td valign="top">Keren E. Gesund
+							(Gesund &amp; Pailet, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Public Citizen</td><td valign="top">Keren E. Gesund
+							(Gesund &amp; Pailet, LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Public Justice</td><td valign="top">Keren E. Gesund
+							(Gesund &amp; Pailet, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Aaron Leigh-Pink</td><td valign="top">Robert A. Waller, Jr.</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Tana Emerson</td><td valign="top">Robert A. Waller, Jr.</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Rio Properties, LLC</td><td valign="top">Lewis W. Brandon, Jr.
+							(Brandon Smerber Law Firm)
+						<br>F. Brenden Coller
+							(Cozen &amp; O'Connor/Philadelphia)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Richard Fama
+							(Cozen &amp; O'Connor/New York)
+						<br>Janice M. Michaels
+							(Wood, Smith, Henning &amp; Berman, LLP/Las Vegas)
+						<br>Karl O. Riley
+							(Cozen O'Connor)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2021</td><td>Filing Fee</td><td>Filing Fee due. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2021</td><td>Petition/Writ</td><td>Filed Certifying Question to Nevada Supreme Court. Received from U.S. Court of Appeals for the Ninth Circuit and the Honorables Gloria M. Navarro, Ronald M. Gould, Nelson Circuit Judges and Brian M. Cogan, District Judge. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=808245&onBaseDocumentNumber=21-06261">21-06261</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/09/2021</td><td>Order/Procedural</td><td>Filed Order Accepting Certified Question, Directing Briefing, and Directing Submission of Filing Fee.  Appellants shall have 30 days from the date of this order to file and serve an opening brief addressing the certified question.  Respondent shall have 30 days from the date the opening brief is served to file and serve an answering brief.  Appellants shall then have 20 days from the date the answering brief is served to file and serve any reply brief.  Appellants and respondent shall each tender to the clerk of this court, within 14 days from the date of this order, the sum of $125, representing half of the filing fee.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=812461&onBaseDocumentNumber=21-10301">21-10301</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $125.00 from Robert A. Waller, Jr. Check no. 9126. (Appellants) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/26/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $125.00 from Cozen O'Connor. (Respondent) Check no. 744641. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/29/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Association of Counsel Robert L. Eisenberg. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=814588&onBaseDocumentNumber=21-12319">21-12319</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2021</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=814826&onBaseDocumentNumber=21-12557">21-12557</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Opening Brief and Appendix. Due date is June 9, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=814829&onBaseDocumentNumber=21-12560">21-12560</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2021</td><td>Order/Procedural</td><td>Filed Order.  Respondent has filed a notice of association of counsel.  Accordingly, the clerk of this court shall add Robert L. Eisenberg and Lemons, Grundy &amp; Eisenberg to the docket as counsel for respondent in this appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=814888&onBaseDocumentNumber=21-12616">21-12616</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2021</td><td>Motion</td><td>Filed Appellants' Motion for 30 Day Extension to File Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=818595&onBaseDocumentNumber=21-16145">21-16145</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/10/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellants' Opening Brief due: July 9, 2021. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=819240&onBaseDocumentNumber=21-16727">21-16727</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Karl O. Riley) for Respondents. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=819673&onBaseDocumentNumber=21-17155">21-17155</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/09/2021</td><td>Brief</td><td>Filed Appellant's Opening Brief. (REJECTED PER NOTICE ISSUED ON 7/9/21)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=822593&onBaseDocumentNumber=21-19849">21-19849</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2021</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=822717&onBaseDocumentNumber=21-19971">21-19971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2021</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=822718&onBaseDocumentNumber=21-19972">21-19972</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Keren E. Gesund as Amici Curiae. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=823328&onBaseDocumentNumber=21-20573">21-20573</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Motion</td><td>Filed Motion for Permission to File Amici Brief in support of the Appellants' (BRIEF DETACHED AND FILED SEPARATELY). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=823329&onBaseDocumentNumber=21-20574">21-20574</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/16/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance Notice for Stephen A. Davis and Marta D. Kurshumova, Pro Bono Counsel for Amicus Curiae, Legal Aid of Southern Nevada, Inc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=823340&onBaseDocumentNumber=21-20585">21-20585</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Motion</td><td>Filed Motion for Leave to File the Amicus Brief of the Legal Aid of Southern Nevada, Inc. (BRIEF DETACHED AND FILED SEPARATELY). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=823344&onBaseDocumentNumber=21-20589">21-20589</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=825023&onBaseDocumentNumber=21-22142">21-22142</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Answering Brief.  Due date September 10, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=825039&onBaseDocumentNumber=21-22158">21-22158</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/06/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Public Citizen, the National Association of Consumer Advocates , the National Consumer Law Center , and Public Justice have filed a joint motion to file an amicus brief in support of appellants. This court grants the motions. The clerk of this court shall detach the proposed amicus briefs from the motions and shall file them separately. fn1 [The clerk of this court shall add to the docket Keren E. Gesund of Gesund &amp; Pailet, LLC, as counsel for amici Public Citizen, National Association of Consumer Advocates, National Consumer Law Center, and Public Justice; and Stephen A. Davis and Marta D. Kurshumova of Jones Lovelock as counsel for amicus Legal Aid Center of Southern Nevada, Inc. ] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=825780&onBaseDocumentNumber=21-22850">21-22850</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/06/2021</td><td>Brief</td><td>Filed Brief of Amici Curiae Public Citizen, National Association of Consumer Advocates, National Consumer Law Center, and Public Justice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=825805&onBaseDocumentNumber=21-22854">21-22854</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/06/2021</td><td>Brief</td><td>Filed Amicus Brief of the Legal Aid of Southern Nevada, Inc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=825809&onBaseDocumentNumber=21-22858">21-22858</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Respondent's Motion for 21 Day Extension to File Answering Brief [Second Request]. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=827955&onBaseDocumentNumber=21-24931">21-24931</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/03/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have until October 1, 2021, to file and serve the answering brief.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=828724&onBaseDocumentNumber=21-25685">21-25685</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2021</td><td>Notice/Incoming</td><td>Filed Notice of Change of Firm Address. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=829579&onBaseDocumentNumber=21-26471">21-26471</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/01/2021</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=831469&onBaseDocumentNumber=21-28299">21-28299</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/12/2021</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=832375&onBaseDocumentNumber=21-29194">21-29194</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/12/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Reply Brief.  Due date November 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=832406&onBaseDocumentNumber=21-29225">21-29225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2021</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=836792&onBaseDocumentNumber=21-33357">21-33357</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/25/2022</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.  (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=847421&onBaseDocumentNumber=22-06162">22-06162</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/30/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Question answered." Before the Court En Banc. Author: Stiglich, J. Majority: Parraguirre/Hardesty/Stiglich/Cadish/Silver/Pickering/Herndon. 138 Nev. Adv. Opn. No. 48. En Banc. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=863715&onBaseDocumentNumber=22-20731">22-20731</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. {SC}</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61045&csIID=61045&deLinkID=866439&onBaseDocumentNumber=22-23362">22-23362</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed {SC}</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61045&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

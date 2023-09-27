@@ -1,0 +1,806 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83600-COA: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=2667E80FD167B385BB0848944C9699E6">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62516">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83600-COA</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">VENETIAN CASINO RESORT, LLC VS. DIST. CT. (SEKERA)</td><td width="15%" class="label">Court:</td><td width="35%">Court of Appeals</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=56681">79689</a>, <a href="/public/caseView.do?csIID=56696">79689-COA</a>, <a href="/public/caseView.do?csIID=57882">80450</a>, <a href="/public/caseView.do?csIID=58445">80816</a>, <a href="/public/caseView.do?csIID=58524">80816-COA</a>, <a href="/public/caseView.do?csIID=62510">83600</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A772761</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus/Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Las Vegas Sands, LLC</td><td valign="top">Gregory A. Miles
+							(Royal &amp; Miles, LLP)
+						<br>Michael A. Royal
+							(Royal &amp; Miles, LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Venetian Casino Resort, LLC</td><td valign="top">Gregory A. Miles
+							(Royal &amp; Miles, LLP)
+						<br>Michael A. Royal
+							(Royal &amp; Miles, LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Joyce Sekera</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Keith E. Galliher, Jr.
+							(The Galliher Law Firm)
+						<br>Geordan Logan
+							(Claggett &amp; Sykes Law Firm)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						<br>William T. Sykes
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kathleen E. Delaney</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Case Status Update</td><td>Transferred from Supreme Court. (COA).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Petition/Writ</td><td>Filed Petitioners' Emergency Petition for Writ of Mandamus and/or Writ of Prohibition Under NRAP Rules 21(a)(6) and 27(e). (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832329&onBaseDocumentNumber=21-29148">21-29148</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Motion</td><td>Filed Motion to Exceed Type Volume Limitation. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832330&onBaseDocumentNumber=21-29149">21-29149</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Motion</td><td>Filed Emergency Motion Under NRAP 8 Staying Execution of Order Directing Petitioners to Disclose Private, Protected Information of Guests Not Involved in Underlaying Lawsuit. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832331&onBaseDocumentNumber=21-29150">21-29150</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832332&onBaseDocumentNumber=21-29151">21-29151</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832333&onBaseDocumentNumber=21-29152">21-29152</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832334&onBaseDocumentNumber=21-29153">21-29153</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832335&onBaseDocumentNumber=21-29154">21-29154</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832336&onBaseDocumentNumber=21-29155">21-29155</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832337&onBaseDocumentNumber=21-29156">21-29156</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832338&onBaseDocumentNumber=21-29157">21-29157</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 8. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832339&onBaseDocumentNumber=21-29158">21-29158</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 9. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832340&onBaseDocumentNumber=21-29159">21-29159</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 10. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832341&onBaseDocumentNumber=21-29160">21-29160</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 11. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832342&onBaseDocumentNumber=21-29161">21-29161</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 12. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832343&onBaseDocumentNumber=21-29162">21-29162</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 13. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832344&onBaseDocumentNumber=21-29163">21-29163</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 14. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832345&onBaseDocumentNumber=21-29164">21-29164</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 15. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832346&onBaseDocumentNumber=21-29165">21-29165</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 16. (TRANSFERRED FROM THE SUPREME COURT PER 10/11/21 NOTICE). (COA).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832347&onBaseDocumentNumber=21-29166">21-29166</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/12/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer and Granting Temporary Stay.  Real party in interest, on behalf of respondents, shall have 28 days from the date of this order within which to file and serve an answer.  The answer may contain up to 10,891 words.  Petitioners shall have 14 days from service of the answer to file and serve any reply, which shall conform to the NRAP 21(d) page/type-volume limit.  The district court's discovery order is hereby temporarily stayed pending our receipt and consideration of any opposition to the stay motion and further order of this court.   Any opposition to the stay motion is due by October 18, 2021.  fn1[Petitioners' motion for leave to file a petition in excess of the NRAP 21(d) type-volume limitation is granted; the petition was filed on October 11, 2021.]  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832483&onBaseDocumentNumber=21-29302">21-29302</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/14/2021</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure.  I (Judge Bonnie Bulla) believe that I can be fair and impartial in this matter, but I am making this disclosure so that any party who believes disqualification is appropriate may file a motion to disqualify pursuant to NRAP 35.  Any motion to disqualify must be made in writing within 7 days of the filing of this voluntary disclosure.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=832687&onBaseDocumentNumber=21-29504">21-29504</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Motion</td><td>Filed Response to Opposition to Emergency Motion Under NRAP 27 and NRAP 8 Staying Execution of Order. (REJECTED PER NOTICE ISSUED ON 10/19/21) (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance for Micah S. Echols. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=833304&onBaseDocumentNumber=21-30057">21-30057</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance.  Micah S. Echols, Esq., and David P.&#13;
+Snyder, Esq., of Claggett &amp; Sykes Law Firm, hereby enter their&#13;
+appearance as associated counsel of record for Real Party in Interest&#13;
+Joyce Sekera.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=833360&onBaseDocumentNumber=21-30113">21-30113</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2021</td><td>Motion</td><td>Filed Real Party in Interest's Opposition to Emergency Motion Under NRAP 27 and NRAP 8 Staying Execution of Order.  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=833443&onBaseDocumentNumber=21-30116">21-30116</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2021</td><td>Motion</td><td>Filed Petitioners' Reply to Opposition to Emergency Motion Under NRAP 27 and NRAP Staying Execution of Order. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=834189&onBaseDocumentNumber=21-30860">21-30860</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/09/2021</td><td>Motion</td><td>Filed Real Party in Interest Motion to Extend Time to File Answer to Petition For Writ of Mandamus and/or Prohibition. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=835623&onBaseDocumentNumber=21-32202">21-32202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Order/Procedural</td><td>Filed Order Granting Stay.  We grant petitioners' motion and stay the September 7, 2021, district court order compelling production of prior incident reports pending further order of this court.  Real party in interest's motion for an extension of time to file her answer is also granted.  The answer is due on or before December 9, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=836380&onBaseDocumentNumber=21-32950">21-32950</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Petition/Writ</td><td>Filed Real Party in Interest's Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838676&onBaseDocumentNumber=21-35163">21-35163</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 1. (Nos. 1-229)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838677&onBaseDocumentNumber=21-35164">21-35164</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 2. (Nos. 230-459)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838678&onBaseDocumentNumber=21-35165">21-35165</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix. Vol. 3. (Nos. 460-703)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838679&onBaseDocumentNumber=21-35166">21-35166</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 4. (Nos. 704-954)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838680&onBaseDocumentNumber=21-35167">21-35167</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 5. (Nos. 955-1058)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838681&onBaseDocumentNumber=21-35168">21-35168</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 6. (Nos. 1059-1258)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838682&onBaseDocumentNumber=21-35169">21-35169</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 7. (Nos. 1259-1475)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838683&onBaseDocumentNumber=21-35170">21-35170</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 8. (Nos. 1476-1699)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838684&onBaseDocumentNumber=21-35171">21-35171</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 9. (Nos. 1700-1840)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838685&onBaseDocumentNumber=21-35172">21-35172</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 10. (Nos. 1841-2024)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838686&onBaseDocumentNumber=21-35173">21-35173</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 11. (Nos. 2025-2144)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838687&onBaseDocumentNumber=21-35174">21-35174</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 12. (Nos. 2145-2341)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838688&onBaseDocumentNumber=21-35175">21-35175</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 13. (Nos. 2342-2577)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838689&onBaseDocumentNumber=21-35176">21-35176</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 14. (Nos. 2578-2797)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838690&onBaseDocumentNumber=21-35177">21-35177</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 15. (Nos. 2798-3017)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838691&onBaseDocumentNumber=21-35178">21-35178</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 16. (Nos. 3018-3237)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838692&onBaseDocumentNumber=21-35179">21-35179</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2021</td><td>Appendix</td><td>Filed Real Party in Interest's Appendix, Vol. 17. (Nos. 3238-3277)(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838693&onBaseDocumentNumber=21-35180">21-35180</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/10/2021</td><td>Notice/Incoming</td><td>Filed Real Party in Interest's Proof of Service for 1-17 Volumes of Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=838725&onBaseDocumentNumber=21-35212">21-35212</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/15/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners' reply due: January 6, 2022. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=839262&onBaseDocumentNumber=21-35701">21-35701</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/06/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Real Party In Interest's Answer to Petition for Writ of Mandamus and/or Prohibition. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=841626&onBaseDocumentNumber=22-00645">22-00645</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2022</td><td>Order/Dispositional</td><td>Filed Order Denying Petition for Writ of Mandamus or, in the Alternative, Writ of Prohibition. "ORDER the petition DENIED." Court of Appeals- MG/JT/BB. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=850618&onBaseDocumentNumber=22-09164">22-09164</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Post-Judgment Petition</td><td>Filed Petitioners' Petition for Rehearing. (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=852439&onBaseDocumentNumber=22-10942">22-10942</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $150.00 from Michael A. Royal. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c).  (COA)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62516&csIID=62516&deLinkID=853486&onBaseDocumentNumber=22-11922">22-11922</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Case Status Update</td><td>Transferred to Supreme Court. (COA)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/10/2022</td><td>Case Status Update</td><td>Case Closed</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62516&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,819 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83279: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=B573D1B604EE602D97AF27D9BAAE351F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62044">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83279</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">C &amp; A INVS., L.L.C. VS. WELLS FARGO BANK NW, N.A. C/W 79881</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=56958">79881</a>*, 83279</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=56958">79881</a>, <a href="/public/caseView.do?csIID=58456">80824</a>, <a href="/public/caseView.do?csIID=67459">87287</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Carson City - First Judicial District - 17RP000091B</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Senior Justice Gibbons for Justice Gibbons</td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>07/28/2021 / Shipman, Madelyn</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">C &amp; A Investments, L.L.C.</td><td valign="top">Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Ryan D. Russell
+							(Allison MacKenzie, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Bank of Utah</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Wells Fargo Bank Northwest, N.A.</td><td valign="top">Jennifer Mahe
+							(Mahe Law, Ltd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Jiangson Duke, LLC</td><td valign="top">Richard A. Salvatore
+							(Midtown Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Northern Nevada Comstock Investments, LLC</td><td valign="top">John K. Gallagher
+							(Guild, Gallagher &amp; Fuller, Ltd.)
+						<br>Patrick H. Gallagher
+							(Guild, Gallagher &amp; Fuller, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Allison MacKenzie.  Check no. 0606. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=824598&onBaseDocumentNumber=21-21724">21-21724</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=824600&onBaseDocumentNumber=21-21726">21-21726</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Madelyn Shipman. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=824795&onBaseDocumentNumber=21-21917">21-21917</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Guild, Gallagher &amp; Fuller. Check no. 15200. (Respondent/Cross-Appellant, N. Nev. Comstock) (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Docketing statement mailed to counsel for cross-appellant) (Respondent/Cross-Appellant, N. Nev. Comstock) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=825232&onBaseDocumentNumber=21-22350">21-22350</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2021</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 0675 returned to Allison MacKenzie. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=826939&onBaseDocumentNumber=21-23974">21-23974</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2021</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondent's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=826963&onBaseDocumentNumber=21-23998">21-23998</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Bill Borrelli.  Check no. 228. (Respondent/Cross-Appellant, Jiangson Duke) (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. Docketing statement mailed to counsel for cross-appellant) (Respondent/Cross-Appellant, Jiangson Duke) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=827112&onBaseDocumentNumber=21-24136">21-24136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals (Northern Nevada Comstock Investments, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=827579&onBaseDocumentNumber=21-24563">21-24563</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=828097&onBaseDocumentNumber=21-25071">21-25071</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/31/2021</td><td>Settlement Order/Procedural</td><td>Filed Order Removing Appeal and Cross-Appeal from Settlement Program and Reinstating Briefing.   Appellant/Cross-Respondent and Respondent/Cross-Appellant each: Transcript Request Form due:  14 days.  Appellant/Cross-Respondent:  Opening Brief and Appendix due:  90 days.  Respondent shall have 30 days from service of appellant's opening brief on appeal to file and serve an answering brief on appeal.  Appellant shall have 30 days from service of respondent's answering brief to file and serve any reply brief.  Cross-Appellants shall have 30 days from service of appellant's opening brief on appeal to file and serve a combined answering brief on appeal and opening brief on cross-appeal.  Appellant shall have 30 days from service of cross-appellants' combined opening brief on appeal and answering brief on cross-appeal to file and serve a combined reply brief on appeal and answering brief on cross-appeal.  Cross-appellants shall have 14 days from service of appellant's combined brief to file and serve a reply brief on cross-appeal, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=828323&onBaseDocumentNumber=21-25293">21-25293</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/01/2021</td><td>Transcript Request</td><td>Filed Certificate That No Transcripts are Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=828588&onBaseDocumentNumber=21-25521">21-25521</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/10/2021</td><td>Docketing Statement</td><td>Filed Respondents/Cross-Appellants' Docketing Statement Civil Appeals (REJECTED PER NOTICE ISSUED 09/10/21). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/10/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document.  Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829364&onBaseDocumentNumber=21-26260">21-26260</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/10/2021</td><td>Motion</td><td>Filed Appellant Jiangson Duke, LLC's Motion for Extension of Time to File a Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829373&onBaseDocumentNumber=21-26269">21-26269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2021</td><td>Transcript Request</td><td>Filed Respondents/Cross-Appellants Northern Nevada Comstock Investments, LLC's Certificate That No Transcripts Are Being Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829543&onBaseDocumentNumber=21-26435">21-26435</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/15/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Jiangson Duke, LLC's docketing statement due: September 20, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829748&onBaseDocumentNumber=21-26639">21-26639</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2021</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals (Jiangson Duke, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829918&onBaseDocumentNumber=21-26808">21-26808</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2021</td><td>Transcript Request</td><td>Filed Certificate That No Transcripts Are Being Requested (Jiangson Duke, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=829937&onBaseDocumentNumber=21-26827">21-26827</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2021</td><td>Transcript Request</td><td>Filed Certificate That No Transcripts Are Being Requested (Jiangson Duke, LLC). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=831278&onBaseDocumentNumber=21-28111">21-28111</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Limited Participation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=832031&onBaseDocumentNumber=21-28853">21-28853</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Errata Notice of Limited Participation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=832039&onBaseDocumentNumber=21-28861">21-28861</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2021</td><td>Order/Procedural</td><td>Filed Order.  The clerk of this court shall amend the caption on this court's docket to conform to the caption of this order.  Unless respondent/cross-respondent notifies this court otherwise, in writing, this appeal shall be decided without any briefs from respondent/cross-respondent.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=833211&onBaseDocumentNumber=21-30019">21-30019</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2021</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion for Extension of Time for Opening Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=836568&onBaseDocumentNumber=21-33136">21-33136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2021</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved (Opening Brief &amp; Appendix due: December 29, 2021) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=836570&onBaseDocumentNumber=21-33138">21-33138</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Brief</td><td>Filed Appellant's/Cross Respondent's Opening Brief. (REJECTED PER NOTICE ISSUED 12/29/21) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840689&onBaseDocumentNumber=21-37064">21-37064</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840690&onBaseDocumentNumber=21-37065">21-37065</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840691&onBaseDocumentNumber=21-37066">21-37066</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840694&onBaseDocumentNumber=21-37069">21-37069</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840697&onBaseDocumentNumber=21-37072">21-37072</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840698&onBaseDocumentNumber=21-37073">21-37073</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840700&onBaseDocumentNumber=21-37075">21-37075</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Volume 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840702&onBaseDocumentNumber=21-37077">21-37077</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Consolidate Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840708&onBaseDocumentNumber=21-37083">21-37083</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840713&onBaseDocumentNumber=21-37088">21-37088</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2021</td><td>Brief</td><td>Filed Appellant's/Cross-Respondent's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=840833&onBaseDocumentNumber=21-37206">21-37206</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Motion</td><td>Filed Respondent/Cross-Appellant Northern Nevada Comstock's Opposition to C&amp;A Investments Motion to Consolidate Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=841377&onBaseDocumentNumber=22-00399">22-00399</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/07/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Reply in Support of Motion to Consolidate. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=841664&onBaseDocumentNumber=22-00683">22-00683</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions to Consolidate.  Briefing of the appeal in Docket No. 79881 has been completed.  The briefing of the appeal and cross-appeal in Docket No. 83279 shall proceed as currently scheduled in that appeal and cross-appeal.  Nos. 79881/83279.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=842840&onBaseDocumentNumber=22-01842">22-01842</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2022</td><td>Motion</td><td>Filed Respondent Northern Nevada Comstock Investment LLC's Motion for Extension of Time to File Respondent's Answering Brief on Appeal and Opening Brief on Cross Appeal. Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=843937&onBaseDocumentNumber=22-02900">22-02900</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Northern Nevada Comstock's Answering Brief/Opening Brief due: March 2, 2022) Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=843940&onBaseDocumentNumber=22-02903">22-02903</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2022</td><td>Brief</td><td>Filed Respondent/Cross Appellant Northern Nevada Comstock Investments, LLC's Answering Brief on Appeal and Opening Brief on Cross-Appeal (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=847996&onBaseDocumentNumber=22-06719">22-06719</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2022</td><td>Appendix</td><td>Filed Respondent/Cross Appellant Northern Nevada Comstock Investments, LLC's Appendix on Appeal and On Cross-Appeal  - Volume 3 (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=847998&onBaseDocumentNumber=22-06721">22-06721</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2022</td><td>Appendix</td><td>Filed Respondent/Cross Appellant Northern Nevada Comstock Investments, LLC's Appendix on Appeal and On Cross-Appeal  - Volume 1 (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=848003&onBaseDocumentNumber=22-06726">22-06726</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2022</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant Jiangson Duke, LLC's Joinder to Respondent Northern Nevada Comstock Investment, LLC's Answering Brief on Appeal and Opening Brief on Cross-Appeal and NRAP 26.1 Disclosures (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=848073&onBaseDocumentNumber=22-06794">22-06794</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2022</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant Jiangson Duke, LLC's Joinder to Respondent Northern Nevada Comstock Investment, LLC's Answering Brief on Appeal and Opening Brief on Cross-Appeal and NRAP 26.1 Disclosures (83279). Nos. 79881/83279 (Duplicate filing) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=848076&onBaseDocumentNumber=22-06797">22-06797</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Extend Time for Reply Brief on Appeal and Answering Brief on Cross-Appeal (First Request) (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=851303&onBaseDocumentNumber=22-09831">22-09831</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2022</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved. (Appellant/Cross-Respondent's Reply/Answering Brief due: May 2, 2022 (83279)) Nos. 79881/83279</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=851306&onBaseDocumentNumber=22-09834">22-09834</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Appellant's/Cross Respondent's Reply Brief on Appeal and Answering Brief on Appeal (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=855538&onBaseDocumentNumber=22-13860">22-13860</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Respondent Northern Nevada Comstock Investments, Inc's Motion for Extension of Time to File Respondent's Reply Brief on Cross Appeal (First Request) (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=856991&onBaseDocumentNumber=22-15288">22-15288</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Comstock's reply brief on cross-appeal due: June 15, 2022. Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=858017&onBaseDocumentNumber=22-16233">22-16233</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/15/2022</td><td>Brief</td><td>Filed Respondent/Cross Appellant Northern Nevada Comstock Investments, LLC's Reply Brief on Cross-Appeal (83279). Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=861983&onBaseDocumentNumber=22-19077">22-19077</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/16/2022</td><td>Case Status Update</td><td>Briefing Completed. (83279). Nos. 79881/83279.</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2022</td><td>Brief</td><td>Filed Respondent/Cross Appelant Jiangson Duke, LLC's Partial Joinder to Respondent/Cross-Appellant Northern Nevada Comstock Investment, LLC's Reply Brief on Cross-Appeal. Nos. 79881/83279 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=862091&onBaseDocumentNumber=22-19185">22-19185</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming (Docket No. 79881), and Affirming in Part, Reversing in Part and Remanding (Docket No. 83279). "ORDER the judgment of the district court in Docket No. 79881 AFFIRMED, the judgement of the district court denying NRCP 60(b) relief in Docket No. 83279 REVERSED AND REMANDED for proceedings consistent with this order, and the judgements of the district court regarding attorney fees and costs in Docket No. 83279 AFFIRMED." fn9 [The Honorable Mark Gibbons, Senior Justice, participated in the decision of this matter under a general order of assignment.] RP/DH/MG. Nos. 79881/83279  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=875581&onBaseDocumentNumber=22-32073">22-32073</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Remittitur</td><td>Issued Remittitur. Nos. 79881/83279. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=878562&onBaseDocumentNumber=22-34910">22-34910</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/07/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. Nos. 79881/83279. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/30/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on November 9, 2022. Nos. 79881/83279. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62044&csIID=62044&deLinkID=881393&onBaseDocumentNumber=22-34910">22-34910</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62044&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

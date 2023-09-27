@@ -1,0 +1,671 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>82660: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=0E6A4D54AB042181E29E1A2AFDAD3797">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61184">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 82660</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">WHITTLE VS. MORRIS (CHILD CUSTODY)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=63058">82660-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D591074</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Child Custody/Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Brian Lee Whittle</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Raven Morris</td><td valign="top">Patricia A. Marr
+							(Patricia A. Marr, Ltd.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=810609&onBaseDocumentNumber=21-08529">21-08529</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=810612&onBaseDocumentNumber=21-08532">21-08532</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. (SEALED) Confidential Cover Sheet. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Emily Stevens.  Check no. 4475. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines/Fast Track Child Custody. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=812199&onBaseDocumentNumber=21-10045">21-10045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2021</td><td>Docketing Statement</td><td>Filed Proper person Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=813490&onBaseDocumentNumber=21-11244">21-11244</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2021</td><td>Transcript Request</td><td>Filed Request for Rough Draft Transcript(s). Transcripts requested: 10/3/19. Court Reporter: Unknown. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=813493&onBaseDocumentNumber=21-11246">21-11246</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/29/2021</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal.  "ORDERS this appeal DISMISSED."  NNP21-EC/KP/DH  (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=814599&onBaseDocumentNumber=21-12330">21-12330</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2021</td><td>Post-Judgment Petition</td><td>Filed Proper Person Petition for Rehearing (Ex Parte Motion to Amend Notice of Appeal for Scriveners' Error; and Reinstate Case).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=816416&onBaseDocumentNumber=21-13661">21-13661</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/14/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee on Rehearing.  Due:  7 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=816419&onBaseDocumentNumber=21-14045">21-14045</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2021</td><td>Notice of Appeal Documents</td><td>Filed Civil Confidential Cover Sheet (Amended NOA). (SEALED). (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/20/2021</td><td>Filing Fee</td><td>Rehearing Fee Paid. $150.00 from Brian Whittle cashier's check no. 0650111441. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/28/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer to Petition for Rehearing. Answer due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=817784&onBaseDocumentNumber=21-15345">21-15345</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/16/2021</td><td>Motion</td><td>Filed Proper Person Motion for an Extension to File Answer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=819887&onBaseDocumentNumber=21-17369">21-17369</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. (Amended) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=819888&onBaseDocumentNumber=21-17370">21-17370</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondent's answer to the petition for rehearing due: July 12, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=820576&onBaseDocumentNumber=21-17934">21-17934</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/09/2021</td><td>Post-Judgment Petition</td><td>Filed Proper Person Answer to Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=822553&onBaseDocumentNumber=21-19810">21-19810</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2021</td><td>Order/Incoming</td><td>Filed District Court Decision and Order.  Filed in district court on 03/01/2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=824566&onBaseDocumentNumber=21-21692">21-21692</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2021</td><td>Post-Judgment Order</td><td>Filed Order Granting Rehearing, Reinstating Appeal, and Directing Transmission of Record.  Appellant's Opening Brief or Informal Brief due:  60 days.  Record on Appeal due:  30 days.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=824688&onBaseDocumentNumber=21-21813">21-21813</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=826033&onBaseDocumentNumber=21-23081">21-23081</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=826034&onBaseDocumentNumber=21-23082">21-23082</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/12/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal pages 17 to 19, 33 to 39, 50 to 51, 69 to 81, 141 to 151, 221 to 236 and 247 to 254 (SEALED). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2021</td><td>Motion</td><td>Filed Proper Person Motion to Confirm Fast Track Statement rather than "Informal Brief" is Acceptable and for Authorization for Additional Pages. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=829566&onBaseDocumentNumber=21-26458">21-26458</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/24/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant's motion for leave to file a fast track statement instead of an opening brief is granted.  The clerk of this court shall file the fast track statement received on September 13, 2021.   The clerk shall detach the exhibit from the fast track statement and return it unfiled.  Respondent shall have 21 days from the date of this order to file and serve the fast track response. fn1 [This court takes no action in regard to appellant's request to file a fast track statement in excess of the page limit, as his fast track statement is within the allowable page limit.  NRAP 3E(d)(1).]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=830818&onBaseDocumentNumber=21-27658">21-27658</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/24/2021</td><td>Fast Track Brief</td><td>Filed Proper Person Fast Track Statement. (EXHIBITS RETURNED UNFILED PER 9/24/21). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=830819&onBaseDocumentNumber=21-27659">21-27659</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/15/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance.  Patricia A. Marr, Esq., of Patricia A. Marr, LLC appearing as counsel for respondent.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=832864&onBaseDocumentNumber=21-29676">21-29676</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's fast track response &amp;#8203;due: October 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=832979&onBaseDocumentNumber=21-29791">21-29791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/22/2021</td><td>Fast Track Brief</td><td>Filed Respondent's Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=833952&onBaseDocumentNumber=21-30631">21-30631</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/24/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/04/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=841095&onBaseDocumentNumber=22-00180">22-00180</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/04/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED." Court of Affirmance-MG/JT/BB (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=848620&onBaseDocumentNumber=22-07287">22-07287</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on March 9, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61184&csIID=61184&deLinkID=850335&onBaseDocumentNumber=22-07287">22-07287</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61184&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

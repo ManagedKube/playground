@@ -1,0 +1,732 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83810: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=5A45A31998FCC0640F738032ED8D69EC">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62772">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83810</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: PARENTAL RIGHTS AS TO M.T.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64008">84728</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - FV2000644</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Parental Termination/Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Katherine Dee F.</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Reference Party</td><td valign="top">M. T.</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">M. T.</td><td valign="top">Jennifer R. Jeans
+							(Northern Nevada Legal Aid/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Washoe County Human Services Agency</td><td valign="top">Jeffrey S. Martin
+							(Washoe County District Attorney)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/19/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/19/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee/Proper Person. No action will be taken on this matter until filing fee is paid. Due Date: 14 days. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Potential Dismissal for Failure to Filing Fee. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/16/2021</td><td>Order/Procedural</td><td>Filed Order Regarding Filing Fee.  To the extent appellant's document can be construed as a motion for leave to proceed in forma pauperis, it is denied without prejudice.  Appellant shall have 60 days from the date of this order to file an application to proceed in forma pauperis in the district court and file a file-stamped copy of the application in this court or pay the filing fee.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Motion</td><td>Filed Proper Person Motion for an Extension of Time for Filing Fee Waiver. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2021</td><td>Motion</td><td>Filed Proper Person Motion for Appointment of Counsel. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Application to Waive Fees and Costs. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2021</td><td>Notice of Appeal Documents</td><td>Filed Order Granting Waiver of Fees and Costs from the District Court Clerk. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2021</td><td>Motion</td><td>Filed Proper Person Motion for Court Ordered Competency Evaluation. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Order/Procedural</td><td>Filed Order Waiving Filing Fee.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Proper Person Motion for Enlargement of Time in Which to File the Appropriate Transcript Form. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/03/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines/Parental Termination. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/18/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice . (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/18/2022</td><td>Transcript Request</td><td>Filed Civil Proper Person Transcript Request Form. Dates Requested: 9/13/21 and 9/15/21. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Order/Procedural</td><td>Filed Order of Limited Remand and Regarding Motions.  District Court Order Appointing Counsel due:  30 days.  The deadlines for filing documents in this appeal shall be stayed pending further order of this court.  Appellant filed a timely transcript request form pursuant to NRAP 9(b) on January 18, 2022.  This court will consider the necessity of transcripts and may order their preparation at a later date.  Appellant has also filed a motion for a court ordered competency hearing.  The motion is denied.  fn1[Appellant's December 29, 2021, motion for an extension of time to file the transcript request form is denied as moot. This court takes no action on appellant's pro se notice filed on January 18, 2022.]  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Docketing Statement</td><td>Filed Proper Person's Civil Docketing Statement. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2022</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed certified copy of order filed in district court on January 31, 2022, appointing Washoe County Public Defender's Office as counsel for appellant. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for John Reese Petty. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk in the Matter of Parental Rights as to: M.T., Notice of Appearance. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record and Reinstating Briefing.  Record on Appeal due:  30 days.  Appellant:  Transcript Request Form due:  14 days;  Opening Brief due:  90 days.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2022</td><td>Record on Appeal Documents</td><td>Filed (SEALED) Record on Appeal. Vols. 1-5. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2022</td><td>Other</td><td>Returned Unfiled Document.</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/04/2022</td><td>Other</td><td>Returned Unfiled Document. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/08/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion to Remove Counsel. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion to Remove Counsel. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motion and for Limited Remand. Appellant has now filed a pro se motion to remove counsel wherein she asserts that she has a conflict with the Washoe County Public Defender's Office. Appellant's motion to remove counsel is granted.  The clerk of this court shall remove John Reese Petty and the Washoe County Public Defender's Office as counsel for appellant.  This matter is remanded to the district court for the limited purpose of determining whether appellant desires representation under NRS 128.100(3) and whether to appoint counsel to represent appellant for purposes of this appeal.  Appellant's notice of appeal due: 30 days.  The deadlines for filing documents in this appeal shall be suspended pending further order of this court.(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2022</td><td>Order/Incoming</td><td>Filed District court order. Certified copy of Order Setting Hearing. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Entry of Judgment or Order. Filed in district court on: April 14, 2022 and Order Regarding K.F. request for Submission Filed on January 18, 2022, filed in the district court on April 6, 2022. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Entry of Judgment or Order. Filed in district court on: April 28, 2022 (Order Granting Request to Remove Counsel; Granting Request to Obtain File in Case FV20-00644; Granting Request to Mark Correspondence as "Legal Mail"). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2022</td><td>Motion</td><td>Filed Proper Person Motion for Arbiter Disqualification and Punishment. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2022</td><td>Transcript Request</td><td>Filed Civil Proper Person Transcript Request Form. Transcript Requested 9/13/21 and 9/15/21. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice of Objection to Canvass Performed April 18, 2022. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/03/2022</td><td>Motion</td><td>Filed Proper Person Motion for Efficiency. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2022</td><td>Motion</td><td>Filed Proper Person Motion to Consolidate District Court Cases. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Motion</td><td>Filed Proper Person Motion to Object to Dollinger's Order. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/16/2022</td><td>Motion</td><td>Filed Proper Person Motion for an Extension to File Opening Brief. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Motion to Object to Dollinger's Order. - Courtesy Copy - (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Production of Documents, Papers, Pleadings, Tangible Property, Electronically Stored Information. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion to Withdraw Documents. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing and Regarding Motions.  Appellant shall file and serve the opening brief or an informal brief within 60 days of the date of this order.  Appellant's motion for an extension of time to file the opening brief is denied as moot.  This court will consider the necessity of transcripts and may order their preparation at a later date.  Appellant's motions requesting disqualification of Judge Dollinger are appropriately filed in the district court and are denied here.  Appellant's motion for efficiency requests numerous claims for relief.  Insofar as the motion requests to expedite this appeal, it is granted to the following extent.  This appeal shall be expedited to the extent that this court's docket will permit.  Other relief sought by this motion is denied.  Appellant's motion objecting to canvas performed April 18, 2022, and objection to the order issued April 28, 2022, do not appear to request additional relief which this court can grant.  Accordingly, this court takes no action on these matters.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Extension of Time. (Exigent Motion for Time.) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Proper Person Notice of Appeal to the U.S. Supreme Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Proper Person Notice. Request for Submission. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Proper Person Notice of Appeal to the U.S. Supreme Court. - Courtesy Copy - (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions.  Appellant has filed a pro se "motion for production of documents, papers, pleadings, tangible property, electronically stored information," motion to withdraw document, motion for an extension of time to file the opening brief, request for submission, and notice of appeal to the U.S. Supreme Court.  Appellant's request for submission appears to request that a reply to opposition be submitted for decision in the district court.  This court takes no action in regard to this document.  This court takes no action in regard to appellant's notice that she is appealing this court's June 6, 2022, order to the United States Supreme Court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=864213&onBaseDocumentNumber=22-21212">22-21212</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2022</td><td>Motion</td><td>Filed Proper Person Motion for Limited Remand. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2022</td><td>Motion</td><td>Filed Proper Person Motion to Abeyance. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/26/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Entry of Judgment or Order. Filed in district court on: July 22, 2022. (Order Regarding K. F. Requests for Submission Filed on June 1, 2022.) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2022</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed a pro se motion for limited remand and "motion to hold in abeyance."  The motion for limited remand is denied. This court elects to treat appellant's motion to hold in abeyance as a motion for an extension of time to file the opening brief.  The motion is granted as follows.  Appellant's opening brief due: 60 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=868083&onBaseDocumentNumber=22-24901">22-24901</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2022</td><td>Letter/Incoming</td><td>Filed Appellant's Proper Person Letter. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2022</td><td>Letter/Incoming</td><td>Filed Appellant's Proper Person Letter. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/24/2022</td><td>Order/Procedural</td><td>Filed Order. This court takes no action regarding appellant's pro se letters filed August 11, 2022, and August 16, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=869650&onBaseDocumentNumber=22-26396">22-26396</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/04/2022</td><td>Motion</td><td>Filed Proper Person Appellant's Emergency Motion for Extension of Time.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=874813&onBaseDocumentNumber=22-31320">22-31320</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a pre se motion for a 60-day extension of time to file the opening brief. The motion is denied. Opening brief due: 14 days. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2022</td><td>Motion</td><td>Filed Proper Person Appellant's Motion for the Majority's Consideration. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/28/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has now filed a "motion for the majority's consideration," which appears to seek reconsideration of the October 25, 2022, order.  The motion is denied.  Opening brief or informal brief due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=880833&onBaseDocumentNumber=22-37142">22-37142</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/05/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for the Majority's' Consideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=881934&onBaseDocumentNumber=22-38156">22-38156</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/28/2022</td><td>Notice/Incoming</td><td>Filed Proper Person Notice that Appellant is Appeal our November 28, 2022, order to the United States District Court. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/23/2023</td><td>Order/Procedural</td><td>Filed Order to File Document. To date, appellant has not filed the brief.  Appellant's opening brief due: 14 days. fn2 [A second, identical "motion for the majority's consideration" was filed on December 5, 2022.  However, this appears to be a duplicate of the motion denied in this court's November 28, 2022, order, and accordingly, this court takes no action on this motion.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=887134&onBaseDocumentNumber=23-02126">23-02126</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Motion</td><td>Filed Proper Person Appellant's Motion for Due Process of NOA. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal. "ORDER this appeal DISMISSED." fn1[Appellant filed a "Motion for Due Process of NOA" on February 6, 2023, that appears to be a notice of appeal to the United States District Court for the District of Nevada, of this court's January 23, 2023, order.  This motion does not request any relief that this court can grant.  Accordingly, the motion is denied.] SNP23-EC/KP/LB. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2023</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2023</td><td>Remittitur</td><td>Issued Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=893936&onBaseDocumentNumber=23-08657">23-08657</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2023</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court County Clerk on March 24, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62772&csIID=62772&deLinkID=894826&onBaseDocumentNumber=23-08657">23-08657</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62772&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

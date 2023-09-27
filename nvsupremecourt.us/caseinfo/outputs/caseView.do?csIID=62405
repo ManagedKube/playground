@@ -1,0 +1,829 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83541: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=17F6B0C8C4F005A5E253B61B2095B6BA">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62405">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83541</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SOC'Y FOR THE PRESERV. OF VERDI, INC. VS. CITY OF RENO</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - CV2001054</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Administrative Agency - General</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Hardesty</td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>09/28/2021 / Clark, J.</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Society for the Preservation of Verdi, Inc.</td><td valign="top">Michaela G. Jones
+							(Robison, Sharp, Sullivan &amp; Brust)
+						<br>Kent R. Robison
+							(Robison, Sharp, Sullivan &amp; Brust)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The City of Reno</td><td valign="top">William J. McKean
+							(Former)
+						
+							(Reno City Attorney)
+						<br>Holly S. Parker
+							(Reno City Attorney)
+						<br>Jonathan D. Shipman
+							(Reno City Attorney)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">BT South, LLC</td><td valign="top">Michael W. Cabrera
+							(Former)
+						
+							(Lewis Roca Rothgerber Christie LLP/Reno)
+						<br>Lucy C. Crow
+							(Lewis Roca Rothgerber Christie LLP/Reno)
+						<br>Darren J. Lemieux
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Filing Fee</td><td>Filing fee due for Appeal. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=830924&onBaseDocumentNumber=21-27760">21-27760</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=830927&onBaseDocumentNumber=21-27763">21-27763</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Other</td><td>Chief Justice James W. Hardesty disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Filing Fee</td><td>E-Payment $250.00 from Kent R. Robison. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/27/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=830958&onBaseDocumentNumber=21-27794">21-27794</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/28/2021</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: J. Douglas Clark. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=831023&onBaseDocumentNumber=21-27859">21-27859</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Michaela G. Davies, Esq. (Michaela G. Davis, Esq., of the law office of Robison, Sharp, Sullivan &amp; Brust, as attorney for Appellant). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=831071&onBaseDocumentNumber=21-27907">21-27907</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Lewis Roca. Check no. 13187. (Cross-Appeal) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (Docketing statement mailed to counsel for cross-appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=831944&onBaseDocumentNumber=21-28766">21-28766</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/08/2021</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Motion to Dismiss. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=832145&onBaseDocumentNumber=21-28966">21-28966</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/08/2021</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's Proof of Service on Settlement Judge for Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=832150&onBaseDocumentNumber=21-28971">21-28971</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2021</td><td>Order/Procedural</td><td>Filed Order.  Respondent/cross-appellant has filed a motion requesting this court to dismiss this appeal for lack of jurisdiction.  The motion is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=832176&onBaseDocumentNumber=21-28997">21-28997</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondent's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=833051&onBaseDocumentNumber=21-29862">21-29862</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/18/2021</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=833160&onBaseDocumentNumber=21-29968">21-29968</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2021</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant BT South, LLC's Response to Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=834071&onBaseDocumentNumber=21-30744">21-30744</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2021</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for November 30, 2021, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=836137&onBaseDocumentNumber=21-32709">21-32709</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/14/2021</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement process is continued to the following date: February 10, 2022, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=839125&onBaseDocumentNumber=21-35601">21-35601</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/13/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=842353&onBaseDocumentNumber=22-01366">22-01366</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/24/2022</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant/cross-respondent (appellant) and respondent/cross-appellant (cross-appellant) shall each have 14 days from the date of this order to file and serve a transcript request form.  Appellant shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  Respondent shall have 30 days from service of appellant's opening brief to file and serve an answering brief on appeal.  Appellant shall have 30 days from service of respondent's answering brief to file and serve any reply brief.  Cross-appellant shall have 30 days from service of appellant's opening brief on appeal to file and serve a combined answering brief on appeal and opening brief on cross-appeal.  Appellant shall have 30 days from service of cross-appellant's combined brief to file a combined reply brief on appeal and answering brief on cross-appeal.  Cross-appellant shall have 14 days from service of appellant's combined brief to file and serve a reply brief on cross-appeal, if deemed necessary.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=843285&onBaseDocumentNumber=22-02279">22-02279</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=843413&onBaseDocumentNumber=22-02406">22-02406</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/31/2022</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Opposition to Motion to Dismiss. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=844235&onBaseDocumentNumber=22-03194">22-03194</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Transcript Request</td><td>Filed Appellant/Cross-Respondent's Request for Transcript of Proceedings. Transcripts requested: 6/29/21. To Court Reporter: Sunshine Litigation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=845220&onBaseDocumentNumber=22-04082">22-04082</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Motion</td><td>Filed Reply on  Respondent/Cross-Appellant's Reply Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=845280&onBaseDocumentNumber=22-04139">22-04139</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Transcript Request</td><td>Filed Respondent/Cross-Appellant's Request for Transcript of Proceedings. Transcripts requested: 1/7/21, 4/26/21 and 6/29/21.  To Court Reporter: Sunshine Litigation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=845316&onBaseDocumentNumber=22-04168">22-04168</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Erin Ferretto stating that the requested transcripts were delivered.  Dates of transcripts: 1/7/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=846401&onBaseDocumentNumber=22-05233">22-05233</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Respondent/cross-appellant BT South, LLC has filed a motion to dismiss appellant/cross-respondent's appeal for lack of jurisdiction.  Appellant/cross-respondent opposes the motion, and BT South has filed a reply.  The motion to dismiss is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=846869&onBaseDocumentNumber=22-05618">22-05618</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Lori Urmston stating that the requested transcripts were delivered.  Dates of transcripts:4/26/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=847376&onBaseDocumentNumber=22-06119">22-06119</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Corrie Wolden stating that the requested transcripts were delivered.  Dates of transcripts: 6/29/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=847858&onBaseDocumentNumber=22-06589">22-06589</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant/Cross-Respondent's Opening Brief and Appendix due:  May 9, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=854169&onBaseDocumentNumber=22-12582">22-12582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vols. 5-7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=856365&onBaseDocumentNumber=22-14673">22-14673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vols. 12-14. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=856366&onBaseDocumentNumber=22-14674">22-14674</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vols. 8-11. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=856394&onBaseDocumentNumber=22-14701">22-14701</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/09/2022</td><td>Appendix</td><td>Filed Appendix to Opening Brief, Vols. 1-4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=856396&onBaseDocumentNumber=22-14703">22-14703</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/09/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=856440&onBaseDocumentNumber=22-14746">22-14746</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2022</td><td>Motion</td><td>Filed Respondent City of Reno's Motion to Withdraw as Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=858989&onBaseDocumentNumber=22-17184">22-17184</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/01/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk of this court shall remove William J. McKean as counsel of record for respondent City of Reno.  Respondent City of Reno shall continue to be represented by the Reno City Attorney's Office and Jonathan D. Shipman.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=859110&onBaseDocumentNumber=22-17303">22-17303</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent/cross-appellant BT South, LLC's answering brief on appeal and opening brief on cross-appeal due: June 22, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=860971&onBaseDocumentNumber=22-18158">22-18158</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent The City of Reno's Answering Brief due:  June 22, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=861038&onBaseDocumentNumber=22-18224">22-18224</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=862725&onBaseDocumentNumber=22-19806">22-19806</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/22/2022</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's Answering Brief on Appeal and Opening Brief on Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=862747&onBaseDocumentNumber=22-19828">22-19828</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant shall have until August 5, 2022, to file and serve its reply brief on appeal and its combined reply brief on appeal and answering brief on cross-appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=865839&onBaseDocumentNumber=22-22774">22-22774</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2022</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Supplemental Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=867819&onBaseDocumentNumber=22-24640">22-24640</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2022</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Reply Brief on Appeal and Answering brief on Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=867820&onBaseDocumentNumber=22-24641">22-24641</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent/cross-appellant shall have until September 2, 2022, to file and serve its reply brief on cross-appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=869141&onBaseDocumentNumber=22-25893">22-25893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2022</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's Notice of Disassociation of Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=870109&onBaseDocumentNumber=22-26845">22-26845</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2022</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's Notice of Appearance for Lucy C. Crow. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=870111&onBaseDocumentNumber=22-26847">22-26847</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2022</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's Reply Brief on Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=870170&onBaseDocumentNumber=22-26906">22-26906</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Order/Procedural</td><td>Filed Order Directing Supplemental Briefing. Society shall have 14 days from the date of this order to file and serve supplemental briefing. Thereafter, BT South and the City of Reno shall have 14 days to file and serve a response. Society then has 7 days for a reply. The opening brief and response may not exceed 15 pages. The reply may not exceed 5 pages. The parties may cite to the appendices submitted with the orogonal briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=891082&onBaseDocumentNumber=23-05925">23-05925</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/cross-respondent's supplemental brief due: March 27, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=891276&onBaseDocumentNumber=23-06117">23-06117</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (City of Reno) Notice of Appearance for Holly S. Parker. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=892658&onBaseDocumentNumber=23-07453">23-07453</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2023</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Notice of Change of Name of Attorney from Michaela G. Davies to Michaela G. Jones. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=894072&onBaseDocumentNumber=23-08793">23-08793</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/27/2023</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Supplemental Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=894673&onBaseDocumentNumber=23-09375">23-09375</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/27/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Supplemental Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=894674&onBaseDocumentNumber=23-09376">23-09376</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent/Cross-Appellant BT South, LLC shall have until April 24, 2023, to file and seve the response to the supplemental brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=895875&onBaseDocumentNumber=23-10528">23-10528</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent's supplemental brief due: April 24, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=896000&onBaseDocumentNumber=23-10653">23-10653</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/24/2023</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's (BT South, LLC) Supplemental Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=898172&onBaseDocumentNumber=23-12746">23-12746</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/24/2023</td><td>Brief</td><td>Filed Respondent's (City of Reno) Joinder to BT South's Supplemental Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=898180&onBaseDocumentNumber=23-12754">23-12754</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/Cross-Respondent's supplemental reply brief due: May 16, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=898485&onBaseDocumentNumber=23-13054">23-13054</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/16/2023</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's Supplemental Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=901003&onBaseDocumentNumber=23-15457">23-15457</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Motion</td><td>Filed Stipulation to Dismiss Appeal and Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=911837&onBaseDocumentNumber=23-25852">23-25852</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal. Pursuant to the stipulation of the parties, and cause appearing, this appeal and cross-appeal are dismissed.  The parties shall bear their own costs and attorney fees.  Case Closed/No Remittitur Issued. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62405&csIID=62405&deLinkID=912044&onBaseDocumentNumber=23-26048">23-26048</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62405&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

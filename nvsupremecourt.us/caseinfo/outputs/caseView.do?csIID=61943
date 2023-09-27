@@ -1,0 +1,768 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83196: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=B97CDB0D413811B07B560041144DF7A0">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61943">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83196</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">HAVENS VS. KURIAN</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=44709">74475</a>, <a href="/public/caseView.do?csIID=46437">76199</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A688040</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Herndon</td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>None for Justice Herndon</td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Warren Havens</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">American Wireless, LLC</td><td valign="top">E. Brent Bryson
+							(E. Brent Bryson, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Environmentel, LLC</td><td valign="top">Samuel A. Schwartz
+							(Schwartz Law PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">RF Data, Inc.</td><td valign="top">E. Brent Bryson
+							(E. Brent Bryson, P.C.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Thomas K. Kurian</td><td valign="top">E. Brent Bryson
+							(E. Brent Bryson, P.C.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Vegas Wireless, LLC</td><td valign="top">E. Brent Bryson
+							(E. Brent Bryson, P.C.)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=822781&onBaseDocumentNumber=21-20034">21-20034</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/12/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=822785&onBaseDocumentNumber=21-20038">21-20038</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Charles Schwab Bank.  Cashier's Check no. 107711. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=823590&onBaseDocumentNumber=21-20830">21-20830</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/21/2021</td><td>Other</td><td>Justice Douglas W. Herndon disqualified from participation in this matter. Disqualification Reason: Sat in District Court Proceedings. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Appellant's Motion to Dismiss Appeal. (REJECTED PER NOTICE FILED ON 7/30/21)(SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825114&onBaseDocumentNumber=21-22233">21-22233</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Transcript Request</td><td>Filed Civil Proper Person Transcript Request Form. Transcripts requested: 12/17/20. Court Reporter: Rebeca Gomez. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825252&onBaseDocumentNumber=21-22370">21-22370</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance and Request for Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825274&onBaseDocumentNumber=21-22392">21-22392</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Motion</td><td>Filed Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825312&onBaseDocumentNumber=21-22430">21-22430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's opposition to the motion to dismiss due: August 23, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825455&onBaseDocumentNumber=21-22571">21-22571</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/05/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Docketing Statement due:  August 24, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825631&onBaseDocumentNumber=21-22739">21-22739</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/05/2021</td><td>Motion</td><td>Filed Respondents' Joinder in Receiver Susan L. Uecker; Environmental, LLC., a Delaware Limited-Liability Company F/K/A AMTS Consortium, LLC's Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=825682&onBaseDocumentNumber=21-22787">21-22787</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Proper Person's Opposition to Motion to Dismiss and Joinder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=827809&onBaseDocumentNumber=21-24790">21-24790</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/25/2021</td><td>Motion</td><td>Filed Proper Person's Amended Opposition to Motion to Dismiss and Joinder. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=827821&onBaseDocumentNumber=21-24802">21-24802</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Docketing Statement</td><td>Filed Proper Person Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=828002&onBaseDocumentNumber=21-24978">21-24978</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Motion</td><td>Filed Reply to the Opposition of Warren Havens to Motion to Dismiss Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=828194&onBaseDocumentNumber=21-25166">21-25166</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/30/2021</td><td>Motion</td><td>Filed Respondents' Joinder in the Reply to the Opposition of Warren Havens to Motion to Dismiss. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=828225&onBaseDocumentNumber=21-25196">21-25196</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/30/2021</td><td>Transcript</td><td>Filed Notice from Court Reporter. Melissa Burgener stating that the requested transcripts were delivered.  Dates of transcripts: 12/17/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=828230&onBaseDocumentNumber=21-25201">21-25201</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/13/2021</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal.  "ORDER this appeal DISMISSED."  fn1[We direct the clerk of this court to add Environmental as a respondent to this appeal with Samuel A. Schwartz and Schwartz Law, PLLC, as its counsel of record.  The clerk shall also amend the caption to conform to the caption on this order.]</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=838885&onBaseDocumentNumber=21-35371">21-35371</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's petition for rehearing due: January 18, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=839482&onBaseDocumentNumber=21-35872">21-35872</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/10/2022</td><td>Motion</td><td>Filed Proper Person's Motion to Extend Time to File Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=841902&onBaseDocumentNumber=22-00921">22-00921</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2022</td><td>Motion</td><td>Filed Respondent's ( Environmentel, LLC )  Opposition to Warren Havens' Motion for an Extension of Time to File a Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=842304&onBaseDocumentNumber=22-01319">22-01319</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/14/2022</td><td>Motion</td><td>Filed Respondents' Joinder to Opposition to Warren Havens' Motion for an Extension of Time to File a Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=842543&onBaseDocumentNumber=22-01550">22-01550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant shall have 14 days from the date of this order to file and serve any petition for rehearing.   If no petition for rehearing is timely filed, the clerk shall issue the remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=842865&onBaseDocumentNumber=22-01866">22-01866</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/04/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion, Order to Proceed in Forma Pauperis (Amended). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=845087&onBaseDocumentNumber=22-03952">22-03952</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant's Proper Person Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=845088&onBaseDocumentNumber=22-03953">22-03953</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2022</td><td>Post-Judgment Petition</td><td>Filed Proper Person Petition for Rehearing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=845173&onBaseDocumentNumber=22-04036">22-04036</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Order/Procedural</td><td>Filed Order Waiving Filing Fee.  In light of the district court's August 5, 2021, order granting appellant's motion to proceed in forma pauperis, no filing fee for the petition for rehearing is due for this appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=845190&onBaseDocumentNumber=22-04053">22-04053</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying Rehearing. "Rehearing Denied." NRAP 40(c).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=845758&onBaseDocumentNumber=22-04609">22-04609</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Petition for En Banc Reconsideration due:  March 11, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=846302&onBaseDocumentNumber=22-05140">22-05140</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Letter/Incoming</td><td>Filed Proper Person Letter of March 11, 2022, Explaining Concurrent Filing. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849318&onBaseDocumentNumber=22-07970">22-07970</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2022</td><td>Motion</td><td>Filed Proper Person Motion to Permit Electronic Filing and Service. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849331&onBaseDocumentNumber=22-07983">22-07983</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Motion</td><td>Filed Proper Person Motion for Stay of this Appeal Until the Related Appeal is Finally Decided. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849337&onBaseDocumentNumber=22-07989">22-07989</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2022</td><td>Post-Judgment Petition</td><td>Filed Proper Person's Conditional Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849343&onBaseDocumentNumber=22-07995">22-07995</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2022</td><td>Motion</td><td>Filed Proper Person Motion for an Extension of Time Due to Health and Financial Hardship, to File a Petition for En Banc Reconsideration, to Replace the "Conditional" Petition File on March 11, 2022, Concurrently Herewith. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849346&onBaseDocumentNumber=22-07998">22-07998</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2022</td><td>Motion</td><td>Filed Respondent's (Environmentel, LLC) Opposition to Motion for Extension of Time to File a Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849867&onBaseDocumentNumber=22-08511">22-08511</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2022</td><td>Motion</td><td>Filed Respondent's (Environmentel, LLC) Opposition to Motion for Stay of This Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=849868&onBaseDocumentNumber=22-08512">22-08512</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/18/2022</td><td>Notice/Incoming</td><td>Filed Joinder to the Opposition to Warren Havens' Motion for Stay of this Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=850071&onBaseDocumentNumber=22-08708">22-08708</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/18/2022</td><td>Notice/Incoming</td><td>Filed Joinder to the Opposition to Warren Havens' Motion for an Extension of Time to File a Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=850072&onBaseDocumentNumber=22-08710">22-08710</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's reply to respondents' oppositions and joinders due: April 7, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=850258&onBaseDocumentNumber=22-08893">22-08893</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/11/2022</td><td>Motion</td><td>Filed Proper Person's Reply to Respondents' Oppositions and Joinders for Motion for an Extension of Time and for a Stay.  Appellant's Opposition to Respondents' Unauthorized Opposition to Appellant's Conditional Petition for En Banc Reconsideration. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=852892&onBaseDocumentNumber=22-11335">22-11335</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a number of pro se documents.  As the March 14, 2022, letter does not request any relief from this court, this court takes no action on it.  The motion to permit electronic filing and service is denied.  The motion to stay this matter pending resolution of an allegedly related appeal and a "US Tax Court" case is construed as a motion to defer ruling on the petition for en banc reconsideration and denied.  Having considered the joinder, opposition, and reply, appellant does not demonstrate that deferring consideration of the petition is warranted.    Finally, appellant's motion for a second extension of time to file an amended petition for en banc reconsideration is denied; appellant does not demonstrate extraordinary and compelling circumstances in support of the requested extension.  Appellant shall have 14 days from the date of this order to file and serve any amended petition for en banc reconsideration.  If no amended petition for en banc reconsideration is timely filed, the conditional petition for en banc reconsideration filed on March 14, 2022, will be considered by this court.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=853878&onBaseDocumentNumber=22-12299">22-12299</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Motion</td><td>Filed Proper Person Motion to Extend Time to File En Banc Reconsideration After the Apparent Deadline. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=856592&onBaseDocumentNumber=22-14896">22-14896</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant's pro se motion for an extension of time to file an amended petition for en banc reconsideration is denied.  This court will consider the petition for en banc reconsideration filed on March 14, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=856784&onBaseDocumentNumber=22-15085">22-15085</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2022</td><td>Post-Judgment Order</td><td>Filed Order Denying En Banc Reconsideration. Having considered the petition on file herein, we have concluded that en banc reconsideration is not warranted. NRAP 40A.  Accordingly, we "ORDER the petition DENIED."  EN BANC  fn1[The Honorable Douglas W. Herndon, Justice, did not participate in the decision of this matter.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=857240&onBaseDocumentNumber=22-15536">22-15536</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=861565&onBaseDocumentNumber=22-18668">22-18668</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/24/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by District Court Clerk on June 15, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61943&csIID=61943&deLinkID=863004&onBaseDocumentNumber=22-18668">22-18668</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61943&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

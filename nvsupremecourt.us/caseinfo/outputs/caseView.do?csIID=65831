@@ -1,0 +1,736 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86052: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=5672DD1ED8CC2187D46FE3AFC2A27E16">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65831">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86052</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">BOOKER (DAVID) VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=67536">86052-COA</a>, <a href="/public/caseView.do?csIID=67267">87150</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - C369275</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Fast Track - Direct</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Transferred to Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">David Booker</td><td valign="top">Roger C. Bailey
+							(Former)
+						
+							(Law Office of George T. Bochanis)
+						<br>Jennifer W. Waldo
+							(Waldo Law, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Alexander G. Chen
+							(Clark County District Attorney)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/01/2023</td><td>Filing Fee</td><td>Appeal Filing Fee Waived. Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person Fast Track. Filed certified copy of proper person notice of appeal.  (Fast track notice issued to trial counsel.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=888217&onBaseDocumentNumber=23-03134">23-03134</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/01/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person Fast Track. Second NOA (C369275). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=888219&onBaseDocumentNumber=23-03136">23-03136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person Fast Track. Filed certified copy of proper person notice of appeal. Third NOA (C369275). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=888220&onBaseDocumentNumber=23-03137">23-03137</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/07/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Request Rough Draft Transcripts. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=888771&onBaseDocumentNumber=23-03663">23-03663</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/10/2023</td><td>Other</td><td>Returned Unfiled Document "Proper Person Docketing Statement." (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=889242&onBaseDocumentNumber=23-04128">23-04128</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2023</td><td>Other</td><td>Returned Unfiled Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=889562&onBaseDocumentNumber=23-04436">23-04436</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/16/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Dismiss Attorney or Appoint New Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=893367&onBaseDocumentNumber=23-08120">23-08120</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/20/2023</td><td>Order/Procedural</td><td>Filed Order to File Documents and Denying Motion. Appellant has filed a pro se motion to dismiss his attorney and appoint new appellate counsel on the ground that his counsel has not responded to his attempts at communication. The motion is denied. To date, Roger Bailey has failed to file either the rough draft transcript request form or the fast track statement and the appendix.  Rough draft transcript request form and the fast track statement and the appendix due: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=893851&onBaseDocumentNumber=23-08573">23-08573</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2023</td><td>Other</td><td>Returned Unfiled Document "1983 State Civil Rights Complaint". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=893937&onBaseDocumentNumber=23-08658">23-08658</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Other</td><td>Returned Unfiled Document "Motion to Vacate Sentence/Withdraw Guilty Plea". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=894342&onBaseDocumentNumber=23-09056">23-09056</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2023</td><td>Other</td><td>Returned Unfiled Document "Letter." (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=894756&onBaseDocumentNumber=23-09457">23-09457</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Order/Procedural</td><td>Filed Order Conditionally Imposing Sanctions. Conditional sanction of $250 due: 14 days or transcript request form due: 14 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=896066&onBaseDocumentNumber=23-10719">23-10719</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2023</td><td>Other</td><td>Returned Unfiled Motion for Fast Track Briefing/Reverse of Decision Sought.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=898290&onBaseDocumentNumber=23-12861">23-12861</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/01/2023</td><td>Motion</td><td>Filed Appellant's Motion to Dismiss Attorney or Appoint New Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=898932&onBaseDocumentNumber=23-13497">23-13497</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/03/2023</td><td>Motion</td><td>Filed Filed Appellant's Motion to Dismiss Attorney and Proceed In Proper Person. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=899343&onBaseDocumentNumber=23-13873">23-13873</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/05/2023</td><td>Order/Procedural</td><td>Filed Order Removing Counsel, Referring Counsel to State Bar for Investigation, Remanding for Designation of Counsel, and Suspending Briefing. To date, Mr. Bailey has not filed the rough draft transcript request form, fast track statement and appendix, or a motion for an extension of time, paid the $250 sanction, or otherwise communicated with this court. The sanctions are no longer conditional and must be paid.  Roger Bailey shall have 7 days from the date of this order to pay the sum of $250 to the Supreme Court Library and provide proof of that payment to the clerk of this court. Mr. Bailey is removed as counsel in this appeal. Mr. Bailey is referred to the State Bar of Nevada for investigation pursuant to SCR 104-105.  Bar counsel shall, within 90 days of the date of this order, inform this court of the status or results of the investigation and any disciplinary proceedings in this matter. This court remands this appeal to the district court for the limited purpose of securing counsel for appellant.   Appellant's notice of appearance due: 35 days. Briefing suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=899782&onBaseDocumentNumber=23-14279">23-14279</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/08/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=900047&onBaseDocumentNumber=23-14543">23-14543</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant has filed a motion asking to proceed in this appeal pro se. Appellant has no right to proceed without counsel on direct appeal from a judgment of conviction. The motion is denied. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=900225&onBaseDocumentNumber=23-14719">23-14719</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Dismiss Attorney on Record and Proceed in Proper Person. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=900548&onBaseDocumentNumber=23-15011">23-15011</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/15/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant's motion asking for his counsel to be dismissed and to proceed in this appeal pro se is denied.  This matter has been remanded to the district court for the limited purpose of securing counsel for appellant and the deadlines for filing documents have been suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=900813&onBaseDocumentNumber=23-15269">23-15269</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document - Motion to Hold Attorney of Record in Contempt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=901338&onBaseDocumentNumber=23-15788">23-15788</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/22/2023</td><td>Order/Procedural</td><td>Filed Order. To date, Bailey has not paid the sanction as ordered and has not communicated with this court.  Roger C. Bailey shall have 7 days from the date of this order to pay the overdue sanction and file proof of that payment with the clerk of this court. fn1 [Appellant's motion for this court to hold Roger Bailey in contempt is denied.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=901657&onBaseDocumentNumber=23-16082">23-16082</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2023</td><td>Notice/Incoming</td><td>Filed Roger Bailey's Proof of Payment of Sanction. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=903096&onBaseDocumentNumber=23-17463">23-17463</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/04/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Jennifer Waldo. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=903114&onBaseDocumentNumber=23-17481">23-17481</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/05/2023</td><td>Other Incoming Document</td><td>Filed Proper Person's Document - Notice of Attorney Assignment from Appellant. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=903299&onBaseDocumentNumber=23-17665">23-17665</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed Certified Copy of Minute Order Filed in District Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=903448&onBaseDocumentNumber=23-17810">23-17810</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/12/2023</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing. The district court has transmitted its order appointing counsel and attorney Jennifer M. Waldo has filed a notice of appearance as counsel for appellant.  Accordingly, the clerk of this court shall add Jennifer M. Waldo and Waldo Law, LLC., to the docket as counsel for appellant. The deadlines for filing documents and briefs are reinstated as follows. Appellant shall have 14 days from the date of this order to file and serve in this court 2 file-stamped copies of the rough draft transcript request form and proof of service of the rough draft transcript request form or a certificate that no transcripts are being requested. Appellant shall have 40 days from the date of this order to file and serve the fast track statement and appendix.  See NRAP 3C(f); NRAP 3C(d)(3).  fn1[This court takes no action with regard to appellant's notice to the court that he has not yet heard from counsel.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=904162&onBaseDocumentNumber=23-18515">23-18515</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Transcript Request</td><td>Filed Appellant's Request for Rough Draft Transcript(s). Transcripts requested:  11/7/2022 and 12/19/022.    Court Reporter:  District Court, Department 7 Court Reporter.   Filed in district court on: 6/26/2023. Request for Rough Draft Transcripts. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=906071&onBaseDocumentNumber=23-20326">23-20326</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/11/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Jill Hawkins stating that the requested transcripts were delivered.  Dates of transcripts:  11/7/2022 and 12/19/2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=908022&onBaseDocumentNumber=23-22186">23-22186</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's fast track statement and appendix due: July 31, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=908909&onBaseDocumentNumber=23-22996">23-22996</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=910407&onBaseDocumentNumber=23-24456">23-24456</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/31/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Fast Track Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=910408&onBaseDocumentNumber=23-24457">23-24457</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Certificate of Service of Appellant's Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=910409&onBaseDocumentNumber=23-24458">23-24458</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2023</td><td>Fast Track Brief</td><td>Filed Respondent's Fast Track Response. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=910951&onBaseDocumentNumber=23-24975">23-24975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2023</td><td>Notice/Incoming</td><td>Filed Investigative Report. Investigative Report from the State Bar of Nevada re: attorney Roger C. Bailey.  Original report was placed in attorney's bar file. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2023</td><td>Fast Track Brief</td><td>Filed Appellant's Waiver of Fast Track Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=911518&onBaseDocumentNumber=23-25539">23-25539</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2023</td><td>Case Status Update</td><td>Fast Track Briefing Completed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Other</td><td>Returned Unfiled Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=911953&onBaseDocumentNumber=23-25960">23-25960</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2023</td><td>Other</td><td>Returned Unfiled Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=912670&onBaseDocumentNumber=23-26670">23-26670</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2023</td><td>Other</td><td>Returned Unfiled Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=912672&onBaseDocumentNumber=23-26672">23-26672</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2023</td><td>Motion</td><td>Filed Proper Person's Motion to Dismiss Attorney and Have Replacement Appointment. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=913120&onBaseDocumentNumber=23-27100">23-27100</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2023</td><td>Other</td><td>Returned Unfiled Document (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=913121&onBaseDocumentNumber=23-27101">23-27101</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant complains that counsel has not communicated adequately with him and failed to discuss issues on appeal that appellant deems relevant.  These allegations do not rise to the level of an actual conflict of interest or warrant the discharge of counsel and the appointment of new counsel. It is well settled that the decision as to what issues to raise on appeal falls within the professional responsibility of counsel. Moreover, appellant is not entitled to reject court-appointed counsel and obtain the appointment of alternate counsel absent a showing of good cause. The motion is denied. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=913981&onBaseDocumentNumber=23-27918">23-27918</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/26/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65831&csIID=65831&deLinkID=917735&onBaseDocumentNumber=23-31551">23-31551</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65831&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

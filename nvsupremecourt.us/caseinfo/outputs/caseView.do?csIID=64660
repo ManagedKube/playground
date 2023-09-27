@@ -1,0 +1,770 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85195: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=F7AB3C106A956B5539CA5074FB7D2FD3">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64660">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85195</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">FALCONI VS. DIST. CT. (MINTER)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=65730">85974</a>, <a href="/public/caseView.do?csIID=65921">86122</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D402901</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Lee</td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td>Senior Justice Silver for Justice Lee</td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>03/02/2023 at 10:30 AM</td><td class="label">Oral Argument Location:</td><td>Carson City</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>03/02/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Legal Aid Center of Southern Nevada, Inc.</td><td valign="top">Debra A. Bookout
+							(Legal Aid Center of Southern Nevada, Inc.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National American Academy of Matrimonial Lawyers Committee</td><td valign="top">Jennifer V. Abrams
+							(Former)
+						
+							(The Abrams &amp; Mayo Law Firm)
+						<br>Marshal S. Willick
+							(Willick Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Legal Services/Las Vegas</td><td valign="top">Debra A. Bookout
+							(Legal Aid Center of Southern Nevada, Inc.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Northern Nevada Legal Aid</td><td valign="top">Debra A. Bookout
+							(Legal Aid Center of Southern Nevada, Inc.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">State Bar of Nevada, Family Law Section</td><td valign="top">Shann D. Winesett
+							(Pecos Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Volunteer Attorneys for Rural Nevadans</td><td valign="top">Debra A. Bookout
+							(Legal Aid Center of Southern Nevada, Inc.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Alexander M. Falconi</td><td valign="top">Luke A. Busby</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Jennifer R. Easler</td><td valign="top">Frank J. Toti
+							(The Law Offices of Frank J. Toti, Esq.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Troy A. Minter</td><td valign="top">Rena G. Hughes
+							(Former)
+						
+							(The Abrams &amp; Mayo Law Firm)
+						<br>Fred C. Page
+							(Page Law Firm)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Charles J. Hoskin</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2022</td><td>Filing Fee</td><td>Petition Filing Fee Paid. $250.00 from Luke Andrew Busby.  E-Payment Ref. no. 22081931348391. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2022</td><td>Petition/Writ</td><td>Filed Emergency Petition Under NRAP 27(e). Petition for Writ of Mandamus. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=869286&onBaseDocumentNumber=22-26036">22-26036</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=869287&onBaseDocumentNumber=22-26037">22-26037</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/22/2022</td><td>Notice/Incoming</td><td>Filed Proposed Intervenor Justin Martin's Notice of Intent to Seek Intervention. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=869338&onBaseDocumentNumber=22-26088">22-26088</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2022</td><td>Order/Procedural</td><td>Filed Order Directing Supplement and Answer and Inviting Amici Curiae Participation.  We decline to dismiss this petition at this time and proceed to briefing.  Petitioner shall have 7 days from the date of this order to file and serve a supplement to his petition.  Real parties in interest shall have 21 days from the date that petitioner's supplement is served to file and serve an answer.  Petitioner may file and serve any reply within 14 days from the date when the answer is served.  The court requests that the Family Law Section of the State Bar of Nevada and legal aid services participate in this appeal as amici curiae.  Should the Family Law Section and any legal aid service consent to participate as amicus curiae, they shall have 28 days from the date of this order to file and serve any amicus brief that complies with NRAP 29; they should otherwise notify this court that they intend to decline the invitation to participate as amici curiae in this matter within that same timeframe.  This matter raises issues similar to those asserted in Falconi v. Eighth Judicial District Court, Docket No. 84947, and thus, upon completion of briefing, these cases may be clustered to ensure that they are resolved in a consistent and efficient manner.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=869483&onBaseDocumentNumber=22-26230">22-26230</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2022</td><td>Petition/Writ</td><td>Filed Supplement to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=870205&onBaseDocumentNumber=22-26941">22-26941</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Motion</td><td>Filed Real Party in Interest, Troy A. Minter's Motion for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872124&onBaseDocumentNumber=22-28774">22-28774</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/14/2022</td><td>Notice/Incoming</td><td>Filed Petitioner's Notice of Non-Opposition to Real Party in Interest Troy A. Minter's Motion for Extension of Time to File Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872218&onBaseDocumentNumber=22-28867">22-28867</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Amicus curiae parties shall have until October 4, 2022, to file and serve their amicus brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872774&onBaseDocumentNumber=22-29365">22-29365</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Real party in interest Troy A. Minter shall have until October 19, 2022, to file and serve the answer.  Petitioner shall have 14 days from the date the last-filed answer is served to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872776&onBaseDocumentNumber=22-29367">22-29367</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/19/2022</td><td>Motion</td><td>Filed Family Law Section's Motion for Extension of Time to File Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872790&onBaseDocumentNumber=22-29381">22-29381</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/19/2022</td><td>Notice/Incoming</td><td>Filed Notice of Non-Opposition to Family Law Section's Motion for Extension of Time to File Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=872805&onBaseDocumentNumber=22-29396">22-29396</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The Family Law Section of the State Bar of Nevada shall have until October 20, 2022, to file and serve an amicus brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=873071&onBaseDocumentNumber=22-29659">22-29659</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2022</td><td>Motion</td><td>Filed Motion for Permission to File Document. Notice: The American Academy of Matrimonial Lawyers Committee on Amicus Brief's Motion for Leave of Court to File Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=873534&onBaseDocumentNumber=22-30073">22-30073</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/30/2022</td><td>Motion</td><td>Filed Legal Aid Center of Southern Nevada, Nevada Legal Services, Volunteer Attorneys for rural Nevadans and Northern Nevada Legal Aid's Motion for Extension of Time to File Amici Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=874523&onBaseDocumentNumber=22-31031">22-31031</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/03/2022</td><td>Order/Procedural</td><td>Filed Order.  The National American Academy of Matrimonial Lawyers Committee shall have until November 21, 2022, to file and serve a motion for leave to file an amicus brief accompanied by the proposed brief.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=874625&onBaseDocumentNumber=22-31133">22-31133</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/04/2022</td><td>Order/Procedural</td><td>Filed Order.  Legal Aid Center of Southern Nevada, Inc.; Nevada Legal Services; Volunteer Attorneys for Rural Nevadans; and Northern Nevada Legal Aid have filed a motion for a second extension of time to file an amicus brief as invited by this court.  The motion is granted.  Proposed amici shall have until November 3, 2022, to file and serve an amicus brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=874789&onBaseDocumentNumber=22-31296">22-31296</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Petition/Writ</td><td>Filed Real Party in Interest, Troy A. Minter's Answer to Petition for Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=878847&onBaseDocumentNumber=22-32984">22-32984</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2022</td><td>Motion</td><td>Filed Amicus Curiae Family Law Section's Motion for Permission to Expand Amicus Brief (Brief attached) (DETACHED BRIEF AND FILED PER ORDER 10/21/22) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=876665&onBaseDocumentNumber=22-33111">22-33111</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The Family Law Section of the State Bar of Nevada, has filed a motion for leave to file an amicus brief in excess of the length limitations.  The clerk of this court shall detach the amicus brief from the motion and shall file it separately.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=876802&onBaseDocumentNumber=22-33245">22-33245</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/21/2022</td><td>Brief</td><td>Filed Amicus Brief (Family Law Section ) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=876803&onBaseDocumentNumber=22-33246">22-33246</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/31/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioner's reply to answer to petition for writ due: November 16, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=877589&onBaseDocumentNumber=22-34023">22-34023</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2022</td><td>Brief</td><td>Filed Amicus Brief of Legal Aid Center of Southern Nevada, Nevada Legal Services, Northern Nevada Legal Aid and Volunteer Attorneys for Rural Nevadans. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=878238&onBaseDocumentNumber=22-34662">22-34662</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/08/2022</td><td>Petition/Writ</td><td>Filed Petitioner's Reply to Answer to Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=878767&onBaseDocumentNumber=22-35113">22-35113</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance for Amicus Curiae National American Academy of Matrimonial Lawyers Committee for Marshal S. Willick. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=879721&onBaseDocumentNumber=22-36050">22-36050</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/21/2022</td><td>Motion</td><td>Filed American Academy of Matrimonial Lawyers Motion for Leave to Participate as Amicus Curiae and to file in Excess of Fifteen Pages. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=880178&onBaseDocumentNumber=22-36498">22-36498</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Brief</td><td>Filed American Academy of Matrimonial Lawyers Amicus Curiae In Support of Denial of Writ. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=880179&onBaseDocumentNumber=22-36499">22-36499</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Proposed amicus the American Academy of Matrimonial Lawyers (AAML) has filed a motion for leave to file an amicus brief in support of denial of the writ petition and for leave to file a brief in excess of the type-volume limitations set by NRAP 29 and NRAP 21. Having considered the proposed brief, the motion is granted.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=882001&onBaseDocumentNumber=22-38223">22-38223</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for March 2, 2023, at 10:30 a.m.  This argument is scheduled in conjunction with the argument in Falconi v. Clark County Eighth Judicial District, Docket No. 84947, currently scheduled for March 2, 2023, at 10:30 a.m. in Carson City.  The argument in these matters shall be limited to a total of 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=889150&onBaseDocumentNumber=23-04037">23-04037</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/15/2023</td><td>Motion</td><td>Filed American Academy of Matrimonial Lawyers' Motion to Participate in Oral Argument as Amicus Curiae. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=889816&onBaseDocumentNumber=23-04674">23-04674</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Oral Argument. This court has determined that oral argument would be of assistance in resolving the issues presented in Las Vegas Review Journal v. Clark County Eighth Judicial District Court, Docket No. 85228.  Accordingly, oral argument is scheduled in Docket No. 85288 for March 2, 2023, at 10:30 a.m. in Carson City in conjunction with the arguments scheduled in Docket No. 84947 and Docket No. 85195.  The argument in these matters shall be limited to a total of 60 minutes.  The parties for each side shall decide how to divide their allotted 30 minutes. Amicus curiae American Academy of Matrimonial Lawyers has filed a motion to participate in oral argument. The motion is granted. Nos. 84947/85195/85228. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=890048&onBaseDocumentNumber=23-04905">23-04905</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/17/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. Nos. 85195/84947/85228 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=890065&onBaseDocumentNumber=23-04922">23-04922</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2023</td><td>Notice/Incoming</td><td>Filed Respondent's Substitution of Attorneys for Fred Page (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=890243&onBaseDocumentNumber=23-05099">23-05099</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Order/Procedural</td><td>Filed Order. Pursuant to the substitution of attorney filed on February 17, 2023, the clerk of this court shall remove Rena G. Hughes and the Abrams &amp; Mayo Law Firm from the docket and shall add Fred Page and the Page Law Firm in her stead as counsel of record for real party in interest Troy Minter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=891020&onBaseDocumentNumber=23-05863">23-05863</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2023</td><td>Other</td><td>Justice Patricia Lee disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the full court. Nos. 85195/84947/85228. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/06/2023</td><td>Motion</td><td>Filed Motion. (REJECTRED PER PHONE CALL). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Motion</td><td>Filed Petitioner's Motion. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=891815&onBaseDocumentNumber=23-06619">23-06619</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2023</td><td>Motion</td><td>Filed Amicus Curiae's (Marshal S. Willick) Response to Motion. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=892336&onBaseDocumentNumber=23-07133">23-07133</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Motion</td><td>Filed Petitioner's Reply to Response to Motion. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=892634&onBaseDocumentNumber=23-07429">23-07429</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/17/2023</td><td>Order/Procedural</td><td>Filed Order. Petitioner has filed a motion for this court to enter an order that counsel for amicus American Academy of Matrimonial Lawyers (AAML) was not authorized to argue at oral argument on behalf of real party in interest Jennifer R. Easler.  AAML has filed a response, and petitioner has filed a reply.  This court defers ruling on the motion pending final disposition of the petition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=893562&onBaseDocumentNumber=23-08314">23-08314</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2023</td><td>Order/Procedural</td><td>Filed Order of Assignment. The Honorable Patricia Lee, Justice, being disqualified in the above-entitled matters, IT IS HEREBY ORDERED that the Honorable Abbi Silver, Senior Justice, is assigned to participate in the determination of these matters in place of Justice Lee. 84947/85195/85228. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=896014&onBaseDocumentNumber=23-10667">23-10667</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Motion</td><td>Filed T. Matthew Phillips' Motion for Leave to File Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=896058&onBaseDocumentNumber=23-10711">23-10711</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2023</td><td>Notice/Incoming</td><td>Filed T. Matthew Phillips' Affidavit Re. False Statements by Luke Busby. (STRIKEN PER 4/13/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion. T. Matthew Phillips has filed a motion for leave to file an affidavit responding to factual allegations made in petitioner's reply brief. Phillips proposes that he is a de facto real party in interest in this matter because his divorce case is one of a number of cases listed by petitioner as being similarly situated to the instant matter. It does not appear that Phillips filed a timely motion to intervene in the district court pursuant to NRCP 24, and no statute or court rule allows for intervention in the appellate courts. The motion is denied. The clerk of this court shall strike the affidavit filed on April 7, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64660&csIID=64660&deLinkID=896684&onBaseDocumentNumber=23-11328">23-11328</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64660&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

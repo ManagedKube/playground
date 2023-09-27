@@ -1,0 +1,2061 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85569: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=71A61D23D07F99328E873F0BED4CD0BD">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65164">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85569</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ADKINS VS. UNION PAC. R.R. CO.</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A827461</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Gibbons</td><td valign="top" class="label">Case Status:</td><td valign="top">Screening Completed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/01/2022 / Levitt, Lansford</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Justice Association</td><td valign="top">Matthew L. Sharp
+							(Matthew L. Sharp, Ltd.)
+						<br>A. J. Sharp
+							(Sharp Law Center)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Adella Logan</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Adrienne Patterson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Alberta Williams</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Amaya Beristain</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Andrea Powe-Williams</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Ann Asberger</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Anna Slesinski</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Anne McCall</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Ann Magliere</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Anthony Tinnin</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Antoinette Wailani Cary</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Audrey Mitchell</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Bob Mathews</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Bridget Russo</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Bruce Torrey</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carin Owens</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carin Owens</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carla Gallegos-Stephens</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carly Brescia</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carol Corbett</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carol Edwards</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Carole Vill'Neuve</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Catherine Asberger</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Charlene Shepard</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Cheri Edelman</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Cheryl Daily</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Christina Astarita</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Christopher Asberger</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Claudia Ewing</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Connie Ann Lee</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Craig Falkner</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Daniel Higgins</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Daphne Clark</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">David Efros</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">David Pierce</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Dawn Foren</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Debra Papprich-Adamson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Denise Humphrey</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Denise Sasser</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Diane Williams</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Donna Jolly</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Earnest Johnson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Edward Simms</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eileen Mulhern</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Elizabeth Bloyer-Freeman</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Elizabeth Zylka</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eliza Chavez</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eric Eschman</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Alexander Fortunato</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Andre Kelley</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Ann Asberger</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Anne McCall</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Barbara Bloyer</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Danielle Walliser</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of David Edwards</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Janet Gogo</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Jeffrey Trull</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of John Koswan</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Karen Sarae</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Kim Bush</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Marie Leggio</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Patricia Porter</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Rich Romer</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Sharon Oden</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Stuart Stilling</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Terry Munn</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Victor Largesse</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Zane Moser</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Eugene Astarita</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Evelyn Ross</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Gerald Ed Andrews</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Gina Cinquegrani</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Greta McCall</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Gretta Haywood</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Gwyn Taylor</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Hanna Railey</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Irene Ciauri</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Irene King</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Irene Navis</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Iris Kikuchi</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jacqueline Holloway</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jacqueline Kinsey</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jamie Yepson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Janell Rosenburg</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jennifer Hanna</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jennifer Trull-Spaulding</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jerry Hughes</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jill Macfarlane</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Joanne Frank</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Jo Barber</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">John Leggio</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Joseph Glick</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Joseph Sain</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Karen Paone</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Karen Sanchez</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Karen Shelton</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Katherine Gallagher</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kathleen Kingston</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kathleen Staite</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kathy Joines</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kathy Vornberg</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Katina Woodward</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kimberly Flowers</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Kristina Gogo</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Lenora Avella</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Leslee Pierce</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Leslie Davis</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Lisa Snipes</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Magdalen Fok</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Magic Sixx</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Maile Beckwith</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Mariann Matz</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Marketta Kelly</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Mary Hughes-Appel</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Melinda Adkins</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Melisa Davies</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Melissa Davies</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Michael Oden</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Michelle Vanhorn</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Morgan Fenner</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nicholas Romano</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nicole Breeden</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nicole Hoffman</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Norma Espinosa</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Norma Porter</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Norma Snyder</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Pamela Towers</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Patricia Hood</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Patricia Moser</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Priscilla Romer Barata</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Rachel Fenner</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Regina Cruden</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Richard Gray</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Roberta Swoopes</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Robert Spencer</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Rocky Steele</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Roseanne Ardolino</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Royal Alexander</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sandra Foster</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sejla Kopcic</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sharon Witt</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sheryl Romines</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Shery Shively</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sholeh Amirmokri</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Shurnice Coleman</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sierra Stephens</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sonia Grive</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Spencer Bush</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Spencer Kirksey</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Stephen Toms</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Stephen Walliser</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Susie Wesley</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sydney Rabin</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Sylvia Noriega-Binyons</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Tammy Jo Hansen</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Targa Jefferson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Thomas Kendrick</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Thomas Naftal</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Thomas Pickrell</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Tommie Munn</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Tommy Johnson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Toni-Antoinette Stephens</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Toni Leanne Davis</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Valerie Stewart</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Victoria Gonzales</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Wanda Durnen</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Wendy Fenner</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Zella Watson</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Zeneta Kelley</td><td valign="top">Lindsay A. Dibler
+							(The Law Office of Lindsay A. Dibler, LLC)
+						<br>Craig Allen Mueller
+							(Mueller &amp; Associates)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">CalNev Pipe Line, LLC</td><td valign="top">Andrea J. Driggs
+							(Perkins Coie, LLP/Phoenix)
+						<br>M. Ray Hartman, III
+							(Perkins Coie LLP/San Diego)
+						<br>David R. Koch
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">City of Las Vegas Downtown Redevelopment Agency</td><td valign="top">Jeffrey L. Galliher
+							(Las Vegas City Attorney)
+						<br>Bryan K. Scott
+							(Las Vegas City Attorney)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kinder Morgan, Inc.</td><td valign="top">Andrea J. Driggs
+							(Perkins Coie, LLP/Phoenix)
+						<br>M. Ray Hartman, III
+							(Perkins Coie LLP/San Diego)
+						<br>David R. Koch
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kinder Morgan Energy Partners, L.P.</td><td valign="top">Andrea J. Driggs
+							(Perkins Coie, LLP/Phoenix)
+						<br>M. Ray Hartman, III
+							(Perkins Coie LLP/San Diego)
+						<br>David R. Koch
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Kinder Morgan Pipeline, LLC</td><td valign="top">Andrea J. Driggs
+							(Perkins Coie, LLP/Phoenix)
+						<br>M. Ray Hartman, III
+							(Perkins Coie LLP/San Diego)
+						<br>David R. Koch
+							(King Scow Koch Durham LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Monsanto Company</td><td valign="top">Kelly Evans
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Chad R. Fears
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Adam E. Miller
+							(Shook, Hardy &amp; Bacon, LLC/St. Louis)
+						<br>Jay J. Schuttert
+							(Evans Fears &amp; Schuttert LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Pharmacia LLC</td><td valign="top">Kelly Evans
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Chad R. Fears
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Adam E. Miller
+							(Shook, Hardy &amp; Bacon, LLC/St. Louis)
+						<br>Jay J. Schuttert
+							(Evans Fears &amp; Schuttert LLP)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Solutia Inc.</td><td valign="top">Kelly Evans
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Chad R. Fears
+							(Evans Fears &amp; Schuttert LLP)
+						<br>Adam E. Miller
+							(Shook, Hardy &amp; Bacon, LLC/St. Louis)
+						<br>Jay J. Schuttert
+							(Evans Fears &amp; Schuttert LLP)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Union Pacific Railroad Company</td><td valign="top">Tami D. Cowden
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Kara B. Hendricks
+							(Greenberg Traurig, LLP/Las Vegas)
+						<br>Alayne M. Opie
+							(Greenberg Traurig, LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>10/31/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/31/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=877594&onBaseDocumentNumber=22-34028">22-34028</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/31/2022</td><td>Other</td><td>Senior Justice Mark Gibbons disqualified from participation in this matter. Disqualification Reason: Parties. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/31/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=877598&onBaseDocumentNumber=22-34032">22-34032</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/31/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Craig Allen Mueller. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/01/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=877749&onBaseDocumentNumber=22-34179">22-34179</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/01/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Lansford W. Levitt. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=877808&onBaseDocumentNumber=22-34238">22-34238</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=878141&onBaseDocumentNumber=22-34565">22-34565</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879179&onBaseDocumentNumber=22-35519">22-35519</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879235&onBaseDocumentNumber=22-35572">22-35572</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/14/2022</td><td>Notice/Incoming</td><td>Filed Respondent s' (CalNev Pipe Line, LLC; Kinder Morgan Pipeline, LLC; Kinder&#13;
+Morgan Energy Partners, L.P.; and Kinder Morgan, Inc.) Notice of Appearance for M. Ray Hartman III. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879391&onBaseDocumentNumber=22-35727">22-35727</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879881&onBaseDocumentNumber=22-36206">22-36206</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibits 21-28. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879883&onBaseDocumentNumber=22-36208">22-36208</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/17/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibit 31. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879887&onBaseDocumentNumber=22-36212">22-36212</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/17/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibits 32-38. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=879888&onBaseDocumentNumber=22-36213">22-36213</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibits 31 part 2. (Duplicate) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=880100&onBaseDocumentNumber=22-36421">22-36421</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/18/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibits 1-10. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=880102&onBaseDocumentNumber=22-36423">22-36423</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/18/2022</td><td>Docketing Statement</td><td>Filed Appellants' Civil Docketing Statement Exhibits 29-30. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=880105&onBaseDocumentNumber=22-36426">22-36426</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/29/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 08/23/22, 09/06/22.  To Court Reporter: Bill Nelson. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=881114&onBaseDocumentNumber=22-37419">22-37419</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2022</td><td>Order/Procedural</td><td>Filed Order. Appellants shall have 7 days from the date of this order to file and serve an appendix to the docketing statement that contains all documents required by Item 27.  The exhibits shall be clearly labeled and paginated consecutively.  Appellants shall also include an index to the exhibits.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=882033&onBaseDocumentNumber=22-38255">22-38255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/13/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants appendix to docketing statement due: December 27, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=882795&onBaseDocumentNumber=22-39000">22-39000</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Appendix</td><td>Filed Appellants' Index to Appendix for Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884430&onBaseDocumentNumber=22-40557">22-40557</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884448&onBaseDocumentNumber=22-40575">22-40575</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884452&onBaseDocumentNumber=22-40579">22-40579</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884454&onBaseDocumentNumber=22-40581">22-40581</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884455&onBaseDocumentNumber=22-40582">22-40582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884459&onBaseDocumentNumber=22-40586">22-40586</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/27/2022</td><td>Docketing Statement</td><td>Filed Appellants' Docketing Statement. Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=884463&onBaseDocumentNumber=22-40590">22-40590</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/23/2023</td><td>Motion</td><td>Filed Appellants' Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=887122&onBaseDocumentNumber=23-02114">23-02114</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/23/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved for Opening Brief and Appendix. Due date March 10, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=887131&onBaseDocumentNumber=23-02123">23-02123</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Brief</td><td>Filed Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892415&onBaseDocumentNumber=23-07212">23-07212</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 1 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892418&onBaseDocumentNumber=23-07215">23-07215</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 2 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892419&onBaseDocumentNumber=23-07216">23-07216</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 3 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892420&onBaseDocumentNumber=23-07217">23-07217</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 4 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892421&onBaseDocumentNumber=23-07218">23-07218</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 5 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892422&onBaseDocumentNumber=23-07219">23-07219</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 6 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892424&onBaseDocumentNumber=23-07221">23-07221</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 7 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892425&onBaseDocumentNumber=23-07222">23-07222</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 7 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892426&onBaseDocumentNumber=23-07223">23-07223</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 8 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892427&onBaseDocumentNumber=23-07224">23-07224</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief Vols. 9 of 9. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=892428&onBaseDocumentNumber=23-07225">23-07225</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Motion</td><td>Filed Nevada Justice Association's Motion for Permission to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=893125&onBaseDocumentNumber=23-07879">23-07879</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2023</td><td>Brief</td><td>Filed Nevada Justice Association's Amicus Curiae Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=893126&onBaseDocumentNumber=23-07880">23-07880</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/31/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The unopposed motion of the Nevada Justice Association for leave to file a brief of amicus curiae in support of appellants is granted.  NRAP 29.  The amicus brief was filed on March 14, 2023.  Respondents may include any response to the amicus brief in their answering briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=895276&onBaseDocumentNumber=23-09962">23-09962</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/02/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae's (Nevada Justice Association) Notice of Appearance for A. J. Sharp. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=895319&onBaseDocumentNumber=23-10005">23-10005</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2023</td><td>Motion</td><td>Filed Joint Stipulation to Extend Deadline for Answering Briefs. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=895932&onBaseDocumentNumber=23-10585">23-10585</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2023</td><td>Notice/Outgoing</td><td>Issued Notice Stipulation to Extend Time to File Answering Briefs Approved. New Due Date:  May 10th, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=895980&onBaseDocumentNumber=23-10633">23-10633</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/10/2023</td><td>Brief</td><td>Filed Respondents' (CalNev Pipe Line, LLC; Kinder Morgan Pipeline, LLC; Kinder Morgan Energy Partners, L.P.; Kinder Morgan, Inc., Monsanto Company, Pharmacia LLC, Solutia Inc., and City of Las Vegas Downtown Redevelopment Agency) Joint Answering Brief. (STRICKEN PER 5/23/23 ORDER). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900285&onBaseDocumentNumber=23-14753">23-14753</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2023</td><td>Brief</td><td>Filed Respondent's (Union Pacific Railroad Company) Joinder to Answering Brief (REJECTED PER NOTICE ISSUED 5/11/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Joinder to Answering Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900380&onBaseDocumentNumber=23-14847">23-14847</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Union Pacific Railroad Company) Notice of Appearance for Tami D. Cowden. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900510&onBaseDocumentNumber=23-14973">23-14973</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2023</td><td>Brief</td><td>Filed Respondent's (Union Pacific Railroad Company) Joinder to Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900523&onBaseDocumentNumber=23-14986">23-14986</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2023</td><td>Appendix</td><td>Filed Respondent's (Union Pacific Railroad Company) Appendix to Joinder to Answering Brief Vol. 1 of 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900528&onBaseDocumentNumber=23-14991">23-14991</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2023</td><td>Appendix</td><td>Filed Respondent's (Union Pacific Railroad Company) Appendix to Joinder to Answering Brief Vol. 2 of 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=900530&onBaseDocumentNumber=23-14993">23-14993</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2023</td><td>Order/Procedural</td><td>Filed Order. The clerk shall strike the answering brief filed on May 10, 2023.  All respondents except Union Pacific Railroad Company shall have 7 days from the date of this order to file an amended answering brief that is substantively identical to the brief filed on May 10, 2023, but that fully complies with NEFCR 11 and NRAP 25(a)(5).  Respondent Union Pacific Railroad Company has filed a purported joinder to the answering brief discussed above.  The joinder contains additional issues and argument not contained in the answering brief.  Therefore, the purported joinder shall be treated as an answering brief.  Appellants shall have 30 days from service of the amended answering brief to file and serve any reply brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=901904&onBaseDocumentNumber=23-16295">23-16295</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/30/2023</td><td>Brief</td><td>Filed Respondent's (CalNev Pipe Line, LLC; Kinder Morgan Pipeline, LLC; Kinder Morgan Energy Partners, L.P.; Kinder Morgan, Inc., Monsanto Company, Pharmacia LLC, Solutia Inc., and City of Las Vegas Downtown Redevelopment Agency) Amended Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=902512&onBaseDocumentNumber=23-16898">23-16898</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (Monsanto Company, Pharmacia LLC and Solutia, INC) Notice of Appearance for Chad R. Fears. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=902626&onBaseDocumentNumber=23-17009">23-17009</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2023</td><td>Brief</td><td>Filed Appellants' Combined Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=906500&onBaseDocumentNumber=23-20750">23-20750</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/29/2023</td><td>Appendix</td><td>Filed Appellants' Combined Appendix to Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65164&csIID=65164&deLinkID=906505&onBaseDocumentNumber=23-20755">23-20755</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/29/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65164&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,843 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84517: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=435A1D0689796D1807D126280AE10278">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63721">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84517</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">CHRISTENSEN LAW OFFICES, LLC VS. CHRISTENSEN</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A811004</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>04/21/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Christensen Law Offices, LLC</td><td valign="top">Thomas Christensen
+							(Christensen Law Offices, LLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Cross-Respondent</td><td valign="top">Bruce W. Kelley</td><td valign="top">Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Stephen H. Rogers
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Cross-Respondent</td><td valign="top">Government Employees Insurance Company</td><td valign="top">Jonathan W. Carlson
+							(McCormick, Barstow, Sheppard, Wayte &amp; Carruth, LLP/Las Vegas)
+						<br>Henry H. Kim
+							(McCormick, Barstow, Sheppard, Wayte &amp; Carruth, LLP/Las Vegas)
+						<br>Frank A. Toddre, II
+							(McCormick, Barstow, Sheppard, Wayte &amp; Carruth, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Cross-Respondent</td><td valign="top">Winner &amp; Sherrod</td><td valign="top">Charles A. Michalek
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						<br>Stephen H. Rogers
+							(Rogers, Mastrangelo, Carvalho &amp; Mitchell, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Erven T. Nelson</td><td valign="top">Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Elmina Christensen</td><td valign="top">Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Eric Christensen</td><td valign="top">Erven T. Nelson
+							(Law Office of Erven T. Nelson)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Filing Fee</td><td>Filing Fee due Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852400&onBaseDocumentNumber=22-10903">22-10903</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852401&onBaseDocumentNumber=22-10904">22-10904</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852404&onBaseDocumentNumber=22-10907">22-10907</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852407&onBaseDocumentNumber=22-10910">22-10910</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/07/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (Cross-Appeal) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852411&onBaseDocumentNumber=22-10914">22-10914</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/07/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Thomas Christensen. (Appellant/Cross-Respondent) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/08/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=852667&onBaseDocumentNumber=22-11168">22-11168</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/18/2022</td><td>Notice/Incoming</td><td>Filed Cross-Respondent GEICO's Notice of Appearance for Jonathan W. Carlson, Frank A. Toddre, II, and Henry H. Kim. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=853692&onBaseDocumentNumber=22-12125">22-12125</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Erven T. Nelson. (Respondent/Cross-Appellant) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/19/2022</td><td>Notice/Incoming</td><td>Filed Appellant/Cross-Respondent's Notice of Posting of Security Bond. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=853909&onBaseDocumentNumber=22-12327">22-12327</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statements mailed to counsel for appellant/cross-respondent and respondent/cross-appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=854037&onBaseDocumentNumber=22-12452">22-12452</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/21/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=854287&onBaseDocumentNumber=22-12696">22-12696</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. Filing fee will be forwarded by the District Court. (Appellants Winner &amp; Sherrod/Kelley) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (Appellants Winner &amp; Sherrod/Kelley) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=854561&onBaseDocumentNumber=22-12967">22-12967</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Rogers, Mastrangelo, Carvalho &amp; Mitchell. Check no. 028287. (Appellants Winner &amp; Sherrod/Kelley) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Settlement Program. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=854751&onBaseDocumentNumber=22-13154">22-13154</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/10/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (Amended Cross-Appeal) (Respondents/Cross-Appellants, Christensen's) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=856559&onBaseDocumentNumber=22-14863">22-14863</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2022</td><td>Docketing Statement</td><td>Filed Cross-Respondent Bruce Kelley and Winner &amp; Sherrod's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=856692&onBaseDocumentNumber=22-14994">22-14994</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2022</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondent's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=856715&onBaseDocumentNumber=22-15017">22-15017</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2022</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=856725&onBaseDocumentNumber=22-15027">22-15027</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for June 28, 2022, at 9:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=856974&onBaseDocumentNumber=22-15271">22-15271</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2022</td><td>Docketing Statement</td><td>Filed GEICO's NRAP 14(f) Response to Docketing Statement. (REJECTED PER NOTICE ISSUED 5/18/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=857510&onBaseDocumentNumber=22-15804">22-15804</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2022</td><td>Docketing Statement</td><td>Filed GEICO's NRAP 14(f) Response to Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=857640&onBaseDocumentNumber=22-15934">22-15934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date: Based on communications with counsel following the Settlement Conference held in this matter, the Settlement Judge intends to remain in contact with, and available to, counsel under the Court's Settlement Program for approximately the next three weeks, to see whether settlement efforts might lead to a resolution by agreement. If, within that time, a settlement has not been reached or there is no reasonable prospect for settlement, then the Settlement Judge will file a Final No Settle Status Report. Settlement Judge requests extension of time up to and including November 30, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=876446&onBaseDocumentNumber=22-32897">22-32897</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/19/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued to the following date:  Based on communications with counsel following the Settlement Conference held in this matter, the Settlement Judge intends to remain in contact with, and available to, counsel under the Court's Settlement Program for approximately the next three weeks, to see whether settlement efforts might lead to a resolution by agreement. If, within that time, a settlement has not been reached or there is no reasonable prospect for settlement, then the Settlement Judge will file a Final No Settle Status Report. Settlement Judge requests extension of time up to and including November 30, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=876469&onBaseDocumentNumber=22-32920">22-32920</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/20/2022</td><td>Settlement Order/Procedural</td><td>Filed Order. The settlement judge's recommendation that this appeal remain assigned to the settlement program for an additional amount of time is approved. The time for filing a Final Settlement Conference Status Report is extended to November 30, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=876641&onBaseDocumentNumber=22-33087">22-33087</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/25/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report.</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2022</td><td>Settlement Program Report</td><td>Filed Interim Settlement Program Report. The settlement conference is continued. The Settlement Judge requests the Court to extend the time for filing of a final report in this matter to and including January 16, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=881334&onBaseDocumentNumber=22-37636">22-37636</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/13/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Granting Extension of Time for Status Report. The time for filing a Final Settlement Conference Status Report is extended to January 16, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=882790&onBaseDocumentNumber=22-38995">22-38995</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/16/2023</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. Final Report/No Settlement</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/16/2023</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=886379&onBaseDocumentNumber=23-01410">23-01410</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/26/2023</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  These appeals and cross-appeal shall follow parallel briefing schedules.  Appellant/cross-respondent Christensen Law Offices, LLC (Christensen Law Offices) and respondents/cross-appellants Eric Christensen and Elmina Christensen (the Christensens) shall each have 14 days from the date of this order to file and serve a transcript request form.    Christensen Law Offices shall have 90 days from the date of this order to file and serve the opening brief and appendix on appeal.  The Christensens shall have 30 days from service of the opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal. Cross-respondents Geico, Government Employees Insurance Company, A Foreign Corporation; Winner &amp; Sherrod, Ltd., F/K/A Atkin Winner &amp; Sherrod, Ltd., A Nevada Limited-Liability Company; And Bruce W. Kelley, An Individual, shall each have 30 days from service of the Christensens' combined brief to file and serve an answering brief on cross-appeal.  Christensen Law Offices shall have 30 days from service of the Christensens' combined brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal. The Christensens shall have 30 days from service of the last answering brief on cross-appeal to file and serve a single reply brief on cross-appeal.  Appellants Winner &amp; Sherrod, LTD, and Bruce W. Kelley (Winner &amp; Sherrod) shall have 14 days from the date of this order to file and serve a transcript request form. Winner &amp; Sherrod shall have 90 days from the date of this order to file and serve the opening brief on appeal. Respondents Eric Christensen, Elmina Christensen, and Erven T. Nelson shall have 30 days from service of the opening brief to file and serve an answering brief. Winner &amp; Sherrod shall have 30 days from service of the answering brief to file and serve any reply brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=887577&onBaseDocumentNumber=23-02562">23-02562</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2023</td><td>Transcript Request</td><td>Filed Appellant/Cross-Respondent's Request for Transcript of Proceedings. Transcripts requested: 08/24/21, 12/20/21. To Court Reporter: Shannon Emmons. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=887706&onBaseDocumentNumber=23-02689">23-02689</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Transcript Request</td><td>Filed Cross-respondent's Notice of No Transcript Requested. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=889122&onBaseDocumentNumber=23-04009">23-04009</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/13/2023</td><td>Order/Procedural</td><td>Filed Order to Show Cause. The Christensens shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Winner &amp; Sherrod, Ltd. and Bruce W. Kelley shall have 14 days from the date of service of the Christensens' response to file and serve any reply. Briefing is suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=889518&onBaseDocumentNumber=23-04392">23-04392</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/21/2023</td><td>Notice/Incoming</td><td>Filed Respondent/Cross-Appellant's Notice of Election Not to File a Reply Brief and Confession of Error. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=890348&onBaseDocumentNumber=23-05203">23-05203</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2023</td><td>Motion</td><td>Filed Cross-Respondent's Opposition to Confession of Error/Motion for Relief from Filing a Responding Brief on Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=890560&onBaseDocumentNumber=23-05408">23-05408</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/28/2023</td><td>Motion</td><td>Filed Cross-Respondents' Motion to Dismiss Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=891170&onBaseDocumentNumber=23-06012">23-06012</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Extend Time to File Response to Opposition to Confession of Error. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=891331&onBaseDocumentNumber=23-06172">23-06172</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/07/2023</td><td>Motion</td><td>Filed Cross-Respondent GEICO's Response/Joinder to Winner &amp; Sherrod Ltd.'s Motion to Dismiss. (REJECTED PER NOTICE ISSUED 3/7/23). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Motion. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892091&onBaseDocumentNumber=23-06892">23-06892</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/07/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Strike the "Opposition to Confession of Error" and "Motion to Dismiss Appeal or Motion for Other Sanctions Under NRAP 38". (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892182&onBaseDocumentNumber=23-06981">23-06981</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Response to "Opposition to Confession of Error" and "Motion to Dismiss Appeal or Motion for Other Sanctions Under NRAP 38". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892183&onBaseDocumentNumber=23-06982">23-06982</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/08/2023</td><td>Motion</td><td>Filed Cross-Respondent GEICO's Response/Joinder to Winner &amp; Sherrod Ltd.'s Motion to Dismiss. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892271&onBaseDocumentNumber=23-07070">23-07070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The motion of Christensen Law Offices, LLC and Eric and Elmina Christensen for an extension of time is granted. Christensen Law Offices' response to the opposition to the confession of error was filed on March 7, 2023. fn1 [If attorney Kris Ballard wishes to be recognized as counsel of record for Eric and Elmina Christensen, he must file a notice of appearance in accordance with NRAP 46(a)(2).]. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892518&onBaseDocumentNumber=23-07314">23-07314</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/13/2023</td><td>Motion</td><td>Filed Cross-Respondent's (Bruce W. Kelley &amp; Winner &amp; Sherrod) Reply to Opposition to Motion to Dismiss Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892813&onBaseDocumentNumber=23-07601">23-07601</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/13/2023</td><td>Motion</td><td>Filed Cross-Respondent's (Bruce W. Kelley &amp; Winner &amp; Sherrod) Opposition to Motion to Strike. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=892814&onBaseDocumentNumber=23-07602">23-07602</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893264&onBaseDocumentNumber=23-08017">23-08017</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Response to GEICO's Response/Joinder to Winner &amp; Sherrod LTd's Motion to Dismiss. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893265&onBaseDocumentNumber=23-08018">23-08018</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893269&onBaseDocumentNumber=23-08022">23-08022</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/20/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's (Christensen Law Offices, LLC) Motion to Extend Time to Reply In Support of Motion to Strike. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893896&onBaseDocumentNumber=23-08617">23-08617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/21/2023</td><td>Motion</td><td>Filed Cross-Respondents' (Bruce Kelley and Winner &amp; Sherrod) Reply to Response to Order to Show Cause . (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893920&onBaseDocumentNumber=23-08641">23-08641</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2023</td><td>Motion</td><td>Filed Cross-Respondents' (Bruce Kelley and Winner &amp; Sherrod) Response to Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=893922&onBaseDocumentNumber=23-08643">23-08643</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Cross-respondent GEICO's response to appellant/cross-respondent's motion to substitute and streamline appeal due: April 5, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894088&onBaseDocumentNumber=23-08809">23-08809</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2023</td><td>Motion</td><td>Filed Cross-Respondent's (GEICO) Reply to Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894142&onBaseDocumentNumber=23-08862">23-08862</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/24/2023</td><td>Motion</td><td>Filed Cross-Respondent GEICO's Joinder to Cross-Respondents/Cross-Appellants Winner &amp; Sherrod, Ltd f/k/a Atkin Winner &amp; Sherrod, Ltd, and Bruce W. Kelly's Opposition to Motion to Strike. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894457&onBaseDocumentNumber=23-09171">23-09171</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/27/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Reply to Response In Support of Motion to Strike. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894678&onBaseDocumentNumber=23-09380">23-09380</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/27/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Reply to Response In Support of Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894679&onBaseDocumentNumber=23-09381">23-09381</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant has filed a motion for extension of time to file a reply in support of the motion to strike. The motion is granted. The reply was filed on March 27, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=894856&onBaseDocumentNumber=23-09550">23-09550</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2023</td><td>Motion</td><td>Filed Cross-Respondent's (GEICO) Response to Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=895799&onBaseDocumentNumber=23-10455">23-10455</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/10/2023</td><td>Motion</td><td>Filed Cross-Respondent's (Bruce Kelley and Winner &amp; Sherrod) Objection to Geico's Response to Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=896201&onBaseDocumentNumber=23-10850">23-10850</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Reply In Support of Motion to Substitute and Streamline Appeal. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63721&csIID=63721&deLinkID=896676&onBaseDocumentNumber=23-11320">23-11320</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63721&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

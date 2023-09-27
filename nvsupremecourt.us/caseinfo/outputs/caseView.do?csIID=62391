@@ -1,0 +1,746 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83527: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=FC56E3CAADBAEC7EE0073855E00CF84E">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62391">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83527</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">CHOO VS. DIST. CT. (STREAMLINE MEDIA GROUP, INC.)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=66152">86298</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A820459</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Prohibition</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>05/13/2022</td><td class="label">How Submitted:</td><td>On Briefs</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Larian Studios</td><td valign="top">Ramez Ghally
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Patricia Lee
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Daniel Henry Stewart
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Larian Studios US Inc.</td><td valign="top">Ramez Ghally
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Patricia Lee
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Daniel Henry Stewart
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Tomoko Choo</td><td valign="top">Ramez Ghally
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Patricia Lee
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						<br>Daniel Henry Stewart
+							(Hutchison &amp; Steffen, LLC/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Streamframe Corporation</td><td valign="top">Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Streamline Media Group, Inc.</td><td valign="top">Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Streamline Studios Malaysia SDN BHD</td><td valign="top">Kristen T. Gallagher
+							(McDonald Carano LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Joanna Kishner</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2021</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Patricia Lee. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2021</td><td>Petition/Writ</td><td>Filed Petition for Writ of Prohibition. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=830373&onBaseDocumentNumber=21-27227">21-27227</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2021</td><td>Appendix</td><td>Filed Appendix to Petition for a Writ of Prohibition Volume I of II. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=830374&onBaseDocumentNumber=21-27228">21-27228</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/21/2021</td><td>Appendix</td><td>Filed Appendix to Petition for a Writ of Prohibition Volume II of II. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=830375&onBaseDocumentNumber=21-27229">21-27229</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/21/2021</td><td>Petition/Writ</td><td>Filed Petitioners' Amended Petition for a Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=830442&onBaseDocumentNumber=21-27291">21-27291</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real Parties in Interest's Answer due:  28 days.  Petitioner shall have 14 days from the date of service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=835755&onBaseDocumentNumber=21-32331">21-32331</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real party in interest's answer to writ petition due: December 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=838274&onBaseDocumentNumber=21-34769">21-34769</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Petition/Writ</td><td>Filed Real Parties in Interest's Answer to Amended Petition for Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840104&onBaseDocumentNumber=21-36482">21-36482</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Appendix</td><td>Filed Real Parties in Interest's Appendix of Exhibits in Support of Answer to Amended Petition for Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840102&onBaseDocumentNumber=21-36485">21-36485</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2021</td><td>Motion</td><td>Filed Real Parties in Interest's Motion to Supplement the Record and for Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840103&onBaseDocumentNumber=21-36486">21-36486</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/22/2021</td><td>Motion</td><td>Filed Real Parties in Interest's Motion to Seal Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840105&onBaseDocumentNumber=21-36487">21-36487</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Petitioners shall have until January 12, 2022, to file and serve the opposition to Real Parties in Interest's Motion to Supplement the Record and for Judicial Notice and until January 19, 2022, to file and serve the reply to the answer to the petition for writ.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840537&onBaseDocumentNumber=21-36914">21-36914</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/29/2021</td><td>Motion</td><td>Filed Petitioner's Limited Opposition to Real Parties in Interest's Motion to Seal Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=840799&onBaseDocumentNumber=21-37151">21-37151</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/12/2022</td><td>Motion</td><td>Filed Petitioners' Opposition to Real Parties in Interest's Motion to Supplement the Record and for Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=842332&onBaseDocumentNumber=22-01299">22-01299</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Seal.  The clerk shall file the exhibits received on December 22, 2021, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=842867&onBaseDocumentNumber=22-01868">22-01868</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Appendix</td><td>Filed SEALED Exhibits in Support of Answer to Amended Petition for Writ of Prohibition.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest shall have until February 2, 2022, to file and serve a reply to petitioner's opposition to real parties in interest's motion to supplement the record and for judicial notice.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=842874&onBaseDocumentNumber=22-01875">22-01875</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/19/2022</td><td>Petition/Writ</td><td>Filed Petitoner's Reply in Support of its Amended Petition for a Writ of Prohibition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=843020&onBaseDocumentNumber=22-01993">22-01993</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Motion to Seal Exhibits to Motion to Further Supplement the Record and to Redact Portions of the Motion to Further Supplement the Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=843230&onBaseDocumentNumber=22-02226">22-02226</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Motion to Further Supplement the Record. (Redacted) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=843232&onBaseDocumentNumber=22-02228">22-02228</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/27/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners' response to real parties in interest's motion to further supplement the record due: February 11, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=843849&onBaseDocumentNumber=22-02813">22-02813</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/01/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Reply in Support of Motion to Supplement the Record and For Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=844532&onBaseDocumentNumber=22-03363">22-03363</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The clerk shall file the unredacted motion and exhibits received on January 21, 2021, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=845878&onBaseDocumentNumber=22-04727">22-04727</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Motion to Further Supplement the Record. (Unredacted) (Sealed).  (FILED UNDER SEAL PER ORDER 2/11/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/11/2022</td><td>Motion</td><td>Filed Exhibits 1,2,3,and 4 to Real Parties in Interest's Motion to further Supplement the Record Motion to further Supplement the Record. (Sealed).  (STRICKEN PER ORDER 03/11/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/11/2022</td><td>Motion</td><td>Filed Petitioner's Opposition to real Parties in Interest's Motion to Further Supplement the Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=845931&onBaseDocumentNumber=22-04774">22-04774</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest shall have until March 4, 2022, to file and serve a reply to petitioner's opposition to real parties in interest's motion to further supplement the record.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=846445&onBaseDocumentNumber=22-05276">22-05276</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Reply in Support of Motion to Further Supplement the Record. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=847782&onBaseDocumentNumber=22-06516">22-06516</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/11/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Motions.  Real parties in interest have filed a motion to supplement the record and for judicial notice, and motion to further supplement the record.  This court will provisionally allow the supplementation of the record with the exhibits filed on January 19, 2022, and will provisionally take judicial notice of the document attached as exhibit 2 to the motion filed on December 22, 2021.  The motion to further supplement the record is denied.  The clerk shall strike the exhibits filed on February 11, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=849120&onBaseDocumentNumber=22-07775">22-07775</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/25/2022</td><td>Motion</td><td>Filed Petitioners' Motion to Stay Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=850876&onBaseDocumentNumber=22-09420">22-09420</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/29/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interest's response to petitioners' motion for stay due: April 15, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=851139&onBaseDocumentNumber=22-09673">22-09673</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Opposition to Petitioners' Motion to Stay Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=853361&onBaseDocumentNumber=22-11787">22-11787</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Petitioners' reply in support of the motion to stay proceedings due: May 5, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=853971&onBaseDocumentNumber=22-12389">22-12389</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2022</td><td>Motion</td><td>Filed Petitioners' Reply in Support of Its Motion to Stay Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=856150&onBaseDocumentNumber=22-14459">22-14459</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Order/Procedural</td><td>Filed Order Submitting for Decision Without Oral Argument.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=856893&onBaseDocumentNumber=22-15191">22-15191</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/18/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion for Stay, in Part, and Denying Motion for Stay, in Part.  The district court proceedings are stayed as to petitioners Larian and Arrakis.  While we have determined a stay is proper as to those two entities, we deny petitioners' request to stay all proceedings below.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=857421&onBaseDocumentNumber=22-15717">22-15717</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2022</td><td>Order/Dispositional</td><td>Filed Order Granting Petition.  "ORDER the petition GRANTED AND DIRECT THE CLERK OF THIS COURT TO ISSUE A WRIT OF PROHIBITION instructing the court to grant the motions to dismiss based on lack of personal jurisdiction filed by Larian Studios US and Arrakis."  fn1[In light of this disposition, we vacate our stay order entered on May 18, 2022.]  NNP22-AS/EC/KP  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=868424&onBaseDocumentNumber=22-25235">22-25235</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2022</td><td>Writ</td><td>Issued Writ with letter. Original and one copy of writ and copy order of mailed to Patricia Lee with Hutchison &amp; Steffen for service upon Judge Joanna Kishner. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=868438&onBaseDocumentNumber=22-25249">22-25249</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2022</td><td>Notice/Incoming</td><td>Filed Certificate of Service. (Writ of Prohibition served on Hon. Joanna Kishner) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=868962&onBaseDocumentNumber=22-25717">22-25717</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2022</td><td>Writ</td><td>Filed Returned Writ. Original Writ returned. Served on Judge Joanna Kishner on August 17, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=869264&onBaseDocumentNumber=22-26014">22-26014</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62391&csIID=62391&deLinkID=871378&onBaseDocumentNumber=22-28039">22-28039</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62391&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,918 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83029: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=B6AA4E3A6A69043D523A6EDA9CF5F7A1">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="61718">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83029</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SNYDER VS. SNYDER C/W 81887/82756</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=60030">81887</a>*, <a href="/public/caseView.do?csIID=61341">82756</a>, 83029</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60030">81887</a>, <a href="/public/caseView.do?csIID=62732">81887-COA</a>, <a href="/public/caseView.do?csIID=60548">82243</a>, <a href="/public/caseView.do?csIID=61341">82756</a>, <a href="/public/caseView.do?csIID=62733">82756-COA</a>, <a href="/public/caseView.do?csIID=62734">83029-COA</a>, <a href="/public/caseView.do?csIID=62531">83620</a>, <a href="/public/caseView.do?csIID=62575">83651</a>, <a href="/public/caseView.do?csIID=64010">84730</a>, <a href="/public/caseView.do?csIID=64226">84730-COA</a>, <a href="/public/caseView.do?csIID=67464">87292</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Elko Co. - Fourth Judicial District - DR-MD-17-757</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Raymond Max Snyder</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Lauara Ann Snyder</td><td valign="top">Bronagh M. Kelly
+							(Woodburn &amp; Wedge)
+						<br>Shawn B. Meador
+							(Woodburn &amp; Wedge)
+						<br>Shay L. Wells
+							(Woodburn &amp; Wedge)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2021</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=819050&onBaseDocumentNumber=21-16540">21-16540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 10 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=819052&onBaseDocumentNumber=21-16542">21-16542</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/23/2021</td><td>Filing Fee</td><td>Returned Filing Fee ($24). Check No. 101 returned to Raymond Max Snyder. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Raymond Max Snyder.  Check no. 102. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/24/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=820867&onBaseDocumentNumber=21-18225">21-18225</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2021</td><td>Docketing Statement</td><td>Filed Proper Person Appellant's Docketing Statement.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=822174&onBaseDocumentNumber=21-19439">21-19439</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2021</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 10 days.  (Docketing Statement).  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=822182&onBaseDocumentNumber=21-19446">21-19446</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/15/2021</td><td>Docketing Statement</td><td>Filed Proper Person Appellant's Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=823203&onBaseDocumentNumber=21-20451">21-20451</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/16/2021</td><td>Order/Procedural</td><td>Filed Order Directing Transmission of Record. Record due: 30 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=823327&onBaseDocumentNumber=21-20572">21-20572</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/23/2021</td><td>Motion</td><td>Filed Proper Person Motion NRCP 60(b) (3) and (6) Under NRCP 54 and NRCP 55, Motion for Default Judgment with Prejudice; and NRS 1.230(1) Motion to Recuse Judge Robert Estes and; Affidavit; and NRS 13.050(2)(B) Motion for change of Venue. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=824169&onBaseDocumentNumber=21-21305">21-21305</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/28/2021</td><td>Motion</td><td>Filed Proper Person Motion to Stay Under NRS 20.0237 at a Reduced Bond in the Amount of $1.00 Resulting from the Fraud by Respondent and Her Attorney. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=824748&onBaseDocumentNumber=21-21871">21-21871</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Notice to Set for Decision, Plaintiff's Motion to Quash for Non Service and Violation of NRCP 59. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825029&onBaseDocumentNumber=21-22148">21-22148</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/30/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Defendant's Opposition to Motion to Quash for Non-Service and Violation of NRCP 59. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825030&onBaseDocumentNumber=21-22149">21-22149</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Index. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825174&onBaseDocumentNumber=21-22292">21-22292</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal Index. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825175&onBaseDocumentNumber=21-22293">21-22293</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/02/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 1-34 (REJECTED PER PHONE CALL WITH ANNETTE 08/02/21). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825176&onBaseDocumentNumber=21-22294">21-22294</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/02/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  District Court Record on Appeal due:  August 30, 2021.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=825233&onBaseDocumentNumber=21-22351">21-22351</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/13/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Regarding Motions and Briefing. Appellant's pro bono counsel in Docket No. 81887, Michael K. Wall, has filed a motion to withdraw as counsel. The motion is granted. The clerk shall remove Mr. Wall as counsel of record for appellant in Docket No. 81887. That appeal shall proceed with appellant acting pro se. As appellant has already filed an informal brief, counsel's request for an extension of time for appellant to file an opening brief is denied. On July 23, 2021, appellant filed in each of these appeals identical pro se motions for leave to file an independent action in the district court under NRCP 60(b) and for various other relief. Appellant need not obtain permission from this court before filing motions or other documents in the district court. Appellant has also filed pro se motions for a stay based upon a reduced bond of $1.00. The motion is denied. Appellant has filed copies of a notice and a response addressed to the district court. This court takes no action on these documents. The clerk shall return any future motions that exceed the page limitation or the equivalent type-volume limitation, unfiled. In Docket No. 81887, appellant filed his pro se informal brief on January 22, 2021. Respondent's answering brief due: 21 days. Briefing is now complete in Docket No. 82756. Appellant's informal brief or opening brief remains due to be filed in Docket No. 83029 by October 22, 2021. fn2 [Any relief requested within appellant's pro se response and objection to this notice is denied.] Nos 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=826629&onBaseDocumentNumber=21-23667">21-23667</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 1A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827013&onBaseDocumentNumber=21-24040">21-24040</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 1C. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827015&onBaseDocumentNumber=21-24041">21-24041</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 1E. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827016&onBaseDocumentNumber=21-24042">21-24042</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/17/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 2A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827018&onBaseDocumentNumber=21-24044">21-24044</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/17/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 2D. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827021&onBaseDocumentNumber=21-24045">21-24045</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 3A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827095&onBaseDocumentNumber=21-24112">21-24112</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 3C. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827109&onBaseDocumentNumber=21-24114">21-24114</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 4A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827098&onBaseDocumentNumber=21-24115">21-24115</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 5A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827104&onBaseDocumentNumber=21-24117">21-24117</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 5G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827105&onBaseDocumentNumber=21-24119">21-24119</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/18/2021</td><td>Record on Appeal Documents</td><td>Filed  Record on Appeal - Volume 2G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827130&onBaseDocumentNumber=21-24154">21-24154</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 6A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827265&onBaseDocumentNumber=21-24289">21-24289</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 7A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827266&onBaseDocumentNumber=21-24290">21-24290</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 8G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827267&onBaseDocumentNumber=21-24291">21-24291</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/19/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 8K. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827268&onBaseDocumentNumber=21-24292">21-24292</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/19/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 8A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827273&onBaseDocumentNumber=21-24297">21-24297</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/20/2021</td><td>Motion</td><td>Filed Proper Person Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(1) and 12(b)(2); With Resident Witness Affidavit and Appellant Affidavit.  (RETURNED UNFILED PER ORDER 9/3/21).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 9A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827407&onBaseDocumentNumber=21-24393">21-24393</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 9F. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827408&onBaseDocumentNumber=21-24394">21-24394</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/21/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 10A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827409&onBaseDocumentNumber=21-24395">21-24395</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 10G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827410&onBaseDocumentNumber=21-24396">21-24396</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 11A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827433&onBaseDocumentNumber=21-24418">21-24418</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 11D. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827435&onBaseDocumentNumber=21-24420">21-24420</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 11G. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827436&onBaseDocumentNumber=21-24421">21-24421</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 11K. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827437&onBaseDocumentNumber=21-24422">21-24422</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 12A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827565&onBaseDocumentNumber=21-24549">21-24549</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Volume 12F. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827567&onBaseDocumentNumber=21-24551">21-24551</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Case Summary Sheets. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827620&onBaseDocumentNumber=21-24604">21-24604</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Respondent's Exhibit A. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827621&onBaseDocumentNumber=21-24605">21-24605</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Respondent's Exhibits F. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827622&onBaseDocumentNumber=21-24606">21-24606</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Respondent's Exhibits K. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827623&onBaseDocumentNumber=21-24607">21-24607</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/23/2021</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal - Exhibits O. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827624&onBaseDocumentNumber=21-24608">21-24608</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Motion Rule 11(C)(4) Motion for Sanctions and NRS 205.09 Order to Stay Restitution. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827933&onBaseDocumentNumber=21-24909">21-24909</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Motion to Stay Pending a Ruling on Amended Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(2); and Appellant's Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827935&onBaseDocumentNumber=21-24911">21-24911</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Amended Motion to Dismiss with Prejudice for Lack of Jurisdiction Under NRCP Rules 12(b)(2); and Appellant's Affidavit. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827938&onBaseDocumentNumber=21-24914">21-24914</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/26/2021</td><td>Motion</td><td>Filed Proper Person Amended Motion for Sanctions and NRS 205.09 Order to Pay Restitution. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=827939&onBaseDocumentNumber=21-24915">21-24915</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention (REJECTED PER NOTICE ISSUED 08/27/21). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Notice/Outgoing</td><td>Issued Notice Of Rejection - No Notice Of Appearance (Bronagh M. Kelly). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=828017&onBaseDocumentNumber=21-24993">21-24993</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/27/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance (Bronagh M. Kelly of the law firm of Woodburn and Wedge hereby appears for Respondent). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=828027&onBaseDocumentNumber=21-25003">21-25003</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/27/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention to not File an Opposition Unless Ordered to do so by the Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=828059&onBaseDocumentNumber=21-25034">21-25034</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/03/2021</td><td>Order/Procedural</td><td>Filed Order.  In Docket Nos. 81887 and 83029 ,the clerk shall return the August 20, 2021, motions to dismiss, unfiled.  In Docket Nos. 81887, 82756, and 83029, appellant has filed pro se motions and amended motions to sanction respondent and her counsel for alleged statutory violations, fraud, and forgery, to dismiss "this case," and to grant various other relief.  Appellant's allegations and arguments relate to the merits of his appeals and are not properly addressed in the context of motions.  The motions are denied.  Appellant's pro se motions for a stay pending a ruling on his motions to dismiss are denied.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=828808&onBaseDocumentNumber=21-25767">21-25767</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/07/2021</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals. These appeals are hereby consolidated for purposes of disposition. Nos 81887, 82756, 83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=828939&onBaseDocumentNumber=21-25894">21-25894</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/08/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Opposition to Respondent's Notice of Intention.  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=829145&onBaseDocumentNumber=21-26048">21-26048</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Set Aside the Divorce Decree and Orders of in the Alternative to Stay Under NRS 20.0237 at a Reduced Bond for $1.00 Resulting From the Fraud by Respondent and her Attorney.  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=830961&onBaseDocumentNumber=21-27797">21-27797</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/28/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention not to File and Serve an Opposition unless directed by the Court to do so.  Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=831047&onBaseDocumentNumber=21-27883">21-27883</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Brief</td><td>Filed Proper Person Appellant's Opening Brief (Case No. 83029)  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=831985&onBaseDocumentNumber=21-28807">21-28807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2021</td><td>Case Status Update</td><td>Briefing Completed/To Screening.(Case No. 83029)  Nos.  81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/07/2021</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Intention. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=832026&onBaseDocumentNumber=21-28848">21-28848</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/18/2021</td><td>Order/Procedural</td><td>Filed Order. Appellant has filed a pro se opposition to respondent's notice of intention not to respond to certain of appellant's motions unless ordered to do so by this court. This court takes no action on the opposition. On October 7, 2021, respondent filed a notice stating that she will not be responding to appellant's October 7, 2021, opening brief (filed in Docket No. 83029) unless ordered to do so by this court.  Accordingly, briefing of the appeal in Docket No. 83029 is now complete.  Appellant has also filed a pro se motion to set aside the divorce decree or, alternatively, for a stay upon a reduced bond under NRS 20.037. The motion is denied.  Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=833020&onBaseDocumentNumber=21-29832">21-29832</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/19/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to Compel Respondent to Serve a Response to Appellant's Opening Brief. Nos. 81887/82756/83029 (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=833300&onBaseDocumentNumber=21-30053">21-30053</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/21/2021</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant's pro se motion to compel respondent to file an answering brief is denied at this time.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=833656&onBaseDocumentNumber=21-30339">21-30339</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Respondent's Notice of Intention.   Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=834135&onBaseDocumentNumber=21-30807">21-30807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Order/Procedural</td><td>Filed Order.  Appellant has filed a pro se response to respondent's notice of intention not to file an answering brief.  He requests that this court construe the notice as a confession of error.  The request is denied.  Nos. 81887/82756/83029.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=835263&onBaseDocumentNumber=21-31844">21-31844</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/12/2021</td><td>Motion</td><td>Filed Proper Person Appellant's Motion to find Respondent's Attorney, Shawn B. Meador, in Contempt for Fabricating Evidence; for Forging Orders in Violation of NRS 205.090; and a Request that the Court Order a Criminal Investigation into Shawn B. Meador's Actions in this Divorce. Nos. 82756/81887/83029 (SC) (TRANSFERRED TO THE COURT OF APPEALS PER 11/16/21 NOTICE)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=835972&onBaseDocumentNumber=21-32545">21-32545</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/16/2021</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. Nos. 81887/82756/83029. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=836334&onBaseDocumentNumber=21-32905">21-32905</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/16/2021</td><td>Case Status Update</td><td>Transferred to Court of Appeals. Nos. 81887/82756/83029. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Appendix</td><td>Filed Respondent's Appendix, Volume II. Nos. 81887/82756/83029 (REJECTED PER NOTICE ISSUED 4/25/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=854520&onBaseDocumentNumber=22-12927">22-12927</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of Intention. Nos. 81887/82756/83029 (REJECTED PER NOTICE ISSUED 7/8/2) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 81887/82756/83029 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=864561&onBaseDocumentNumber=22-21555">22-21555</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/20/2022</td><td>Order/Dispositional</td><td>Filed Order Affirming in Part, Reversing in Part and Remanding (Docket No. 81887-COA) and Dismissing Appeals (Docket No. 82756-COA and Docket No. 83029-COA). "Docket No. 81887-COA, We conclude that the district court's decision on the improvements issue was not supported by substantial evidence,  see Williams, 120 Nev. at 566, 97 P.3d at 1129, and we therefore reverse and remand for further proceedings on the issue. We reverse the divorce decree insofar as it failed to (1) allocate the outstanding portion of the loans, which the parties made to the businesses from their community funds, between the parties; (2) evaluate whether the community was entitled to reimbursement for any community funds expended on one of the business's legal expenses; and (3) determine whether the transfers of funds from the businesses to the parties' joint accounts were loans, and if so, how those debts should be allocated between the parties.  We also reverse the portions of the divorce decree addressing (1) the purported improvements to Raymond's home, (2) characterizing the funds in Raymond's bank account that he received through workers' compensation as community property, (3) directing the parties' to equally split their 401K and IRA accounts, and (4) awarding attorney fees to Lauara.  On remand, the district court shall address these issues in a manner consistent with this order.  We affirm all other aspects of the divorce decree. Thus, because no statute or court rule authorizes an appeal from any portion of the March 31 order, this court lacks jurisdiction over the appeal in Docket No. 82756-COA, and it is therefore dismissed. Because this court therefore lacks jurisdiction over Raymond's appeal in Docket No. 83029-COA, it is dismissed."  COA-MG/JT/BB Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/02/2022</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/02/2022</td><td>Post-Judgment Petition</td><td>Filed Appellant's Proper Person Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=878188&onBaseDocumentNumber=22-34612">22-34612</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Post-Judgment Order/Dispositional</td><td>Order Denying Petition for Review. "Review Denied"  Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=880214&onBaseDocumentNumber=22-36534">22-36534</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/21/2022</td><td>Remittitur</td><td>Issued Remittitur. NOS. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=880219&onBaseDocumentNumber=22-36539">22-36539</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/21/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed NOS. 81887/82756/83029. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/15/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on November 28, 2022. Nos. 81887/82756/83029. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=61718&csIID=61718&deLinkID=883133&onBaseDocumentNumber=22-36539">22-36539</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=61718&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

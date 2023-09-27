@@ -1,0 +1,1882 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86092: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=D5482B2C9969A2A05198059D6B62E933">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65881">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86092</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">MEI-GSR HOLDINGS, LLC VS. THOMAS</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=37395">69184</a>, <a href="/public/caseView.do?csIID=38715">70498</a>, <a href="/public/caseView.do?csIID=63229">84143</a>, <a href="/public/caseView.do?csIID=65659">85915</a>, <a href="/public/caseView.do?csIID=67060">86985</a>, <a href="/public/caseView.do?csIID=67399">87243</a>, <a href="/public/caseView.do?csIID=67491">87303</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Washoe Co. - Second Judicial District - CV1202222</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Parraguirre</td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Suspended</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td>Exempt</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">AM-GSR Holdings, LLC</td><td valign="top">Ann O. Hall<br>David C. McElhinney<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Abran E. Vigil</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Gage Village Commercial Development, LLC</td><td valign="top">Ann O. Hall<br>David C. McElhinney<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Abran E. Vigil</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">MEI-GSR Holdings, LLC</td><td valign="top">Ann O. Hall<br>David C. McElhinney<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Abran E. Vigil</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ajit Gupta</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Albert Thomas</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Amy Brunner</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Anne Bhan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Barbara Rose Quinn</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Barry Hay</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Benton Wan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Brett Menmuir</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Cayenne Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Chanh Truong</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Chrisine Mecham</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Christine E. Henderson</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">D'Arcy Nunn</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Daniel Moll</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Darleen Lindgren</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Di Shen</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Dominic Yin</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Dominic Yin</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Donald Schreifels</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Doug Mecham</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Duane Windhorst</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Elias Shamieh</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Elisa Cheng</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Elizabeth Anders Mecua</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Farad Torabkhan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Faye Fadrilan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Fredrick Fish</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Garret Tom</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Garret Tom</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Garth A. Williams</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">George Vagujhelyi</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">George Vagujhelyi and Melissa Vagujhelyi 2001 Family Trust Agreement U/T/A April 13, 2001</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Greg A. Cameron</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Guy P. Browne</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Henry Nunn</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Irene Weiss</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Jacquelin Pham</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">James Taylor</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Jane Dunlap</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Jeffrey Quinn</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Jeff Riopelle</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">JL&amp;YL Holdings, LLC</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">John Dunlap</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Johnson Akindodunse</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Kenneth Riche</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ki Ham</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Kuk Hyung (Connie) Yoo</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Kwangsoo Son</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Laverne Roberts</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lee Family 2002 Revocable Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lee Van Der Bokke</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lisa Fish</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Loren D. Parker</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lori K. Tokutomi</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lori Ordover</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Lou Ann Pederson</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">M&amp;Y Holdings, LLC</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Madelyn Van Der Bokke</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Marie-Anne Alexander Living Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Marie-Annie Alexander</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Marilyn Windhorst</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Mary A. Kossick</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Maxine Riche</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">May Ann Hom</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">May Ann Hom Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Melissa Vagujhelyi</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Melvin H. Cheah</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Michael Hurley</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Michael Izady</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Monica L. Lee</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Nadine's Real Estate Investments, LLC</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Nancy Pope</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Norman Chandler</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Pamela Y. Aratani</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Patricia M. Moll</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Pederson 1990 Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Peter Cheng</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Peter K. Lee</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Pravesh Chopra</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">R. Raghuram</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ramon Fadrilan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Richard Lutz</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Robert A. Williams</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Robert Brunner</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Robert R. Pederson</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Ryan Taylor</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Sahar Tavakol</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Sandi Raines</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Sandra Lutz</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Sang Dae Sohn</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Sang Soon (Mike) Yoo</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Seema Gupta</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Shepherd Mountain, LLC</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Silkscape Inc.</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Soo Yeun Moon</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Steven Takaki</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Suzanne C. Parker</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Terry Pope</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Timothy D. Kaplan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">TMI Property Group, LLC</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Usha Raghuram</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Vinod Bhan</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Weiss Family Trust</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">William A. Henderson</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">William Miner, Jr.</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Young Ja Choi</td><td valign="top">Briana N. Collings
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Jarrad C. Miller
+							(Robertson, Johnson, Miller &amp; Williamson)
+						<br>G. David Robertson
+							(Robertson, Johnson, Miller &amp; Williamson)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Filing Fee</td><td>Filing Fee due appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=889155&onBaseDocumentNumber=23-04042">23-04042</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Jordan T. Smith. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=889165&onBaseDocumentNumber=23-04052">23-04052</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/10/2023</td><td>Settlement Notice</td><td>Issued Notice: Exemption from Settlement Program. It has been determined that this appeal will not be assigned to the settlement program.  Appellants: 14 days transcript request form; 120 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=889284&onBaseDocumentNumber=23-04159">23-04159</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2023</td><td>Filing Fee</td><td>Filing Fee due for cross appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=890614&onBaseDocumentNumber=23-05460">23-05460</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Cross-Appeal Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=890616&onBaseDocumentNumber=23-05462">23-05462</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Jarrad C. Miller (Cross-Appeal). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2023</td><td>Transcript</td><td>Filed Appellant/Cross-Respondent Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=890816&onBaseDocumentNumber=23-05660">23-05660</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/02/2023</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents' Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=891514&onBaseDocumentNumber=23-06354">23-06354</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/07/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=892074&onBaseDocumentNumber=23-06876">23-06876</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/14/2023</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=892989&onBaseDocumentNumber=23-07749">23-07749</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/14/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. Amended Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=893091&onBaseDocumentNumber=23-07848">23-07848</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2023</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 29256 returned to Robertson Law Firm.</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2023</td><td>Docketing Statement</td><td>Filed Appellant/Cross-Respondents' Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=894011&onBaseDocumentNumber=23-08732">23-08732</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/18/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. Amended NOA. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=897357&onBaseDocumentNumber=23-11962">23-11962</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Emergency Motion Under NRAP 27(e) to Stay Orders and Enforce NRCP 62(d)'s Automatic Supersedeas Bond Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=898267&onBaseDocumentNumber=23-12839">23-12839</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Appendix to Emergency Motion Under NRAP 27(e) to Stay Orders and Enforce NRCP 62(d)'s Automatic Supersedeas Bond Stay (Vol.1). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=898274&onBaseDocumentNumber=23-12845">23-12845</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Appendix to Emergency Motion Under NRAP 27(e) to Stay Orders and Enforce NRCP 62(d)'s Automatic Supersedeas Bond Stay (Vol.2). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=898275&onBaseDocumentNumber=23-12846">23-12846</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/25/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Appendix to Emergency Motion Under NRAP 27(e) to Stay Orders and Enforce NRCP 62(d)'s Automatic Supersedeas Bond Stay (Vol.3). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=898278&onBaseDocumentNumber=23-12849">23-12849</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/01/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. Second Amended Cross-Appeal. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899032&onBaseDocumentNumber=23-13595">23-13595</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Response to Opposition to Emergency Motion. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899258&onBaseDocumentNumber=23-13789">23-13789</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Response to Opposition to Emergency Motion. Vol 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899260&onBaseDocumentNumber=23-13791">23-13791</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Response to Opposition to Emergency Motion. Vol 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899261&onBaseDocumentNumber=23-13792">23-13792</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Response to Opposition to Emergency Motion. Vol 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899262&onBaseDocumentNumber=23-13793">23-13793</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Reply in Support of Emergency Motion Under NRAP 27(e) to Stay Orders and Enforce NRCP 62(d)'s Automatic Supersedeas Bond Stay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899527&onBaseDocumentNumber=23-14029">23-14029</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/08/2023</td><td>Order/Procedural</td><td>Filed Order to Show Cause and Granting Temporary Stay. Appellants/cross-respondents have filed an emergency motion for stay of two orders entered on January 26 and March 27, 2023. Respondents/cross-appellants oppose the motion. Appellants have filed a reply. appellants shall have 21 days from the date of this order to show cause why this appeal should not be dismissed, in whole or in part, for lack of jurisdiction.  Appellants' response to this order should also address whether the receiver should be a party to this appeal. Respondents may file any reply within 14 days from the date that appellants' response is served. The briefing schedule in this appeal is suspended pending further order of this court. Additionally, in light of the supersedeas bond posted by appellants and the deposit they made to the court for the receiver's expenses, we temporarily stay enforcement of the district court's January 26 and March 27 orders directing the $1.1 million payment to the receivership pending receipt and consideration of the parties' responses to these jurisdictional concerns and further order of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=899852&onBaseDocumentNumber=23-14349">23-14349</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant/Cross-Respondents' response to order to show cause due: June 13, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=901298&onBaseDocumentNumber=23-15748">23-15748</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/01/2023</td><td>Other</td><td>Justice Ron Parraguirre disqualified from participation in this matter. Disqualification Reason: Voluntary Recusal</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/13/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondents' Response to Order to Show Cause - Response to May 8, 2023 Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=904431&onBaseDocumentNumber=23-18750">23-18750</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/13/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondents' Appendix in Support of Appellants' Response to May 8, 2023 Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=904432&onBaseDocumentNumber=23-18751">23-18751</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents/cross-appellants' reply to the response to order to show cause due: July 11, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=905875&onBaseDocumentNumber=23-20132">23-20132</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/10/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Reply to Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=907770&onBaseDocumentNumber=23-21938">23-21938</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/10/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Reply to Appellants' Response to Order to Show Cause - Vol. 1. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=907774&onBaseDocumentNumber=23-21942">23-21942</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/10/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Reply to Appellants' Response to Order to Show Cause - Vol. 2. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=907775&onBaseDocumentNumber=23-21943">23-21943</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/10/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Reply to Appellants' Response to Order to Show Cause - Vol. 4. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=907779&onBaseDocumentNumber=23-21947">23-21947</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/10/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellants' Appendix to Reply to Appellants' Response to Order to Show Cause - Vol. 3. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=907780&onBaseDocumentNumber=23-21948">23-21948</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/13/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Supplement to Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=909215&onBaseDocumentNumber=23-22359">23-22359</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/13/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix in Support of Supplement to Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=908211&onBaseDocumentNumber=23-22360">23-22360</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellants' Reply to Appellants' Supplemental Response to Order to Show Cause. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=909218&onBaseDocumentNumber=23-23235">23-23235</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/20/2023</td><td>Appendix</td><td>Filed Respondents' Appendix to Respondents' Reply to Appellants' Supplemental Response to Order to Show Cause. - Vol. 1. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=909152&onBaseDocumentNumber=23-23237">23-23237</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2023</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65881&csIID=65881&deLinkID=912027&onBaseDocumentNumber=23-26031">23-26031</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65881&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,930 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83723: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=5B83F4FC5ADC27A37AEA17E572F17687">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62665">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83723</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">SEIBEL VS. DIST. CT. (DESERT PALACE, INC.)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=46356">76118</a>, <a href="/public/caseView.do?csIID=60869">82448</a>, <a href="/public/caseView.do?csIID=61783">83071</a>, <a href="/public/caseView.do?csIID=64276">84934</a>, <a href="/public/caseView.do?csIID=66254">86359</a>, <a href="/public/caseView.do?csIID=66399">86462</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A751759, A760537</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Notice in Lieu of Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>09/14/2022 at 11:30 AM</td><td class="label">Oral Argument Location:</td><td>Las Vegas Courtroom</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>09/14/2022</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Craig Green</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Ferg, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Ferg 16, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">GR Burgr LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">LLTQ Enterprises, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">LLTQ Enterprises 16, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Moti Partners, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Moti Partners 16, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">Rowen A. Seibel</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">R Squared Global Solutions, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">TPOV 16 Enterprises, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">TPOV Enterprises, LLC</td><td valign="top">John R. Bailey
+							(Bailey Kennedy)
+						<br>Joshua P. Gilmore
+							(Bailey Kennedy)
+						<br>Dennis L. Kennedy
+							(Bailey Kennedy)
+						<br>Paul C. Williams
+							(Bailey Kennedy)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Boardwalk Regency Corporation</td><td valign="top">Maria Magali Mercera
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Desert Palace, Inc.</td><td valign="top">Maria Magali Mercera
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Paris Las Vegas Operating Company, LLC</td><td valign="top">Maria Magali Mercera
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">PHWLV, LLC</td><td valign="top">Maria Magali Mercera
+							(Pisanelli Bice, PLLC)
+						<br>James J. Pisanelli
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						<br>Debra L. Spinelli
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Timothy C. Williams</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Dennis L. Kennedy. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Petition/Writ</td><td>Filed Petition for Extraordinary Writ Relief (Redacted). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835239&onBaseDocumentNumber=21-31820">21-31820</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835246&onBaseDocumentNumber=21-31827">21-31827</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835241&onBaseDocumentNumber=21-31822">21-31822</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835242&onBaseDocumentNumber=21-31823">21-31823</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835243&onBaseDocumentNumber=21-31824">21-31824</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835244&onBaseDocumentNumber=21-31825">21-31825</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835245&onBaseDocumentNumber=21-31826">21-31826</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/05/2021</td><td>Motion</td><td>Filed Petitioners' Motion to Redact Petition for Extraordinary Writ Relief and to Seal Volumes 7 to 17 of the Appendix Thereto. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835240&onBaseDocumentNumber=21-31821">21-31821</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/05/2021</td><td>Motion</td><td>Filed Petitioners' Emergency Motion for a Stay of District Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835247&onBaseDocumentNumber=21-31828">21-31828</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/09/2021</td><td>Motion</td><td>Filed Real Parties in Interest's Response to Petitioners' Emergency Motion for a Stay of District Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835690&onBaseDocumentNumber=21-32267">21-32267</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2021</td><td>Motion</td><td>Filed Petitioners' Reply in Support of Emergency Motion for Stay of District Court Proceedings. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835801&onBaseDocumentNumber=21-32376">21-32376</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2021</td><td>Order/Procedural</td><td>Filed Order Directing Answer and Granting Stay. Real party in interest's answer due: 28 days. Petitioners shall have 14 days from service of the answer to file and serve any reply.  We grant the motion in part and stay the district court's order compelling disclosure pending further order of this court.  fn1 [Petitioners' motion for leave to file a redacted petition and to file the unredacted petition under seal, along with several of the appendix volumes, based on district court protection orders in the underlying case, is granted.  SRCR 3(4)(b) &amp; 7.  The clerk of this court shall file under seal the unredacted petition and volumes 7 through 17 of the appendix, all of which were provisionally received in this court on November 5, 2021.] NNP21 - EC/KP/DH (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=835834&onBaseDocumentNumber=21-32408">21-32408</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/10/2021</td><td>Petition/Writ</td><td>Filed Petition for Extraordinary Writ Relief (SEALED).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/10/2021</td><td>Appendix</td><td>Filed Appendix to Petition for Writ, Vols. 7-17 (SEALED).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2021</td><td>Motion</td><td>Filed Petitioners' Motion Regarding the District Court's August 19, 2021, Minute Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=837214&onBaseDocumentNumber=21-33728">21-33728</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/30/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real parties in interests' response to petitioners' motion regarding the district court's August 19, 2021, minute order  due: December 14, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=837668&onBaseDocumentNumber=21-34174">21-34174</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/08/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Real party in interest's answer to writ petition due: December 22, 2021. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=838475&onBaseDocumentNumber=21-34965">21-34965</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/14/2021</td><td>Motion</td><td>Filed Real Parties in Interest's Response to Petitioners' Motion Regarding the District Court's August 19, 2021 Minute Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=839194&onBaseDocumentNumber=21-35669">21-35669</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/20/2021</td><td>Notice/Incoming</td><td>Filed Notice of Appearance. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=839866&onBaseDocumentNumber=21-36251">21-36251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/20/2021</td><td>Motion</td><td>Filed Joint Motion for Extension of Time to File Answer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=839874&onBaseDocumentNumber=21-36259">21-36259</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/21/2021</td><td>Motion</td><td>Filed Petitioners' Reply in Support of Their Motion Regarding the District Court's August 19, 2021, Minute Order. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=839992&onBaseDocumentNumber=21-36375">21-36375</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/28/2021</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Extend Time to File Answer and Denying Motion Regarding District Court Minutes.  Real parties in interest shall have until January 5, 2022, to file and serve the answer.  Petitioners have moved to preclude, pending a decision on the writ petition, real parties in interest from using the district court's August 19, 2021, minutes,  Having considered the parties' arguments, we deny the motion; real parties in interest may use the August minutes for purposes of responding to this petition, as petitioners placed the minutes at issue in the petition.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=840388&onBaseDocumentNumber=21-36768">21-36768</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2022</td><td>Petition/Writ</td><td>Filed Answer to Petition for Extraordinary Writ Relief. (Redacted) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=841489&onBaseDocumentNumber=22-00483">22-00483</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Real Parties in Interest's Supplemental Appendix Volume 1 of 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=841462&onBaseDocumentNumber=22-00484">22-00484</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Real Parties in Interest's Supplemental Appendix Volume 2 of 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=841463&onBaseDocumentNumber=22-00485">22-00485</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/05/2022</td><td>Appendix</td><td>Filed Appendix to Answering Brief Real Parties in Interest's Supplemental Appendix Volume 3 of 8. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=841464&onBaseDocumentNumber=22-00486">22-00486</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/05/2022</td><td>Motion</td><td>Filed Motion to Redact Real Parties in Interests' Answer and Seal Appendix Volumes IV-VIII Thereto. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=841465&onBaseDocumentNumber=22-00487">22-00487</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/19/2022</td><td>Motion</td><td>Filed Stipulation to Extend Time to File Petitioners' Reply Brief (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=842872&onBaseDocumentNumber=22-01873">22-01873</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to File Redacted Answer and to Seal Appendix Volumes IV-VIII, and Approving Stipulation of Time.  The clerk of this court shall file under seal the unredacted answer and volumes IV through VIII of the appendix to the answer, all of which were provisionally received in this court on January 10, 2022.  Petitioners shall have until February 16, 2022, to file and serve the reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=843162&onBaseDocumentNumber=22-02158">22-02158</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Petition/Writ</td><td>Filed SEALED Unredacted Answer to Petition for Extraordinary Writ Relief.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Appendix</td><td>Filed SEALED Appendix to the Answer, Volumes IV through VIII .  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/16/2022</td><td>Motion</td><td>Filed Petitioners' Motion to Submit Privileged Documents Under Seal for an In Camera Review By This Court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=846357&onBaseDocumentNumber=22-05192">22-05192</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/16/2022</td><td>Motion</td><td>Filed Petitioners' Motion to Redact Reply in Support of Petition for Extraordinary Writ Relief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=846358&onBaseDocumentNumber=22-05193">22-05193</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/16/2022</td><td>Petition/Writ</td><td>Filed Reply to Petition for Extraordinary Writ Relief. (Redacted) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=846394&onBaseDocumentNumber=22-05196">22-05196</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Real parties in interest shall have until March 9, 2022, to file and serve oppositions to petitioners' motion to submit privileged documents under seal for an in camera review by this court, and petitioners' motion to redact reply in support of petition for extraordinary writ relief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=847112&onBaseDocumentNumber=22-05859">22-05859</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Response to Petitioners' Motion to Submit Privileged Documents under Seal for an In Camera Review by This Court and Countermotion to Strike Footnote 2 and Pages 20 to 22 of Petitioners' Reply Brief. (Redacted) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=848951&onBaseDocumentNumber=22-07608">22-07608</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/09/2022</td><td>Motion</td><td>Filed Real Party in Interest's Motion to Redact Response to Petitioners' Motion to Submit Privileged Documents under Seal for an In Camera Review by This Court and Countermotion to Strike Fn. 2 and Pages 20 to 22 of Petitioners' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=848956&onBaseDocumentNumber=22-07613">22-07613</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/16/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Petitioners shall have until March 30, 2022, to file and serve the reply to real parties in interest's response to petitioners' motion filed on February 16, 2022. Petitioners shall also have until March 30, 2022, to file and serve the opposition to real parties in interest's countermotion filed on March 9, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=849672&onBaseDocumentNumber=22-08321">22-08321</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/30/2022</td><td>Motion</td><td>Filed Petitioners' Reply in Support of Their Motion to Submit Privileged Documents Under Seal for an In Camera Review by this Court; and Opposition to Real Parties in Interest's Countermotion to Strike. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=851396&onBaseDocumentNumber=22-09923">22-09923</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions to File Redacted Reply and Redacted Response/Countermotion and Denying Countermotion to Strike Portions of Reply.  The clerk of this court shall file under seal the unredacted reply and response/countermotion, which were provisionally received in this court on February 16 and March 14, 2022, respectively.  Real parties in interest's countermotion to strike footnote 2 and pages 20-22 of the reply is denied.  This court defers ruling on the motion to submit privileged documents under seal for in camera review.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=852042&onBaseDocumentNumber=22-10551">22-10551</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/05/2022</td><td>Petition/Writ</td><td>Filed Unredacted Reply to Petition for Extraordinary Writ Relief (Sealed). (FILED UNDER SEAL PER ORDER 4/5/22). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/05/2022</td><td>Motion</td><td>Filed Real Parties in Interest's Response to Petitioners' Motion to Submit Privileged Documents under Seal for an In Camera Review by This Court and Countermotion to Strike Footnote 2 and Pages 20 to 22 of Petitioners' Reply Brief. (Un-Redacted).  (FILED UNDER SEAL PER ORDER 4/5/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Petitioners filed a motion to submit privileged documents under seal for in camera review by this court. The motion is granted. Petitioners shall have 7 days from the date of this order to submit the privileged documents to the clerk of this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=856697&onBaseDocumentNumber=22-14999">22-14999</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Motion</td><td>Filed Petitioners' Motion to Extend Time to Submit Privileged Documents for In Camera Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=857620&onBaseDocumentNumber=22-15914">22-15914</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/23/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  The motion filed by petitioners for an extension of time to file the documents for in camera review is granted.  The clerk of this court shall file the documents received on May 20, 2022, under seal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=858075&onBaseDocumentNumber=22-16288">22-16288</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/23/2022</td><td>Exhibit</td><td>Filed Privileged Documents Under Seal for In Camera Review.  (FILED UNDER SEAL PER ORDER FILED 5/23/22).  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/12/2022</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument.  Oral argument is scheduled for September 14, 2022, at 11:30 a.m., in Las Vegas.  The argument shall be limited to 30 minutes.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=864818&onBaseDocumentNumber=22-21812">22-21812</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=870649&onBaseDocumentNumber=22-27380">22-27380</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/07/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance at Oral Argument. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=871340&onBaseDocumentNumber=22-28001">22-28001</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/14/2022</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the Southern Nevada Panel. JH/LS/DH. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/23/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Petition denied." Before: Hardesty/Stiglich/Herndon. Author: Hardesty, J. Majority: Hardesty/Stiglich/Herndon. 138 Nev. Adv. Opn. No. 73. SNP22-JH/LS/DH. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=880529&onBaseDocumentNumber=22-36842">22-36842</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/19/2022</td><td>Case Status Update</td><td>Notice in Lieu of Remittitur Issued/Case Closed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/19/2022</td><td>Remittitur</td><td>Issued Notice in Lieu of Remittitur. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62665&csIID=62665&deLinkID=883512&onBaseDocumentNumber=22-39653">22-39653</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62665&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

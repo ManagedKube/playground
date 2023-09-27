@@ -1,0 +1,625 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>86966: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=6903D713491B8994E3F2AE75215E7E5F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="67041">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 86966</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">OLIVARES (REYES) VS. STATE</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=14774">46920</a>, <a href="/public/caseView.do?csIID=23386">55591</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - C185986</td><td width="15%" class="label">Classification:</td><td width="35%">Criminal Appeal - Other - Direct</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Bell, Cadish</td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing in Progress</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Reyes Murguia Olivares</td><td valign="top">James I. Hoffman
+							(Former)
+						
+							(Law Office of Jim Hoffman)
+						<br>Kirsty E. Pickering
+							(Kirsty E. Pickering Attorney at Law)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The State of Nevada</td><td valign="top">Alexander G. Chen
+							(Clark County District Attorney)
+						<br>Aaron D. Ford
+							(Attorney General/Carson City)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>09/20/2023</td><td>Overdue</td><td>Court Reporter Certificate/Not Fast Track</td><td>Court Reporter</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>01/11/2024</td><td>Open</td><td>Opening Brief &amp; Appendix</td><td>Appellant</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>07/14/2023</td><td>Filing Fee</td><td>Appeal Filing Fee Waived. Criminal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/14/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day (C185986). (Docketing statement and notice of briefing schedule mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=908395&onBaseDocumentNumber=23-22540">23-22540</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/18/2023</td><td>Notice of Appeal Documents</td><td>Filed (SEALED) Confidential Documents from District Court Clerk - Sealed Minutes. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Request Transcripts. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=910976&onBaseDocumentNumber=23-25000">23-25000</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/07/2023</td><td>Transcript Request</td><td>Filed Appellant's Request for Transcripts. Transcripts requested: 6/21/2022, 7/26/2022, 8/30/2022, 11/2/2022, 12/6/2022, 1/3/2023, 2/28/2023, 4/19/2023, 5/2/2023, 5/9/2023, 5/30/2023, 7/18/2017, 8/16/2010, 12/13/2010, 2/14/2011, 3/2/2011, 2/23/2011, 1/30/2012, 2/13/2012, 5/14/2012, 7/23/2012, 9/19/2012, 11/14/2012, 1/9/2013, 2/27/2013, 10/28/2013, 2/24/2014, 3/10/2014, 4/9/2014, 4/30/2014, 6/25/2014, 6/30/2014, 9/24/2014, 4/27/2015, 9/16/2015, 9/30/2015, 10/7/2015, 10/21/2015, 7/11/2016, 7/18/2016, 8/15/2016, 6/19/2017, 11/22/2013, 12/6/2013, 1/3/2014, 1/10/2014, 1/24/2014, 2/7/2014, 2/14/2014, 10/17/2014, 3/1/2018, 6/5/2015, 9/11/2015, 1/29/2021, 4/9/2021, 4/23/2021, 8/20/2021, 9/8/2021, 9/10/2021, 10/15/2021, 10/27/2021, 11/12/2021, 12/29/2021, 1/28/2022, 2/25/2022, 11/10/2021, 7/27/2017, 12/14/2017, 1/16/2018, 2/15/2018, 2/22/2018, 3/15/2018, 3/27/2018, 4/3/2018, 4/12/2018, 5/3/2018, 8/2/2018, 9/13/2018, 9/27/2018, 10/30/2018, 1/15/2019, 2/28/2019, 3/19/2019, 4/16/2019, 5/14/2019, 6/11/2019, 10/29/2019, 2/4/2020, 3/3/2020, 6/30/2020, 9/1/2020, 11/19/2020, 12/17/2020, 12/21/2021, 1/25/2023, and 2/15/2023.   Court Reporter:  Jessica Kirkpatrick, Sara Richardson, Renee Vincent, Gina Villani, Yvette Sison, Victoria Boyd, Susan Schofield, Robin Page, and Kaihla Berndt.    Filed in district court on: 8/4/2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=911554&onBaseDocumentNumber=23-25384">23-25384</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/07/2023</td><td>Docketing Statement</td><td>Filed Appellant's Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=911364&onBaseDocumentNumber=23-25386">23-25386</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2023</td><td>Motion</td><td>Filed Appellant's Motion to Withdraw Counsel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=911697&onBaseDocumentNumber=23-25714">23-25714</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2023</td><td>Other</td><td>Justice Linda Bell disqualified from participation in this matter. Disqualification Reason: Sat in District Court Proceedings</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2023</td><td>Other</td><td>Justice Elissa Cadish disqualified from participation in this matter. Disqualification Reason: Sat in District Court Proceedings</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/14/2023</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure for Justice Herndon. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=912298&onBaseDocumentNumber=23-26298">23-26298</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/16/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Velvet Wood stating that the requested transcripts were delivered.  Dates of transcripts:10/7/2015, 10/21/2015, 7/11/2016, 7/18/20216, 8/15/2016, and 6/19/2017.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=912780&onBaseDocumentNumber=23-26779">23-26779</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/21/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Withdraw and Remanding for the Limited Purpose of Appointing Counsel. Jim Hoffman, counsel for appellant, has filed a motion to withdraw as counsel. The motion is granted. The clerk shall remove Mr. Hoffman as counsel of record for appellant. This appeal is remanded to the district court for the limited purpose of securing counsel for appellant. The district court shall have 30 days from the date of this order to appoint counsel for appellant. Within 7 days from the date of appointment, the district court clerk shall transmit to the clerk of this court a copy of the district court's written or minute order appointing appellate counsel.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=913135&onBaseDocumentNumber=23-27115">23-27115</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Jessica Kirkpatrick stating that the requested transcripts were delivered.  Dates of transcripts:&#13;
+6/21/2022,7/26/2022,8/30/2022,11/2/2022,12/6/2022,1/3/2023,2/28/2023, 4/19/2023,5/2/2023,5/9/2023,5/30/2023</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=914264&onBaseDocumentNumber=23-28197">23-28197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/29/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Stacey Ray stating that the requested transcripts were delivered.  Dates of transcripts: 11/23/13, 12/06/13, 01/03/14, 01/10/14, 01/24/14, 02/07/14, 02/14/14, and 10/17/14. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=914269&onBaseDocumentNumber=23-28202">23-28202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/08/2023</td><td>Order/Incoming</td><td>Filed District Court Order Appointing Counsel. Filed certified copy of order filed in district court on 09/08/23 appointing Kirsteen Pickering as counsel for appellant. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=915499&onBaseDocumentNumber=23-29411">23-29411</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/12/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Robin Page stating that the requested transcripts were delivered.  Dates of transcripts: 7/27/17, 12/14/17, 1/16/18, 2/15/18, 2/22/18, 3/1/15, 3/15/18, 3/27/18, 4/3/18, 4/12/18, 5/3/18, 8/2/18, 9/13/18, 9/27/28, 10/30/18, 1/15/19, 2/28/19, 3/19/19, 4/16/19, 5/14/19, 5/14/19, 6/11/19, 10/29/19, 2/4/20, 3/3/20, 6/30/20 9/1/20, 11/19/20, 12/17/20. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=915891&onBaseDocumentNumber=23-29793">23-29793</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/12/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. De'Awna Takas stating that the requested transcripts were delivered.  Dates of transcripts: 10/7/15, 10/21/15, 7/11/16, 7/18/16, 8/15/16 and 6/19/17. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=915894&onBaseDocumentNumber=23-29796">23-29796</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/13/2023</td><td>Order/Procedural</td><td>Filed Order. The district court has now filed a copy of a minute order appointing attorney Kirsteen Pickering as counsel for appellant. The clerk shall add Ms. Pickering as counsel of record for appellant. If Ms. Pickering requires the production of any transcripts that were not requested by appellant's previous counsel, she shall request those transcripts in compliance with NRAP 9(a) within 7 days of the date of this order.  Appellant shall have 120 days from the date of this order to file and serve the opening brief and appendix. Thereafter, briefing shall proceed in accordance with NRAP 31(a)(1). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=916005&onBaseDocumentNumber=23-29905">23-29905</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/13/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Grecia Snow stating that the requested transcripts were delivered.  Dates of transcripts:7/18/20217. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=916143&onBaseDocumentNumber=23-30043">23-30043</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/25/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Gina Villani stating that the requested transcripts were delivered.  Dates of transcripts: 6/5/15; 9/11/15; 1/29/21; 4/9/21; 4/23/21; 8/20/21; 9/8/21; 9/10/21; 10/15/21; 10/27/21; 11/12/21; 12/29/21; 1/28/22 and 2/25/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=67041&csIID=67041&deLinkID=917583&onBaseDocumentNumber=23-31402">23-31402</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=67041&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,781 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84110: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=C6EAD07F5F4D3B4AE5C51659AD0A6341">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63187">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84110</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">HELTON VS. NEV. VOTERS FIRST PAC (BALLOT ISSUE)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Carson City - First Judicial District - 21OC001721B</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Remittitur Issued/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>06/08/2022 at 10:00 AM</td><td class="label">Oral Argument Location:</td><td>Las Vegas</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>06/08/2022</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Nathaniel Helton</td><td valign="top">Daniel Bravo
+							(Wolf, Rifkin, Shapiro, Schulman &amp; Rabkin, LLP/Las Vegas)
+						<br>Marc E. Elias
+							(Elias Law Group LLP/Wash DC)
+						<br>Elisabeth C. Frost
+							(Elias Law Group LLP/Wash DC)
+						<br>Eric Levinrad
+							(Wolf, Rifkin, Shapiro, Schulman &amp; Rabkin, LLP/Los Angeles)
+						<br>Lindsay McAleer
+							(Elias Law Group LLP/Seattle)
+						<br>Spencer McCandless
+							(Former)
+						
+							(Elias Law Group LLP/Wash DC)
+						<br>John M. Samberg
+							(Wolf, Rifkin, Shapiro, Schulman &amp; Rabkin, LLP/Reno)
+						<br>Bradley S. Schrager
+							(Wolf, Rifkin, Shapiro, Schulman &amp; Rabkin, LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Barbara K. Cegavske</td><td valign="top">Aaron D. Ford
+							(Attorney General/Carson City)
+						<br>Craig A. Newby
+							(Attorney General/Las Vegas)
+						<br>Laena St Jules
+							(Attorney General/Carson City)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Nevada Voters First PAC</td><td valign="top">Todd L. Bice
+							(Pisanelli Bice, PLLC)
+						<br>John A. Fortin
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Todd L. Bice</td><td valign="top">Todd L. Bice
+							(Pisanelli Bice, PLLC)
+						<br>John A. Fortin
+							(Pisanelli Bice, PLLC)
+						<br>Jordan T. Smith
+							(Pisanelli Bice, PLLC)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal.  Filing fee will be forwarded by the District Court. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843151&onBaseDocumentNumber=22-02147">22-02147</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Exemption from Settlement Program/File Documents. Transcript request due: 14 days.  Opening brief due: 120 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843154&onBaseDocumentNumber=22-02150">22-02150</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Wolf Rifkin Shapiro Schulman &amp; Rabkin. Check no. 4701. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/21/2022</td><td>Motion</td><td>Filed Respondents' (Todd L. Bice and Nevada Voters First PAC) Motion for Summary Adjudication. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843274&onBaseDocumentNumber=22-02268">22-02268</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/21/2022</td><td>Appendix</td><td>Filed Respondents' (Todd L. Bice and Nevada Voters First PAC) Appendix in Support of Motion for Summary Adjudication. Vol. 1 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843275&onBaseDocumentNumber=22-02269">22-02269</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843361&onBaseDocumentNumber=22-02355">22-02355</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/27/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion for Summary Adjudication. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=843811&onBaseDocumentNumber=22-02775">22-02775</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/28/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion for Summary Adjudication.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=844012&onBaseDocumentNumber=22-02974">22-02974</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2022</td><td>Notice/Incoming</td><td>Filed Respondent's (Nevada Voters First PAC) Notice of Appearance for John Fortin. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=844054&onBaseDocumentNumber=22-03016">22-03016</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Motion</td><td>Filed Appellant's Motion to Associate Counsel Elisabeth Frost, Marc E. Elias, Spencer McCandless, and Lindsay McAleer. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=844939&onBaseDocumentNumber=22-03806">22-03806</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/07/2022</td><td>Motion</td><td>Filed Appellant's Motion to Expedite. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=845320&onBaseDocumentNumber=22-04177">22-04177</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/09/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=845577&onBaseDocumentNumber=22-04430">22-04430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/14/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Respondent Nevada Voters First PAC's Opposition to Appellant's Motion to Expedite due:  February 28, 2022.  (SC</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846112&onBaseDocumentNumber=22-04957">22-04957</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (REJECTED PER NOTICE FILED ON 2/15/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/15/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846182&onBaseDocumentNumber=22-05024">22-05024</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/15/2022</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to Submit Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846234&onBaseDocumentNumber=22-05075">22-05075</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/15/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846235&onBaseDocumentNumber=22-05076">22-05076</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/17/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Expedite.  Appellant's opening brief and appendix are due by March 1, 2022.  Respondents shall have until April 1, 2022, to file and serve their answering brief, and appellant shall have until April 15, 2022, to file and serve any reply brief.  No extensions of time will be granted absent extraordinary and compelling circumstances demonstrated by written motion.  Upon completion of briefing, this court will expedite its consideration of this matter to the extent its docket allows.  fn1[Appellant's motion for an extension of time to file the docketing statement is granted; the docketing statement was filed on February 15, 2022.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846556&onBaseDocumentNumber=22-05386">22-05386</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/18/2022</td><td>Order/Procedural</td><td>Filed Amended Order Granting Motion to Expedite.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=846705&onBaseDocumentNumber=22-05457">22-05457</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/25/2022</td><td>Notice of Appeal Documents</td><td>Filed Copy of District Court Docket Entries. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=847509&onBaseDocumentNumber=22-06245">22-06245</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2022</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=847887&onBaseDocumentNumber=22-06617">22-06617</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2022</td><td>Appendix</td><td>Filed Joint Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=847888&onBaseDocumentNumber=22-06618">22-06618</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2022</td><td>Brief</td><td>Filed Respondent's (Barbara Cegavske) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=851681&onBaseDocumentNumber=22-10202">22-10202</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/01/2022</td><td>Brief</td><td>Filed Respondents' (Nevada Voters First PAC, a Nevada Committee for Political Action; and Todd L. Bice, in His Capacity as the President of Nevada Voters First PAC) Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=851735&onBaseDocumentNumber=22-10254">22-10254</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/01/2022</td><td>Appendix</td><td>Filed Respondents' Supplemental Appendix to Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=851736&onBaseDocumentNumber=22-10255">22-10255</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/15/2022</td><td>Brief</td><td>Filed Appellant's Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=853542&onBaseDocumentNumber=22-11975">22-11975</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/15/2022</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/19/2022</td><td>Motion</td><td>Filed Appellant's Renewed Motion to Associate Counsel Elisabeth Frost, Esq., Pursuant to Nevada Supreme Court Rule 42. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=854006&onBaseDocumentNumber=22-12424">22-12424</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/11/2022</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument.  Oral argument is scheduled for June 8, 2022, at 10:00 a.m., in Las Vegas.  The argument shall be limited to 30 minutes.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=856602&onBaseDocumentNumber=22-14906">22-14906</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Notice of Appeal Documents</td><td>Filed District Court Docket Entries.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=856984&onBaseDocumentNumber=22-15281">22-15281</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/17/2022</td><td>Notice/Incoming</td><td>Filed Notice of Association of Counsel Laena St Jules for Respondent (Barbara Cegavske) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=857330&onBaseDocumentNumber=22-15626">22-15626</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/17/2022</td><td>Motion</td><td>Filed Respondent's (Barbara K. Cegavske) Motion to Appear Remotely. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=857331&onBaseDocumentNumber=22-15627">22-15627</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2022</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858267&onBaseDocumentNumber=22-16477">22-16477</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondent Barbara Cegavske's motion to appear remotely at the oral argument of this matter currently scheduled for June 8, 2022, at 10:00 a.m. in Las Vegas is granted.  The clerk of this court is directed to provide the information necessary for respondent to appear remotely at the oral argument in this matter. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858383&onBaseDocumentNumber=22-16591">22-16591</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Motion</td><td>Filed Respondents' Motion to Clarify Appellant's NRAP 26.1 Disclosure. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858482&onBaseDocumentNumber=22-16688">22-16688</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for oral Argument. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858526&onBaseDocumentNumber=22-16732">22-16732</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/27/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Request for Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858794&onBaseDocumentNumber=22-16993">22-16993</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Motion</td><td>Filed Appellant's Response to Motion to Clarify Appellant's NRAP 26.1 Disclosure. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=858920&onBaseDocumentNumber=22-17118">22-17118</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/02/2022</td><td>Motion</td><td>Filed Respondents' Response to Motion Response and Objection to Appellant's Request for Judicial Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=859413&onBaseDocumentNumber=22-17600">22-17600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motions.  Respondents Nevada Voters First PAC and Todd Bice have filed a motion to clarify appellant's NRAP 26.1 disclosure filed on March 1, 2022.  The motion is denied.  Appellant has filed a motion for this court to take judicial notice of a financial impact statement published by the Fiscal Analysis Division of the Legislative Counsel Bureau on May 20, 2022.  The request is denied.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=859711&onBaseDocumentNumber=22-17893">22-17893</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Disassociation of Counsel Spencer McCandless, Esq.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=860996&onBaseDocumentNumber=22-18182">22-18182</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Notice/Incoming</td><td>Filed Notice of Request from Matthew Seeman with Channel 3 News in regard to permission for cameras in the courtroom during oral argument. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=861011&onBaseDocumentNumber=22-18197">22-18197</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2022</td><td>Order/Procedural</td><td>Filed Order Granting Media Request.  Matthew Seeman of KSNV News 3 Las Vegas is designated as pool coordinator for purposes of organizing and coordinating the orderly coverage of such proceedings by all participants.  All equipment necessary to allow for such photographic or electronic coverage of such proceedings shall be placed in the courtroom after 9:30 a.m. and before commencement of the hearing in the aforesaid matter.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=861031&onBaseDocumentNumber=22-18217">22-18217</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2022</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before the Court En Banc. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/16/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion to Associate Counsel.  Appellant has filed a motion and a renewed motion to associate attorney Elisabeth Frost of Elias Law Group, LLP, pursuant to SCR 42.  The motion to associate is granted.  Ms. Frost shall be permitted to appear on behalf of appellant in this matter.  Nevada attorney Bradley S. Schrager of Wolf, Rifkin, Shapiro, Schulman &amp; Rabkin, LLP, shall be responsible for all matters presented by Ms. Frost in this appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=862049&onBaseDocumentNumber=22-19143">22-19143</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2022</td><td>Opinion/Dispositional</td><td>Filed Authored Opinion. "Affirmed." Before the Court En Banc. Author: Herndon, J. Majority: Parraguirre/Silver/Pickering/Herndon. Cadish, J., with whom, Hardesty and Stiglich, JJ., agree, dissenting. 138 Nev. Adv. Opn. No. 45. En Banc. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=863373&onBaseDocumentNumber=22-20392">22-20392</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2022</td><td>Remittitur</td><td>Issued Remittitur.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=866300&onBaseDocumentNumber=22-23226">22-23226</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/25/2022</td><td>Case Status Update</td><td>Remittitur Issued/Case Closed.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/16/2022</td><td>Remittitur</td><td>Filed Remittitur. Received by County Clerk on July 26, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63187&csIID=63187&deLinkID=868870&onBaseDocumentNumber=22-23226">22-23226</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63187&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

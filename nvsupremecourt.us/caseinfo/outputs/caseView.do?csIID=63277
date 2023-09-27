@@ -1,0 +1,761 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84181: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=745837AF9505DD474A9BA7D63E89DF1F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63277">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84181</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">QBE INS. CORP. VS. DIST. CT. (LAMPLIGHT VILLAGE @ CENTENNIAL SPRINGS HOA)</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District</td><td width="15%" class="label">Classification:</td><td width="35%">Original Proceeding - Civil - Mandamus</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Disposition Filed/Case Closed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">American Property Casualty Insurance Association</td><td valign="top">Dominica Cortum-Anderson
+							(Duane Morris LLP/Las Vegas)
+						<br>Laura Anne Foggan<br>Tyson E. Hafen
+							(Duane Morris LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Claggett &amp; Sykes Law Firm</td><td valign="top">Sean K. Claggett
+							(Claggett &amp; Sykes Law Firm)
+						<br>Micah S. Echols
+							(Claggett &amp; Sykes Law Firm)
+						<br>Matthew S. Granda
+							(Claggett &amp; Sykes Law Firm)
+						<br>David P. Snyder
+							(Claggett &amp; Sykes Law Firm)
+						<br>William T. Sykes
+							(Claggett &amp; Sykes Law Firm)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Justice Association</td><td valign="top">Dennis M. Prince
+							(Prince Law Group)
+						<br>Kevin T. Strong
+							(Prince Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">United Policyholders</td><td valign="top">William C. Jeanney
+							(Bradley Drendel &amp; Jeanney)
+						<br>Richard Broer Oatis
+							(United Policyholders)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Petitioner</td><td valign="top">QBE Insurance Corporation</td><td valign="top">Leland Eugene Backus
+							(Backus | Burden)
+						<br>Robert L. Eisenberg
+							(Lemons, Grundy &amp; Eisenberg)
+						<br>Marc J. Feldman
+							(Sheppard Mullin, Richter &amp; Hampton LLP/San Diego)
+						<br>Peter H. Klee
+							(Sheppard Mullin, Richter &amp; Hampton LLP/San Diego)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Real Party in Interest</td><td valign="top">Lamplight Village @ Centennial Springs Homeowners Association</td><td valign="top">William S. Cummings
+							(Friedman Rubin PLLP/Bremerton)
+						<br>Richard H. Friedman
+							(Friedman Rubin PLLP/Bremerton)
+						<br>Matthew L. Sharp
+							(Matthew L. Sharp, Ltd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Jessica K. Peterson</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">The Eighth Judicial District Court of the State of Nevada, in and for the County of Clark</td><td valign="top"></td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Filing Fee</td><td>Filing fee paid. E-Payment $250.00 from Robert L. Eisenberg. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2022</td><td>Petition/Writ</td><td>Filed Petition for Writ of Mandamus. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844936&onBaseDocumentNumber=22-03803">22-03803</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2022</td><td>Notice/Incoming</td><td>Filed Notice Regarding Appearance of Foreign Counsel on Behalf of Petitioner. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844952&onBaseDocumentNumber=22-03819">22-03819</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 1. (CD included) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844960&onBaseDocumentNumber=22-03827">22-03827</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844961&onBaseDocumentNumber=22-03828">22-03828</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844962&onBaseDocumentNumber=22-03829">22-03829</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844963&onBaseDocumentNumber=22-03830">22-03830</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844964&onBaseDocumentNumber=22-03831">22-03831</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844965&onBaseDocumentNumber=22-03832">22-03832</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/04/2022</td><td>Appendix</td><td>Filed Appendix to Petition for Writ - Volume 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=844966&onBaseDocumentNumber=22-03833">22-03833</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2022</td><td>Order/Procedural</td><td>Filed Order Directing Answer.  Real Party in Interest's Answer due:  28 days.  Petitioners shall have 14 days from service of the answer to file and serve any reply.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=847284&onBaseDocumentNumber=22-06030">22-06030</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2022</td><td>Motion</td><td>Filed Stipulation for Extension of Time. (Answer to Petition) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=849932&onBaseDocumentNumber=22-08575">22-08575</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Order/Procedural</td><td>Filed Order Approving Stipulation.  Real party in interest shall have until April 25, 2022, to file and serve its answer to writ petition.  Petitioner shall have 45 days from service of the answer to file and serve any reply in support of writ petition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=850381&onBaseDocumentNumber=22-08971">22-08971</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/25/2022</td><td>Petition/Writ</td><td>Filed Answer to Petition for Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=854571&onBaseDocumentNumber=22-12975">22-12975</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Motion</td><td>Filed Amicus Curiae Nevada Justice Association's Motion for Extension of Time to File Motion for Leave to File an Amicus Brief in Support of Real Party In Interest. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855564&onBaseDocumentNumber=22-13883">22-13883</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Motion</td><td>Filed Motion for Leave to File Brief of Amicus Curiae of United Policyholders in Support of Real Party in Interest. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855567&onBaseDocumentNumber=22-13886">22-13886</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Brief</td><td>Filed Brief of Amicus Curiae Untied Policyholders in Support of Real Party in Interest's Answer to Writ of Mandamus. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855570&onBaseDocumentNumber=22-13889">22-13889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance of Amicus Counsel (In Support of Real Party in Interest). Sean K. Claggett, Esq., William T. Sykes, Esq., Matthew S. Granda, Esq., Micah S. Echols, Esq., and David P. Snyder, Esq., of Claggett &amp; Sykes Law Firm, hereby notify this court of their appearance on behalf of amicus Claggett &amp; Sykes Law Firm.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855615&onBaseDocumentNumber=22-13934">22-13934</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/02/2022</td><td>Motion</td><td>Filed Motion for Extension of Time to File Motion for Leave to File Amicus Brief of Claggett &amp; Sykes Law Firm (First Request). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855638&onBaseDocumentNumber=22-13957">22-13957</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/02/2022</td><td>Notice/Incoming</td><td>Filed Notice of Appearance on Behalf of Amicus Curiae.  Dennis M. Prince and Kevin T. Strong of Prince Law Group, hereby notify this Court of their appearance and representation of Amicus Curiae Nevada Justice Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=855645&onBaseDocumentNumber=22-13964">22-13964</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions.  The motions of proposed amici Nevada Justice Association and Claggett &amp; Sykes Law Firm for an extension of time to file a motion for leave to file amicus briefs are granted to the following extent.  Proposed amici shall have until May 13, 2022, to file and serve motions for leave to file amicus briefs, accompanied by the proposed briefs.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856253&onBaseDocumentNumber=22-14561">22-14561</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Motion for Leave to File Amicus Curiae Brief of Claggett &amp; Sykes Law Firm (In Support of Real Party in Interest). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856912&onBaseDocumentNumber=22-15209">22-15209</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Brief</td><td>Filed Amicus Curiae Brief of Claggett &amp; Sykes Law Firm (In Support of Real Party in Interest). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856915&onBaseDocumentNumber=22-15212">22-15212</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Motion to Associate Counsel for Proposed Amicus Curiae, United Policyholders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856948&onBaseDocumentNumber=22-15245">22-15245</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Motion for Leave to File Amicus Brief on behalf of Nevada Justice Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856952&onBaseDocumentNumber=22-15249">22-15249</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Brief</td><td>Filed Amicus Brief on Behalf of Nevada Justice Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=856954&onBaseDocumentNumber=22-15251">22-15251</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/13/2022</td><td>Motion</td><td>Filed Motion for Leave to File Brief of Amicus Curiae by American Property Casualty Insurance Association and for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=857015&onBaseDocumentNumber=22-15312">22-15312</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/13/2022</td><td>Brief</td><td>Filed Amici Curiae Brief of American Property Casualty Insurance Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=857016&onBaseDocumentNumber=22-15313">22-15313</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/18/2022</td><td>Motion</td><td>Filed Motion to Associate Counsel by Amicus Curiae American Property Casualty Insurance Co. for Laura A. Foggan. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=857388&onBaseDocumentNumber=22-15684">22-15684</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/19/2022</td><td>Motion</td><td>Filed Real Party in Interest's Response to American Property Casualty Insurance Association's Motion for Leave to File Brief of Amicus Curiae and for Extension of Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=857627&onBaseDocumentNumber=22-15921">22-15921</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2022</td><td>Motion</td><td>Filed Petitioner's Opposition to Motion for Leave to File Amicus Curiae Brief of Claggett &amp; Sykes Law Firm. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=857665&onBaseDocumentNumber=22-15959">22-15959</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2022</td><td>Motion</td><td>Filed Reply to Petitioner's Opposition to Motion for Leave to File Amicus Brief of Claggett &amp; Sykes Law Firm. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=858348&onBaseDocumentNumber=22-16556">22-16556</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2022</td><td>Order/Procedural</td><td>Filed Order.  United Policyholders' brief was filed on May 2, 2022, and Claggett &amp; Sykes Law Firm's, Nevada Justice Association's, and American Property Casualty Insurance Association's briefs were filed on May 13, 2022.  Real party in interest shall have until June 9, 2022, to file and serve any response to American Property Casualty Insurance Association's amicus brief.  Attorney Richard Broer Oatis shall be permitted to appear on behalf of amicus curiae United Policyholders in this matter.  attorney Laura A. Foggan of Crowell &amp; Moring LLP shall be permitted to appear on behalf of amicus curiae American Property Casualty Insurance Association.   Nevada attorneys William C. Jeanney of Bradley, Drendel &amp; Jeanney; and Tyson E. Hafen of Duane Morris LLP shall be responsible for all matters presented by Mr. Oatis and Ms. Foggan in this appeal.  fn1[American Property Casualty Insurance Association's motion for an extension to time to file a motion for leave to file an amicus brief is granted.]  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=859027&onBaseDocumentNumber=22-17220">22-17220</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Brief</td><td>Filed Lamplight Village's Response to Amici Curiae Brief of American Property Casualty Insurance Association. (REJECTED PER NOTICE ISSUED 6/7/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=860967&onBaseDocumentNumber=22-18154">22-18154</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Brief</td><td>Filed Lamplight Village's Response to Amici Curiae Brief of American Property Casualty Insurance Association. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=860990&onBaseDocumentNumber=22-18176">22-18176</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/09/2022</td><td>Petition/Writ</td><td>Filed QBE's Reply in Support of Writ Petition . (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=861201&onBaseDocumentNumber=22-18364">22-18364</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2022</td><td>Notice/Incoming</td><td>Filed Amended Certificate of Service for Reply in Support of Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=861203&onBaseDocumentNumber=22-18376">22-18376</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2022</td><td>Notice/Incoming</td><td>Filed Petitioner's Notice of Settlement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=870731&onBaseDocumentNumber=22-27460">22-27460</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2022</td><td>Order/Procedural</td><td>Filed Order.  The parties shall have 30 days from the date of this order to file a stipulation to dismiss this petition.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=871169&onBaseDocumentNumber=22-27831">22-27831</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/06/2022</td><td>Motion</td><td>Filed Stipulation to Dismiss Writ Petition. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=875071&onBaseDocumentNumber=22-31572">22-31572</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/10/2022</td><td>Order/Dispositional</td><td>Filed Order Dismissing Petition. Pursuant to the stipulation of the parties, and cause appearing, "this original petition for a writ of mandamus is dismissed."  The parties shall bear their own costs and attorney fees.  Case Closed/No Remittitur Issued. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63277&csIID=63277&deLinkID=875381&onBaseDocumentNumber=22-31875">22-31875</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63277&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

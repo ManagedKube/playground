@@ -1,0 +1,748 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85350: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=A1F875F2585A92E01812E0F98846D15F">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64868">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85350</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: PARENTAL RIGHTS AS TO D.E., III, M.E. C/W 85430</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td>85350*, <a href="/public/caseView.do?csIID=64974">85430</a></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64974">85430</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - J348526</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Parental Termination</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing in Progress</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td><span style="color:red;font-weight:bold;">Expedited</span></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">David E.</td><td valign="top">Abira Grigsby
+							(The Grigsby Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Reference Party</td><td valign="top">D. E., III</td><td valign="top"></td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Reference Party</td><td valign="top">M. E.</td><td valign="top"></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Clark County Department of Family Services</td><td valign="top">Payal V. Patel
+							(Clark County District Attorney/Juvenile Division)
+						<br>Candice Saip
+							(Clark County District Attorney/Juvenile Division)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">D. E., III</td><td valign="top">Marina F. Dalia-Hunt
+							(Legal Aid Center of Southern Nevada, Inc.)
+						<br>Nicholas T. Petsas
+							(Former)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">M. E.</td><td valign="top">Nicholas T. Petsas
+							(Former)
+						<br>Abraham G. Smith
+							(Lewis Roca Rothgerber Christie LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>03/29/2023</td><td>Overdue</td><td>Court Reporter Certificate/Not Fast Track</td><td></td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>10/06/2023</td><td>Open</td><td>Answering Brief</td><td>Respondent</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  In Forma Pauperis. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/16/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Parental Termination/Counsel. Filed certified copy of notice of appeal. (SEALED) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>09/16/2022</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines/Parental Termination with Counsel. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/30/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 6/23/21, 7/12/21, 7/23/21, 7/26/21, 8/11/21, 8/23/21, 1/28/22, 2/14/22, 3/1/22, 3/2/22, 3/16/22, 3/25/22 and 4/21/22.  To Court Reporter: Rachel Chaisson. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/03/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/07/2022</td><td>Notice/Incoming</td><td>Filed Notice Of Non-Association Law Firm. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>10/26/2022</td><td>Order/Procedural</td><td>Filed Order Regarding Counsel. Nicholas T. Petsas, is no longer associated with Lee Landrum &amp; Ingle. The clerk of this court shall remove Lee Landrum &amp; Ingle as counsel for D.E., III and M.E.  Nicholas T. Petsas shall remain as counsel of record for D.E., III and M.E. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/14/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Court reporter certificate due: November 28, 2022. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>11/15/2022</td><td>Motion</td><td>Filed Filed Court Reporter Maria Balagtas Motion to Extend Time to Prepare Transcripts (9/16/20, 10/22/20, 11/4/20, 11/13/20, 3/10/20 and 8/8/22. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2022</td><td>Motion</td><td>Filed Appellant's Motion to Extend Time to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/20/2022</td><td>Motion</td><td>Filed Court Reporter's Motion to Extend Time to Prepare Transcripts. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/22/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions. Maria Balagtas, Law Office Assistant II for Transcript Video Services, has filed a motion for a second extension of time to prepare the transcripts requested in this appeal.  The motion is granted. Court reporter certificate due: February 21, 2023. Appellant's motion for an extension of time to file the opening brief is granted. Appellant's opening brief and appendix due: April 14, 2023.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>01/31/2023</td><td>Motion</td><td>Filed Court Reporter's Motion for Second Extension of Time to Prepare Transcripts. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Maria Balagtas of Transcript Video Services has filed a motion for a third extension of time to prepare the transcripts requested in this appeal. Cause appearing, the motion is granted. Ms. Balagtas shall have until March 29, 2023, to file the requested transcripts in the district court and deliver copies to the requesting party. Within the same time period, Ms. Balagtas shall file a notice with this court that the completed transcripts have been filed and delivered. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/07/2023</td><td>Notice/Incoming</td><td>Filed Respondent D. E., III's Notice of Appearance for Marina Dalia-Hunt. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/09/2023</td><td>Motion</td><td>Filed Appellant's Motion to Consolidate Appeals and Motion for Extension of Time to file Opening Brief and Appendix. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>04/27/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Consolidate and Denying Motion for Extension of Time to File Opening Brief. Counsel for appellant David E. has filed a motion to consolidate appeals in Docket No. 85350. He argues that because the two cases arise from the same underlying matter that they should be consolidated. David E. is not a party to the appeal in Docket No. 85430. Counsel for Ashleigh A., appellant in Docket No. 85430, did not sign the motion to consolidate and neither counsel for Ashleigh A. nor respondents have filed any motions joining the motion to consolidate.  Accordingly, the motion is denied. David E. additionally requests a second extension of time (30 days) to file the opening brief and appendix.  David E.'s motion fails to demonstrate extraordinary circumstances and extreme need. Accordingly, the motion is denied.  David E. shall have 7 days from the date of this order to file and serve the opening brief and appendix in Docket No. 85350. The opening brief and appendix in Docket No. 85430 remain due to be filed by May 15, 2023. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 1. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 2. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 3. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 4. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 5. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 6. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 7. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 8. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 9. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 10. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 11. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 12. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 13. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 14. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 15. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 16. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 17. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 18. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 19. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 20. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 21. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 22. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 23. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 24. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/04/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief - Vol. 25. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/05/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Certificate of Service for the Opening Brief and Appendix. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Notice/Incoming</td><td>Filed Respondent's (M.E.) Notice of Appearance of Pro Bono Counsel for Abraham G. Smith. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/19/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent Clark County Department of Family Services shall have until June 8, 2023, to file and serve the answering brief. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondent D.E., III shall have until June 8, 2023, to file and serve the answering brief. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2023</td><td>Motion</td><td>Filed Stipulation for Extension of Time to File Minor Children's Answering Briefs. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Amended Stipulation for Extension of Time to File Minor Children's Answering Briefs. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/31/2023</td><td>Motion</td><td>Filed Respondent's (M.E.) Notice of Non-Opposition to Motion to Consolidate/Join Appeals and Conditional Request for Leave to File Combined Brief. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2023</td><td>Order/Procedural</td><td>Filed Order. Counsel for Ashleigh A. has now filed a motion to consolidate these appeals in Docket No. 85430. Counsel for M.E. has filed a non-opposition to the motion to consolidate in Docket Nos. 85430 and 85350 and requested leave to file a combined answering brief to both appeals 30 days after Ashleigh A.'s opening brief is filed. The motion to consolidate is granted. David E.'s opening brief and appendix in Docket No. 85350 were filed on May 4, 2023. Ashleigh A. has moved for an extension of time to file her opening brief and appendix.The motion is granted to the following extent. Ashleigh A. shall have until July 31, 2023, to file and serve the opening brief and appendix. Respondents shall have 30 days after Ashleigh A.'s opening brief is filed to each file an answering brief addressing the issues raised in both opening briefs. Thereafter, briefing shall proceed in accordance with NRAP 31(a)(2). Additionally, on April 28, 2023, attorney Marina F. Dalia-Hunt of the Legal Aid Center of Southern Nevada filed a notice of appearance as D.E., III's pro bono counsel in Docket No. 85430.  On May 11, 2023, counsel for David E. filed a certificate of service for the opening brief and appendix in Docket No. 85350 which noted in a footnote that attorney Nicholas T. Petsas had informed them that he no longer represents D.E., III or M.E.  Subsequently on May 15, 2023, attorney Abraham G. Smith of Lewis Roca Rothergerber Christie, LLP filed a notice of appearance as M.E.'s pro bono counsel in both Docket No. 85350 and Docket No. 85430. The clerk of this court shall add attorney Marina F. Dalia-Hunt as counsel for D.E., III in both appeals.  Attorney Abraham G. Smith was added as counsel for M.E. on May 17, 2023. The clerk shall remove attorney Nicholas T. Petsas as counsel for M.E. and D.E., III in both appeals.  fn2[The stipulation and amended stipulation for an extension of time for M.E. and D.E., III to file their answering briefs in Docket No. 85350 is disapproved as moot.] Nos. 85350/85430 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2023</td><td>Brief</td><td>Filed Respondent's (Department of Family Services) Answering Brief. Nos. 85350/85430. (STRIKEN PER 8/28/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2023</td><td>Appendix</td><td>Filed Respondent's (Department of Family Services) Appendix to the Answering Brief - Vols. 1-5 Nos. 85350/85430. (STRIKEN PER 8/28/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/26/2023</td><td>Brief</td><td>Filed Respondent's (D.E. III) Answering Brief (REJECTED PER NOTICE FILED ON 6/27/2023). Nos. 85350/85430.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/27/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2023</td><td>Brief</td><td>Filed Respondent's (D.E. III) Answering Brief.  Nos. 85350/85430. (STRIKEN PER 8/28/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/26/2023</td><td>Motion</td><td>Filed Appellant's (Ashleigh A.) Joint Motion for Extension of Time to File Opening Brief and Appendix. Nos. 85350/85430.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/26/2023</td><td>Notice/Incoming</td><td>Filed Appellant's (Ashleigh A.) Proof of Service for Joint Motion for Extension to File Opening Brief and Appendix. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Order/Procedural</td><td>Filed Order. Appellant Ashleigh A.; respondent D.E., III; and respondent M.E. have filed a joint motion for an extension of time for Ashleigh A. to file her opening brief.  No opposition has been filed. The motion is granted. Ashleigh A. shall have until September 6, 2023, to file and serve the opening brief and appendix. In this court's June 6, 2023, order, respondents were directed to each file a single answering brief within 30 days after Ashleigh A.'s opening brief was filed, addressing the issues raised in both Ashleigh A.'s and David E.'s opening briefs.  Respondents Clark County Department of Family Services (the Department) and D.E. III have filed answering briefs before Ashleigh A. has filed her opening brief.  Accordingly, the clerk of this court shall strike the Department's answering brief and appendix filed on June 6 and 8, 2023, and D.E. III's answering brief filed on June 28, 2023. All respondents shall have 30 days from the date Ashleigh A.'s opening brief is filed to each file an answering brief addressing the issues raised in both opening briefs. Nos. 85350/85430 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64868&csIID=64868&deLinkID=913999&onBaseDocumentNumber=23-27936">23-27936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Sherry Justice stating that the requested transcripts were delivered.  Dates of transcripts: 09/09/20. Nos. 85350/85430 (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2023</td><td>Brief</td><td>Filed Appellant's Opening Brief. (85430) Nos. 85350/85430. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64868&csIID=64868&deLinkID=915282&onBaseDocumentNumber=23-29198">23-29198</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/06/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 26 (85430) Nos. 85350/85430. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64868&csIID=64868&deLinkID=915283&onBaseDocumentNumber=23-29199">23-29199</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/06/2023</td><td>Appendix</td><td>Filed Appellant's Appendix to Opening Brief. Vol. 27 (85430) Nos. 85350/85430. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64868&csIID=64868&deLinkID=915284&onBaseDocumentNumber=23-29200">23-29200</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64868&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

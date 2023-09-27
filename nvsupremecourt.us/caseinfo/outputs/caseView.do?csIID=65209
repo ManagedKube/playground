@@ -1,0 +1,804 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>85598: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=03A721A6FC51C0B613B3B785EACBF63C">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="65209">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 85598</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">IN RE: PUB. RECORDS REQUEST TO LAS VEGAS METRO. POLICE DEP'T</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A845702</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Briefing Reinstated</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>11/07/2022 / Mishel, Persi</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant/Cross-Respondent</td><td valign="top">Las Vegas Metropolitan Police Department</td><td valign="top">Nicholas D. Crosby
+							(Marquis Aurbach Chtd.)
+						<br>Susan E. Gillespie
+							(Marquis Aurbach Chtd.)
+						<br>Jacqueline V. Nichols
+							(Marquis Aurbach Chtd.)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">American Civil Liberties Union of Nevada</td><td valign="top">Christopher M. Peterson
+							(American Civil Liberties Union of Nevada/Las Vegas)
+						<br>Sophia A. Romero
+							(American Civil Liberties Union of Nevada/Las Vegas)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Cristiano Ronaldo</td><td valign="top">Peter S. Christiansen
+							(Christiansen Trial Lawyers)
+						<br>Keely A. Perdue
+							(Christiansen Trial Lawyers)
+						<br>Kendelee L. Works
+							(Christiansen Trial Lawyers)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Las Vegas Review-Journal, Inc.</td><td valign="top">Margaret A. McLetchie
+							(McLetchie Law)
+						<br>Leo S. Wolpert
+							(McLetchie Law)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent/Cross-Appellant</td><td valign="top">Kathryn Mayorga</td><td valign="top">Ross H. Moynihan
+							(Stovall &amp; Associates)
+						<br>Leslie Mark Stovall
+							(Stovall &amp; Associates)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>10/03/2023</td><td>Open</td><td>Answering Brief</td><td>Respondent</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td>10/23/2023</td><td>Open</td><td>Answering Brief</td><td>Respondent</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2022</td><td>Filing Fee</td><td>Appeal Filing Fee Waived.  State/County/Municipality. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>11/03/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (Docketing statement mailed to counsel for appellant.) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=878233&onBaseDocumentNumber=22-34657">22-34657</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/03/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=878235&onBaseDocumentNumber=22-34659">22-34659</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>11/07/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Persi J. Mishel. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=878687&onBaseDocumentNumber=22-35035">22-35035</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/22/2022</td><td>Docketing Statement</td><td>Filed Appellant's Civil Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=880447&onBaseDocumentNumber=22-36761">22-36761</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/01/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=881641&onBaseDocumentNumber=22-37867">22-37867</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/02/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=881763&onBaseDocumentNumber=22-37987">22-37987</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Motion</td><td>Filed Appellant's Motion for Extension of Time to File Request for Transcript (First Request). (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=883428&onBaseDocumentNumber=22-39569">22-39569</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/20/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion. Appellant shall have 7 days from the date of this order to (1) serve and file, in the district court, a transcript request form and (2) file a file-stamped copy of the request form in this court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=883772&onBaseDocumentNumber=22-39909">22-39909</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/23/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 08/30/22. To Court Reporter: Michelle Ramsey. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=884167&onBaseDocumentNumber=22-40299">22-40299</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Respondents and Order to Show Cause. The clerk shall add Mayorga and Ronaldo as respondents and modify the caption accordingly.  Leslie M. Stovall and Ross Heber Moynihan shall be counsel of record for Mayorga.  Peter S. Christiansen, Kendelee L. Works, and Keely Ann Perdue shall be counsel of record for Ronaldo. Appellants shall have 30 days from the date of this order within which to show cause why this appeal should not be dismissed for lack of jurisdiction. Respondents may file any reply within 14 days from the date that appellants' response is served. Briefing is suspended. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=885586&onBaseDocumentNumber=23-00633">23-00633</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's response to order to show cause due: February 22, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=888993&onBaseDocumentNumber=23-03883">23-03883</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/14/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Michelle Ramsey stating that the requested transcripts were delivered.  Dates of transcripts: 8/30/22. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=889666&onBaseDocumentNumber=23-04525">23-04525</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/22/2023</td><td>Motion</td><td>Filed Appellant Las Vegas Metropolitan Police Departments Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=890569&onBaseDocumentNumber=23-05416">23-05416</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/23/2023</td><td>Motion</td><td>Filed Respondent Kathryn Mayorga's Reply to Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=890773&onBaseDocumentNumber=23-05617">23-05617</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/23/2023</td><td>Notice/Incoming</td><td>Filed Respondent Kathryn Mayorga's Proof of Service for Reply to Response to Order to Show Cause. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=890785&onBaseDocumentNumber=23-05629">23-05629</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Amended/Supplemental. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=890928&onBaseDocumentNumber=23-05771">23-05771</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2023</td><td>Filing Fee</td><td>Filing Fee due for Cross-Appeal (Kathryn Mayorga). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2023</td><td>Notice of Appeal Documents</td><td>Filed Notice of Cross-Appeal (Kathryn Mayorga). (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=891583&onBaseDocumentNumber=23-06422">23-06422</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=891588&onBaseDocumentNumber=23-06427">23-06427</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=891591&onBaseDocumentNumber=23-06430">23-06430</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/03/2023</td><td>Filing Fee</td><td>E-Payment $250.00 from Leslie Mark Stovall. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>03/03/2023</td><td>Notice of Appeal Documents</td><td>Filed Respondent/Cross-Appellant's Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=891719&onBaseDocumentNumber=23-06555">23-06555</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/06/2023</td><td>Notice/Incoming</td><td>Filed Respondent American Civil Liberties Union of Nevada's Notice of Change of Address for Christopher Peterson. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=891814&onBaseDocumentNumber=23-06618">23-06618</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/13/2023</td><td>Order/Procedural</td><td>Filed Order Reinstating Briefing. We conclude that this appeal may proceed, and we reinstate the briefing schedule. Mayorga has also filed a notice of appeal from the February 14, 2023, order. That notice of appeal has been docketed as a cross-appeal. Accordingly, the clerk shall modify the caption in this matter consistent with the caption on this order.  If any party objects to the modification of the caption, that party shall so inform this court, in writing, within 7 days of the date of this order.  Mayorga shall have 7 days from the date of this order to file and serve her docketing statement. Briefing of this appeal shall proceed as follows.  LVMPD shall have 60 days from the date of this order to file and serve its opening brief and appendix.  Mayorga shall have 30 days from service of the opening brief to file and serve a combined answering brief on appeal and opening brief on cross-appeal.   LVRJ, ACLUN, and Ronaldo shall have 30 days from service of Mayorga's combined brief to file and serve a brief answering both LVMPD's and Mayorga's opening briefs.  LVMPD shall have 30 days from service of the last-filed answering brief to file and serve a combined reply brief on appeal and answering brief on cross-appeal.  Finally, Mayorga shall have 14 days from service of LVMPD's combined brief to file and serve a reply brief on cross-appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=892886&onBaseDocumentNumber=23-07672">23-07672</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/22/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's (Kathryn Mayorga) Motion to Extend Time to File Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=894130&onBaseDocumentNumber=23-08851">23-08851</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2023</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's (Kathryn Mayorga) Docketing Statement (REJECTED PER NOTICE ISSUED 3/23/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>03/23/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Docketing Statement. Corrected docketing statement due: 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=894205&onBaseDocumentNumber=23-08925">23-08925</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/23/2023</td><td>Docketing Statement</td><td>Filed Respondent/Cross-Appellant's (Kathryn Mayorga) Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=894245&onBaseDocumentNumber=23-08965">23-08965</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/29/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Respondent/cross-appellant filed a motion for an extension of time to file the docketing statement on March 22, 2023.  The motion is granted.  The docketing statement was filed on March 23, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=894887&onBaseDocumentNumber=23-09580">23-09580</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2023</td><td>Docketing Statement</td><td>Filed Respondent's (Cristiano Ronaldo) Response to Respondent/Cross-Appellant's (Kathryn Mayorga) Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=895118&onBaseDocumentNumber=23-09807">23-09807</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/12/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants/cross-respondent's opening brief and appendix due: May 26, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=900693&onBaseDocumentNumber=23-15150">23-15150</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2023</td><td>Motion</td><td>Filed Appellant/Cross-Respondent's Unopposed Motion for Extension of Time to File Opening Brief and Appendix. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=902239&onBaseDocumentNumber=23-16626">23-16626</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/31/2023</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant shall have until June 9, 2023, to file and serve the opening brief and appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=902658&onBaseDocumentNumber=23-17041">23-17041</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Opening Brief - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903746&onBaseDocumentNumber=23-18105">23-18105</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Opening Brief - Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903749&onBaseDocumentNumber=23-18108">23-18108</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Opening Brief - Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903758&onBaseDocumentNumber=23-18116">23-18116</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/08/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Opening Brief - Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903767&onBaseDocumentNumber=23-18125">23-18125</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2023</td><td>Appendix</td><td>Filed Appellant/Cross-Respondent's Appendix to Opening Brief - Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903770&onBaseDocumentNumber=23-18128">23-18128</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/09/2023</td><td>Brief</td><td>Filed Appellant/Cross-Respondent's (LVMPD) Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=903981&onBaseDocumentNumber=23-18336">23-18336</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/06/2023</td><td>Motion</td><td>Filed Respondent/Cross-Appellant's (Mayorga) Stipulation and Order to Extend Briefing Schedule to File the Combined Answering Brief/Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=907353&onBaseDocumentNumber=23-21544">23-21544</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2023</td><td>Notice/Outgoing</td><td>Issued Notice Motion/Stipulation Approved</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=907382&onBaseDocumentNumber=23-21573">23-21573</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/09/2023</td><td>Appendix</td><td>Filed Respondent/Cross-Appellant's (Mayorga) Appendix to Combined Answering Brief on Appeal and Opening Brief on Cross-Appeal Appendix - Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=911804&onBaseDocumentNumber=23-25819">23-25819</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/09/2023</td><td>Brief</td><td>Filed Respondent/Cross-Appellant's (Mayorga) Combined Answering Brief on Appeal and Opening Brief on Cross-Appeal.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=911805&onBaseDocumentNumber=23-25820">23-25820</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/10/2023</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=911829&onBaseDocumentNumber=23-25844">23-25844</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/13/2023</td><td>Letter/Incoming</td><td>Filed Respondent/Cross-Appellant's Letter Proof of Service to ACLU for the Answering Brief and Appendix.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=912172&onBaseDocumentNumber=23-26174">23-26174</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/13/2023</td><td>Letter/Incoming</td><td>Filed Respondent/Cross-Appellant's Letter Proof of Service to McLetchie Law for the Answering Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=912173&onBaseDocumentNumber=23-26175">23-26175</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/13/2023</td><td>Letter/Incoming</td><td>Filed Respondent/Cross-Appellant's Letter Proof of Service to Christiansen Trial Lawyers for the Answering Brief and Appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=912174&onBaseDocumentNumber=23-26176">23-26176</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/31/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Respondents/cross-respondents answering brief due: September 22, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=914669&onBaseDocumentNumber=23-28598">23-28598</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/18/2023</td><td>Motion</td><td>Filed Respondent/Cross-Respondent Cristiano Ronaldo's Unopposed Motion for Extension of Time to File Answering Brief.(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=916686&onBaseDocumentNumber=23-30531">23-30531</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/20/2023</td><td>Motion</td><td>Filed Respondent/Cross-Respondents Las Vegas Review Journal, INC. and American Civil Liberties Union of Nevada's. Motion to Extend Time to file Answering Brief; and Joinder and Non-Opposition to respondent/Cross-Respondent  Cristiano Ronaldo's Motion.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=917030&onBaseDocumentNumber=23-30873">23-30873</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/26/2023</td><td>Order/Procedural</td><td>Filed Order Regarding Motions. Cristiano Ronaldo has filed a motion for a second extension of time to file his answering brief. Extraordinary and compelling circumstances having been shown, the motion is granted. Ronaldo shall have until October 23, 2023, to file and serve his answering brief. The Las Vegas Review Journal, Inc. (LVRJ) and American Civil Liberties Union of Nevada (ACLU) have filed a joint motion for an extension of time to file their answering briefs. As the motion is not properly signed by counsel for ACLU, the motion is denied with respect to ACLU.  ACLU shall have 7 days from the date of this order to file and serve its answering brief. Extraordinary and compelling circumstances having been shown, the motion is granted with respect to LVRJ. LVRJ shall have until October 23, 2023, to file and serve its answering brief.  fn1[To the extent Ronaldo requests an extension of time on behalf of other parties, the motion is denied as it is not signed by counsel for those parties.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=65209&csIID=65209&deLinkID=917668&onBaseDocumentNumber=23-31486">23-31486</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=65209&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

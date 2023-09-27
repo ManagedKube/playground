@@ -1,0 +1,713 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>83865: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=3584DE47B2F98A51F8ADC066EB6FC9E1">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="62868">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 83865</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">BROFMAN VS. FIORE (CHILD CUSTODY) C/W 83807</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td class="label">Consolidated:</td><td><a href="/public/caseView.do?csIID=62769">83807</a>*, 83865</td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60763">82368</a>, <a href="/public/caseView.do?csIID=62769">83807</a>, <a href="/public/caseView.do?csIID=65044">83807-COA</a>, <a href="/public/caseView.do?csIID=65045">83865-COA</a>, <a href="/public/caseView.do?csIID=64810">85299</a>, <a href="/public/caseView.do?csIID=64859">85299-COA</a>, <a href="/public/caseView.do?csIID=66222">86352</a>, <a href="/public/caseView.do?csIID=66683">86673</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - D600841</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - Family Law - Child Custody/Proper Person</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Petition for Review Filed</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					En Banc
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td></td><td class="label">SP Status:</td><td></td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Douglas Brofman</td><td valign="top">Emily M. McFarling
+							(McFarling Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Gina Fiore</td><td valign="top">Richard A. Schonfeld
+							(Chesnoff &amp; Schonfeld)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Douglas B. Brofman.  Check no. 0104. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal/Proper Person. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=838208&onBaseDocumentNumber=21-34704">21-34704</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/06/2021</td><td>Notice/Outgoing</td><td>Issued Notice Regarding Deadlines/Fast Track Child Custody. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=838210&onBaseDocumentNumber=21-34706">21-34706</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/06/2021</td><td>Notice of Appeal Documents</td><td>Filed Documents from District Court Clerk. Confidential Civil Cover Sheet (Sealed). (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>12/21/2021</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension. Appellants' Docketing Statement due: January 3, 2022, and Fast Track Statement due: January 25, 2022. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=840027&onBaseDocumentNumber=21-36410">21-36410</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/30/2021</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=840888&onBaseDocumentNumber=21-37258">21-37258</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/06/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=841590&onBaseDocumentNumber=22-00610">22-00610</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2022</td><td>Order/Procedural</td><td>Filed Order Consolidating Appeals and Directing Transmission of Record.  Within 30 days from the date of this order, the clerk of the district court shall transmit to the clerk of this court a certified copy of the trial court record in District Court Case No. D-19-600841-C.  Appellant shall have until March 2, 2022, to file and serve a combined fast track statement that addresses all issues.  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=841894&onBaseDocumentNumber=22-00913">22-00913</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/24/2022</td><td>Record on Appeal Documents</td><td>Filed Record on Appeal, Vols. 1-17 (FTP). Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=843344&onBaseDocumentNumber=22-02338">22-02338</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/28/2022</td><td>Record on Appeal Documents</td><td>Filed District Court Documents. Added to Record on Appeal as pages: 22-62, 103-112, 771-780 &amp; 1488-1495. (Sealed) Nos. 83807/83865 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/22/2022</td><td>Notice/Incoming</td><td>Filed Court Reporter Transcriber's Affidavit in regards to when Transcripts will be completed. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=846916&onBaseDocumentNumber=22-05664">22-05664</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/24/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion and Regarding Briefing.  Karla M. Soto of Verbatim Transcription &amp; Reporting's Certificate of Delivery of Transcripts due:  14 days.  Appellant shall have 28 days from the date of this order to file and serve the fast track statement.  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=847365&onBaseDocumentNumber=22-06108">22-06108</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/28/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Balagtas stating that the requested transcripts were delivered.  Dates of transcripts: 3/11/21, 4/16/21, 5/21/21, 5/25/21, 9/20/21 and 10/13/21. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=847684&onBaseDocumentNumber=22-06420">22-06420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/21/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Emergency Motion for Order, by or Before March 23, 2022, to Request Record from District Court and to Extend Time to File Fast Track Statement. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=850203&onBaseDocumentNumber=22-08840">22-08840</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/22/2022</td><td>Order/Procedural</td><td>Filed Order.  Appellant shall have 14 days from the date of this order to file copies of any requested transcripts in this court and file and serve the fast track statement.  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=850437&onBaseDocumentNumber=22-09024">22-09024</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Leave to File Untimely Fast Track Statement and Leave to Exceed Fast Track Statement Length Limit. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=853049&onBaseDocumentNumber=22-11491">22-11491</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk shall file the fast track statement and transcripts received on April 12, 2022.  Respondent shall have 21 days from the date of this order to file and serve the fast track response. Nos. 83807/83865. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=853225&onBaseDocumentNumber=22-11665">22-11665</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2022</td><td>Fast Track Brief</td><td>Filed Appellant's Fast Track Statement (Opening Brief). Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=853226&onBaseDocumentNumber=22-11666">22-11666</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2022</td><td>Transcript</td><td>Filed Transcript. Proceedings: 3/11/21, 4/16/21, 5/25/21, 9/20/21 and 10/13/21. Court Reporter: Verbatim Reporting &amp; Transcription. Nos. 83807/83865 (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/20/2022</td><td>Motion</td><td>Filed Respondent's Motion for Extension of Time to File Fast Track Response. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=854114&onBaseDocumentNumber=22-12528">22-12528</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/20/2022</td><td>Motion</td><td>Filed Respondent's Motion for Extension of Time to File Fast Track Response. Nos. 83807/83865 (SC) - Duplicate</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=854115&onBaseDocumentNumber=22-12529">22-12529</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/26/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have until May 31, 2022, to file and serve the fast track response.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=854785&onBaseDocumentNumber=22-13188">22-13188</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/11/2022</td><td>Brief</td><td>Filed Appellant's Supplemental Authorities. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=856702&onBaseDocumentNumber=22-15004">22-15004</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Fast Track Brief</td><td>Filed Child Custody Fast Track Response. Nos. 83807/83865 (REJECTED PER NOTICE ISSUED 5/26/22) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>05/26/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Filed Document. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=858580&onBaseDocumentNumber=22-16785">22-16785</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/26/2022</td><td>Motion</td><td>Filed Respondent's Motion to Exceed Page Limitation for Child Custody Fast Track Response. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=858596&onBaseDocumentNumber=22-16801">22-16801</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion.  Respondent shall have 7 days from the date of this order to file and serve a fast track response containing no more than 10,740 words.  Nos. 83807/838665.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=859696&onBaseDocumentNumber=22-17880">22-17880</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/06/2022</td><td>Fast Track Brief</td><td>Filed Child Custody Fast Track Response. Nos. 83807/83865(SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=859836&onBaseDocumentNumber=22-17973">22-17973</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/06/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Certificate of Service. (Child Custody Fast Track Response) Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=859838&onBaseDocumentNumber=22-17974">22-17974</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/07/2022</td><td>Notice/Incoming</td><td>Filed Certificate of Mailing Child Custody Fast Track Response. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=859839&onBaseDocumentNumber=22-18008">22-18008</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/07/2022</td><td>Motion</td><td>Filed Proper Person Appellant's Response to Motion Respondent's Motion to Exceed Page Limitation for Child Custody Fast Track Response.  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=859863&onBaseDocumentNumber=22-18042">22-18042</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2022</td><td>Order/Procedural</td><td>Filed Order Denying Motion.  Appellant has filed a pro se motion to sanction respondent for her motion for leave to file a fast track response in excess of the page limitation and/or her fast track response.  No cause appearing, the motion is denied.  Appellant shall have 14 days from the date of this order to file and serve a fast track reply that complies with the requirements of NRAP 3E(d)(3) and NRAP 3E(e)(2).  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=864130&onBaseDocumentNumber=22-21134">22-21134</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/21/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellant's Reply to Fast Track Response due:  July 27, 2022.  Nos. 83807/83865.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=865989&onBaseDocumentNumber=22-22919">22-22919</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/25/2022</td><td>Motion</td><td>Filed Appellant's Proper Person Motion for Leave to Exceed Fast Track Reply Length. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=866412&onBaseDocumentNumber=22-23337">22-23337</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. The clerk shall file the fast track reply received on July 25, 2022.  The clerk shall return the alternate fast track reply received on July 25, 2022, unfiled. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=867496&onBaseDocumentNumber=22-24325">22-24325</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/03/2022</td><td>Fast Track Brief</td><td>Filed Reply to Fast Track Response. Nos. 83807/83865 (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=867498&onBaseDocumentNumber=22-24327">22-24327</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/03/2022</td><td>Case Status Update</td><td>Fast Track Briefing Completed. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>10/11/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. Nos. 83807/83865. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=875538&onBaseDocumentNumber=22-32030">22-32030</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>10/11/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. Nos. 83807/83865. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>05/15/2023</td><td>Order/Dispositional</td><td>Filed Order Dismissing Appeal in Part and Affirming in Part (Docket No. 83807-COA), and Dismissing Appeal (Docket No. 83865-COA). "We therefore dismiss Brofman's appeal to the extent that it is directed at that portion of the decree; we affirm that decision in its entirety; this court lacks jurisdiction to consider this portion of Brofman's appeal, and it is therefore dismissed; we therefore dismiss his appeal in Docket No. 83865-COA." Court of Appeals- MG/BB/DW. Nos. 83807/83865. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Case Status Update</td><td>Transferred from Court of Appeals. Nos. 83807/83865.  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>08/28/2023</td><td>Filing Fee</td><td>Returned Filing Fee. Check No. 3003 returned to  Douglas Brofman. Nos. 83807/83865. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/28/2023</td><td>Post-Judgment Petition</td><td>Filed Proper Person's Petition for Review. Nos.83807/83865. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=913975&onBaseDocumentNumber=23-27912">23-27912</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/25/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Appearance for Emily McFarling. Nos. 83807/83865. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=917584&onBaseDocumentNumber=23-31403">23-31403</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/25/2023</td><td>Motion</td><td>Filed Appellant's Motion for Permission to File Supplement to Petition for Rehearing (Supplement attached). Nos. 83807/83865. (SC)</td><td align="center">Y</td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=62868&csIID=62868&deLinkID=917588&onBaseDocumentNumber=23-31407">23-31407</a>
+<br>
+</td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=62868&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

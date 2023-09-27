@@ -1,0 +1,808 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84200: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=F080B66825BF98D865125087DA8480E3">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="63307">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84200</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ALL AM. REPAIR SERVS. INC. VS. GEBREKRISTOS</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=64062">84200-COA</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A832318</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td>Silver</td><td valign="top" class="label">Case Status:</td><td valign="top">Transferred to Court of Appeals</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>02/16/2022 / Hauser, Charles</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td></td><td class="label">Oral Argument Location:</td><td></td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td></td><td class="label">How Submitted:</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Associated Builders and Contractors Nevada Chapter</td><td valign="top">Joel D. Henriod
+							(Henriod Law, PLLC)
+						<br>Richard L. Peel
+							(Peel Brimley LLP/Henderson)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Bombard Electric, LLC</td><td valign="top">Drew J. Starbuck
+							(Williams Starbuck)
+						<br>Aaron Ray Tippetts III<br>Donald H. Williams
+							(Williams Starbuck)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Bombard Mechanical, LLC</td><td valign="top">Drew J. Starbuck
+							(Williams Starbuck)
+						<br>Aaron Ray Tippetts III<br>Donald H. Williams
+							(Williams Starbuck)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Desert Fire Protection</td><td valign="top">Drew J. Starbuck
+							(Williams Starbuck)
+						<br>Aaron Ray Tippetts III<br>Donald H. Williams
+							(Williams Starbuck)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Lone Mountain Excavation &amp; Utilities, LLC</td><td valign="top">Drew J. Starbuck
+							(Williams Starbuck)
+						<br>Aaron Ray Tippetts III<br>Donald H. Williams
+							(Williams Starbuck)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Mechanical Contractor's Association of Las Vegas</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">NAIOP Southern Nevada Chapter Corp.</td><td valign="top">Stephen A. Davis
+							(Holland &amp; Hart LLP/Las Vegas)
+						<br>Gregory S. Gilbert
+							(Holland &amp; Hart LLP/Las Vegas)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National Electronic Contractors' Association - Greater Sacramento Chapter</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">National Electronic Contractors' Association - Southern Nevada Chapter</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Association of Mechanical Contractors</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Chapter of Associated General Contractors</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Contractors Association</td><td valign="top">Leon F. Mead, II
+							(Mead Law Group)
+						<br>Sarah Mead Thomas
+							(Mead Law Group)
+						<br>Matthew Thomas
+							(Mead Law Group)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Nevada Subcontractors Association</td><td valign="top">Leon F. Mead, II
+							(Mead Law Group)
+						<br>Sarah Mead Thomas
+							(Mead Law Group)
+						<br>Matthew Thomas
+							(Mead Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Sheet Metal and Air Conditioning Contractors' National Association of Southern Nevada</td><td valign="top">Philip M. Mannelly
+							(McDonald Carano LLP/Reno)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Amicus Curiae</td><td valign="top">Southern Nevada Homebuilders Association</td><td valign="top">Leon F. Mead, II
+							(Mead Law Group)
+						<br>Sarah Mead Thomas
+							(Mead Law Group)
+						<br>Matthew Thomas
+							(Mead Law Group)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">All American Repair Services Inc.</td><td valign="top">Noah G. Allison
+							(Allison Law Firm, Chtd.)
+						<br>Heather Caliguire Fleming
+							(Allison Law Firm, Chtd.)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Aster Gebrekristos</td><td valign="top">
+					In Proper Person
+				</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=845431&onBaseDocumentNumber=22-04288">22-04288</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2022</td><td>Other</td><td>Justice Abbi Silver disqualified from participation in this matter. Disqualification Reason: Law Firms. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Case Appeal Statement/Civil. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=845433&onBaseDocumentNumber=22-04290">22-04290</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=845435&onBaseDocumentNumber=22-04292">22-04292</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/08/2022</td><td>Filing Fee</td><td>E-Payment $250.00 from Noah G. Allison. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>02/08/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellant - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=845495&onBaseDocumentNumber=22-04350">22-04350</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/09/2022</td><td>Notice of Appeal Documents</td><td>Filed Case Appeal Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=845533&onBaseDocumentNumber=22-04388">22-04388</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/16/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Charles K. Hauser. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=846297&onBaseDocumentNumber=22-05136">22-05136</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/01/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=847851&onBaseDocumentNumber=22-06582">22-06582</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/01/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Provide Proof of Service on Settlement Judge. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=847863&onBaseDocumentNumber=22-06594">22-06594</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/02/2022</td><td>Notice/Incoming</td><td>Filed Appellant's Proof of Service on Settlement Judge for the Docketing Statement. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=847954&onBaseDocumentNumber=22-06680">22-06680</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/15/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Not Appropriate for Settlement Program. This case is not appropriate for mediation.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=849475&onBaseDocumentNumber=22-08126">22-08126</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/15/2022</td><td>Settlement Order/Procedural</td><td>Filed Order Removing From Settlement Program/Briefing Reinstated. This appeal is removed from the settlement program.  Appellant(s): 14 days transcript request; 90 days opening brief.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=849582&onBaseDocumentNumber=22-08232">22-08232</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/25/2022</td><td>Transcript Request</td><td>Filed Request for Transcript of Proceedings. Transcripts requested: 11/18/21 and 2/10/22. To Court Reporter: Maria Garibay. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=850813&onBaseDocumentNumber=22-09358">22-09358</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/28/2022</td><td>Motion</td><td>Filed Respondent's Motion To Withdraw Law Firm Alverson Taylor &amp; Sanders. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=851063&onBaseDocumentNumber=22-09600">22-09600</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/30/2022</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria L. Garibay stating that the requested transcripts were delivered.  Dates of transcripts: 2/10/22, 12/29/21, and 11/18/21. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=851361&onBaseDocumentNumber=22-09889">22-09889</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/11/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice Of Non-Opposition To Motion To Withdraw As Counsel Of Record For Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=852747&onBaseDocumentNumber=22-11247">22-11247</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/12/2022</td><td>Order/Procedural</td><td>Filed Order. Attorney Johnathan Owens has filed a motion seeking the withdrawal of Alverson Taylor &amp; Sanders as counsel of record for respondent.  Mr. Owens is not listed as counsel of record for respondent on this court's docket.  Accordingly, this court takes no action on this motion. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=853070&onBaseDocumentNumber=22-11512">22-11512</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/14/2022</td><td>Notice/Incoming</td><td>Filed Respondent's Notice of Association of Counsel Jonathan B. Owens. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=853415&onBaseDocumentNumber=22-11852">22-11852</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/14/2022</td><td>Motion</td><td>Filed Attorney Johnathan B. Owens, Esq.'s Motion To Withdraw as Counsel of Record for Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=853430&onBaseDocumentNumber=22-11867">22-11867</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/28/2022</td><td>Motion</td><td>Filed Attorneys Matthew Pruitt and David A. Lojoie's Motion to Withdraw as Counsel of Record for Respondent. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=855132&onBaseDocumentNumber=22-13527">22-13527</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/12/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motions.  The clerk shall remove Jonathan B. Owens, David Lajoie, Matthew Pruitt, and the law firm of Alverson Taylor &amp; Sanders as counsel of record for respondent.  Respondent shall have 30 days from the date of this order to either (1) retain new counsel and cause new counsel to file a notice of appearance in this court, or (2) inform this court, in writing, that respondent does not intend to retain new counsel and will be proceeding pro se.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=856748&onBaseDocumentNumber=22-15050">22-15050</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/24/2022</td><td>Motion</td><td>Filed Appellant's Emergency Motion for Stay, Relief Requested Within 5 Days. (SC) (TRANSFERRED TO THE COURT OF APPEALS PER 05/25/22 NOTICE).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=858319&onBaseDocumentNumber=22-16528">22-16528</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>05/25/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Transfer Case to Court of Appeals. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=858444&onBaseDocumentNumber=22-16650">22-16650</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>05/25/2022</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC).</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/28/2023</td><td>Order/Dispositional</td><td>Filed Order of Affirmance. "ORDER the judgment of the district court AFFIRMED, and lift the temporary stay entered by this court on July 6, 2022." fn4 [ The Honrable Bonnie A. Bulla did not participate in the decision of this matter] COA- MG/DW  (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>07/06/2023</td><td>Case Status Update</td><td>Transferred from Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>07/07/2023</td><td>Transcript</td><td>Filed Notice from Court Reporter. Maria Garibay stating that the requested transcripts were delivered.  Dates of transcripts:  4/26/2022.</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=907417&onBaseDocumentNumber=23-21607">23-21607</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/07/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellant's petition for review due: July 31, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=907440&onBaseDocumentNumber=23-21627">23-21627</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/27/2023</td><td>Motion</td><td>Filed Appellant's Emergency Motion for Extension of Time to File a Petition for Rehearing and for Leave to Request the Extension Retrospectively Emergency Motion.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=910078&onBaseDocumentNumber=23-24134">23-24134</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/31/2023</td><td>Post-Judgment Petition</td><td>Filed Appellant's Petition for Review. (STRIKEN PER 8/11/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>08/01/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Notice of Nonmootness and of Conditional Intention to Withdraw Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=910578&onBaseDocumentNumber=23-24627">23-24627</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2023</td><td>Notice/Incoming</td><td>Filed Appellant's Amended Certificate of Service for Petition for Review. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=910636&onBaseDocumentNumber=23-24683">23-24683</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/07/2023</td><td>Motion</td><td>Filed Amici Curiae (Nevada Contractors Association, Southern Nevada Home Builders Association, and Nevada Subcontractors Association) Motion for Leave to File Joint Amicus Curiae Brief in Support of Appellant's Petition for Review and Supporting Reversal. (DETACH AND STRIKE BRIEF PER 8/11/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911308&onBaseDocumentNumber=23-25330">23-25330</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/07/2023</td><td>Motion</td><td>Filed Amici Curiae (Bombard Electric, LLC, Bombard Mechanical LLC, Desert Fire Protection Inc., and Lone Mountain Excavation Utilities LLC) Motion for Leave to File an Amicus Curiae Brief. (DETACH AND STRIKE BRIEF PER 8/11/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911346&onBaseDocumentNumber=23-25368">23-25368</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/07/2023</td><td>Motion</td><td>Filed Amicus Curiae (Associated Builders and Contractors Nevada Chapter) Motion for Leave to Appear as Amicus Curiae and for Extension of Time in which to File Amicus Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911357&onBaseDocumentNumber=23-25379">23-25379</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/07/2023</td><td>Notice/Incoming</td><td>Filed Amicus Curiae (NAIOP Southern Nevada Chapter) Notice of Appearance  for Gregory Gilbert and Stephen Davis. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911373&onBaseDocumentNumber=23-25395">23-25395</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/07/2023</td><td>Motion</td><td>Filed Amicus Curiae (NAIOP Southern Nevada Chapter) Motion for Leave to File Amicus Curiae Brief In support of Appellant's Petition for Review and Motion to Exceed Type-Volume Limitation. (DETACH AND STRIKE BRIEF PER 8/11/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911379&onBaseDocumentNumber=23-25401">23-25401</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/08/2023</td><td>Motion</td><td>Filed Amicus Curiae (All American Repair Services Inc. Nevada Chapter of Associated General Contractors of America Inc., Nevada Association of Mechanical Contractors, National Electronic Contractors' Association, Mechanical Contractor's Association of Las Vegas and Sheet Metal and Air Conditioning Contractors' National Association of Southern Nevada) Motion for Leave to File Brief Amicus Curiae. (DETACH AND STRIKE BRIEF PER 8/11/23 ORDER) (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911520&onBaseDocumentNumber=23-25530">23-25530</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/08/2023</td><td>Motion</td><td>Filed Amicus Curiae (All American Repair Services Inc. Nevada Chapter of Associated General Contractors of America Inc., Nevada Association of Mechanical Contractors, National Electronic Contractors' Association, Mechanical Contractor's Association of Las Vegas and Sheet Metal and Air Conditioning Contractors' National Association of Southern Nevada) Motion to Consider Motion for Leave to File Brief Amicus Curiae and Proposed Amicus Brief Timely Due to Technical Problems with Court's Electronic Filing System or, Alternatively, Motion to Extend Time. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=911521&onBaseDocumentNumber=23-25541">23-25541</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/11/2023</td><td>Order/Procedural</td><td>Filed Order. Appellant's motion requesting a second extension of time filed on July 27, 2023, is granted to the following extent. Appellant shall have until August 31, 2023, to file and serve a petition for rehearing in the court of appeals. If no petition for rehearing is filed within this time period, the remittitur shall issue. Accordingly, and having considered appellant's "Notice of Nonmootness and of Conditional Intention to Withdraw Petition for Review," the clerk shall strike the petition for review filed in this court on July 31, 2023.  Because there is currently no petition for review pending, the motions to file amicus briefs in support of a petition for review are denied without prejudice.  The clerk of this court shall strike the amicus briefs attached to the motions filed on August 7 and 8, 2023. The clerk of this court shall file this order in both this court and the court of appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=63307&csIID=63307&deLinkID=912104&onBaseDocumentNumber=23-26107">23-26107</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/11/2023</td><td>Case Status Update</td><td>Transferred to Court of Appeals. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=63307&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

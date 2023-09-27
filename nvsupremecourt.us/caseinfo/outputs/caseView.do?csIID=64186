@@ -1,0 +1,871 @@
+
+				 
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>84861: Case View</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>	
+
+	<!-- iOS icons -->
+	<link rel="apple-touch-icon" href="/ctrack/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/ctrack/images/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/ctrack/images/apple-touch-icon-114x114-precomposed.png" />
+
+	<link rel="stylesheet" type="text/css" href="/include/css/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery-ui/jquery-ui.css" media="all"/>	
+	<link rel="stylesheet" type="text/css" href="/include/css/jquery.qtip.css"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/efile.css" media="all">
+	
+     
+<link rel="stylesheet" type="text/css" href="/public/include/css/efileState.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="/include/css/print.css" media="print">
+	
+	<style type="text/css">
+		
+	</style>
+	
+	<script type="text/javascript" src="/include/js/jquery.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/include/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/include/js/jquery.ui.ctrack.datepicker.js"></script>
+	
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/interface/AJAX.js"></script>
+	
+	<script type="text/javascript" src="/include/js/efile.js"></script>
+	<script type="text/javascript" src="/include/js/menuHeaderDropdown.js"></script>
+	<script type="text/javascript" src="/include/js/DynamicOptionList.js"></script>
+	<script type="text/javascript" src="/include/js/menuPopup.js"></script>
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5436882-7']);
+		_gaq.push(['_trackPageview']);
+	
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-5436882-7', 'auto');
+			  ga('send', 'pageview');
+
+	</script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK"></script>
+	
+	<script type="text/javascript">
+		
+
+		
+	</script> 
+	
+</head>
+
+
+
+<body onLoad="">
+
+
+	<div id="application-header-background"></div>
+
+
+<table id="application-table">
+	
+	
+	
+		<tr>
+			<td>
+				<table id="header-table">
+					<tr>
+						<td id="app-logo-container">
+							
+
+<div id="app-logo"></div>
+
+<div id="app-logo-text">
+	<div>Nevada</div>
+	<div>Appellate Courts</div>
+</div>
+
+<div id="app-logo2"></div>
+
+<div class="clear-floats"></div>
+
+
+						</td>
+						<td id="app-title-container">
+							
+
+<table id="app-title-table">
+	<tr>
+		<td>
+			<div class="title">Appellate Case Management System</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="subtitle">C-Track, the browser based CMS for Appellate Courts</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+<div id="menu-container">
+	
+	<div id="menus">
+	
+		
+			
+				<div id="menus-placeholder"></div>
+			
+		
+			
+		
+		
+		<div class="clear-floats"></div>
+	</div>
+	
+</div>
+
+
+
+	
+	
+	
+		<div class="menu-header-dropdown menu-selected"
+			id="menu1">
+			
+			
+				
+				<a href="/public/caseSearch.do" onclick="menuHeaderClose();" class="first-menu">
+					Case Search
+				</a>
+			
+				
+				<a href="/public/publicActorSearch.do" onclick="menuHeaderClose();" class="last-menu">
+					Participant Search
+				</a>
+			
+			
+		</div>
+		
+	
+	
+
+		</td>
+	</tr>
+</table>
+						</td>
+						<td id="app-controls-container">
+							
+
+<div id="app-controls" class="loggedOut">
+		<!-- 
+	
+	
+		
+			<div class="header-icons">
+				<div id="power-icon" class="header-icon" title="Login"
+					onclick="window.location = '/login.do';">
+				</div>
+				
+				<div class="clear-floats"></div>
+			</div>
+		
+		
+		
+	
+	 -->
+	
+	
+	<div id="quicksearch" class="public-search">
+		<input type="text" name="quickCaseSearchCsNumber"
+			value="Find Case..." id="quickSearchValue"
+			data-defaulttext="Find Case..."/>
+		<span class="search-icon"></span>
+	</div>
+	
+	<div class="clear-floats"></div>
+</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	
+	
+		<tr>
+			<td id="content-table-col">
+				<table id="content-table">
+					<tr id="content-row">
+						
+						
+						
+							<td id="navigation-cell" class="visible">
+								
+
+<div id="navigation" style="display:;">
+
+	<table id="navigation-table">
+		<tr>
+			<td>
+				<div id="navigation-list-title">Cases</div>
+				
+				<ul id="navigation-list">
+				
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/caseSearch.do" class="menu-top" onclick="">
+								Case Search
+							</a>
+						</li>
+						
+					
+						
+						
+						
+						<li class="">
+							<a href="/public/publicActorSearch.do" class="menu-bottom" onclick="">
+								Participant Search
+							</a>
+						</li>
+						
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+							</td>
+							
+						
+						
+						<td id="content-cell">
+							<div id="content-container" class="">
+								
+									
+								
+
+
+<script type="text/javascript">
+function toggleTable(elem)
+{
+	var $td = $(elem);
+	
+	$td.parents('tr.TableHeading').siblings('tr').each(function() {
+		if ($(this).is(":visible")) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+	});
+
+	var text = $td.text();
+	var firstChar = text.charAt(0);
+	if (firstChar == '+')
+		firstChar = '-';
+	else
+		firstChar = '+';
+
+	$td.text(firstChar + text.substring(1, text.length));
+}
+</script>
+
+	
+	
+	
+<div id="public-splash-message">
+	<center><span style="font-weight:bold">Disclaimer:</span> The information and documents available here should not be relied upon as an official record of action.<br/>Only filed documents can be viewed.  Some documents received in a case may not be available for viewing.<br/>Some documents originating from a lower court, including records and appendices, may not be available for viewing.<br/>For official records, please contact the Clerk of the Supreme Court of Nevada at (775) 684-1600.<br/><br/></center>
+</div>
+
+<form name="caseViewForm" id="caseViewForm" method="post" action="/public/caseView.do;jsessionid=4E2650F252B18EA780CD913C4BBD1C80">
+	<input type="hidden" name="action" value="">
+	<input type="hidden" name="csIID" value="64186">
+	
+	<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4">Case Information: 84861</td>
+</tr>
+<tr>
+<td width="15%" class="label">Short Caption:</td><td width="35%">ESTATE OF POWELL VS. VALLEY HEALTH SYS., LLC</td><td width="15%" class="label">Court:</td><td width="35%">Supreme Court</td>
+</tr>
+<tr>
+<td colspan="2"></td><td class="label">Related Case(s):</td><td><a href="/public/caseView.do?csIID=60555">82250</a>, <a href="/public/caseView.do?csIID=63578">84402</a>, <a href="/public/caseView.do?csIID=63607">84424</a></td>
+</tr>
+<tr>
+<td valign="top" class="label">Lower Court Case(s):</td><td valign="top">Clark Co. - Eighth Judicial District - A788787</td><td width="15%" class="label">Classification:</td><td width="35%">Civil Appeal - General - Other</td>
+</tr>
+<tr>
+<td class="label">Disqualifications:</td><td></td><td valign="top" class="label">Case Status:</td><td valign="top">Submitted for Decision</td>
+</tr>
+<tr>
+<td class="label">Replacement:</td><td></td><td class="label">Panel Assigned:</td><td>
+					Panel
+					</td>
+</tr>
+<tr>
+<td class="label">To SP/Judge:</td><td>06/21/2022 / Haberfeld, Stephen</td><td class="label">SP Status:</td><td>Completed</td>
+</tr>
+<tr>
+<td class="label">Oral Argument:</td><td>09/12/2023 at 2:00 PM</td><td class="label">Oral Argument Location:</td><td>Las Vegas</td>
+</tr>
+<tr>
+<td class="label">Submission Date:</td><td>09/12/2023</td><td class="label">How Submitted:</td><td>After Oral Argument</td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+	<br/>
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="3"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Party Information
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Role</td><td>Party Name</td><td>Represented By</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Darci Creecy</td><td valign="top">Paul S. Padda
+							(Paul Padda Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Estate of Rebecca Powell</td><td valign="top">Paul S. Padda
+							(Paul Padda Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Isaiah Khosrof</td><td valign="top">Paul S. Padda
+							(Paul Padda Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Lloyd Creecy</td><td valign="top">Paul S. Padda
+							(Paul Padda Law, PLLC)
+						</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td valign="top">Appellant</td><td valign="top">Taryn Creecy</td><td valign="top">Paul S. Padda
+							(Paul Padda Law, PLLC)
+						</td>
+</tr>
+<tr class="EvenRow" style="display:none;">
+<td valign="top">Respondent</td><td valign="top">Valley Health System, LLC</td><td valign="top">Adam Garth
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						<br>S. Brent Vogel
+							(Lewis Brisbois Bisgaard &amp; Smith, LLP/Las Vegas)
+						</td>
+</tr>
+</table>
+		<br/>
+	
+
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="4"><a style="color:white;" onclick="toggleTable(this); return false;" href="#">+
+						Due Items
+					</a></td>
+</tr>
+<tr class="TableSubHeading" style="display:none;">
+<td>Due Date</td><td>Status</td><td>Due Item</td><td>Due From</td>
+</tr>
+<tr class="OddRow" style="display:none;">
+<td>08/10/2022</td><td>Overdue</td><td>Settlement Attendance Sheet</td><td>Settlement Judge</td>
+</tr>
+</table>
+		<br/>
+	
+	
+	
+		<table class="FormTable">
+<tr class="TableHeading">
+<td colspan="5">Docket Entries</td>
+</tr>
+<tr class="TableSubHeading">
+<td width="8%">Date</td><td width="30%">Type</td><td>Description</td><td align="center">Pending?</td><td>Document</td>
+</tr>
+<tr class="OddRow">
+<td>06/14/2022</td><td>Filing Fee</td><td>Filing Fee due for Appeal. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>06/14/2022</td><td>Notice of Appeal Documents</td><td>Filed Notice of Appeal. Appeal docketed in the Supreme Court this day. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=861804&onBaseDocumentNumber=22-18903">22-18903</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/14/2022</td><td>Notice/Outgoing</td><td>Issued Notice to Pay Supreme Court Filing Fee. No action will be taken on this matter until filing fee is paid. Due Date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=861807&onBaseDocumentNumber=22-18906">22-18906</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2022</td><td>Filing Fee</td><td>Filing Fee Paid. $250.00 from Paul Padda Law.  Check no. 12206. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/21/2022</td><td>Notice/Outgoing</td><td>Issued Notice of Referral to Settlement Program. This appeal may be assigned to the settlement program.  Timelines for requesting transcripts and filing briefs are stayed. Docketing Statement mailed to counsel for appellants - due: 21 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=862452&onBaseDocumentNumber=22-19540">22-19540</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>06/21/2022</td><td>Settlement Notice</td><td>Issued Notice: Assignment to Settlement Program. Issued Assignment Notice to NRAP 16 Settlement Program.  Settlement Judge: Stephen E. Haberfeld. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=862487&onBaseDocumentNumber=22-19573">22-19573</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>06/24/2022</td><td>Settlement Program Report</td><td>Filed ECAR/Appropriate for Settlement Program. This case is appropriate for mediation and a settlement conference is scheduled for July 18, 2022, at 8:00 AM. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=863047&onBaseDocumentNumber=22-20070">22-20070</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/13/2022</td><td>Notice/Outgoing</td><td>Issued Notice to File Docketing Statement. Due date: 7 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=865013&onBaseDocumentNumber=22-22002">22-22002</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/20/2022</td><td>Docketing Statement</td><td>Filed Docketing Statement Civil Appeals. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=865905&onBaseDocumentNumber=22-22838">22-22838</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>07/27/2022</td><td>Settlement Program Report</td><td>Filed Final Report/No Settlement. The parties were unable to agree to a settlement of this matter. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=866740&onBaseDocumentNumber=22-23651">22-23651</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>07/28/2022</td><td>Settlement Order/Procedural</td><td>Filed Order: No Settlement/Briefing Reinstated. The parties were unable to agree to a settlement.  Appellant(s): 14 days transcript request; 90 days opening brief and appendix. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=866812&onBaseDocumentNumber=22-23719">22-23719</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/01/2022</td><td>Transcript Request</td><td>Filed Certificate of No Transcript Request. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=867117&onBaseDocumentNumber=22-23991">22-23991</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>09/27/2022</td><td>Order/Clerk's</td><td>Filed Order Granting Telephonic Extension.  Appellants' Opening Brief and Appendix due:  November 9, 2022.  (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=873778&onBaseDocumentNumber=22-30315">22-30315</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>10/31/2022</td><td>Motion</td><td>Filed Appellants' Joint Motion to Permit Appellants Additional Time to File an Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=877592&onBaseDocumentNumber=22-34026">22-34026</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>11/04/2022</td><td>Order/Procedural</td><td>Filed Order Granting Motion. Appellant's opening brief and appendix due: January 9, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=878324&onBaseDocumentNumber=22-34712">22-34712</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/02/2022</td><td>Motion</td><td>Filed Respondent's Motion to Require Posting of or Increasing Amount of Supersedeas Bond by Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=881735&onBaseDocumentNumber=22-37959">22-37959</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/09/2022</td><td>Motion</td><td>Filed Motion to Permit Appellant Additional Time to Respond to Respondent's Motion Regarding Bond. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=882554&onBaseDocumentNumber=22-38760">22-38760</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/12/2022</td><td>Motion</td><td>Filed Respondent's Opposition to Appellant's Motion for Extension of Time to Respond to Motion to Requite Posting of or Increasing Amount of Supersedeas Bond by Appellants. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=882717&onBaseDocumentNumber=22-38922">22-38922</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/12/2022</td><td>Motion</td><td>Filed Amended Certificate of Service to Respondent's Opposition to Appellant's Motion for Extension of Time to Respond to Motion to Requite Posting of or Increasing Amount of Supersedeas Bond by Appellants.(SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=882734&onBaseDocumentNumber=22-38939">22-38939</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/16/2022</td><td>Order/Procedural</td><td>Filed Order. Appellants have filed a motion for an extension of time, until January 6, 2023, to file an opposition to respondent's motion to require posting of or increasing amount of supersedeas bond.  The extension motion is granted, in part, to the following extent.  Appellants shall have until December 23, 2022, to file and serve an opposition to the motion.  Respondent shall have 7 days from service of the opposition to file and serve any reply. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=883343&onBaseDocumentNumber=22-39485">22-39485</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>12/23/2022</td><td>Motion</td><td>Filed Appellants' Opposition to Motion to Require Posting of or Increasing Amount of Supersedeas Bond By Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=884262&onBaseDocumentNumber=22-40393">22-40393</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>12/29/2022</td><td>Motion</td><td>Filed Reply to Response. Respondents Reply to Appellants Opposition to Motion to Require Posting of or Increasing Amount of Supersedeas Bond by Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=884689&onBaseDocumentNumber=22-40808">22-40808</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/09/2023</td><td>Motion</td><td>Filed Appellants' Additional Time to File an Opening Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=885632&onBaseDocumentNumber=23-00677">23-00677</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/10/2023</td><td>Motion</td><td>Filed Respondent's Opposition to Motion for Third Extension of Time to File Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=885781&onBaseDocumentNumber=23-00825">23-00825</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/17/2023</td><td>Motion</td><td>Filed Appellants' Reply to Respondent's Opposition to Extension of Time to File Opening Brief. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=886549&onBaseDocumentNumber=23-01550">23-01550</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>01/25/2023</td><td>Motion</td><td>Filed Respondent's Motion to Dismiss Appellants' Appeal for Failure to File Timely Opening Brief and Appendix. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=887481&onBaseDocumentNumber=23-02466">23-02466</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>01/30/2023</td><td>Appendix</td><td>Filed Appendix to Opening Brief Volume 1-6. (STRICKEN PER 2/3/23 ORDER) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>01/30/2023</td><td>Brief</td><td>Filed Opening Brief Appellants' Opening Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888006&onBaseDocumentNumber=23-02926">23-02926</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Order/Procedural</td><td>Filed Order. On December 2, 2022, respondent filed a motion requesting this court increase the supersedeas bond.  Appellants oppose the motion and respondent has filed a reply. This court remands the matter for the limited purpose of allowing the district court to consider the motion to increase the supersedeas bond on its merits. The district court shall have 30 days after entry of this order to determine the appropriate security amount.  Appellants shall have 30 days from the date of the district court's order to provide any additional security ordered and to submit proof of security to the clerk of this court. Appellants filed a motion seeking a third extension of time to file the opening brief. Respondent opposes the motion and appellants have filed a reply.  Having reviewed these filings, appellants' motion is granted. The opening brief and appendix were filed on January 30, 2023.  However, the six-volume appendix was filed as a single submission and should have been filed as six separate submissions.  Accordingly, the clerk shall strike the appendix filed on January 30, 2023. Appellants shall have 7 days from the date of this order to re-file the six-volume appendix in six separate submissions.  Respondent shall have 30 days from the date of this order to file and serve the answering brief. fn1[  Respondent's motion to dismiss this appeal is denied.] (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888447&onBaseDocumentNumber=23-03345">23-03345</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888585&onBaseDocumentNumber=23-03481">23-03481</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888586&onBaseDocumentNumber=23-03482">23-03482</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888587&onBaseDocumentNumber=23-03483">23-03483</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888588&onBaseDocumentNumber=23-03484">23-03484</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888589&onBaseDocumentNumber=23-03485">23-03485</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/03/2023</td><td>Appendix</td><td>Filed Appellants' Appendix to Opening Brief. Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888590&onBaseDocumentNumber=23-03486">23-03486</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/06/2023</td><td>Motion</td><td>Filed Appellants' Opposition to Respondent's Motion to Dismiss for Failure to Prosecute. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=888693&onBaseDocumentNumber=23-03587">23-03587</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/24/2023</td><td>Brief</td><td>Filed Respondent's Answering Brief. (REJECTED PER 02/27/23 NOTICE) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection of Deficient Brief. Corrected brief due: 5 days. (SC).</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891011&onBaseDocumentNumber=23-05854">23-05854</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/27/2023</td><td>Brief</td><td>Filed Respondent's Answering Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891081&onBaseDocumentNumber=23-05924">23-05924</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 1. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891084&onBaseDocumentNumber=23-05927">23-05927</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 2. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891085&onBaseDocumentNumber=23-05928">23-05928</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 3. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891087&onBaseDocumentNumber=23-05930">23-05930</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 4. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891088&onBaseDocumentNumber=23-05931">23-05931</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 5. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891089&onBaseDocumentNumber=23-05932">23-05932</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 6. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891090&onBaseDocumentNumber=23-05933">23-05933</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>02/27/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Answering Brief. Vol. 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=891093&onBaseDocumentNumber=23-05936">23-05936</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/09/2023</td><td>Order/Incoming</td><td>Filed District court order in Response to Supreme Court Order dated 02/03/2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892355&onBaseDocumentNumber=23-07152">23-07152</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Motion</td><td>Filed Respondent's (Valley Health System) Motion to Require Posting of OR Increasing Amount of Supersedeas Bond by Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892624&onBaseDocumentNumber=23-07419">23-07419</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 1 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892625&onBaseDocumentNumber=23-07420">23-07420</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 2 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892626&onBaseDocumentNumber=23-07421">23-07421</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 3 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892629&onBaseDocumentNumber=23-07424">23-07424</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 4 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892630&onBaseDocumentNumber=23-07425">23-07425</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 5 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892631&onBaseDocumentNumber=23-07426">23-07426</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 6 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892632&onBaseDocumentNumber=23-07427">23-07427</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/10/2023</td><td>Appendix</td><td>Filed Respondent's Appendix to Motion to Require Posting Vols. 7 of 7. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=892633&onBaseDocumentNumber=23-07428">23-07428</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>03/17/2023</td><td>Order/Clerk's</td><td>Filed Order Granting Extension Per Telephonic Request. Appellants' reply brief due: April 12, 2023. Appellant's response to motion due: March 31, 2023. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=893579&onBaseDocumentNumber=23-08331">23-08331</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>03/31/2023</td><td>Motion</td><td>Filed Respondent's Response to Motion to Require Posting of OR Increasing Amount of Supersedeas Bond by Appellants. (REJECTED PER NOTICE ISSUED 4/3/23) (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="EvenRow">
+<td>04/03/2023</td><td>Notice/Outgoing</td><td>Issued Notice of Rejection for Response to Motion- No Notice of Appearance. Due in 5 days. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=895368&onBaseDocumentNumber=23-10050">23-10050</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/06/2023</td><td>Motion</td><td>Filed Appellants' Opposition to Respondent's Second Motion to Require Posting or Increasing Amount of Supersedeas Bond by Appellants. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=895870&onBaseDocumentNumber=23-10523">23-10523</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/06/2023</td><td>Letter/Incoming</td><td>Filed Respondent's Letter "Objection to Appellants' Noncompliant Opposition". (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=895878&onBaseDocumentNumber=23-10531">23-10531</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/10/2023</td><td>Motion</td><td>Filed Respondent's Reply to Opposition to Motion to Require Posting of or Increasing Amount of Supersedeas Bond. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=896129&onBaseDocumentNumber=23-10780">23-10780</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/12/2023</td><td>Brief</td><td>Filed Appellants' Reply Brief. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=896677&onBaseDocumentNumber=23-11321">23-11321</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>04/13/2023</td><td>Order/Procedural</td><td>Filed Order Denying Motion to Require Posting of or Increasing Amount of Supersedeas Bond. The district court granted appellants' motion to stay enforcement of the judgment pending determination of their appeal. The district court further concluded that appellants had already posted a $500 appeal bond  and did not require additional bond to secure the stay. Respondent subsequently filed a motion in this court to require appellants to post a supersedeas bond equivalent to the amount of the judgment plus accrued interest. This court remanded the matter for the limited purpose of allowing the district court to consider respondent's motion. The district court entered an order denying respondent's motion and declining to require appellants to post additional security. Respondent has now filed a second motion in this court to require the posting of or increasing the amount of supersedeas bond required of appellants. Appellants have filed an opposition, in which they argue that respondent's motion is not permitted by rule or statute and that the district court properly weighed the relevant factors. Respondent has filed a reply. The purpose of security for a stay pending appeal is to protect the judgment creditor's ability to collect the judgment if it is affirmed by preserving the status quo. This court has recognized that usually a supersedeas bond in the full judgment amount will afford adequate security. However, we have further recognized that the district court has greater familiarity with the facts and circumstances of the case and should be granted broad discretion in determining the appropriate security for a stay. Accordingly, this court denies respondent's motion to increase the amount of bond required of appellants. If they have not already done so, appellants may obtain a stay by posting the $500 bond as ordered by the district court. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=896685&onBaseDocumentNumber=23-11329">23-11329</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>04/13/2023</td><td>Case Status Update</td><td>Briefing Completed/To Screening. (SC)</td><td align="center"></td><td></td>
+</tr>
+<tr class="OddRow">
+<td>06/08/2023</td><td>Order/Procedural</td><td>Filed Notice of Voluntary Disclosure for Justice Bell. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=903735&onBaseDocumentNumber=23-18094">23-18094</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>08/10/2023</td><td>Order/Procedural</td><td>Filed Order Scheduling Oral Argument. Oral argument is scheduled for September 12, 2023, at 2:00 pm, in Las Vegas. The argument shall be limited to 30 minutes. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=911838&onBaseDocumentNumber=23-25853">23-25853</a>
+<br>
+</td>
+</tr>
+<tr class="OddRow">
+<td>08/29/2023</td><td>Notice/Outgoing</td><td>Issued Oral Argument Reminder Notice. (SC)</td><td align="center"></td><td><a onclick="removeError();return true;" href="/document/view.do?csNameID=64186&csIID=64186&deLinkID=914234&onBaseDocumentNumber=23-28169">23-28169</a>
+<br>
+</td>
+</tr>
+<tr class="EvenRow">
+<td>09/12/2023</td><td>Case Status Update</td><td>Oral argument held this day. Case submitted for decision. Before SNP panel. DH/PL/RP. (SC)</td><td align="center"></td><td></td>
+</tr>
+</table>
+	
+</form>
+
+	
+	
+		<div class="page-actions">
+			<div class="page-action-link"><a href="/public/caseView.do?csIID=64186&combined=true" >Combined Case View</a></div>
+			<div class="clear-floats"></div></div>
+	
+
+<script type="text/javascript">
+	function removeError()
+	{
+		var $error = $('#documentError');
+		if($error.length > 0)
+		{
+			$error.hide();
+		}
+	}
+</script>
+
+						</div> 
+					</td> 
+				</tr> 
+			</table> 
+		</td>
+	</tr>
+</table> 
+
+<script type="text/javascript">
+	$("#application-table").hide();
+	var ReCAPTCHACallback = new function() {
+		var PUBLIC_KEY = '6LfLaPYjAAAAAOFDkTzc1xtte8VpSDsnuOBeIfIK';
+
+		this.request = function(action, onSuccess, onError) {
+			if (window.grecaptcha) {
+				window.grecaptcha.ready(function() {
+					var config = {
+						action : action
+					};
+					try {
+						var query = window.grecaptcha.execute(PUBLIC_KEY, config);
+						if (onSuccess) {
+							query.then(onSuccess);
+						}
+					} catch (e) {
+						var message = e && e.message
+								|| 'Captcha request error.';
+						if (onError) {
+							showErrorMessage();
+						}
+					}
+				});
+			} else {
+				if (onError) {
+					showErrorMessage();
+				}
+			}
+		};
+	};
+
+	function validateUser() {
+		var onSuccess = function(reCaptchaResponse) {
+			$.ajax({
+				type : 'POST',
+				url : '/public/reCaptcha.do',
+				data : {
+					'reCaptchaResponse' : reCaptchaResponse
+				},
+				dataType : 'json',
+				success : function(data) {
+					if (data == false) {
+						showErrorMessage();
+					} else {
+						$("#application-table").show();
+					}
+				},
+				error : function(error) {
+					showErrorMessage();
+				}
+			});
+		};
+		var onError = function(message) {
+		};
+		var title = "NVCTP";
+		if ($(document).find("title").text() != null) {
+			// To sent title as reCaptcha Action
+			title = title
+					+ $(document).find("title").text().split(" ").join("")
+							.split(":").join("").split("-").join("").split("&")
+							.join("");
+		}
+		ReCAPTCHACallback.request(title, onSuccess, onError);
+
+	}
+
+	validateUser();
+
+	function showErrorMessage() {
+		var location = window.location.href;
+		var errUrl = "/public/caseSearch.do?reCaptcha=error";
+		if (!endsWith(location, errUrl)) {
+			window.location.href = "/public/caseSearch.do?reCaptcha=error";
+		} else {
+			var err = '<div class="error-widget-container"><div class="ui-state-error error-widget"><div class="error-header"><span class="text">Validation Error</span><span class="ui-icon ui-icon-closethick close-button" title="Close"></span><div class="clear-floats"></div></div><ul><li>Error verifying reCAPTCHA, please try again.</li></ul></div></div>';
+			var content = $("#content-container").html();
+			$("#content-container").html(err + content);
+			$("#application-table").show();
+		}
+	}
+
+	function endsWith(str, suffix) {
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
+	}
+</script>
+
+</body>
+</html>

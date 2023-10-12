@@ -45,11 +45,21 @@ with open('zipcodes.txt', 'r') as file:
         if response_status == "success":
             # print(data.get('data').get('filterResults').get('ExactMatch').get('vehicles'))
 
-            # The number of vehicles in the returned JSON with the matching zip code and above $70k
-            num_vehicles = len(data.get('data').get('filterResults').get('ExactMatch').get('vehicles'))
+            # There can be an empty map/dictionary returned if zero vehicles are found
+            if len(data.get('data').get('filterResults')) > 0:
 
-            print(f"Zip code: {zip_code}")
-            print(f"Number of vehicles: {num_vehicles}")
-            print(f"URL: https://shop.ford.com/inventory/transitcommercial/results?Radius=100&PRange=70000%3B73000&Order=HighPrice&zipcode={zip_code}\n")
-            print(f"========================================\n")
+                # The number of vehicles in the returned JSON with the matching zip code and above $70k
+                num_vehicles = len(data.get('data').get('filterResults').get('ExactMatch').get('vehicles'))
+
+                # If there are vehicles, print out the zip code and the number of vehicles
+                if num_vehicles > 0:
+                    print(f"Zip code: {zip_code}")
+                    print(f"Number of vehicles: {num_vehicles}")
+                    print(f"URL: https://shop.ford.com/inventory/transitcommercial/results?Radius=100&PRange=70000%3B73000&Order=HighPrice&zipcode={zip_code}\n")
+
+                    # Print our the vins in the returned JSON for this zip code
+                    for vehicle in data.get('data').get('filterResults').get('ExactMatch').get('vehicles'):
+                        print(vehicle.get('vin'))
+
+                    print(f"========================================\n")
 

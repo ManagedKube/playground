@@ -10,7 +10,11 @@ import sys
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-FORD_SEARCH_URL = "https://shop.ford.com/aemservices/cache/inventory/dealer-lot?dealerSlug=O%2BvqNfNq6oPSDXJZ6w%2B70OkQTLnpMHLAKUQDRHGAaDzlUt6zJme%2BM17yTjbX4qi5&make=Ford&market=US&Order=Distance&PRange=69000%3B73000&Radius=100&inventoryType=Radius&model=transit+commercial&segment=Commercial-truck&zipcode="
+LOWEST_PRICE = 70000
+SEARCH_RADIUS = 100
+DEALER_SLUG = "O%2BvqNfNq6oPSDXJZ6w%2B70OkQTLnpMHLAKUQDRHGAaDzlUt6zJme%2BM17yTjbX4qi5" # Not really sure what this does
+
+FORD_SEARCH_URL = f"https://shop.ford.com/aemservices/cache/inventory/dealer-lot?dealerSlug={DEALER_SLUG}&make=Ford&market=US&Order=Distance&PRange={LOWEST_PRICE}%3B73000&Radius={SEARCH_RADIUS}&inventoryType=Radius&model=transit+commercial&segment=Commercial-truck&zipcode="
 
 ## Open a file on the local system
 with open('zipcodes.txt', 'r') as file:

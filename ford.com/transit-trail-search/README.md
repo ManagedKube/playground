@@ -2,33 +2,12 @@ Ford.com/Transit Trail search
 
 This searches the ford.com page for available vehicle:
 
-https://shop.ford.com/inventory/transitcommercial/results?zipcode=91911&Radius=100
+https://shop.ford.com/inventory/transitcommercial/results?Radius=100&PRange=70000%3B73000&Order=HighPrice&zipcode=89138
 
 # Install dependencies
 
-```
-pip3 freeze > requirements.txt
-```
 
 ```
 pip3 install -r requirements.txt
 ```
 
-
-
-
-
-curl 'https://shop.ford.com/aemservices/cache/inventory/dealer-lot?dealerSlug=O%2BvqNfNq6oPSDXJZ6w%2B70OkQTLnpMHLAKUQDRHGAaDzlUt6zJme%2BM17yTjbX4qi5&make=Ford&market=US&Order=Distance&PRange=69000%3B73000&Radius=100&inventoryType=Radius&model=transit+commercial&segment=Commercial-truck&zipcode=91911' --compressed 
-
--H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0' 
-
--H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' 
-
--H 'Accept-Language: en-US,en;q=0.5' 
--H 'Accept-Encoding: gzip, deflate, br' 
--H 'Upgrade-Insecure-Requests: 1' 
--H 'Sec-Fetch-Dest: document' 
--H 'Sec-Fetch-Mode: navigate'
- -H 'Sec-Fetch-Site: none' 
- -H 'Sec-Fetch-User: ?1' 
- -H 'Connection: keep-alive' -H 'Cookie: FPI=make=Ford&html=false&model=Transit%20Commercial&year=2023&zip=91911&geoPACode=05534; rxVisitor=1677672427116JHGKISL897OU94GTJ7KO1D0VHC0VORE8; _sfid_fb3c={%22anonymousId%22:%221d0a9f7dd14f4dd9%22%2C%22consents%22:[]}; _evga_31c8={%22uuid%22:%221d0a9f7dd14f4dd9%22}; OptanonConsent=isGpcEnabled=0&datestamp=Wed+Oct+11+2023+16%3A20%3A47+GMT-0700+(Pacific+Daylight+Time)&version=202211.2.0&isIABGlobal=false&hosts=&consentId=c2eb0b47-6ca5-4158-90e7-5c82b7f09751&interactionCount=2&landingPath=NotLandingPage&groups=1%3A1%2C6%3A1%2C2%3A1%2C4%3A1%2C3%3A1&AwaitingReconsent=false&geolocation=US%3BNV; AMCV_EFD95E09512D2A8E0A490D4D%40AdobeOrg=-841662559%7CMCIDTS%7C19642%7CMCMID%7C11944708686324880071990475432599785456%7CMCAID%7CNONE%7CMCOPTOUT-1697072021s%7CNONE%7CMCAAMLH-1697669621%7C9%7CMCAAMB-1697669621%7Cj8Odv6LonN4r3an7LhD3WZrU1bUpAkFkkiY1ncBR96t2PTI%7CvVersion%7C4.5.2; mbox=PC#111691347934079-685372.35_0#1760311247|session#6776693569a448fc98a12b86eb0b0075#1697068307; s_ecid=MCMID%7C11944708686324880071990475432599785456; fv_v54=v54|ui:rad:pc; fv_v1_v10=v8|fmc:fordvehicles.com,v1|05727,v3|FDAF-72C; fv_v41_v50=v42|logged out,v48|si:dre,v49|inplant,v45|false; fv_entpg=entpg|fv:vehicle:home:ford transit-comm; LPVID=JlYTljOWEwZjlkYmEzMTdj; fv_v16=v16|ford transit-comm; fv_v34=v34|2023:ford transit-comm; fv_v11_v20=v16|ford transit-comm,v18|cargovan,v17|230703-qq-1818320782; fv_v31_v40=v34|2023:ford transit-comm,v40|D=v8; fv_refdom=refdom|www.google.com; regions=Marketing=San%20Francisco&FDAF=FDAF-72C&LMDA=LMDAF-807&zip=94005&PACode=05727; gt_uid=74b8f7c5-7767-4538-b4dc-148f567790a8; FPS_DTM_RVV-IMPRESS=T; FPS_Target_VOI_Model=%7B%22model%22%3A%22Transit%20Commercial%22%2C%22year%22%3A%222023%22%2C%22make%22%3A%22Ford%22%2C%22score%22%3A74231%7D; FPS_Target_VOI_Model_T1=%7B%22model%22%3A%22Transit%20Commercial%22%2C%22year%22%3A%222023%22%2C%22make%22%3A%22Ford%22%2C%22score%22%3A74231%7D; FPS_Target_RVVAggregate=%7B%22model%22%3A%22Transit%20Commercial%22%2C%22year%22%3A%222023%22%2C%22make%22%3A%22Ford%22%2C%22on%22%3A%222023-10-11T22%3A53%3A52.514%2B00%3A00%22%2C%22score%22%3A6600%7D; FPS_NJT=Ford(transit-comm-2023|si:vls:results:si:vls:vehicledetails:si:vls-findit:vhp:mdp); s_fid=47067ECD48C5D9DD-13839283BBFBD3EC; mdLogger=false; kampyleUserSession=1697066450786; kampyleSessionPageCounter=1; kampyleUserSessionsCount=32; FPS_Target_VOI_Trim=%7B%22model%22%3A%22Transit%20Commercial%22%2C%22year%22%3A%222023%22%2C%22make%22%3A%22Ford%22%2C%22trim%22%3A%22Cargo%20Van%22%2C%22score%22%3A44179%7D; FPS_Target_VOI_Trim_T1=%7B%22model%22%3A%22Transit%20Commercial%22%2C%22year%22%3A%222023%22%2C%22make%22%3A%22Ford%22%2C%22trim%22%3A%22Cargo%20Van%22%2C%22score%22%3A44179%7D; fv_ev11_ev20=ev18|none,ev19|none; _abck=0F5EB8840791945A95EA51896087BCF2~-1~YAAQIfkpF41ZNBSLAQAArjz5IAq5/b4f1FT6FcU3QQHwcGhOtdvalzat3z/HDj1CTJom6ET7UUOGwRcRnCaDYSzlUVB9FFCX1spUoKxDz6V/7Ewob7ftW0Mc5NqEdt6NpsXMYvUiVOmZtdHE3IwRTl3mqBgHCiR4aZB5JfNRG4HPiSWqa9CaHfrdbUYOJSiK04yk4WOJDyK/BHIE9J2gLw3tF2hQg4YcUi1AdjYzZgXIMXPjr87kZsnTinPeFjqs3KSzIx/9mQMt3ltWmFcPcpuotCtC69Xij0yvbwPpoMr17gDUNv3wEH8itMgWHnUgnbbwlYIp9MchG4PDKpNoCxUe7SmzVxtMrdOlWslWAlu+Z1U1gi5s7hG4wE0uY9cvU+BfGoltszGu8AFokbP784uIPXt0deI=~0~-1~-1; OptanonAlertBoxClosed=2023-08-03T22:24:05.283Z; fv_ev1_ev10=ev2|ford transit-comm; s_cp_pers=CX_GOTD_MY23_Transit_Scheduled_Prod_Creative2B; _y=f7d5eb03-b446-4956-b453-b544053f543f; _shopify_y=f7d5eb03-b446-4956-b453-b544053f543f; _gcl_au=1.1.1574510591.1691347393; _hjSessionUser_2594529=eyJpZCI6IjA4Mzc1NmZkLWE1YjItNWU1NC1hNDU3LTJlODkyOTZkYzJiMSIsImNyZWF0ZWQiOjE2OTEzNDczOTUwMzEsImV4aXN0aW5nIjpmYWxzZX0=; RT="z=1&dm=shop.ford.com&si=06210449-0b6c-428b-9948-34b66bba53f9&ss=lnmcl19e&sl=0&tt=0&bcn=%2F%2F17de4c18.akstat.io%2F"; fma_YmFuYW5h=true; userInfo=country_code=US,region_code=NV,city=LASVEGAS,county=CLARK,zip=89101-89135+89137-89156+89158-89161+89164-89166+89169+89170+89177-89180+89183+89185+89193+89195+89199; at_check=true; dtCookie=v_4_srv_14_sn_L02I7AR8611OHHMEO9UT3L2PAP0EEECJ_app-3Af96a84fc1bd213a5_1_ol_0_perc_100000_mul_1; dtPC=14$266202158_609h-vPFFLSOQOLRTWWUOIMWQKSNDLKIDSKKBA-0e0; rxvt=1697075757535|1697073957535; dtSa=-; AMCVS_EFD95E09512D2A8E0A490D4D%40AdobeOrg=1; pn=fv%3Asi%3Avls%3Aresults%3Aford%20transit-comm; s_p_s_prop8=typed-bookmarked; visivalm=0; visivale=0; s_cc=true; liyml_details=empty; s_sq=fmcfordt12all%252Cfmcfordt123all%3D%2526c.%2526a.%2526activitymap.%2526page%253Dfv%25253Asi%25253Avls%25253Aresults%25253Aford%252520transit-comm%2526link%253D100%252520miles%2526region%253Ddealer-popdown%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dfv%25253Asi%25253Avls%25253Aresults%25253Aford%252520transit-comm%2526pidt%253D1%2526oid%253Djavascript%25253Avoid%2525280%252529%2526ot%253DA%26fmcfvngdev%3D%2526c.%2526a.%2526activitymap.%2526page%253Dhttps%25253A%25252F%25252Fshop.ford.com%25252Finventory%25252Ftransitcommercial%25252F%25253Fgnav%25253Dshopnav-si%2526link%253D100%252520miles%2526region%253Ddealer-popdown%2526.activitymap%2526.a%2526.c; urlParamMap=zipcode=94005; fps_purwylo_seen=true; ak_bmsc=C424BEDDD03342537F0443B2C3A59EDA~000000000000000000000000000000~YAAQTqrWF67aLCWLAQAA0i6aJRXCuHey6Lym8aEfge/cyl60O27F9Jw32eSXC+VaoouzyRaDoIf4qeDguUVa2LOsraOhfYBATjS0JatgcPzvHp7guSooC81ul1AiqDDznE+gNJ1qZOShpBzsZH2GP5bL+Z+wszbFgN4zqRTj8nL5E5y2oSAXeRXDbjvtFFxrrsma0QZvQznkZD/osLlgagTM8nf5K3e9jQXpMENbUokDAExIZQYQ3xiTrGwEIuCc1i1Pa9hE0kk0NO2bLrEmiDL52izTtoiNnSVcycPgIiYmylrY4U3BFDVYUNaYvHdq/VC9PnfHbXBZijBtA1aOqO81z0mgn7SpKIBxgVYDovQKUMLvlGwxBhlsbrSJD2P1RQLvK0WVzsoJ'

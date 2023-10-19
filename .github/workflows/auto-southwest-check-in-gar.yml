@@ -24,6 +24,8 @@ on:
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   ## I think it is safe to assume we will not be checking into flights between 11pm to 3am.  So we will set the cron to run.
+  ## We also set this to cycle at the 37 min mark on the hour.  Seemed like a good min to use, hoping flights dont really
+  ## check in at that time.
   schedule:
           ## ┌───────────── minute (0 - 59)
           ## │  ┌───────────── hour (0 - 23)

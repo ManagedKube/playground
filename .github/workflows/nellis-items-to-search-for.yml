@@ -38,4 +38,5 @@ jobs:
         pip install slack-sdk
     - name: Run Script
       run: |
-        python3 ./nellisauction.com/search_for_items/run_python.py
+        cd ./nellisauction.com/search_for_items
+        python3 run_python.py

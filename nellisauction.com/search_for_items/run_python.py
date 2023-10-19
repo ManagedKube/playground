@@ -7,13 +7,6 @@ import re
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-## Get user inputs
-# FACILITY_ID = sys.argv[1]
-# TOUR_ID = sys.argv[2]
-# YEAR = sys.argv[3]
-# MONTH = sys.argv[4]
-# INTERESTED_DATES = sys.argv[5]
-
 # How many tickets are you looking for per time slot
 NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
 SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
@@ -21,6 +14,11 @@ SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
 ## Get envars
 debug_on = os.environ.get('DEBUG_ON')
 run_only_once = os.environ.get('RUN_ONLY_ONCE') # only do one loop of this and stop after the first free reservaction is found
+
+## Disable slack call for local runs
+slack_enabled = 'true'
+if os.environ.get('DISABLE_SLACK') == 'true':
+    slack_enabled = 'false'
 
 ## Send message to Slack
 ## doc: https://github.com/slackapi/python-slack-sdk#sending-a-message-to-slack
@@ -88,7 +86,8 @@ with open('items_to_search_for.txt', 'r') as file:
                 print(f"Search with more than one item available: {search_item} | {url}")
 
                 ## Send message to Slack
-                send_to_slack(f"""
-                    Search with more than one item available: {search_item}
-                    Link: {url}                                                                                                                                                
-                """)
+                if slack_enabled == 'true':
+                    send_to_slack(f"""
+                        Search with more than one item available: {search_item}
+                        Link: {url}                                                                                                                                                
+                    """)

@@ -65,7 +65,7 @@ jobs:
     ## and about half of that to be safe.  Then we are setting the cron above to re-run this job every 2-3 hours or so.  There
     ## will be some overlap, which I think is ok to have two of these things running at the same time.  That will give us coverage
     ## while one is shutting down and the other is starting up.
-    timeout-minutes: 150
+    # timeout-minutes: 150
     steps:
     - name: Checkout
       uses: actions/checkout@v4

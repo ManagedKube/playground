@@ -23,9 +23,7 @@ on:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-  ## I think it is safe to assume we will not be checking into flights between 11pm to 3am.  So we will set the cron to run.
-  ## We also set this to cycle at the 37 min mark on the hour.  Seemed like a good min to use, hoping flights dont really
-  ## check in at that time.
+  ## Github Action runs on UTC.  Didnt want to figure it out so just making this run on a 24hour schedule.
   schedule:
           ## ┌───────────── minute (0 - 59)
           ## │  ┌───────────── hour (0 - 23)
@@ -36,12 +34,17 @@ on:
           ## │  │ │ │ │
           ## │  │ │ │ │
           ## *  * * * *
+    - cron: '37 0 * * *'
+    - cron: '37 2 * * *'
     - cron: '37 4 * * *'
-    - cron: '37 7 * * *'
+    - cron: '37 6 * * *'
+    - cron: '37 8 * * *'
     - cron: '37 10 * * *'
-    - cron: '37 13 * * *'
+    - cron: '37 12 * * *'
+    - cron: '37 14 * * *'
     - cron: '37 16 * * *'
-    - cron: '37 19 * * *'
+    - cron: '37 18 * * *'
+    - cron: '37 20 * * *'
     - cron: '37 22 * * *'
 
 env:
@@ -61,7 +64,7 @@ jobs:
     ## and about half of that to be safe.  Then we are setting the cron above to re-run this job every 2-3 hours or so.  There
     ## will be some overlap, which I think is ok to have two of these things running at the same time.  That will give us coverage
     ## while one is shutting down and the other is starting up.
-    timeout-minutes: 220
+    timeout-minutes: 150
     steps:
     - name: Checkout
       uses: actions/checkout@v2

@@ -7,7 +7,7 @@ name: "auto-southwest-check-in-gar"
 on:
   # Push is for testing only to allow you to test this workflow without
   # a merge and just a push.
-  push:
+#   push:
   pull_request:
     # types:
     #   - closed
@@ -15,8 +15,6 @@ on:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-  ## Github Action runs on UTC.  Didnt want to figure it out so just making this run on a 24hour schedule.
-  schedule:
           ## ┌───────────── minute (0 - 59)
           ## │  ┌───────────── hour (0 - 23)
           ## │  │ ┌───────────── day of the month (1 - 31)
@@ -26,19 +24,8 @@ on:
           ## │  │ │ │ │
           ## │  │ │ │ │
           ## *  * * * *
-  - cron: '15 * * * *'
-  # - cron: '37 0 * * *'
-  # - cron: '37 2 * * *'
-  # - cron: '37 4 * * *'
-  # - cron: '37 6 * * *'
-  # - cron: '37 8 * * *'
-  # - cron: '37 10 * * *'
-  # - cron: '37 12 * * *'
-  # - cron: '37 14 * * *'
-  # - cron: '37 16 * * *'
-  # - cron: '37 18 * * *'
-  # - cron: '37 20 * * *'
-  # - cron: '37 22 * * *'
+  schedule:
+    - cron: '*/5 * * * *'
 
 env:
   # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

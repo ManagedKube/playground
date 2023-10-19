@@ -13,8 +13,13 @@ from slack_sdk.errors import SlackApiError
 LOWEST_PRICE = 70000
 SEARCH_RADIUS = 100
 DEALER_SLUG = "O%2BvqNfNq6oPSDXJZ6w%2B70OkQTLnpMHLAKUQDRHGAaDzlUt6zJme%2BM17yTjbX4qi5" # Not really sure what this does
+DEALER_SLUG_2 = "Bj4LTfcZRbpKTHZGbleizeT0uGXWzmpfGMOk1EqF5ks%3D" # Not really sure what this does
 
+## This is the URL that is used to get the inventory for a zip code.  The list of vehicles for the zip code
 FORD_SEARCH_URL = f"https://shop.ford.com/aemservices/cache/inventory/dealer-lot?dealerSlug={DEALER_SLUG}&make=Ford&market=US&Order=Distance&PRange={LOWEST_PRICE}%3B73000&Radius={SEARCH_RADIUS}&inventoryType=Radius&model=transit+commercial&segment=Commercial-truck&zipcode="
+
+## This is the URL for the details page of a vehicle
+FORD_URL_VEHICLE_DETAILS_INFO = f"https://shop.ford.com/aemservices/cache/inventory/dealer/vehicle-details?dealerSlug={DEALER_SLUG_2}&modelSlug=2023-transit%20commercial&make=Ford&market=US&requestTowingData=undefined&inventoryType=Radius&ownerPACode=20672&segment=Commercial-truck&zipcode=11377&vin=1FTBW2XG3PKB37549"
 
 ## Open a file on the local system
 with open('zipcodes.txt', 'r') as file:

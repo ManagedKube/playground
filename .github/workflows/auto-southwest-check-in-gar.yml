@@ -29,8 +29,6 @@ on:
 env:
   # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
   # SLACK_CHANNEL: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
-  SOUTHWEST_USER_NAME: ${{ secrets.SOUTHWEST_USER_NAME_GAR }}
-  SOUTHWEST_PASSWORD: ${{ secrets.SOUTHWEST_PASSWORD_GAR }}
 
   # Enable debug output
   DEBUG: false
@@ -46,3 +44,4 @@ jobs:
       run: |
         cd soutthwest.com/auto-southwest-check-in/auto-southwest-check-in
         pip3 install -r requirements.txt
+        python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}

@@ -23,8 +23,18 @@ on:
     #   - main
 
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-  # schedule:
-  #   - cron: '*/5 * * * *'
+  schedule:
+          ## ┌───────────── minute (0 - 59)
+          ## │  ┌───────────── hour (0 - 23)
+          ## │  │ ┌───────────── day of the month (1 - 31)
+          ## │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+          ## │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+          ## │  │ │ │ │
+          ## │  │ │ │ │
+          ## │  │ │ │ │
+          ## *  * * * *
+    - cron: '37 10 * * *'
+    - cron: '37 12 * * *'
 
 env:
   # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
@@ -37,6 +47,9 @@ jobs:
   check_open_reservations:
     # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    ## Set the max time to run this job
+    ## https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idtimeout-minutes
+    timeout-minutes: 180
     steps:
     - name: Checkout
       uses: actions/checkout@v2

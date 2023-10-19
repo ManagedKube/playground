@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 100
+target-version = ["py37"]
+
+[tool.codespell]
+skip = 'venv,./utils/airport_timezones.json'
+
+[tool.isort]
+line_length = 100
+profile = "black"
+
+[tool.coverage.run]
+branch = true
+omit = ["**/venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    # The default must be restated because the `exclude_lines` option overrides it.
+    "pragma: no cover",
+
+    # This is not feasible to test as it requires some really wonky module loading.
+    'if __name__ == "__main__":',
+
+    'if TYPE_CHECKING:',
+]
+
+[tool.pytest.ini_options]
+# Don't use the seleniumbase plugin for pytest
+addopts = "-p no:seleniumbase"

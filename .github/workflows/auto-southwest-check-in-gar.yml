@@ -48,7 +48,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Setup
+    - name: Run
       run: |
         cd soutthwest.com/auto-southwest-check-in/auto-southwest-check-in
         pip3 install -r requirements.txt

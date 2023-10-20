@@ -77,9 +77,11 @@ with open('items_to_search_for.txt', 'r') as file:
 
             ## Remove unwanted characters around the returned string
             new_string = result.group(1).replace('<span>', '')
-            new_string = new_string.replace(' items found when searching for', '')
+            new_string = new_string.strip()
+            new_string = new_string.replace('items found when searching for', '')
+            new_string = new_string.replace('item found when searching for', '')
 
-            # print(new_string)
+            print(f"new_string: {new_string}")
 
             ## Do something if the number of items found is greater than 0
             if int(new_string) > 0:

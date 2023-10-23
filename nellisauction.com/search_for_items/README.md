@@ -13,8 +13,8 @@ python3 run_python.py
 ```
 
 
+## Disable slack for local runs
 
-<p class="__search-results-description"><span>5 items found when searching for </span>
-
-
-<p class="__search-results-description"><span>0 items found when searching for </span><
+```
+DISABLE_SLACK=true
+```

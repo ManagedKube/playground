@@ -4,6 +4,7 @@ import requests
 import sys
 import os
 import re 
+import urllib.parse
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
@@ -46,7 +47,7 @@ with open('items_to_search_for.txt', 'r') as file:
         # print(search_item)
 
         ## Construct URL with user inputs
-        url = f"{search_url}{search_item}"
+        url = f"{search_url}{urllib.parse.quote(search_item)}"
 
         ## Make HTTP GET request and get JSON data
         ## Set the header or it will think it is a bot and respond with some error

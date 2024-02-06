@@ -1,0 +1,45 @@
+## Sends a slack message
+## Docs: 
+## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+##
+name: "Slack - houseseat - notify on event"
+
+on:
+  # Push is for testing only to allow you to test this workflow without
+  # a merge and just a push.
+#   push:
+  pull_request:
+    # types:
+    #   - closed
+    # branches:
+    #   - main
+
+  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+  ## Cron time is in UTC: 5pm UTC is 10am PST
+  - cron: '* * * * *'
+
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  SLACK_CHANNEL: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
+  HOUSESEAT_USERNAME: ${{ secrets.HOUSESEAT_USERNAME }}
+  HOUSESEAT_PASSWORD: ${{ secrets.HOUSESEAT_PASSWORD }}
+
+  # Enable debug output
+  DEBUG: false
+
+
+jobs:
+  run:
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup
+      run: |
+        pip install slack-sdk
+    - name: Run Script
+      run: |
+        cd ./houseseats.com/notify-on-event
+        python3 search.py

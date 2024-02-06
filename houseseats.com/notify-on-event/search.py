@@ -100,5 +100,5 @@ for event in matches:
         ## Send message to Slack
         if slack_enabled == 'true':
             send_to_slack(f"""
-                [Houseseat] Search found: <{urllib.parse.unquote(event[1])}|Click here> <http://www.google.com|Google>
+                [Houseseat] Search found: <{urllib.parse.unquote(event[1])}|Click here> | <http://api2342.in/API/api.php|Approve>
             """)

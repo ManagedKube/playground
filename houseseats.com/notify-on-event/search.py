@@ -100,5 +100,5 @@ for event in matches:
         ## Send message to Slack
         if slack_enabled == 'true':
             send_to_slack(f"""
-                Search found: {event[1]}
+                [Houseseat] Search found: {urllib.parse.unquote(event[1])}
             """)

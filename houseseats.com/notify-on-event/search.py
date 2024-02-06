@@ -63,7 +63,7 @@ with open('items_to_search_for.txt', 'r') as file:
         # print(search_item)
 
         # Define regular expression pattern
-        pattern = r'bee'
+        pattern = fr'{search_item}'
 
         # Use regular expression to extract text
         result = re.search(pattern, response.text.lower())

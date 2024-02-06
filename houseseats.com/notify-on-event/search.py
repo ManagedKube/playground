@@ -57,7 +57,7 @@ s.post(login_url, data=login_data, headers=headers)
 response = s.get('https://lv.houseseats.com/member/ajax/upcoming-shows.bv?supersecret=&search=&sortField=&startMonthYear=&endMonthYear=&startDate=&endDate=&start=0', headers=headers)
 
 # Print the content of the 'protected page'
-# print(response.text)
+print(response.text)
 
 
 # Find all instances of the <h1> title of a show

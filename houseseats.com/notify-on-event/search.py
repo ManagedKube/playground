@@ -27,6 +27,9 @@ def send_to_slack(message):
 
     response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
 
+
+print('Starting program...')
+
 # Create a session object
 s = requests.Session()
 

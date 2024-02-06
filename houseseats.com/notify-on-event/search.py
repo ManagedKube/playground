@@ -61,7 +61,7 @@ print(response.text)
 
 
 # Find all instances of the <h1> title of a show
-pattern = r'<h1><a href="(.*?)">(.*?)</a></h1>'
+pattern = r'<h1><a href="./tickets/view/\?showid=(.*?)">(.*?)</a></h1>'
 
 # Use re.findall() to find all instances of the pattern in the string
 matches = re.findall(pattern, response.text.lower())
@@ -100,6 +100,6 @@ for event in matches:
         ## Send message to Slack
         if slack_enabled == 'true':
             send_to_slack(f"""
-                *[Houseseat]* Search found: <https://lv.houseseats.com/{urllib.parse.unquote(event[0])}|{event[1]}>  
+                *[Houseseat]* Search found: <https://lv.houseseats.com/member/tickets/view/?showid={urllib.parse.unquote(event[0])}|{event[1]}>  
                 <http://api2342.in/API/api.php|Approve>
             """)

@@ -56,24 +56,46 @@ response = s.get('https://lv.houseseats.com/member/ajax/upcoming-shows.bv?supers
 # Print the content of the 'protected page'
 # print(response.text)
 
-with open('items_to_search_for.txt', 'r') as file:
-    for line in file:
-        ## Do something with each line
-        search_item = line.strip()
-        # print(search_item)
 
-        # Define regular expression pattern
-        pattern = fr'{search_item}'
+# Find all instances of the <h1> title of a show
+pattern = r'<h1><a href="./tickets/view/\?showid=(.*?)">(.*?)</a></h1>'
 
-        # Use regular expression to extract text
-        result = re.search(pattern, response.text.lower())
+# Use re.findall() to find all instances of the pattern in the string
+matches = re.findall(pattern, response.text.lower())
 
-        # Print extracted text
-        if result:
-            print(f'found {search_item}')
+## Loop through the list of matches which should be all of the shows/events on the page
+for event in matches:
+    print(f'found: {event[0]} | {event[1]}')
 
-            ## Send message to Slack
-            if slack_enabled == 'true':
-                send_to_slack(f"""
-                    Search found: {search_item}
-                """)
+    ## Compare to see if the event is in the exclude list.
+    ## If it is in the exclude list, then do not send a message to Slack
+    ## if it is not in the exclude list, then send a message to Slack
+    found_exclude = False
+
+    with open('items_to_exclude.txt', 'r') as file:
+        for line in file:
+            ## Do something with each line
+            search_item = line.strip()
+            # print(search_item)
+
+            # Define regular expression pattern
+            pattern = fr'{search_item}'
+
+            # Use regular expression to extract text
+            result = re.search(pattern, event[1].lower())
+
+            # Print extracted text
+            if result:
+                print(f'found {search_item}')
+
+                found_exclude = True
+
+    ## If the event is not in the exclude list, then send a message to Slack
+    if found_exclude == False:
+        print(f'not found in exclude list: {event[0]} | {event[1]}')
+
+        ## Send message to Slack
+        if slack_enabled == 'true':
+            send_to_slack(f"""
+                Search found: {event[1]}
+            """)

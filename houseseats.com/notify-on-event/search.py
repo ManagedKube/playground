@@ -95,7 +95,7 @@ for event in matches:
 
     ## If the event is not in the exclude list, then send a message to Slack
     if found_exclude == False:
-        print(f'not found in exclude list: {event[0]} | {event[1]}')
+        print(f'[NOTIFY] not found in exclude list: {event[0]} | {event[1]}')
 
         ## Send message to Slack
         if slack_enabled == 'true':

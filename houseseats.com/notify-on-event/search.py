@@ -7,6 +7,7 @@ import re
 import urllib.parse
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
+import yaml
 
 # How many tickets are you looking for per time slot
 NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
@@ -29,6 +30,17 @@ def send_to_slack(message):
 
 
 print('Starting program...')
+
+
+# Open the state YAML file
+with open('state.yaml', 'r') as file:
+    # Load the YAML data from the file
+    previous_state = yaml.safe_load(file)
+
+# Now data is a list of dictionaries
+print(previous_state)
+
+new_state = []
 
 # Create a session object
 s = requests.Session()
@@ -93,12 +105,33 @@ for event in matches:
 
                 found_exclude = True
 
-    ## If the event is not in the exclude list, then send a message to Slack
+    ## If the event is not in the exclude list, then continue to process the event
     if found_exclude == False:
-        print(f'[NOTIFY] not found in exclude list: {event[0]} | {event[1]}')
+        print(f'[NOT IN EXCLUDE LIST] not found in exclude list: {event[0]} | {event[1]}')
 
-        ## Send message to Slack
-        if slack_enabled == 'true':
-            send_to_slack(f"""
-                *[Houseseat]* Search found: <https://lv.houseseats.com/member/tickets/view/?showid={urllib.parse.unquote(event[0])}|{urllib.parse.unquote(event[1])}>  
-            """)
+        ## Add the event to the new state dictionary list
+        new_state.append({
+            'event_id': event[0],
+            'event_name': event[1]
+        })
+
+        ## If the event is NOT in the previous state dictionary list then send a message to Slack
+        ## and write it to the new state dictionary list
+        found_in_previous_state = False
+
+        for item in previous_state:
+            if item['event_id'] == event[0]:
+                found_in_previous_state = True
+
+        if not found_in_previous_state:
+            ## Send message to Slack
+            print(f'[NOTIFY] Sending slack message for: {event[0]} | {event[1]}')
+            if slack_enabled == 'true':
+                send_to_slack(f"""
+                    *[Houseseat]* Search found: <https://lv.houseseats.com/member/tickets/view/?showid={urllib.parse.unquote(event[0])}|{urllib.parse.unquote(event[1])}>  
+                """)
+
+# Output the new state dictionary list to the state.yaml file
+with open('state.yaml', 'w') as file:
+    # Write the YAML data to the file
+    yaml.dump(new_state, file)

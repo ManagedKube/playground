@@ -36,7 +36,7 @@ def send_to_slack(message):
 loop_count = 0
 while True:
 
-    print('Starting program...')
+    print('[Starting program...]')
 
 
     # Open the state YAML file
@@ -87,7 +87,7 @@ while True:
 
     ## Loop through the list of matches which should be all of the shows/events on the page
     for event in matches:
-        print(f'found: {event[0]} | {event[1]}')
+        print(f'[Event to process]: {event[0]} | {event[1]}')
 
         ## Compare to see if the event is in the exclude list.
         ## If it is in the exclude list, then do not send a message to Slack
@@ -108,7 +108,7 @@ while True:
 
                 # Print extracted text
                 if result:
-                    print(f'found {search_item}')
+                    print(f'[IN EXCLUDE LIST] {search_item}')
 
                     found_exclude = True
 
@@ -144,9 +144,9 @@ while True:
         # Write the YAML data to the file
         yaml.dump(new_state, file)
 
-    print('Sleeping for 60 seconds...')
+    print('[Sleeping] for 60 seconds...')
     loop_count += 1
     if loop_count >= 60:
-        print('Restarting program...')
+        print('[Ending program...]')
         break
     time.sleep(60)

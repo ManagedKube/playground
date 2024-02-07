@@ -121,6 +121,7 @@ for event in matches:
 
         for item in previous_state:
             if item['event_id'] == event[0]:
+                print(f'found in previous state: {event[0]} | {event[1]}')
                 found_in_previous_state = True
 
         if not found_in_previous_state:

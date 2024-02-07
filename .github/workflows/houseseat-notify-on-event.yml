@@ -43,36 +43,12 @@ jobs:
       run: |
         cd ./houseseats.com/notify-on-event
         python3 search.py
-
-
-# # In the first job
-# - name: Save state
-#   run: echo "state information" > state.txt
-
-# - name: Upload state
-#   uses: actions/upload-artifact@v2
-#   with:
-#     name: state
-#     path: state.txt
-
-# # In the subsequent job
-# - name: Download state
-#   uses: actions/download-artifact@v2
-#   with:
-#     name: state
-
-# - name: Load state
-#   run: cat state.txt
-
-
-
-# - name: Commit and push
-#   run: |
-#     git config --local user.email "action@github.com"
-#     git config --local user.name "GitHub Action"
-#     git add .
-#     git commit -m "Add changes"
-#     git push
-#   env:
-#     ## This is the personal access token (PAT) for the GitHub bot user
-#     GITHUB_TOKEN: ${{ secrets.PAT }}
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "[houseseat-notify-on-event action] Updating the state.yaml file"
+        git push
+      env:
+        ## This is the personal access token (PAT) for the GitHub bot user
+        GITHUB_TOKEN: ${{ secrets.PLAYGROUND_REPO }}

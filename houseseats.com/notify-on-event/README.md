@@ -1,7 +1,6 @@
 # notify-on-event
-The purpose of this set of scripts are to continuously search the houseseats.com site after a user has logged in
-and search for specific keywords in the events list.  Once an event is found, it should send a Slack
-notification to a Slack destination.
+This bot will use an authenticated houseseat account to get a list of events.  It will send a Slack notification
+for any events that are not in the items_to_exclude.txt file.
 
 # Envars
 

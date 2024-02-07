@@ -128,7 +128,7 @@ for event in matches:
             print(f'[NOTIFY] Sending slack message for: {event[0]} | {event[1]}')
             if slack_enabled == 'true':
                 send_to_slack(f"""
-                    *[Houseseat]* Search found: <https://lv.houseseats.com/member/tickets/view/?showid={urllib.parse.unquote(event[0])}|{urllib.parse.unquote(event[1])}>  
+                    *[Houseseat v2]* Search found: <https://lv.houseseats.com/member/tickets/view/?showid={urllib.parse.unquote(event[0])}|{urllib.parse.unquote(event[1])}>  
                 """)
 
 # Output the new state dictionary list to the state.yaml file

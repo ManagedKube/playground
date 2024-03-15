@@ -54,6 +54,11 @@ jobs:
       uses: actions/checkout@v4
     - name: Run
       run: |
-        cd soutthwest.com/auto-southwest-check-in/auto-southwest-check-in
+        # cd soutthwest.com/auto-southwest-check-in/auto-southwest-check-in
+        # pip3 install -r requirements.txt
+        # python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}
+        ls -l
+        git clone https://github.com/jdholtz/auto-southwest-check-in.git
+        cd auto-southwest-check-in
         pip3 install -r requirements.txt
-        python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}
+

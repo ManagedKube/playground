@@ -53,7 +53,16 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Run
+      ## Doing this clone method will get the newest versio of the auto-southwest-check-in
+      ## app.  
       run: |
-        cd soutthwest.com/auto-southwest-check-in/auto-southwest-check-in
+        ls -l
+        mkdir temp
+        cd temp
+        git clone https://github.com/jdholtz/auto-southwest-check-in.git
+        cd auto-southwest-check-in
+        ls -l
+        pwd
+        python3 southwest.py --version
         pip3 install -r requirements.txt
         python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_CL }} ${{ secrets.SOUTHWEST_PASSWORD_CL }}

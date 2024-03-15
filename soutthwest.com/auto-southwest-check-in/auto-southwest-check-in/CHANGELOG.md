@@ -3,6 +3,100 @@ When upgrading to a new version, make sure to follow the directions under the "U
 If there is no "Upgrading" header for that version, no post-upgrade actions need to be performed.
 
 
+## 7.3 (2024-03-04)
+**Note**: It seems that Southwest has been refactoring their API, so updating to this
+version is necessary for the script to adapt to these changes (and expect more potential issues!).
+
+**Note 2**: Due to [#230](https://github.com/jdholtz/auto-southwest-check-in/issues/230) and
+[#201](https://github.com/jdholtz/auto-southwest-check-in/issues/201), you may still run into issues when
+running this script in Docker (although, some people have ran into this issue outside of Docker as well).
+
+### New Features
+- An official ARMv7 Docker image is now supported ([#77](https://github.com/jdholtz/auto-southwest-check-in/issues/77))
+- Healthchecks.io integration is added to monitor for successes and failures during fare checking
+([#203](https://github.com/jdholtz/auto-southwest-check-in/pull/203) by [@StevenMassaro](https://github.com/StevenMassaro))
+    - For details on how to set this integration up, see the [configuration documentation](CONFIGURATION.md#healthchecks-url)
+- Flight times are now displayed by the local 12-hour time in notifications
+([#227](https://github.com/jdholtz/auto-southwest-check-in/discussions/227))
+    - Times can be changed to 24-hour format using the [notification_24_hour_time](CONFIGURATION.md#notification-24-hour-time)
+    configuration option
+
+### Bug Fixes
+- Fix passwords not being input correctly into Southwest's login page
+([#223](https://github.com/jdholtz/auto-southwest-check-in/issues/223))
+- Fix an index error during fare checking that resulted in either a crash or monitoring of the wrong flight
+([#224](https://github.com/jdholtz/auto-southwest-check-in/issues/224))
+- Fix pop-ups on the Southwest website from interfering with logging in
+([#226](https://github.com/jdholtz/auto-southwest-check-in/issues/226))
+- Fix an issue with script logging not working in some cases on Windows
+
+### Upgrading
+- Upgrade the dependencies to the latest versions by running `pip install -r requirements.txt`
+
+
+## 7.2 (2024-02-07)
+**Note**: Due to [#201](https://github.com/jdholtz/auto-southwest-check-in/issues/201), the Docker image is currently
+failing to log in to accounts and check in to flights. The workaround for now is to run the script locally with Python,
+if possible
+
+### New Features
+- Added environment variable alternatives for many configuration items
+([#210](https://github.com/jdholtz/auto-southwest-check-in/pull/210) by [@joewesch](https://github.com/joewesch))
+    - Details on how to configure environment variables can be found in the [Configuration documentation](CONFIGURATION.md)
+
+### Bug Fixes
+- Fix failed logins not reporting the correct error
+([#189](https://github.com/jdholtz/auto-southwest-check-in/issues/189))
+- Handle flight departure time changes *mostly* correctly
+    - If a flight is rescheduled within the retrieval interval (default is 24 hours) of the check-in, the flight is still
+    not handled correctly. See [#199](https://github.com/jdholtz/auto-southwest-check-in/issues/199)
+- Don't notify check-ins for lap child passengers
+([#205](https://github.com/jdholtz/auto-southwest-check-in/pull/205) by [@pcarn](https://github.com/pcarn))
+
+### Upgrading
+- Upgrade the dependencies to the latest versions by running `pip install -r requirements.txt`
+
+
+## 7.1 (2023-11-13)
+### New Features
+- Remind users with international flights to fill out their passport information in the scheduling notification
+([#182](https://github.com/jdholtz/auto-southwest-check-in/discussions/182))
+
+### Bug Fixes
+- Fix situations where the Chromedriver version isn't available for the current browser version
+([#180](https://github.com/jdholtz/auto-southwest-check-in/issues/180))
+
+### Upgrading
+- Upgrade the dependencies to the latest versions by running `pip install -r requirements.txt`
+
+
+## 7.0 (2023-11-05)
+### New Features
+- Added official Python 3.12 support
+    - Python 3.7 is officially unsupported now
+- A Docker Compose example is now in the Readme under the [Running in Docker](README.md#running-in-docker) section
+([#171](https://github.com/jdholtz/auto-southwest-check-in/pull/171) by [@ntalekt](https://github.com/ntalekt))
+- A new [FAQ question](README.md#faq) was added to help users that run into issues starting the webdriver in Docker
+    - If you find a better solution to this issue, please let me know
+- Another new [FAQ question](README.md#faq) was added to clear up confusion about putting a computer to sleep that is
+running this script
+
+### Improvements
+- Ensure the chromedriver version always matches the downloaded browser version
+([#172](https://github.com/jdholtz/auto-southwest-check-in/issues/172))
+
+### Bug Fixes
+- Fix logging in not always submitting Southwest's login form correctly. Thanks to [@bradzab0623](https://github.com/bradzab0623)
+for help fixing this issue
+- Fix Docker image not working on ARM architecture
+([#177](https://github.com/jdholtz/auto-southwest-check-in/issues/177))
+
+### Upgrading
+- Upgrade the dependencies to the latest versions by running `pip install -r requirements.txt`
+- If you are using Python 3.7, the script still works. However, it is officially unsupported and therefore recommended to upgrade
+to a newer version
+
+
 ## 6.1 (2023-09-28)
 ### Improvements
 - Flights are now identified by their flight number, ensuring the correct flight is referenced when checking fares and scheduling check-ins

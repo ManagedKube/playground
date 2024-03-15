@@ -58,7 +58,10 @@ jobs:
         # pip3 install -r requirements.txt
         # python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}
         ls -l
+        mkdir temp
+        cd temp
         git clone https://github.com/jdholtz/auto-southwest-check-in.git
         cd auto-southwest-check-in
+        ls -l
         pip3 install -r requirements.txt
 

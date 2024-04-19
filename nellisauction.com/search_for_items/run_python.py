@@ -8,8 +8,10 @@ import urllib.parse
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-# How many tickets are you looking for per time slot
-NUMBER_OF_RESERVABLE_PER_TIME_SLOT = 2
+## Text file with items to search for
+TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR = sys.argv[1]
+
+## Slack channel to send messages to
 SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
 
 ## Get envars
@@ -40,7 +42,7 @@ def send_to_slack(message):
 
 search_url = f"https://www.nellisauction.com/search?query="
 
-with open('items_to_search_for.txt', 'r') as file:
+with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
     for line in file:
         ## Do something with each line
         search_item = line.strip()

@@ -61,7 +61,7 @@ else:
 time.sleep(2.0)
 
 
-# Lines 21 and 22 define the lower and upper boundaries of the color green in the HSV color space (which I determined using the range-detector script in the imutils
+# Lines 50 and 51 define the lower and upper boundaries of the color green in the HSV color space (which I determined using the range-detector script in the imutils
 # library). These color boundaries will allow us to detect the green ball in our video file. Line 23 then initializes our deque
 # of pts
 # using the supplied maximum buffer size (which defaults to 64
@@ -91,7 +91,7 @@ while True:
 		break
 	# resize the frame, blur it, and convert it to the HSV
 	# color space
-	frame = imutils.resize(frame, width=600)
+	frame = imutils.resize(frame, width=1200)
 	blurred = cv2.GaussianBlur(frame, (11, 11), 0)
 	hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 	# construct a mask for the color "green", then perform
@@ -102,39 +102,39 @@ while True:
 	mask = cv2.dilate(mask, None, iterations=2)
 
 
-# Line 38 starts a loop that will continue until (1) we press the q
-# key, indicating that we want to terminate the script or (2) our video file reaches its end and runs out of frames.
+    # Line 83 starts a loop that will continue until (1) we press the q
+    # key, indicating that we want to terminate the script or (2) our video file reaches its end and runs out of frames.
 
-# Line 40 makes a call to the read
-# method of our camera
-# pointer which returns a 2-tuple. The first entry in the tuple, grabbed
-# is a boolean indicating whether the frame
-# was successfully read or not. The frame
-# is the video frame itself. Line 43 handles VideoStream
-# vs VideoCapture
-# implementations.
+    # Line 85 makes a call to the read
+    # method of our camera
+    # pointer which returns a 2-tuple. The first entry in the tuple, grabbed
+    # is a boolean indicating whether the frame
+    # was successfully read or not. The frame
+    # is the video frame itself. Line 87 handles VideoStream
+    # vs VideoCapture
+    # implementations.
 
-# In the case we are reading from a video file and the frame is not successfully read, then we know we are at the end of the video and can break from the while
-# loop (Lines 47 and 48).
+    # In the case we are reading from a video file and the frame is not successfully read, then we know we are at the end of the video and can break from the while
+    # loop (Lines 90 and 91).
 
-# Lines 52-54 preprocess our frame
-# a bit. First, we resize the frame to have a width of 600px. Downsizing the frame
-# allows us to process the frame faster, leading to an increase in FPS (since we have less image data to process). We’ll then blur the frame
-# to reduce high frequency noise and allow us to focus on the structural objects inside the frame
-# , such as the ball. Finally, we’ll convert the frame
-# to the HSV color space.
+    # Lines 94-56 preprocess our frame
+    # a bit. First, we resize the frame to have a width of 600px. Downsizing the frame
+    # allows us to process the frame faster, leading to an increase in FPS (since we have less image data to process). We’ll then blur the frame
+    # to reduce high frequency noise and allow us to focus on the structural objects inside the frame
+    # , such as the ball. Finally, we’ll convert the frame
+    # to the HSV color space.
 
-# Lines 59 handles the actual localization of the green ball in the frame by making a call to cv2.inRange
-# . We first supply the lower HSV color boundaries for the color green, followed by the upper HSV boundaries. The output of cv2.inRange
-# is a binary mask
-# , like this one:
-# Figure 2: Generating a mask for the green ball using the cv2.inRange function.
-# Figure 2: Generating a mask for the green ball using the cv2.inRange function.
+    # Lines 100 handles the actual localization of the green ball in the frame by making a call to cv2.inRange
+    # . We first supply the lower HSV color boundaries for the color green, followed by the upper HSV boundaries. The output of cv2.inRange
+    # is a binary mask
+    # , like this one:
+    # Figure 2: Generating a mask for the green ball using the cv2.inRange function.
+    # Figure 2: Generating a mask for the green ball using the cv2.inRange function.
 
-# As we can see, we have successfully detected the green ball in the image. A series of erosions and dilations (Lines 60 and 61) remove any small blobs that may be left on the mask.
+    # As we can see, we have successfully detected the green ball in the image. A series of erosions and dilations (Lines 101 and 102) remove any small blobs that may be left on the mask.
 
-# Alright, time to perform compute the contour (i.e. outline) of the green ball and draw it on our frame
-# :
+    # Alright, time to perform compute the contour (i.e. outline) of the green ball and draw it on our frame
+    # :
 
 
 
@@ -167,23 +167,23 @@ while True:
 	pts.appendleft(center)
 
 
-# We start by computing the contours of the object(s) in the image on Line 65 and 66. On the subsequent line, make the function compatible with all versions of OpenCV. You can read more about why this change to cv2.findContours
-# is necessary in this blog post. We’ll also initialize the center
-# (x, y)-coordinates of the ball to None
-# on Line 68.
+        # We start by computing the contours of the object(s) in the image on Line 146 and `147`. On the subsequent line, make the function compatible with all versions of OpenCV. You can read more about why this change to cv2.findContours
+        # is necessary in this blog post. We’ll also initialize the center
+        # (x, y)-coordinates of the ball to None
+        # on Line 149.
 
-# Line 71 makes a check to ensure at least one contour was found in the mask
-# . Provided that at least one contour was found, we find the largest contour in the cnts
-# list on Line 75, compute the minimum enclosing circle of the blob, and then compute the center (x, y)-coordinates (i.e. the “centroids) on Lines 77 and 78.
+        # Line 151 makes a check to ensure at least one contour was found in the mask
+        # . Provided that at least one contour was found, we find the largest contour in the cnts
+        # list on Line 155, compute the minimum enclosing circle of the blob, and then compute the center (x, y)-coordinates (i.e. the “centroids) on Lines 157 and 158.
 
-# Line 81 makes a quick check to ensure that the radius
-# of the minimum enclosing circle is sufficiently large. Provided that the radius
-# passes the test, we then draw two circles: one surrounding the ball itself and another to indicate the centroid of the ball.
+        # Line 160 makes a quick check to ensure that the radius
+        # of the minimum enclosing circle is sufficiently large. Provided that the radius
+        # passes the test, we then draw two circles: one surrounding the ball itself and another to indicate the centroid of the ball.
 
-# Finally, Line 89 appends the centroid to the pts
-# list.
+        # Finally, Line 167 appends the centroid to the pts
+        # list.
 
-# The last step is to draw the contrail of the ball, or simply the past N (x, y)-coordinates the ball has been detected at. This is also a straightforward process:
+        # The last step is to draw the contrail of the ball, or simply the past N (x, y)-coordinates the ball has been detected at. This is also a straightforward process:
 
 
 	# loop over the set of tracked points
@@ -196,6 +196,28 @@ while True:
 		# draw the connecting lines
 		thickness = int(np.sqrt(args["buffer"] / float(i + 1)) * 2.5)
 		cv2.line(frame, pts[i - 1], pts[i], (0, 0, 255), thickness)
+
+        ###############################
+        ## show the points values in the frame on the right hand side as a list of the last x points
+        # Get the last 10 points
+		# last_10_pts = pts[-10:]
+
+        # Set the initial position for the text
+		text_position = (10, frame.shape[0] - 10)
+
+        # Format the point as a string
+		point_str = f"Point {i + 1}: {pts[i - 1]}, {pts[i]}"
+
+        # Draw the text on the frame
+		cv2.putText(frame, point_str, text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
+
+        # Move the position up for the next point
+		text_position = (text_position[0], text_position[1] - 15)
+
+        ###############################
+
+
+        
 	# show the frame to our screen
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
@@ -213,13 +235,13 @@ cv2.destroyAllWindows()
 
 
 # We start looping over each of the pts
-# on Line 92. If either the current point or the previous point is None
+# on Line 190. If either the current point or the previous point is None
 # (indicating that the ball was not successfully detected in that given frame), then we ignore the current index continue looping over the pts
-# (Lines 95 and 96).
+# (Lines 193 and 194).
 
 # Provided that both points are valid, we compute the thickness
 # of the contrail and then draw it on the frame
-# (Lines 100 and 101).
+# (Lines 197 and 198).
 
 # The remainder of our ball_tracking.py
 # script simply performs some basic housekeeping by displaying the frame

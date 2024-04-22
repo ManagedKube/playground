@@ -9,7 +9,7 @@
 # installed on your system, you can grab the source from GitHub or just use pip
 # to install it:
 
-# pip install --upgrade imutils
+# pip3 install --upgrade imutils
 
 # From there, Lines 11-16 handle parsing our command line arguments. The first switch, --video
 # is the (optional) path to our example video file. If this switch is supplied, then OpenCV will grab a pointer to the video file and read frames from it. Otherwise, if this switch is not supplied, then OpenCV will try to access our webcam.

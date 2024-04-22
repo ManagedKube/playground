@@ -13,3 +13,9 @@ switch:
 ```
 python ball_tracking.py
 ```
+
+
+# RGB Ball color range detector
+
+https://github.com/PyImageSearch/imutils/blob/master/bin/range-detector
+

@@ -185,6 +185,8 @@ while True:
 
         # The last step is to draw the contrail of the ball, or simply the past N (x, y)-coordinates the ball has been detected at. This is also a straightforward process:
 
+    # Initialize a list to store the last 10 points
+	last_10_pts = [None] * 10
 
 	# loop over the set of tracked points
 	for i in range(1, len(pts)):
@@ -197,24 +199,32 @@ while True:
 		thickness = int(np.sqrt(args["buffer"] / float(i + 1)) * 2.5)
 		cv2.line(frame, pts[i - 1], pts[i], (0, 0, 255), thickness)
 
-        ###############################
-        ## show the points values in the frame on the right hand side as a list of the last x points
-        # Get the last 10 points
-		# last_10_pts = pts[-10:]
+        ################################
+        ## Adds the list of the last 10 points x, y to the frame with a black background
+
+        # Update the list of the last 10 points
+		last_10_pts.pop(0)
+		last_10_pts.append((pts[i - 1], pts[i]))
 
         # Set the initial position for the text
 		text_position = (10, frame.shape[0] - 10)
 
-        # Format the point as a string
-		point_str = f"Point {i + 1}: {pts[i - 1]}, {pts[i]}"
+        # Draw a filled rectangle over the area where the text is drawn
+		cv2.rectangle(frame, (0, frame.shape[0] - 200), (400, frame.shape[0]), (0, 0, 0), -1)
 
-        # Draw the text on the frame
-		cv2.putText(frame, point_str, text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
+        # Loop over the last 10 points and draw them on the frame
+		for j, point in enumerate(reversed(last_10_pts)):
+			if point is not None:
+                # Format the point as a string
+				point_str = f"Point {j + 1}: {point[0]}, {point[1]}"
 
-        # Move the position up for the next point
-		text_position = (text_position[0], text_position[1] - 15)
+                # Draw the text on the frame
+				cv2.putText(frame, point_str, text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
 
-        ###############################
+                # Move the position up for the next point
+				text_position = (text_position[0], text_position[1] - 15)
+
+        ################################
 
 
         

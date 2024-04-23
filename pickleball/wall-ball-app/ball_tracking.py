@@ -77,6 +77,23 @@ time.sleep(2.0)
 
 
 
+# Define the has_reversed_trajectory function
+def has_reversed_trajectory(coords):
+    if len(coords) < 3:
+        return False
+
+    # Filter out None values and non-tuple values
+    coords = [coord for coord in coords if coord is not None and isinstance(coord, tuple)]
+
+    dx = [(x2[0] - x1[0]) for (x1, y1), (x2, y2) in zip(coords, coords[1:])]
+    dy = [(y2[0] - y1[0]) for (x1, y1), (x2, y2) in zip(coords, coords[1:])]
+
+    reversed_x = dx[-1] * dx[-2] < 0 if len(dx) >= 2 else False
+    reversed_y = dy[-1] * dy[-2] < 0 if len(dy) >= 2 else False
+
+    return reversed_x or reversed_y
+
+
 
 
 # keep looping
@@ -91,7 +108,7 @@ while True:
 		break
 	# resize the frame, blur it, and convert it to the HSV
 	# color space
-	frame = imutils.resize(frame, width=1200)
+	frame = imutils.resize(frame, width=600)
 	blurred = cv2.GaussianBlur(frame, (11, 11), 0)
 	hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 	# construct a mask for the color "green", then perform
@@ -188,6 +205,9 @@ while True:
     # Initialize a list to store the last 10 points
 	last_10_pts = [None] * 10
 
+    # Capture the original frame before making any changes to it
+	original_frame = frame.copy()
+
 	# loop over the set of tracked points
 	for i in range(1, len(pts)):
 		# if either of the tracked points are None, ignore
@@ -206,25 +226,50 @@ while True:
 		last_10_pts.pop(0)
 		last_10_pts.append((pts[i - 1], pts[i]))
 
+        # Check if the trajectory has reversed
+		reversed_trajectory = has_reversed_trajectory(last_10_pts)
+
+        # To revert the frame back to its original state, restore the original frame
+		frame = original_frame
+
+        # If the trajectory has reversed, make the screen flash yellow
+		# if reversed_trajectory:
+		# 	frame[:] = [0, 255, 255]  # BGR color for yellow
+
+        # Print the trajectory reversal information
+		reversal_str = "Reversed trajectory" if reversed_trajectory else "Not reversed trajectory"
+
+        # Add the reversal message to the list of points
+		last_10_pts.append(reversal_str)
+
+        # Make sure the list of points does not exceed 10 elements
+		if len(last_10_pts) > 10:
+			last_10_pts.pop(0)
+
         # Set the initial position for the text
 		text_position = (10, frame.shape[0] - 10)
 
         # Draw a filled rectangle over the area where the text is drawn
 		cv2.rectangle(frame, (0, frame.shape[0] - 200), (400, frame.shape[0]), (0, 0, 0), -1)
 
+		# # Move the position up for the next point
+		# text_position = (text_position[0], text_position[1] - 15)
+
         # Loop over the last 10 points and draw them on the frame
 		for j, point in enumerate(reversed(last_10_pts)):
 			if point is not None:
-                # Format the point as a string
-				point_str = f"Point {j + 1}: {point[0]}, {point[1]}"
+                 # Format the point as a string
+				point_str = f"Point {j + 1}: {point}" if isinstance(point, tuple) else point
 
-                # Draw the text on the frame
+				# Draw the text on the frame
 				cv2.putText(frame, point_str, text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
 
-                # Move the position up for the next point
+				# Move the position up for the next point
 				text_position = (text_position[0], text_position[1] - 15)
 
         ################################
+
+
 
 
         
@@ -234,6 +279,14 @@ while True:
 	# if the 'q' key is pressed, stop the loop
 	if key == ord("q"):
 		break
+
+    # Display the frame after applying GaussianBlur
+	cv2.imshow("Blurred", blurred)
+
+    # Display the HSV frame
+	cv2.imshow("HSV", hsv)
+
+
 # if we are not using a video file, stop the camera video stream
 if not args.get("video", False):
 	vs.stop()

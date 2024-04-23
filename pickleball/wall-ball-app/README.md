@@ -39,3 +39,19 @@ pip3 install imutils
 pip3 install numpy
 pip3 install opencv-python
 ```
+
+# Ball Detection
+
+When the ball is moving fast, it looses tracking of it
+
+Suggestions:
+
+* Increase the frame rate.  If your camera or video source supports it, increase the frame rate
+  can help capture more frames per second, which can improve tracking of fast-moving objects
+
+* Adjust the color range: if the ball is not being detected in some frames because of changes in
+  lighting or color, you can adjust the lower and uppoer boundaries of the color range used 
+  to detect the green ball.
+
+* I think we need to adjust the lower and upper bounds of the ball color.
+* Could try out the range-detector script to see if that gets us the RGBs

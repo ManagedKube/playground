@@ -40,6 +40,11 @@ pip3 install numpy
 pip3 install opencv-python
 ```
 
+## Run
+```
+python3 ball_tracking.py
+```
+
 # Ball Detection
 
 When the ball is moving fast, it looses tracking of it
@@ -55,3 +60,14 @@ Suggestions:
 
 * I think we need to adjust the lower and upper bounds of the ball color.
 * Could try out the range-detector script to see if that gets us the RGBs
+
+* I think in some spots where the ball is too fast it is not detecting it b/c the ball
+  is so faint in the video/picture.  
+
+* You can only see a faint yellow blur going through
+
+* Maybe we can set the sensitivity to something lower for the yellow?
+
+* Try the better camera?
+
+* Find an HSV thing that will look at an image and give it the blur ball?

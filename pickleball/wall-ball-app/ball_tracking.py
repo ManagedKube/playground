@@ -39,6 +39,8 @@ ap.add_argument("-b", "--buffer", type=int, default=64,
 	help="max buffer size")
 ap.add_argument("-c", "--camera", type=int, default=0,
     help="camera to use (default=0)")
+ap.add_argument("-f", "--frame-size", type=int, default=600,
+    help="frame size (default=600)")
 args = vars(ap.parse_args())
 
 
@@ -114,7 +116,7 @@ while True:
 		break
 	# resize the frame, blur it, and convert it to the HSV
 	# color space
-	frame = imutils.resize(frame, width=600)
+	frame = imutils.resize(frame, width=args["frame_size"])
 	blurred = cv2.GaussianBlur(frame, (11, 11), 0)
 	hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 	# construct a mask for the color "green", then perform

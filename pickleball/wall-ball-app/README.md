@@ -44,6 +44,14 @@ pip3 install opencv-python
 ```
 python3 ball_tracking.py
 ```
+Normal
+
+```
+python3 ball_tracking.py --camera 1 --frame-size 1200
+```
+* Using a USB camera
+* Chaning the frame size to 1200
+
 
 # Ball Detection
 

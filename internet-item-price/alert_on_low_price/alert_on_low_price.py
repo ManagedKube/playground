@@ -1,9 +1,11 @@
 from serpapi import GoogleSearch
 import yaml
+import os
 
 ## This dashboard helps you build your search query
 ## https://serpapi.com/playground?engine=google_shopping&q=aqara+water+leak+sensor+3+pack&location=United+States&gl=us&hl=en
 
+api_key = os.environ['SERP_API_KEY']
 
 ## Open the yaml file and read the contents
 with open('search_items_gar.yaml', 'r') as file:
@@ -15,7 +17,7 @@ for item in data['search_items']:
 
     ## Set the search parameters
     params = {
-      "api_key": "8876e8ba87e26bd147881434d36a0ee307d3d1110d598d39f5092b370988ee7a",
+      "api_key": api_key,
       "engine": "google_shopping",
       "google_domain": "google.com",
       "q": item['item'],

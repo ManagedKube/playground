@@ -68,6 +68,12 @@ values
 ```
 
 # Setup
+env:
+```
+export SERP_API_KEY=
+```
+
+Run:
 ```
 pip3 install google-search-results
 pip3 install pyyaml

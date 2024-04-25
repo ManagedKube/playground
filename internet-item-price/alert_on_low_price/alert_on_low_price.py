@@ -84,6 +84,7 @@ for item in data['search_items']:
       ## Print the items that are left after all of the various filters
       print(f"Title: {product['title']}\nPrice: {product['price']}\nSource: {product['source']}\n{product['product_link']}\n")
 
+      ## This product passed all of the filters
       ## Send message to Slack
       if slack_enabled == 'true':
           send_to_slack(f"""

@@ -79,3 +79,14 @@ Suggestions:
 * Try the better camera?
 
 * Find an HSV thing that will look at an image and give it the blur ball?
+
+* This guy says that the huff transform isnt so greate at tracking a fast ball but that can
+  be fixed with an eliptical transform: https://www.youtube.com/watch?v=RaCwLrKuS1w
+
+
+  I think it has something to do with when we blur and put it to grey scale and the ball
+  is far away, it doesnt see it?
+    * But it tracks it when it is slow....
+
+
+* Another idea is to try to just track the ball color and not the ball itself?

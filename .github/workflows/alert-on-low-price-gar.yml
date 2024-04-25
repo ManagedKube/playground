@@ -46,6 +46,7 @@ jobs:
       run: |
         pip install slack-sdk
         pip install google-search-results
+        pip install pyyaml
     - name: Run Script
       run: |
         cd ./internet-item-price/alert_on_low_price

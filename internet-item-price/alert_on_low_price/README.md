@@ -68,9 +68,12 @@ values
 ```
 
 # Setup
+Can get the google serg API key at: https://serpapi.com/playground?engine=google_shopping&q=Aqara+water+leak+sensor+3+pack&location=United+States&gl=us&hl=en
+
 env:
 ```
 export SERP_API_KEY=
+export SEARCH_ITEMS_YAML_FILE=search_items_gar.yaml
 ```
 
 Run:

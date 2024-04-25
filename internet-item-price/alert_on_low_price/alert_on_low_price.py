@@ -6,9 +6,10 @@ import os
 ## https://serpapi.com/playground?engine=google_shopping&q=aqara+water+leak+sensor+3+pack&location=United+States&gl=us&hl=en
 
 api_key = os.environ['SERP_API_KEY']
+search_items_gar_yaml = os.environ['SEARCH_ITEMS_YAML_FILE']
 
 ## Open the yaml file and read the contents
-with open('search_items_gar.yaml', 'r') as file:
+with open(search_items_gar_yaml, 'r') as file:
     data = yaml.safe_load(file)
 
 # Access the list by its key and loop through it

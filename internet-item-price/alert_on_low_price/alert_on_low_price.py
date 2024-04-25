@@ -87,6 +87,7 @@ for item in data['search_items']:
       ## Send message to Slack
       if slack_enabled == 'true':
           send_to_slack(f"""
+              Source: managedkube/playground/internet-item-price/alert_on_low_price
               Title: {product['title']}
               Price: {product['price']}
               Source: {product['source']}

@@ -1,6 +1,8 @@
 from serpapi import GoogleSearch
 import yaml
 import os
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 ## This dashboard helps you build your search query
 ## https://serpapi.com/playground?engine=google_shopping&q=aqara+water+leak+sensor+3+pack&location=United+States&gl=us&hl=en

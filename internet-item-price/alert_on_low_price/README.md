@@ -84,6 +84,7 @@ export SLACK_CHANNEL=''
 
 Run:
 ```
+pip3 install slack-sdk
 pip3 install google-search-results
 pip3 install pyyaml
 ```

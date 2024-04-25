@@ -55,6 +55,17 @@ for item in data['search_items']:
       if should_skip_item:
         continue
 
+      ## If the price in item['price']['high'] is greater than the product['extracted_price'], then skip this product
+      if float(product['extracted_price']) > float(item['price']['high']):
+        # print(f"Skipping (price): {product['price']}\n")
+        continue
+
+      ## If the price in item['price']['low'] is lower than the product['extracted_price'], then skip this product
+      if float(product['extracted_price']) < float(item['price']['low']):
+        # print(f"Skipping (price): {product['price']}\n")
+        continue
+
+      ## Print the items that are left after all of the various filters
       print(f"Title: {product['title']}\nPrice: {product['price']}\nSource: {product['source']}\n")
 
 

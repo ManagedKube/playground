@@ -11,5 +11,8 @@ search_items:
   not_from_these_sellers:
   - AliExpress.com
   price:
-    low: 25
-    high: 53
+    ## If the price is lower than the "low", then filter it out
+    ## Sometime if the price is too low, it is a scam or just not the product you want
+    ## You can set this to zeror/0 to disable this filter
+    low: 10
+    high: 45

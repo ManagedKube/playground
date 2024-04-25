@@ -38,11 +38,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
     - name: Setup
       run: |
         pip install slack-sdk
+        pip install google-search-results
     - name: Run Script
       run: |
         cd ./internet-item-price/alert_on_low_price
-        pip3 install google-search-results
         python3 alert_on_low_price.py

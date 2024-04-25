@@ -76,6 +76,12 @@ export SERP_API_KEY=
 export SEARCH_ITEMS_YAML_FILE=search_items_gar.yaml
 ```
 
+optional:
+```
+export DISABLE_SLACK=true
+export SLACK_CHANNEL=''
+```
+
 Run:
 ```
 pip3 install google-search-results

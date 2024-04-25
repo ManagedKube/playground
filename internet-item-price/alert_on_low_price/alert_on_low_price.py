@@ -7,6 +7,20 @@ import os
 
 api_key = os.environ['SERP_API_KEY']
 search_items_gar_yaml = os.environ['SEARCH_ITEMS_YAML_FILE']
+## Slack channel to send messages to
+SLACK_CHANNEL = os.environ['SLACK_CHANNEL']
+
+## Disable slack call for local runs
+slack_enabled = 'true'
+if os.environ.get('DISABLE_SLACK') == 'true':
+    slack_enabled = 'false'
+
+## Send message to Slack
+## doc: https://github.com/slackapi/python-slack-sdk#sending-a-message-to-slack
+def send_to_slack(message):
+    client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
+
+    response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
 
 ## Open the yaml file and read the contents
 with open(search_items_gar_yaml, 'r') as file:
@@ -66,12 +80,13 @@ for item in data['search_items']:
         continue
 
       ## Print the items that are left after all of the various filters
-      print(f"Title: {product['title']}\nPrice: {product['price']}\nSource: {product['source']}\n")
+      print(f"Title: {product['title']}\nPrice: {product['price']}\nSource: {product['source']}\n{product['product_link']}\n")
 
-
-
-
-
-
-
-
+      ## Send message to Slack
+      if slack_enabled == 'true':
+          send_to_slack(f"""
+              Title: {product['title']}
+              Price: {product['price']}
+              Source: {product['source']}
+              {product['product_link']}                                                                                                                                 
+          """)

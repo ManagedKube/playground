@@ -1,5 +1,9 @@
 # Alert on Low Price
 
+# Use the Google SERG to refine your search
+https://serpapi.com/playground?engine=google_shopping&q=Aqara+water+leak+sensor+3+pack&location=United+States&gl=us&hl=en
+
+# How it works
 This will use the Google Search Shopping API to search for an items and alert on the lowest prices.
 
 The Google Search Shopping API needs some post filtering.  Here is the pricess.

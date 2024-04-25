@@ -1,0 +1,53 @@
+## Sends a slack message
+## Docs: 
+## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+##
+name: "Slack - gar - alert on low price"
+
+## Path: internet-item-price/alert_on_low_price
+
+on:
+  # Push is for testing only to allow you to test this workflow without
+  # a merge and just a push.
+  # push:
+  # pull_request:
+    # types:
+    #   - closed
+    # branches:
+    #   - main
+
+  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+  ## Cron time is in UTC: 5pm UTC is 10am PST
+  - cron: '0 17 * * *'
+
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  SLACK_CHANNEL: 'C06V7GSTJTV' # nellis-gar
+  SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+  SEARCH_ITEMS_YAML_FILE: search_items_gar.yaml
+
+  # Enable debug output
+  DEBUG: false
+
+
+jobs:
+  check_open_reservations:
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup
+      run: |
+        pip install slack-sdk
+        pip install google-search-results
+        pip install pyyaml
+    - name: Run Script
+      run: |
+        cd ./internet-item-price/alert_on_low_price
+        python3 alert_on_low_price.py

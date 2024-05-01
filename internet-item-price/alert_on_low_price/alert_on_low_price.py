@@ -71,6 +71,19 @@ for item in data['search_items']:
       if should_skip_item:
         continue
 
+
+      ## The not_in_title list are filters that are used to filter out the results.  This one has
+      ## a list of words you do not want to see in the title of the results.
+      should_skip_item = False
+      for a_title_filter in item['not_in_title']:
+          if a_title_filter.lower() in product['title'].lower():
+              # print(f"Skipping (not_in_title): {product['title']}\n")
+              should_skip_item = True
+
+      ## If we did not find all of the not_in_title strings in the title, then skip this product
+      if should_skip_item:
+        continue
+
       ## If the price in item['price']['high'] is greater than the product['extracted_price'], then skip this product
       if float(product['extracted_price']) > float(item['price']['high']):
         # print(f"Skipping (price): {product['price']}\n")

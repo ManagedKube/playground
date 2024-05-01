@@ -86,9 +86,14 @@ export DISABLE_SLACK=true
 export SLACK_CHANNEL=''
 ```
 
-Run:
+Install required packages:
 ```
 pip3 install slack-sdk
 pip3 install google-search-results
 pip3 install pyyaml
+```
+
+Run:
+```
+python3 alert_on_low_price.py
 ```

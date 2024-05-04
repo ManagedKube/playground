@@ -90,3 +90,11 @@ Suggestions:
 
 
 * Another idea is to try to just track the ball color and not the ball itself?
+
+
+* Image enhancement
+  * https://pyimagesearch.com/2024/04/29/unlocking-image-clarity-a-comprehensive-guide-to-super-resolution-techniques/
+* Lanczos Interpolation: Capturing Ideal Image Frequencies for Quality Enhancement
+
+* Take a picture of the blur parts of the video and feed it into the script to see why it doesnt 
+  register it

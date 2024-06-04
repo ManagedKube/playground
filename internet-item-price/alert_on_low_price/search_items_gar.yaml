@@ -1,1 +1,22 @@
-
+---
+search_items:
+- item: Aqara water leak sensor 3 pack
+  ## additional_title_filters are filters for the title after the search results has 
+  ## been returned.  Sometimes google returns items that are not the exact match.
+  ## The list here are "ANDs", all of them has to be found in the title of the
+  ## resutlts.
+  additional_title_filters:
+  - 3 pack
+  - aqara
+  ## The not_in_title list are filters that are used to filter out the results.  This one has
+  ## a list of words you do not want to see in the title of the results.
+  not_in_title: []
+  not_from_these_sellers:
+  - AliExpress.com
+  - SmartWearTech
+  price:
+    ## If the price is lower than the "low", then filter it out
+    ## Sometime if the price is too low, it is a scam or just not the product you want
+    ## You can set this to zeror/0 to disable this filter
+    low: 19
+    high: 45

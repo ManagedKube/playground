@@ -1,74 +1,74 @@
-## Sends a slack message
-## Docs: 
-## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
-##
-name: "auto-southwest-check-in-gar"
+# ## Sends a slack message
+# ## Docs: 
+# ## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+# ##
+# name: "auto-southwest-check-in-gar"
 
-on:
-  # Push is for testing only to allow you to test this workflow without
-  # a merge and just a push.
-#   push:
-  # pull_request:
-    # types:
-    #   - closed
-    # branches:
-    #   - main
+# on:
+#   # Push is for testing only to allow you to test this workflow without
+#   # a merge and just a push.
+# #   push:
+#   # pull_request:
+#     # types:
+#     #   - closed
+#     # branches:
+#     #   - main
 
-  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-          ## ┌───────────── minute (0 - 59)
-          ## │  ┌───────────── hour (0 - 23)
-          ## │  │ ┌───────────── day of the month (1 - 31)
-          ## │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
-          ## │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-          ## │  │ │ │ │
-          ## │  │ │ │ │
-          ## │  │ │ │ │
-          ## *  * * * *
-  schedule:
-    ## Testing run every 5 minutes
-    # - cron: '*/5 * * * *'
+#   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+#           ## ┌───────────── minute (0 - 59)
+#           ## │  ┌───────────── hour (0 - 23)
+#           ## │  │ ┌───────────── day of the month (1 - 31)
+#           ## │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+#           ## │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+#           ## │  │ │ │ │
+#           ## │  │ │ │ │
+#           ## │  │ │ │ │
+#           ## *  * * * *
+#   schedule:
+#     ## Testing run every 5 minutes
+#     # - cron: '*/5 * * * *'
 
-    ## Run every 5 hours on minute 37
-    - cron: '37 */5 * * *'
+#     ## Run every 5 hours on minute 37
+#     - cron: '37 */5 * * *'
 
-env:
-  # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  # SLACK_CHANNEL: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
-  ## Notification URL for the auto-southwest-check-in app: https://github.com/jdholtz/auto-southwest-check-in/blob/master/CONFIGURATION.md#notification-urls
-  ## For this case, we are using the slack notification URL
-  AUTO_SOUTHWEST_CHECK_IN_NOTIFICATION_URL: ${{ secrets.AUTO_SOUTHWEST_CHECK_IN_NOTIFICATION_URL_SLACK }}
+# env:
+#   # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#   # SLACK_CHANNEL: 'C05B9LLPVD5' # sf-devops.slack.com - recreation-gov
+#   ## Notification URL for the auto-southwest-check-in app: https://github.com/jdholtz/auto-southwest-check-in/blob/master/CONFIGURATION.md#notification-urls
+#   ## For this case, we are using the slack notification URL
+#   AUTO_SOUTHWEST_CHECK_IN_NOTIFICATION_URL: ${{ secrets.AUTO_SOUTHWEST_CHECK_IN_NOTIFICATION_URL_SLACK }}
 
-  # Enable debug output
-  DEBUG: false
+#   # Enable debug output
+#   DEBUG: false
 
-jobs:
-  check_open_reservations:
-    # if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    ## Set the max time to run this job
-    ## https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idtimeout-minutes
-    ## Github Action has a 6 hour limit on how long you can run a job for.  We will set this number to something less than that
-    ## and about half of that to be safe.  Then we are setting the cron above to re-run this job every 2-3 hours or so.  There
-    ## will be some overlap, which I think is ok to have two of these things running at the same time.  That will give us coverage
-    ## while one is shutting down and the other is starting up.
-    # timeout-minutes: 80
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Run
-      ## Doing this clone method will get the newest versio of the auto-southwest-check-in
-      ## app.  
-      run: |
-        ls -l
-        mkdir temp
-        cd temp
-        git clone https://github.com/jdholtz/auto-southwest-check-in.git
-        cd auto-southwest-check-in
-        ls -l
-        pwd
-        python3 southwest.py --version
-        pip3 install -r requirements.txt
-        ## Test the notifications
-        # python3 southwest.py --test-notifications
-        ## Run the main checkin script
-        python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}
+# jobs:
+#   check_open_reservations:
+#     # if: github.event.pull_request.merged == true
+#     runs-on: ubuntu-latest
+#     ## Set the max time to run this job
+#     ## https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idtimeout-minutes
+#     ## Github Action has a 6 hour limit on how long you can run a job for.  We will set this number to something less than that
+#     ## and about half of that to be safe.  Then we are setting the cron above to re-run this job every 2-3 hours or so.  There
+#     ## will be some overlap, which I think is ok to have two of these things running at the same time.  That will give us coverage
+#     ## while one is shutting down and the other is starting up.
+#     # timeout-minutes: 80
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v4
+#     - name: Run
+#       ## Doing this clone method will get the newest versio of the auto-southwest-check-in
+#       ## app.  
+#       run: |
+#         ls -l
+#         mkdir temp
+#         cd temp
+#         git clone https://github.com/jdholtz/auto-southwest-check-in.git
+#         cd auto-southwest-check-in
+#         ls -l
+#         pwd
+#         python3 southwest.py --version
+#         pip3 install -r requirements.txt
+#         ## Test the notifications
+#         # python3 southwest.py --test-notifications
+#         ## Run the main checkin script
+#         python3 southwest.py --verbose ${{ secrets.SOUTHWEST_USER_NAME_GAR }} ${{ secrets.SOUTHWEST_PASSWORD_GAR }}

@@ -55,7 +55,7 @@ jobs:
       ## app.  
       run: |
         ls -l
-        cd trusted-traveler-scheduler/trusted-traveler-scheduler/trusted-traveler-scheduler
+        cd nexus-global-entry/trusted-traveler-scheduler/trusted-traveler-scheduler
         python3 -m venv my_env
         source my_env/bin/activate
         pip3 install -r requirements.txt

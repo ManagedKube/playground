@@ -58,5 +58,6 @@ jobs:
         source my_env/bin/activate
         pip3 install -r requirements.txt
         ls -l
+        echo "python3 ttp.py -u ${{ secrets.SLACK_BOT_TOKEN_NEXUS }}"
         python3 ttp.py -u "${{ secrets.SLACK_BOT_TOKEN_NEXUS }}"
         echo "Finished and exiting"

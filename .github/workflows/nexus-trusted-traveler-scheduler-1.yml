@@ -51,8 +51,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Run
-      ## Doing this clone method will get the newest versio of the auto-southwest-check-in
-      ## app.  
       run: |
         ls -l
         cd nexus-global-entry/trusted-traveler-scheduler/trusted-traveler-scheduler
@@ -60,3 +58,4 @@ jobs:
         source my_env/bin/activate
         pip3 install -r requirements.txt
         python3 ttp.py -u "${{ secrets.SLACK_BOT_TOKEN_NEXUS }}"
+        echo "Finished and exiting"

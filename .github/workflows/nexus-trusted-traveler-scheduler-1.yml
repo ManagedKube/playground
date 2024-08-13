@@ -54,6 +54,7 @@ jobs:
       ## Doing this clone method will get the newest versio of the auto-southwest-check-in
       ## app.  
       run: |
+        cd trusted-traveler-scheduler/trusted-traveler-scheduler/trusted-traveler-scheduler
         python3 -m venv my_env
         source my_env/bin/activate
         pip3 install -r requirements.txt

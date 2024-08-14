@@ -164,7 +164,7 @@ class ScheduleRetriever:
                     )
 
                     ## GarDebug
-                    print(f"{datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()}")
+                    print(f"{appointment["startTimestamp"]}")
 
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 

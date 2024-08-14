@@ -165,8 +165,9 @@ class ScheduleRetriever:
 
                     ## GarDebug
                     foo = datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()
-                    date_string = datetime.strftime(appointment.appointment_date, '%a, %B %d, %Y')
-                    print(f"GarDebug: the appointment datetime stamp: {foo} | {date_string}")
+                    date_string1 = datetime.strftime(appointment["startTimestamp"], '%a, %B %d, %Y')
+                    date_string2 = datetime.strftime(appointment.appointment_date, '%a, %B %d, %Y')
+                    print(f"GarDebug: the appointment datetime stamp: {foo} | {date_string1} | {date_string2}")
                     sys.exit()
 
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())

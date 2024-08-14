@@ -164,7 +164,7 @@ class ScheduleRetriever:
                     )
 
                     ## GarDebug
-                    print(f"{datetime.today():%Y/%m/%d %H:%M:%S}: Active appointments available for location {location_id}.")
+                    print(f"{datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()}")
 
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 

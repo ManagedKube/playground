@@ -162,6 +162,10 @@ class ScheduleRetriever:
                     schedule = self._evaluate_timestamp(
                         schedule, location_id, appointment["startTimestamp"]
                     )
+
+                    ## GarDebug
+                    print(f"{datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()}\n")
+
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 
             self._clear_database_of_claimed_appointments(location_id, all_active_appointments)

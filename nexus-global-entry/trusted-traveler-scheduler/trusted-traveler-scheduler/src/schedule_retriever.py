@@ -167,7 +167,7 @@ class ScheduleRetriever:
                     foo = datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()
                     print(f"GarDebug: the appointment datetime stamp foo: {foo}")
 
-                    datetime_obj = datetime.datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M:%S")
+                    datetime_obj = datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M:%S")
                     formatted_string = datetime_obj.strftime("%A, %B %d, %H:%M")
                     print(f"GarDebug: the appointment datetime stamp formatted_string: {formatted_string}")
 

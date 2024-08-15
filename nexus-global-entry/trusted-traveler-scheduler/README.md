@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 
 ## Test notifications
 ```
-python ttp.py -t
+python3 ttp.py -t
 ```
 
 ## Running

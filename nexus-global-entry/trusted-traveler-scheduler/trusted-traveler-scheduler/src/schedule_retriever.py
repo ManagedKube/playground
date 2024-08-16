@@ -172,13 +172,21 @@ class ScheduleRetriever:
                     print(f"GarDebug: the appointment datetime stamp formatted_string: {formatted_string}")
 
 
-                    date_string1 = datetime.strftime(appointment["startTimestamp"], '%a, %B %d, %Y')
-                    print(f"GarDebug: the appointment datetime stamp date_string1: {date_string1}")
-                    date_string2 = datetime.strftime(appointment.appointment_date, '%a, %B %d, %Y')
-                    print(f"GarDebug: the appointment datetime stamp date_string2: {date_string2}")
-                    sys.exit()
+                    # date_string1 = datetime.strftime(appointment["startTimestamp"], '%a, %B %d, %Y')
+                    # print(f"GarDebug: the appointment datetime stamp date_string1: {date_string1}")
+                    # date_string2 = datetime.strftime(appointment.appointment_date, '%a, %B %d, %Y')
+                    # print(f"GarDebug: the appointment datetime stamp date_string2: {date_string2}")
+                    # sys.exit()
 
-                    all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
+                    weekdays = ["Sunday", "Friday", "Saturday"]
+                    if any(weekday in formatted_string.split() for weekday in weekdays):
+                        print("The string contains a weekend day.")
+                        all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
+                    else:
+                        print("The string does not contain a weekend day.")
+
+
+                    # all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 
             self._clear_database_of_claimed_appointments(location_id, all_active_appointments)
 

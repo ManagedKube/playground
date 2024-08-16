@@ -17,5 +17,5 @@ python3 ttp.py -t
 
 ## Running
 ```
-slack://xxx/xxx/xxx
+python3 ttp.py -u slack://xxx/xxx/xxx
 ```

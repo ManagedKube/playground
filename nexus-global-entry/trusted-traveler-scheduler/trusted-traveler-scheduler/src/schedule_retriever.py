@@ -154,6 +154,8 @@ class ScheduleRetriever:
             if not appointments:
                 print(f"{datetime.today():%Y/%m/%d %H:%M:%S}: No active appointments available for location {location_id}.")
                 return
+
+            hasWeekendSchedule = False
             
             schedule = []
             all_active_appointments = []
@@ -181,19 +183,20 @@ class ScheduleRetriever:
                     weekdays = ["Sunday", "Friday", "Saturday"]
                     if any(weekday in formatted_string.split() for weekday in weekdays):
                         print("The string contains a weekend day.")
-                        all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
+                        hasWeekendSchedule = True
                     else:
                         print("The string does not contain a weekend day.")
 
 
-                    # all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
+                    all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 
             self._clear_database_of_claimed_appointments(location_id, all_active_appointments)
 
             if not schedule:
                 return
 
-            self.notification_handler.new_appointment(location_id, schedule)
+            if hasWeekendSchedule:
+                self.notification_handler.new_appointment(location_id, schedule)
             
 
         except OSError:

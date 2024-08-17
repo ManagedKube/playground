@@ -147,15 +147,15 @@ class ScheduleRetriever:
         """
         try:
             time.sleep(1)
+            print("getting appointments")
             appointments = requests.get(
                 GOES_URL_FORMAT.format(location_id), timeout=30
             ).json()
+            print("got appointments")
 
             if not appointments:
                 print(f"{datetime.today():%Y/%m/%d %H:%M:%S}: No active appointments available for location {location_id}.")
                 return
-
-            hasWeekendSchedule = False
             
             schedule = []
             all_active_appointments = []
@@ -165,28 +165,7 @@ class ScheduleRetriever:
                         schedule, location_id, appointment["startTimestamp"]
                     )
 
-                    ## GarDebug
-                    foo = datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat()
-                    print(f"GarDebug: the appointment datetime stamp foo: {foo}")
-
-                    datetime_obj = datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M")
-                    formatted_string = datetime_obj.strftime("%A, %B %d, %H:%M")
-                    print(f"GarDebug: the appointment datetime stamp formatted_string: {formatted_string}")
-
-
-                    # date_string1 = datetime.strftime(appointment["startTimestamp"], '%a, %B %d, %Y')
-                    # print(f"GarDebug: the appointment datetime stamp date_string1: {date_string1}")
-                    # date_string2 = datetime.strftime(appointment.appointment_date, '%a, %B %d, %Y')
-                    # print(f"GarDebug: the appointment datetime stamp date_string2: {date_string2}")
-                    # sys.exit()
-
-                    weekdays = ["Sunday", "Friday", "Saturday"]
-                    if any(weekday in formatted_string.split() for weekday in weekdays):
-                        print("The string contains a weekend day.")
-                        hasWeekendSchedule = True
-                    else:
-                        print("The string does not contain a weekend day.")
-
+                    print(f"GarDebug: appointment-startTimestamp: {appointment["startTimestamp"]}")
 
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 
@@ -195,8 +174,7 @@ class ScheduleRetriever:
             if not schedule:
                 return
 
-            if hasWeekendSchedule:
-                self.notification_handler.new_appointment(location_id, schedule)
+            self.notification_handler.new_appointment(location_id, schedule)
             
 
         except OSError:

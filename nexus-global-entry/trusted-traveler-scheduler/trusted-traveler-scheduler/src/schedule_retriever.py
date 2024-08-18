@@ -147,11 +147,11 @@ class ScheduleRetriever:
         """
         try:
             time.sleep(1)
-            print("getting appointments")
+            print("getting schedule")
             appointments = requests.get(
                 GOES_URL_FORMAT.format(location_id), timeout=30
             ).json()
-            print("got appointments")
+            print("got schedule")
 
             if not appointments:
                 print(f"{datetime.today():%Y/%m/%d %H:%M:%S}: No active appointments available for location {location_id}.")
@@ -164,9 +164,6 @@ class ScheduleRetriever:
                     schedule = self._evaluate_timestamp(
                         schedule, location_id, appointment["startTimestamp"]
                     )
-
-                    print(f"GarDebug: appointment-startTimestamp: {appointment["startTimestamp"]}")
-
                     all_active_appointments.append(datetime.strptime(appointment["startTimestamp"], "%Y-%m-%dT%H:%M").isoformat())
 
             self._clear_database_of_claimed_appointments(location_id, all_active_appointments)

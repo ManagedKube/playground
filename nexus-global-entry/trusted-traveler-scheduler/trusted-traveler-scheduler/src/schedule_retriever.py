@@ -147,11 +147,9 @@ class ScheduleRetriever:
         """
         try:
             time.sleep(1)
-            print("getting schedule")
             appointments = requests.get(
                 GOES_URL_FORMAT.format(location_id), timeout=30
             ).json()
-            print("got schedule")
 
             if not appointments:
                 print(f"{datetime.today():%Y/%m/%d %H:%M:%S}: No active appointments available for location {location_id}.")

@@ -52,15 +52,25 @@ class NotificationHandler:
 
         title = "Trusted Traveler Scheduler"
 
-        apobj = apprise.Apprise(self.notification_urls)
-        result = apobj.notify(title=title, body=body, body_format=apprise.NotifyFormat.TEXT)
+        pattern = r"Sun|Fri|Sat"
+        match = re.search(pattern, body)
+        print("GarDebug: in sending notification")
 
-        # If you encounter Apprise errors, https://github.com/caronc/apprise/wiki/Development_LogCapture
-        # may be useful.
-        if result is None:
-            print('{datetime.today():%Y/%m/%d %H:%M:%S}: error: No notifications sent (configuration error)')
-        elif result is False:
-            print('{datetime.today():%Y/%m/%d %H:%M:%S}: error: At least 1 notification failed to send')
+        if match:
+            print(f"GarDebug: Sending notification: {body}")
+
+            apobj = apprise.Apprise(self.notification_urls)
+            result = apobj.notify(title=title, body=body, body_format=apprise.NotifyFormat.TEXT)
+
+            # If you encounter Apprise errors, https://github.com/caronc/apprise/wiki/Development_LogCapture
+            # may be useful.
+            if result is None:
+                print('{datetime.today():%Y/%m/%d %H:%M:%S}: error: No notifications sent (configuration error)')
+            elif result is False:
+                print('{datetime.today():%Y/%m/%d %H:%M:%S}: error: At least 1 notification failed to send')
+
+        else:
+            print(f"GarDebug: Skipping notification: {body}")
 
     def new_appointment(self, location_id: int, appointments: List[Schedule]) -> None:
         """

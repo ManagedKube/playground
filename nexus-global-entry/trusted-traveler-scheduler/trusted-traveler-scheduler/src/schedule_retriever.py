@@ -1,5 +1,6 @@
 import time
 import sqlite3
+import sys
 
 from typing import List
 
@@ -173,6 +174,8 @@ class ScheduleRetriever:
 
             self.notification_handler.new_appointment(location_id, schedule)
             
+            print("exiting...")
+            sys.exit()
 
         except OSError:
             return

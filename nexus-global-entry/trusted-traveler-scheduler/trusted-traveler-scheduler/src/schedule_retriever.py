@@ -170,12 +170,11 @@ class ScheduleRetriever:
             self._clear_database_of_claimed_appointments(location_id, all_active_appointments)
 
             if not schedule:
+                print("exiting...")
+                sys.exit()
                 return
 
             self.notification_handler.new_appointment(location_id, schedule)
-            
-            print("exiting...")
-            sys.exit()
 
         except OSError:
             return

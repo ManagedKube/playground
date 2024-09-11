@@ -27,8 +27,8 @@ on:
 #     ## Testing run every 5 minutes
 #     - cron: '*/5 * * * *'
 
-    ## Run every 5 hours on minute 37
-    - cron: '*/15 * * * *'
+    ## Run every 20 mins or so
+    # - cron: '*/20 * * * *'
 
 env:
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN_NEXUS }} # Sends to the nexus channel.  In the format of: slack://xxx/xxx/xxx

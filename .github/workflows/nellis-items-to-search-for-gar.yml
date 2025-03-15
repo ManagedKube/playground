@@ -17,7 +17,7 @@ on:
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
   ## Cron time is in UTC: 5pm UTC is 10am PST
-  - cron: '0 18 * * *'
+  - cron: '0 16 * * *'
 
 env:
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

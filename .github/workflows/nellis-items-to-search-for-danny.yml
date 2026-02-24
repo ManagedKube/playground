@@ -1,0 +1,45 @@
+## Sends a slack message
+## Docs: 
+## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+##
+name: "Slack - nellis - danny - items to search for"
+
+on:
+  # Push is for testing only to allow you to test this workflow without
+  # a merge and just a push.
+#   push:
+  # pull_request:
+    # types:
+    #   - closed
+    # branches:
+    #   - main
+
+  ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+  ## Cron time is in UTC: 5pm UTC is 10am PST
+  - cron: '0 16 * * *'
+
+env:
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  SLACK_CHANNEL: 'C0AGUMA40BY' #'nellis-danny'
+
+  # Enable debug output
+  DEBUG: false
+
+
+jobs:
+  check_open_reservations:
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup
+      run: |
+        pip install slack-sdk
+    - name: Run Script
+      run: |
+        cd ./nellisauction.com/search_for_items
+        python3 run_python.py items_to_search_for_danny.txt

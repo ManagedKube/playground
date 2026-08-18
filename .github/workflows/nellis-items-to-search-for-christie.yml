@@ -14,6 +14,8 @@ on:
     # branches:
     #   - main
 
+  workflow_dispatch:
+
   ## Schedule doc: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
   ## Cron time is in UTC: 5pm UTC is 10am PST

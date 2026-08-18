@@ -28,6 +28,7 @@ if os.environ.get('DISABLE_SLACK') == 'true':
 def send_to_slack(message):
     client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 
+    print(f"Sending Slack message to channel '{SLACK_CHANNEL}': {message}")
     response = client.chat_postMessage(channel=SLACK_CHANNEL, text=message)
 
     # try:
@@ -46,7 +47,7 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
     for line in file:
         ## Do something with each line
         search_item = line.strip()
-        # print(search_item)
+        print(f"Searching for: {search_item}")
 
         ## Construct URL with user inputs
         url = f"{search_url}{urllib.parse.quote(search_item)}"
@@ -84,7 +85,7 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
             new_string = new_string.replace('items found when searching for', '')
             new_string = new_string.replace('item found when searching for', '')
 
-            print(f"new_string: {new_string}")
+            print(f"Found {new_string.strip()} item(s) for: {search_item}")
 
             ## Do something if the number of items found is greater than 0
             if int(new_string) > 0:

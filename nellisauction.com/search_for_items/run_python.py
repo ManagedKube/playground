@@ -32,6 +32,32 @@ debug_print(f"SLACK_CHANNEL={SLACK_CHANNEL}")
 debug_print(f"slack_enabled={slack_enabled}")
 debug_print(f"run_only_once={run_only_once}")
 
+## Extract the number of items found from the search results page HTML.
+##
+## Nellis renders the results count as text like:
+##   5 items found when searching for
+##   1 item found when searching for
+## but the surrounding tags/CSS class names are subject to change (e.g. hashed
+## CSS module class names, extra wrapper elements, etc), which is what broke
+## the previous regex that depended on an exact `<p class="__search-results-description">`
+## element. To be resilient to markup changes, strip all HTML tags first and
+## then look for the count phrase in the resulting plain text.
+def extract_number_of_items_found(html):
+    ## Remove HTML tags so the count phrase is contiguous plain text
+    ## regardless of what elements/classes wrap the number and the words.
+    plain_text = re.sub(r'<[^>]+>', ' ', html)
+    plain_text = re.sub(r'&nbsp;', ' ', plain_text, flags=re.IGNORECASE)
+    plain_text = re.sub(r'\s+', ' ', plain_text)
+
+    pattern = r'(\d+)\s+items?\s+found when searching for'
+    result = re.search(pattern, plain_text, re.IGNORECASE)
+
+    if result:
+        return int(result.group(1))
+
+    return None
+
+
 ## Send message to Slack
 ## doc: https://github.com/slackapi/python-slack-sdk#sending-a-message-to-slack
 def send_to_slack(message):
@@ -76,30 +102,19 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
         debug_print(f"Response body length: {len(data)} characters")
         debug_print(f"Response body: {data}")
 
-        ## Extract everything between the <p class="__search-results-description"> and </span>
+        ## Extract the number of items found from the page.
         ## This is where in the html it will say how many items that your search result has found
-        ## The html: <p class="__search-results-description"><span>5 items found when searching for </span>
-    
-        # Define regular expression pattern
-        pattern = r'<p class="__search-results-description">(.*?)</span>'
-
-        # Use regular expression to extract text
-        result = re.search(pattern, data)
+        ## e.g. the rendered text: "5 items found when searching for" or "1 item found when searching for"
+        num_items_found = extract_number_of_items_found(data)
 
         # Print extracted text
-        if result:
-            debug_print(f"Regex matched, raw text: {result.group(1)}")
+        if num_items_found is not None:
+            debug_print(f"Regex matched, number of items found: {num_items_found}")
 
-            ## Remove unwanted characters around the returned string
-            new_string = result.group(1).replace('<span>', '')
-            new_string = new_string.strip()
-            new_string = new_string.replace('items found when searching for', '')
-            new_string = new_string.replace('item found when searching for', '')
-
-            print(f"Found {new_string.strip()} item(s) for: {search_item}")
+            print(f"Found {num_items_found} item(s) for: {search_item}")
 
             ## Do something if the number of items found is greater than 0
-            if int(new_string) > 0:
+            if num_items_found > 0:
                 print(f"Search with more than one item available: {search_item} | {url}")
 
                 ## Send message to Slack

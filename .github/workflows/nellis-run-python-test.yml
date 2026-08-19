@@ -1,0 +1,47 @@
+## Runs a live test against nellisauction.com whenever run_python.py changes.
+## "hangers" is used because it is an item that is reliably always in stock on
+## Nellis Auction, so this verifies that the search/regex logic in
+## run_python.py is still able to correctly parse the search results page.
+##
+## Docs:
+## * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+##
+name: "Test - nellis - run_python.py search regex"
+
+on:
+  push:
+    paths:
+      - 'nellisauction.com/search_for_items/run_python.py'
+      - '.github/workflows/nellis-run-python-test.yml'
+  pull_request:
+    paths:
+      - 'nellisauction.com/search_for_items/run_python.py'
+      - '.github/workflows/nellis-run-python-test.yml'
+
+jobs:
+  test_search_regex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup
+      run: |
+        pip install slack-sdk requests
+    - name: Run Script and Verify "hangers" Is Found
+      env:
+        SLACK_CHANNEL: 'test-channel'
+        DISABLE_SLACK: 'true'
+        DEBUG_ON: 'true'
+      run: |
+        cd ./nellisauction.com/search_for_items
+        echo "hangers" > items_to_search_for_test.txt
+        python3 run_python.py items_to_search_for_test.txt | tee output.log
+
+        if grep -q "Search with more than one item available: hangers" output.log; then
+          echo "Test passed: 'hangers' search found results as expected."
+        else
+          echo "Test failed: 'hangers' search did not return any results. The search regex in run_python.py may be broken."
+          exit 1
+        fi

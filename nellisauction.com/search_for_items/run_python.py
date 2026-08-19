@@ -37,11 +37,13 @@ debug_print(f"run_only_once={run_only_once}")
 ## Nellis renders the results count as text like:
 ##   5 items found when searching for
 ##   1 item found when searching for
-## but the surrounding tags/CSS class names are subject to change (e.g. hashed
-## CSS module class names, extra wrapper elements, etc), which is what broke
-## the previous regex that depended on an exact `<p class="__search-results-description">`
-## element. To be resilient to markup changes, strip all HTML tags first and
-## then look for the count phrase in the resulting plain text.
+##   181 items found for hangers
+## The exact wording (e.g. "found when searching for" vs "found for") as well
+## as the surrounding tags/CSS class names are subject to change, which is
+## what broke the previous regex that depended on an exact
+## `<p class="__search-results-description">` element and a fixed phrase. To
+## be resilient to both markup and wording changes, strip all HTML tags first
+## and then just look for "<number> item(s) found" in the resulting plain text.
 def extract_number_of_items_found(html):
     ## Remove HTML tags so the count phrase is contiguous plain text
     ## regardless of what elements/classes wrap the number and the words.
@@ -49,7 +51,7 @@ def extract_number_of_items_found(html):
     plain_text = re.sub(r'&nbsp;', ' ', plain_text, flags=re.IGNORECASE)
     plain_text = re.sub(r'\s+', ' ', plain_text)
 
-    pattern = r'(\d+)\s+items?\s+found when searching for'
+    pattern = r'(\d+)\s+items?\s+found'
     result = re.search(pattern, plain_text, re.IGNORECASE)
 
     if result:

@@ -1,0 +1,71 @@
+## Places a bid on nellisauction.com via an authenticated session.
+## Supports two-factor authentication via workflow_dispatch input.
+##
+## Required secrets:
+##   NELLIS_EMAIL     – account e-mail
+##   NELLIS_PASSWORD  – account password
+##
+## Optional inputs (workflow_dispatch only):
+##   search_query     – item to search for (default: "laptop")
+##   bid_amount       – bid amount in USD  (default: "1")
+##   two_factor_code  – SMS 2FA code sent to your phone
+
+name: "Nellis – Place Bid"
+
+on:
+  workflow_dispatch:
+    inputs:
+      search_query:
+        description: "Item to search for"
+        required: false
+        default: "laptop"
+      bid_amount:
+        description: "Bid amount in USD"
+        required: false
+        default: "1"
+      two_factor_code:
+        description: "Two-factor SMS code (leave blank if not required)"
+        required: false
+        default: ""
+
+env:
+  NELLIS_EMAIL: ${{ secrets.NELLIS_EMAIL }}
+  NELLIS_PASSWORD: ${{ secrets.NELLIS_PASSWORD }}
+  # Pass the workflow-dispatch input as the 2FA env var.
+  # The script treats an empty string as "no code provided".
+  NELLIS_2FA_CODE: ${{ github.event.inputs.two_factor_code }}
+
+jobs:
+  place-bid:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: nellisauction.com/place_bid_ts
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: nellisauction.com/place_bid_ts/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Place bid
+        run: |
+          node dist/index.js \
+            "${{ github.event.inputs.search_query }}" \
+            "${{ github.event.inputs.bid_amount }}"

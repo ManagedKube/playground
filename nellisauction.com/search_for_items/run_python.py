@@ -133,9 +133,15 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
             response_text = re.sub(r'<[^>]+>', ' ', data)
             response_text = re.sub(r'\s+', ' ', response_text).strip()
             content_type = response.headers.get('Content-Type', 'unknown')
+            response_reason = (
+                'possible CAPTCHA challenge'
+                if re.search(r'captcha', data, re.IGNORECASE)
+                else 'unrecognized response'
+            )
             print(
                 f"Could not determine item count for: {search_item} "
-                f"(HTTP {response.status_code}, content-type {content_type}, "
+                f"({response_reason}, HTTP {response.status_code}, "
+                f"content-type {content_type}, "
                 f"response length {len(data)}): {response_text[:200]}"
             )
             unparsed_search_items.append(search_item)

@@ -5,6 +5,8 @@
 name: "Slack - nellis - gar - items to search for"
 
 on:
+  workflow_dispatch:
+
   # Push is for testing only to allow you to test this workflow without
   # a merge and just a push.
 #   push:
@@ -22,6 +24,7 @@ on:
 env:
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
   SLACK_CHANNEL: 'C06V7GSTJTV' # nellis-gar
+  DISABLE_SLACK: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
 
   # Enable debug output
   DEBUG: false

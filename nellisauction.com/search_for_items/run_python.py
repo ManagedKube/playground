@@ -77,6 +77,7 @@ def send_to_slack(message):
 
 
 search_url = f"https://www.nellisauction.com/search?query="
+unparsed_search_items = []
 
 with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
     for line in file:
@@ -129,4 +130,24 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
             else:
                 debug_print(f"No items found for: {search_item}, not sending Slack message")
         else:
-            debug_print(f"Regex did not match search-results-description for: {search_item}. HTML may have changed or page did not load as expected.")
+            response_text = re.sub(r'<[^>]+>', ' ', data)
+            response_text = re.sub(r'\s+', ' ', response_text).strip()
+            content_type = response.headers.get('Content-Type', 'unknown')
+            response_reason = (
+                'possible CAPTCHA challenge'
+                if re.search(r'captcha', data, re.IGNORECASE)
+                else 'unrecognized response'
+            )
+            print(
+                f"Could not determine item count for: {search_item} "
+                f"({response_reason}, HTTP {response.status_code}, "
+                f"content-type {content_type}, "
+                f"response length {len(data)}): {response_text[:200]}"
+            )
+            unparsed_search_items.append(search_item)
+
+if unparsed_search_items:
+    raise RuntimeError(
+        "Search results were incomplete; could not determine item counts for: "
+        + ", ".join(unparsed_search_items)
+    )

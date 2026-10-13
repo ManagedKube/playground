@@ -99,7 +99,7 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
             'Accept-Language': 'en-US,en;q=0.5' 
         }
         if search_count:
-            time.sleep(2)
+            time.sleep(60)
         search_count += 1
         response = requests.get(url, headers=headers, params={}, timeout=60)
 

@@ -4,6 +4,7 @@ import requests
 import sys
 import os
 import re 
+import time
 import urllib.parse
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
@@ -78,6 +79,7 @@ def send_to_slack(message):
 
 search_url = f"https://www.nellisauction.com/search?query="
 unparsed_search_items = []
+search_count = 0
 
 with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
     for line in file:
@@ -96,6 +98,9 @@ with open(TEXT_FILE_WITH_ITEMS_TO_SEARCH_FOR, 'r') as file:
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5' 
         }
+        if search_count:
+            time.sleep(2)
+        search_count += 1
         response = requests.get(url, headers=headers, params={}, timeout=60)
 
         debug_print(f"Response status code: {response.status_code}")
